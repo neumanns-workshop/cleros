@@ -38,8 +38,8 @@ jobs:
 
       - name: Copy build files to main repository
         run: |
-          mkdir -p main-repo/sortes-app
-          cp -R web/build/* main-repo/sortes-app/
+          mkdir -p main-repo/sortes
+          cp -R web/build/* main-repo/sortes/
 
       - name: Configure Git
         run: |
@@ -50,6 +50,6 @@ jobs:
       - name: Commit and push changes to main repository
         run: |
           cd main-repo
-          git add sortes-app
+          git add sortes
           git commit -m "Update SORTES app (triggered by ${{ github.event.head_commit.message }})" || echo "No changes to commit"
           git push 
