@@ -35,6 +35,23 @@ jobs:
           echo "Build static files:"
           ls -la build/static
 
+      - name: Verify embedding dimension
+        run: |
+          # Check the embedding dimension in the metadata file to ensure it's 512
+          if [ -f "web/public/data/enriched/embeddings/embeddings_metadata.json" ]; then
+            echo "Verifying embedding dimension from metadata..."
+            DIMENSION=$(grep -o '"embedding_dimension":[^,]*' web/public/data/enriched/embeddings/embeddings_metadata.json | cut -d ':' -f2)
+            echo "Found embedding dimension: $DIMENSION"
+            
+            if [ "$DIMENSION" -eq 512 ]; then
+              echo "✅ Embedding dimension is correct (512)"
+            else
+              echo "⚠️ Warning: Embedding dimension is $DIMENSION, expected 512"
+            fi
+          else
+            echo "Warning: embeddings_metadata.json not found in web/public/"
+          fi
+
       - name: Checkout main repository
         uses: actions/checkout@v3
         with:
@@ -49,10 +66,18 @@ jobs:
           echo "Copying build files to sortes-app directory"
           cp -R web/build/* main-repo/sortes-app/
           
-          # Create data directories in the sortes-app folder
-          mkdir -p main-repo/sortes-app/data/enriched/deities
-          mkdir -p main-repo/sortes-app/data/enriched/embeddings
-          mkdir -p main-repo/sortes-app/data/base
+          # Create data directories in the sortes-app folder if they don't exist in build
+          if [ ! -d "main-repo/sortes-app/data/enriched/deities" ]; then
+            mkdir -p main-repo/sortes-app/data/enriched/deities
+          fi
+          
+          if [ ! -d "main-repo/sortes-app/data/enriched/embeddings" ]; then
+            mkdir -p main-repo/sortes-app/data/enriched/embeddings
+          fi
+          
+          if [ ! -d "main-repo/sortes-app/data/base" ]; then
+            mkdir -p main-repo/sortes-app/data/base
+          fi
           
           # Check content of sortes-app directory
           echo "Content of sortes-app directory:"
@@ -60,59 +85,51 @@ jobs:
           echo "Content of static directory:"
           ls -la main-repo/sortes-app/static 2>/dev/null || echo "No static directory found"
           
-          # Copy data from data/ to web deployment
-          if [ -d "data/enriched" ]; then
-            echo "Copying data files from repository..."
+          # Special handling for embeddings - ALWAYS use the web/public version
+          echo "Using web/public embeddings..."
+          
+          if [ -f "web/public/data/enriched/embeddings/sentence_embeddings.json" ]; then
+            echo "Copying sentence_embeddings.json from web/public..."
+            cp web/public/data/enriched/embeddings/sentence_embeddings.json main-repo/sortes-app/data/enriched/embeddings/
             
-            # Copy deity classifications
-            cp -R data/enriched/deities/* main-repo/sortes-app/data/enriched/deities/
-            echo "Deity files copied"
+            # Also ensure the same file is in the root data directory for fallback
+            mkdir -p main-repo/data/enriched/embeddings
+            cp web/public/data/enriched/embeddings/sentence_embeddings.json main-repo/data/enriched/embeddings/
             
-            # Special handling for the large embedding file
-            echo "Checking embeddings file size..."
-            ls -lah data/enriched/embeddings/sentence_embeddings.json || echo "Embedding file not found!"
-            
-            # Copy embeddings - one by one to verify
-            echo "Copying sentence embeddings file..."
-            cp data/enriched/embeddings/sentence_embeddings.json main-repo/sortes-app/data/enriched/embeddings/ || echo "Failed to copy sentence_embeddings.json"
-            echo "Copying embeddings metadata file..."
-            cp data/enriched/embeddings/embeddings_metadata.json main-repo/sortes-app/data/enriched/embeddings/ || echo "Failed to copy embeddings_metadata.json"
-                                        
-            echo "Verifying copied embedding files:"
-            ls -lah main-repo/sortes-app/data/enriched/embeddings/ || echo "No embeddings directory found!"
-            
-            # Copy base hymn data files
-            if [ -d "data/base" ]; then
-              echo "Copying base hymn data files..."
-              cp -R data/base/* main-repo/sortes-app/data/base/
-              echo "Base hymn files copied. Found:"
-              ls -la main-repo/sortes-app/data/base/ || echo "No base hymn files found!"
-            fi
+            echo "Verifying file size for copied embeddings:"
+            ls -lah main-repo/sortes-app/data/enriched/embeddings/sentence_embeddings.json
+            ls -lah main-repo/data/enriched/embeddings/sentence_embeddings.json
           else
-            echo "Warning: data/enriched directory not found"
+            echo "⚠️ Warning: sentence_embeddings.json not found in web/public!"
           fi
           
-          # Also create a top-level data directory that links to the same data for fallback support
-          mkdir -p main-repo/data/enriched/deities
-          mkdir -p main-repo/data/enriched/embeddings
-          mkdir -p main-repo/data/base
-          
-          # Copy data to the root data directory too
-          if [ -d "data/enriched/deities" ]; then
-            cp -R data/enriched/deities/* main-repo/data/enriched/deities/
+          # Copy metadata file
+          if [ -f "web/public/data/enriched/embeddings/embeddings_metadata.json" ]; then
+            echo "Copying embeddings_metadata.json from web/public..."
+            cp web/public/data/enriched/embeddings/embeddings_metadata.json main-repo/sortes-app/data/enriched/embeddings/
+            cp web/public/data/enriched/embeddings/embeddings_metadata.json main-repo/data/enriched/embeddings/
+          else
+            echo "⚠️ Warning: embeddings_metadata.json not found in web/public!"
           fi
           
-          if [ -f "data/enriched/embeddings/sentence_embeddings.json" ]; then
-            cp data/enriched/embeddings/sentence_embeddings.json main-repo/data/enriched/embeddings/
+          # Copy deity classifications if they exist
+          if [ -d "web/public/data/enriched/deities" ]; then
+            echo "Copying deity files from web/public..."
+            cp -R web/public/data/enriched/deities/* main-repo/sortes-app/data/enriched/deities/
+            
+            # Also copy to root data directory
+            mkdir -p main-repo/data/enriched/deities
+            cp -R web/public/data/enriched/deities/* main-repo/data/enriched/deities/
           fi
           
-          if [ -f "data/enriched/embeddings/embeddings_metadata.json" ]; then
-            cp data/enriched/embeddings/embeddings_metadata.json main-repo/data/enriched/embeddings/
-          fi
-          
-          # Copy base hymn data files to root data directory too
-          if [ -d "data/base" ]; then
-            cp -R data/base/* main-repo/data/base/
+          # Copy base hymn data files if they exist
+          if [ -d "web/public/data/base" ]; then
+            echo "Copying base hymn data files from web/public..."
+            cp -R web/public/data/base/* main-repo/sortes-app/data/base/
+            
+            # Also copy to root data directory
+            mkdir -p main-repo/data/base
+            cp -R web/public/data/base/* main-repo/data/base/
           fi
           
           # Create a top-level data index redirect as fallback
