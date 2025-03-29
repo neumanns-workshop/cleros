@@ -1,0 +1,21 @@
+{
+  "hymn_id": "62",
+  "title": "To Dike",
+  "dedication": "",
+  "incense": "frankincense",
+  "lines": [
+    "I sing of the all-seeing eye of comely and radiant Dike, who is seated upon the sacred throne of lord Zeus.",
+    "From heaven you watch the lives of the many human races, you crush the unjust with just retribution, matching things lawless through the truth of equality.",
+    "For whenever base opinions prevail in difficult verdicts, because men wish more than is fair, you intervene and rouse justice against her foes.",
+    "An enemy of the unjust, you are a gentle goddess to the just.",
+    "O goddess, come evenhanded to thoughts that are noble, until that fated day descends on my life."
+  ],
+  "line_mappings": {
+    "1": 1,
+    "2": 5,
+    "3": 11,
+    "4": 17,
+    "5": 19
+  },
+  "sequence": 62
+}

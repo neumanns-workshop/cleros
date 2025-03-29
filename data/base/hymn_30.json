@@ -1,0 +1,17 @@
+{
+  "hymn_id": "30",
+  "title": "To Dionysos",
+  "dedication": "",
+  "incense": "storax",
+  "lines": [
+    "I call upon loud-roaring, reveling Dionysos, primeval, two-natured, thrice-born Bacchic lord, savage, ineffable, secretive, two-horned and two-shaped, ivy-covered, bull-faced, warlike, howling, pure.",
+    "You take raw flesh in triennial feasts, wrapped in foliage, decked with grape clusters, resourceful Eubouleus, immortal god sired by Zeus when he mated with Persephone in unspeakable union.",
+    "Hearken to my voice, O blessed one, you and your fair-girdled nurses, breathe on me in a spirit of perfect kindness."
+  ],
+  "line_mappings": {
+    "1": 1,
+    "2": 9,
+    "3": 15
+  },
+  "sequence": 30
+}

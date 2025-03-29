@@ -1,0 +1,17 @@
+{
+  "hymn_id": "82",
+  "title": "To Notos",
+  "dedication": "",
+  "incense": "frankincense",
+  "lines": [
+    "Quickly leaping through the moist air as both of your swift wings vibrate, O father of rain, come, riding the southern clouds.",
+    "Zeus did grant you this lofty prerogative: to send the rain-giving clouds from sky to earth.",
+    "For this we pray to you, O blessed one, take delight in our sacrifice, do send fruit-nourishing rains to mother Earth."
+  ],
+  "line_mappings": {
+    "1": 1,
+    "2": 6,
+    "3": 10
+  },
+  "sequence": 82
+}

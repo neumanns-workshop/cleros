@@ -1,0 +1,23 @@
+{
+  "hymn_id": "28",
+  "title": "To Hermes",
+  "dedication": "",
+  "incense": "frankincense",
+  "lines": [
+    "Hear me, Hermes, messenger of Zeus, son of Maia, almighty in heart, lord of the deceased, judge of contests, gentle and clever, O Argeiphontes, you are the guide of the flying sandals, a man-loving prophet to mortals.",
+    "A vigorous god, you delight in exercise and in deceit.",
+    "Interpreter of all you are, and a profiteer who frees us of cares, who holds in his hands the blameless tool of peace.",
+    "Lord of Korykos, blessed, helpful, and skilled in words, you assist in work and you are a friend of mortals in need.",
+    "You wield the dreaded, the respected weapon of speech.",
+    "Hear my prayer and grant a good end to a life of industry, gracious talk, and mindfulness."
+  ],
+  "line_mappings": {
+    "1": 1,
+    "2": 9,
+    "3": 11,
+    "4": 15,
+    "5": 19,
+    "6": 21
+  },
+  "sequence": 28
+}

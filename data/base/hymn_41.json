@@ -1,0 +1,17 @@
+{
+  "hymn_id": "41",
+  "title": "To Mother Antaia",
+  "dedication": "",
+  "incense": "aromatic herbs",
+  "lines": [
+    "Queen Antaia, goddess and many-named mother of immortal gods and of mortal men, weary from searching, weary from wandering far and wide, you once ended your fast in the valley of Eleusis, you came to Hades for noble Persephone.",
+    "Your guide was the innocent child of Dysaules, who brought the news of pure Chthonic Zeus' holy union; you bore divine Euboulos by yielding to human need.",
+    "O goddess, O queen to whom many pray, I beseech you to come graciously to your pious initiate."
+  ],
+  "line_mappings": {
+    "1": 1,
+    "2": 10,
+    "3": 15
+  },
+  "sequence": 41
+}

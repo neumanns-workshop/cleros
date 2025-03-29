@@ -1,0 +1,19 @@
+{
+  "hymn_id": "67",
+  "title": "To Asklepios",
+  "dedication": "",
+  "incense": "frankincense",
+  "lines": [
+    "Asklepios, lord Paian, healer of all, you charm away the pains of men who suffer.",
+    "Come, mighty and soothing, bring health, put an end to sickness, then to the harsh fate of death.",
+    "O blessed spirit of joyful growth, O helper, you ward off evil, honored and mighty son of Phoibos Apollon.",
+    "Enemy of disease, consort of Hygieia the blameless, come as savior, O blessed one, bring life to a good end."
+  ],
+  "line_mappings": {
+    "1": 1,
+    "2": 5,
+    "3": 9,
+    "4": 13
+  },
+  "sequence": 67
+}

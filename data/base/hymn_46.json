@@ -1,0 +1,19 @@
+{
+  "hymn_id": "46",
+  "title": "To Liknites",
+  "dedication": "",
+  "incense": "powdered frankincense",
+  "lines": [
+    "I summon to these prayers Dionysos Liknites, born at Nysa, blossoming, beloved and kindly Bacchos, nursling of the Nymphs and of fair-wreathed Aphrodite.",
+    "The forests once felt your feet quiver in the dance as frenzy drove you and the graceful Nymphs on and on.",
+    "The counsels of Zeus brought you to noble Persephone, who reared you to be loved by the deathless gods.",
+    "Kindheartedly come, O blessed one, accept the gift of this sacrifice."
+  ],
+  "line_mappings": {
+    "1": 1,
+    "2": 7,
+    "3": 11,
+    "4": 15
+  },
+  "sequence": 46
+}

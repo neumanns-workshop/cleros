@@ -1,0 +1,17 @@
+{
+  "hymn_id": "22",
+  "title": "To the Sea",
+  "dedication": "",
+  "incense": "pounded frankincense",
+  "lines": [
+    "I call upon gray-eyed Tethys, bride of Okeanos, dark-veiled queen whose waves dance as they are blown onto the land by the sweet breezes.",
+    "You break your tall waves upon the rocky beaches, you are calmed by races that are gentle and smooth, you delight in ships, your waters feed wild beasts.",
+    "Mother of Kypris, mother of dark clouds, mother of every spring round which nymphs swarm, hear me, O holy one, please help, send a fair tail wind to ships, O blessed one."
+  ],
+  "line_mappings": {
+    "1": 1,
+    "2": 7,
+    "3": 13
+  },
+  "sequence": 22
+}

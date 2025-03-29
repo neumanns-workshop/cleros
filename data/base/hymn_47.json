@@ -1,0 +1,15 @@
+{
+  "hymn_id": "47",
+  "title": "To Perikionios",
+  "dedication": "",
+  "incense": "aromatic herbs",
+  "lines": [
+    "I call upon Bacchos Perikionios, giver of wine; he enveloped all of Kadmos' house, with his might he harnessed, he calmed the heaving earth, when the blazing thunderbolt, when the raging gale stirred all the land, as everyone's bonds sprang loose.",
+    "Blessed reveler, come with joyful heart."
+  ],
+  "line_mappings": {
+    "1": 1,
+    "2": 11
+  },
+  "sequence": 47
+}

@@ -1,0 +1,21 @@
+{
+  "hymn_id": "86",
+  "title": "To Dream",
+  "dedication": "",
+  "incense": "aromatic herbs",
+  "lines": [
+    "I call upon you, blessed, long-winged, baneful Dream, messenger of things to come, greatest prophet to mortals.",
+    "In the quiet of sweet sleep you come silent, you speak to the soul, you rouse men's minds, in their sleep you whisper the will of the gods; silent you come to show the future to silent souls that walk the noble path of devotion to the gods.",
+    "Good always wins the race in people's minds, good leads their lives to pleasures anticipated, to a respite from suffering, that god himself may reveal the firmament of the divine lords through vows and sacrifices.",
+    "The end to which the pious come is always so sweeter, but to the impious never does a dreamy phantom, a prophet of evil deeds, reveal future need so that they may find the cure from pain to come.",
+    "But, O blessed one, I beg you, show me the behests of the gods, in all things bring me close to the path that is straight, do not through weird apparitions show me evil signs."
+  ],
+  "line_mappings": {
+    "1": 1,
+    "2": 5,
+    "3": 15,
+    "4": 23,
+    "5": 31
+  },
+  "sequence": 86
+}

@@ -1,0 +1,15 @@
+{
+  "hymn_id": "48",
+  "title": "To Sabazios",
+  "dedication": "",
+  "incense": "aromatic herbs",
+  "lines": [
+    "Hear me, father Sabazios, son of Kronos, illustrious god, you sewed into your thigh Bacchic Dionysos, the roaring Eiraphiotes, that he might come whole to noble Tmolos by the side of fair-cheeked Hipta.",
+    "O blessed ruler of Phrygia, supreme king of all, come kindheartedly to the aid of the initiates."
+  ],
+  "line_mappings": {
+    "1": 1,
+    "2": 9
+  },
+  "sequence": 48
+}

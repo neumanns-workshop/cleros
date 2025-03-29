@@ -1,0 +1,17 @@
+{
+  "hymn_id": "76",
+  "title": "To the Muses",
+  "dedication": "",
+  "incense": "frankincense",
+  "lines": [
+    "Daughters of Mnemosyne, daughters of thundering Zeus, Pierian Muses, renowned and illustrious, many-shaped and beloved of the mortals you visit, you give birth to unblemished virtue in every discipline, you nourish the soul, you set thought aright as you become leaders, as you become mistresses of the mind's power.",
+    "Sacred and mystic rites you taught to mortals, Kleio, Euterpe, Thaleia, Melpomene, Terpsichore, Erato, Polymnia, Ourania, mother Kalliope, mighty goddess Hagne.",
+    "Do come to the initiates, O goddesses, in your manifold holiness, do bring glory and emulation that is lovely and sung by many."
+  ],
+  "line_mappings": {
+    "1": 1,
+    "2": 13,
+    "3": 21
+  },
+  "sequence": 76
+}

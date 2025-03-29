@@ -1,0 +1,23 @@
+{
+  "hymn_id": "27",
+  "title": "To the Mother of the Gods",
+  "dedication": "",
+  "incense": "et varia",
+  "lines": [
+    "Divine are your honors, O mother of the gods and nurturer of all.",
+    "Yoke your swift chariot drawn by bull-slaying lions, and join our prayers, O mighty goddess.",
+    "You bring things to pass, O many-named and revered one, you are queen of the sky; in the cosmos yours is the throne, the throne in the middle, because the earth is yours, and you give gentle nourishment to mortals.",
+    "Of you were born gods and men, you hold sway over the rivers and over all the sea.",
+    "Hestia is one of your names, they call you giver of prosperity, because you bestow on men all manner of blessings.",
+    "Come to this rite, queen whom the drum delights, all-taming savior of Phrygia, consort of Kronos, honored child of Sky, frenzy-loving nurturer of life, joyously and graciously visit our deeds of piety."
+  ],
+  "line_mappings": {
+    "1": 1,
+    "2": 3,
+    "3": 6,
+    "4": 13,
+    "5": 17,
+    "6": 21
+  },
+  "sequence": 27
+}

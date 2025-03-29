@@ -1,0 +1,21 @@
+{
+  "hymn_id": "87",
+  "title": "To Death",
+  "dedication": "",
+  "incense": "powdered frankincense",
+  "lines": [
+    "Hear me, you who steer the path of all mortals and give sacred time to all from whom you are distant.",
+    "Your sleep tears the soul free from the body's hold, whenever you undo nature's powerful bonds, bringing the long slumber, the endless one, to the living.",
+    "Common to all, you are unjust to some, when you bring swift end to youthful life at its peak.",
+    "In you alone is executed the verdict common to all, for to entreaties and to prayers you alone are deaf.",
+    "O blessed one, with pious vows, with sacrifices, I beg you, I pray to you, grant me long life, that old age might be a noble prize among men."
+  ],
+  "line_mappings": {
+    "1": 1,
+    "2": 5,
+    "3": 11,
+    "4": 15,
+    "5": 19
+  },
+  "sequence": 87
+}

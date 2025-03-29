@@ -1,0 +1,17 @@
+{
+  "hymn_id": "20",
+  "title": "To Astrapaios Zeus",
+  "dedication": "",
+  "incense": "powdered frankincense",
+  "lines": [
+    "I call upon great and pure, upon resounding and illustrious, upon ethereal and blazing Zeus, whose racing fire shines through the air.",
+    "Your light flashes through the clouds with an ear-splitting clap.",
+    "O horrid, O wrathful and pure, O invincible god, lord of lightning, I call upon you, O begetter of all, O great king, to be kind and to bring a sweet end to my life."
+  ],
+  "line_mappings": {
+    "1": 1,
+    "2": 5,
+    "3": 7
+  },
+  "sequence": 20
+}

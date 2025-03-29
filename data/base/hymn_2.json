@@ -1,0 +1,23 @@
+{
+  "hymn_id": "2",
+  "title": "To Prothyraia",
+  "dedication": "",
+  "incense": "storax",
+  "lines": [
+    "Hear me, O revered goddess, O many-named divinity, O sight sweet to women in labor, you offer them aid in travail.",
+    "You save women, and you alone love children, O kindly goddess of swift birth, ever helpful to young women, O Prothyraia.",
+    "You hold the keys, you are accessible to all, O mistress, gracious and fond of nurture, you have power in every house, and you delight in festivities.",
+    "You loosen girdles, and though invisible you are seen in every deed, you share pain, you rejoice in every birth, O Eileithyia, you free from pain those in terrible distress.",
+    "Upon you alone pregnant women call, O comforter of souls, and in you alone there is relief from pains of labor.",
+    "Artemis, Eileithyia, reverend Prothyraia, hear, O blessed one, help me and grant offspring; save me, savior of all, for it is in your nature to do so."
+  ],
+  "line_mappings": {
+    "1": 1,
+    "2": 5,
+    "3": 10,
+    "4": 15,
+    "5": 21,
+    "6": 25
+  },
+  "sequence": 2
+}

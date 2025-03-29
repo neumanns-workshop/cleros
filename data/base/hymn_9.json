@@ -1,0 +1,17 @@
+{
+  "hymn_id": "9",
+  "title": "To Selene",
+  "dedication": "",
+  "incense": "aromatic herbs",
+  "lines": [
+    "Hear me, O divine queen, O light-bringing and splendid Selene, O bull-horned Moon, crossing the air as you race with night.",
+    "Nocturnal, torch-bearing, maiden of beautiful stars, O Moon, waxing and waning, feminine and masculine, luminous, lover of horses, mother of time, bearer of fruit, amber-colored, moody, shining in the night, all-seeing and vigilant, surrounded by beautiful stars, you delight in the quiet and in the richness of the night, you grant fulfillment and favor, as, like a jewel, you shine in the night.",
+    "Long-cloaked marshal of the stars, wise maiden whose motion is circular, come, O blessed and gentle lady, lady of the stars, through your own light shine and save, O maiden, your new initiates."
+  ],
+  "line_mappings": {
+    "1": 1,
+    "2": 5,
+    "3": 19
+  },
+  "sequence": 9
+}
