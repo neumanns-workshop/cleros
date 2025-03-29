@@ -1,6 +1,8 @@
-# SORTES
+# SORTES (Beta)
 
 SORTES is a web application that uses advanced text processing to interact with ancient texts, specifically focusing on Orphic Hymns. The application leverages embedding models for semantic search and text analysis.
+
+> **Note:** This is a beta release. Some features may not be fully stable.
 
 ## Architecture Overview
 

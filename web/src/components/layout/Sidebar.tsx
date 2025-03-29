@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, Typography, Drawer, Tooltip, IconButton, Collapse } from '@mui/material';
+import { Box, Typography, Drawer, Tooltip, IconButton, Collapse, Link } from '@mui/material';
 import { useOracleContext } from '../../context/OracleContext';
 import { OracleQueryForm } from '../forms/OracleQueryForm';
 import { DRAWER_WIDTH } from '../../utils/constants';
@@ -157,6 +157,34 @@ export const Sidebar: React.FC = () => {
         
         {/* Spacer to push donation button to bottom */}
         <Box sx={{ flexGrow: 1 }} />
+        
+        {/* Version tag */}
+        <Box sx={{ 
+          display: 'flex', 
+          justifyContent: 'center', 
+          mb: 2
+        }}>
+          <Link 
+            href="https://github.com/neumanns-workshop/sortes/blob/main/CHANGELOG.md" 
+            target="_blank"
+            rel="noopener noreferrer"
+            sx={{ 
+              color: 'rgba(224, 224, 224, 0.4)', 
+              fontSize: '0.7rem', 
+              textDecoration: 'none',
+              padding: '2px 8px',
+              border: '1px solid rgba(224, 224, 224, 0.2)',
+              borderRadius: '12px',
+              '&:hover': {
+                color: 'rgba(224, 224, 224, 0.8)',
+                borderColor: 'rgba(224, 224, 224, 0.4)',
+                backgroundColor: 'rgba(224, 224, 224, 0.05)'
+              }
+            }}
+          >
+            v1.0.0-beta
+          </Link>
+        </Box>
         
         {/* Donation button */}
         <Box 
