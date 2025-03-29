@@ -38,19 +38,34 @@ jobs:
 
       - name: Copy build files to main repository
         run: |
+          # Make sortes-app directory and copy build files there (keeping existing structure)
+          mkdir -p main-repo/sortes-app
+          cp -R web/build/* main-repo/sortes-app/
+          
+          # Create sortes directory with redirect to sortes-app
           mkdir -p main-repo/sortes
-          cp -R web/build/* main-repo/sortes/
+          cat > main-repo/sortes/index.html << 'EOL'
+          <!DOCTYPE html>
+          <html>
+          <head>
+            <meta http-equiv="refresh" content="0; url=/sortes-app/" />
+            <title>Redirecting to SORTES</title>
+          </head>
+          <body>
+            <p>Redirecting to SORTES application...</p>
+            <p><a href="/sortes-app/">Click here if you are not redirected automatically</a></p>
+          </body>
+          </html>
+          EOL
           
           # Ensure .nojekyll exists to prevent Jekyll processing
           touch main-repo/.nojekyll
           
-          # Ensure README.md doesn't override index.html
-          if [ -f main-repo/sortes/README.md ]; then
-            mv main-repo/sortes/README.md main-repo/sortes/README.md.bak
-          fi
-          
-          # Verify index.html exists
+          # List directories to verify structure
+          echo "Directory structure:"
+          ls -la main-repo/
           ls -la main-repo/sortes/
+          ls -la main-repo/sortes-app/
 
       - name: Configure Git
         run: |
@@ -61,6 +76,6 @@ jobs:
       - name: Commit and push changes to main repository
         run: |
           cd main-repo
-          git add sortes
-          git commit -m "Update SORTES app (triggered by ${{ github.event.head_commit.message }})" || echo "No changes to commit"
+          git add sortes sortes-app .nojekyll
+          git commit -m "Update SORTES app and add redirect (triggered by ${{ github.event.head_commit.message }})" || echo "No changes to commit"
           git push 
