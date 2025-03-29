@@ -28,7 +28,7 @@ jobs:
         run: |
           cd web
           # Set the correct PUBLIC_URL for GitHub Pages
-          REACT_APP_PUBLIC_URL="/sortes-app" CI=false SKIP_PREFLIGHT_CHECK=true DISABLE_ESLINT_PLUGIN=true npm run build
+          REACT_APP_PUBLIC_URL="/sortes" CI=false SKIP_PREFLIGHT_CHECK=true DISABLE_ESLINT_PLUGIN=true npm run build
           # List contents to verify build
           echo "Build output files:"
           ls -la build/
@@ -61,43 +61,43 @@ jobs:
 
       - name: Copy build files to main repository
         run: |
-          # Make sortes-app directory and copy build files there (keeping existing structure)
-          mkdir -p main-repo/sortes-app
-          echo "Copying build files to sortes-app directory"
-          cp -R web/build/* main-repo/sortes-app/
+          # Make sortes directory and copy build files there (keeping existing structure)
+          mkdir -p main-repo/sortes
+          echo "Copying build files to sortes directory"
+          cp -R web/build/* main-repo/sortes/
           
-          # Create data directories in the sortes-app folder if they don't exist in build
-          if [ ! -d "main-repo/sortes-app/data/enriched/deities" ]; then
-            mkdir -p main-repo/sortes-app/data/enriched/deities
+          # Create data directories in the sortes folder if they don't exist in build
+          if [ ! -d "main-repo/sortes/data/enriched/deities" ]; then
+            mkdir -p main-repo/sortes/data/enriched/deities
           fi
           
-          if [ ! -d "main-repo/sortes-app/data/enriched/embeddings" ]; then
-            mkdir -p main-repo/sortes-app/data/enriched/embeddings
+          if [ ! -d "main-repo/sortes/data/enriched/embeddings" ]; then
+            mkdir -p main-repo/sortes/data/enriched/embeddings
           fi
           
-          if [ ! -d "main-repo/sortes-app/data/base" ]; then
-            mkdir -p main-repo/sortes-app/data/base
+          if [ ! -d "main-repo/sortes/data/base" ]; then
+            mkdir -p main-repo/sortes/data/base
           fi
           
-          # Check content of sortes-app directory
-          echo "Content of sortes-app directory:"
-          ls -la main-repo/sortes-app/
+          # Check content of sortes directory
+          echo "Content of sortes directory:"
+          ls -la main-repo/sortes/
           echo "Content of static directory:"
-          ls -la main-repo/sortes-app/static 2>/dev/null || echo "No static directory found"
+          ls -la main-repo/sortes/static 2>/dev/null || echo "No static directory found"
           
           # Special handling for embeddings - ALWAYS use the web/public version
           echo "Using web/public embeddings..."
           
           if [ -f "web/public/data/enriched/embeddings/sentence_embeddings.json" ]; then
             echo "Copying sentence_embeddings.json from web/public..."
-            cp web/public/data/enriched/embeddings/sentence_embeddings.json main-repo/sortes-app/data/enriched/embeddings/
+            cp web/public/data/enriched/embeddings/sentence_embeddings.json main-repo/sortes/data/enriched/embeddings/
             
             # Also ensure the same file is in the root data directory for fallback
             mkdir -p main-repo/data/enriched/embeddings
             cp web/public/data/enriched/embeddings/sentence_embeddings.json main-repo/data/enriched/embeddings/
             
             echo "Verifying file size for copied embeddings:"
-            ls -lah main-repo/sortes-app/data/enriched/embeddings/sentence_embeddings.json
+            ls -lah main-repo/sortes/data/enriched/embeddings/sentence_embeddings.json
             ls -lah main-repo/data/enriched/embeddings/sentence_embeddings.json
           else
             echo "⚠️ Warning: sentence_embeddings.json not found in web/public!"
@@ -106,7 +106,7 @@ jobs:
           # Copy metadata file
           if [ -f "web/public/data/enriched/embeddings/embeddings_metadata.json" ]; then
             echo "Copying embeddings_metadata.json from web/public..."
-            cp web/public/data/enriched/embeddings/embeddings_metadata.json main-repo/sortes-app/data/enriched/embeddings/
+            cp web/public/data/enriched/embeddings/embeddings_metadata.json main-repo/sortes/data/enriched/embeddings/
             cp web/public/data/enriched/embeddings/embeddings_metadata.json main-repo/data/enriched/embeddings/
           else
             echo "⚠️ Warning: embeddings_metadata.json not found in web/public!"
@@ -115,7 +115,7 @@ jobs:
           # Copy deity classifications if they exist
           if [ -d "web/public/data/enriched/deities" ]; then
             echo "Copying deity files from web/public..."
-            cp -R web/public/data/enriched/deities/* main-repo/sortes-app/data/enriched/deities/
+            cp -R web/public/data/enriched/deities/* main-repo/sortes/data/enriched/deities/
             
             # Also copy to root data directory
             mkdir -p main-repo/data/enriched/deities
@@ -125,7 +125,7 @@ jobs:
           # Copy base hymn data files if they exist
           if [ -d "web/public/data/base" ]; then
             echo "Copying base hymn data files from web/public..."
-            cp -R web/public/data/base/* main-repo/sortes-app/data/base/
+            cp -R web/public/data/base/* main-repo/sortes/data/base/
             
             # Also copy to root data directory
             mkdir -p main-repo/data/base
@@ -137,7 +137,7 @@ jobs:
           <!DOCTYPE html>
           <html>
           <head>
-            <meta http-equiv="refresh" content="0; url=/sortes-app/data/" />
+            <meta http-equiv="refresh" content="0; url=/sortes/data/" />
             <title>Redirecting to data</title>
           </head>
           <body>
@@ -146,51 +146,37 @@ jobs:
           </html>
           EOL
           
-          # Create sortes directory with redirect to sortes-app
-          mkdir -p main-repo/sortes
-          cat > main-repo/sortes/index.html << 'EOL'
+          # Create redirect from sortes-app to sortes 
+          mkdir -p main-repo/sortes-app
+          cat > main-repo/sortes-app/index.html << 'EOL'
           <!DOCTYPE html>
           <html>
           <head>
-            <meta http-equiv="refresh" content="0; url=/sortes-app/" />
+            <meta http-equiv="refresh" content="0; url=/sortes/" />
             <title>Redirecting to SORTES</title>
           </head>
           <body>
             <p>Redirecting to SORTES application...</p>
-            <p><a href="/sortes-app/">Click here if you are not redirected automatically</a></p>
-          </body>
-          </html>
-          EOL
-          
-          # Create a root redirect to sortes-app
-          cat > main-repo/index.html << 'EOL'
-          <!DOCTYPE html>
-          <html>
-          <head>
-            <meta http-equiv="refresh" content="0; url=/sortes-app/" />
-            <title>Redirecting to SORTES</title>
-          </head>
-          <body>
-            <p>Redirecting to SORTES application...</p>
-            <p><a href="/sortes-app/">Click here if you are not redirected automatically</a></p>
+            <p><a href="/sortes/">Click here if you are not redirected automatically</a></p>
           </body>
           </html>
           EOL
           
           # Ensure .nojekyll exists to prevent Jekyll processing
           touch main-repo/.nojekyll
+          touch main-repo/sortes/.nojekyll
           
           # List directories to verify structure
           echo "Directory structure:"
           ls -la main-repo/
           ls -la main-repo/sortes/
           ls -la main-repo/sortes-app/
-          ls -la main-repo/sortes-app/data/ || echo "No data directory found"
+          ls -la main-repo/sortes/data/ || echo "No data directory found"
           ls -la main-repo/data/ || echo "No root data directory found"
           
           # Specifically check embedding files
           echo "Checking final embedding files:"
-          ls -lah main-repo/sortes-app/data/enriched/embeddings/ || echo "No embeddings directory found!"
+          ls -lah main-repo/sortes/data/enriched/embeddings/ || echo "No embeddings directory found!"
           ls -lah main-repo/data/enriched/embeddings/ || echo "No root embeddings directory found!"
 
       - name: Configure Git
@@ -202,6 +188,6 @@ jobs:
       - name: Commit and push changes to main repository
         run: |
           cd main-repo
-          git add sortes sortes-app .nojekyll data index.html
-          git commit -m "Update SORTES app with new embeddings architecture (triggered by ${{ github.event.head_commit.message }})" || echo "No changes to commit"
+          git add sortes sortes-app .nojekyll data
+          git commit -m "Update SORTES app path from /sortes-app/ to /sortes/ (triggered by ${{ github.event.head_commit.message }})" || echo "No changes to commit"
           git push origin main 
