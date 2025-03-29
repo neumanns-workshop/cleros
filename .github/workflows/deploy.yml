@@ -8,16 +8,18 @@ on:
       - 'v*'
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout SORTES repository
         uses: actions/checkout@v3
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '16'
+          cache: 'npm'
+          cache-dependency-path: 'web/package-lock.json'
 
       - name: Install dependencies
         run: |
@@ -29,22 +31,6 @@ jobs:
           cd web
           npm run build
 
-      - name: Upload build artifacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: build-files
-          path: web/build/
-
-  update-main-repo:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Download build artifacts
-        uses: actions/download-artifact@v3
-        with:
-          name: build-files
-          path: build-files
-
       - name: Checkout main repository
         uses: actions/checkout@v3
         with:
@@ -55,7 +41,7 @@ jobs:
       - name: Copy build files to main repository
         run: |
           mkdir -p main-repo/sortes-app
-          cp -R build-files/* main-repo/sortes-app/
+          cp -R web/build/* main-repo/sortes-app/
 
       - name: Configure Git
         run: |
