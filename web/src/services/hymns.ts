@@ -31,7 +31,8 @@ export async function loadHymnData(hymnNumber: number): Promise<HymnData> {
 
 export async function loadHymnEmbeddings(): Promise<HymnEmbeddings> {
     try {
-        const response = await axios.get('/data/enriched/embeddings/sentence_embeddings.json');
+        const timestamp = Date.now();
+        const response = await axios.get(`/data/enriched/embeddings/sentence_embeddings.json?t=${timestamp}`);
         return response.data;
     } catch (error) {
         console.error('Error loading sentence embeddings:', error);
