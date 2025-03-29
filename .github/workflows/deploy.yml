@@ -167,20 +167,7 @@ jobs:
           
           # No longer needed to create sortes directory with redirect as we're deploying directly there
           
-          # Create a root redirect to sortes
-          cat > main-repo/index.html << 'EOL'
-          <!DOCTYPE html>
-          <html>
-          <head>
-            <meta http-equiv="refresh" content="0; url=/sortes/" />
-            <title>Redirecting to SORTES</title>
-          </head>
-          <body>
-            <p>Redirecting to SORTES application...</p>
-            <p><a href="/sortes/">Click here if you are not redirected automatically</a></p>
-          </body>
-          </html>
-          EOL
+          # Removed root redirect to allow personal website to function normally
           
           # Ensure .nojekyll exists to prevent Jekyll processing
           touch main-repo/.nojekyll
@@ -206,6 +193,6 @@ jobs:
       - name: Commit and push changes to main repository
         run: |
           cd main-repo
-          git add sortes sortes-app .nojekyll data index.html
+          git add sortes sortes-app .nojekyll data
           git commit -m "Update SORTES app with new path /sortes/ (triggered by ${{ github.event.head_commit.message }})" || echo "No changes to commit"
           git push origin main 
