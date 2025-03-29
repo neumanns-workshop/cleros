@@ -5,6 +5,14 @@ All notable changes to the SORTES project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.1-beta] - 2025-03-28
+
+### Changed
+- Optimized loading behavior for TensorFlow.js
+- Implemented lazy loading to only load models when needed
+- Improved user interface for loading states
+- Added informative tooltips for better user experience
+
 ## [1.0.0-beta] - 2025-03-28
 
 ### Added
