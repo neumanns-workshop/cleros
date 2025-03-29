@@ -25,9 +25,24 @@ function ensureCorrectPath(path: string): string {
     path = '/' + path;
   }
   
-  // Make sure we're looking in public directory
-  if (!path.startsWith('/data') && !path.includes('/public/')) {
-    path = '/data' + path;
+  // Get the public URL base from package.json homepage or window location
+  const getBasePath = (): string => {
+    // Check if we're running in a GitHub Pages environment
+    const isGitHubPages = window.location.hostname !== 'localhost' && 
+                        !window.location.hostname.includes('127.0.0.1');
+    
+    if (isGitHubPages && window.location.pathname.includes('/sortes/')) {
+      return '/sortes';
+    }
+    
+    return '';
+  };
+  
+  const basePath = getBasePath();
+  
+  // Make sure we're looking in public directory with the correct base path
+  if (!path.startsWith(`${basePath}/data`) && !path.includes('/public/')) {
+    path = `${basePath}/data` + path;
   }
   
   // Replace double slashes
@@ -37,7 +52,10 @@ function ensureCorrectPath(path: string): string {
 // Helper function to simulate a local API call for data loading
 export async function fetchLocalData<T>(dataPath: string): Promise<APIResponse<T>> {
   try {
-    const response = await axios.get(dataPath);
+    // Apply path correction
+    const correctedPath = ensureCorrectPath(dataPath);
+    
+    const response = await axios.get(correctedPath);
     return { data: response.data, success: true };
   } catch (error: any) {
     console.error(`Error fetching ${dataPath}:`, error?.message);

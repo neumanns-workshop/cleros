@@ -1,4 +1,4 @@
-import axios from 'axios';
+import { fetchLocalData } from './api';
 
 export interface EntityClassification {
   entity: string;
@@ -95,10 +95,15 @@ export const specialCategoryMap: Record<string, string> = {
  */
 export async function loadDeityClassifications(): Promise<EntityClassification[]> {
   try {
-    const response = await axios.get('/data/enriched/deities/deity_classifications.json');
+    // Use fetchLocalData instead of direct axios.get
+    const response = await fetchLocalData<EntityClassification[]>('/data/enriched/deities/deity_classifications.json');
+    
+    if (!response.success) {
+      throw new Error(response.error || 'Failed to load deity classifications');
+    }
     
     // Add aliases as additional classifications
-    const classifications = response.data as EntityClassification[];
+    const classifications = response.data;
     const classificationsWithAliases = addDeityAliases(classifications);
     
     return classificationsWithAliases;
