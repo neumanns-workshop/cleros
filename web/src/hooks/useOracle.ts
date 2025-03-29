@@ -85,6 +85,9 @@ export const useOracle = () => {
         console.log('- Has hymns property:', 'hymns' in embeddings);
         console.log('- Direct keys:', Object.keys(embeddings).slice(0, 5));
         
+        // Use consistent type assertion for embeddings
+        const embeddingsMap = embeddings as Record<string, Record<string, { text: string, embedding: number[] }>>;
+        
         // Check available data files with fetch
         console.log('Checking available data files:');
         try {
@@ -122,10 +125,9 @@ export const useOracle = () => {
           // We'll try direct index first, then fallback to appropriate handling
           let lineEmbeddingIndex = index.toString();
           
-          // Access the embedding data with proper null checks
-          if (!embeddings[hymnNumber.toString()] || 
-              !embeddings[hymnNumber.toString()][lineEmbeddingIndex] ||
-              !embeddings[hymnNumber.toString()][lineEmbeddingIndex].embedding) {
+          if (!embeddingsMap[hymnNumber.toString()] || 
+              !embeddingsMap[hymnNumber.toString()][lineEmbeddingIndex] ||
+              !embeddingsMap[hymnNumber.toString()][lineEmbeddingIndex].embedding) {
             console.warn(`Missing embedding for hymn ${hymnNumber}, line ${lineEmbeddingIndex}`);
             // Provide a default similarity when embedding is missing
             return { 
@@ -135,7 +137,7 @@ export const useOracle = () => {
             };
           }
           
-          const lineData = embeddings[hymnNumber.toString()][lineEmbeddingIndex];
+          const lineData = embeddingsMap[hymnNumber.toString()][lineEmbeddingIndex];
           const similarity = cosineSimilarity(queryEmbedding, lineData.embedding);
           return { text: line, similarity, originalIndex: index };
         });
