@@ -164,25 +164,22 @@ export const Sidebar: React.FC = () => {
           justifyContent: 'center', 
           mb: 2
         }}>
-          <Link 
-            href="https://github.com/neumanns-workshop/sortes/blob/main/CHANGELOG.md" 
+          <Link
+            component="a"
+            href="https://github.com/jneumann/sortes"
             target="_blank"
             rel="noopener noreferrer"
-            sx={{ 
-              color: 'rgba(224, 224, 224, 0.4)', 
-              fontSize: '0.7rem', 
+            sx={{
+              fontSize: '0.7rem',
+              opacity: 0.6,
+              color: 'text.primary',
               textDecoration: 'none',
-              padding: '2px 8px',
-              border: '1px solid rgba(224, 224, 224, 0.2)',
-              borderRadius: '12px',
               '&:hover': {
-                color: 'rgba(224, 224, 224, 0.8)',
-                borderColor: 'rgba(224, 224, 224, 0.4)',
-                backgroundColor: 'rgba(224, 224, 224, 0.05)'
+                textDecoration: 'underline'
               }
             }}
           >
-            v1.0.1-beta
+            v1.0.1-beta.1
           </Link>
         </Box>
         

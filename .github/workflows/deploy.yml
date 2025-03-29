@@ -60,10 +60,9 @@ jobs:
             ls -lah data/enriched/embeddings/sentence_embeddings.json || echo "Embedding file not found!"
             
             # Copy embeddings - one by one to verify
-            cp data/enriched/embeddings/hymn_embeddings.json main-repo/sortes-app/data/enriched/embeddings/
-            cp data/enriched/embeddings/embeddings_metadata.json main-repo/sortes-app/data/enriched/embeddings/
             cp data/enriched/embeddings/sentence_embeddings.json main-repo/sortes-app/data/enriched/embeddings/
-            
+            cp data/enriched/embeddings/embeddings_metadata.json main-repo/sortes-app/data/enriched/embeddings/
+                                        
             echo "Verifying copied embedding files:"
             ls -lah main-repo/sortes-app/data/enriched/embeddings/ || echo "No embeddings directory found!"
             
@@ -83,9 +82,8 @@ jobs:
           
           # Copy data to the root data directory too
           cp -R data/enriched/deities/* main-repo/data/enriched/deities/
-          cp data/enriched/embeddings/hymn_embeddings.json main-repo/data/enriched/embeddings/
-          cp data/enriched/embeddings/embeddings_metadata.json main-repo/data/enriched/embeddings/
           cp data/enriched/embeddings/sentence_embeddings.json main-repo/data/enriched/embeddings/
+          cp data/enriched/embeddings/embeddings_metadata.json main-repo/data/enriched/embeddings/
           
           # Copy base hymn data files to root data directory too
           if [ -d "data/base" ]; then
@@ -147,6 +145,6 @@ jobs:
       - name: Commit and push changes to main repository
         run: |
           cd main-repo
-          git add sortes sortes-app .nojekyll
+          git add sortes sortes-app .nojekyll data
           git commit -m "Update SORTES app and add redirect (triggered by ${{ github.event.head_commit.message }})" || echo "No changes to commit"
-          git push 
+          git push origin main 
