@@ -84,4 +84,4 @@ package-lock.json
 *.tmp
 *.bak
 *.swp
-*~ 
+*~ /neumanns-workshop.github.io/

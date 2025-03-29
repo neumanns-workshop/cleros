@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: Build Sortes App
 
 on:
   push:
@@ -7,8 +7,14 @@ on:
     tags:
       - 'v*'
 
+# Permissions needed for GitHub Pages
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout SORTES repository
@@ -52,142 +58,31 @@ jobs:
             echo "Warning: embeddings_metadata.json not found in web/public/"
           fi
 
-      - name: Checkout main repository
-        uses: actions/checkout@v3
+      - name: Create deployment artifacts
+        run: |
+          mkdir -p deploy
+          cp -R web/build/* deploy/
+          
+          # Ensure .nojekyll exists
+          touch deploy/.nojekyll
+          
+          # Copy data directories if they exist
+          if [ -d "web/public/data" ]; then
+            echo "Copying data files..."
+            cp -R web/public/data deploy/
+          fi
+
+      - name: Upload build as artifact
+        uses: actions/upload-artifact@v3
         with:
-          repository: neumanns-workshop/neumanns-workshop.github.io
-          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-          path: main-repo
+          name: sortes-build
+          path: deploy/
+          retention-days: 7
 
-      - name: Copy build files to main repository
-        run: |
-          # Make sortes directory and copy build files there (keeping existing structure)
-          mkdir -p main-repo/sortes
-          echo "Copying build files to sortes directory"
-          cp -R web/build/* main-repo/sortes/
-          
-          # Create data directories in the sortes folder if they don't exist in build
-          if [ ! -d "main-repo/sortes/data/enriched/deities" ]; then
-            mkdir -p main-repo/sortes/data/enriched/deities
-          fi
-          
-          if [ ! -d "main-repo/sortes/data/enriched/embeddings" ]; then
-            mkdir -p main-repo/sortes/data/enriched/embeddings
-          fi
-          
-          if [ ! -d "main-repo/sortes/data/base" ]; then
-            mkdir -p main-repo/sortes/data/base
-          fi
-          
-          # Check content of sortes directory
-          echo "Content of sortes directory:"
-          ls -la main-repo/sortes/
-          echo "Content of static directory:"
-          ls -la main-repo/sortes/static 2>/dev/null || echo "No static directory found"
-          
-          # Special handling for embeddings - ALWAYS use the web/public version
-          echo "Using web/public embeddings..."
-          
-          if [ -f "web/public/data/enriched/embeddings/sentence_embeddings.json" ]; then
-            echo "Copying sentence_embeddings.json from web/public..."
-            cp web/public/data/enriched/embeddings/sentence_embeddings.json main-repo/sortes/data/enriched/embeddings/
-            
-            # Also ensure the same file is in the root data directory for fallback
-            mkdir -p main-repo/data/enriched/embeddings
-            cp web/public/data/enriched/embeddings/sentence_embeddings.json main-repo/data/enriched/embeddings/
-            
-            echo "Verifying file size for copied embeddings:"
-            ls -lah main-repo/sortes/data/enriched/embeddings/sentence_embeddings.json
-            ls -lah main-repo/data/enriched/embeddings/sentence_embeddings.json
-          else
-            echo "⚠️ Warning: sentence_embeddings.json not found in web/public!"
-          fi
-          
-          # Copy metadata file
-          if [ -f "web/public/data/enriched/embeddings/embeddings_metadata.json" ]; then
-            echo "Copying embeddings_metadata.json from web/public..."
-            cp web/public/data/enriched/embeddings/embeddings_metadata.json main-repo/sortes/data/enriched/embeddings/
-            cp web/public/data/enriched/embeddings/embeddings_metadata.json main-repo/data/enriched/embeddings/
-          else
-            echo "⚠️ Warning: embeddings_metadata.json not found in web/public!"
-          fi
-          
-          # Copy deity classifications if they exist
-          if [ -d "web/public/data/enriched/deities" ]; then
-            echo "Copying deity files from web/public..."
-            cp -R web/public/data/enriched/deities/* main-repo/sortes/data/enriched/deities/
-            
-            # Also copy to root data directory
-            mkdir -p main-repo/data/enriched/deities
-            cp -R web/public/data/enriched/deities/* main-repo/data/enriched/deities/
-          fi
-          
-          # Copy base hymn data files if they exist
-          if [ -d "web/public/data/base" ]; then
-            echo "Copying base hymn data files from web/public..."
-            cp -R web/public/data/base/* main-repo/sortes/data/base/
-            
-            # Also copy to root data directory
-            mkdir -p main-repo/data/base
-            cp -R web/public/data/base/* main-repo/data/base/
-          fi
-          
-          # Create a top-level data index redirect as fallback
-          cat > main-repo/data/index.html << 'EOL'
-          <!DOCTYPE html>
-          <html>
-          <head>
-            <meta http-equiv="refresh" content="0; url=/sortes/data/" />
-            <title>Redirecting to data</title>
-          </head>
-          <body>
-            <p>Redirecting to data files...</p>
-          </body>
-          </html>
-          EOL
-          
-          # Create redirect from sortes-app to sortes 
-          mkdir -p main-repo/sortes-app
-          cat > main-repo/sortes-app/index.html << 'EOL'
-          <!DOCTYPE html>
-          <html>
-          <head>
-            <meta http-equiv="refresh" content="0; url=/sortes/" />
-            <title>Redirecting to SORTES</title>
-          </head>
-          <body>
-            <p>Redirecting to SORTES application...</p>
-            <p><a href="/sortes/">Click here if you are not redirected automatically</a></p>
-          </body>
-          </html>
-          EOL
-          
-          # Ensure .nojekyll exists to prevent Jekyll processing
-          touch main-repo/.nojekyll
-          touch main-repo/sortes/.nojekyll
-          
-          # List directories to verify structure
-          echo "Directory structure:"
-          ls -la main-repo/
-          ls -la main-repo/sortes/
-          ls -la main-repo/sortes-app/
-          ls -la main-repo/sortes/data/ || echo "No data directory found"
-          ls -la main-repo/data/ || echo "No root data directory found"
-          
-          # Specifically check embedding files
-          echo "Checking final embedding files:"
-          ls -lah main-repo/sortes/data/enriched/embeddings/ || echo "No embeddings directory found!"
-          ls -lah main-repo/data/enriched/embeddings/ || echo "No root embeddings directory found!"
-
-      - name: Configure Git
-        run: |
-          cd main-repo
-          git config user.name "GitHub Actions"
-          git config user.email "github-actions@users.noreply.github.com"
-
-      - name: Commit and push changes to main repository
-        run: |
-          cd main-repo
-          git add sortes sortes-app .nojekyll data
-          git commit -m "Update SORTES app path from /sortes-app/ to /sortes/ (triggered by ${{ github.event.head_commit.message }})" || echo "No changes to commit"
-          git push origin main 
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/main'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./deploy
+          destination_dir: ./ 
