@@ -42,19 +42,55 @@ jobs:
           mkdir -p main-repo/sortes-app
           cp -R web/build/* main-repo/sortes-app/
           
-          # Create data directory in the sortes-app folder
+          # Create data directories in the sortes-app folder
           mkdir -p main-repo/sortes-app/data/enriched/deities
           mkdir -p main-repo/sortes-app/data/enriched/embeddings
+          mkdir -p main-repo/sortes-app/data/base
           
           # Copy data from data/ to web deployment
           if [ -d "data/enriched" ]; then
             echo "Copying data files from repository..."
-            cp -R data/enriched/* main-repo/sortes-app/data/enriched/
+            
+            # Copy deity classifications
+            cp -R data/enriched/deities/* main-repo/sortes-app/data/enriched/deities/
+            echo "Deity files copied"
+            
+            # Special handling for the large embedding file
+            echo "Checking embeddings file size..."
+            ls -lah data/enriched/embeddings/sentence_embeddings.json || echo "Embedding file not found!"
+            
+            # Copy embeddings - one by one to verify
+            cp data/enriched/embeddings/hymn_embeddings.json main-repo/sortes-app/data/enriched/embeddings/
+            cp data/enriched/embeddings/embeddings_metadata.json main-repo/sortes-app/data/enriched/embeddings/
+            cp data/enriched/embeddings/sentence_embeddings.json main-repo/sortes-app/data/enriched/embeddings/
+            
+            echo "Verifying copied embedding files:"
+            ls -lah main-repo/sortes-app/data/enriched/embeddings/ || echo "No embeddings directory found!"
+            
+            # Copy base hymn data files
+            if [ -d "data/base" ]; then
+              echo "Copying base hymn data files..."
+              cp -R data/base/* main-repo/sortes-app/data/base/
+              echo "Base hymn files copied. Found:"
+              ls -la main-repo/sortes-app/data/base/ || echo "No base hymn files found!"
+            fi
           fi
           
           # Also create a top-level data directory that links to the same data for fallback support
-          mkdir -p main-repo/data
-          cp -R data/enriched main-repo/data/
+          mkdir -p main-repo/data/enriched/deities
+          mkdir -p main-repo/data/enriched/embeddings
+          mkdir -p main-repo/data/base
+          
+          # Copy data to the root data directory too
+          cp -R data/enriched/deities/* main-repo/data/enriched/deities/
+          cp data/enriched/embeddings/hymn_embeddings.json main-repo/data/enriched/embeddings/
+          cp data/enriched/embeddings/embeddings_metadata.json main-repo/data/enriched/embeddings/
+          cp data/enriched/embeddings/sentence_embeddings.json main-repo/data/enriched/embeddings/
+          
+          # Copy base hymn data files to root data directory too
+          if [ -d "data/base" ]; then
+            cp -R data/base/* main-repo/data/base/
+          fi
           
           # Create a top-level data index redirect as fallback
           cat > main-repo/data/index.html << 'EOL'
@@ -96,6 +132,11 @@ jobs:
           ls -la main-repo/sortes-app/
           ls -la main-repo/sortes-app/data/ || echo "No data directory found"
           ls -la main-repo/data/ || echo "No root data directory found"
+          
+          # Specifically check embedding files
+          echo "Checking final embedding files:"
+          ls -lah main-repo/sortes-app/data/enriched/embeddings/ || echo "No embeddings directory found!"
+          ls -lah main-repo/data/enriched/embeddings/ || echo "No root embeddings directory found!"
 
       - name: Configure Git
         run: |

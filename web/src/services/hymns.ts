@@ -28,27 +28,65 @@ export interface HymnEmbeddings {
 }
 
 export async function loadHymnData(hymnNumber: number): Promise<HymnData> {
-    try {
-        const response = await fetchLocalData<HymnData>(`/data/base/hymn_${hymnNumber}.json`);
-        if (!response.success) {
-            throw new Error(response.error || 'Failed to load hymn data');
+    // Define multiple possible paths to try
+    const pathsToTry = [
+        `/data/base/hymn_${hymnNumber}.json`,
+        `/sortes-app/data/base/hymn_${hymnNumber}.json`,
+        `${process.env.PUBLIC_URL}/data/base/hymn_${hymnNumber}.json`
+    ];
+    
+    let lastError: any = null;
+    
+    // Try each path in sequence
+    for (const path of pathsToTry) {
+        try {
+            console.log(`Attempting to load hymn data from: ${path}`);
+            const response = await fetchLocalData<HymnData>(path);
+            if (response.success) {
+                console.log(`Successfully loaded hymn data from: ${path}`);
+                return response.data;
+            }
+            lastError = new Error(response.error || 'Failed to load hymn data');
+        } catch (error) {
+            console.warn(`Failed to load hymn data from ${path}:`, error);
+            lastError = error;
+            // Continue to next path
         }
-        return response.data;
-    } catch (error) {
-        console.error('Error loading hymn data:', error);
-        throw new Error('Failed to load hymn data');
     }
+    
+    // If we get here, all paths failed
+    console.error(`Error loading hymn ${hymnNumber} data, all paths failed:`, lastError);
+    throw new Error('Failed to load hymn data');
 }
 
 export async function loadHymnEmbeddings(): Promise<HymnEmbeddings> {
-    try {
-        const response = await fetchLocalData<HymnEmbeddings>('/data/enriched/embeddings/sentence_embeddings.json');
-        if (!response.success) {
-            throw new Error(response.error || 'Failed to load hymn embeddings');
+    // Define multiple possible paths to try
+    const pathsToTry = [
+        '/data/enriched/embeddings/sentence_embeddings.json',
+        '/sortes-app/data/enriched/embeddings/sentence_embeddings.json',
+        `${process.env.PUBLIC_URL}/data/enriched/embeddings/sentence_embeddings.json`
+    ];
+    
+    let lastError: any = null;
+    
+    // Try each path in sequence
+    for (const path of pathsToTry) {
+        try {
+            console.log(`Attempting to load embeddings from: ${path}`);
+            const response = await fetchLocalData<HymnEmbeddings>(path);
+            if (response.success) {
+                console.log(`Successfully loaded embeddings from: ${path}`);
+                return response.data;
+            }
+            lastError = new Error(response.error || 'Failed to load hymn embeddings');
+        } catch (error) {
+            console.warn(`Failed to load embeddings from ${path}:`, error);
+            lastError = error;
+            // Continue to next path
         }
-        return response.data;
-    } catch (error) {
-        console.error('Error loading hymn embeddings:', error);
-        throw new Error('Failed to load hymn embeddings');
     }
+    
+    // If we get here, all paths failed
+    console.error('Error loading hymn embeddings, all paths failed:', lastError);
+    throw new Error('Failed to load hymn embeddings');
 } 

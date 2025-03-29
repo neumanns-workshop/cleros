@@ -94,21 +94,40 @@ export const specialCategoryMap: Record<string, string> = {
  * Loads deity classifications from the server
  */
 export async function loadDeityClassifications(): Promise<EntityClassification[]> {
-  try {
-    const response = await fetchLocalData<EntityClassification[]>('/data/enriched/deities/deity_classifications.json');
-    if (!response.success) {
-      throw new Error(response.error || 'Failed to load deity classifications');
+  // Define multiple possible paths to try
+  const pathsToTry = [
+    '/data/enriched/deities/deity_classifications.json',
+    '/sortes-app/data/enriched/deities/deity_classifications.json',
+    `${process.env.PUBLIC_URL}/data/enriched/deities/deity_classifications.json`
+  ];
+  
+  let lastError: any = null;
+  
+  // Try each path in sequence
+  for (const path of pathsToTry) {
+    try {
+      console.log(`Attempting to load deity classifications from: ${path}`);
+      const response = await fetchLocalData<EntityClassification[]>(path);
+      if (response.success) {
+        console.log(`Successfully loaded deity classifications from: ${path}`);
+        
+        // Add aliases as additional classifications
+        const classifications = response.data;
+        const classificationsWithAliases = addDeityAliases(classifications);
+        
+        return classificationsWithAliases;
+      }
+      lastError = new Error(response.error || 'Failed to load deity classifications');
+    } catch (error) {
+      console.warn(`Failed to load deity classifications from ${path}:`, error);
+      lastError = error;
+      // Continue to next path
     }
-    
-    // Add aliases as additional classifications
-    const classifications = response.data;
-    const classificationsWithAliases = addDeityAliases(classifications);
-    
-    return classificationsWithAliases;
-  } catch (error) {
-    console.error('Error loading deity classifications:', error);
-    throw new Error('Failed to load deity classifications');
   }
+  
+  // If we get here, all paths failed
+  console.error('Error loading deity classifications, all paths failed:', lastError);
+  throw new Error('Failed to load deity classifications');
 }
 
 /**
