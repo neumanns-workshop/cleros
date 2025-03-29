@@ -227,40 +227,65 @@ export const Sidebar: React.FC = () => {
           
           <Box sx={{ flexGrow: 1 }} />
           
-          <Box sx={{ 
-            display: 'flex', 
-            justifyContent: 'center', 
-            mb: 2
-          }}>
-            <Link
-              component="a"
-              href="https://github.com/jneumann/sortes"
-              target="_blank"
-              rel="noopener noreferrer"
-              sx={{
-                fontSize: '0.7rem',
-                opacity: 0.6,
-                color: 'text.primary',
-                textDecoration: 'none',
-                '&:hover': {
-                  textDecoration: 'underline'
-                }
-              }}
-            >
-              v1.0.2-beta
-            </Link>
-          </Box>
-          
           <Box 
             sx={{ 
               mt: 2, 
               pt: 2, 
               borderTop: '1px solid rgba(224, 224, 224, 0.1)',
-              position: 'relative',
-              minHeight: '60px'
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              width: '100%'
             }}
           >
-            <DonateButton />
+            <Box sx={{ 
+              width: '100%', 
+              mb: 3,
+              display: 'flex',
+              justifyContent: 'center'
+            }}>
+              <DonateButton />
+            </Box>
+            
+            <Box 
+              sx={{ 
+                display: 'flex', 
+                flexDirection: 'column',
+                alignItems: 'center',
+                gap: 1.5,
+                mb: 2,
+                textAlign: 'center'
+              }}
+            >
+              <Link
+                component="a"
+                href="https://github.com/jneumann/sortes"
+                target="_blank"
+                rel="noopener noreferrer"
+                sx={{
+                  fontSize: '0.7rem',
+                  opacity: 0.6,
+                  color: 'text.primary',
+                  textDecoration: 'none',
+                  '&:hover': {
+                    textDecoration: 'underline'
+                  }
+                }}
+              >
+                v1.0.2-beta
+              </Link>
+              
+              <Typography
+                variant="caption"
+                sx={{
+                  fontSize: '0.65rem',
+                  opacity: 0.5,
+                  color: 'text.primary'
+                }}
+              >
+                © {new Date().getFullYear()} Jared Neumann Consulting, LLC
+              </Typography>
+            </Box>
           </Box>
         </Box>
       </Drawer>

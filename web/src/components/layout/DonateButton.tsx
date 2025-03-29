@@ -54,10 +54,6 @@ const DonateButton: React.FC = () => {
             borderColor: 'rgba(255, 255, 255, 0.5)',
             backgroundColor: 'rgba(255, 255, 255, 0.03)'
           },
-          position: 'absolute',
-          bottom: 16,
-          left: 16,
-          right: 16,
           height: '36px',
           fontSize: '0.85rem',
           fontWeight: 400,
@@ -66,7 +62,9 @@ const DonateButton: React.FC = () => {
           textTransform: 'none',
           display: 'flex',
           alignItems: 'center',
-          justifyContent: 'center'
+          justifyContent: 'center',
+          width: '100%',
+          maxWidth: '180px'
         }}
       >
         Donate
