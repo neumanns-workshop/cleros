@@ -1,3 +1,4 @@
+// @jest-environment jsdom
 import { fetchLocalData, clearAPICache } from '../services/api';
 
 // Mock the global fetch function
@@ -5,7 +6,8 @@ global.fetch = jest.fn();
 
 describe('API Service', () => {
   beforeEach(() => {
-    jest.resetAllMocks();
+    // Clear fetch mocks and API cache before each test
+    (global.fetch as jest.Mock).mockClear();
     clearAPICache();
   });
 
