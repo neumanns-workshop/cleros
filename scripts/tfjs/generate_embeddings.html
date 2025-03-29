@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Embeddings with TensorFlow.js</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.22.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/universal-sentence-encoder@1.3.3"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #status {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        #log {
+            height: 200px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+        #download {
+            margin-top: 10px;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Generate Embeddings with TensorFlow.js</h1>
+    <div id="status">Loading...</div>
+    <div id="log"></div>
+    <button id="start" disabled>Start Embedding Generation</button>
+    <div id="download" class="hidden">
+        <a id="downloadLink" href="#" download="sentence_embeddings.json">Download Embeddings</a>
+    </div>
+
+    <script>
+        const logElement = document.getElementById('log');
+        const statusElement = document.getElementById('status');
+        const startButton = document.getElementById('start');
+        const downloadDiv = document.getElementById('download');
+        const downloadLink = document.getElementById('downloadLink');
+        
+        let embeddings = {};
+        let metadata = {};
+        
+        function log(message) {
+            logElement.textContent += message + '\n';
+            logElement.scrollTop = logElement.scrollHeight;
+            console.log(message);
+        }
+        
+        // Preprocess hymn lines to fix broken ellipses
+        function preprocessHymnLines(hymns) {
+            log('Preprocessing hymn lines to fix broken ellipses...');
+            
+            for (const hymnId in hymns) {
+                const hymnData = hymns[hymnId];
+                const originalLines = [...hymnData.lines];
+                const processedLines = [];
+                
+                // Process lines to fix broken ellipses
+                let i = 0;
+                while (i < originalLines.length) {
+                    let currentLine = originalLines[i];
+                    
+                    // Check if this is the start of an improperly broken ellipsis
+                    let j = i + 1;
+                    let shouldMerge = false;
+                    
+                    // If current line ends with "." and next line is just "." or starts with ","
+                    while (j < originalLines.length && 
+                          ((currentLine.endsWith('.') && originalLines[j] === '.') ||
+                           (currentLine.endsWith('.') && originalLines[j].startsWith(',')))) {
+                        shouldMerge = true;
+                        
+                        // For single dot lines, add without space
+                        if (originalLines[j] === '.') {
+                            currentLine += '.';
+                        }
+                        // For comma continuation, join with the comma
+                        else if (originalLines[j].startsWith(',')) {
+                            currentLine += originalLines[j];
+                        }
+                        
+                        j++;
+                    }
+                    
+                    if (shouldMerge) {
+                        log(`Fixed broken ellipsis in hymn ${hymnId}: "${currentLine.substring(0, 50)}${currentLine.length > 50 ? '...' : ''}"`);
+                        processedLines.push(currentLine);
+                        i = j; // Skip the merged lines
+                    } else {
+                        processedLines.push(currentLine);
+                        i++;
+                    }
+                }
+                
+                // Update hymn data with processed lines
+                if (processedLines.length !== originalLines.length) {
+                    log(`Hymn ${hymnId}: Reduced from ${originalLines.length} to ${processedLines.length} lines`);
+                    hymns[hymnId].lines = processedLines;
+                    
+                    // Update line_mappings if needed
+                    // This is more complex and would require knowing the exact mapping logic
+                    // For now, we'll just note that mappings may need manual adjustment
+                    log(`Warning: Line mappings for hymn ${hymnId} may need to be updated manually`);
+                }
+            }
+            
+            return hymns;
+        }
+        
+        // Load hymn data from the server
+        async function loadHymnData() {
+            log('Loading hymn data...');
+            try {
+                const basePath = '../../web/public/data/base/';
+                
+                // Instead of looking for an index file, we'll list the directory to get all hymn_*.json files
+                // First, get a list of available hymn files
+                const hymnFiles = [];
+                
+                // We'll manually create a range of hymn IDs from 0 to 87 based on what we saw
+                for (let i = 0; i <= 87; i++) {
+                    hymnFiles.push(`hymn_${i}.json`);
+                }
+                
+                const hymns = {};
+                
+                // Add cache-busting timestamp to force reload
+                const cacheBuster = `?t=${Date.now()}`;
+                
+                // Load each hymn file
+                for (const file of hymnFiles) {
+                    try {
+                        // Add cache-busting parameter to URL
+                        const response = await fetch(`${basePath}${file}${cacheBuster}`);
+                        if (response.ok) {
+                            const hymnData = await response.json();
+                            hymns[hymnData.hymn_id] = hymnData;
+                            log(`Loaded hymn ${hymnData.hymn_id}`);
+                        } else {
+                            log(`Warning: Couldn't load ${file} (${response.status})`);
+                        }
+                    } catch (fileError) {
+                        log(`Error loading file ${file}: ${fileError.message}`);
+                    }
+                }
+                
+                log(`Loaded ${Object.keys(hymns).length} hymns successfully.`);
+                
+                // Preprocess hymn lines to fix broken ellipses
+                return preprocessHymnLines(hymns);
+            } catch (error) {
+                log(`Error loading hymn data: ${error.message}`);
+                throw error;
+            }
+        }
+        
+        // Generate embeddings using the Universal Sentence Encoder
+        async function generateEmbeddings(hymns) {
+            try {
+                log('Loading Universal Sentence Encoder model...');
+                const model = await use.load();
+                log('Model loaded successfully');
+                
+                const sentenceEmbeddings = {};
+                let totalLines = 0;
+                
+                log(`Processing ${Object.keys(hymns).length} hymns...`);
+                
+                for (const [hymnId, hymnData] of Object.entries(hymns)) {
+                    log(`Processing hymn ${hymnId}...`);
+                    
+                    try {
+                        // Process individual lines
+                        sentenceEmbeddings[hymnId] = {};
+                        
+                        // Process each line individually to avoid batch processing issues
+                        for (let lineIndex = 0; lineIndex < hymnData.lines.length; lineIndex++) {
+                            const text = hymnData.lines[lineIndex];
+                            log(`  Line ${lineIndex}: "${text.substring(0, 30)}${text.length > 30 ? '...' : ''}"`);
+                            
+                            // Process a single line at a time
+                            try {
+                                const lineEmbedding = await model.embed([text]);
+                                const lineEmbeddingArray = await lineEmbedding.array();
+                                
+                                sentenceEmbeddings[hymnId][lineIndex.toString()] = {
+                                    text: text,
+                                    embedding: Array.from(lineEmbeddingArray[0])
+                                };
+                                
+                                totalLines++;
+                                statusElement.textContent = `Processed ${totalLines} lines...`;
+                            } catch (lineError) {
+                                log(`    Error embedding line ${lineIndex}: ${lineError.message}`);
+                                // Skip this line but continue with others
+                            }
+                        }
+                    } catch (hymnError) {
+                        log(`Error processing hymn ${hymnId}: ${hymnError.message}`);
+                        // Skip this hymn but continue with others
+                    }
+                }
+                
+                // Generate metadata
+                const firstHymnId = Object.keys(sentenceEmbeddings)[0];
+                const firstLineId = Object.keys(sentenceEmbeddings[firstHymnId])[0];
+                const embeddingDimension = sentenceEmbeddings[firstHymnId][firstLineId].embedding.length;
+                
+                const metadata = {
+                    model_name: 'tensorflow/universal-sentence-encoder',
+                    embedding_dimension: embeddingDimension,
+                    total_hymns: Object.keys(sentenceEmbeddings).length,
+                    total_sentences: totalLines,
+                    generated_at: new Date().toISOString()
+                };
+                
+                return { sentenceEmbeddings, metadata };
+            } catch (error) {
+                log(`Error generating embeddings: ${error.message}`);
+                throw error;
+            }
+        }
+        
+        // Initialize the application
+        async function init() {
+            try {
+                log('Initializing the application...');
+                log('TensorFlow.js version: ' + tf.version_core);
+                
+                statusElement.textContent = 'Ready to start embedding generation';
+                startButton.disabled = false;
+                
+                startButton.addEventListener('click', async () => {
+                    startButton.disabled = true;
+                    statusElement.textContent = 'Loading data and generating embeddings...';
+                    
+                    try {
+                        const hymns = await loadHymnData();
+                        const result = await generateEmbeddings(hymns);
+                        
+                        embeddings = result.sentenceEmbeddings;
+                        metadata = result.metadata;
+                        
+                        // Create a downloadable file
+                        const embeddingsBlob = new Blob([JSON.stringify(embeddings, null, 2)], {type: 'application/json'});
+                        const metadataBlob = new Blob([JSON.stringify(metadata, null, 2)], {type: 'application/json'});
+                        
+                        downloadLink.href = URL.createObjectURL(embeddingsBlob);
+                        downloadDiv.classList.remove('hidden');
+                        
+                        const metadataLink = document.createElement('a');
+                        metadataLink.href = URL.createObjectURL(metadataBlob);
+                        metadataLink.download = 'embeddings_metadata.json';
+                        metadataLink.textContent = 'Download Metadata';
+                        metadataLink.style.marginLeft = '10px';
+                        downloadDiv.appendChild(metadataLink);
+                        
+                        statusElement.textContent = 'Embedding generation complete! You can download the files.';
+                        
+                        // Print statistics
+                        log('\nStatistics:');
+                        log(`Total hymns processed: ${metadata.total_hymns}`);
+                        log(`Total sentences embedded: ${metadata.total_sentences}`);
+                        log(`Embedding dimension: ${metadata.embedding_dimension}`);
+                        
+                    } catch (error) {
+                        log(`Error during embedding generation: ${error.message}`);
+                        statusElement.textContent = 'Error generating embeddings';
+                        startButton.disabled = false;
+                    }
+                });
+                
+            } catch (error) {
+                log(`Initialization error: ${error.message}`);
+                statusElement.textContent = 'Error initializing application';
+            }
+        }
+        
+        // Start the application when the page loads
+        window.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html> 

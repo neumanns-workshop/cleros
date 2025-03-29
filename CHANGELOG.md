@@ -5,13 +5,17 @@ All notable changes to the SORTES project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.0.1-beta] - 2025-03-28
+## [1.0.1-beta] - 2025-03-29
 
-### Changed
-- Optimized loading behavior for TensorFlow.js
-- Implemented lazy loading to only load models when needed
-- Improved user interface for loading states
-- Added informative tooltips for better user experience
+### Fixed
+- Fixed broken ellipses in hymn texts that were improperly split across multiple lines
+- Regenerated embeddings using compatible TensorFlow.js and Universal Sentence Encoder versions
+- Created browser-based embeddings generation tool for better compatibility
+- Improved semantic understanding by ensuring text coherence in hymn lines
+
+### Added
+- New browser-based embeddings generation tool that matches frontend environment
+- Script to automatically fix improperly broken ellipses in source hymn files
 
 ## [1.0.0-beta] - 2025-03-28
 
