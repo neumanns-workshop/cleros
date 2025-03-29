@@ -16,6 +16,12 @@ export interface APIResponse<T> {
 // Simple cache to avoid repeated fetches for the same data
 const dataCache: Record<string, APIResponse<any>> = {};
 
+// Get the base URL from the environment or use the public URL if available
+const getBasePath = (): string => {
+  // Use the PUBLIC_URL if available (set by React during build)
+  return process.env.PUBLIC_URL || '';
+};
+
 // Helper function to simulate a local API call for data loading
 export async function fetchLocalData<T>(dataPath: string): Promise<APIResponse<T>> {
   // Check cache first
@@ -23,10 +29,15 @@ export async function fetchLocalData<T>(dataPath: string): Promise<APIResponse<T
     return dataCache[dataPath] as APIResponse<T>;
   }
 
+  // Prepend the base path to the data path if it's not already an absolute URL
+  const fullPath = dataPath.startsWith('http') 
+    ? dataPath 
+    : `${getBasePath()}${dataPath}`;
+
   try {
-    const response = await fetch(dataPath);
+    const response = await fetch(fullPath);
     if (!response.ok) {
-      throw new Error(`Failed to load data from ${dataPath}`);
+      throw new Error(`Failed to load data from ${fullPath}`);
     }
     const data = await response.json();
     const apiResponse = { data, success: true };
@@ -36,7 +47,7 @@ export async function fetchLocalData<T>(dataPath: string): Promise<APIResponse<T
     
     return apiResponse;
   } catch (error: any) {
-    console.error(`Error fetching ${dataPath}:`, error?.message);
+    console.error(`Error fetching ${fullPath}:`, error?.message);
     return { 
       data: null as unknown as T, 
       success: false, 

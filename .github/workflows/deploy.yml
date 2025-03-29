@@ -42,6 +42,34 @@ jobs:
           mkdir -p main-repo/sortes-app
           cp -R web/build/* main-repo/sortes-app/
           
+          # Create data directory in the sortes-app folder
+          mkdir -p main-repo/sortes-app/data/enriched/deities
+          mkdir -p main-repo/sortes-app/data/enriched/embeddings
+          
+          # Copy data from data/ to web deployment
+          if [ -d "data/enriched" ]; then
+            echo "Copying data files from repository..."
+            cp -R data/enriched/* main-repo/sortes-app/data/enriched/
+          fi
+          
+          # Also create a top-level data directory that links to the same data for fallback support
+          mkdir -p main-repo/data
+          cp -R data/enriched main-repo/data/
+          
+          # Create a top-level data index redirect as fallback
+          cat > main-repo/data/index.html << 'EOL'
+          <!DOCTYPE html>
+          <html>
+          <head>
+            <meta http-equiv="refresh" content="0; url=/sortes-app/data/" />
+            <title>Redirecting to data</title>
+          </head>
+          <body>
+            <p>Redirecting to data files...</p>
+          </body>
+          </html>
+          EOL
+          
           # Create sortes directory with redirect to sortes-app
           mkdir -p main-repo/sortes
           cat > main-repo/sortes/index.html << 'EOL'
@@ -66,6 +94,8 @@ jobs:
           ls -la main-repo/
           ls -la main-repo/sortes/
           ls -la main-repo/sortes-app/
+          ls -la main-repo/sortes-app/data/ || echo "No data directory found"
+          ls -la main-repo/data/ || echo "No root data directory found"
 
       - name: Configure Git
         run: |
