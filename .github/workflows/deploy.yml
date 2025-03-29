@@ -1,0 +1,71 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - name: Install dependencies
+        run: |
+          cd web
+          npm ci
+
+      - name: Build
+        run: |
+          cd web
+          npm run build
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: build-files
+          path: web/build/
+
+  update-main-repo:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v2
+        with:
+          name: build-files
+          path: build-files
+
+      - name: Checkout main repository
+        uses: actions/checkout@v2
+        with:
+          repository: neumanns-workshop/neumanns-workshop.github.io
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          path: main-repo
+
+      - name: Copy build files to main repository
+        run: |
+          mkdir -p main-repo/sortes-app
+          cp -R build-files/* main-repo/sortes-app/
+
+      - name: Configure Git
+        run: |
+          cd main-repo
+          git config user.name "GitHub Actions"
+          git config user.email "github-actions@users.noreply.github.com"
+
+      - name: Commit and push changes to main repository
+        run: |
+          cd main-repo
+          git add sortes-app
+          git commit -m "Update SORTES app (triggered by ${{ github.event.head_commit.message }})" || echo "No changes to commit"
+          git push 
