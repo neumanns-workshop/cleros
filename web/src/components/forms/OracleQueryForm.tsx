@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useMemo } from 'react';
-import { TextField, Button, Box, CircularProgress, Divider, Tooltip, Typography } from '@mui/material';
+import { TextField, Button, Box, CircularProgress, Divider, Tooltip } from '@mui/material';
 import { useOracleContext } from '../../context/OracleContext';
 import { useOracle } from '../../hooks/useOracle';
 import { SourceSelection } from './SourceSelection';
@@ -152,21 +152,6 @@ export const OracleQueryForm: React.FC = React.memo(() => {
           </Button>
         </span>
       </Tooltip>
-      
-      {!modelInitialized && !isLoading && !modelLoading && (
-        <Typography 
-          variant="caption" 
-          sx={{ 
-            display: 'block', 
-            textAlign: 'center', 
-            mt: 1, 
-            fontSize: '0.7rem', 
-            color: 'rgba(255, 255, 255, 0.4)' 
-          }}
-        >
-          First query will load TensorFlow.js (≈15MB)
-        </Typography>
-      )}
     </form>
   );
 }); 
