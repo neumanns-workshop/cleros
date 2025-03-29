@@ -15,18 +15,14 @@ interface HymnData {
 }
 
 interface HymnEmbeddings {
-    hymns: {
-        [key: string]: {
-            text: string;
-            embedding: number[];
-        };
-    };
-    lines: {
-        [key: string]: {
-            [lineIndex: string]: HymnLine;
-        };
+    [hymnId: string]: {
+        [lineIndex: string]: HymnLine;
     };
 }
+
+// Use a CDN-hosted model that works reliably in browsers
+// The correct URL format for TensorFlow Hub models
+const MODEL_URL = 'https://tfhub.dev/tensorflow/tfjs-model/universal-sentence-encoder-lite/1/default/1';
 
 let embedder: useTypes.UniversalSentenceEncoder | null = null;
 let tfjs: typeof tfTypes | null = null;
@@ -35,94 +31,66 @@ let useModel: typeof useTypes | null = null;
 // Dynamically load TensorFlow.js and the Universal Sentence Encoder only when needed
 async function loadDependencies(): Promise<[typeof tfTypes, typeof useTypes]> {
     if (!tfjs || !useModel) {
+        console.log('Loading TensorFlow.js and Universal Sentence Encoder...');
         tfjs = await import('@tensorflow/tfjs');
         useModel = await import('@tensorflow-models/universal-sentence-encoder');
         
         // Initialize backend
         try {
             await tfjs.setBackend('webgl');
+            console.log('Using WebGL backend');
         } catch {
             await tfjs.setBackend('cpu');
+            console.log('Using CPU backend');
         }
     }
     return [tfjs, useModel];
 }
 
-export async function initializeEmbedder(): Promise<useTypes.UniversalSentenceEncoder> {
+export async function initializeEmbedder(onLoadingChange?: (loading: boolean) => void): Promise<useTypes.UniversalSentenceEncoder> {
     if (!embedder) {
+        onLoadingChange?.(true);
         try {
-            const [tf, use] = await loadDependencies();
+            const [, use] = await loadDependencies();
             
-            // Make sure we have a backend
-            const backend = tf.getBackend();
-            if (!backend) {
-                throw new Error('No TensorFlow.js backend available');
-            }
+            console.log('Loading Universal Sentence Encoder model...');
             
+            // Load the default model without specifying a URL
+            // This will use the small model which has 512 dimensions
             embedder = await use.load();
+            
+            console.log('Embedding model loaded successfully');
         } catch (error: any) {
             console.error('Error initializing embedder:', error?.message || 'Unknown error');
             throw error;
+        } finally {
+            onLoadingChange?.(false);
         }
     }
     return embedder;
 }
 
-// Optimized embedder initialization for production
-export async function initializeEmbedderOptimized(): Promise<useTypes.UniversalSentenceEncoder> {
-    if (!embedder) {
-        try {
-            const [tf, use] = await loadDependencies();
-            
-            // Force WebGL backend for better performance if available
-            if (tf.engine().backendNames().includes('webgl')) {
-                await tf.setBackend('webgl');
-                
-                // Set memory management for WebGL
-                if (tf.getBackend() === 'webgl') {
-                    const gl = (tf.backend() as any).getGPGPUContext().gl;
-                    if (gl) {
-                        // Set WebGL parameters to optimize memory usage
-                        gl.disable(gl.DEPTH_TEST);
-                        gl.disable(gl.STENCIL_TEST);
-                        gl.disable(gl.BLEND);
-                        gl.disable(gl.DITHER);
-                        gl.disable(gl.POLYGON_OFFSET_FILL);
-                        gl.disable(gl.SAMPLE_COVERAGE);
-                        gl.disable(gl.SAMPLE_ALPHA_TO_COVERAGE);
-                    }
-                }
-            } else {
-                await tf.setBackend('cpu');
-            }
-            
-            // Load the model with caching enabled
-            embedder = await use.load();
-            
-            // Explicitly run garbage collection
-            try {
-                tf.tidy(() => {});
-                tf.disposeVariables();
-            } catch (e) {
-                console.warn('Error during TF memory cleanup:', e);
-            }
-        } catch (error: any) {
-            console.error('Error initializing optimized embedder:', error?.message || 'Unknown error');
-            throw error;
-        }
-    }
-    return embedder;
-}
-
-export async function getQueryEmbedding(query: string): Promise<number[]> {
+// Get query embedding using the same dimensionality as the data
+export async function getQueryEmbedding(query: string, onLoadingChange?: (loading: boolean) => void): Promise<number[]> {
     try {
-        const model = await initializeEmbedder();
+        onLoadingChange?.(true);
+        console.log('Getting embedding for query:', query);
+        
+        const model = await initializeEmbedder(onLoadingChange);
+        console.log('Model loaded, generating embedding...');
+        
         const embeddings = await model.embed([query]);
+        console.log('Embedding generated successfully');
+        
         const embedding = await embeddings.array();
+        console.log('Embedding dimension:', embedding[0].length);
+        
         return embedding[0];
     } catch (error: any) {
         console.error('Error getting query embedding:', error?.message || 'Unknown error');
         throw new Error('Failed to process your question. Please try again.');
+    } finally {
+        onLoadingChange?.(false);
     }
 }
 
@@ -150,11 +118,12 @@ export async function findMostRelevantLine(
     query: string,
     hymnNumber: number,
     hymnData: HymnData,
-    hymnEmbeddings: HymnEmbeddings
+    hymnEmbeddings: HymnEmbeddings,
+    onLoadingChange?: (loading: boolean) => void
 ): Promise<{ line: string; similarity: number }> {
-    const queryEmbedding = await getQueryEmbedding(query);
+    const queryEmbedding = await getQueryEmbedding(query, onLoadingChange);
     
-    const hymnLines = hymnEmbeddings.lines[hymnNumber.toString()];
+    const hymnLines = hymnEmbeddings[hymnNumber.toString()];
     
     let bestMatch = {
         line: '',
@@ -181,25 +150,41 @@ export async function findMostRelevantLine(
     };
 }
 
+// NOTE: This function won't work with the updated structure that doesn't have hymn-level embeddings
+// If you need this functionality, you'll need to recreate the hymn-level embeddings or adjust the approach
 export async function findMostRelevantHymn(
     query: string,
-    hymnEmbeddings: HymnEmbeddings
+    hymnEmbeddings: HymnEmbeddings,
+    onLoadingChange?: (loading: boolean) => void
 ): Promise<{ hymnId: string; similarity: number }> {
-    const queryEmbedding = await getQueryEmbedding(query);
+    const queryEmbedding = await getQueryEmbedding(query, onLoadingChange);
     
     let bestMatch = {
         hymnId: '',
         similarity: -1
     };
     
-    Object.keys(hymnEmbeddings.hymns).forEach(hymnId => {
-        const hymnData = hymnEmbeddings.hymns[hymnId];
-        const similarity = cosineSimilarity(queryEmbedding, hymnData.embedding);
+    // Since we don't have hymn-level embeddings, we'll compare against the average of all line embeddings
+    Object.keys(hymnEmbeddings).forEach(hymnId => {
+        const hymnLines = hymnEmbeddings[hymnId];
         
-        if (similarity > bestMatch.similarity) {
+        // Calculate average similarity across all lines
+        let totalSimilarity = 0;
+        let lineCount = 0;
+        
+        Object.keys(hymnLines).forEach(lineIndex => {
+            const lineData = hymnLines[lineIndex];
+            const similarity = cosineSimilarity(queryEmbedding, lineData.embedding);
+            totalSimilarity += similarity;
+            lineCount++;
+        });
+        
+        const avgSimilarity = lineCount > 0 ? totalSimilarity / lineCount : 0;
+        
+        if (avgSimilarity > bestMatch.similarity) {
             bestMatch = {
                 hymnId,
-                similarity
+                similarity: avgSimilarity
             };
         }
     });

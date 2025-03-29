@@ -7,15 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0.1-beta] - 2025-03-29
 
+### Changed
+- Redesigned embeddings architecture to focus exclusively on line-level embeddings
+- Simplified embeddings data structure for better performance and maintainability
+- Updated hymn data loading logic to use direct axios calls
+- Improved path handling for loading hymn and embedding data
+
 ### Fixed
 - Fixed broken ellipses in hymn texts that were improperly split across multiple lines
 - Regenerated embeddings using compatible TensorFlow.js and Universal Sentence Encoder versions
-- Created browser-based embeddings generation tool for better compatibility
 - Improved semantic understanding by ensuring text coherence in hymn lines
 
 ### Added
 - New browser-based embeddings generation tool that matches frontend environment
 - Script to automatically fix improperly broken ellipses in source hymn files
+- Updated `findMostRelevantHymn` function to work with line-level embeddings by calculating average similarity
 
 ## [1.0.0-beta] - 2025-03-28
 
