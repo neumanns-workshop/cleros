@@ -78,6 +78,13 @@ export const useOracle = () => {
           throw new Error('Hymn embeddings not loaded');
         }
         
+        // Add diagnostic logging to understand embeddings structure
+        console.log('Embeddings structure check:');
+        console.log('- Type of embeddings:', typeof embeddings);
+        console.log('- Has lines property:', 'lines' in embeddings);
+        console.log('- Has hymns property:', 'hymns' in embeddings);
+        console.log('- Direct keys:', Object.keys(embeddings).slice(0, 5));
+        
         // Dynamically import embedding functions only when needed
         const { getQueryEmbedding, cosineSimilarity } = await import('../services/embeddings');
         
@@ -91,7 +98,24 @@ export const useOracle = () => {
         
         // Calculate similarity for each line
         const linesWithSimilarity = hymnData.lines.map((line, index) => {
-          const lineData = embeddings.lines[hymnNumber.toString()][index.toString()];
+          // In embeddings data, lines are indexed from 0, but in hymn_data.json they might be mapped differently
+          // We'll try direct index first, then fallback to appropriate handling
+          let lineEmbeddingIndex = index.toString();
+          
+          // Access the embedding data with proper null checks
+          if (!embeddings[hymnNumber.toString()] || 
+              !embeddings[hymnNumber.toString()][lineEmbeddingIndex] ||
+              !embeddings[hymnNumber.toString()][lineEmbeddingIndex].embedding) {
+            console.warn(`Missing embedding for hymn ${hymnNumber}, line ${lineEmbeddingIndex}`);
+            // Provide a default similarity when embedding is missing
+            return { 
+              text: line, 
+              similarity: 0, 
+              originalIndex: index 
+            };
+          }
+          
+          const lineData = embeddings[hymnNumber.toString()][lineEmbeddingIndex];
           const similarity = cosineSimilarity(queryEmbedding, lineData.embedding);
           return { text: line, similarity, originalIndex: index };
         });
