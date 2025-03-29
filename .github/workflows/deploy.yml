@@ -66,7 +66,8 @@ jobs:
           echo "Copying build files to sortes directory"
           cp -R web/build/* main-repo/sortes/
           
-          # Ensure .nojekyll exists in both root and sortes directory
+          # IMPORTANT: Fix for GitHub Pages showing README instead of app
+          # Create .nojekyll in every relevant directory
           touch main-repo/.nojekyll
           touch main-repo/sortes/.nojekyll
           
@@ -76,11 +77,29 @@ jobs:
             cp web/build/index.html main-repo/sortes/index.html
           fi
           
-          # Make sure GitHub doesn't use the README.md as index
+          # Force GitHub Pages to use index.html instead of README.md
           if [ -f "main-repo/sortes/README.md" ]; then
             echo "Removing README.md from sortes directory to prevent GitHub Pages from using it"
             rm main-repo/sortes/README.md
           fi
+          
+          # Make sure the root index.html doesn't redirect to sortes
+          if [ -f "main-repo/index.html" ]; then
+            # Check if it's a redirect file
+            if grep -q "sortes" main-repo/index.html; then
+              echo "Found root redirect to sortes, removing it..."
+              rm main-repo/index.html
+            fi
+          fi
+          
+          # Check for and remove any other redirects to /sortes/ from homepage
+          find main-repo -type f -name "*.html" -not -path "*/sortes/*" -not -path "*/sortes-app/*" -exec grep -l "sortes" {} \; | while read file; do
+            echo "Checking $file for redirects..."
+            if grep -q "refresh.*sortes" "$file"; then
+              echo "Found redirect to sortes in $file, removing it..."
+              rm "$file"
+            fi
+          done
           
           # Create data directories in the sortes folder if they don't exist in build
           if [ ! -d "main-repo/sortes/data/enriched/deities" ]; then
