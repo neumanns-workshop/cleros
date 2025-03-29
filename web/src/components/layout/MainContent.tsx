@@ -3,9 +3,14 @@ import { Box } from '@mui/material';
 import { OracleResponse } from '../results/OracleResponse';
 import { DRAWER_WIDTH } from '../../utils/constants';
 import { useSidebar } from '../../context/SidebarContext';
+import { useOracleContext } from '../../context/OracleContext';
 
 export const MainContent: React.FC = React.memo(() => {
   const { isOpen, setIsOpen } = useSidebar();
+  const { results } = useOracleContext();
+
+  // Determine if we should center the content (only center when there are no results)
+  const shouldCenterContent = results.length === 0;
 
   // Handle keyboard events
   useEffect(() => {
@@ -42,9 +47,10 @@ export const MainContent: React.FC = React.memo(() => {
         }),
         overflow: 'auto',
         display: 'flex',
-        alignItems: 'center',
+        alignItems: shouldCenterContent ? 'center' : 'flex-start',
         justifyContent: 'center',
         p: 3,
+        pt: shouldCenterContent ? 3 : 4,
       }}
     >
       <Box
