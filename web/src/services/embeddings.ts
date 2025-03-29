@@ -48,9 +48,8 @@ async function loadDependencies(): Promise<[typeof tfTypes, typeof useTypes]> {
     return [tfjs, useModel];
 }
 
-export async function initializeEmbedder(onLoadingChange?: (loading: boolean) => void): Promise<useTypes.UniversalSentenceEncoder> {
+export async function initializeEmbedder(): Promise<useTypes.UniversalSentenceEncoder> {
     if (!embedder) {
-        onLoadingChange?.(true);
         try {
             const [tf, use] = await loadDependencies();
             
@@ -64,17 +63,14 @@ export async function initializeEmbedder(onLoadingChange?: (loading: boolean) =>
         } catch (error: any) {
             console.error('Error initializing embedder:', error?.message || 'Unknown error');
             throw error;
-        } finally {
-            onLoadingChange?.(false);
         }
     }
     return embedder;
 }
 
 // Optimized embedder initialization for production
-export async function initializeEmbedderOptimized(onLoadingChange?: (loading: boolean) => void): Promise<useTypes.UniversalSentenceEncoder> {
+export async function initializeEmbedderOptimized(): Promise<useTypes.UniversalSentenceEncoder> {
     if (!embedder) {
-        onLoadingChange?.(true);
         try {
             const [tf, use] = await loadDependencies();
             
@@ -113,16 +109,14 @@ export async function initializeEmbedderOptimized(onLoadingChange?: (loading: bo
         } catch (error: any) {
             console.error('Error initializing optimized embedder:', error?.message || 'Unknown error');
             throw error;
-        } finally {
-            onLoadingChange?.(false);
         }
     }
     return embedder;
 }
 
-export async function getQueryEmbedding(query: string, onLoadingChange?: (loading: boolean) => void): Promise<number[]> {
+export async function getQueryEmbedding(query: string): Promise<number[]> {
     try {
-        const model = await initializeEmbedder(onLoadingChange);
+        const model = await initializeEmbedder();
         const embeddings = await model.embed([query]);
         const embedding = await embeddings.array();
         return embedding[0];
@@ -156,10 +150,9 @@ export async function findMostRelevantLine(
     query: string,
     hymnNumber: number,
     hymnData: HymnData,
-    hymnEmbeddings: HymnEmbeddings,
-    onLoadingChange?: (loading: boolean) => void
+    hymnEmbeddings: HymnEmbeddings
 ): Promise<{ line: string; similarity: number }> {
-    const queryEmbedding = await getQueryEmbedding(query, onLoadingChange);
+    const queryEmbedding = await getQueryEmbedding(query);
     
     const hymnLines = hymnEmbeddings.lines[hymnNumber.toString()];
     
@@ -190,10 +183,9 @@ export async function findMostRelevantLine(
 
 export async function findMostRelevantHymn(
     query: string,
-    hymnEmbeddings: HymnEmbeddings,
-    onLoadingChange?: (loading: boolean) => void
+    hymnEmbeddings: HymnEmbeddings
 ): Promise<{ hymnId: string; similarity: number }> {
-    const queryEmbedding = await getQueryEmbedding(query, onLoadingChange);
+    const queryEmbedding = await getQueryEmbedding(query);
     
     let bestMatch = {
         hymnId: '',

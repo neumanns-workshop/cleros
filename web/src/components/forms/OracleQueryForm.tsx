@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useMemo } from 'react';
-import { TextField, Button, Box, CircularProgress, Divider } from '@mui/material';
+import { TextField, Button, Box, CircularProgress, Divider, Tooltip, Typography } from '@mui/material';
 import { useOracleContext } from '../../context/OracleContext';
 import { useOracle } from '../../hooks/useOracle';
 import { SourceSelection } from './SourceSelection';
@@ -7,7 +7,7 @@ import { SourceSelection } from './SourceSelection';
 export const OracleQueryForm: React.FC = React.memo(() => {
   const [question, setQuestion] = useState('');
   const { consultOracle } = useOracle();
-  const { isLoading, modelLoading, selectedSources } = useOracleContext();
+  const { isLoading, modelLoading, selectedSources, modelInitialized } = useOracleContext();
 
   const handleSubmit = useCallback((e: React.FormEvent) => {
     e.preventDefault();
@@ -18,48 +18,40 @@ export const OracleQueryForm: React.FC = React.memo(() => {
     setQuestion(e.target.value);
   }, []);
 
-  const isInitializing = modelLoading;
   const isSubmitDisabled = useMemo(() => 
     isLoading || 
     !question.trim() || 
-    isInitializing || 
     !Object.values(selectedSources).some(v => v),
-  [isLoading, question, isInitializing, selectedSources]);
+  [isLoading, question, selectedSources]);
 
-  const buttonContent = useMemo(() => {
-    return (
-      <Box sx={{ 
-        display: 'flex', 
-        alignItems: 'center',
-        justifyContent: 'center',
-        width: '100%',
-        position: 'relative',
-        minHeight: '24px'
-      }}>
-        {(isLoading || isInitializing) && (
-          <CircularProgress 
-            size={20} 
-            color="inherit" 
-            sx={{ 
-              position: 'absolute',
-              left: { xs: '10px', sm: '20px' } 
-            }} 
-          />
-        )}
-        <Box sx={{ 
-          textAlign: 'center',
-          width: '100%' 
-        }}>
-          {isLoading 
-            ? 'Consulting the Oracle...' 
-            : isInitializing 
-              ? 'Initializing Oracle...' 
-              : 'Consult the Oracle'
-          }
-        </Box>
-      </Box>
-    );
-  }, [isLoading, isInitializing]);
+  // Determine the right button content and tooltip text
+  const buttonState = useMemo(() => {
+    if (isLoading && modelLoading) {
+      return {
+        text: 'Loading Oracle...',
+        tooltip: 'Loading TensorFlow.js models (first use only)',
+        showSpinner: true
+      };
+    } else if (isLoading) {
+      return {
+        text: 'Consulting Oracle...',
+        tooltip: 'Processing your question',
+        showSpinner: true
+      };
+    } else if (modelLoading) {
+      return {
+        text: 'Loading Oracle...',
+        tooltip: 'Loading TensorFlow.js models (first use only)',
+        showSpinner: true
+      };
+    } else {
+      return {
+        text: 'Consult the Oracle',
+        tooltip: modelInitialized ? 'Submit your question' : 'First query will load TensorFlow.js (15MB)',
+        showSpinner: false
+      };
+    }
+  }, [isLoading, modelLoading, modelInitialized]);
 
   return (
     <form onSubmit={handleSubmit} aria-label="Oracle consultation form">
@@ -71,7 +63,7 @@ export const OracleQueryForm: React.FC = React.memo(() => {
         aria-label="Enter your question for the oracle"
         value={question}
         onChange={handleQuestionChange}
-        disabled={isLoading || isInitializing}
+        disabled={isLoading || modelLoading}
         sx={{ 
           mb: 4,
           '& .MuiInput-underline:before': {
@@ -110,24 +102,71 @@ export const OracleQueryForm: React.FC = React.memo(() => {
 
       <Divider sx={{ my: 3, borderColor: 'rgba(255, 255, 255, 0.1)' }} />
 
-      <Button
-        type="submit"
-        variant="outlined"
-        fullWidth
-        disabled={isSubmitDisabled}
-        aria-label="Submit your question to the oracle"
-        sx={{
-          color: 'white',
-          borderColor: 'rgba(255, 255, 255, 0.2)',
-          '&:hover': {
-            borderColor: 'rgba(255, 255, 255, 0.5)',
-          },
-          height: '42px',
-          position: 'relative',
-        }}
+      <Tooltip 
+        title={buttonState.tooltip} 
+        arrow 
+        placement="top"
       >
-        {buttonContent}
-      </Button>
+        <span style={{ display: 'block', width: '100%' }}>
+          <Button
+            type="submit"
+            variant="outlined"
+            fullWidth
+            disabled={isSubmitDisabled}
+            aria-label="Submit your question to the oracle"
+            sx={{
+              color: 'white',
+              borderColor: 'rgba(255, 255, 255, 0.2)',
+              '&:hover': {
+                borderColor: 'rgba(255, 255, 255, 0.5)',
+              },
+              height: '42px',
+              position: 'relative',
+            }}
+          >
+            <Box sx={{ 
+              display: 'flex', 
+              alignItems: 'center',
+              justifyContent: 'center',
+              width: '100%',
+              position: 'relative',
+              minHeight: '24px'
+            }}>
+              {buttonState.showSpinner && (
+                <CircularProgress 
+                  size={20} 
+                  color="inherit" 
+                  sx={{ 
+                    position: 'absolute',
+                    left: { xs: '10px', sm: '20px' } 
+                  }} 
+                />
+              )}
+              <Box sx={{ 
+                textAlign: 'center',
+                width: '100%' 
+              }}>
+                {buttonState.text}
+              </Box>
+            </Box>
+          </Button>
+        </span>
+      </Tooltip>
+      
+      {!modelInitialized && !isLoading && !modelLoading && (
+        <Typography 
+          variant="caption" 
+          sx={{ 
+            display: 'block', 
+            textAlign: 'center', 
+            mt: 1, 
+            fontSize: '0.7rem', 
+            color: 'rgba(255, 255, 255, 0.4)' 
+          }}
+        >
+          First query will load TensorFlow.js (≈15MB)
+        </Typography>
+      )}
     </form>
   );
 }); 

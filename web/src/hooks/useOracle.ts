@@ -3,6 +3,7 @@ import { QueryRandomError, getRandomNumberFromEmbedding } from '../services/qrng
 import { loadHymnData, loadHymnEmbeddings } from '../services/hymns';
 import { useOracleContext } from '../context/OracleContext';
 import { SourceSelectionState } from '../types';
+import { initializeEmbedder, initializeEmbedderOptimized } from '../services/embeddings';
 
 export const useOracle = () => {
   const {
@@ -14,7 +15,32 @@ export const useOracle = () => {
     setExpanded,
     hymnEmbeddings,
     setHymnEmbeddings,
+    modelInitialized,
+    setModelInitialized,
   } = useOracleContext();
+
+  // Initialize the TensorFlow model if not already done
+  const initializeModel = useCallback(async () => {
+    if (!modelInitialized) {
+      try {
+        setModelLoading(true);
+        
+        // Use the optimized embedder in production
+        if (process.env.NODE_ENV === 'production') {
+          await initializeEmbedderOptimized();
+        } else {
+          await initializeEmbedder();
+        }
+        
+        setModelInitialized(true);
+      } catch (err) {
+        console.error('Failed to initialize model:', err);
+        setError('Failed to initialize the oracle. Please try again.');
+      } finally {
+        setModelLoading(false);
+      }
+    }
+  }, [modelInitialized, setModelLoading, setModelInitialized, setError]);
 
   // Initialize hymn embeddings if not already loaded
   const initializeEmbeddings = useCallback(async () => {
@@ -41,6 +67,9 @@ export const useOracle = () => {
     setIsTyping(true);
     
     try {
+      // Initialize model if not already done
+      await initializeModel();
+      
       // Currently only handling Orphic hymns
       if (selectedSources.orphic) {
         // Make sure embeddings are loaded
@@ -53,7 +82,7 @@ export const useOracle = () => {
         const { getQueryEmbedding, cosineSimilarity } = await import('../services/embeddings');
         
         // Get query embedding - this will now be our source of randomness
-        const queryEmbedding = await getQueryEmbedding(question, setModelLoading);
+        const queryEmbedding = await getQueryEmbedding(question);
         
         // Use the query embedding to generate a random hymn number
         const hymnNumber = getRandomNumberFromEmbedding(queryEmbedding);
@@ -106,7 +135,7 @@ export const useOracle = () => {
     setResults, 
     setExpanded, 
     setIsTyping, 
-    setModelLoading, 
+    initializeModel,
     initializeEmbeddings
   ]);
 
