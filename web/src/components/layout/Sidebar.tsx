@@ -1,6 +1,17 @@
 import React, { useState } from 'react';
-import { Box, Typography, Drawer, Tooltip, IconButton, Collapse, Link } from '@mui/material';
+import { 
+  Box, 
+  Typography, 
+  Drawer, 
+  Tooltip, 
+  IconButton, 
+  Collapse, 
+  Link,
+  useTheme,
+  useMediaQuery 
+} from '@mui/material';
 import { useOracleContext } from '../../context/OracleContext';
+import { useSidebar } from '../../context/SidebarContext';
 import { OracleQueryForm } from '../forms/OracleQueryForm';
 import { DRAWER_WIDTH } from '../../utils/constants';
 import DonateButton from './DonateButton';
@@ -26,9 +37,30 @@ const InfoIcon = () => (
   </svg>
 );
 
+const MenuIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <line x1="3" y1="12" x2="21" y2="12"></line>
+    <line x1="3" y1="6" x2="21" y2="6"></line>
+    <line x1="3" y1="18" x2="21" y2="18"></line>
+  </svg>
+);
+
 export const Sidebar: React.FC = () => {
   const { setInfoOpen } = useOracleContext();
+  const { isOpen, setIsOpen } = useSidebar();
   const [examplesExpanded, setExamplesExpanded] = useState(false);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
   // Example prompts for different use cases
   const examplePrompts = [
@@ -40,162 +72,198 @@ export const Sidebar: React.FC = () => {
     "The meaning behind my recent dream."
   ];
 
+  const handleClickOutside = () => {
+    if (isOpen && isMobile) {
+      setIsOpen(false);
+    }
+  };
+
   return (
-    <Drawer
-      variant="permanent"
-      anchor="left"
-      sx={{
-        width: DRAWER_WIDTH,
-        flexShrink: 0,
-        '& .MuiDrawer-paper': {
-          width: DRAWER_WIDTH,
-          boxSizing: 'border-box',
-          background: 'linear-gradient(135deg, #0f0f0f 0%, #181818 100%)',
-          borderRight: '1px solid rgba(224, 224, 224, 0.1)',
-          display: 'flex',
-          flexDirection: 'column',
-        },
-      }}
-    >
-      <Box sx={{ p: 3, flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
-        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 3 }}>
-          <Typography variant="h6" sx={{ letterSpacing: '0.12em' }}>sortes</Typography>
-          <Box sx={{ display: 'flex', gap: 1 }}>
-            <Tooltip title="Show examples">
-              <IconButton 
-                onClick={() => setExamplesExpanded(!examplesExpanded)}
-                size="small"
-                aria-label="Show example prompts"
-                aria-expanded={examplesExpanded}
-                aria-controls="example-prompts-list"
-                sx={{ 
-                  color: examplesExpanded ? 'rgba(224, 224, 224, 0.9)' : 'rgba(224, 224, 224, 0.6)',
-                  borderRadius: '4px',
-                  backgroundColor: examplesExpanded ? 'rgba(224, 224, 224, 0.08)' : 'transparent',
-                  '&:hover': {
-                    backgroundColor: 'rgba(224, 224, 224, 0.08)',
-                    color: 'rgba(224, 224, 224, 0.9)',
-                  },
-                }}
-              >
-                <Typography variant="caption" sx={{ fontSize: '0.7rem', fontWeight: 'bold' }}>Ex.</Typography>
-              </IconButton>
-            </Tooltip>
-            <Tooltip title="About sortes">
-              <IconButton 
-                onClick={() => setInfoOpen(true)}
-                size="small"
-                aria-label="Open information dialog about sortes"
-                sx={{ 
-                  color: 'rgba(224, 224, 224, 0.6)',
-                  borderRadius: '4px',
-                  '&:hover': {
-                    backgroundColor: 'rgba(224, 224, 224, 0.08)',
-                    color: 'rgba(224, 224, 224, 0.9)',
-                  },
-                }}
-              >
-                <InfoIcon />
-              </IconButton>
-            </Tooltip>
-          </Box>
-        </Box>
-
-        <Collapse in={examplesExpanded} timeout="auto">
-          <Box 
-            id="example-prompts-list"
-            component="ul" 
-            sx={{ 
-              listStyleType: 'none', 
-              pl: 0,
-              pt: 0,
-              pb: 2,
-              mt: 0,
-              mb: 0,
-              fontSize: '0.85rem',
-              color: 'rgba(224, 224, 224, 0.6)',
-              borderBottom: '1px solid rgba(224, 224, 224, 0.1)',
-            }}
-            aria-label="List of example prompts for the oracle"
-          >
-            {examplePrompts.map((prompt, index) => (
-              <Box 
-                component="li" 
-                key={index} 
-                sx={{ 
-                  py: 0.5, 
-                  cursor: 'pointer',
-                  '&:hover': {
-                    color: 'rgba(224, 224, 224, 0.9)',
-                  }
-                }}
-                onClick={() => {
-                  // Find the input element and set its value
-                  const input = document.getElementById('oracle-question') as HTMLInputElement;
-                  if (input) {
-                    // Create and dispatch events to simulate typing
-                    const nativeInputValueSetter = Object.getOwnPropertyDescriptor(
-                      window.HTMLInputElement.prototype, 'value'
-                    )?.set;
-                    nativeInputValueSetter?.call(input, prompt);
-                    
-                    const ev = new Event('input', { bubbles: true });
-                    input.dispatchEvent(ev);
-                    
-                    // Focus the input
-                    input.focus();
-                  }
-                }}
-              >
-                {prompt}
-              </Box>
-            ))}
-          </Box>
-        </Collapse>
-
-        <OracleQueryForm />
-        
-        {/* Spacer to push donation button to bottom */}
-        <Box sx={{ flexGrow: 1 }} />
-        
-        {/* Version tag */}
-        <Box sx={{ 
-          display: 'flex', 
-          justifyContent: 'center', 
-          mb: 2
-        }}>
-          <Link
-            component="a"
-            href="https://github.com/jneumann/sortes"
-            target="_blank"
-            rel="noopener noreferrer"
-            sx={{
-              fontSize: '0.7rem',
-              opacity: 0.6,
-              color: 'text.primary',
-              textDecoration: 'none',
-              '&:hover': {
-                textDecoration: 'underline'
-              }
-            }}
-          >
-            v1.0.1-beta.1
-          </Link>
-        </Box>
-        
-        {/* Donation button */}
-        <Box 
-          sx={{ 
-            mt: 2, 
-            pt: 2, 
-            borderTop: '1px solid rgba(224, 224, 224, 0.1)',
-            position: 'relative',
-            minHeight: '60px'
+    <>
+      {/* Menu button for mobile/closed state */}
+      {(!isOpen || isMobile) && (
+        <IconButton
+          onClick={() => setIsOpen(true)}
+          sx={{
+            position: 'fixed',
+            top: '1rem',
+            left: '1rem',
+            zIndex: theme.zIndex.drawer + 2,
+            color: 'text.primary',
+            bgcolor: 'background.paper',
+            '&:hover': {
+              bgcolor: 'rgba(255, 255, 255, 0.08)',
+            },
           }}
         >
-          <DonateButton />
+          <MenuIcon />
+        </IconButton>
+      )}
+      
+      <Drawer
+        variant={isMobile ? "temporary" : "persistent"}
+        anchor="left"
+        open={isOpen}
+        onClose={handleClickOutside}
+        ModalProps={{
+          keepMounted: true, // Better open performance on mobile
+        }}
+        sx={{
+          width: isOpen ? DRAWER_WIDTH : 0,
+          flexShrink: 0,
+          transition: theme.transitions.create(['width', 'margin'], {
+            easing: theme.transitions.easing.sharp,
+            duration: theme.transitions.duration.enteringScreen,
+          }),
+          '& .MuiDrawer-paper': {
+            width: DRAWER_WIDTH,
+            boxSizing: 'border-box',
+            background: 'linear-gradient(135deg, #0f0f0f 0%, #181818 100%)',
+            borderRight: '1px solid rgba(224, 224, 224, 0.1)',
+            display: 'flex',
+            flexDirection: 'column',
+            overflowX: 'hidden',
+            transition: theme.transitions.create(['width', 'margin'], {
+              easing: theme.transitions.easing.sharp,
+              duration: theme.transitions.duration.enteringScreen,
+            }),
+          },
+        }}
+      >
+        <Box sx={{ p: 3, flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
+          <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 3 }}>
+            <Typography variant="h6" sx={{ letterSpacing: '0.12em' }}>sortes</Typography>
+            <Box sx={{ display: 'flex', gap: 1 }}>
+              <Tooltip title="Show examples">
+                <IconButton 
+                  onClick={() => setExamplesExpanded(!examplesExpanded)}
+                  size="small"
+                  aria-label="Show example prompts"
+                  aria-expanded={examplesExpanded}
+                  aria-controls="example-prompts-list"
+                  sx={{ 
+                    color: examplesExpanded ? 'rgba(224, 224, 224, 0.9)' : 'rgba(224, 224, 224, 0.6)',
+                    borderRadius: '4px',
+                    backgroundColor: examplesExpanded ? 'rgba(224, 224, 224, 0.08)' : 'transparent',
+                    '&:hover': {
+                      backgroundColor: 'rgba(224, 224, 224, 0.08)',
+                      color: 'rgba(224, 224, 224, 0.9)',
+                    },
+                  }}
+                >
+                  <Typography variant="caption" sx={{ fontSize: '0.7rem', fontWeight: 'bold' }}>Ex.</Typography>
+                </IconButton>
+              </Tooltip>
+              <Tooltip title="About sortes">
+                <IconButton 
+                  onClick={() => setInfoOpen(true)}
+                  size="small"
+                  aria-label="Open information dialog about sortes"
+                  sx={{ 
+                    color: 'rgba(224, 224, 224, 0.6)',
+                    borderRadius: '4px',
+                    '&:hover': {
+                      backgroundColor: 'rgba(224, 224, 224, 0.08)',
+                      color: 'rgba(224, 224, 224, 0.9)',
+                    },
+                  }}
+                >
+                  <InfoIcon />
+                </IconButton>
+              </Tooltip>
+            </Box>
+          </Box>
+
+          <Collapse in={examplesExpanded} timeout="auto">
+            <Box 
+              id="example-prompts-list"
+              component="ul" 
+              sx={{ 
+                listStyleType: 'none', 
+                pl: 0,
+                pt: 0,
+                pb: 2,
+                mt: 0,
+                mb: 0,
+                fontSize: '0.85rem',
+                color: 'rgba(224, 224, 224, 0.6)',
+                borderBottom: '1px solid rgba(224, 224, 224, 0.1)',
+              }}
+              aria-label="List of example prompts for the oracle"
+            >
+              {examplePrompts.map((prompt, index) => (
+                <Box 
+                  component="li" 
+                  key={index} 
+                  sx={{ 
+                    py: 0.5, 
+                    cursor: 'pointer',
+                    '&:hover': {
+                      color: 'rgba(224, 224, 224, 0.9)',
+                    }
+                  }}
+                  onClick={() => {
+                    const input = document.getElementById('oracle-question') as HTMLInputElement;
+                    if (input) {
+                      const nativeInputValueSetter = Object.getOwnPropertyDescriptor(
+                        window.HTMLInputElement.prototype, 'value'
+                      )?.set;
+                      nativeInputValueSetter?.call(input, prompt);
+                      
+                      const ev = new Event('input', { bubbles: true });
+                      input.dispatchEvent(ev);
+                      
+                      input.focus();
+                    }
+                  }}
+                >
+                  {prompt}
+                </Box>
+              ))}
+            </Box>
+          </Collapse>
+
+          <OracleQueryForm />
+          
+          <Box sx={{ flexGrow: 1 }} />
+          
+          <Box sx={{ 
+            display: 'flex', 
+            justifyContent: 'center', 
+            mb: 2
+          }}>
+            <Link
+              component="a"
+              href="https://github.com/jneumann/sortes"
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{
+                fontSize: '0.7rem',
+                opacity: 0.6,
+                color: 'text.primary',
+                textDecoration: 'none',
+                '&:hover': {
+                  textDecoration: 'underline'
+                }
+              }}
+            >
+              v1.0.1-beta.1
+            </Link>
+          </Box>
+          
+          <Box 
+            sx={{ 
+              mt: 2, 
+              pt: 2, 
+              borderTop: '1px solid rgba(224, 224, 224, 0.1)',
+              position: 'relative',
+              minHeight: '60px'
+            }}
+          >
+            <DonateButton />
+          </Box>
         </Box>
-      </Box>
-    </Drawer>
+      </Drawer>
+    </>
   );
 }; 

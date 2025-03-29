@@ -1,14 +1,17 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useEffect, useState } from 'react';
 import { 
   Box, 
   ThemeProvider, 
   createTheme, 
   CssBaseline,
-  Typography
+  Typography,
+  useMediaQuery,
+  useTheme
 } from '@mui/material';
 import { OracleProvider } from './context/OracleContext';
 import { StyleProvider, useStyle } from './context/StyleContext';
 import { DeityProvider } from './context/DeityContext';
+import { SidebarProvider } from './context/SidebarContext';
 import { Sidebar } from './components/layout/Sidebar';
 import { MainContent } from './components/layout/MainContent';
 import { InfoDialog } from './components/shared/InfoDialog';
@@ -42,6 +45,13 @@ class ErrorBoundary extends React.Component<{children: React.ReactNode}, {hasErr
 // Theme component that uses style context
 const ThemedApp: React.FC = () => {
   const { font } = useStyle();
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+
+  // Debug log to check viewport detection
+  useEffect(() => {
+    console.log('App: Detected viewport =', isMobile ? 'mobile' : 'desktop');
+  }, [isMobile]);
 
   // Monochromatic theme colors
   const colorTheme = {
@@ -360,7 +370,9 @@ const App: React.FC = () => {
       <StyleProvider>
         <OracleProvider>
           <DeityProvider>
-            <ThemedApp />
+            <SidebarProvider>
+              <ThemedApp />
+            </SidebarProvider>
           </DeityProvider>
         </OracleProvider>
       </StyleProvider>

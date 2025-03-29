@@ -1,0 +1,21 @@
+# Changelog
+
+All notable changes to the SORTES web interface will be documented in this file.
+
+## [1.0.2-beta] - 2025-03-29
+
+### Added
+- Sidebar toggle functionality
+  - Use `Cmd/Ctrl + \` to toggle the sidebar
+  - Click anywhere in the main content area to close the sidebar
+- Improved content centering that maintains position during sidebar transitions
+
+## [1.0.1-beta.1] - Initial Release
+
+### Added
+- Basic oracle interface with query input
+- Support for Orphic Hymns source
+- Dark mode aesthetic
+- Example prompts
+- Donation integration
+- Responsive layout 
