@@ -1,6 +1,7 @@
-import React, { createContext, useState, useContext, ReactNode } from 'react';
+import React, { createContext, useState, useContext, ReactNode, useEffect } from 'react';
 import { HymnResult, SourceSelectionState } from '../types';
 import { HymnEmbeddings } from '../services/hymns';
+import { initializeEmbedder } from '../services/embeddings';
 
 interface OracleContextType {
   results: HymnResult[];
@@ -21,8 +22,6 @@ interface OracleContextType {
   setExpanded: React.Dispatch<React.SetStateAction<boolean>>;
   infoOpen: boolean;
   setInfoOpen: React.Dispatch<React.SetStateAction<boolean>>;
-  modelInitialized: boolean;
-  setModelInitialized: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export const OracleContext = createContext<OracleContextType | undefined>(undefined);
@@ -30,7 +29,7 @@ export const OracleContext = createContext<OracleContextType | undefined>(undefi
 export const OracleProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [results, setResults] = useState<HymnResult[]>([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [modelLoading, setModelLoading] = useState(false);
+  const [modelLoading, setModelLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [hymnEmbeddings, setHymnEmbeddings] = useState<HymnEmbeddings | null>(null);
   const [selectedSources, setSelectedSources] = useState<SourceSelectionState>({
@@ -44,7 +43,22 @@ export const OracleProvider: React.FC<{ children: ReactNode }> = ({ children }) 
   const [isTyping, setIsTyping] = useState(false);
   const [expanded, setExpanded] = useState(false);
   const [infoOpen, setInfoOpen] = useState(false);
-  const [modelInitialized, setModelInitialized] = useState(false);
+
+  // Initialize the model and embeddings
+  useEffect(() => {
+    const initialize = async () => {
+      try {
+        // Use the standard embedder
+        await initializeEmbedder(setModelLoading);
+        // Note: loadHymnEmbeddings is called from useOracle hook to avoid circular dependencies
+      } catch (err) {
+        console.error('Failed to initialize:', err);
+        setError('Failed to initialize the oracle. Please refresh the page.');
+      }
+    };
+
+    initialize();
+  }, []);
 
   const value = {
     results,
@@ -65,8 +79,6 @@ export const OracleProvider: React.FC<{ children: ReactNode }> = ({ children }) 
     setExpanded,
     infoOpen,
     setInfoOpen,
-    modelInitialized,
-    setModelInitialized,
   };
 
   return <OracleContext.Provider value={value}>{children}</OracleContext.Provider>;

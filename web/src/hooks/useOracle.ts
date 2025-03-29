@@ -3,7 +3,6 @@ import { QueryRandomError, getRandomNumberFromEmbedding } from '../services/qrng
 import { loadHymnData, loadHymnEmbeddings } from '../services/hymns';
 import { useOracleContext } from '../context/OracleContext';
 import { SourceSelectionState } from '../types';
-import { initializeEmbedder, initializeEmbedderOptimized } from '../services/embeddings';
 
 export const useOracle = () => {
   const {
@@ -15,32 +14,7 @@ export const useOracle = () => {
     setExpanded,
     hymnEmbeddings,
     setHymnEmbeddings,
-    modelInitialized,
-    setModelInitialized,
   } = useOracleContext();
-
-  // Initialize the TensorFlow model if not already done
-  const initializeModel = useCallback(async () => {
-    if (!modelInitialized) {
-      try {
-        setModelLoading(true);
-        
-        // Use the optimized embedder in production
-        if (process.env.NODE_ENV === 'production') {
-          await initializeEmbedderOptimized();
-        } else {
-          await initializeEmbedder();
-        }
-        
-        setModelInitialized(true);
-      } catch (err) {
-        console.error('Failed to initialize model:', err);
-        setError('Failed to initialize the oracle. Please try again.');
-      } finally {
-        setModelLoading(false);
-      }
-    }
-  }, [modelInitialized, setModelLoading, setModelInitialized, setError]);
 
   // Initialize hymn embeddings if not already loaded
   const initializeEmbeddings = useCallback(async () => {
@@ -50,8 +24,8 @@ export const useOracle = () => {
         setHymnEmbeddings(embeddings);
         return embeddings;
       } catch (err) {
-        console.error('Failed to load hymn embeddings:', err);
-        setError('Failed to load hymn data. Please refresh the page.');
+        console.error('Failed to load sentence embeddings:', err);
+        setError('Failed to load sentence data. Please refresh the page.');
         return null;
       }
     }
@@ -67,52 +41,19 @@ export const useOracle = () => {
     setIsTyping(true);
     
     try {
-      // Initialize model if not already done
-      await initializeModel();
-      
       // Currently only handling Orphic hymns
       if (selectedSources.orphic) {
         // Make sure embeddings are loaded
         const embeddings = await initializeEmbeddings();
         if (!embeddings) {
-          throw new Error('Hymn embeddings not loaded');
-        }
-        
-        // Add diagnostic logging to understand embeddings structure
-        console.log('Embeddings structure check:');
-        console.log('- Type of embeddings:', typeof embeddings);
-        console.log('- Has lines property:', 'lines' in embeddings);
-        console.log('- Has hymns property:', 'hymns' in embeddings);
-        console.log('- Direct keys:', Object.keys(embeddings).slice(0, 5));
-        
-        // Use consistent type assertion for embeddings
-        const embeddingsMap = embeddings as Record<string, Record<string, { text: string, embedding: number[] }>>;
-        
-        // Check available data files with fetch
-        console.log('Checking available data files:');
-        try {
-          const basePathsToCheck = [
-            '/data/enriched/embeddings/hymn_embeddings.json',
-            '/sortes-app/data/enriched/embeddings/hymn_embeddings.json',
-          ];
-          
-          for (const path of basePathsToCheck) {
-            try {
-              const response = await fetch(path, { method: 'HEAD' });
-              console.log(`${path}: ${response.ok ? 'Available' : 'Not available'} (${response.status})`);
-            } catch (e: any) {
-              console.log(`${path}: Error checking - ${e.message}`);
-            }
-          }
-        } catch (e: any) {
-          console.log('Error checking data files:', e);
+          throw new Error('Sentence embeddings not loaded');
         }
         
         // Dynamically import embedding functions only when needed
         const { getQueryEmbedding, cosineSimilarity } = await import('../services/embeddings');
         
         // Get query embedding - this will now be our source of randomness
-        const queryEmbedding = await getQueryEmbedding(question);
+        const queryEmbedding = await getQueryEmbedding(question, setModelLoading);
         
         // Use the query embedding to generate a random hymn number
         const hymnNumber = getRandomNumberFromEmbedding(queryEmbedding);
@@ -121,25 +62,25 @@ export const useOracle = () => {
         
         // Calculate similarity for each line
         const linesWithSimilarity = hymnData.lines.map((line, index) => {
-          // In embeddings data, lines are indexed from 0, but in hymn_data.json they might be mapped differently
-          // We'll try direct index first, then fallback to appropriate handling
-          let lineEmbeddingIndex = index.toString();
-          
-          if (!embeddingsMap[hymnNumber.toString()] || 
-              !embeddingsMap[hymnNumber.toString()][lineEmbeddingIndex] ||
-              !embeddingsMap[hymnNumber.toString()][lineEmbeddingIndex].embedding) {
-            console.warn(`Missing embedding for hymn ${hymnNumber}, line ${lineEmbeddingIndex}`);
-            // Provide a default similarity when embedding is missing
-            return { 
-              text: line, 
-              similarity: 0, 
-              originalIndex: index 
-            };
+          try {
+            // Get the line data for this hymn and line index
+            const lineData = embeddings[hymnNumber.toString()][index.toString()];
+            
+            // Verify the embedding dimensions match
+            if (queryEmbedding.length !== lineData.embedding.length) {
+              console.error(
+                `Vector dimension mismatch: query=${queryEmbedding.length}, line=${lineData.embedding.length} ` +
+                `(hymn ${hymnNumber}, line ${index})`
+              );
+            }
+            
+            // Calculate similarity
+            const similarity = cosineSimilarity(queryEmbedding, lineData.embedding);
+            return { text: line, similarity, originalIndex: index };
+          } catch (error) {
+            console.error(`Error calculating similarity for hymn ${hymnNumber}, line ${index}:`, error);
+            return { text: line, similarity: 0, originalIndex: index };
           }
-          
-          const lineData = embeddingsMap[hymnNumber.toString()][lineEmbeddingIndex];
-          const similarity = cosineSimilarity(queryEmbedding, lineData.embedding);
-          return { text: line, similarity, originalIndex: index };
         });
 
         // Sort by similarity for ranking
@@ -181,7 +122,7 @@ export const useOracle = () => {
     setResults, 
     setExpanded, 
     setIsTyping, 
-    initializeModel,
+    setModelLoading, 
     initializeEmbeddings
   ]);
 
