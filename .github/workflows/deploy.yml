@@ -66,6 +66,22 @@ jobs:
           echo "Copying build files to sortes directory"
           cp -R web/build/* main-repo/sortes/
           
+          # Ensure .nojekyll exists in both root and sortes directory
+          touch main-repo/.nojekyll
+          touch main-repo/sortes/.nojekyll
+          
+          # Create an explicit index.html in sortes directory if it doesn't exist
+          if [ ! -f "main-repo/sortes/index.html" ]; then
+            echo "WARNING: index.html not found in build output. Creating from app files."
+            cp web/build/index.html main-repo/sortes/index.html
+          fi
+          
+          # Make sure GitHub doesn't use the README.md as index
+          if [ -f "main-repo/sortes/README.md" ]; then
+            echo "Removing README.md from sortes directory to prevent GitHub Pages from using it"
+            rm main-repo/sortes/README.md
+          fi
+          
           # Create data directories in the sortes folder if they don't exist in build
           if [ ! -d "main-repo/sortes/data/enriched/deities" ]; then
             mkdir -p main-repo/sortes/data/enriched/deities
@@ -168,9 +184,6 @@ jobs:
           # No longer needed to create sortes directory with redirect as we're deploying directly there
           
           # Removed root redirect to allow personal website to function normally
-          
-          # Ensure .nojekyll exists to prevent Jekyll processing
-          touch main-repo/.nojekyll
           
           # List directories to verify structure
           echo "Directory structure:"
