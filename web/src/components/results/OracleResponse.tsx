@@ -214,7 +214,6 @@ export const OracleResponse: React.FC = () => {
         height: '100%',
         display: 'flex',
         flexDirection: 'column',
-        overflow: 'auto',
         p: 0
       }}
     >
@@ -227,7 +226,12 @@ export const OracleResponse: React.FC = () => {
           id="oracle-results-section"
           aria-label="Oracle results"
           tabIndex={0}
-          sx={{ ...focusStyle }}
+          sx={{ 
+            ...focusStyle,
+            // Center the content horizontally
+            mx: 'auto',
+            width: '100%',
+          }}
         >
           {results.map((result, index) => (
             <ResultDisplay key={index} result={result} />
