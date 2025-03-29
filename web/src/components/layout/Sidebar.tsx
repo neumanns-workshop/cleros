@@ -247,7 +247,7 @@ export const Sidebar: React.FC = () => {
                 }
               }}
             >
-              v1.0.1-beta.1
+              v1.0.2-beta
             </Link>
           </Box>
           
