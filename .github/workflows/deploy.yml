@@ -40,6 +40,17 @@ jobs:
         run: |
           mkdir -p main-repo/sortes
           cp -R web/build/* main-repo/sortes/
+          
+          # Ensure .nojekyll exists to prevent Jekyll processing
+          touch main-repo/.nojekyll
+          
+          # Ensure README.md doesn't override index.html
+          if [ -f main-repo/sortes/README.md ]; then
+            mv main-repo/sortes/README.md main-repo/sortes/README.md.bak
+          fi
+          
+          # Verify index.html exists
+          ls -la main-repo/sortes/
 
       - name: Configure Git
         run: |
