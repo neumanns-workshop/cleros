@@ -68,8 +68,8 @@ package-lock.json
 
 # Data files (add more specific patterns if needed)
 /data/private/
-**/sentence_embeddings.json
-*.onnx
+# Keeping embeddings files to enable proper app functionality
+# *.onnx
 *.wasm
 *.dylib
 *.dll
