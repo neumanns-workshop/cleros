@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { fetchLocalData, clearAPICache } from '../services/api';
 
 // Mock the global fetch function

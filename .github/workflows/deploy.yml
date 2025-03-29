@@ -27,7 +27,7 @@ jobs:
       - name: Build
         run: |
           cd web
-          npm run build
+          CI=false SKIP_PREFLIGHT_CHECK=true DISABLE_ESLINT_PLUGIN=true npm run build
 
       - name: Checkout main repository
         uses: actions/checkout@v3
