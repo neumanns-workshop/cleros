@@ -8,7 +8,7 @@ interface SidebarContextType {
 const SidebarContext = createContext<SidebarContextType | undefined>(undefined);
 
 export const SidebarProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
     <SidebarContext.Provider value={{ isOpen, setIsOpen }}>
