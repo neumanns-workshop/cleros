@@ -1,0 +1,19 @@
+{
+  "hymn_id": "71",
+  "title": "To Melinoe",
+  "dedication": "",
+  "incense": "aromatic herbs",
+  "lines": [
+    "I call upon Melinoe, saffron-cloaked nymph of the earth, whom revered Persephone bore by the mouth of the Kokytos river upon the sacred bed of Kronian Zeus.",
+    "In the guise of Plouton Zeus tricked Persephone and through wily plots bedded her; a two-bodied specter sprang forth from Persephone's fury.",
+    "This specter drives mortals to madness with her airy apparitions as she appears in weird shapes and strange forms, now plain to the eye, now shadowy, now shining in the darkness\u2014 all this in unnerving attacks in the gloom of night.",
+    "O goddess, O queen of those below, I beseech you to banish the soul's frenzy to the ends of the earth, show to the initiates a kindly and holy face."
+  ],
+  "line_mappings": {
+    "1": 1,
+    "2": 7,
+    "3": 11,
+    "4": 19
+  },
+  "sequence": 71
+}

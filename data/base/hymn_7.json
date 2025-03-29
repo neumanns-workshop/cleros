@@ -1,0 +1,21 @@
+{
+  "hymn_id": "7",
+  "title": "To the Stars",
+  "dedication": "",
+  "incense": "aromatic herbs",
+  "lines": [
+    "I call forth the sacred light of the heavenly Stars, with devotional prayers I summon the holy daimones.",
+    "Heavenly Stars, dear children of black Night, round your thrones you move in circles, you spin in circular ways, O brilliant and fiery begetters of all, you do reveal fate, everyone's fate, you determine the divine path for mortals.",
+    "Wandering in midair, you gaze upon the seven luminous orbits.",
+    "In heaven and on earth, ever indestructible on your blazing trail, you shine upon the darkness of the cloak night wears.",
+    "Coruscating and gleaming, kingly and nocturnal, visit the learned contests of this sacred rite, finish a noble race for works of renown."
+  ],
+  "line_mappings": {
+    "1": 1,
+    "2": 5,
+    "3": 15,
+    "4": 17,
+    "5": 21
+  },
+  "sequence": 7
+}

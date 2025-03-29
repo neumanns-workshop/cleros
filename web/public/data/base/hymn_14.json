@@ -1,0 +1,19 @@
+{
+  "hymn_id": "14",
+  "title": "To Rhea",
+  "dedication": "",
+  "incense": "aromatic herbs",
+  "lines": [
+    "Mighty Rhea, daughter of many-faced Protogonos, your sacred chariot is drawn by bull-slayers, you dance to the sound of drums and cymbals, O frenzy-loving maiden, O mother of Zeus, aegis-bearing lord of Olympos.",
+    "Illustrious and honored, Kronos' blessed consort, you delight in the mountains and in the horrid shrieks of mortals.",
+    "Strong-spirited Rhea, queen of queens, lover of the battle din, liar, savior, redeemer, first by birth, mother of gods and of mortals, from you come the earth, and the wide sky above, and the sea and the winds.",
+    "Ethereal and restless, come, O blessed goddess, O gentle-minded savior, come, bring peace and wealth and abundance of possessions, and do send death and the filth of pollution to the ends of the earth."
+  ],
+  "line_mappings": {
+    "1": 1,
+    "2": 9,
+    "3": 13,
+    "4": 21
+  },
+  "sequence": 14
+}

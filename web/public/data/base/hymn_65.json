@@ -1,0 +1,17 @@
+{
+  "hymn_id": "65",
+  "title": "To Ares",
+  "dedication": "",
+  "incense": "frankincense",
+  "lines": [
+    "Unbreakable, strong-spirited, mighty, powerful daim\u014dn, delighting in arms, indomitable, man-slaying, wall-battering, lord Ares, yours is the din of arms.",
+    "Ever bespattered with blood, you find joy in killing in the fray of battle, O horrid one, your desire is for the rude clash of swords and spears.",
+    "Stay the rage, stay the strife, relax pain's grip on my soul, yield to the wish of Kypris, yield to the revels of Lyaios, exchange the might of arms for the works of Deo, yearning for youth-nurturing peace, bliss-bringing peace."
+  ],
+  "line_mappings": {
+    "1": 1,
+    "2": 6,
+    "3": 11
+  },
+  "sequence": 65
+}

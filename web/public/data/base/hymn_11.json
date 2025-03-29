@@ -1,0 +1,25 @@
+{
+  "hymn_id": "11",
+  "title": "To Pan",
+  "dedication": "",
+  "incense": "et varia",
+  "lines": [
+    "I call upon Pan, the pastoral god, I call upon the universe, upon the sky, the sea, and the land, queen of all, I also call upon immortal fire; all these are Pan's realm.",
+    "Come, O blessed and frolicsome one, O restless companion of the Seasons!",
+    "Goat-limbed, reveling, lover of frenzy, star-haunting, weaver of playful song, song of cosmic harmony, you induce fantasies of dread into the minds of mortals, you delight in gushing springs, surrounded by goatherds and oxherds, you dance with the nymphs, you sharp-eyed hunter, lover of Echo.",
+    "Present in all growth, begetter of all, many-named divinity, light-bringing lord of the cosmos, fructifying Paian, cave-loving and wrathful, veritable Zeus with horns, the earth's endless plain is supported by you, and the deep-flowing water of the weariless sea yields to you, Okeanos who girds the earth with his eddying stream gives way to you, and so does the air we breathe, the air that kindles all life, and above us the sublime eye of weightless fire; at your behest all these are kept wide apart.",
+    "Your providence alters the natures of all, on the boundless earth you offer nourishment to mankind.",
+    "Come, frenzy-loving, spirit-possessed, come to these sacred libations, come and bring my life to a good end.",
+    "Send your madness, O Pan, to the ends of the earth."
+  ],
+  "line_mappings": {
+    "1": 1,
+    "2": 7,
+    "3": 9,
+    "4": 19,
+    "5": 37,
+    "6": 41,
+    "7": 45
+  },
+  "sequence": 11
+}

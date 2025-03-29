@@ -1,0 +1,21 @@
+{
+  "hymn_id": "17",
+  "title": "To Poseidon",
+  "dedication": "",
+  "incense": "myrrh",
+  "lines": [
+    "Hearken, dark-maned Poseidon, holder of the earth, horse god, you hold the bronze trident in your hand, you dwell in the foundations of the full-bosomed sea.",
+    "Shaker of the earth, deep-roaring ruler of the waters, the waves are your blossoms, O gracious one, as you urge horses and chariots on, rushing on the sea, splashing through the rippling brine.",
+    "The unfathomable sea fell to your lot, the third portion.",
+    "Waves and their wild dwellers please you, O spirit of the deep.",
+    "May you save the foundations of the earth and ships moving at full tilt, bringing peace, health, and blameless prosperity."
+  ],
+  "line_mappings": {
+    "1": 1,
+    "2": 7,
+    "3": 13,
+    "4": 15,
+    "5": 17
+  },
+  "sequence": 17
+}

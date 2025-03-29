@@ -1,0 +1,27 @@
+{
+  "hymn_id": "10",
+  "title": "To Physis",
+  "dedication": "",
+  "incense": "aromatic herbs",
+  "lines": [
+    "O Physis, resourceful mother of all, industrious and rich divinity, oldest of all, queen, all-taming and indomitable, O lustrous ruler, ever-honored mistress of all, highest goddess, imperishable, first-born, fabled glorifier of men, nocturnal, radiant with constellations, light-bringing, irrepressible, you move swiftly, your steps are noiseless, O pure marshal of the gods, O end that has no end.",
+    "All partake of you, you alone partake of no one.",
+    "Self-fathered, hence fatherless, virtue itself, joyous, great, you are accessible, O nurse of flowers, you lovingly mingle and twine, you lead and rule, you bring life and nourishment to all.",
+    "Self-sufficient, many-named persuasion of the Graces, Dike herself, queen of heaven, queen of the earth and of the sea, bitter to the vulgar, sweet to those who obey you, wise in all, giver of all, nurturing queen of all, abundant nourishment is yours as you dissolve whatever ripens, father and mother of all, nurturer and nurse, giver of swift birth, O blessed one, giver of wealth of seeds and of the fever of seasons.",
+    "A rich and mighty divinity, you give shape and form to all things.",
+    "Eternal, setting all in motion, skilled and discreet, you are ever turning the swift stream into an unceasing eddy, flowing in all things, circular and ever changing form, fair-throned and precious, you alone accomplish your designs, mighty mistress of booming thunder, you rule over those who hold the scepter, O loud-roaring divinity, fearless, all-taming, destined fate, fire-breathing, you are life everlasting, you are immortal providence.",
+    "You are all things to all, because you alone do.",
+    "You are the all, you alone do, you bring peace and health, you bring growth to all."
+  ],
+  "line_mappings": {
+    "1": 1,
+    "2": 17,
+    "3": 19,
+    "4": 25,
+    "5": 40,
+    "6": 42,
+    "7": 57,
+    "8": 59
+  },
+  "sequence": 10
+}

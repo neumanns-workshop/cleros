@@ -1,0 +1,21 @@
+{
+  "hymn_id": "36",
+  "title": "To Artemis",
+  "dedication": "",
+  "incense": "powdered frankincense",
+  "lines": [
+    "Hear me, O queen, Zeus' daughter of many names, Titanic and Bacchic, revered, renowned archer, torch-bearing goddess bringing light to all, Diktynna, helper at childbirth, you help women in labor, though you know not what labor is.",
+    "O frenzy-loving huntress, you loosen girdles and drive distress away; swift arrow-pouring goddess of the outdoors, you roam in the night.",
+    "Fame-bringing and affable, redeeming and masculine in appearance, Orthia, goddess of swift birth, you are a nurturer of mortal youths, immortal and yet of this earth, you slay wild beasts, O blessed one, your realm is in the mountain forest, you hunt deer.",
+    "O revered and mighty queen of all, fair-blossomed, eternal, sylvan, dog-loving, many-shaped lady of Kydonia, come, dear goddess, as savior to all the initiates, accessible to all, bringing forth the beautiful fruit of the earth, lovely peace, and fair-tressed health.",
+    "May you dispatch diseases and pain to the peaks of the mountains."
+  ],
+  "line_mappings": {
+    "1": 1,
+    "2": 9,
+    "3": 12,
+    "4": 20,
+    "5": 30
+  },
+  "sequence": 36
+}

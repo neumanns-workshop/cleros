@@ -1,0 +1,71 @@
+[
+  {
+    "entity": "Zeus",
+    "category": "Olympian",
+    "description": "Zeus is the king of the gods, residing on Mount Olympus and ruling over the Olympian pantheon. He is the father of gods and men, and his power is central to the established religious framework of ancient Greece.",
+    "confidence": 0.99,
+    "attributes": [
+      "King of the Gods",
+      "Thunderbolt Wielder",
+      "Father of Gods and Men"
+    ],
+    "context": "Father of gods and men, ruler of Olympus, wielder of thunderbolts."
+  },
+  {
+    "entity": "Persephone",
+    "category": "Chthonic",
+    "description": "Persephone is fundamentally a deity of the underworld, ruling alongside Hades. While having Olympian parentage (Demeter), her primary domain and function are deeply rooted in the earth and the realm of the dead, making her a chthonic deity. Her yearly descent and ascent connect her to the cycles of growth and decay, further solidifying her connection to the earth.",
+    "confidence": 0.95,
+    "attributes": [
+      "Queen of the Underworld",
+      "Daughter of Demeter",
+      "Wife of Hades",
+      "Goddess of Spring Growth",
+      "Associated with Seeds and Vegetation"
+    ],
+    "context": "Queen of the underworld, daughter of Demeter, wife of Hades."
+  },
+  {
+    "entity": "Dionysos",
+    "category": "Olympian",
+    "description": "Dionysos is one of the twelve Olympian gods, though his origins and worship are complex and predate the established Olympian pantheon. While possessing chthonic elements due to his birth and associations with the wild, he ultimately secured a place among the major deities residing on Mount Olympus.",
+    "confidence": 0.95,
+    "attributes": [
+      "Wine",
+      "Ecstasy",
+      "Revelry",
+      "Fertility",
+      "Theater",
+      "Chthonic Connections"
+    ],
+    "context": "God of wine, revelry, and ecstasy, twice-born son of Zeus."
+  },
+  {
+    "entity": "Gaia",
+    "category": "Chthonic",
+    "description": "Gaia is the primordial earth goddess, representing the very substance of the earth itself. While influential across all realms, her power and origin lie *within* the earth, making her fundamentally a chthonic deity. She is the mother of both the Titans and Giants, beings deeply connected to the earth's raw power and often associated with the underworld.",
+    "confidence": 0.95,
+    "attributes": [
+      "Primordial",
+      "Earth Goddess",
+      "Mother of Titans",
+      "Mother of Giants",
+      "Fertility",
+      "Chthonic"
+    ],
+    "context": "Primordial earth goddess, mother of the Titans and Giants."
+  },
+  {
+    "entity": "Hermes",
+    "category": "Olympian",
+    "description": "Hermes is one of the twelve Olympian gods, son of Zeus and Maia. While his functions extend beyond the typical Olympian purview, his consistent presence on Mount Olympus and familial ties firmly place him within this category. His role as messenger connects him directly to Zeus and the Olympian court.",
+    "confidence": 0.95,
+    "attributes": [
+      "messenger",
+      "psychopomp",
+      "trickster",
+      "boundary-crosser"
+    ],
+    "context": "Messenger of the gods, guide of souls, patron of travelers and thieves."
+  }
+]

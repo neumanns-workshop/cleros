@@ -1,0 +1,17 @@
+{
+  "hymn_id": "73",
+  "title": "To Daimon",
+  "dedication": "",
+  "incense": "frankincense",
+  "lines": [
+    "I call upon Daimon, the grand and the dreaded leader, gentle Zeus, who gives birth to all, who gives livelihood to mortals.",
+    "Great Zeus, wide roving, avenger, king of all, giver of wealth when you enter the house in the abundance of your powers, you refresh the life of mortals worn out with toil, you possess the keys to joy and sorrow as well.",
+    "So, O pure and blessed one, drive painful cares away, cares that dispatch ruin to all that live throughout the whole earth, and bring a glorious end to my life, a sweet and noble one."
+  ],
+  "line_mappings": {
+    "1": 1,
+    "2": 5,
+    "3": 13
+  },
+  "sequence": 73
+}

@@ -1,0 +1,31 @@
+{
+  "hymn_id": "34",
+  "title": "To Apollon",
+  "dedication": "",
+  "incense": "powdered frankincense",
+  "lines": [
+    "Come, O blessed Paian, O slayer of Tityos, O Phoibos, O Lykoreus, giver of riches, illustrious dweller of Memphis, O god to whom we cry \u201cI\u00eb,\u201d O Titan and Pythian god, yours are the golden lyre, the seeds, and the plows.",
+    "Grynean, Sminthian, slayer of Python, Delphic diviner, wild, light-bringing, lovable god you are, O glorious youth.",
+    "You shoot your arrows from afar, you lead the Muses into dance, O holy one, you are Bacchos, Didymeus, Loxias, too, lord of Delos, you are the eye that sees all, you bring light to mortals, your hair is golden, your oracular utterance is clear.",
+    "Hear me with kindly heart as I pray for people.",
+    "You gaze upon all the ethereal vastness, upon the rich earth you look through the twilight.",
+    "In the quiet darkness of a night lit with stars you see earth's roots below, you hold the bounds of the whole world; the beginning and the end to come are yours.",
+    "You make everything bloom with your versatile lyre, you harmonize the poles, now reaching the highest pitch, now the lowest, now again with a Doric mode, harmoniously balancing the poles, you keep the living races distinct.",
+    "You have infused harmony into the lot of all men, giving them an equal measure of winter and summer: the lowest notes you strike in the winter, the highest notes you make distinct in the summer, your mode is Doric for spring's lovely and blooming season.",
+    "This is why mortals call you lord and Pan, the two-horned god who sends the whistling winds; it is for this you have the master seal of the entire cosmos.",
+    "O blessed one, hear the suppliant voice of the initiates and save them."
+  ],
+  "line_mappings": {
+    "1": 1,
+    "2": 8,
+    "3": 11,
+    "4": 19,
+    "5": 21,
+    "6": 25,
+    "7": 31,
+    "8": 39,
+    "9": 47,
+    "10": 53
+  },
+  "sequence": 34
+}

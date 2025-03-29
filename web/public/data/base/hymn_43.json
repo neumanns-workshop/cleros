@@ -1,0 +1,19 @@
+{
+  "hymn_id": "43",
+  "title": "To the Seasons",
+  "dedication": "",
+  "incense": "aromatic herbs",
+  "lines": [
+    "Seasons, daughters of Themis, daughters of Lord Zeus, Eunomia and Dike and thrice-blessed Eirene, pure spirits of spring, of blossoming meadows, you are found in every color, in all scents wafted by the breezes.",
+    "Ever-blooming, revolving, and sweet-faced, O Seasons, you cloak yourselves with the dew of luxuriant flowers.",
+    "At play you are companions of holy Persephone, when the Fates and the Graces in circling dances come forth to the light, pleasing Zeus and their mother, giver of fruits.",
+    "Come to the new initiates and their holy and reverent rites, bring perfect seasons for the growth of goodly fruit."
+  ],
+  "line_mappings": {
+    "1": 1,
+    "2": 9,
+    "3": 13,
+    "4": 19
+  },
+  "sequence": 43
+}

@@ -1,0 +1,21 @@
+{
+  "hymn_id": "78",
+  "title": "To Dawn",
+  "dedication": "",
+  "incense": "powdered frankincense",
+  "lines": [
+    "Hear, O goddess, you bring the light of day to mortals, resplendent Dawn, you blush throughout the world, messenger of the great, the illustrious Titan.",
+    "Murky, dark, journeying night you send below the earth when you arrive; mortal men you lead to work as you tend to their lives.",
+    "The race of mortal men delights in you, no one escapes your sight as you look down from on high, when from your eyelids you shake off sweet sleep, when there is joy for every mortal, for every reptile, for animals, for birds, for the broods the sea contains.",
+    "All blessings that come from work are your gift.",
+    "Goddess, blessed and pure, give more sacred light to the initiates."
+  ],
+  "line_mappings": {
+    "1": 1,
+    "2": 7,
+    "3": 13,
+    "4": 25,
+    "5": 27
+  },
+  "sequence": 78
+}

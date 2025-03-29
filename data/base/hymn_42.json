@@ -1,0 +1,17 @@
+{
+  "hymn_id": "42",
+  "title": "To Mise",
+  "dedication": "",
+  "incense": "storax",
+  "lines": [
+    "I call upon law-giving Dionysos, who carried the fennel stalk, unforgettable and many-named seed of Eubouleus, I call upon the sacred and holy, upon the ineffable queen Mise, whose twofold nature is male and female.",
+    "Redeeming Iacchos, lord, I summon you, whether you delight in Eleusis in your fragrant temple, or with Mother you partake of mystic rites in Phrygia, or you rejoice in Kypros with fair-wreathed Kythereia, or yet you exult in fields wheat-bearing and hallowed along Egypt's river with your divine mother, the revered and black-robed Isis, as your train of nurses tends to your needs.",
+    "Lady, kindheartedly come to the noble contests of our initiation."
+  ],
+  "line_mappings": {
+    "1": 1,
+    "2": 8,
+    "3": 21
+  },
+  "sequence": 42
+}

@@ -1,0 +1,15 @@
+{
+  "hymn_id": "24",
+  "title": "To the Nereids",
+  "dedication": "",
+  "incense": "aromatic herbs",
+  "lines": [
+    "O Nereus, god of great renown, O foundation of the sea, O end of the earth, O beginning of all, Demeter's sacred throne trembles when you hold prisoner the gusty winds driven to your gloomy depths.",
+    "O blessed one, ward off earthquakes and send to the initiates peace and prosperity and gentle-handed health."
+  ],
+  "line_mappings": {
+    "1": 1,
+    "2": 8
+  },
+  "sequence": 24
+}

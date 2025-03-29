@@ -1,0 +1,19 @@
+{
+  "hymn_id": "66",
+  "title": "To Hephaistos",
+  "dedication": "",
+  "incense": "powdered frankincense",
+  "lines": [
+    "Hephaistos, powerful and strong-spirited, unwearying fire, shining in the gleam of flames, a god bringing light to mortals, mighty-handed, eternal artisan, worker, part of the cosmos, blameless element, most sublime, all-eating, all-taming, all-haunting\u2014 ether, sun, stars, moon, pure light: all these parts of Hephaistos are revealed to mortals.",
+    "All homes, all cities, all nations are yours.",
+    "O mighty giver of many blessings, you dwell in human bodies.",
+    "Hear me, lord, as I summon you to this holy libation, that you may always come gentle to joyful deeds, end the savage rage of untiring fire as nature itself burns in our own bodies."
+  ],
+  "line_mappings": {
+    "1": 1,
+    "2": 15,
+    "3": 17,
+    "4": 19
+  },
+  "sequence": 66
+}

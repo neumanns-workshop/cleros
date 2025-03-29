@@ -1,0 +1,15 @@
+{
+  "hymn_id": "5",
+  "title": "To Ether",
+  "dedication": "",
+  "incense": "crocus",
+  "lines": [
+    "Yours are Zeus' lofty dwelling, endless power, too; of the stars, of the sun, and of the moon you claim a share.",
+    "O tamer of all, O fire-breather, O life's spark for every creature, sublime Ether, best cosmic element, radiant, luminous, starlit offspring, I call upon you and I beseech you to be temperate and clear."
+  ],
+  "line_mappings": {
+    "1": 1,
+    "2": 5
+  },
+  "sequence": 5
+}

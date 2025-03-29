@@ -1,0 +1,23 @@
+{
+  "hymn_id": "59",
+  "title": "To the Fates",
+  "dedication": "",
+  "incense": "aromatic herbs",
+  "lines": [
+    "Boundless Fates, dear children of dark Night, hear my prayer, O many-named dwellers on the lake of heaven, where the frozen water is broken by night's warmth in the shady hollow of a sleek cave; from there you fly to the vast earth, home of mortals, from there, clothed in purple, you march toward men, whose noble aims match their vain hopes, in the realm of the dead, where glory drives her chariot on all over the earthbeyond the ends of Justice, of anxious hope, of primeval law, of the measureless principle of order.",
+    "In life Fate alone watches; the other immortals who dwell on the peaks of snowy Olympos do not, except for Zeus' perfect eye.",
+    "Fate and Zeus' mind know all things for all time.",
+    "I pray to you to come, gently and kindly, Atropos, Lakhesis, Klotho, offspring of noble stock.",
+    "Airy, invisible, inexorable, ever indestructible, you give all and take all, being to men the same as necessity.",
+    "Fates, hear my prayers, receive my libations, come gently to the initiates, free them from pain."
+  ],
+  "line_mappings": {
+    "1": 1,
+    "2": 20,
+    "3": 25,
+    "4": 28,
+    "5": 32,
+    "6": 36
+  },
+  "sequence": 59
+}

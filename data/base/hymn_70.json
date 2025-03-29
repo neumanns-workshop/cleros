@@ -1,0 +1,19 @@
+{
+  "hymn_id": "70",
+  "title": "To the Eumenides",
+  "dedication": "",
+  "incense": "aromatic herbs",
+  "lines": [
+    "Hear me and be gracious, O renowned Eumenides, O pure daughters of the great Chthonic Zeus and of lovely Persephone, fair-tressed maiden.",
+    "Over the lives of impious mortals you keep a careful eye, in charge of Necessity, you punish the unjust.",
+    "Black-skinned queens, your awesome eyes flash forth flesh-eating darts of light.",
+    "Everlasting, repugnant, frightful, sovereign, paralyzing the limbs with madness, hideous, nocturnal, fateful, snake-haired, terrible maidens of the night, it is you I summon to bring me holiness of mind."
+  ],
+  "line_mappings": {
+    "1": 1,
+    "2": 7,
+    "3": 11,
+    "4": 15
+  },
+  "sequence": 70
+}

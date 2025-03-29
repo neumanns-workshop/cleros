@@ -1,0 +1,15 @@
+{
+  "hymn_id": "80",
+  "title": "To Boreas",
+  "dedication": "",
+  "incense": "frankincense",
+  "lines": [
+    "Freezing Boreas, your wintry breezes make the world's lofty air quiver, come from snowy Thrace!",
+    "Dissolve the rebellious alliance of clouds and moist air, turn the water to rushing drops of rain, bring fair weather everywhere, brighten Ether's face as the sun's rays shine upon the earth."
+  ],
+  "line_mappings": {
+    "1": 1,
+    "2": 5
+  },
+  "sequence": 80
+}

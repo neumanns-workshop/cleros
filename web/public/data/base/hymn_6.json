@@ -1,0 +1,21 @@
+{
+  "hymn_id": "6",
+  "title": "To Protogonos",
+  "dedication": "",
+  "incense": "myrrh",
+  "lines": [
+    "Upon two-natured Protogonos, great and ether-tossed, I call; born of the egg, delighting in his golden wings, the begetter of blessed gods and mortal men; he bellows like a bull.",
+    "Erikepaios, seed unforgettable, attended by many rites, ineffable, hidden, brilliant scion, forever in whirring motion, you scattered the dark mist, the mist that lay before your eyes.",
+    "Flapping your wings, you whirled about throughout this world, you brought pure light.",
+    "For this I call you Phanes, yes, I call you Lord Priapos, I call you bright-eyed Antauges.",
+    "O blessed one of the many counsels and of the many seeds, come joyfully to the celebrants of this holy rite, of this very intricate rite."
+  ],
+  "line_mappings": {
+    "1": 1,
+    "2": 7,
+    "3": 13,
+    "4": 16,
+    "5": 19
+  },
+  "sequence": 6
+}

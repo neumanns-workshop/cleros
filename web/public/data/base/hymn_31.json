@@ -1,0 +1,15 @@
+{
+  "hymn_id": "31",
+  "title": "Hymn to the Kouretes",
+  "dedication": "",
+  "incense": "",
+  "lines": [
+    "Leaping Kouretes, stepping to the sound of arms, howling mountain men whose feet pound the ground, discordant is the lyre you strike as you pace, light of foot, O renowned marshals, O arm-carrying guards, priests in the train of a mother struck with mountain frenzy.",
+    "Kindly visit the people who praise you with words, with joyous heart be gracious to the oxherd."
+  ],
+  "line_mappings": {
+    "1": 1,
+    "2": 11
+  },
+  "sequence": 31
+}

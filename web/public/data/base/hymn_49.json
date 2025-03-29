@@ -1,0 +1,15 @@
+{
+  "hymn_id": "49",
+  "title": "To Hipta",
+  "dedication": "",
+  "incense": "storax",
+  "lines": [
+    "I call upon Hipta, nurse of Bacchos, maiden possessed, in mystic rites she takes part, she exults in the worship of pure Sabos and in the dances of roaring Iacchos.",
+    "O queen and chthonic mother, hear my prayer, whether you are on Ida, Phrygia's sacred mountain, or you take your pleasure on Tmolos, fair seat of the Lydians, come to these rites with joy on your holy face."
+  ],
+  "line_mappings": {
+    "1": 1,
+    "2": 7
+  },
+  "sequence": 49
+}

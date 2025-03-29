@@ -1,0 +1,19 @@
+{
+  "hymn_id": "15",
+  "title": "To Zeus",
+  "dedication": "",
+  "incense": "storax",
+  "lines": [
+    "Much-honored Zeus, great god, indestructible Zeus, we lay before you in prayer redeeming testimony.",
+    "O king, you have brought to light divine works\u2014 earth, goddess and mother, the hills swept by the shrill winds, the sea and the host of the stars, marshaled by the sky.",
+    "Kronian Zeus, strong-spirited god, the thunderbolt is your scepter, father of all, beginning and end of all, earth-shaker, increaser and purifier, all-shaker, god of thunder and lightning, Zeus the sower.",
+    "Hear me, god of many faces, grant me unblemished health, please grant me divine peace and riches, please grant me glory without blame."
+  ],
+  "line_mappings": {
+    "1": 1,
+    "2": 5,
+    "3": 11,
+    "4": 19
+  },
+  "sequence": 15
+}

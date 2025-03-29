@@ -1,0 +1,19 @@
+{
+  "hymn_id": "77",
+  "title": "To Mnemosyne",
+  "dedication": "",
+  "incense": "frankincense",
+  "lines": [
+    "I call upon queen Mnemosyne, Zeus' consort, who gave birth to the holy, the sacred, the clear-voiced Muses.",
+    "Evil oblivion that harms the mind is alien to her who gives coherence to the mind and soul of mortals.",
+    "She increases men's power, their ability to think, sweet and vigilant, she reminds us of all the thoughts we store forever in our breasts, never straying and ever rousing the mind to action.",
+    "O blessed goddess, for the initiates stir the memory of the sacred rite, ward off oblivion from them."
+  ],
+  "line_mappings": {
+    "1": 1,
+    "2": 5,
+    "3": 8,
+    "4": 16
+  },
+  "sequence": 77
+}

@@ -1,0 +1,33 @@
+{
+  "hymn_id": "19",
+  "title": "To Zeus the Thunderbolt",
+  "dedication": "",
+  "incense": "storax",
+  "lines": [
+    "Father Zeus, sublime is the course of the blazing cosmos you drive on, ethereal and lofty the flash of your lightning as you shake the seat of the gods with a god's thunderbolt.",
+    "The fire of your lightning emblazons the rain clouds, you bring storms and hurricanes, you bring mighty gales, you hurl roaring thunder, a shower of arrows.",
+    "Horrific might and strength sets all aflame, dreadful missile makes hearts pound and hair bristle.",
+    "Holy and invincible, it comes with a sudden crash, an endless spiral of noise, omnivorous in its drive, unbreakable and threatening, ineluctable, too, the gale's sharp and smoke-filled shafts swoop down with a flash dreaded by land and sea.",
+    "Wild beasts cringe when they hear the noise, faces reflect the brilliance of thunder roaring in the celestial hollows.",
+    "You tear the robe that cloaks heaven, you hurl the fiery thunderbolt.",
+    "O blessed one.",
+    ".",
+    ".",
+    "the anger of the sea waves, the anger of the mountain peaks\u2014 we all know your power.",
+    "Enjoy this libation and give all things pleasing to the heart: a life of prosperity, queenly health, divine peace that nurtures youths, crowned with honors, a life ever blooming with cheerful thoughts."
+  ],
+  "line_mappings": {
+    "1": 1,
+    "2": 7,
+    "3": 13,
+    "4": 17,
+    "5": 27,
+    "6": 32,
+    "7": 35,
+    "8": 35,
+    "9": 35,
+    "10": 36,
+    "11": 39
+  },
+  "sequence": 19
+}

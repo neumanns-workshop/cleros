@@ -1,0 +1,17 @@
+{
+  "hymn_id": "37",
+  "title": "To the Titans",
+  "dedication": "",
+  "incense": "frankincense",
+  "lines": [
+    "Titans, glorious children of Sky and Earth, ancestors of our fathers, you dwell down below in Tartarean homes, in the bowels of the earth.",
+    "From you are descended all toiling mortals, the brood of the sea and of the land, then the brood of the birds, of all generations of the world born of you.",
+    "I call upon you to banish harsh anger if some earthly forefather of mine stormed your homes."
+  ],
+  "line_mappings": {
+    "1": 1,
+    "2": 7,
+    "3": 13
+  },
+  "sequence": 37
+}

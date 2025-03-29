@@ -1,0 +1,19 @@
+{
+  "hymn_id": "72",
+  "title": "To Tyche",
+  "dedication": "",
+  "incense": "frankincense",
+  "lines": [
+    "I summon you here through prayer, Tyche, noble ruler, gentle goddess of the roads, for wealth and possessions, I summon you as Artemis the guide, renowned and sprung from the loins of Eubouleus, your wish is irresistible.",
+    "Funereal and delusive, you are the theme of men's songs.",
+    "In you lies the great variety of men's livelihood: to some you grant a wealth of blessings and possessions, to others you bring evil poverty if you harbor anger against them.",
+    "O goddess, I beseech you, come in kindness to my life, grant me happiness, grant me abundant wealth."
+  ],
+  "line_mappings": {
+    "1": 1,
+    "2": 9,
+    "3": 11,
+    "4": 17
+  },
+  "sequence": 72
+}
