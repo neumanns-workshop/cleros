@@ -1,0 +1,7 @@
+{
+  "model_name": "Xenova/all-MiniLM-L6-v2",
+  "embedding_dimension": 384,
+  "total_hymns": 88,
+  "total_sentences": 415,
+  "generated_at": "2025-03-27T16:19:37.086Z"
+}

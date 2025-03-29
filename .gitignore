@@ -68,6 +68,9 @@ package-lock.json
 
 # Data files (add more specific patterns if needed)
 /data/private/
+# Including all data files in web/public/data for deployment
+!/web/public/data/
+!/web/public/data/**/*
 # Keeping embeddings files to enable proper app functionality
 # *.onnx
 *.wasm

@@ -85,6 +85,26 @@ export const useOracle = () => {
         console.log('- Has hymns property:', 'hymns' in embeddings);
         console.log('- Direct keys:', Object.keys(embeddings).slice(0, 5));
         
+        // Check available data files with fetch
+        console.log('Checking available data files:');
+        try {
+          const basePathsToCheck = [
+            '/data/enriched/embeddings/hymn_embeddings.json',
+            '/sortes-app/data/enriched/embeddings/hymn_embeddings.json',
+          ];
+          
+          for (const path of basePathsToCheck) {
+            try {
+              const response = await fetch(path, { method: 'HEAD' });
+              console.log(`${path}: ${response.ok ? 'Available' : 'Not available'} (${response.status})`);
+            } catch (e: any) {
+              console.log(`${path}: Error checking - ${e.message}`);
+            }
+          }
+        } catch (e: any) {
+          console.log('Error checking data files:', e);
+        }
+        
         // Dynamically import embedding functions only when needed
         const { getQueryEmbedding, cosineSimilarity } = await import('../services/embeddings');
         

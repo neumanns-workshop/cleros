@@ -640,150 +640,6 @@
     "line_num": 1
   },
   {
-    "entity": "first",
-    "category": "Nature",
-    "start_char": 197,
-    "end_char": 202,
-    "hymn_id": "10",
-    "line_num": 1
-  },
-  {
-    "entity": "first",
-    "category": "Nature",
-    "start_char": 88,
-    "end_char": 93,
-    "hymn_id": "14",
-    "line_num": 3
-  },
-  {
-    "entity": "first",
-    "category": "Nature",
-    "start_char": 52,
-    "end_char": 57,
-    "hymn_id": "25",
-    "line_num": 1
-  },
-  {
-    "entity": "first",
-    "category": "Nature",
-    "start_char": 164,
-    "end_char": 169,
-    "hymn_id": "25",
-    "line_num": 3
-  },
-  {
-    "entity": "first",
-    "category": "Nature",
-    "start_char": 215,
-    "end_char": 220,
-    "hymn_id": "38",
-    "line_num": 2
-  },
-  {
-    "entity": "first",
-    "category": "Nature",
-    "start_char": 70,
-    "end_char": 75,
-    "hymn_id": "40",
-    "line_num": 3
-  },
-  {
-    "entity": "first",
-    "category": "Nature",
-    "start_char": 106,
-    "end_char": 111,
-    "hymn_id": "40",
-    "line_num": 3
-  },
-  {
-    "entity": "first",
-    "category": "Nature",
-    "start_char": 105,
-    "end_char": 110,
-    "hymn_id": "79",
-    "line_num": 1
-  },
-  {
-    "entity": "first",
-    "category": "Nature",
-    "start_char": 62,
-    "end_char": 67,
-    "hymn_id": "79",
-    "line_num": 3
-  },
-  {
-    "entity": "two",
-    "category": "Other",
-    "start_char": 55,
-    "end_char": 58,
-    "hymn_id": "30",
-    "line_num": 1
-  },
-  {
-    "entity": "two",
-    "category": "Other",
-    "start_char": 124,
-    "end_char": 127,
-    "hymn_id": "30",
-    "line_num": 1
-  },
-  {
-    "entity": "two",
-    "category": "Other",
-    "start_char": 139,
-    "end_char": 142,
-    "hymn_id": "30",
-    "line_num": 1
-  },
-  {
-    "entity": "two",
-    "category": "Other",
-    "start_char": 47,
-    "end_char": 50,
-    "hymn_id": "34",
-    "line_num": 9
-  },
-  {
-    "entity": "two",
-    "category": "Other",
-    "start_char": 35,
-    "end_char": 38,
-    "hymn_id": "50",
-    "line_num": 1
-  },
-  {
-    "entity": "two",
-    "category": "Other",
-    "start_char": 11,
-    "end_char": 14,
-    "hymn_id": "52",
-    "line_num": 7
-  },
-  {
-    "entity": "two",
-    "category": "Other",
-    "start_char": 11,
-    "end_char": 14,
-    "hymn_id": "58",
-    "line_num": 2
-  },
-  {
-    "entity": "two",
-    "category": "Other",
-    "start_char": 5,
-    "end_char": 8,
-    "hymn_id": "6",
-    "line_num": 1
-  },
-  {
-    "entity": "two",
-    "category": "Other",
-    "start_char": 85,
-    "end_char": 88,
-    "hymn_id": "71",
-    "line_num": 2
-  },
-  {
     "entity": "Kronos",
     "category": "Titan",
     "start_char": 71,
@@ -1640,38 +1496,6 @@
     "line_num": 2
   },
   {
-    "entity": "one",
-    "category": "Abstract",
-    "start_char": 10,
-    "end_char": 13,
-    "hymn_id": "27",
-    "line_num": 5
-  },
-  {
-    "entity": "one",
-    "category": "Abstract",
-    "start_char": 121,
-    "end_char": 124,
-    "hymn_id": "56",
-    "line_num": 2
-  },
-  {
-    "entity": "one",
-    "category": "Abstract",
-    "start_char": 59,
-    "end_char": 62,
-    "hymn_id": "56",
-    "line_num": 6
-  },
-  {
-    "entity": "one",
-    "category": "Abstract",
-    "start_char": 19,
-    "end_char": 22,
-    "hymn_id": "8",
-    "line_num": 1
-  },
-  {
     "entity": "Phrygia",
     "category": "Titan",
     "start_char": 70,
@@ -1934,30 +1758,6 @@
     "end_char": 46,
     "hymn_id": "79",
     "line_num": 1
-  },
-  {
-    "entity": "third",
-    "category": "Chthonic",
-    "start_char": 43,
-    "end_char": 48,
-    "hymn_id": "17",
-    "line_num": 3
-  },
-  {
-    "entity": "third",
-    "category": "Chthonic",
-    "start_char": 66,
-    "end_char": 71,
-    "hymn_id": "18",
-    "line_num": 3
-  },
-  {
-    "entity": "third",
-    "category": "Chthonic",
-    "start_char": 89,
-    "end_char": 94,
-    "hymn_id": "53",
-    "line_num": 2
   },
   {
     "entity": "Hades",
@@ -2273,7 +2073,7 @@
   },
   {
     "entity": "Pallas",
-    "category": "Olympian",
+    "category": "Other",
     "start_char": 173,
     "end_char": 179,
     "hymn_id": "0",
@@ -2281,27 +2081,11 @@
   },
   {
     "entity": "Pallas",
-    "category": "Olympian",
+    "category": "Other",
     "start_char": 9,
     "end_char": 15,
     "hymn_id": "32",
     "line_num": 1
-  },
-  {
-    "entity": "four",
-    "category": "Nature",
-    "start_char": 252,
-    "end_char": 256,
-    "hymn_id": "0",
-    "line_num": 10
-  },
-  {
-    "entity": "four",
-    "category": "Nature",
-    "start_char": 79,
-    "end_char": 83,
-    "hymn_id": "8",
-    "line_num": 6
   },
   {
     "entity": "Ourania",
@@ -2688,22 +2472,6 @@
     "line_num": 1
   },
   {
-    "entity": "three",
-    "category": "Other",
-    "start_char": 12,
-    "end_char": 17,
-    "hymn_id": "52",
-    "line_num": 3
-  },
-  {
-    "entity": "three",
-    "category": "Other",
-    "start_char": 69,
-    "end_char": 74,
-    "hymn_id": "55",
-    "line_num": 2
-  },
-  {
     "entity": "Eros",
     "category": "Chthonic",
     "start_char": 164,
@@ -2774,14 +2542,6 @@
     "end_char": 150,
     "hymn_id": "0",
     "line_num": 3
-  },
-  {
-    "entity": "nine",
-    "category": "Abstract",
-    "start_char": 66,
-    "end_char": 70,
-    "hymn_id": "0",
-    "line_num": 4
   },
   {
     "entity": "Year",
@@ -2912,14 +2672,6 @@
     "line_num": 3
   },
   {
-    "entity": "twelve",
-    "category": "Other",
-    "start_char": 52,
-    "end_char": 58,
-    "hymn_id": "12",
-    "line_num": 4
-  },
-  {
     "entity": "year",
     "category": "Nature",
     "start_char": 38,
@@ -2942,14 +2694,6 @@
     "end_char": 209,
     "hymn_id": "18",
     "line_num": 5
-  },
-  {
-    "entity": "fifty",
-    "category": "Other",
-    "start_char": 104,
-    "end_char": 109,
-    "hymn_id": "23",
-    "line_num": 1
   },
   {
     "entity": "Maia",
@@ -3005,14 +2749,6 @@
     "start_char": 55,
     "end_char": 67,
     "hymn_id": "3",
-    "line_num": 1
-  },
-  {
-    "entity": "thrice",
-    "category": "Chthonic",
-    "start_char": 68,
-    "end_char": 74,
-    "hymn_id": "30",
     "line_num": 1
   },
   {
@@ -3118,14 +2854,6 @@
     "end_char": 224,
     "hymn_id": "34",
     "line_num": 8
-  },
-  {
-    "entity": "twins",
-    "category": "Olympian",
-    "start_char": 45,
-    "end_char": 50,
-    "hymn_id": "35",
-    "line_num": 1
   },
   {
     "entity": "Koios",
@@ -3360,6 +3088,14 @@
     "line_num": 2
   },
   {
+    "entity": "Lydians",
+    "category": "Other",
+    "start_char": 150,
+    "end_char": 157,
+    "hymn_id": "49",
+    "line_num": 2
+  },
+  {
     "entity": "Hamadryad",
     "category": "Nature",
     "start_char": 77,
@@ -3486,14 +3222,6 @@
     "end_char": 81,
     "hymn_id": "56",
     "line_num": 5
-  },
-  {
-    "entity": "Two",
-    "category": "Chthonic",
-    "start_char": 0,
-    "end_char": 3,
-    "hymn_id": "56",
-    "line_num": 6
   },
   {
     "entity": "Kokytos",
@@ -3638,22 +3366,6 @@
     "end_char": 39,
     "hymn_id": "69",
     "line_num": 1
-  },
-  {
-    "entity": "thousand",
-    "category": "Chthonic",
-    "start_char": 25,
-    "end_char": 33,
-    "hymn_id": "69",
-    "line_num": 4
-  },
-  {
-    "entity": "seven",
-    "category": "Abstract",
-    "start_char": 39,
-    "end_char": 44,
-    "hymn_id": "7",
-    "line_num": 3
   },
   {
     "entity": "Eumenides",
