@@ -81,7 +81,7 @@ export const Sidebar: React.FC = () => {
   return (
     <>
       {/* Menu button for mobile/closed state */}
-      {(!isOpen || isMobile) && (
+      {!isOpen && (
         <IconButton
           onClick={() => setIsOpen(true)}
           sx={{
