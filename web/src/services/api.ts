@@ -40,12 +40,18 @@ function ensureCorrectPath(path: string): string {
   
   const basePath = getBasePath();
   
-  // Make sure we're looking in public directory with the correct base path
-  if (!path.startsWith(`${basePath}/data`) && !path.includes('/public/')) {
-    path = `${basePath}/data` + path;
+  // Check if the path already includes '/data/'
+  const hasDataPath = path.includes('/data/');
+  
+  if (hasDataPath) {
+    // If path already contains '/data/', just prepend the base path
+    return `${basePath}${path}`.replace(/\/+/g, '/');
+  } else if (!path.includes('/public/')) {
+    // Otherwise, add both base path and data directory
+    return `${basePath}/data${path}`.replace(/\/+/g, '/');
   }
   
-  // Replace double slashes
+  // Replace double slashes and return
   return path.replace(/\/+/g, '/');
 }
 
