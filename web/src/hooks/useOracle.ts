@@ -2,6 +2,7 @@ import { useCallback } from 'react';
 import { QueryRandomError, getRandomNumberFromEmbedding } from '../services/qrng';
 import { loadHymnData, loadHymnEmbeddings } from '../services/hymns';
 import { useOracleContext } from '../context/OracleContext';
+import { useSidebar } from '../context/SidebarContext';
 import { SourceSelectionState } from '../types';
 
 export const useOracle = () => {
@@ -15,6 +16,7 @@ export const useOracle = () => {
     hymnEmbeddings,
     setHymnEmbeddings,
   } = useOracleContext();
+  const { setIsOpen } = useSidebar();
 
   // Initialize hymn embeddings if not already loaded
   const initializeEmbeddings = useCallback(async () => {
@@ -105,6 +107,9 @@ export const useOracle = () => {
           minSimilarity: Math.min(...linesWithSimilarity.map(l => l.similarity)),
           topThreeIndices: sortedForRanking.slice(0, 3).map(line => line.originalIndex)
         }]);
+        
+        // Toggle the sidebar closed on successful query
+        setIsOpen(false);
       }
     } catch (err) {
       if (err instanceof QueryRandomError) {
@@ -123,7 +128,8 @@ export const useOracle = () => {
     setExpanded, 
     setIsTyping, 
     setModelLoading, 
-    initializeEmbeddings
+    initializeEmbeddings,
+    setIsOpen
   ]);
 
   return {

@@ -2,6 +2,11 @@
 
 All notable changes to the SORTES web interface will be documented in this file.
 
+## [1.0.3-beta] - 2025-03-29
+
+### Added
+- Automatic sidebar closing when a successful hymn query is made, improving focus on the oracle's response
+
 ## [1.0.2-beta] - 2025-03-29
 
 ### Added
