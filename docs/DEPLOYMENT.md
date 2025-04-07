@@ -44,7 +44,7 @@ If you prefer to host on your own server:
 
 1. Copy the build directory to your server:
    ```bash
-   scp -r web/build user@your-server:/var/www/sortes
+   scp -r web/build user@your-server:/var/www/cleros
    ```
 
 2. Set up Nginx configuration:
@@ -53,7 +53,7 @@ If you prefer to host on your own server:
        listen 80;
        server_name your-domain.com;
 
-       root /var/www/sortes;
+       root /var/www/cleros;
        index index.html;
 
        # Handle routing for SPA

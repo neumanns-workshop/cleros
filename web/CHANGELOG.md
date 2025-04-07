@@ -1,6 +1,11 @@
 # Changelog
 
-All notable changes to the SORTES web interface will be documented in this file.
+All notable changes to the Cleros web interface will be documented in this file.
+
+## [1.1.0-beta] - 2025-04-07
+
+### Changed
+- Updated naming conventions throughout the codebase
 
 ## [1.0.3-beta] - 2025-03-29
 

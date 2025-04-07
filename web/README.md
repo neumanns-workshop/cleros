@@ -1,8 +1,13 @@
-# SORTES Web Interface
+# Cleros Web Interface
 
-This is the web interface for the SORTES project, providing an interactive user interface for the algorithmic divination system based on the Orphic Hymns.
+This is the web interface for the Cleros project, providing an interactive user interface for the algorithmic divination system based on the Orphic Hymns.
 
 ## Features
+
+### Interface Controls
+- **Sidebar Toggle**: Use `Cmd/Ctrl + \` to toggle the sidebar
+- **Click-to-Close**: Click anywhere in the main content area to close the sidebar
+- Clean and minimalist interface with centered content
 
 ### Divination Interface
 - Clean and minimalist interface for oracle queries
@@ -67,13 +72,13 @@ If deploying to your own server, use the included nginx.conf as a template:
 
 ```bash
 # Copy build files to server
-scp -r build/ user@your-server:/var/www/sortes
+scp -r build/ user@your-server:/var/www/cleros
 
 # Configure nginx (use the nginx.conf file as a template)
-sudo nano /etc/nginx/sites-available/sortes
+sudo nano /etc/nginx/sites-available/cleros
 
 # Enable the site
-sudo ln -s /etc/nginx/sites-available/sortes /etc/nginx/sites-enabled/
+sudo ln -s /etc/nginx/sites-available/cleros /etc/nginx/sites-enabled/
 sudo systemctl reload nginx
 ```
 
@@ -110,4 +115,4 @@ The `HighlightedText` component analyzes text and automatically highlights deity
 
 ---
 
-*This web interface is part of the SORTES project, synthesizing traditional divinatory frameworks with modern computational techniques to explore the intersection of meaning-making, statistical analysis, and the interpretive act.*
+*This web interface is part of the Cleros project, synthesizing traditional divinatory frameworks with modern computational techniques to explore the intersection of meaning-making, statistical analysis, and the interpretive act.*

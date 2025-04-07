@@ -2,7 +2,7 @@
 """
 Visualize Deity Classifications
 
-This script generates visualizations of deity classifications from the Sortes Orphicae project.
+This script generates visualizations of deity classifications from the Cleros Orphicae project.
 It displays the distribution of deity types and attributes in a user-friendly format.
 """
 
