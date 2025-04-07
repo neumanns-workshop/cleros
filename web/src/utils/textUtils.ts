@@ -1,5 +1,5 @@
 /**
- * Utility functions for text processing in the SORTES application
+ * Utility functions for text processing in the Cleros application
  */
 
 /**

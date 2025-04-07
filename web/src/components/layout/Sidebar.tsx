@@ -132,7 +132,7 @@ export const Sidebar: React.FC = () => {
       >
         <Box sx={{ p: 3, flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
           <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 3 }}>
-            <Typography variant="h6" sx={{ letterSpacing: '0.12em' }}>sortes</Typography>
+            <Typography variant="h6" sx={{ letterSpacing: '0.12em' }}>cleros</Typography>
             <Box sx={{ display: 'flex', gap: 1 }}>
               <Tooltip title="Show examples">
                 <IconButton 
@@ -154,11 +154,11 @@ export const Sidebar: React.FC = () => {
                   <Typography variant="caption" sx={{ fontSize: '0.7rem', fontWeight: 'bold' }}>Ex.</Typography>
                 </IconButton>
               </Tooltip>
-              <Tooltip title="About sortes">
+              <Tooltip title="About cleros">
                 <IconButton 
                   onClick={() => setInfoOpen(true)}
                   size="small"
-                  aria-label="Open information dialog about sortes"
+                  aria-label="Open information dialog about cleros"
                   sx={{ 
                     color: 'rgba(224, 224, 224, 0.6)',
                     borderRadius: '4px',
@@ -259,7 +259,7 @@ export const Sidebar: React.FC = () => {
             >
               <Link
                 component="a"
-                href="https://github.com/jneumann/sortes"
+                href="https://github.com/jneumann/cleros"
                 target="_blank"
                 rel="noopener noreferrer"
                 sx={{

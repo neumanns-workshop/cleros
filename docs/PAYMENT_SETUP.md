@@ -1,6 +1,6 @@
-# Setting Up Payment Options for SORTES
+# Setting Up Payment Options for Cleros
 
-This guide explains how to set up the "Buy Me a Coffee" payment options in the SORTES application.
+This guide explains how to set up the "Buy Me a Coffee" payment options in the Cleros application.
 
 ## Configure Your Payment Links
 

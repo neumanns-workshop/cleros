@@ -1,4 +1,4 @@
-name: Build Sortes App
+name: Build Cleros App
 
 on:
   push:
@@ -17,7 +17,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout SORTES repository
+      - name: Checkout Cleros repository
         uses: actions/checkout@v3
 
       - name: Set up Node.js
@@ -34,7 +34,7 @@ jobs:
         run: |
           cd web
           # Set the correct PUBLIC_URL for GitHub Pages
-          REACT_APP_PUBLIC_URL="/sortes" CI=false SKIP_PREFLIGHT_CHECK=true DISABLE_ESLINT_PLUGIN=true npm run build
+          REACT_APP_PUBLIC_URL="/cleros" CI=false SKIP_PREFLIGHT_CHECK=true DISABLE_ESLINT_PLUGIN=true npm run build
           # List contents to verify build
           echo "Build output files:"
           ls -la build/
@@ -78,7 +78,7 @@ jobs:
       - name: Upload build as artifact
         uses: actions/upload-artifact@v4
         with:
-          name: sortes-build
+          name: cleros-build
           path: deploy/
           retention-days: 7
 

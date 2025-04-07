@@ -1,6 +1,6 @@
-# SORTES Deployment Guide
+# Cleros Deployment Guide
 
-This document outlines the steps required to deploy the SORTES application to a production environment.
+This document outlines the steps required to deploy the Cleros application to a production environment.
 
 ## Prerequisites
 
@@ -32,7 +32,7 @@ This document outlines the steps required to deploy the SORTES application to a 
 
 ### Option 1: Static Hosting (Recommended)
 
-The SORTES web application is a static site that can be hosted on any static file hosting service:
+The Cleros web application is a static site that can be hosted on any static file hosting service:
 
 1. Upload the contents of the `web/build` directory to your static hosting service (Netlify, Vercel, GitHub Pages, etc.)
 
