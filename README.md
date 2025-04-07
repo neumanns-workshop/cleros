@@ -19,7 +19,7 @@ The application follows a modern React architecture with TypeScript and consists
 - **Hymn Exploration**: Browse and search through ancient hymns
 - **Semantic Search**: Find relevant hymns and lines based on meaning, not just keywords
 - **Entity Recognition**: Highlight deities and entities within texts
-- **Query-based Random Number Generator (QRNG)**: Generate relevant hymns based on user queries
+- **Query-based Random Number Generator (QRNG)**: Retrieve random (fated) hymns based on user queries
 
 ## Directory Structure
 
