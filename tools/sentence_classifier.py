@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Sentence Entity Classifier for Sortes Orphicae
+Sentence Entity Classifier for Cleros Orphicae
 
 This script maps deity classifications to their positions in sentences.
 It uses the character offset information from the linguistic features

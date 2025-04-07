@@ -1,6 +1,6 @@
-# SORTES (Beta)
+# Cleros (Beta)
 
-SORTES is a web application that uses advanced text processing to interact with ancient texts, specifically focusing on Orphic Hymns. The application leverages embedding models for semantic search and text analysis.
+Cleros is a web application that uses advanced text processing to interact with ancient texts, specifically focusing on Orphic Hymns. The application leverages embedding models for semantic search and text analysis.
 
 > **Note:** This is a beta release. Some features may not be fully stable.
 
@@ -51,8 +51,8 @@ The application's service layer handles data loading and processing:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/sortes.git
-cd sortes
+git clone https://github.com/yourusername/cleros.git
+cd cleros
 
 # Install dependencies
 cd web
@@ -110,7 +110,7 @@ npm test
 
 ## Experiments in Algorithmic, Gnostic Divination
 
-SORTES is a framework for computational bibliomancy that applies machine learning techniques to ancient divinatory practices. The initial implementation leverages the Orphic Hymns corpus, employing semantic embeddings within a gnostic interpretive framework.
+Cleros is a framework for computational bibliomancy that applies machine learning techniques to ancient divinatory practices. The initial implementation leverages the Orphic Hymns corpus, employing semantic embeddings within a gnostic interpretive framework.
 
 ## Repository Structure
 
@@ -291,4 +291,4 @@ The Orphic Hymns comprise a collection of 87 poems from Greco-Roman antiquity at
 
 ---
 
-*SORTES synthesizes traditional divinatory frameworks with modern computational techniques to explore the intersection of meaning-making, statistical analysis, and the interpretive act.*
+*Cleros synthesizes traditional divinatory frameworks with modern computational techniques to explore the intersection of meaning-making, statistical analysis, and the interpretive act.*

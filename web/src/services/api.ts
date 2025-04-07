@@ -27,12 +27,12 @@ function ensureCorrectPath(path: string): string {
   
   // Get the public URL base from package.json homepage or window location
   const getBasePath = (): string => {
-    // Always use the /sortes prefix for GitHub Pages
+    // Always use the /cleros prefix for GitHub Pages
     // Check if we're running in a development environment
     const isDev = window.location.hostname === 'localhost' || 
                   window.location.hostname.includes('127.0.0.1');
     
-    return isDev ? '' : '/sortes';
+    return isDev ? '' : '/cleros';
   };
   
   const basePath = getBasePath();

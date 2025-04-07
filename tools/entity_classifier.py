@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Entity Classifier for Sortes Orphicae
+Entity Classifier for Cleros Orphicae
 
 This script uses the local Ollama server to classify entities extracted from the Orphic Hymns
 into different types of deities (e.g., Olympian, Chthonic, Titan, Nature, etc.).
