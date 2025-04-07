@@ -272,7 +272,7 @@ export const Sidebar: React.FC = () => {
                   }
                 }}
               >
-                v1.0.3-beta
+                v1.1.0-beta
               </Link>
               
               <Typography
