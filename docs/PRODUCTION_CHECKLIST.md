@@ -1,4 +1,4 @@
-# SORTES Production Checklist
+# Cleros Production Checklist
 
 ## Security
 

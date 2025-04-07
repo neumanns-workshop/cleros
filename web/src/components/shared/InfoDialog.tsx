@@ -38,7 +38,7 @@ export const InfoDialog: React.FC = () => {
       open={infoOpen} 
       onClose={() => setInfoOpen(false)}
       maxWidth="md"
-      aria-labelledby="sortes-info-dialog-title"
+      aria-labelledby="cleros-info-dialog-title"
       PaperProps={{
         sx: {
           background: `linear-gradient(135deg, ${theme.paper} 0%, ${theme.background} 100%)`,
@@ -60,13 +60,13 @@ export const InfoDialog: React.FC = () => {
       }}>
         <Typography 
           variant="h6" 
-          id="sortes-info-dialog-title"
+          id="cleros-info-dialog-title"
           sx={{ 
             fontSize: '1.1rem',
             letterSpacing: '0.05em'
           }}
         >
-          sortes system information
+          cleros system information
         </Typography>
         <IconButton 
           onClick={() => setInfoOpen(false)}
@@ -81,14 +81,14 @@ export const InfoDialog: React.FC = () => {
         </IconButton>
       </Box>
       <DialogContent sx={{ p: 3 }}>
-        <Typography variant="h6" sx={{ mb: 2, fontSize: '0.95rem', fontWeight: 500 }}>What is sortes?</Typography>
-        <Typography sx={{ mb: 3, fontSize: '0.9rem', lineHeight: 1.6 }}>
-          sortes (Latin for "lots") is a contemporary approach to bibliomantic divination—the ancient practice of seeking guidance through texts. This system uses modern language AI to bring new depth to this timeless tradition.
+        <Typography variant="h6" sx={{ mb: 2, fontSize: '0.95rem', fontWeight: 500 }}>What is cleros?</Typography>
+        <Typography variant="body2" sx={{ mb: 2 }}>
+          cleros (Greek for "lots") is a contemporary approach to bibliomantic divination—the ancient practice of seeking guidance through texts. This system uses modern language AI to bring new depth to this traditional practice.
         </Typography>
 
         <Typography variant="h6" sx={{ mb: 2, fontSize: '0.95rem', fontWeight: 500 }}>How it Works</Typography>
         <Typography sx={{ mb: 1, fontSize: '0.9rem', lineHeight: 1.6 }}>
-          When you pose a question to sortes, two simultaneous processes occur:
+          When you pose a question to cleros, two simultaneous processes occur:
         </Typography>
         <Box sx={{ mb: 1, pl: 2, borderLeft: `2px solid rgba(224, 224, 224, 0.15)` }}>
           <Typography sx={{ mb: 1, fontSize: '0.9rem', fontWeight: 'bold' }}>Text Selection:</Typography>
@@ -103,7 +103,7 @@ export const InfoDialog: React.FC = () => {
 
         <Typography variant="h6" sx={{ mb: 2, mt: 3, fontSize: '0.95rem', fontWeight: 500 }}>The Philosophical Approach</Typography>
         <Typography sx={{ mb: 1, fontSize: '0.9rem', lineHeight: 1.6 }}>
-          sortes draws from gnostic traditions, where meaning emerges from within rather than from external forces:
+          cleros draws from gnostic traditions, where meaning emerges from within rather than from external forces:
         </Typography>
         <Box sx={{ mb: 1, pl: 2, borderLeft: `2px solid rgba(224, 224, 224, 0.15)` }}>
           <Typography sx={{ mb: 1, fontSize: '0.9rem', fontWeight: 'bold' }}>Inner Complexity:</Typography>
@@ -126,7 +126,7 @@ export const InfoDialog: React.FC = () => {
           borderLeft: `2px solid rgba(224, 224, 224, 0.15)` 
         }}>
           <Typography sx={{ fontSize: '0.9rem', fontWeight: 'bold' }}>
-            sortes orphicae
+            cleros orphicae
           </Typography>
           <Typography sx={{ fontSize: '0.9rem', opacity: 0.9, lineHeight: 1.6 }}>
             A collection of 87 poems from Greco-Roman antiquity attributed to Orpheus, historically used in mystery cult rituals for invoking deities.
@@ -145,13 +145,13 @@ export const InfoDialog: React.FC = () => {
           borderLeft: `2px solid rgba(224, 224, 224, 0.15)` 
         }}>
           <Typography sx={{ fontSize: '0.9rem' }}>
-            <span style={{ fontWeight: 'bold' }}>sortes homericae</span> - The Iliad and Odyssey, foundational works of Western literature
+            <span style={{ fontWeight: 'bold' }}>cleros homericae</span> - The Iliad and Odyssey, foundational works of Western literature
           </Typography>
           <Typography sx={{ fontSize: '0.9rem' }}>
-            <span style={{ fontWeight: 'bold' }}>sortes vergilianae</span> - The Aeneid, Rome's national epic
+            <span style={{ fontWeight: 'bold' }}>cleros vergilianae</span> - The Aeneid, Rome's national epic
           </Typography>
           <Typography sx={{ fontSize: '0.9rem' }}>
-            <span style={{ fontWeight: 'bold' }}>sortes gnosticae</span> - Texts from the Nag Hammadi library and other gnostic sources
+            <span style={{ fontWeight: 'bold' }}>cleros gnosticae</span> - Texts from the Nag Hammadi library and other gnostic sources
           </Typography>
         </Box>
       </DialogContent>

@@ -1,5 +1,5 @@
 /**
- * API service utility for SORTES
+ * API service utility for Cleros
  * 
  * This file provides a centralized place for API-related functionality.
  * Currently all data is loaded locally, but this could be expanded if

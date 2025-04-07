@@ -1,6 +1,6 @@
 # Service Utilities
 
-This directory contains service utilities for the SORTES application.
+This directory contains service utilities for the Cleros application.
 
 ## API Service
 

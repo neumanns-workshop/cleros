@@ -1,8 +1,8 @@
 {
-  "name": "web",
-  "version": "1.0.3-beta",
+  "name": "cleros",
+  "version": "0.1.0",
   "private": true,
-  "homepage": "/sortes/",
+  "homepage": "/cleros/",
   "dependencies": {
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
@@ -57,5 +57,9 @@
     "prettier": "^3.2.5",
     "serve": "^14.2.1",
     "source-map-explorer": "^2.5.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jneumann/cleros.git"
   }
 }

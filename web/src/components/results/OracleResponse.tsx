@@ -100,7 +100,7 @@ export const OracleResponse: React.FC = () => {
               component="p"
               sx={{ mb: 6, opacity: 0.95, lineHeight: 1.7 }}
             >
-              <Box component="span" sx={{ fontWeight: 'bold' }}>SORTES</Box> (Latin for "lots") modernizes the ancient practice of bibliomancy—drawing wisdom from chance encounters with significant texts.
+              <Box component="span" sx={{ fontWeight: 'bold' }}>Cleros</Box> (Greek for "lots") modernizes the ancient practice of bibliomancy—drawing wisdom from chance encounters with significant texts.
             </Typography>
             
             <Divider 
