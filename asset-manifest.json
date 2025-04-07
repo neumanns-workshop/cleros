@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/sortes/static/css/main.30029146.css",
-    "main.js": "/sortes/static/js/main.8209bd26.js",
-    "static/js/842.622be675.chunk.js": "/sortes/static/js/842.622be675.chunk.js",
-    "static/js/607.a5447a43.chunk.js": "/sortes/static/js/607.a5447a43.chunk.js",
-    "static/js/238.6dfe0ccd.chunk.js": "/sortes/static/js/238.6dfe0ccd.chunk.js",
-    "static/js/448.603ad396.chunk.js": "/sortes/static/js/448.603ad396.chunk.js",
-    "static/js/128.8c91c47e.chunk.js": "/sortes/static/js/128.8c91c47e.chunk.js",
-    "index.html": "/sortes/index.html",
-    "main.30029146.css.map": "/sortes/static/css/main.30029146.css.map",
-    "main.8209bd26.js.map": "/sortes/static/js/main.8209bd26.js.map",
-    "238.6dfe0ccd.chunk.js.map": "/sortes/static/js/238.6dfe0ccd.chunk.js.map",
-    "448.603ad396.chunk.js.map": "/sortes/static/js/448.603ad396.chunk.js.map",
-    "128.8c91c47e.chunk.js.map": "/sortes/static/js/128.8c91c47e.chunk.js.map"
+    "main.css": "/cleros/static/css/main.30029146.css",
+    "main.js": "/cleros/static/js/main.783048b3.js",
+    "static/js/842.5e2bd590.chunk.js": "/cleros/static/js/842.5e2bd590.chunk.js",
+    "static/js/607.e2b5c5d3.chunk.js": "/cleros/static/js/607.e2b5c5d3.chunk.js",
+    "static/js/238.dbe01f7d.chunk.js": "/cleros/static/js/238.dbe01f7d.chunk.js",
+    "static/js/448.c64684c3.chunk.js": "/cleros/static/js/448.c64684c3.chunk.js",
+    "static/js/128.bd933b8c.chunk.js": "/cleros/static/js/128.bd933b8c.chunk.js",
+    "index.html": "/cleros/index.html",
+    "main.30029146.css.map": "/cleros/static/css/main.30029146.css.map",
+    "main.783048b3.js.map": "/cleros/static/js/main.783048b3.js.map",
+    "238.dbe01f7d.chunk.js.map": "/cleros/static/js/238.dbe01f7d.chunk.js.map",
+    "448.c64684c3.chunk.js.map": "/cleros/static/js/448.c64684c3.chunk.js.map",
+    "128.bd933b8c.chunk.js.map": "/cleros/static/js/128.bd933b8c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.30029146.css",
-    "static/js/main.8209bd26.js"
+    "static/js/main.783048b3.js"
   ]
 }
