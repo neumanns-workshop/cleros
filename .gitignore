@@ -68,7 +68,6 @@ package-lock.json
 
 # Data files (add more specific patterns if needed)
 /data/private/
-**/sentence_embeddings.json
 *.onnx
 *.wasm
 *.dylib

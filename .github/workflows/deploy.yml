@@ -29,17 +29,6 @@ jobs:
         run: |
           cd web
           npm install
-          cd ../scripts
-          npm install
-
-      - name: Generate Embeddings
-        run: |
-          cd scripts
-          echo "Generating sentence embeddings..."
-          node generate-use-embeddings.js
-          # Verify the file was created
-          ls -la ../web/public/data/sentence_embeddings.json
-          echo "Embeddings generated successfully."
 
       - name: Build
         run: |
