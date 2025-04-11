@@ -1,0 +1,500 @@
+{
+  "spans": {
+    "homeric-1-s2-144": {
+      "text": "all wide heaven above",
+      "category": "celestial_sphere",
+      "hymn_id": "homeric-1",
+      "sentence_index": 2,
+      "confidence": "very_high",
+      "start_char": 144,
+      "end_char": 165
+    },
+    "homeric-1-s9-119": {
+      "text": "the rays of the sun",
+      "category": "celestial_sphere",
+      "hymn_id": "homeric-1",
+      "sentence_index": 9,
+      "confidence": "high",
+      "start_char": 119,
+      "end_char": 138
+    },
+    "homeric-1-s9-54": {
+      "text": "starry heaven",
+      "category": "celestial_sphere",
+      "hymn_id": "homeric-1",
+      "sentence_index": 9,
+      "confidence": "very_high",
+      "start_char": 54,
+      "end_char": 67
+    },
+    "homeric-1-s15-498": {
+      "text": "bright upper air",
+      "category": "celestial_sphere",
+      "hymn_id": "homeric-1",
+      "sentence_index": 15,
+      "confidence": "high",
+      "start_char": 498,
+      "end_char": 514
+    },
+    "homeric-2-s11-520": {
+      "text": "light of the sun",
+      "category": "celestial_sphere",
+      "hymn_id": "homeric-2",
+      "sentence_index": 11,
+      "confidence": "high",
+      "start_char": 520,
+      "end_char": 536
+    },
+    "homeric-3-s2-54": {
+      "text": "the tenth moon",
+      "category": "celestial_sphere",
+      "hymn_id": "homeric-3",
+      "sentence_index": 2,
+      "confidence": "very_high",
+      "start_char": 54,
+      "end_char": 68
+    },
+    "homeric-3-s21-0": {
+      "text": "The Sun",
+      "category": "celestial_sphere",
+      "hymn_id": "homeric-3",
+      "sentence_index": 21,
+      "confidence": "very_high",
+      "start_char": 0,
+      "end_char": 7
+    },
+    "homeric-3-s43-178": {
+      "text": "Selene's soft light",
+      "category": "celestial_sphere",
+      "hymn_id": "homeric-3",
+      "sentence_index": 43,
+      "confidence": "high",
+      "start_char": 178,
+      "end_char": 197
+    },
+    "homeric-4-s27-795": {
+      "text": "the light of the sun",
+      "category": "celestial_sphere",
+      "hymn_id": "homeric-4",
+      "sentence_index": 27,
+      "confidence": "medium",
+      "start_char": 795,
+      "end_char": 815
+    },
+    "homeric-7-s0-349": {
+      "text": "fiery sphere",
+      "category": "celestial_sphere",
+      "hymn_id": "homeric-7",
+      "sentence_index": 0,
+      "confidence": "high",
+      "start_char": 349,
+      "end_char": 361
+    },
+    "homeric-7-s0-372": {
+      "text": "planets",
+      "category": "celestial_sphere",
+      "hymn_id": "homeric-7",
+      "sentence_index": 0,
+      "confidence": "high",
+      "start_char": 372,
+      "end_char": 379
+    },
+    "orphic-0-s1-21": {
+      "text": "heavenly and pure flames of Sun",
+      "category": "celestial_sphere",
+      "hymn_id": "orphic-0",
+      "sentence_index": 1,
+      "confidence": "high",
+      "start_char": 21,
+      "end_char": 52
+    },
+    "orphic-0-s1-54": {
+      "text": "sacred light of Moon",
+      "category": "celestial_sphere",
+      "hymn_id": "orphic-0",
+      "sentence_index": 1,
+      "confidence": "high",
+      "start_char": 54,
+      "end_char": 74
+    },
+    "orphic-0-s1-83": {
+      "text": "all the Stars",
+      "category": "celestial_sphere",
+      "hymn_id": "orphic-0",
+      "sentence_index": 1,
+      "confidence": "high",
+      "start_char": 83,
+      "end_char": 96
+    },
+    "orphic-1-s1-3": {
+      "text": "heaven",
+      "category": "celestial_sphere",
+      "hymn_id": "orphic-1",
+      "sentence_index": 1,
+      "confidence": "very_high",
+      "start_char": 3,
+      "end_char": 9
+    },
+    "orphic-5-s0-55": {
+      "text": "the stars",
+      "category": "celestial_sphere",
+      "hymn_id": "orphic-5",
+      "sentence_index": 0,
+      "confidence": "very_high",
+      "start_char": 55,
+      "end_char": 64
+    },
+    "orphic-5-s0-85": {
+      "text": "the moon",
+      "category": "celestial_sphere",
+      "hymn_id": "orphic-5",
+      "sentence_index": 0,
+      "confidence": "very_high",
+      "start_char": 85,
+      "end_char": 93
+    },
+    "orphic-5-s0-69": {
+      "text": "the sun",
+      "category": "celestial_sphere",
+      "hymn_id": "orphic-5",
+      "sentence_index": 0,
+      "confidence": "very_high",
+      "start_char": 69,
+      "end_char": 76
+    },
+    "orphic-7-s0-37": {
+      "text": "heavenly Stars",
+      "category": "celestial_sphere",
+      "hymn_id": "orphic-7",
+      "sentence_index": 0,
+      "confidence": "very_high",
+      "start_char": 37,
+      "end_char": 51
+    },
+    "orphic-7-s1-0": {
+      "text": "Heavenly Stars",
+      "category": "celestial_sphere",
+      "hymn_id": "orphic-7",
+      "sentence_index": 1,
+      "confidence": "very_high",
+      "start_char": 0,
+      "end_char": 14
+    },
+    "orphic-7-s2-35": {
+      "text": "the seven luminous orbits",
+      "category": "celestial_sphere",
+      "hymn_id": "orphic-7",
+      "sentence_index": 2,
+      "confidence": "very_high",
+      "start_char": 35,
+      "end_char": 60
+    },
+    "orphic-11-s0-66": {
+      "text": "the sky",
+      "category": "celestial_sphere",
+      "hymn_id": "orphic-11",
+      "sentence_index": 0,
+      "confidence": "high",
+      "start_char": 66,
+      "end_char": 73
+    },
+    "orphic-11-s3-424": {
+      "text": "the sublime eye of weightless fire",
+      "category": "celestial_sphere",
+      "hymn_id": "orphic-11",
+      "sentence_index": 3,
+      "confidence": "high",
+      "start_char": 424,
+      "end_char": 458
+    },
+    "orphic-12-s3-25": {
+      "text": "dark night",
+      "category": "celestial_sphere",
+      "hymn_id": "orphic-12",
+      "sentence_index": 3,
+      "confidence": "very_high",
+      "start_char": 25,
+      "end_char": 35
+    },
+    "orphic-12-s3-16": {
+      "text": "dawn",
+      "category": "celestial_sphere",
+      "hymn_id": "orphic-12",
+      "sentence_index": 3,
+      "confidence": "very_high",
+      "start_char": 16,
+      "end_char": 20
+    },
+    "orphic-15-s1-124": {
+      "text": "the host of the stars",
+      "category": "celestial_sphere",
+      "hymn_id": "orphic-15",
+      "sentence_index": 1,
+      "confidence": "very_high",
+      "start_char": 124,
+      "end_char": 145
+    },
+    "orphic-15-s1-160": {
+      "text": "the sky",
+      "category": "celestial_sphere",
+      "hymn_id": "orphic-15",
+      "sentence_index": 1,
+      "confidence": "high",
+      "start_char": 160,
+      "end_char": 167
+    },
+    "orphic-26-s2-146": {
+      "text": "the intricate realm of the stars",
+      "category": "celestial_sphere",
+      "hymn_id": "orphic-26",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 146,
+      "end_char": 178
+    },
+    "orphic-34-s5-33": {
+      "text": "lit with stars",
+      "category": "celestial_sphere",
+      "hymn_id": "orphic-34",
+      "sentence_index": 5,
+      "confidence": "high",
+      "start_char": 33,
+      "end_char": 47
+    },
+    "orphic-38-s4-134": {
+      "text": "the clouds",
+      "category": "celestial_sphere",
+      "hymn_id": "orphic-38",
+      "sentence_index": 4,
+      "confidence": "high",
+      "start_char": 134,
+      "end_char": 144
+    },
+    "orphic-64-s1-18": {
+      "text": "heavens",
+      "category": "celestial_sphere",
+      "hymn_id": "orphic-64",
+      "sentence_index": 1,
+      "confidence": "very_high",
+      "start_char": 18,
+      "end_char": 25
+    },
+    "orphic-66-s0-255": {
+      "text": "ether",
+      "category": "celestial_sphere",
+      "hymn_id": "orphic-66",
+      "sentence_index": 0,
+      "confidence": "high",
+      "start_char": 255,
+      "end_char": 260
+    },
+    "orphic-66-s0-267": {
+      "text": "stars",
+      "category": "celestial_sphere",
+      "hymn_id": "orphic-66",
+      "sentence_index": 0,
+      "confidence": "high",
+      "start_char": 267,
+      "end_char": 272
+    },
+    "orphic-66-s0-274": {
+      "text": "moon",
+      "category": "celestial_sphere",
+      "hymn_id": "orphic-66",
+      "sentence_index": 0,
+      "confidence": "high",
+      "start_char": 274,
+      "end_char": 278
+    },
+    "orphic-66-s0-262": {
+      "text": "sun",
+      "category": "celestial_sphere",
+      "hymn_id": "orphic-66",
+      "sentence_index": 0,
+      "confidence": "high",
+      "start_char": 262,
+      "end_char": 265
+    },
+    "orphic-69-s4-4": {
+      "text": "speedy flames of the sun",
+      "category": "celestial_sphere",
+      "hymn_id": "orphic-69",
+      "sentence_index": 4,
+      "confidence": "very_high",
+      "start_char": 4,
+      "end_char": 28
+    },
+    "orphic-69-s4-33": {
+      "text": "the moon's glow",
+      "category": "celestial_sphere",
+      "hymn_id": "orphic-69",
+      "sentence_index": 4,
+      "confidence": "very_high",
+      "start_char": 33,
+      "end_char": 48
+    },
+    "orphic-80-s1-155": {
+      "text": "the sun's rays",
+      "category": "celestial_sphere",
+      "hymn_id": "orphic-80",
+      "sentence_index": 1,
+      "confidence": "high",
+      "start_char": 155,
+      "end_char": 169
+    }
+  },
+  "contexts": {
+    "homeric-1-s2-144": {
+      "context": "smelled most sweetly, so that [all wide heaven above] and the whole earth and",
+      "full_sentence": "It was a thing of awe whether for deathless gods or mortal men to see: from its root grew a hundred blooms and it smelled most sweetly, so that all wide heaven above and the whole earth and the sea's salt swell laughed for joy."
+    },
+    "homeric-1-s9-119": {
+      "context": "sea where fishes shoal, and [the rays of the sun] , and still hoped to",
+      "full_sentence": "And so long as she, the goddess, yet beheld earth and starry heaven and the strong-flowing sea where fishes shoal, and the rays of the sun, and still hoped to see her dear mother and the tribes of the eternal gods, so long hope calmed her great heart for all her trouble⋯and the heights of the mountains and the depths of the sea rang with her immortal voice: and her queenly mother heard her."
+    },
+    "homeric-1-s9-54": {
+      "context": "goddess, yet beheld earth and [starry heaven] and the strong-flowing sea where",
+      "full_sentence": "And so long as she, the goddess, yet beheld earth and starry heaven and the strong-flowing sea where fishes shoal, and the rays of the sun, and still hoped to see her dear mother and the tribes of the eternal gods, so long hope calmed her great heart for all her trouble⋯and the heights of the mountains and the depths of the sea rang with her immortal voice: and her queenly mother heard her."
+    },
+    "homeric-1-s15-498": {
+      "context": "you look down from the [bright upper air] over all the earth and",
+      "full_sentence": "So they came to Helios, who is watchman of both gods and men, and stood in front of his horses: and the bright goddess enquired of him: 'Helios, do you at least regard me, goddess as I am, if ever by word or deed of mine I have cheered your heart and spirit. Through the fruitless air I heard the thrilling cry of my daughter whom I bare, sweet scion of my body and lovely in form, as of one seized violently; though with my eyes I saw nothing. But you — for with your beams you look down from the bright upper air over all the earth and sea — tell me truly of my dear child, if you have seen her anywhere, what god or mortal man has violently seized her against her will and mine, and so made off.' So said she."
+    },
+    "homeric-2-s11-520": {
+      "context": "soon as he sees the [light of the sun] , he will scorn this",
+      "full_sentence": "And Delos rejoiced and answered and said: 'Leto, most glorious daughter of great Coeus, joyfully would I receive your child the far-shooting lord; for it is all too true that I am ill-spoken of among men, whereas thus I should become very greatly honored. But this saying I fear, and I will not hide it from you, Leto. They say that Apollo will be one that is very haughty and will greatly lord it among gods and men all over the fruitful earth. Therefore, I greatly fear in heart and spirit that as soon as he sees the light of the sun, he will scorn this island — for truly I have but a hard, rocky soil — and overturn me and thrust me down with his feet in the depths of the sea; then will the great ocean wash deep above my head for ever, and he will go to another land such as will please him, there to make his temple and wooded groves. So many-footed creatures of the sea will make their lairs in me and black seals their dwellings undisturbed, because I lack people. Yet if you will but dare to swear a great oath, goddess, that here first he will build a glorious temple to be an oracle for men, then let him afterwards make temples and wooded groves amongst all men; for surely he will be greatly renowned.' So said Delos."
+    },
+    "homeric-3-s2-54": {
+      "context": "great Zeus was fulfilled, and [the tenth moon] with her was fixed in",
+      "full_sentence": "And when the purpose of great Zeus was fulfilled, and the tenth moon with her was fixed in heaven, she was delivered and a notable thing was come to pass."
+    },
+    "homeric-3-s21-0": {
+      "context": "[The Sun] was going down beneath the",
+      "full_sentence": "The Sun was going down beneath the earth towards Ocean with his horses and chariot when Hermes came hurrying to the shadowy mountains of Pieria, where the divine cattle of the blessed gods had their steads and grazed the pleasant, unmown meadows."
+    },
+    "homeric-3-s43-178": {
+      "context": "so spent the night while [Selene's soft light] shone down.",
+      "full_sentence": "And when the god had duly finished all, he threw his sandals into deep-eddying Alpheus, and quenched the embers, covering the black ashes with sand, and so spent the night while Selene's soft light shone down."
+    },
+    "homeric-4-s27-795": {
+      "context": "live long and happily, seeing [the light of the sun] , and come to the",
+      "full_sentence": "And Anchises was seized with love, and said to her: 'Hail, lady, whoever of the blessed ones you are that are come to this house, whether Artemis, or Leto, or golden Aphrodite, or high-born Themis, or bright-eyed Athena. Or, maybe, you are one of the Graces come hither, who bear the gods company and are called immortal, or else one of the Nymphs who haunt the pleasant woods, or of those who inhabit this lovely mountain and the springs of rivers and grassy meads. I will make you an altar upon a high peak in a far seen place, and will sacrifice rich offerings to you at all seasons. And do you feel kindly towards me and grant that I may become a man very eminent among the Trojans, and give me strong offspring for the time to come. As for my own self, let me live long and happily, seeing the light of the sun, and come to the threshold of old age, a man prosperous among the people.'"
+    },
+    "homeric-7-s0-349": {
+      "context": "of manliness, who whirl your [fiery sphere] among the planets in their",
+      "full_sentence": "Ares, exceeding in strength, chariot-rider, golden-helmed, doughty in heart, shield-bearer, Saviour of cities, harnessed in bronze, strong of arm, unwearying, mighty with the spear, O defence of Olympus, father of warlike Victory, ally of Themis, stern governor of the rebellious, leader of righteous men, sceptred King of manliness, who whirl your fiery sphere among the planets in their sevenfold courses through the aether wherein your blazing steeds ever bear you above the third firmament of heaven; hear me, helper of men, giver of dauntless youth."
+    },
+    "homeric-7-s0-372": {
+      "context": "your fiery sphere among the [planets] in their sevenfold courses through",
+      "full_sentence": "Ares, exceeding in strength, chariot-rider, golden-helmed, doughty in heart, shield-bearer, Saviour of cities, harnessed in bronze, strong of arm, unwearying, mighty with the spear, O defence of Olympus, father of warlike Victory, ally of Themis, stern governor of the rebellious, leader of righteous men, sceptred King of manliness, who whirl your fiery sphere among the planets in their sevenfold courses through the aether wherein your blazing steeds ever bear you above the third firmament of heaven; hear me, helper of men, giver of dauntless youth."
+    },
+    "orphic-0-s1-21": {
+      "context": "Kind Zeus and Earth, [heavenly and pure flames of Sun] , sacred light of Moon,",
+      "full_sentence": "Kind Zeus and Earth, heavenly and pure flames of Sun, sacred light of Moon, and of all the Stars; Poseidon, too, dark-maned holder of the earth, pure Persephone, Demeter of the splendid fruit, Artemis, arrow-pouring maiden, kindly Phoibos, dwelling on the sacred ground of Delphoi, and Dionysos, the dancer, whose honors among the blessed gods are the highest; strong-spirited Ares, holy and mighty Hephaistos, then the goddess foam-born, to whose lot fell sublime gifts, and you, divinity excellent, king of the underworld."
+    },
+    "orphic-0-s1-54": {
+      "context": "and pure flames of Sun, [sacred light of Moon] , and of all the",
+      "full_sentence": "Kind Zeus and Earth, heavenly and pure flames of Sun, sacred light of Moon, and of all the Stars; Poseidon, too, dark-maned holder of the earth, pure Persephone, Demeter of the splendid fruit, Artemis, arrow-pouring maiden, kindly Phoibos, dwelling on the sacred ground of Delphoi, and Dionysos, the dancer, whose honors among the blessed gods are the highest; strong-spirited Ares, holy and mighty Hephaistos, then the goddess foam-born, to whose lot fell sublime gifts, and you, divinity excellent, king of the underworld."
+    },
+    "orphic-0-s1-83": {
+      "context": "light of Moon, and of [all the Stars] ; Poseidon, too, dark-maned holder",
+      "full_sentence": "Kind Zeus and Earth, heavenly and pure flames of Sun, sacred light of Moon, and of all the Stars; Poseidon, too, dark-maned holder of the earth, pure Persephone, Demeter of the splendid fruit, Artemis, arrow-pouring maiden, kindly Phoibos, dwelling on the sacred ground of Delphoi, and Dionysos, the dancer, whose honors among the blessed gods are the highest; strong-spirited Ares, holy and mighty Hephaistos, then the goddess foam-born, to whose lot fell sublime gifts, and you, divinity excellent, king of the underworld."
+    },
+    "orphic-1-s1-3": {
+      "context": "In [heaven] , on earth, then in",
+      "full_sentence": "In heaven, on earth, then in the sea, saffron-cloaked, tomb spirit reveling in the souls of the dead, daughter of Perses, haunting deserted places, delighting in deer, nocturnal, dog-loving, monstrous queen, devouring wild beasts, ungirt and repulsive."
+    },
+    "orphic-5-s0-55": {
+      "context": "dwelling, endless power, too; of [the stars] , of the sun, and",
+      "full_sentence": "Yours are Zeus' lofty dwelling, endless power, too; of the stars, of the sun, and of the moon you claim a share."
+    },
+    "orphic-5-s0-85": {
+      "context": "of the sun, and of [the moon] you claim a share.",
+      "full_sentence": "Yours are Zeus' lofty dwelling, endless power, too; of the stars, of the sun, and of the moon you claim a share."
+    },
+    "orphic-5-s0-69": {
+      "context": "too; of the stars, of [the sun] , and of the moon",
+      "full_sentence": "Yours are Zeus' lofty dwelling, endless power, too; of the stars, of the sun, and of the moon you claim a share."
+    },
+    "orphic-7-s0-37": {
+      "context": "the sacred light of the [heavenly Stars] , with devotional prayers I",
+      "full_sentence": "I call forth the sacred light of the heavenly Stars, with devotional prayers I summon the holy daimones."
+    },
+    "orphic-7-s1-0": {
+      "context": "[Heavenly Stars] , dear children of black",
+      "full_sentence": "Heavenly Stars, dear children of black Night, round your thrones you move in circles, you spin in circular ways, O brilliant and fiery begetters of all, you do reveal fate, everyone's fate, you determine the divine path for mortals."
+    },
+    "orphic-7-s2-35": {
+      "context": "in midair, you gaze upon [the seven luminous orbits] .",
+      "full_sentence": "Wandering in midair, you gaze upon the seven luminous orbits."
+    },
+    "orphic-11-s0-66": {
+      "context": "call upon the universe, upon [the sky] , the sea, and the",
+      "full_sentence": "I call upon Pan, the pastoral god, I call upon the universe, upon the sky, the sea, and the land, queen of all, I also call upon immortal fire; all these are Pan's realm."
+    },
+    "orphic-11-s3-424": {
+      "context": "all life, and above us [the sublime eye of weightless fire] ; at your behest all",
+      "full_sentence": "Present in all growth, begetter of all, many-named divinity, light-bringing lord of the cosmos, fructifying Paian, cave-loving and wrathful, veritable Zeus with horns, the earth's endless plain is supported by you, and the deep-flowing water of the weariless sea yields to you, Okeanos who girds the earth with his eddying stream gives way to you, and so does the air we breathe, the air that kindles all life, and above us the sublime eye of weightless fire; at your behest all these are kept wide apart."
+    },
+    "orphic-12-s3-25": {
+      "context": "Round your head dawn and [dark night] cling, and your twelve deeds",
+      "full_sentence": "Round your head dawn and dark night cling, and your twelve deeds of valor stretch from east to west."
+    },
+    "orphic-12-s3-16": {
+      "context": "Round your head [dawn] and dark night cling, and",
+      "full_sentence": "Round your head dawn and dark night cling, and your twelve deeds of valor stretch from east to west."
+    },
+    "orphic-15-s1-124": {
+      "context": "shrill winds, the sea and [the host of the stars] , marshaled by the sky.",
+      "full_sentence": "O king, you have brought to light divine works, earth, goddess and mother, the hills swept by the shrill winds, the sea and the host of the stars, marshaled by the sky."
+    },
+    "orphic-15-s1-160": {
+      "context": "of the stars, marshaled by [the sky] .",
+      "full_sentence": "O king, you have brought to light divine works, earth, goddess and mother, the hills swept by the shrill winds, the sea and the host of the stars, marshaled by the sky."
+    },
+    "orphic-26-s2-146": {
+      "context": "the joy of the rain, [the intricate realm of the stars] revolves in endless and awesome",
+      "full_sentence": "Eternal, revered, deep-bosomed and blessed, your joy is the sweet breath of grass, O goddess bedecked with flowers, yours is the joy of the rain, the intricate realm of the stars revolves in endless and awesome flow."
+    },
+    "orphic-34-s5-33": {
+      "context": "quiet darkness of a night [lit with stars] you see earth's roots below,",
+      "full_sentence": "In the quiet darkness of a night lit with stars you see earth's roots below, you hold the bounds of the whole world; the beginning and the end to come are yours."
+    },
+    "orphic-38-s4-134": {
+      "context": "as you march briskly, reaches [the clouds] ; every flower is in",
+      "full_sentence": "All wild beasts cringe at your onrush, the din and the shouts rise heavenward, the dust from your feet, as you march briskly, reaches the clouds; every flower is in bloom."
+    },
+    "orphic-64-s1-18": {
+      "context": "Journeying on the [heavens] , he brings the laws",
+      "full_sentence": "Journeying on the heavens, he brings the laws from above, with a roar he drives out malicious envy."
+    },
+    "orphic-66-s0-255": {
+      "context": "most sublime, all-eating, all-taming, all-haunting— [ether] , sun, stars, moon, pure",
+      "full_sentence": "Hephaistos, powerful and strong-spirited, unwearying fire, shining in the gleam of flames, a god bringing light to mortals, mighty-handed, eternal artisan, worker, part of the cosmos, blameless element, most sublime, all-eating, all-taming, all-haunting— ether, sun, stars, moon, pure light: all these parts of Hephaistos are revealed to mortals."
+    },
+    "orphic-66-s0-267": {
+      "context": "all-eating, all-taming, all-haunting— ether, sun, [stars] , moon, pure light: all",
+      "full_sentence": "Hephaistos, powerful and strong-spirited, unwearying fire, shining in the gleam of flames, a god bringing light to mortals, mighty-handed, eternal artisan, worker, part of the cosmos, blameless element, most sublime, all-eating, all-taming, all-haunting— ether, sun, stars, moon, pure light: all these parts of Hephaistos are revealed to mortals."
+    },
+    "orphic-66-s0-274": {
+      "context": "all-taming, all-haunting— ether, sun, stars, [moon] , pure light: all these",
+      "full_sentence": "Hephaistos, powerful and strong-spirited, unwearying fire, shining in the gleam of flames, a god bringing light to mortals, mighty-handed, eternal artisan, worker, part of the cosmos, blameless element, most sublime, all-eating, all-taming, all-haunting— ether, sun, stars, moon, pure light: all these parts of Hephaistos are revealed to mortals."
+    },
+    "orphic-66-s0-262": {
+      "context": "sublime, all-eating, all-taming, all-haunting— ether, [sun] , stars, moon, pure light:",
+      "full_sentence": "Hephaistos, powerful and strong-spirited, unwearying fire, shining in the gleam of flames, a god bringing light to mortals, mighty-handed, eternal artisan, worker, part of the cosmos, blameless element, most sublime, all-eating, all-taming, all-haunting— ether, sun, stars, moon, pure light: all these parts of Hephaistos are revealed to mortals."
+    },
+    "orphic-69-s4-4": {
+      "context": "The [speedy flames of the sun] and the moon's glow cannot",
+      "full_sentence": "The speedy flames of the sun and the moon's glow cannot arouse life's delights without your aid, neither can the excellence of wisdom, as well as the virtue and the joy in bold enterprise and in the sleekness of fair youth."
+    },
+    "orphic-69-s4-33": {
+      "context": "flames of the sun and [the moon's glow] cannot arouse life's delights without",
+      "full_sentence": "The speedy flames of the sun and the moon's glow cannot arouse life's delights without your aid, neither can the excellence of wisdom, as well as the virtue and the joy in bold enterprise and in the sleekness of fair youth."
+    },
+    "orphic-80-s1-155": {
+      "context": "everywhere, brighten Ether's face as [the sun's rays] shine upon the earth.",
+      "full_sentence": "Dissolve the rebellious alliance of clouds and moist air, turn the water to rushing drops of rain, bring fair weather everywhere, brighten Ether's face as the sun's rays shine upon the earth."
+    }
+  }
+}
