@@ -1,0 +1,2489 @@
+{
+  "spans": {
+    "homeric-0-s0-147": {
+      "text": "pregnant Semele",
+      "category": "mortal",
+      "hymn_id": "homeric-0",
+      "sentence_index": 0,
+      "confidence": "high",
+      "start_char": 147,
+      "end_char": 162
+    },
+    "homeric-0-s5-52": {
+      "text": "we singers",
+      "category": "mortal",
+      "hymn_id": "homeric-0",
+      "sentence_index": 5,
+      "confidence": "high",
+      "start_char": 52,
+      "end_char": 62
+    },
+    "homeric-0-s6-53": {
+      "text": "Semele",
+      "category": "mortal",
+      "hymn_id": "homeric-0",
+      "sentence_index": 6,
+      "confidence": "very_high",
+      "start_char": 53,
+      "end_char": 59
+    },
+    "homeric-1-s1-91": {
+      "text": "deep-bosomed daughters of Oceanus",
+      "category": "mortal",
+      "hymn_id": "homeric-1",
+      "sentence_index": 1,
+      "confidence": "high",
+      "start_char": 91,
+      "end_char": 124
+    },
+    "homeric-1-s2-52": {
+      "text": "mortal men",
+      "category": "mortal",
+      "hymn_id": "homeric-1",
+      "sentence_index": 2,
+      "confidence": "very_high",
+      "start_char": 52,
+      "end_char": 62
+    },
+    "homeric-1-s6-47": {
+      "text": "mortal men",
+      "category": "mortal",
+      "hymn_id": "homeric-1",
+      "sentence_index": 6,
+      "confidence": "very_high",
+      "start_char": 47,
+      "end_char": 57
+    },
+    "homeric-1-s7-113": {
+      "text": "mortal men",
+      "category": "mortal",
+      "hymn_id": "homeric-1",
+      "sentence_index": 7,
+      "confidence": "very_high",
+      "start_char": 113,
+      "end_char": 123
+    },
+    "homeric-1-s9-364": {
+      "text": "her queenly mother",
+      "category": "mortal",
+      "hymn_id": "homeric-1",
+      "sentence_index": 9,
+      "confidence": "high",
+      "start_char": 364,
+      "end_char": 382
+    },
+    "homeric-1-s9-163": {
+      "text": "her dear mother",
+      "category": "mortal",
+      "hymn_id": "homeric-1",
+      "sentence_index": 9,
+      "confidence": "high",
+      "start_char": 163,
+      "end_char": 178
+    },
+    "homeric-1-s9-15": {
+      "text": "she",
+      "category": "mortal",
+      "hymn_id": "homeric-1",
+      "sentence_index": 9,
+      "confidence": "high",
+      "start_char": 15,
+      "end_char": 18
+    },
+    "homeric-1-s13-211": {
+      "text": "what mortal man",
+      "category": "mortal",
+      "hymn_id": "homeric-1",
+      "sentence_index": 13,
+      "confidence": "high",
+      "start_char": 211,
+      "end_char": 226
+    },
+    "homeric-1-s15-561": {
+      "text": "my dear child",
+      "category": "mortal",
+      "hymn_id": "homeric-1",
+      "sentence_index": 15,
+      "confidence": "high",
+      "start_char": 561,
+      "end_char": 574
+    },
+    "homeric-1-s15-314": {
+      "text": "my daughter",
+      "category": "mortal",
+      "hymn_id": "homeric-1",
+      "sentence_index": 15,
+      "confidence": "high",
+      "start_char": 314,
+      "end_char": 325
+    },
+    "homeric-1-s18-4": {
+      "text": "no one of men or deep-bosomed women",
+      "category": "mortal",
+      "hymn_id": "homeric-1",
+      "sentence_index": 18,
+      "confidence": "very_high",
+      "start_char": 4,
+      "end_char": 39
+    },
+    "homeric-1-s19-81": {
+      "text": "the women of the place",
+      "category": "mortal",
+      "hymn_id": "homeric-1",
+      "sentence_index": 19,
+      "confidence": "high",
+      "start_char": 81,
+      "end_char": 103
+    },
+    "homeric-1-s20-115": {
+      "text": "the nurses of kings' children",
+      "category": "mortal",
+      "hymn_id": "homeric-1",
+      "sentence_index": 20,
+      "confidence": "high",
+      "start_char": 115,
+      "end_char": 144
+    },
+    "homeric-1-s20-171": {
+      "text": "the house-keepers",
+      "category": "mortal",
+      "hymn_id": "homeric-1",
+      "sentence_index": 20,
+      "confidence": "high",
+      "start_char": 171,
+      "end_char": 188
+    },
+    "homeric-1-s20-17": {
+      "text": "an ancient woman",
+      "category": "mortal",
+      "hymn_id": "homeric-1",
+      "sentence_index": 20,
+      "confidence": "high",
+      "start_char": 17,
+      "end_char": 33
+    },
+    "homeric-1-s21-6": {
+      "text": "the daughters of Celeus",
+      "category": "mortal",
+      "hymn_id": "homeric-1",
+      "sentence_index": 21,
+      "confidence": "very_high",
+      "start_char": 6,
+      "end_char": 29
+    },
+    "homeric-1-s21-258": {
+      "text": "lovely Demo",
+      "category": "mortal",
+      "hymn_id": "homeric-1",
+      "sentence_index": 21,
+      "confidence": "very_high",
+      "start_char": 258,
+      "end_char": 269
+    },
+    "homeric-1-s21-243": {
+      "text": "Cleisidice",
+      "category": "mortal",
+      "hymn_id": "homeric-1",
+      "sentence_index": 21,
+      "confidence": "very_high",
+      "start_char": 243,
+      "end_char": 253
+    },
+    "homeric-1-s21-229": {
+      "text": "Callidice",
+      "category": "mortal",
+      "hymn_id": "homeric-1",
+      "sentence_index": 21,
+      "confidence": "very_high",
+      "start_char": 229,
+      "end_char": 238
+    },
+    "homeric-1-s21-274": {
+      "text": "Callithoë",
+      "category": "mortal",
+      "hymn_id": "homeric-1",
+      "sentence_index": 21,
+      "confidence": "very_high",
+      "start_char": 274,
+      "end_char": 283
+    },
+    "homeric-1-s22-277": {
+      "text": "women of just such age as you",
+      "category": "mortal",
+      "hymn_id": "homeric-1",
+      "sentence_index": 22,
+      "confidence": "medium",
+      "start_char": 277,
+      "end_char": 306
+    },
+    "homeric-1-s22-312": {
+      "text": "others younger",
+      "category": "mortal",
+      "hymn_id": "homeric-1",
+      "sentence_index": 22,
+      "confidence": "medium",
+      "start_char": 312,
+      "end_char": 326
+    },
+    "homeric-1-s22-61": {
+      "text": "mortals",
+      "category": "mortal",
+      "hymn_id": "homeric-1",
+      "sentence_index": 22,
+      "confidence": "very_high",
+      "start_char": 61,
+      "end_char": 68
+    },
+    "homeric-1-s23-911": {
+      "text": "those who dwell on Olympus",
+      "category": "mortal",
+      "hymn_id": "homeric-1",
+      "sentence_index": 23,
+      "confidence": "high",
+      "start_char": 911,
+      "end_char": 937
+    },
+    "homeric-1-s23-226": {
+      "text": "my stately mother",
+      "category": "mortal",
+      "hymn_id": "homeric-1",
+      "sentence_index": 23,
+      "confidence": "high",
+      "start_char": 226,
+      "end_char": 243
+    },
+    "homeric-1-s23-699": {
+      "text": "my masters",
+      "category": "mortal",
+      "hymn_id": "homeric-1",
+      "sentence_index": 23,
+      "confidence": "high",
+      "start_char": 699,
+      "end_char": 709
+    },
+    "homeric-1-s23-372": {
+      "text": "pirates",
+      "category": "mortal",
+      "hymn_id": "homeric-1",
+      "sentence_index": 23,
+      "confidence": "high",
+      "start_char": 372,
+      "end_char": 379
+    },
+    "homeric-1-s23-1021": {
+      "text": "maidens",
+      "category": "mortal",
+      "hymn_id": "homeric-1",
+      "sentence_index": 23,
+      "confidence": "high",
+      "start_char": 1021,
+      "end_char": 1028
+    },
+    "homeric-1-s23-205": {
+      "text": "Doso",
+      "category": "mortal",
+      "hymn_id": "homeric-1",
+      "sentence_index": 23,
+      "confidence": "very_high",
+      "start_char": 205,
+      "end_char": 209
+    },
+    "homeric-2-s6-103": {
+      "text": "heifers",
+      "category": "mortal",
+      "hymn_id": "homeric-2",
+      "sentence_index": 6,
+      "confidence": "medium",
+      "start_char": 103,
+      "end_char": 110
+    },
+    "homeric-2-s11-413": {
+      "text": "men",
+      "category": "mortal",
+      "hymn_id": "homeric-2",
+      "sentence_index": 11,
+      "confidence": "medium",
+      "start_char": 413,
+      "end_char": 416
+    },
+    "homeric-2-s11-1172": {
+      "text": "men",
+      "category": "mortal",
+      "hymn_id": "homeric-2",
+      "sentence_index": 11,
+      "confidence": "medium",
+      "start_char": 1172,
+      "end_char": 1175
+    },
+    "homeric-3-s1-94": {
+      "text": "mortal men",
+      "category": "mortal",
+      "hymn_id": "homeric-3",
+      "sentence_index": 1,
+      "confidence": "high",
+      "start_char": 94,
+      "end_char": 104
+    },
+    "homeric-3-s12-33": {
+      "text": "the heart of a man",
+      "category": "mortal",
+      "hymn_id": "homeric-3",
+      "sentence_index": 12,
+      "confidence": "high",
+      "start_char": 33,
+      "end_char": 51
+    },
+    "homeric-3-s16-114": {
+      "text": "youths",
+      "category": "mortal",
+      "hymn_id": "homeric-3",
+      "sentence_index": 16,
+      "confidence": "medium",
+      "start_char": 114,
+      "end_char": 120
+    },
+    "homeric-3-s26-4": {
+      "text": "an old man",
+      "category": "mortal",
+      "hymn_id": "homeric-3",
+      "sentence_index": 26,
+      "confidence": "very_high",
+      "start_char": 4,
+      "end_char": 14
+    },
+    "homeric-3-s27-43": {
+      "text": "Old man",
+      "category": "mortal",
+      "hymn_id": "homeric-3",
+      "sentence_index": 27,
+      "confidence": "high",
+      "start_char": 43,
+      "end_char": 50
+    },
+    "homeric-3-s44-148": {
+      "text": "mortal men",
+      "category": "mortal",
+      "hymn_id": "homeric-3",
+      "sentence_index": 44,
+      "confidence": "high",
+      "start_char": 148,
+      "end_char": 158
+    },
+    "homeric-3-s44-83": {
+      "text": "no one",
+      "category": "mortal",
+      "hymn_id": "homeric-3",
+      "sentence_index": 44,
+      "confidence": "high",
+      "start_char": 83,
+      "end_char": 89
+    },
+    "homeric-4-s0-108": {
+      "text": "the tribes of mortal men",
+      "category": "mortal",
+      "hymn_id": "homeric-4",
+      "sentence_index": 0,
+      "confidence": "high",
+      "start_char": 108,
+      "end_char": 132
+    },
+    "homeric-4-s3-17": {
+      "text": "earthly craftsmen",
+      "category": "mortal",
+      "hymn_id": "homeric-4",
+      "sentence_index": 3,
+      "confidence": "high",
+      "start_char": 17,
+      "end_char": 34
+    },
+    "homeric-4-s3-121": {
+      "text": "tender maidens",
+      "category": "mortal",
+      "hymn_id": "homeric-4",
+      "sentence_index": 3,
+      "confidence": "high",
+      "start_char": 121,
+      "end_char": 135
+    },
+    "homeric-4-s9-71": {
+      "text": "mortal men",
+      "category": "mortal",
+      "hymn_id": "homeric-4",
+      "sentence_index": 9,
+      "confidence": "very_high",
+      "start_char": 71,
+      "end_char": 81
+    },
+    "homeric-4-s11-67": {
+      "text": "mortal men",
+      "category": "mortal",
+      "hymn_id": "homeric-4",
+      "sentence_index": 11,
+      "confidence": "very_high",
+      "start_char": 67,
+      "end_char": 77
+    },
+    "homeric-4-s12-369": {
+      "text": "her mother Rhea",
+      "category": "mortal",
+      "hymn_id": "homeric-4",
+      "sentence_index": 12,
+      "confidence": "high",
+      "start_char": 369,
+      "end_char": 384
+    },
+    "homeric-4-s12-212": {
+      "text": "mortal women",
+      "category": "mortal",
+      "hymn_id": "homeric-4",
+      "sentence_index": 12,
+      "confidence": "high",
+      "start_char": 212,
+      "end_char": 224
+    },
+    "homeric-4-s13-308": {
+      "text": "mortal women",
+      "category": "mortal",
+      "hymn_id": "homeric-4",
+      "sentence_index": 13,
+      "confidence": "high",
+      "start_char": 308,
+      "end_char": 320
+    },
+    "homeric-4-s13-78": {
+      "text": "mortal man",
+      "category": "mortal",
+      "hymn_id": "homeric-4",
+      "sentence_index": 13,
+      "confidence": "high",
+      "start_char": 78,
+      "end_char": 88
+    },
+    "homeric-4-s13-400": {
+      "text": "mortal men",
+      "category": "mortal",
+      "hymn_id": "homeric-4",
+      "sentence_index": 13,
+      "confidence": "high",
+      "start_char": 400,
+      "end_char": 410
+    },
+    "homeric-4-s14-44": {
+      "text": "Anchises",
+      "category": "mortal",
+      "hymn_id": "homeric-4",
+      "sentence_index": 14,
+      "confidence": "very_high",
+      "start_char": 44,
+      "end_char": 52
+    },
+    "homeric-4-s22-4": {
+      "text": "the others",
+      "category": "mortal",
+      "hymn_id": "homeric-4",
+      "sentence_index": 22,
+      "confidence": "high",
+      "start_char": 4,
+      "end_char": 14
+    },
+    "homeric-4-s22-70": {
+      "text": "he",
+      "category": "mortal",
+      "hymn_id": "homeric-4",
+      "sentence_index": 22,
+      "confidence": "high",
+      "start_char": 70,
+      "end_char": 72
+    },
+    "homeric-4-s24-9": {
+      "text": "Anchises",
+      "category": "mortal",
+      "hymn_id": "homeric-4",
+      "sentence_index": 24,
+      "confidence": "very_high",
+      "start_char": 9,
+      "end_char": 17
+    },
+    "homeric-4-s25-4": {
+      "text": "she",
+      "category": "mortal",
+      "hymn_id": "homeric-4",
+      "sentence_index": 25,
+      "confidence": "high",
+      "start_char": 4,
+      "end_char": 7
+    },
+    "homeric-4-s27-649": {
+      "text": "a man very eminent among the Trojans",
+      "category": "mortal",
+      "hymn_id": "homeric-4",
+      "sentence_index": 27,
+      "confidence": "medium",
+      "start_char": 649,
+      "end_char": 685
+    },
+    "homeric-4-s27-855": {
+      "text": "a man prosperous among the people",
+      "category": "mortal",
+      "hymn_id": "homeric-4",
+      "sentence_index": 27,
+      "confidence": "medium",
+      "start_char": 855,
+      "end_char": 888
+    },
+    "homeric-4-s27-745": {
+      "text": "my own self",
+      "category": "mortal",
+      "hymn_id": "homeric-4",
+      "sentence_index": 27,
+      "confidence": "medium",
+      "start_char": 745,
+      "end_char": 756
+    },
+    "homeric-4-s27-4": {
+      "text": "Anchises",
+      "category": "mortal",
+      "hymn_id": "homeric-4",
+      "sentence_index": 27,
+      "confidence": "very_high",
+      "start_char": 4,
+      "end_char": 12
+    },
+    "homeric-4-s28-409": {
+      "text": "Trojan nurse",
+      "category": "mortal",
+      "hymn_id": "homeric-4",
+      "sentence_index": 28,
+      "confidence": "medium",
+      "start_char": 409,
+      "end_char": 421
+    },
+    "homeric-4-s28-56": {
+      "text": "Anchises",
+      "category": "mortal",
+      "hymn_id": "homeric-4",
+      "sentence_index": 28,
+      "confidence": "very_high",
+      "start_char": 56,
+      "end_char": 64
+    },
+    "homeric-4-s28-241": {
+      "text": "Otreus",
+      "category": "mortal",
+      "hymn_id": "homeric-4",
+      "sentence_index": 28,
+      "confidence": "high",
+      "start_char": 241,
+      "end_char": 247
+    },
+    "homeric-6-s1-52": {
+      "text": "Tyrsenian pirates",
+      "category": "mortal",
+      "hymn_id": "homeric-6",
+      "sentence_index": 1,
+      "confidence": "very_high",
+      "start_char": 52,
+      "end_char": 69
+    },
+    "homeric-6-s4-5": {
+      "text": "the helmsman",
+      "category": "mortal",
+      "hymn_id": "homeric-6",
+      "sentence_index": 4,
+      "confidence": "very_high",
+      "start_char": 5,
+      "end_char": 17
+    },
+    "homeric-6-s4-295": {
+      "text": "mortal men",
+      "category": "mortal",
+      "hymn_id": "homeric-6",
+      "sentence_index": 4,
+      "confidence": "high",
+      "start_char": 295,
+      "end_char": 305
+    },
+    "homeric-6-s5-4": {
+      "text": "the master",
+      "category": "mortal",
+      "hymn_id": "homeric-6",
+      "sentence_index": 5,
+      "confidence": "high",
+      "start_char": 4,
+      "end_char": 14
+    },
+    "homeric-6-s6-98": {
+      "text": "the crew",
+      "category": "mortal",
+      "hymn_id": "homeric-6",
+      "sentence_index": 6,
+      "confidence": "high",
+      "start_char": 98,
+      "end_char": 106
+    },
+    "homeric-6-s8-114": {
+      "text": "all the seamen",
+      "category": "mortal",
+      "hymn_id": "homeric-6",
+      "sentence_index": 8,
+      "confidence": "high",
+      "start_char": 114,
+      "end_char": 128
+    },
+    "homeric-6-s10-54": {
+      "text": "the helmsman",
+      "category": "mortal",
+      "hymn_id": "homeric-6",
+      "sentence_index": 10,
+      "confidence": "very_high",
+      "start_char": 54,
+      "end_char": 66
+    },
+    "homeric-6-s10-5": {
+      "text": "the pirates",
+      "category": "mortal",
+      "hymn_id": "homeric-6",
+      "sentence_index": 10,
+      "confidence": "very_high",
+      "start_char": 5,
+      "end_char": 16
+    },
+    "homeric-6-s12-65": {
+      "text": "the right-minded helmsman",
+      "category": "mortal",
+      "hymn_id": "homeric-6",
+      "sentence_index": 12,
+      "confidence": "high",
+      "start_char": 65,
+      "end_char": 90
+    },
+    "homeric-6-s12-7": {
+      "text": "the sailors",
+      "category": "mortal",
+      "hymn_id": "homeric-6",
+      "sentence_index": 12,
+      "confidence": "very_high",
+      "start_char": 7,
+      "end_char": 18
+    },
+    "homeric-6-s12-164": {
+      "text": "the sailors",
+      "category": "mortal",
+      "hymn_id": "homeric-6",
+      "sentence_index": 12,
+      "confidence": "very_high",
+      "start_char": 164,
+      "end_char": 175
+    },
+    "homeric-6-s12-128": {
+      "text": "the master",
+      "category": "mortal",
+      "hymn_id": "homeric-6",
+      "sentence_index": 12,
+      "confidence": "high",
+      "start_char": 128,
+      "end_char": 138
+    },
+    "homeric-6-s13-195": {
+      "text": "Cadmus' daughter Semele",
+      "category": "mortal",
+      "hymn_id": "homeric-6",
+      "sentence_index": 13,
+      "confidence": "high",
+      "start_char": 195,
+      "end_char": 218
+    },
+    "homeric-6-s13-7": {
+      "text": "the helmsman",
+      "category": "mortal",
+      "hymn_id": "homeric-6",
+      "sentence_index": 13,
+      "confidence": "high",
+      "start_char": 7,
+      "end_char": 19
+    },
+    "homeric-6-s14-15": {
+      "text": "fair-faced Semele",
+      "category": "mortal",
+      "hymn_id": "homeric-6",
+      "sentence_index": 14,
+      "confidence": "very_high",
+      "start_char": 15,
+      "end_char": 32
+    },
+    "homeric-14-s1-0": {
+      "text": "Alcmena",
+      "category": "mortal",
+      "hymn_id": "homeric-14",
+      "sentence_index": 1,
+      "confidence": "very_high",
+      "start_char": 0,
+      "end_char": 7
+    },
+    "homeric-14-s2-80": {
+      "text": "King Eurystheus",
+      "category": "mortal",
+      "hymn_id": "homeric-14",
+      "sentence_index": 2,
+      "confidence": "very_high",
+      "start_char": 80,
+      "end_char": 95
+    },
+    "homeric-14-s2-5": {
+      "text": "he",
+      "category": "mortal",
+      "hymn_id": "homeric-14",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 5,
+      "end_char": 7
+    },
+    "homeric-14-s2-162": {
+      "text": "he",
+      "category": "mortal",
+      "hymn_id": "homeric-14",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 162,
+      "end_char": 164
+    },
+    "homeric-15-s1-20": {
+      "text": "fair Coronis",
+      "category": "mortal",
+      "hymn_id": "homeric-15",
+      "sentence_index": 1,
+      "confidence": "very_high",
+      "start_char": 20,
+      "end_char": 32
+    },
+    "homeric-16-s1-32": {
+      "text": "stately Leda",
+      "category": "mortal",
+      "hymn_id": "homeric-16",
+      "sentence_index": 1,
+      "confidence": "very_high",
+      "start_char": 32,
+      "end_char": 44
+    },
+    "homeric-16-s2-6": {
+      "text": "children of Tyndareus",
+      "category": "mortal",
+      "hymn_id": "homeric-16",
+      "sentence_index": 2,
+      "confidence": "very_high",
+      "start_char": 6,
+      "end_char": 27
+    },
+    "homeric-17-s1-21": {
+      "text": "the daughter of Atlas",
+      "category": "mortal",
+      "hymn_id": "homeric-17",
+      "sentence_index": 1,
+      "confidence": "high",
+      "start_char": 21,
+      "end_char": 42
+    },
+    "homeric-17-s2-126": {
+      "text": "rich-tressed nymph",
+      "category": "mortal",
+      "hymn_id": "homeric-17",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 126,
+      "end_char": 144
+    },
+    "homeric-18-s8-162": {
+      "text": "rich-tressed daughter of Dryops",
+      "category": "mortal",
+      "hymn_id": "homeric-18",
+      "sentence_index": 8,
+      "confidence": "high",
+      "start_char": 162,
+      "end_char": 193
+    },
+    "homeric-18-s8-81": {
+      "text": "mortal man",
+      "category": "mortal",
+      "hymn_id": "homeric-18",
+      "sentence_index": 8,
+      "confidence": "high",
+      "start_char": 81,
+      "end_char": 91
+    },
+    "homeric-18-s9-124": {
+      "text": "a noisy, merry-laughing child",
+      "category": "mortal",
+      "hymn_id": "homeric-18",
+      "sentence_index": 9,
+      "confidence": "high",
+      "start_char": 124,
+      "end_char": 153
+    },
+    "homeric-18-s9-33": {
+      "text": "a dear son",
+      "category": "mortal",
+      "hymn_id": "homeric-18",
+      "sentence_index": 9,
+      "confidence": "high",
+      "start_char": 33,
+      "end_char": 43
+    },
+    "homeric-18-s10-9": {
+      "text": "the nurse",
+      "category": "mortal",
+      "hymn_id": "homeric-18",
+      "sentence_index": 10,
+      "confidence": "very_high",
+      "start_char": 9,
+      "end_char": 18
+    },
+    "homeric-19-s1-77": {
+      "text": "men",
+      "category": "mortal",
+      "hymn_id": "homeric-19",
+      "sentence_index": 1,
+      "confidence": "high",
+      "start_char": 77,
+      "end_char": 80
+    },
+    "homeric-20-s0-150": {
+      "text": "the sweet-tongued minstrel",
+      "category": "mortal",
+      "hymn_id": "homeric-20",
+      "sentence_index": 0,
+      "confidence": "high",
+      "start_char": 150,
+      "end_char": 176
+    },
+    "homeric-24-s1-108": {
+      "text": "kings",
+      "category": "mortal",
+      "hymn_id": "homeric-24",
+      "sentence_index": 1,
+      "confidence": "high",
+      "start_char": 108,
+      "end_char": 113
+    },
+    "homeric-24-s2-9": {
+      "text": "he whom the Muses love",
+      "category": "mortal",
+      "hymn_id": "homeric-24",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 9,
+      "end_char": 31
+    },
+    "homeric-26-s5-13": {
+      "text": "children of Zeus",
+      "category": "mortal",
+      "hymn_id": "homeric-26",
+      "sentence_index": 5,
+      "confidence": "very_high",
+      "start_char": 13,
+      "end_char": 29
+    },
+    "homeric-26-s5-34": {
+      "text": "rich-haired Leto",
+      "category": "mortal",
+      "hymn_id": "homeric-26",
+      "sentence_index": 5,
+      "confidence": "very_high",
+      "start_char": 34,
+      "end_char": 50
+    },
+    "homeric-28-s0-62": {
+      "text": "men who walk on earth",
+      "category": "mortal",
+      "hymn_id": "homeric-28",
+      "sentence_index": 0,
+      "confidence": "high",
+      "start_char": 62,
+      "end_char": 83
+    },
+    "homeric-28-s1-16": {
+      "text": "mortals",
+      "category": "mortal",
+      "hymn_id": "homeric-28",
+      "sentence_index": 1,
+      "confidence": "very_high",
+      "start_char": 16,
+      "end_char": 23
+    },
+    "homeric-29-s2-41": {
+      "text": "their children",
+      "category": "mortal",
+      "hymn_id": "homeric-29",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 41,
+      "end_char": 55
+    },
+    "homeric-29-s2-134": {
+      "text": "mortal men",
+      "category": "mortal",
+      "hymn_id": "homeric-29",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 134,
+      "end_char": 144
+    },
+    "homeric-29-s2-22": {
+      "text": "men",
+      "category": "mortal",
+      "hymn_id": "homeric-29",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 22,
+      "end_char": 25
+    },
+    "homeric-29-s3-9": {
+      "text": "the man",
+      "category": "mortal",
+      "hymn_id": "homeric-29",
+      "sentence_index": 3,
+      "confidence": "high",
+      "start_char": 9,
+      "end_char": 16
+    },
+    "homeric-29-s5-142": {
+      "text": "daughters",
+      "category": "mortal",
+      "hymn_id": "homeric-29",
+      "sentence_index": 5,
+      "confidence": "high",
+      "start_char": 142,
+      "end_char": 151
+    },
+    "homeric-29-s5-0": {
+      "text": "Such men",
+      "category": "mortal",
+      "hymn_id": "homeric-29",
+      "sentence_index": 5,
+      "confidence": "high",
+      "start_char": 0,
+      "end_char": 8
+    },
+    "homeric-29-s5-96": {
+      "text": "sons",
+      "category": "mortal",
+      "hymn_id": "homeric-29",
+      "sentence_index": 5,
+      "confidence": "high",
+      "start_char": 96,
+      "end_char": 100
+    },
+    "homeric-30-s7-53": {
+      "text": "the race of mortal men half-divine",
+      "category": "mortal",
+      "hymn_id": "homeric-30",
+      "sentence_index": 7,
+      "confidence": "very_high",
+      "start_char": 53,
+      "end_char": 87
+    },
+    "homeric-30-s7-13": {
+      "text": "I",
+      "category": "mortal",
+      "hymn_id": "homeric-30",
+      "sentence_index": 7,
+      "confidence": "high",
+      "start_char": 13,
+      "end_char": 14
+    },
+    "homeric-30-s7-36": {
+      "text": "I",
+      "category": "mortal",
+      "hymn_id": "homeric-30",
+      "sentence_index": 7,
+      "confidence": "high",
+      "start_char": 36,
+      "end_char": 37
+    },
+    "homeric-31-s0-10": {
+      "text": "sweet voiced Muses",
+      "category": "mortal",
+      "hymn_id": "homeric-31",
+      "sentence_index": 0,
+      "confidence": "very_high",
+      "start_char": 10,
+      "end_char": 28
+    },
+    "homeric-31-s3-37": {
+      "text": "mortal men",
+      "category": "mortal",
+      "hymn_id": "homeric-31",
+      "sentence_index": 3,
+      "confidence": "high",
+      "start_char": 37,
+      "end_char": 47
+    },
+    "homeric-31-s6-89": {
+      "text": "the servants of the Muses",
+      "category": "mortal",
+      "hymn_id": "homeric-31",
+      "sentence_index": 6,
+      "confidence": "high",
+      "start_char": 89,
+      "end_char": 114
+    },
+    "homeric-31-s6-78": {
+      "text": "minstrels",
+      "category": "mortal",
+      "hymn_id": "homeric-31",
+      "sentence_index": 6,
+      "confidence": "high",
+      "start_char": 78,
+      "end_char": 87
+    },
+    "homeric-32-s0-82": {
+      "text": "neat-ankled Leda",
+      "category": "mortal",
+      "hymn_id": "homeric-32",
+      "sentence_index": 0,
+      "confidence": "very_high",
+      "start_char": 82,
+      "end_char": 98
+    },
+    "homeric-32-s1-5": {
+      "text": "Leda",
+      "category": "mortal",
+      "hymn_id": "homeric-32",
+      "sentence_index": 1,
+      "confidence": "very_high",
+      "start_char": 5,
+      "end_char": 9
+    },
+    "homeric-32-s2-5": {
+      "text": "the shipmen",
+      "category": "mortal",
+      "hymn_id": "homeric-32",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 5,
+      "end_char": 16
+    },
+    "homeric-32-s4-9": {
+      "text": "the shipmen",
+      "category": "mortal",
+      "hymn_id": "homeric-32",
+      "sentence_index": 4,
+      "confidence": "high",
+      "start_char": 9,
+      "end_char": 20
+    },
+    "orphic-2-s4-15": {
+      "text": "pregnant women",
+      "category": "mortal",
+      "hymn_id": "orphic-2",
+      "sentence_index": 4,
+      "confidence": "very_high",
+      "start_char": 15,
+      "end_char": 29
+    },
+    "orphic-6-s4-79": {
+      "text": "celebrants",
+      "category": "mortal",
+      "hymn_id": "orphic-6",
+      "sentence_index": 4,
+      "confidence": "high",
+      "start_char": 79,
+      "end_char": 89
+    },
+    "orphic-8-s6-43": {
+      "text": "the initiates",
+      "category": "mortal",
+      "hymn_id": "orphic-8",
+      "sentence_index": 6,
+      "confidence": "high",
+      "start_char": 43,
+      "end_char": 56
+    },
+    "orphic-12-s1-63": {
+      "text": "youths",
+      "category": "mortal",
+      "hymn_id": "orphic-12",
+      "sentence_index": 1,
+      "confidence": "high",
+      "start_char": 63,
+      "end_char": 69
+    },
+    "orphic-18-s2-3": {
+      "text": "mankind",
+      "category": "mortal",
+      "hymn_id": "orphic-18",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 3,
+      "end_char": 10
+    },
+    "orphic-18-s4-102": {
+      "text": "pure Demeter's daughter",
+      "category": "mortal",
+      "hymn_id": "orphic-18",
+      "sentence_index": 4,
+      "confidence": "very_high",
+      "start_char": 102,
+      "end_char": 125
+    },
+    "orphic-23-s2-52": {
+      "text": "initiates",
+      "category": "mortal",
+      "hymn_id": "orphic-23",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 52,
+      "end_char": 61
+    },
+    "orphic-27-s2-206": {
+      "text": "mortals",
+      "category": "mortal",
+      "hymn_id": "orphic-27",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 206,
+      "end_char": 213
+    },
+    "orphic-27-s3-26": {
+      "text": "men",
+      "category": "mortal",
+      "hymn_id": "orphic-27",
+      "sentence_index": 3,
+      "confidence": "very_high",
+      "start_char": 26,
+      "end_char": 29
+    },
+    "orphic-31-s0-49": {
+      "text": "howling mountain men",
+      "category": "mortal",
+      "hymn_id": "orphic-31",
+      "sentence_index": 0,
+      "confidence": "high",
+      "start_char": 49,
+      "end_char": 69
+    },
+    "orphic-31-s0-205": {
+      "text": "priests",
+      "category": "mortal",
+      "hymn_id": "orphic-31",
+      "sentence_index": 0,
+      "confidence": "high",
+      "start_char": 205,
+      "end_char": 212
+    },
+    "orphic-31-s1-13": {
+      "text": "the people",
+      "category": "mortal",
+      "hymn_id": "orphic-31",
+      "sentence_index": 1,
+      "confidence": "high",
+      "start_char": 13,
+      "end_char": 23
+    },
+    "orphic-34-s7-30": {
+      "text": "the lot of all men",
+      "category": "mortal",
+      "hymn_id": "orphic-34",
+      "sentence_index": 7,
+      "confidence": "high",
+      "start_char": 30,
+      "end_char": 48
+    },
+    "orphic-34-s8-12": {
+      "text": "mortals",
+      "category": "mortal",
+      "hymn_id": "orphic-34",
+      "sentence_index": 8,
+      "confidence": "high",
+      "start_char": 12,
+      "end_char": 19
+    },
+    "orphic-34-s9-43": {
+      "text": "the initiates",
+      "category": "mortal",
+      "hymn_id": "orphic-34",
+      "sentence_index": 9,
+      "confidence": "high",
+      "start_char": 43,
+      "end_char": 56
+    },
+    "orphic-37-s1-87": {
+      "text": "the brood of the birds",
+      "category": "mortal",
+      "hymn_id": "orphic-37",
+      "sentence_index": 1,
+      "confidence": "high",
+      "start_char": 87,
+      "end_char": 109
+    },
+    "orphic-37-s1-44": {
+      "text": "the brood of the sea",
+      "category": "mortal",
+      "hymn_id": "orphic-37",
+      "sentence_index": 1,
+      "confidence": "high",
+      "start_char": 44,
+      "end_char": 64
+    },
+    "orphic-37-s1-23": {
+      "text": "all toiling mortals",
+      "category": "mortal",
+      "hymn_id": "orphic-37",
+      "sentence_index": 1,
+      "confidence": "very_high",
+      "start_char": 23,
+      "end_char": 42
+    },
+    "orphic-37-s2-41": {
+      "text": "some earthly forefather of mine",
+      "category": "mortal",
+      "hymn_id": "orphic-37",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 41,
+      "end_char": 72
+    },
+    "orphic-41-s0-68": {
+      "text": "mortal men",
+      "category": "mortal",
+      "hymn_id": "orphic-41",
+      "sentence_index": 0,
+      "confidence": "high",
+      "start_char": 68,
+      "end_char": 78
+    },
+    "orphic-41-s1-15": {
+      "text": "the innocent child of Dysaules",
+      "category": "mortal",
+      "hymn_id": "orphic-41",
+      "sentence_index": 1,
+      "confidence": "high",
+      "start_char": 15,
+      "end_char": 45
+    },
+    "orphic-41-s2-79": {
+      "text": "pious initiate",
+      "category": "mortal",
+      "hymn_id": "orphic-41",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 79,
+      "end_char": 93
+    },
+    "orphic-43-s3-8": {
+      "text": "the new initiates",
+      "category": "mortal",
+      "hymn_id": "orphic-43",
+      "sentence_index": 3,
+      "confidence": "high",
+      "start_char": 8,
+      "end_char": 25
+    },
+    "orphic-44-s0-12": {
+      "text": "the daughter of Kadmos",
+      "category": "mortal",
+      "hymn_id": "orphic-44",
+      "sentence_index": 0,
+      "confidence": "very_high",
+      "start_char": 12,
+      "end_char": 34
+    },
+    "orphic-44-s0-50": {
+      "text": "fair Semele",
+      "category": "mortal",
+      "hymn_id": "orphic-44",
+      "sentence_index": 0,
+      "confidence": "very_high",
+      "start_char": 50,
+      "end_char": 61
+    },
+    "orphic-44-s2-36": {
+      "text": "among mortal men",
+      "category": "mortal",
+      "hymn_id": "orphic-44",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 36,
+      "end_char": 52
+    },
+    "orphic-44-s3-4": {
+      "text": "all mortal men",
+      "category": "mortal",
+      "hymn_id": "orphic-44",
+      "sentence_index": 3,
+      "confidence": "very_high",
+      "start_char": 4,
+      "end_char": 18
+    },
+    "orphic-45-s2-81": {
+      "text": "all men",
+      "category": "mortal",
+      "hymn_id": "orphic-45",
+      "sentence_index": 2,
+      "confidence": "very_high",
+      "start_char": 81,
+      "end_char": 88
+    },
+    "orphic-50-s2-23": {
+      "text": "mortals",
+      "category": "mortal",
+      "hymn_id": "orphic-50",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 23,
+      "end_char": 30
+    },
+    "orphic-50-s2-154": {
+      "text": "mortals",
+      "category": "mortal",
+      "hymn_id": "orphic-50",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 154,
+      "end_char": 161
+    },
+    "orphic-51-s5-113": {
+      "text": "mortals",
+      "category": "mortal",
+      "hymn_id": "orphic-51",
+      "sentence_index": 5,
+      "confidence": "very_high",
+      "start_char": 113,
+      "end_char": 120
+    },
+    "orphic-55-s6-80": {
+      "text": "chaste brides",
+      "category": "mortal",
+      "hymn_id": "orphic-55",
+      "sentence_index": 6,
+      "confidence": "high",
+      "start_char": 80,
+      "end_char": 93
+    },
+    "orphic-55-s6-63": {
+      "text": "fair maidens",
+      "category": "mortal",
+      "hymn_id": "orphic-55",
+      "sentence_index": 6,
+      "confidence": "high",
+      "start_char": 63,
+      "end_char": 75
+    },
+    "orphic-56-s4-49": {
+      "text": "initiates",
+      "category": "mortal",
+      "hymn_id": "orphic-56",
+      "sentence_index": 4,
+      "confidence": "high",
+      "start_char": 49,
+      "end_char": 58
+    },
+    "orphic-57-s0-86": {
+      "text": "the souls of mortals",
+      "category": "mortal",
+      "hymn_id": "orphic-57",
+      "sentence_index": 0,
+      "confidence": "high",
+      "start_char": 86,
+      "end_char": 106
+    },
+    "orphic-57-s2-107": {
+      "text": "everlasting souls of men",
+      "category": "mortal",
+      "hymn_id": "orphic-57",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 107,
+      "end_char": 131
+    },
+    "orphic-58-s2-23": {
+      "text": "the initiates",
+      "category": "mortal",
+      "hymn_id": "orphic-58",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 23,
+      "end_char": 36
+    },
+    "orphic-59-s0-298": {
+      "text": "men",
+      "category": "mortal",
+      "hymn_id": "orphic-59",
+      "sentence_index": 0,
+      "confidence": "high",
+      "start_char": 298,
+      "end_char": 301
+    },
+    "orphic-60-s1-100": {
+      "text": "the initiates",
+      "category": "mortal",
+      "hymn_id": "orphic-60",
+      "sentence_index": 1,
+      "confidence": "high",
+      "start_char": 100,
+      "end_char": 113
+    },
+    "orphic-61-s2-81": {
+      "text": "the arrogant soul",
+      "category": "mortal",
+      "hymn_id": "orphic-61",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 81,
+      "end_char": 98
+    },
+    "orphic-61-s2-100": {
+      "text": "the reckless one",
+      "category": "mortal",
+      "hymn_id": "orphic-61",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 100,
+      "end_char": 116
+    },
+    "orphic-62-s1-22": {
+      "text": "the lives of the many human races",
+      "category": "mortal",
+      "hymn_id": "orphic-62",
+      "sentence_index": 1,
+      "confidence": "high",
+      "start_char": 22,
+      "end_char": 55
+    },
+    "orphic-62-s1-67": {
+      "text": "the unjust",
+      "category": "mortal",
+      "hymn_id": "orphic-62",
+      "sentence_index": 1,
+      "confidence": "high",
+      "start_char": 67,
+      "end_char": 77
+    },
+    "orphic-62-s2-66": {
+      "text": "men",
+      "category": "mortal",
+      "hymn_id": "orphic-62",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 66,
+      "end_char": 69
+    },
+    "orphic-63-s0-85": {
+      "text": "all men who are just",
+      "category": "mortal",
+      "hymn_id": "orphic-63",
+      "sentence_index": 0,
+      "confidence": "high",
+      "start_char": 85,
+      "end_char": 105
+    },
+    "orphic-63-s3-0": {
+      "text": "you",
+      "category": "mortal",
+      "hymn_id": "orphic-63",
+      "sentence_index": 3,
+      "confidence": "high",
+      "start_char": 0,
+      "end_char": 3
+    },
+    "orphic-63-s3-44": {
+      "text": "you",
+      "category": "mortal",
+      "hymn_id": "orphic-63",
+      "sentence_index": 3,
+      "confidence": "high",
+      "start_char": 44,
+      "end_char": 47
+    },
+    "orphic-63-s3-52": {
+      "text": "you",
+      "category": "mortal",
+      "hymn_id": "orphic-63",
+      "sentence_index": 3,
+      "confidence": "high",
+      "start_char": 52,
+      "end_char": 55
+    },
+    "orphic-63-s4-33": {
+      "text": "wicked men",
+      "category": "mortal",
+      "hymn_id": "orphic-63",
+      "sentence_index": 4,
+      "confidence": "high",
+      "start_char": 33,
+      "end_char": 43
+    },
+    "orphic-63-s4-53": {
+      "text": "mortals",
+      "category": "mortal",
+      "hymn_id": "orphic-63",
+      "sentence_index": 4,
+      "confidence": "high",
+      "start_char": 53,
+      "end_char": 60
+    },
+    "orphic-64-s3-58": {
+      "text": "all who abide by the law",
+      "category": "mortal",
+      "hymn_id": "orphic-64",
+      "sentence_index": 3,
+      "confidence": "high",
+      "start_char": 58,
+      "end_char": 82
+    },
+    "orphic-64-s3-114": {
+      "text": "the lawless",
+      "category": "mortal",
+      "hymn_id": "orphic-64",
+      "sentence_index": 3,
+      "confidence": "high",
+      "start_char": 114,
+      "end_char": 125
+    },
+    "orphic-68-s3-87": {
+      "text": "those who feast",
+      "category": "mortal",
+      "hymn_id": "orphic-68",
+      "sentence_index": 3,
+      "confidence": "high",
+      "start_char": 87,
+      "end_char": 102
+    },
+    "orphic-68-s3-115": {
+      "text": "man",
+      "category": "mortal",
+      "hymn_id": "orphic-68",
+      "sentence_index": 3,
+      "confidence": "high",
+      "start_char": 115,
+      "end_char": 118
+    },
+    "orphic-69-s5-5": {
+      "text": "the races of all men that remain countless",
+      "category": "mortal",
+      "hymn_id": "orphic-69",
+      "sentence_index": 5,
+      "confidence": "high",
+      "start_char": 5,
+      "end_char": 47
+    },
+    "orphic-70-s1-5": {
+      "text": "the lives of impious mortals",
+      "category": "mortal",
+      "hymn_id": "orphic-70",
+      "sentence_index": 1,
+      "confidence": "high",
+      "start_char": 5,
+      "end_char": 33
+    },
+    "orphic-74-s1-219": {
+      "text": "men to whom you swiftly come as welcome savior",
+      "category": "mortal",
+      "hymn_id": "orphic-74",
+      "sentence_index": 1,
+      "confidence": "high",
+      "start_char": 219,
+      "end_char": 265
+    },
+    "orphic-74-s2-114": {
+      "text": "the initiates",
+      "category": "mortal",
+      "hymn_id": "orphic-74",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 114,
+      "end_char": 127
+    },
+    "orphic-76-s2-11": {
+      "text": "the initiates",
+      "category": "mortal",
+      "hymn_id": "orphic-76",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 11,
+      "end_char": 24
+    },
+    "orphic-77-s3-23": {
+      "text": "the initiates",
+      "category": "mortal",
+      "hymn_id": "orphic-77",
+      "sentence_index": 3,
+      "confidence": "high",
+      "start_char": 23,
+      "end_char": 36
+    },
+    "orphic-78-s0-47": {
+      "text": "mortals",
+      "category": "mortal",
+      "hymn_id": "orphic-78",
+      "sentence_index": 0,
+      "confidence": "high",
+      "start_char": 47,
+      "end_char": 54
+    },
+    "orphic-78-s1-72": {
+      "text": "mortal men",
+      "category": "mortal",
+      "hymn_id": "orphic-78",
+      "sentence_index": 1,
+      "confidence": "very_high",
+      "start_char": 72,
+      "end_char": 82
+    },
+    "orphic-78-s2-0": {
+      "text": "the race of mortal men",
+      "category": "mortal",
+      "hymn_id": "orphic-78",
+      "sentence_index": 2,
+      "confidence": "very_high",
+      "start_char": 0,
+      "end_char": 22
+    },
+    "orphic-78-s4-53": {
+      "text": "the initiates",
+      "category": "mortal",
+      "hymn_id": "orphic-78",
+      "sentence_index": 4,
+      "confidence": "high",
+      "start_char": 53,
+      "end_char": 66
+    },
+    "orphic-79-s0-119": {
+      "text": "mortals",
+      "category": "mortal",
+      "hymn_id": "orphic-79",
+      "sentence_index": 0,
+      "confidence": "high",
+      "start_char": 119,
+      "end_char": 126
+    },
+    "orphic-84-s1-14": {
+      "text": "the holy initiates",
+      "category": "mortal",
+      "hymn_id": "orphic-84",
+      "sentence_index": 1,
+      "confidence": "very_high",
+      "start_char": 14,
+      "end_char": 32
+    },
+    "orphic-85-s0-56": {
+      "text": "mortal men",
+      "category": "mortal",
+      "hymn_id": "orphic-85",
+      "sentence_index": 0,
+      "confidence": "high",
+      "start_char": 56,
+      "end_char": 66
+    },
+    "orphic-85-s2-83": {
+      "text": "the initiates",
+      "category": "mortal",
+      "hymn_id": "orphic-85",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 83,
+      "end_char": 96
+    },
+    "orphic-86-s1-178": {
+      "text": "silent souls",
+      "category": "mortal",
+      "hymn_id": "orphic-86",
+      "sentence_index": 1,
+      "confidence": "high",
+      "start_char": 178,
+      "end_char": 190
+    },
+    "orphic-86-s2-29": {
+      "text": "people's minds",
+      "category": "mortal",
+      "hymn_id": "orphic-86",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 29,
+      "end_char": 43
+    },
+    "orphic-86-s3-61": {
+      "text": "the impious",
+      "category": "mortal",
+      "hymn_id": "orphic-86",
+      "sentence_index": 3,
+      "confidence": "very_high",
+      "start_char": 61,
+      "end_char": 72
+    },
+    "orphic-87-s2-67": {
+      "text": "youthful life",
+      "category": "mortal",
+      "hymn_id": "orphic-87",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 67,
+      "end_char": 80
+    }
+  },
+  "contexts": {
+    "homeric-0-s0-147": {
+      "context": "the deep-eddying river Alpheus that [pregnant Semele] bare you to Zeus the",
+      "full_sentence": "For some say, at Dracanum; and some, on windy Icarus; and some, in Naxos, O Heaven-born, Insewn; and others by the deep-eddying river Alpheus that pregnant Semele bare you to Zeus the thunder-lover."
+    },
+    "homeric-0-s5-52": {
+      "context": "Insewn, Inspirer of frenzied women! [we singers] sing of you as we",
+      "full_sentence": "Be favorable, O Insewn, Inspirer of frenzied women! we singers sing of you as we begin and as we end a strain, and none forgetting you may call holy song to mind."
+    },
+    "homeric-0-s6-53": {
+      "context": "Dionysus, Insewn, with your mother [Semele] whom men call Thyone.",
+      "full_sentence": "And so, farewell, Dionysus, Insewn, with your mother Semele whom men call Thyone."
+    },
+    "homeric-1-s1-91": {
+      "context": "she was playing with the [deep-bosomed daughters of Oceanus] and gathering flowers over a",
+      "full_sentence": "Apart from Demeter, lady of the golden sword and glorious fruits, she was playing with the deep-bosomed daughters of Oceanus and gathering flowers over a soft meadow, roses and crocuses and beautiful violets, irises also and hyacinths and the narcissus, which Earth made to grow at the will of Zeus and to please the Host of Many, to be a snare for the bloom-like girl — a marvellous, radiant flower."
+    },
+    "homeric-1-s2-52": {
+      "context": "whether for deathless gods or [mortal men] to see: from its root",
+      "full_sentence": "It was a thing of awe whether for deathless gods or mortal men to see: from its root grew a hundred blooms and it smelled most sweetly, so that all wide heaven above and the whole earth and the sea's salt swell laughed for joy."
+    },
+    "homeric-1-s6-47": {
+      "context": "the deathless gods or of [mortal men] , heard her voice, nor",
+      "full_sentence": "But no one, either of the deathless gods or of mortal men, heard her voice, nor yet the olive-trees bearing rich fruit: only tender-hearted Hecate, bright-coiffed, the daughter of Persaeus, heard the girl from her cave, and the lord Helios, Hyperion's bright son, as she cried to her father, the Son of Cronos."
+    },
+    "homeric-1-s7-113": {
+      "context": "and receiving sweet offerings from [mortal men] .",
+      "full_sentence": "But he was sitting aloof, apart from the gods, in his temple where many pray, and receiving sweet offerings from mortal men."
+    },
+    "homeric-1-s9-364": {
+      "context": "with her immortal voice: and [her queenly mother] heard her.",
+      "full_sentence": "And so long as she, the goddess, yet beheld earth and starry heaven and the strong-flowing sea where fishes shoal, and the rays of the sun, and still hoped to see her dear mother and the tribes of the eternal gods, so long hope calmed her great heart for all her trouble⋯and the heights of the mountains and the depths of the sea rang with her immortal voice: and her queenly mother heard her."
+    },
+    "homeric-1-s9-163": {
+      "context": "and still hoped to see [her dear mother] and the tribes of the",
+      "full_sentence": "And so long as she, the goddess, yet beheld earth and starry heaven and the strong-flowing sea where fishes shoal, and the rays of the sun, and still hoped to see her dear mother and the tribes of the eternal gods, so long hope calmed her great heart for all her trouble⋯and the heights of the mountains and the depths of the sea rang with her immortal voice: and her queenly mother heard her."
+    },
+    "homeric-1-s9-15": {
+      "context": "And so long as [she] , the goddess, yet beheld",
+      "full_sentence": "And so long as she, the goddess, yet beheld earth and starry heaven and the strong-flowing sea where fishes shoal, and the rays of the sun, and still hoped to see her dear mother and the tribes of the eternal gods, so long hope calmed her great heart for all her trouble⋯and the heights of the mountains and the depths of the sea rang with her immortal voice: and her queenly mother heard her."
+    },
+    "homeric-1-s13-211": {
+      "context": "what god of heaven or [what mortal man] has rapt away Persephone and",
+      "full_sentence": "But when the tenth enlightening dawn had come, Hecate, with a torch in her hands, met her, and spoke to her and told her news: 'Queenly Demeter, bringer of seasons and giver of good gifts, what god of heaven or what mortal man has rapt away Persephone and pierced with sorrow your dear heart? For I heard her voice, yet saw not with my eyes who it was. But I tell you truly and shortly all I know.' So, then, said Hecate."
+    },
+    "homeric-1-s15-561": {
+      "context": "— tell me truly of [my dear child] , if you have seen",
+      "full_sentence": "So they came to Helios, who is watchman of both gods and men, and stood in front of his horses: and the bright goddess enquired of him: 'Helios, do you at least regard me, goddess as I am, if ever by word or deed of mine I have cheered your heart and spirit. Through the fruitless air I heard the thrilling cry of my daughter whom I bare, sweet scion of my body and lovely in form, as of one seized violently; though with my eyes I saw nothing. But you — for with your beams you look down from the bright upper air over all the earth and sea — tell me truly of my dear child, if you have seen her anywhere, what god or mortal man has violently seized her against her will and mine, and so made off.' So said she."
+    },
+    "homeric-1-s15-314": {
+      "context": "heard the thrilling cry of [my daughter] whom I bare, sweet scion",
+      "full_sentence": "So they came to Helios, who is watchman of both gods and men, and stood in front of his horses: and the bright goddess enquired of him: 'Helios, do you at least regard me, goddess as I am, if ever by word or deed of mine I have cheered your heart and spirit. Through the fruitless air I heard the thrilling cry of my daughter whom I bare, sweet scion of my body and lovely in form, as of one seized violently; though with my eyes I saw nothing. But you — for with your beams you look down from the bright upper air over all the earth and sea — tell me truly of my dear child, if you have seen her anywhere, what god or mortal man has violently seized her against her will and mine, and so made off.' So said she."
+    },
+    "homeric-1-s18-4": {
+      "context": "And [no one of men or deep-bosomed women] knew her when they saw",
+      "full_sentence": "And no one of men or deep-bosomed women knew her when they saw her, until she came to the house of wise Celeus who then was lord of fragrant Eleusis."
+    },
+    "homeric-1-s19-81": {
+      "context": "the Maiden Well, from which [the women of the place] were used to draw water,",
+      "full_sentence": "Vexed in her dear heart, she sat near the wayside by the Maiden Well, from which the women of the place were used to draw water, in a shady place over which grew an olive shrub."
+    },
+    "homeric-1-s20-115": {
+      "context": "gifts of garland-loving Aphrodite, like [the nurses of kings' children] who deal justice, or like",
+      "full_sentence": "And she was like an ancient woman who is cut off from childbearing and the gifts of garland-loving Aphrodite, like the nurses of kings' children who deal justice, or like the house-keepers in their echoing halls."
+    },
+    "homeric-1-s20-171": {
+      "context": "who deal justice, or like [the house-keepers] in their echoing halls.",
+      "full_sentence": "And she was like an ancient woman who is cut off from childbearing and the gifts of garland-loving Aphrodite, like the nurses of kings' children who deal justice, or like the house-keepers in their echoing halls."
+    },
+    "homeric-1-s20-17": {
+      "context": "And she was like [an ancient woman] who is cut off from",
+      "full_sentence": "And she was like an ancient woman who is cut off from childbearing and the gifts of garland-loving Aphrodite, like the nurses of kings' children who deal justice, or like the house-keepers in their echoing halls."
+    },
+    "homeric-1-s21-6": {
+      "context": "There [the daughters of Celeus] , son of Eleusis, saw",
+      "full_sentence": "There the daughters of Celeus, son of Eleusis, saw her, as they were coming for easy-drawn water, to carry it in pitchers of bronze to their dear father's house: four were they and like goddesses in the flower of their girlhood, Callidice and Cleisidice and lovely Demo and Callithoë who was the eldest of them all."
+    },
+    "homeric-1-s21-258": {
+      "context": "girlhood, Callidice and Cleisidice and [lovely Demo] and Callithoë who was the",
+      "full_sentence": "There the daughters of Celeus, son of Eleusis, saw her, as they were coming for easy-drawn water, to carry it in pitchers of bronze to their dear father's house: four were they and like goddesses in the flower of their girlhood, Callidice and Cleisidice and lovely Demo and Callithoë who was the eldest of them all."
+    },
+    "homeric-1-s21-243": {
+      "context": "of their girlhood, Callidice and [Cleisidice] and lovely Demo and Callithoë",
+      "full_sentence": "There the daughters of Celeus, son of Eleusis, saw her, as they were coming for easy-drawn water, to carry it in pitchers of bronze to their dear father's house: four were they and like goddesses in the flower of their girlhood, Callidice and Cleisidice and lovely Demo and Callithoë who was the eldest of them all."
+    },
+    "homeric-1-s21-229": {
+      "context": "the flower of their girlhood, [Callidice] and Cleisidice and lovely Demo",
+      "full_sentence": "There the daughters of Celeus, son of Eleusis, saw her, as they were coming for easy-drawn water, to carry it in pitchers of bronze to their dear father's house: four were they and like goddesses in the flower of their girlhood, Callidice and Cleisidice and lovely Demo and Callithoë who was the eldest of them all."
+    },
+    "homeric-1-s21-274": {
+      "context": "Cleisidice and lovely Demo and [Callithoë] who was the eldest of",
+      "full_sentence": "There the daughters of Celeus, son of Eleusis, saw her, as they were coming for easy-drawn water, to carry it in pitchers of bronze to their dear father's house: four were they and like goddesses in the flower of their girlhood, Callidice and Cleisidice and lovely Demo and Callithoë who was the eldest of them all."
+    },
+    "homeric-1-s22-277": {
+      "context": "in the shady halls are [women of just such age as you] , and others younger; and",
+      "full_sentence": "They knew her not — for the gods are not easily discerned by mortals — but standing near by her spoke winged words: 'Old mother, whence and who are you of folk born long ago? Why are you gone away from the city and do not draw near the houses? For there in the shady halls are women of just such age as you, and others younger; and they would welcome you both by word and by deed.' Thus they said."
+    },
+    "homeric-1-s22-312": {
+      "context": "such age as you, and [others younger] ; and they would welcome",
+      "full_sentence": "They knew her not — for the gods are not easily discerned by mortals — but standing near by her spoke winged words: 'Old mother, whence and who are you of folk born long ago? Why are you gone away from the city and do not draw near the houses? For there in the shady halls are women of just such age as you, and others younger; and they would welcome you both by word and by deed.' Thus they said."
+    },
+    "homeric-1-s22-61": {
+      "context": "are not easily discerned by [mortals] — but standing near by",
+      "full_sentence": "They knew her not — for the gods are not easily discerned by mortals — but standing near by her spoke winged words: 'Old mother, whence and who are you of folk born long ago? Why are you gone away from the city and do not draw near the houses? For there in the shady halls are women of just such age as you, and others younger; and they would welcome you both by word and by deed.' Thus they said."
+    },
+    "homeric-1-s23-911": {
+      "context": "in it. But may all [those who dwell on Olympus] give you husbands and birth",
+      "full_sentence": "And she, that queen among goddesses answered them saying: 'Hail, dear children, whosoever you are of woman-kind. I will tell you my story; for it is not unseemly that I should tell you truly what you ask. Doso is my name, for my stately mother gave it me. And now I am come from Crete over the sea's wide back — not willingly; but against my liking, by force of strength, pirates brought me thence. Afterwards they put in with their swift craft to Thoricus, and there the women landed on the shore in full throng and the men likewise, and they began to make ready a meal by the stern-cables of the ship. But my heart craved not pleasant food, and I fled secretly across the dark country and escaped my masters, that they should not take me unpurchased across the sea, there to win a price for me. And so I wandered and am come here: and I know not at all what land this is or what people are in it. But may all those who dwell on Olympus give you husbands and birth of children as parents desire, so you take pity on me, maidens, ...'"
+    },
+    "homeric-1-s23-226": {
+      "context": "Doso is my name, for [my stately mother] gave it me. And now",
+      "full_sentence": "And she, that queen among goddesses answered them saying: 'Hail, dear children, whosoever you are of woman-kind. I will tell you my story; for it is not unseemly that I should tell you truly what you ask. Doso is my name, for my stately mother gave it me. And now I am come from Crete over the sea's wide back — not willingly; but against my liking, by force of strength, pirates brought me thence. Afterwards they put in with their swift craft to Thoricus, and there the women landed on the shore in full throng and the men likewise, and they began to make ready a meal by the stern-cables of the ship. But my heart craved not pleasant food, and I fled secretly across the dark country and escaped my masters, that they should not take me unpurchased across the sea, there to win a price for me. And so I wandered and am come here: and I know not at all what land this is or what people are in it. But may all those who dwell on Olympus give you husbands and birth of children as parents desire, so you take pity on me, maidens, ...'"
+    },
+    "homeric-1-s23-699": {
+      "context": "the dark country and escaped [my masters] , that they should not",
+      "full_sentence": "And she, that queen among goddesses answered them saying: 'Hail, dear children, whosoever you are of woman-kind. I will tell you my story; for it is not unseemly that I should tell you truly what you ask. Doso is my name, for my stately mother gave it me. And now I am come from Crete over the sea's wide back — not willingly; but against my liking, by force of strength, pirates brought me thence. Afterwards they put in with their swift craft to Thoricus, and there the women landed on the shore in full throng and the men likewise, and they began to make ready a meal by the stern-cables of the ship. But my heart craved not pleasant food, and I fled secretly across the dark country and escaped my masters, that they should not take me unpurchased across the sea, there to win a price for me. And so I wandered and am come here: and I know not at all what land this is or what people are in it. But may all those who dwell on Olympus give you husbands and birth of children as parents desire, so you take pity on me, maidens, ...'"
+    },
+    "homeric-1-s23-372": {
+      "context": "liking, by force of strength, [pirates] brought me thence. Afterwards they",
+      "full_sentence": "And she, that queen among goddesses answered them saying: 'Hail, dear children, whosoever you are of woman-kind. I will tell you my story; for it is not unseemly that I should tell you truly what you ask. Doso is my name, for my stately mother gave it me. And now I am come from Crete over the sea's wide back — not willingly; but against my liking, by force of strength, pirates brought me thence. Afterwards they put in with their swift craft to Thoricus, and there the women landed on the shore in full throng and the men likewise, and they began to make ready a meal by the stern-cables of the ship. But my heart craved not pleasant food, and I fled secretly across the dark country and escaped my masters, that they should not take me unpurchased across the sea, there to win a price for me. And so I wandered and am come here: and I know not at all what land this is or what people are in it. But may all those who dwell on Olympus give you husbands and birth of children as parents desire, so you take pity on me, maidens, ...'"
+    },
+    "homeric-1-s23-1021": {
+      "context": "you take pity on me, [maidens] , ...'",
+      "full_sentence": "And she, that queen among goddesses answered them saying: 'Hail, dear children, whosoever you are of woman-kind. I will tell you my story; for it is not unseemly that I should tell you truly what you ask. Doso is my name, for my stately mother gave it me. And now I am come from Crete over the sea's wide back — not willingly; but against my liking, by force of strength, pirates brought me thence. Afterwards they put in with their swift craft to Thoricus, and there the women landed on the shore in full throng and the men likewise, and they began to make ready a meal by the stern-cables of the ship. But my heart craved not pleasant food, and I fled secretly across the dark country and escaped my masters, that they should not take me unpurchased across the sea, there to win a price for me. And so I wandered and am come here: and I know not at all what land this is or what people are in it. But may all those who dwell on Olympus give you husbands and birth of children as parents desire, so you take pity on me, maidens, ...'"
+    },
+    "homeric-1-s23-205": {
+      "context": "you truly what you ask. [Doso] is my name, for my",
+      "full_sentence": "And she, that queen among goddesses answered them saying: 'Hail, dear children, whosoever you are of woman-kind. I will tell you my story; for it is not unseemly that I should tell you truly what you ask. Doso is my name, for my stately mother gave it me. And now I am come from Crete over the sea's wide back — not willingly; but against my liking, by force of strength, pirates brought me thence. Afterwards they put in with their swift craft to Thoricus, and there the women landed on the shore in full throng and the men likewise, and they began to make ready a meal by the stern-cables of the ship. But my heart craved not pleasant food, and I fled secretly across the dark country and escaped my masters, that they should not take me unpurchased across the sea, there to win a price for me. And so I wandered and am come here: and I know not at all what land this is or what people are in it. But may all those who dwell on Olympus give you husbands and birth of children as parents desire, so you take pity on me, maidens, ...'"
+    },
+    "homeric-2-s6-103": {
+      "context": "over the mainland that rears [heifers] and over the isles.",
+      "full_sentence": "For everywhere, O Phoebus, the whole range of song is fallen to you, both over the mainland that rears heifers and over the isles."
+    },
+    "homeric-2-s11-413": {
+      "context": "lord it among gods and [men] all over the fruitful earth.",
+      "full_sentence": "And Delos rejoiced and answered and said: 'Leto, most glorious daughter of great Coeus, joyfully would I receive your child the far-shooting lord; for it is all too true that I am ill-spoken of among men, whereas thus I should become very greatly honored. But this saying I fear, and I will not hide it from you, Leto. They say that Apollo will be one that is very haughty and will greatly lord it among gods and men all over the fruitful earth. Therefore, I greatly fear in heart and spirit that as soon as he sees the light of the sun, he will scorn this island — for truly I have but a hard, rocky soil — and overturn me and thrust me down with his feet in the depths of the sea; then will the great ocean wash deep above my head for ever, and he will go to another land such as will please him, there to make his temple and wooded groves. So many-footed creatures of the sea will make their lairs in me and black seals their dwellings undisturbed, because I lack people. Yet if you will but dare to swear a great oath, goddess, that here first he will build a glorious temple to be an oracle for men, then let him afterwards make temples and wooded groves amongst all men; for surely he will be greatly renowned.' So said Delos."
+    },
+    "homeric-2-s11-1172": {
+      "context": "and wooded groves amongst all [men] ; for surely he will",
+      "full_sentence": "And Delos rejoiced and answered and said: 'Leto, most glorious daughter of great Coeus, joyfully would I receive your child the far-shooting lord; for it is all too true that I am ill-spoken of among men, whereas thus I should become very greatly honored. But this saying I fear, and I will not hide it from you, Leto. They say that Apollo will be one that is very haughty and will greatly lord it among gods and men all over the fruitful earth. Therefore, I greatly fear in heart and spirit that as soon as he sees the light of the sun, he will scorn this island — for truly I have but a hard, rocky soil — and overturn me and thrust me down with his feet in the depths of the sea; then will the great ocean wash deep above my head for ever, and he will go to another land such as will please him, there to make his temple and wooded groves. So many-footed creatures of the sea will make their lairs in me and black seals their dwellings undisturbed, because I lack people. Yet if you will but dare to swear a great oath, goddess, that here first he will build a glorious temple to be an oracle for men, then let him afterwards make temples and wooded groves amongst all men; for surely he will be greatly renowned.' So said Delos."
+    },
+    "homeric-3-s1-94": {
+      "context": "unseen by deathless gods and [mortal men] , at dead of night",
+      "full_sentence": "There the son of Cronos used to lie with the rich-tressed nymph, unseen by deathless gods and mortal men, at dead of night while sweet sleep should hold white-armed Hera fast."
+    },
+    "homeric-3-s12-33": {
+      "context": "a swift thought darts through [the heart of a man] when thronging cares haunt him,",
+      "full_sentence": "As a swift thought darts through the heart of a man when thronging cares haunt him, or as bright glances flash from the eye, so glorious Hermes planned both thought and deed at once."
+    },
+    "homeric-3-s16-114": {
+      "context": "sweet random snatches, even as [youths] bandy taunts at festivals.",
+      "full_sentence": "At the touch of his hand it sounded marvelously; and, as he tried it, the god sang sweet random snatches, even as youths bandy taunts at festivals."
+    },
+    "homeric-3-s26-4": {
+      "context": "But [an old man] tilling his flowering vineyard saw",
+      "full_sentence": "But an old man tilling his flowering vineyard saw him as he was hurrying down the plain through grassy Onchestus."
+    },
+    "homeric-3-s27-43": {
+      "context": "and said to him: ' [Old man] , digging about your vines",
+      "full_sentence": "So the Son of Maia began and said to him: 'Old man, digging about your vines with bowed shoulders, surely you shall have much wine when all these bear fruit, if you obey me and strictly remember not to have seen what you have seen, and not to have heard what you have heard, and to keep silent when nothing of your own is harmed.'"
+    },
+    "homeric-3-s44-148": {
+      "context": "of the blessed gods or [mortal men] ...",
+      "full_sentence": "Then the god went straight back again at dawn to the bright crests of Cyllene, and no one met him on the long journey either of the blessed gods or mortal men..."
+    },
+    "homeric-3-s44-83": {
+      "context": "bright crests of Cyllene, and [no one] met him on the long",
+      "full_sentence": "Then the god went straight back again at dawn to the bright crests of Cyllene, and no one met him on the long journey either of the blessed gods or mortal men..."
+    },
+    "homeric-4-s0-108": {
+      "context": "in the gods and subdues [the tribes of mortal men] and birds that fly in",
+      "full_sentence": "Muse, tell me the deeds of golden Aphrodite the Cyprian, who stirs up sweet passion in the gods and subdues the tribes of mortal men and birds that fly in air and all the many creatures that the dry land rears, and all that the sea: all these love the deeds of rich-crowned Cytherea."
+    },
+    "homeric-4-s3-17": {
+      "context": "She first taught [earthly craftsmen] to make chariots of war",
+      "full_sentence": "She first taught earthly craftsmen to make chariots of war and cars variously wrought with bronze, and she, too, teaches tender maidens in the house and puts knowledge of goodly arts in each one's mind."
+    },
+    "homeric-4-s3-121": {
+      "context": "bronze, and she, too, teaches [tender maidens] in the house and puts",
+      "full_sentence": "She first taught earthly craftsmen to make chariots of war and cars variously wrought with bronze, and she, too, teaches tender maidens in the house and puts knowledge of goodly arts in each one's mind."
+    },
+    "homeric-4-s9-71": {
+      "context": "of honor, and among all [mortal men] she is chief of the",
+      "full_sentence": "In all the temples of the gods she has a share of honor, and among all mortal men she is chief of the goddesses."
+    },
+    "homeric-4-s11-67": {
+      "context": "the blessed gods or among [mortal men] that has escaped Aphrodite.",
+      "full_sentence": "But of all others there is nothing among the blessed gods or among mortal men that has escaped Aphrodite."
+    },
+    "homeric-4-s12-369": {
+      "context": "she whom wily Cronos with [her mother Rhea] did beget: and Zeus, whose",
+      "full_sentence": "Even the heart of Zeus, who delights in thunder, is led astray by her; though he is greatest of all and has the lot of highest majesty, she beguiles even his wise heart whensoever she pleases, and mates him with mortal women, unknown to Hera, his sister and his wife, the grandest far in beauty among the deathless goddesses —most glorious is she whom wily Cronos with her mother Rhea did beget: and Zeus, whose wisdom is everlasting, made her his chaste and careful wife."
+    },
+    "homeric-4-s12-212": {
+      "context": "pleases, and mates him with [mortal women] , unknown to Hera, his",
+      "full_sentence": "Even the heart of Zeus, who delights in thunder, is led astray by her; though he is greatest of all and has the lot of highest majesty, she beguiles even his wise heart whensoever she pleases, and mates him with mortal women, unknown to Hera, his sister and his wife, the grandest far in beauty among the deathless goddesses —most glorious is she whom wily Cronos with her mother Rhea did beget: and Zeus, whose wisdom is everlasting, made her his chaste and careful wife."
+    },
+    "homeric-4-s13-308": {
+      "context": "the gods in love with [mortal women] who bare sons of death",
+      "full_sentence": "But upon Aphrodite herself Zeus cast sweet desire to be joined in love with a mortal man, to the end that, very soon, not even she should be innocent of a mortal's love; lest laughter-loving Aphrodite should one day softly smile and say mockingly among all the gods that she had joined the gods in love with mortal women who bare sons of death to the deathless gods, and had mated the goddesses with mortal men."
+    },
+    "homeric-4-s13-78": {
+      "context": "joined in love with a [mortal man] , to the end that,",
+      "full_sentence": "But upon Aphrodite herself Zeus cast sweet desire to be joined in love with a mortal man, to the end that, very soon, not even she should be innocent of a mortal's love; lest laughter-loving Aphrodite should one day softly smile and say mockingly among all the gods that she had joined the gods in love with mortal women who bare sons of death to the deathless gods, and had mated the goddesses with mortal men."
+    },
+    "homeric-4-s13-400": {
+      "context": "had mated the goddesses with [mortal men] .",
+      "full_sentence": "But upon Aphrodite herself Zeus cast sweet desire to be joined in love with a mortal man, to the end that, very soon, not even she should be innocent of a mortal's love; lest laughter-loving Aphrodite should one day softly smile and say mockingly among all the gods that she had joined the gods in love with mortal women who bare sons of death to the deathless gods, and had mated the goddesses with mortal men."
+    },
+    "homeric-4-s14-44": {
+      "context": "her heart sweet desire for [Anchises] who at that time among",
+      "full_sentence": "And so he put in her heart sweet desire for Anchises who at that time among the steep hills of many-fountained Ida was tending cattle, and in shape was like the immortal gods."
+    },
+    "homeric-4-s22-4": {
+      "context": "All [the others] were following the herds over",
+      "full_sentence": "All the others were following the herds over the grassy pastures, and he, left quite alone in the homestead, was roaming hither and thither and playing thrillingly upon the lyre."
+    },
+    "homeric-4-s22-70": {
+      "context": "over the grassy pastures, and [he] , left quite alone in",
+      "full_sentence": "All the others were following the herds over the grassy pastures, and he, left quite alone in the homestead, was roaming hither and thither and playing thrillingly upon the lyre."
+    },
+    "homeric-4-s24-9": {
+      "context": "Now when [Anchises] saw her, he marked her",
+      "full_sentence": "Now when Anchises saw her, he marked her well and wondered at her mien and height and shining garments."
+    },
+    "homeric-4-s25-4": {
+      "context": "For [she] was clad in a robe",
+      "full_sentence": "For she was clad in a robe out-shining the brightness of fire, a splendid robe of gold, enriched with all manner of needlework, which shimmered like the moon over her tender breasts, a marvel to see."
+    },
+    "homeric-4-s27-649": {
+      "context": "grant that I may become [a man very eminent among the Trojans] , and give me strong",
+      "full_sentence": "And Anchises was seized with love, and said to her: 'Hail, lady, whoever of the blessed ones you are that are come to this house, whether Artemis, or Leto, or golden Aphrodite, or high-born Themis, or bright-eyed Athena. Or, maybe, you are one of the Graces come hither, who bear the gods company and are called immortal, or else one of the Nymphs who haunt the pleasant woods, or of those who inhabit this lovely mountain and the springs of rivers and grassy meads. I will make you an altar upon a high peak in a far seen place, and will sacrifice rich offerings to you at all seasons. And do you feel kindly towards me and grant that I may become a man very eminent among the Trojans, and give me strong offspring for the time to come. As for my own self, let me live long and happily, seeing the light of the sun, and come to the threshold of old age, a man prosperous among the people.'"
+    },
+    "homeric-4-s27-855": {
+      "context": "the threshold of old age, [a man prosperous among the people] .'",
+      "full_sentence": "And Anchises was seized with love, and said to her: 'Hail, lady, whoever of the blessed ones you are that are come to this house, whether Artemis, or Leto, or golden Aphrodite, or high-born Themis, or bright-eyed Athena. Or, maybe, you are one of the Graces come hither, who bear the gods company and are called immortal, or else one of the Nymphs who haunt the pleasant woods, or of those who inhabit this lovely mountain and the springs of rivers and grassy meads. I will make you an altar upon a high peak in a far seen place, and will sacrifice rich offerings to you at all seasons. And do you feel kindly towards me and grant that I may become a man very eminent among the Trojans, and give me strong offspring for the time to come. As for my own self, let me live long and happily, seeing the light of the sun, and come to the threshold of old age, a man prosperous among the people.'"
+    },
+    "homeric-4-s27-745": {
+      "context": "time to come. As for [my own self] , let me live long",
+      "full_sentence": "And Anchises was seized with love, and said to her: 'Hail, lady, whoever of the blessed ones you are that are come to this house, whether Artemis, or Leto, or golden Aphrodite, or high-born Themis, or bright-eyed Athena. Or, maybe, you are one of the Graces come hither, who bear the gods company and are called immortal, or else one of the Nymphs who haunt the pleasant woods, or of those who inhabit this lovely mountain and the springs of rivers and grassy meads. I will make you an altar upon a high peak in a far seen place, and will sacrifice rich offerings to you at all seasons. And do you feel kindly towards me and grant that I may become a man very eminent among the Trojans, and give me strong offspring for the time to come. As for my own self, let me live long and happily, seeing the light of the sun, and come to the threshold of old age, a man prosperous among the people.'"
+    },
+    "homeric-4-s27-4": {
+      "context": "And [Anchises] was seized with love, and",
+      "full_sentence": "And Anchises was seized with love, and said to her: 'Hail, lady, whoever of the blessed ones you are that are come to this house, whether Artemis, or Leto, or golden Aphrodite, or high-born Themis, or bright-eyed Athena. Or, maybe, you are one of the Graces come hither, who bear the gods company and are called immortal, or else one of the Nymphs who haunt the pleasant woods, or of those who inhabit this lovely mountain and the springs of rivers and grassy meads. I will make you an altar upon a high peak in a far seen place, and will sacrifice rich offerings to you at all seasons. And do you feel kindly towards me and grant that I may become a man very eminent among the Trojans, and give me strong offspring for the time to come. As for my own self, let me live long and happily, seeing the light of the sun, and come to the threshold of old age, a man prosperous among the people.'"
+    },
+    "homeric-4-s28-409": {
+      "context": "beside my own, for a [Trojan nurse] brought me up at home:",
+      "full_sentence": "Thereupon Aphrodite the daughter of Zeus answered him: 'Anchises, most glorious of all men born on earth, know that I am no goddess: why do you liken me to the deathless ones. Nay, I am but a mortal, and a woman was the mother that bare me. Otreus of famous name is my father, if so be you have heard of him, and he reigns over all Phrygia rich in fortresses. But I know your speech well beside my own, for a Trojan nurse brought me up at home: she took me from my dear mother and reared me thenceforth when I was a little child. So comes it, then, that I well know your tongue also. And now the Slayer of Argus with the golden wand has caught me up from the dance of huntress Artemis, her with the golden arrows. For there were many of us, nymphs and marriageable  maidens, playing together; and an innumerable company encircled us: from these the Slayer of Argus with the golden wand rapt me away. He carried me over many fields of mortal men and over much land untilled and unpossessed, where savage wild-beasts roam through shady coombes, until I thought never again to touch the life-giving earth with my feet. And he said that I should be called the wedded wife of Anchises, and should bear you goodly children. But when he had told and advised me, he, the strong Slayer of Argos, went back to the families of the deathless gods..."
+    },
+    "homeric-4-s28-56": {
+      "context": "of Zeus answered him: ' [Anchises] , most glorious of all",
+      "full_sentence": "Thereupon Aphrodite the daughter of Zeus answered him: 'Anchises, most glorious of all men born on earth, know that I am no goddess: why do you liken me to the deathless ones. Nay, I am but a mortal, and a woman was the mother that bare me. Otreus of famous name is my father, if so be you have heard of him, and he reigns over all Phrygia rich in fortresses. But I know your speech well beside my own, for a Trojan nurse brought me up at home: she took me from my dear mother and reared me thenceforth when I was a little child. So comes it, then, that I well know your tongue also. And now the Slayer of Argus with the golden wand has caught me up from the dance of huntress Artemis, her with the golden arrows. For there were many of us, nymphs and marriageable  maidens, playing together; and an innumerable company encircled us: from these the Slayer of Argus with the golden wand rapt me away. He carried me over many fields of mortal men and over much land untilled and unpossessed, where savage wild-beasts roam through shady coombes, until I thought never again to touch the life-giving earth with my feet. And he said that I should be called the wedded wife of Anchises, and should bear you goodly children. But when he had told and advised me, he, the strong Slayer of Argos, went back to the families of the deathless gods..."
+    },
+    "homeric-4-s28-241": {
+      "context": "the mother that bare me. [Otreus] of famous name is my",
+      "full_sentence": "Thereupon Aphrodite the daughter of Zeus answered him: 'Anchises, most glorious of all men born on earth, know that I am no goddess: why do you liken me to the deathless ones. Nay, I am but a mortal, and a woman was the mother that bare me. Otreus of famous name is my father, if so be you have heard of him, and he reigns over all Phrygia rich in fortresses. But I know your speech well beside my own, for a Trojan nurse brought me up at home: she took me from my dear mother and reared me thenceforth when I was a little child. So comes it, then, that I well know your tongue also. And now the Slayer of Argus with the golden wand has caught me up from the dance of huntress Artemis, her with the golden arrows. For there were many of us, nymphs and marriageable  maidens, playing together; and an innumerable company encircled us: from these the Slayer of Argus with the golden wand rapt me away. He carried me over many fields of mortal men and over much land untilled and unpossessed, where savage wild-beasts roam through shady coombes, until I thought never again to touch the life-giving earth with my feet. And he said that I should be called the wedded wife of Anchises, and should bear you goodly children. But when he had told and advised me, he, the strong Slayer of Argos, went back to the families of the deathless gods..."
+    },
+    "homeric-6-s1-52": {
+      "context": "swiftly over the sparkling sea [Tyrsenian pirates] on a well-decked ship —",
+      "full_sentence": "Presently there came swiftly over the sparkling sea Tyrsenian pirates on a well-decked ship — a miserable doom led them on."
+    },
+    "homeric-6-s4-5": {
+      "context": "Then [the helmsman] understood all and cried out",
+      "full_sentence": "Then the helmsman understood all and cried out at once to his fellows and said: 'Madmen, what god is this whom you have taken and bind, strong that he is. Not even the well-built ship can carry him. Surely this is either Zeus or Apollo who has the silver bow, or Poseidon, for he looks not like mortal men but like the gods who dwell on Olympus. Come, then, let us set him free upon the dark shore at once: do not lay hands on him, lest he grow angry and stir up dangerous winds and heavy squalls.'. So said he."
+    },
+    "homeric-6-s4-295": {
+      "context": "for he looks not like [mortal men] but like the gods who",
+      "full_sentence": "Then the helmsman understood all and cried out at once to his fellows and said: 'Madmen, what god is this whom you have taken and bind, strong that he is. Not even the well-built ship can carry him. Surely this is either Zeus or Apollo who has the silver bow, or Poseidon, for he looks not like mortal men but like the gods who dwell on Olympus. Come, then, let us set him free upon the dark shore at once: do not lay hands on him, lest he grow angry and stir up dangerous winds and heavy squalls.'. So said he."
+    },
+    "homeric-6-s5-4": {
+      "context": "But [the master] chid him with taunting words:",
+      "full_sentence": "But the master chid him with taunting words: 'Madman, mark the wind and help hoist sail on the ship: catch all the sheets. As for this fellow we men will see to him: I reckon he is bound for Egypt or for Cyprus or to the Hyperboreans or further still. But in the end he will speak out and tell us his friends and all his wealth and his brothers, now that providence has thrown him in our way.'"
+    },
+    "homeric-6-s6-98": {
+      "context": "wind filled the sail and [the crew] hauled taut the sheets on",
+      "full_sentence": "When he had said this, he had mast and sail hoisted on the ship, and the wind filled the sail and the crew hauled taut the sheets on either side."
+    },
+    "homeric-6-s8-114": {
+      "context": "heavenly smell arose, so that [all the seamen] were seized with amazement when",
+      "full_sentence": "First of all sweet, fragrant wine ran streaming throughout all the black ship and a heavenly smell arose, so that all the seamen were seized with amazement when they saw it."
+    },
+    "homeric-6-s10-54": {
+      "context": "then at last they bade [the helmsman] to put the ship to",
+      "full_sentence": "When the pirates saw all this, then at last they bade the helmsman to put the ship to land."
+    },
+    "homeric-6-s10-5": {
+      "context": "When [the pirates] saw all this, then at",
+      "full_sentence": "When the pirates saw all this, then at last they bade the helmsman to put the ship to land."
+    },
+    "homeric-6-s12-65": {
+      "context": "stern and crowded bemused about [the right-minded helmsman] , until suddenly the lion",
+      "full_sentence": "And so the sailors fled into the stern and crowded bemused about the right-minded helmsman, until suddenly the lion sprang upon the master and seized him; and when the sailors saw it they leapt out overboard one and all into the bright sea, escaping from a miserable fate, and were changed into dolphins."
+    },
+    "homeric-6-s12-7": {
+      "context": "And so [the sailors] fled into the stern and",
+      "full_sentence": "And so the sailors fled into the stern and crowded bemused about the right-minded helmsman, until suddenly the lion sprang upon the master and seized him; and when the sailors saw it they leapt out overboard one and all into the bright sea, escaping from a miserable fate, and were changed into dolphins."
+    },
+    "homeric-6-s12-164": {
+      "context": "and seized him; and when [the sailors] saw it they leapt out",
+      "full_sentence": "And so the sailors fled into the stern and crowded bemused about the right-minded helmsman, until suddenly the lion sprang upon the master and seized him; and when the sailors saw it they leapt out overboard one and all into the bright sea, escaping from a miserable fate, and were changed into dolphins."
+    },
+    "homeric-6-s12-128": {
+      "context": "suddenly the lion sprang upon [the master] and seized him; and when",
+      "full_sentence": "And so the sailors fled into the stern and crowded bemused about the right-minded helmsman, until suddenly the lion sprang upon the master and seized him; and when the sailors saw it they leapt out overboard one and all into the bright sea, escaping from a miserable fate, and were changed into dolphins."
+    },
+    "homeric-6-s13-195": {
+      "context": "I am loud-crying Dionysus whom [Cadmus' daughter Semele] bare of union with Zeus.'",
+      "full_sentence": "But on the helmsman Dionysus had mercy and held him back and made him altogether happy, saying to him: 'Take courage, good ... you have found favour with my heart. I am loud-crying Dionysus whom Cadmus' daughter Semele bare of union with Zeus.'"
+    },
+    "homeric-6-s13-7": {
+      "context": "But on [the helmsman] Dionysus had mercy and held",
+      "full_sentence": "But on the helmsman Dionysus had mercy and held him back and made him altogether happy, saying to him: 'Take courage, good ... you have found favour with my heart. I am loud-crying Dionysus whom Cadmus' daughter Semele bare of union with Zeus.'"
+    },
+    "homeric-6-s14-15": {
+      "context": "Hail, child of [fair-faced Semele] .",
+      "full_sentence": "Hail, child of fair-faced Semele."
+    },
+    "homeric-14-s1-0": {
+      "context": "[Alcmena] bare him in Thebes, the",
+      "full_sentence": "Alcmena bare him in Thebes, the city of lovely dances, when the dark-clouded Son of Cronos had lain with her."
+    },
+    "homeric-14-s2-80": {
+      "context": "sea at the bidding of [King Eurystheus] , and himself did many",
+      "full_sentence": "Once he used to wander over unmeasured tracts of land and sea at the bidding of King Eurystheus, and himself did many deeds of violence and endured many; but now he lives happily in the glorious home of snowy Olympus, and has neat-ankled Hebe for his wife."
+    },
+    "homeric-14-s2-5": {
+      "context": "Once [he] used to wander over unmeasured",
+      "full_sentence": "Once he used to wander over unmeasured tracts of land and sea at the bidding of King Eurystheus, and himself did many deeds of violence and endured many; but now he lives happily in the glorious home of snowy Olympus, and has neat-ankled Hebe for his wife."
+    },
+    "homeric-14-s2-162": {
+      "context": "and endured many; but now [he] lives happily in the glorious",
+      "full_sentence": "Once he used to wander over unmeasured tracts of land and sea at the bidding of King Eurystheus, and himself did many deeds of violence and endured many; but now he lives happily in the glorious home of snowy Olympus, and has neat-ankled Hebe for his wife."
+    },
+    "homeric-15-s1-20": {
+      "context": "In the Dotian plain [fair Coronis] , daughter of King Phlegyas,",
+      "full_sentence": "In the Dotian plain fair Coronis, daughter of King Phlegyas, bare him, a great joy to men, a soother of cruel pangs."
+    },
+    "homeric-16-s1-32": {
+      "context": "Beneath the heights of Taygetus [stately Leda] bare them, when the dark-clouded",
+      "full_sentence": "Beneath the heights of Taygetus stately Leda bare them, when the dark-clouded Son of Cronos had privily bent her to his will."
+    },
+    "homeric-16-s2-6": {
+      "context": "Hail, [children of Tyndareus] , riders upon swift horses.",
+      "full_sentence": "Hail, children of Tyndareus, riders upon swift horses."
+    },
+    "homeric-17-s1-21": {
+      "context": "He was born of Maia, [the daughter of Atlas] , when she had mated",
+      "full_sentence": "He was born of Maia, the daughter of Atlas, when she had mated with Zeus — a shy goddess she."
+    },
+    "homeric-17-s2-126": {
+      "context": "used to lie with the [rich-tressed nymph] at dead of night, while",
+      "full_sentence": "Ever she avoided the throng of the blessed gods and lived in a shadowy cave, and there the Son of Cronos used to lie with the rich-tressed nymph at dead of night, while white-armed Hera lay bound in sweet sleep: and neither deathless god nor mortal man knew it."
+    },
+    "homeric-18-s8-162": {
+      "context": "melting desire to wed the [rich-tressed daughter of Dryops] , and there he brought",
+      "full_sentence": "For there, though a god, he used to tend curly-fleeced sheep in the service of a mortal man, because there fell on him and waxed strong melting desire to wed the rich-tressed daughter of Dryops, and there he brought about the merry marriage."
+    },
+    "homeric-18-s8-81": {
+      "context": "in the service of a [mortal man] , because there fell on",
+      "full_sentence": "For there, though a god, he used to tend curly-fleeced sheep in the service of a mortal man, because there fell on him and waxed strong melting desire to wed the rich-tressed daughter of Dryops, and there he brought about the merry marriage."
+    },
+    "homeric-18-s9-124": {
+      "context": "feet and two horns — [a noisy, merry-laughing child] .",
+      "full_sentence": "And in the house she bare Hermes a dear son who from his birth was marvellous to look upon, with goat's feet and two horns —a noisy, merry-laughing child."
+    },
+    "homeric-18-s9-33": {
+      "context": "the house she bare Hermes [a dear son] who from his birth was",
+      "full_sentence": "And in the house she bare Hermes a dear son who from his birth was marvellous to look upon, with goat's feet and two horns —a noisy, merry-laughing child."
+    },
+    "homeric-18-s10-9": {
+      "context": "But when [the nurse] saw his uncouth face and",
+      "full_sentence": "But when the nurse saw his uncouth face and full beard, she was afraid and sprang up and fled and left the child."
+    },
+    "homeric-19-s1-77": {
+      "context": "crafts throughout the world — [men] who before used to dwell",
+      "full_sentence": "With bright-eyed Athena he taught men glorious crafts throughout the world — men who before used to dwell in caves in the mountains like wild beasts."
+    },
+    "homeric-20-s0-150": {
+      "context": "river Peneus; and of you [the sweet-tongued minstrel] , holding his high-pitched lyre,",
+      "full_sentence": "Phoebus, of you even the swan sings with clear voice to the beating of his wings, as he alights upon the bank by the eddying river Peneus; and of you the sweet-tongued minstrel, holding his high-pitched lyre, always sings both first and last."
+    },
+    "homeric-24-s1-108": {
+      "context": "players upon the lyre; but [kings] are from Zeus.",
+      "full_sentence": "For it is through the Muses and Apollo that there are singers upon the earth and players upon the lyre; but kings are from Zeus."
+    },
+    "homeric-24-s2-9": {
+      "context": "Happy is [he whom the Muses love] : sweet flows speech from",
+      "full_sentence": "Happy is he whom the Muses love: sweet flows speech from his lips."
+    },
+    "homeric-26-s5-13": {
+      "context": "Hail to you, [children of Zeus] and rich-haired Leto.",
+      "full_sentence": "Hail to you, children of Zeus and rich-haired Leto."
+    },
+    "homeric-26-s5-34": {
+      "context": "you, children of Zeus and [rich-haired Leto] .",
+      "full_sentence": "Hail to you, children of Zeus and rich-haired Leto."
+    },
+    "homeric-28-s0-62": {
+      "context": "all, both deathless gods and [men who walk on earth] , you have gained an",
+      "full_sentence": "Hestia, in the high dwellings of all, both deathless gods and men who walk on earth, you have gained an everlasting abode and highest honor: glorious is your portion and your right."
+    },
+    "homeric-28-s1-16": {
+      "context": "For without you [mortals] hold no banquet — where",
+      "full_sentence": "For without you mortals hold no banquet — where one does not duly pour sweet wine in offering to Hestia both first and last."
+    },
+    "homeric-29-s2-41": {
+      "context": "queen, men are blessed in [their children] and blessed in their harvests,",
+      "full_sentence": "Through you, O queen, men are blessed in their children and blessed in their harvests, and to you it belongs to give means of life to mortal men and to take it away."
+    },
+    "homeric-29-s2-134": {
+      "context": "give means of life to [mortal men] and to take it away.",
+      "full_sentence": "Through you, O queen, men are blessed in their children and blessed in their harvests, and to you it belongs to give means of life to mortal men and to take it away."
+    },
+    "homeric-29-s2-22": {
+      "context": "Through you, O queen, [men] are blessed in their children",
+      "full_sentence": "Through you, O queen, men are blessed in their children and blessed in their harvests, and to you it belongs to give means of life to mortal men and to take it away."
+    },
+    "homeric-29-s3-9": {
+      "context": "Happy is [the man] whom you delight to honor.",
+      "full_sentence": "Happy is the man whom you delight to honor."
+    },
+    "homeric-29-s5-142": {
+      "context": "with ever-fresh delight, and their [daughters] in flower-laden bands play and",
+      "full_sentence": "Such men rule orderly in their cities of fair women: great riches and wealth follow them: their sons exult with ever-fresh delight, and their daughters in flower-laden bands play and skip merrily over the soft flowers of the field."
+    },
+    "homeric-29-s5-0": {
+      "context": "[Such men] rule orderly in their cities",
+      "full_sentence": "Such men rule orderly in their cities of fair women: great riches and wealth follow them: their sons exult with ever-fresh delight, and their daughters in flower-laden bands play and skip merrily over the soft flowers of the field."
+    },
+    "homeric-29-s5-96": {
+      "context": "and wealth follow them: their [sons] exult with ever-fresh delight, and",
+      "full_sentence": "Such men rule orderly in their cities of fair women: great riches and wealth follow them: their sons exult with ever-fresh delight, and their daughters in flower-laden bands play and skip merrily over the soft flowers of the field."
+    },
+    "homeric-30-s7-53": {
+      "context": "with you, I will celebrate [the race of mortal men half-divine] whose deeds the Muses have",
+      "full_sentence": "And now that I have begun with you, I will celebrate the race of mortal men half-divine whose deeds the Muses have showed to mankind."
+    },
+    "homeric-30-s7-13": {
+      "context": "And now that [I] have begun with you, I",
+      "full_sentence": "And now that I have begun with you, I will celebrate the race of mortal men half-divine whose deeds the Muses have showed to mankind."
+    },
+    "homeric-30-s7-36": {
+      "context": "I have begun with you, [I] will celebrate the race of",
+      "full_sentence": "And now that I have begun with you, I will celebrate the race of mortal men half-divine whose deeds the Muses have showed to mankind."
+    },
+    "homeric-31-s0-10": {
+      "context": "And next, [sweet voiced Muses] , daughters of Zeus, well-skilled",
+      "full_sentence": "And next, sweet voiced Muses, daughters of Zeus, well-skilled in song, tell of the long-winged Moon."
+    },
+    "homeric-31-s3-37": {
+      "context": "token and a sign to [mortal men] .",
+      "full_sentence": "So she is a sure token and a sign to mortal men."
+    },
+    "homeric-31-s6-89": {
+      "context": "men half-divine, whose deeds minstrels, [the servants of the Muses] , celebrate with lovely lips.",
+      "full_sentence": "And now I will leave you and sing the glories of men half-divine, whose deeds minstrels, the servants of the Muses, celebrate with lovely lips."
+    },
+    "homeric-31-s6-78": {
+      "context": "of men half-divine, whose deeds [minstrels] , the servants of the",
+      "full_sentence": "And now I will leave you and sing the glories of men half-divine, whose deeds minstrels, the servants of the Muses, celebrate with lovely lips."
+    },
+    "homeric-32-s0-82": {
+      "context": "of Zeus, glorious children of [neat-ankled Leda] , Castor the tamer of",
+      "full_sentence": "Bright-eyed Muses, tell of the Tyndaridae, the Sons of Zeus, glorious children of neat-ankled Leda, Castor the tamer of horses, and blameless Polydeuces."
+    },
+    "homeric-32-s1-5": {
+      "context": "When [Leda] had lain with the dark-clouded",
+      "full_sentence": "When Leda had lain with the dark-clouded Son of Cronos, she bare them beneath the peak of the great hill Taygetus — children who are deliverers of men on earth and of swift-going ships when stormy gales rage over the ruthless sea."
+    },
+    "homeric-32-s2-5": {
+      "context": "Then [the shipmen] call upon the sons of",
+      "full_sentence": "Then the shipmen call upon the sons of great Zeus with vows of white lambs, going to the forepart of the prow; but the strong wind and the waves of the sea lay the ship under water, until suddenly these two are seen darting through the air on tawny wings."
+    },
+    "homeric-32-s4-9": {
+      "context": "And when [the shipmen] see them they are glad",
+      "full_sentence": "And when the shipmen see them they are glad and have rest from their pain and labour."
+    },
+    "orphic-2-s4-15": {
+      "context": "Upon you alone [pregnant women] call, O comforter of souls,",
+      "full_sentence": "Upon you alone pregnant women call, O comforter of souls, and in you alone there is relief from pains of labor."
+    },
+    "orphic-6-s4-79": {
+      "context": "seeds, come joyfully to the [celebrants] of this holy rite, of",
+      "full_sentence": "O blessed one of the many counsels and of the many seeds, come joyfully to the celebrants of this holy rite, of this very intricate rite."
+    },
+    "orphic-8-s6-43": {
+      "context": "and show life's sweetness to [the initiates] .",
+      "full_sentence": "Hear my words and show life's sweetness to the initiates."
+    },
+    "orphic-12-s1-63": {
+      "context": "brings dazzling honors and nurtures [youths] .",
+      "full_sentence": "Peace was your desire; she brings dazzling honors and nurtures youths."
+    },
+    "orphic-18-s2-3": {
+      "context": "To [mankind] you give the wealth of",
+      "full_sentence": "To mankind you give the wealth of the year's fruits, yours is the third portion, earth, queen of all, seat of the gods, mighty lap of mortals."
+    },
+    "orphic-18-s4-102": {
+      "context": "once took as your bride [pure Demeter's daughter] : you tore her away",
+      "full_sentence": "All-receiver, master of death, master of mortals, host of many, Euboulos, you once took as your bride pure Demeter's daughter: you tore her away from the meadow, and through the sea you carried her to an Attic cave upon your steeds— it was the district of Eleusis, it was the district of Eleusis, where the gates to Hades are."
+    },
+    "orphic-23-s2-52": {
+      "context": "earthquakes and send to the [initiates] peace and prosperity.",
+      "full_sentence": "O blessed one, ward off earthquakes and send to the initiates peace and prosperity."
+    },
+    "orphic-27-s2-206": {
+      "context": "you give gentle nourishment to [mortals] .",
+      "full_sentence": "You bring things to pass, O many-named and revered one, you are queen of the sky; in the cosmos yours is the throne, the throne in the middle, because the earth is yours, and you give gentle nourishment to mortals."
+    },
+    "orphic-27-s3-26": {
+      "context": "you were born gods and [men] , you hold sway over",
+      "full_sentence": "Of you were born gods and men, you hold sway over the rivers and over all the sea."
+    },
+    "orphic-31-s0-49": {
+      "context": "to the sound of arms, [howling mountain men] whose feet pound the ground,",
+      "full_sentence": "Leaping Kouretes, stepping to the sound of arms, howling mountain men whose feet pound the ground, discordant is the lyre you strike as you pace, light of foot, O renowned marshals, O arm-carrying guards, priests in the train of a mother struck with mountain frenzy."
+    },
+    "orphic-31-s0-205": {
+      "context": "renowned marshals, O arm-carrying guards, [priests] in the train of a",
+      "full_sentence": "Leaping Kouretes, stepping to the sound of arms, howling mountain men whose feet pound the ground, discordant is the lyre you strike as you pace, light of foot, O renowned marshals, O arm-carrying guards, priests in the train of a mother struck with mountain frenzy."
+    },
+    "orphic-31-s1-13": {
+      "context": "Kindly visit [the people] who praise you with words,",
+      "full_sentence": "Kindly visit the people who praise you with words, with joyous heart be gracious to the oxherd."
+    },
+    "orphic-34-s7-30": {
+      "context": "You have infused harmony into [the lot of all men] , giving them an equal",
+      "full_sentence": "You have infused harmony into the lot of all men, giving them an equal measure of winter and summer: the lowest notes you strike in the winter, the highest notes you make distinct in the summer, your mode is Doric for spring's lovely and blooming season."
+    },
+    "orphic-34-s8-12": {
+      "context": "This is why [mortals] call you lord and Pan,",
+      "full_sentence": "This is why mortals call you lord and Pan, the two-horned god who sends the whistling winds; it is for this you have the master seal of the entire cosmos."
+    },
+    "orphic-34-s9-43": {
+      "context": "hear the suppliant voice of [the initiates] and save them.",
+      "full_sentence": "O blessed one, hear the suppliant voice of the initiates and save them."
+    },
+    "orphic-37-s1-87": {
+      "context": "and of the land, then [the brood of the birds] , of all generations of",
+      "full_sentence": "From you are descended all toiling mortals, the brood of the sea and of the land, then the brood of the birds, of all generations of the world born of you."
+    },
+    "orphic-37-s1-44": {
+      "context": "are descended all toiling mortals, [the brood of the sea] and of the land, then",
+      "full_sentence": "From you are descended all toiling mortals, the brood of the sea and of the land, then the brood of the birds, of all generations of the world born of you."
+    },
+    "orphic-37-s1-23": {
+      "context": "From you are descended [all toiling mortals] , the brood of the",
+      "full_sentence": "From you are descended all toiling mortals, the brood of the sea and of the land, then the brood of the birds, of all generations of the world born of you."
+    },
+    "orphic-37-s2-41": {
+      "context": "to banish harsh anger if [some earthly forefather of mine] stormed your homes.",
+      "full_sentence": "I call upon you to banish harsh anger if some earthly forefather of mine stormed your homes."
+    },
+    "orphic-41-s0-68": {
+      "context": "of immortal gods and of [mortal men] , weary from searching, weary",
+      "full_sentence": "Queen Antaia, goddess and many-named mother of immortal gods and of mortal men, weary from searching, weary from wandering far and wide, you once ended your fast in the valley of Eleusis, you came to Hades for noble Persephone."
+    },
+    "orphic-41-s1-15": {
+      "context": "Your guide was [the innocent child of Dysaules] , who brought the news",
+      "full_sentence": "Your guide was the innocent child of Dysaules, who brought the news of pure Chthonic Zeus' holy union; you bore divine Euboulos by yielding to human need."
+    },
+    "orphic-41-s2-79": {
+      "context": "to come graciously to your [pious initiate] .",
+      "full_sentence": "O goddess, O queen to whom many pray, I beseech you to come graciously to your pious initiate."
+    },
+    "orphic-43-s3-8": {
+      "context": "Come to [the new initiates] and their holy and reverent",
+      "full_sentence": "Come to the new initiates and their holy and reverent rites, bring perfect seasons for the growth of goodly fruit."
+    },
+    "orphic-44-s0-12": {
+      "context": "I call upon [the daughter of Kadmos] , queen of all, fair",
+      "full_sentence": "I call upon the daughter of Kadmos, queen of all, fair Semele of the lovely tresses, of the full bosom, mother of thyrsos-bearing, joyous Dionysos."
+    },
+    "orphic-44-s0-50": {
+      "context": "of Kadmos, queen of all, [fair Semele] of the lovely tresses, of",
+      "full_sentence": "I call upon the daughter of Kadmos, queen of all, fair Semele of the lovely tresses, of the full bosom, mother of thyrsos-bearing, joyous Dionysos."
+    },
+    "orphic-44-s2-36": {
+      "context": "Noble Persephone granted her honors [among mortal men] , honors given every third",
+      "full_sentence": "Noble Persephone granted her honors among mortal men, honors given every third year."
+    },
+    "orphic-44-s3-4": {
+      "context": "For [all mortal men] reenact your travail for your",
+      "full_sentence": "For all mortal men reenact your travail for your son Bacchos: the sacred ritual of the table, the ritual of the holy mysteries."
+    },
+    "orphic-45-s2-81": {
+      "context": "honored by all gods and [all men] who dwell upon the earth.",
+      "full_sentence": "Armed with the thyrsos, wrathful in the extreme, you are honored by all gods and all men who dwell upon the earth."
+    },
+    "orphic-50-s2-23": {
+      "context": "A sorrow-hating joy to [mortals] , O lovely-haired..., a redeemer",
+      "full_sentence": "A sorrow-hating joy to mortals, O lovely-haired..., a redeemer and a reveler you are, your thyrsos drives to frenzy, you are kind-hearted to all gods and mortals who see your light."
+    },
+    "orphic-50-s2-154": {
+      "context": "kind-hearted to all gods and [mortals] who see your light.",
+      "full_sentence": "A sorrow-hating joy to mortals, O lovely-haired..., a redeemer and a reveler you are, your thyrsos drives to frenzy, you are kind-hearted to all gods and mortals who see your light."
+    },
+    "orphic-51-s5-113": {
+      "context": "Deo, you bring grace to [mortals] .",
+      "full_sentence": "Spring is your joy, O Nysian and frenzied, O healing ones, in the company of Bacchos and Deo, you bring grace to mortals."
+    },
+    "orphic-55-s6-80": {
+      "context": "you, where fair maidens and [chaste brides] throughout the year sing of",
+      "full_sentence": "Come lady, even if you are in Kypros that cherishes you, where fair maidens and chaste brides throughout the year sing of you, O blessed one, as they sing of immortal, pure Adonis."
+    },
+    "orphic-55-s6-63": {
+      "context": "Kypros that cherishes you, where [fair maidens] and chaste brides throughout the",
+      "full_sentence": "Come lady, even if you are in Kypros that cherishes you, where fair maidens and chaste brides throughout the year sing of you, O blessed one, as they sing of immortal, pure Adonis."
+    },
+    "orphic-56-s4-49": {
+      "context": "bring earth's fruits to the [initiates] .",
+      "full_sentence": "Come, O blessed one, bring earth's fruits to the initiates."
+    },
+    "orphic-57-s0-86": {
+      "context": "by the Kokytos, you guide [the souls of mortals] to the nether gloom.",
+      "full_sentence": "You dwell on the road all must take, the road of no return, by the Kokytos, you guide the souls of mortals to the nether gloom."
+    },
+    "orphic-57-s2-107": {
+      "context": "lead the way for the [everlasting souls of men] .",
+      "full_sentence": "It is to you indeed that Persephone gave the high office throughout broad Tartaros to lead the way for the everlasting souls of men."
+    },
+    "orphic-58-s2-23": {
+      "context": "O blessed one, come to [the initiates] with pure thought, banish from",
+      "full_sentence": "O blessed one, come to the initiates with pure thought, banish from them vile impulses."
+    },
+    "orphic-59-s0-298": {
+      "context": "in purple, you march toward [men] , whose noble aims match",
+      "full_sentence": "Boundless Fates, dear children of dark Night, hear my prayer, O many-named dwellers on the lake of heaven, where the frozen water is broken by night's warmth in the shady hollow of a sleek cave; from there you fly to the vast earth, home of mortals, from there, clothed in purple, you march toward men, whose noble aims match their vain hopes, in the realm of the dead, where glory drives her chariot on all over the earthbeyond the ends of Justice, of anxious hope, of primeval law, of the measureless principle of order."
+    },
+    "orphic-60-s1-100": {
+      "context": "enchanting, come, ever gentle, to [the initiates] to bring them prosperity.",
+      "full_sentence": "We pray that each in her turn with a flower's beauty on her face, enchanting, come, ever gentle, to the initiates to bring them prosperity."
+    },
+    "orphic-61-s2-81": {
+      "context": "about the thoughts of all; [the arrogant soul] , the reckless one, finds",
+      "full_sentence": "All who bear the yoke of mortality fear you, you care about the thoughts of all; the arrogant soul, the reckless one, finds no escape."
+    },
+    "orphic-61-s2-100": {
+      "context": "of all; the arrogant soul, [the reckless one] , finds no escape.",
+      "full_sentence": "All who bear the yoke of mortality fear you, you care about the thoughts of all; the arrogant soul, the reckless one, finds no escape."
+    },
+    "orphic-62-s1-22": {
+      "context": "From heaven you watch [the lives of the many human races] , you crush the unjust",
+      "full_sentence": "From heaven you watch the lives of the many human races, you crush the unjust with just retribution, matching things lawless through the truth of equality."
+    },
+    "orphic-62-s1-67": {
+      "context": "many human races, you crush [the unjust] with just retribution, matching things",
+      "full_sentence": "From heaven you watch the lives of the many human races, you crush the unjust with just retribution, matching things lawless through the truth of equality."
+    },
+    "orphic-62-s2-66": {
+      "context": "prevail in difficult verdicts, because [men] wish more than is fair,",
+      "full_sentence": "For whenever base opinions prevail in difficult verdicts, because men wish more than is fair, you intervene and rouse justice against her foes."
+    },
+    "orphic-63-s0-85": {
+      "context": "you take equal pleasure in [all men who are just] .",
+      "full_sentence": "O paragon of justice to mortals, blessed and beloved one, you take equal pleasure in all men who are just."
+    },
+    "orphic-63-s3-0": {
+      "context": "[You] loath unfairness, but fairness delights",
+      "full_sentence": "You loath unfairness, but fairness delights you; in you knowledge of virtue reaches its noble goal."
+    },
+    "orphic-63-s3-44": {
+      "context": "loath unfairness, but fairness delights [you] ; in you knowledge of",
+      "full_sentence": "You loath unfairness, but fairness delights you; in you knowledge of virtue reaches its noble goal."
+    },
+    "orphic-63-s3-52": {
+      "context": "but fairness delights you; in [you] knowledge of virtue reaches its",
+      "full_sentence": "You loath unfairness, but fairness delights you; in you knowledge of virtue reaches its noble goal."
+    },
+    "orphic-63-s4-33": {
+      "context": "Hear, O goddess, rightly shatter [wicked men] , so that mortals who",
+      "full_sentence": "Hear, O goddess, rightly shatter wicked men, so that mortals who eat of the fruits of this earth and also all living creatures nursed in the bosom of Earth, the divine mother, nursed in the bosom of sea-dwelling Zeus, may follow a path both balanced and noble."
+    },
+    "orphic-63-s4-53": {
+      "context": "shatter wicked men, so that [mortals] who eat of the fruits",
+      "full_sentence": "Hear, O goddess, rightly shatter wicked men, so that mortals who eat of the fruits of this earth and also all living creatures nursed in the bosom of Earth, the divine mother, nursed in the bosom of sea-dwelling Zeus, may follow a path both balanced and noble."
+    },
+    "orphic-64-s3-58": {
+      "context": "shares the same house with [all who abide by the law] , bringing harsh vengeance upon",
+      "full_sentence": "Primeval and wise, in peace he shares the same house with all who abide by the law, bringing harsh vengeance upon the lawless."
+    },
+    "orphic-64-s3-114": {
+      "context": "law, bringing harsh vengeance upon [the lawless] .",
+      "full_sentence": "Primeval and wise, in peace he shares the same house with all who abide by the law, bringing harsh vengeance upon the lawless."
+    },
+    "orphic-68-s3-87": {
+      "context": "sweet giver of abundance for [those who feast] , fails, and man never",
+      "full_sentence": "Apart from you all is without profit for men: wealth, the sweet giver of abundance for those who feast, fails, and man never reaches the many pains of old age."
+    },
+    "orphic-68-s3-115": {
+      "context": "those who feast, fails, and [man] never reaches the many pains",
+      "full_sentence": "Apart from you all is without profit for men: wealth, the sweet giver of abundance for those who feast, fails, and man never reaches the many pains of old age."
+    },
+    "orphic-69-s5-5": {
+      "context": "Upon [the races of all men that remain countless] , you gaze as the",
+      "full_sentence": "Upon the races of all men that remain countless, you gaze as the eye of Dike, ever in charge of justice."
+    },
+    "orphic-70-s1-5": {
+      "context": "Over [the lives of impious mortals] you keep a careful eye,",
+      "full_sentence": "Over the lives of impious mortals you keep a careful eye, in charge of Necessity, you punish the unjust."
+    },
+    "orphic-74-s1-219": {
+      "context": "from wretched death at sea, [men to whom you swiftly come as welcome savior] .",
+      "full_sentence": "Hearken, O goddess, O mistress of the deep-bosomed sea, you delight in waves, you are the greatest savior to mortals, on you depends the unsteady heave of seafaring ships, you alone save men from wretched death at sea, men to whom you swiftly come as welcome savior."
+    },
+    "orphic-74-s2-114": {
+      "context": "a fair tail wind to [the initiates] .",
+      "full_sentence": "O divine lady, come to the aid of well-benched ships, do kindly save them, bring upon the sea a fair tail wind to the initiates."
+    },
+    "orphic-76-s2-11": {
+      "context": "Do come to [the initiates] , O goddesses, in your",
+      "full_sentence": "Do come to the initiates, O goddesses, in your manifold holiness, do bring glory and emulation that is lovely and sung by many."
+    },
+    "orphic-77-s3-23": {
+      "context": "O blessed goddess, for [the initiates] stir the memory of the",
+      "full_sentence": "O blessed goddess, for the initiates stir the memory of the sacred rite, ward off oblivion from them."
+    },
+    "orphic-78-s0-47": {
+      "context": "the light of day to [mortals] , resplendent Dawn, you blush",
+      "full_sentence": "Hear, O goddess, you bring the light of day to mortals, resplendent Dawn, you blush throughout the world, messenger of the great, the illustrious Titan."
+    },
+    "orphic-78-s1-72": {
+      "context": "the earth when you arrive; [mortal men] you lead to work as",
+      "full_sentence": "Murky, dark, journeying night you send below the earth when you arrive; mortal men you lead to work as you tend to their lives."
+    },
+    "orphic-78-s2-0": {
+      "context": "[The race of mortal men] delights in you, no one",
+      "full_sentence": "The race of mortal men delights in you, no one escapes your sight as you look down from on high, when from your eyelids you shake off sweet sleep, when there is joy for every mortal, for every reptile, for animals, for birds, for the broods the sea contains."
+    },
+    "orphic-78-s4-53": {
+      "context": "give more sacred light to [the initiates] .",
+      "full_sentence": "Goddess, blessed and pure, give more sacred light to the initiates."
+    },
+    "orphic-79-s0-119": {
+      "context": "maiden, the first to show [mortals] the holy oracle as prophetess",
+      "full_sentence": "I call upon pure Themis, daughter of noble Sky and Earth, Themis the young, the lovely-faced maiden, the first to show mortals the holy oracle as prophetess of the gods in her Delphic hideaway on Pythian ground where Python was king."
+    },
+    "orphic-84-s1-14": {
+      "context": "May you raise [the holy initiates] in these sacred rites, may",
+      "full_sentence": "May you raise the holy initiates in these sacred rites, may you grant them unwithering youth, wealth as well, prudence and purity."
+    },
+    "orphic-85-s0-56": {
+      "context": "of blessed gods and of [mortal men] , of every living thing",
+      "full_sentence": "Sleep, you are lord of all, lord of blessed gods and of mortal men, of every living thing the broad earth nurtures, for you alone are master of all, you do visit all, binding their bodies with fetters unforged."
+    },
+    "orphic-85-s2-83": {
+      "context": "be a kindly savior of [the initiates] , that they may serve",
+      "full_sentence": "But, O blessed one, I beseech you to come sweet-tempered, to be a kindly savior of the initiates, that they may serve the gods."
+    },
+    "orphic-86-s1-178": {
+      "context": "to show the future to [silent souls] that walk the noble path",
+      "full_sentence": "In the quiet of sweet sleep you come silent, you speak to the soul, you rouse men's minds, in their sleep you whisper the will of the gods; silent you come to show the future to silent souls that walk the noble path of devotion to the gods."
+    },
+    "orphic-86-s2-29": {
+      "context": "always wins the race in [people's minds] , good leads their lives",
+      "full_sentence": "Good always wins the race in people's minds, good leads their lives to pleasures anticipated, to a respite from suffering, that god himself may reveal the firmament of the divine lords through vows and sacrifices."
+    },
+    "orphic-86-s3-61": {
+      "context": "always so sweeter, but to [the impious] never does a dreamy phantom,",
+      "full_sentence": "The end to which the pious come is always so sweeter, but to the impious never does a dreamy phantom, a prophet of evil deeds, reveal future need so that they may find the cure from pain to come."
+    },
+    "orphic-87-s2-67": {
+      "context": "you bring swift end to [youthful life] at its peak.",
+      "full_sentence": "Common to all, you are unjust to some, when you bring swift end to youthful life at its peak."
+    }
+  }
+}

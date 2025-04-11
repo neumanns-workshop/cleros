@@ -1,0 +1,84 @@
+{
+  "spans": {
+    "homeric-4-s21-103": {
+      "text": "the hero Anchises",
+      "category": "hero",
+      "hymn_id": "homeric-4",
+      "sentence_index": 21,
+      "confidence": "very_high",
+      "start_char": 103,
+      "end_char": 120
+    },
+    "homeric-14-s0-15": {
+      "text": "Heracles",
+      "category": "hero",
+      "hymn_id": "homeric-14",
+      "sentence_index": 0,
+      "confidence": "very_high",
+      "start_char": 15,
+      "end_char": 23
+    },
+    "homeric-16-s0-51": {
+      "text": "the Tyndaridae",
+      "category": "hero",
+      "hymn_id": "homeric-16",
+      "sentence_index": 0,
+      "confidence": "very_high",
+      "start_char": 51,
+      "end_char": 65
+    },
+    "homeric-32-s0-132": {
+      "text": "blameless Polydeuces",
+      "category": "hero",
+      "hymn_id": "homeric-32",
+      "sentence_index": 0,
+      "confidence": "very_high",
+      "start_char": 132,
+      "end_char": 152
+    },
+    "homeric-32-s0-31": {
+      "text": "Tyndaridae",
+      "category": "hero",
+      "hymn_id": "homeric-32",
+      "sentence_index": 0,
+      "confidence": "very_high",
+      "start_char": 31,
+      "end_char": 41
+    },
+    "homeric-32-s0-100": {
+      "text": "Castor",
+      "category": "hero",
+      "hymn_id": "homeric-32",
+      "sentence_index": 0,
+      "confidence": "very_high",
+      "start_char": 100,
+      "end_char": 106
+    }
+  },
+  "contexts": {
+    "homeric-4-s21-103": {
+      "context": "alone in the homestead — [the hero Anchises] who was comely as the",
+      "full_sentence": "But she herself came to the neat-built shelters, and him she found left quite alone in the homestead — the hero Anchises who was comely as the gods."
+    },
+    "homeric-14-s0-15": {
+      "context": "I will sing of [Heracles] , the son of Zeus",
+      "full_sentence": "I will sing of Heracles, the son of Zeus and much the mightiest of men on earth."
+    },
+    "homeric-16-s0-51": {
+      "context": "Muse, of Castor and Polydeuces, [the Tyndaridae] , who sprang from Olympian",
+      "full_sentence": "Sing, clear-voiced Muse, of Castor and Polydeuces, the Tyndaridae, who sprang from Olympian Zeus."
+    },
+    "homeric-32-s0-132": {
+      "context": "the tamer of horses, and [blameless Polydeuces] .",
+      "full_sentence": "Bright-eyed Muses, tell of the Tyndaridae, the Sons of Zeus, glorious children of neat-ankled Leda, Castor the tamer of horses, and blameless Polydeuces."
+    },
+    "homeric-32-s0-31": {
+      "context": "Bright-eyed Muses, tell of the [Tyndaridae] , the Sons of Zeus,",
+      "full_sentence": "Bright-eyed Muses, tell of the Tyndaridae, the Sons of Zeus, glorious children of neat-ankled Leda, Castor the tamer of horses, and blameless Polydeuces."
+    },
+    "homeric-32-s0-100": {
+      "context": "glorious children of neat-ankled Leda, [Castor] the tamer of horses, and",
+      "full_sentence": "Bright-eyed Muses, tell of the Tyndaridae, the Sons of Zeus, glorious children of neat-ankled Leda, Castor the tamer of horses, and blameless Polydeuces."
+    }
+  }
+}

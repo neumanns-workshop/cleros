@@ -1,0 +1,903 @@
+{
+  "spans": {
+    "homeric-2-s11-404": {
+      "text": "gods",
+      "category": "other_divinity",
+      "hymn_id": "homeric-2",
+      "sentence_index": 11,
+      "confidence": "medium",
+      "start_char": 404,
+      "end_char": 408
+    },
+    "homeric-2-s15-28": {
+      "text": "the chiefest of the goddesses",
+      "category": "other_divinity",
+      "hymn_id": "homeric-2",
+      "sentence_index": 15,
+      "confidence": "very_high",
+      "start_char": 28,
+      "end_char": 57
+    },
+    "homeric-2-s15-129": {
+      "text": "the other deathless goddesses",
+      "category": "other_divinity",
+      "hymn_id": "homeric-2",
+      "sentence_index": 15,
+      "confidence": "very_high",
+      "start_char": 129,
+      "end_char": 158
+    },
+    "homeric-2-s17-4": {
+      "text": "the goddesses",
+      "category": "other_divinity",
+      "hymn_id": "homeric-2",
+      "sentence_index": 17,
+      "confidence": "very_high",
+      "start_char": 4,
+      "end_char": 17
+    },
+    "homeric-2-s23-28": {
+      "text": "the goddesses",
+      "category": "other_divinity",
+      "hymn_id": "homeric-2",
+      "sentence_index": 23,
+      "confidence": "very_high",
+      "start_char": 28,
+      "end_char": 41
+    },
+    "homeric-2-s26-42": {
+      "text": "the deathless goddesses",
+      "category": "other_divinity",
+      "hymn_id": "homeric-2",
+      "sentence_index": 26,
+      "confidence": "high",
+      "start_char": 42,
+      "end_char": 65
+    },
+    "homeric-2-s26-280": {
+      "text": "all the goddesses",
+      "category": "other_divinity",
+      "hymn_id": "homeric-2",
+      "sentence_index": 26,
+      "confidence": "high",
+      "start_char": 280,
+      "end_char": 297
+    },
+    "homeric-3-s21-172": {
+      "text": "the blessed gods",
+      "category": "other_divinity",
+      "hymn_id": "homeric-3",
+      "sentence_index": 21,
+      "confidence": "high",
+      "start_char": 172,
+      "end_char": 188
+    },
+    "homeric-4-s17-61": {
+      "text": "the Graces",
+      "category": "other_divinity",
+      "hymn_id": "homeric-4",
+      "sentence_index": 17,
+      "confidence": "very_high",
+      "start_char": 61,
+      "end_char": 71
+    },
+    "homeric-4-s27-247": {
+      "text": "the Graces",
+      "category": "other_divinity",
+      "hymn_id": "homeric-4",
+      "sentence_index": 27,
+      "confidence": "high",
+      "start_char": 247,
+      "end_char": 257
+    },
+    "homeric-4-s27-337": {
+      "text": "the Nymphs",
+      "category": "other_divinity",
+      "hymn_id": "homeric-4",
+      "sentence_index": 27,
+      "confidence": "high",
+      "start_char": 337,
+      "end_char": 347
+    },
+    "homeric-4-s28-1300": {
+      "text": "the families of the deathless gods",
+      "category": "other_divinity",
+      "hymn_id": "homeric-4",
+      "sentence_index": 28,
+      "confidence": "high",
+      "start_char": 1300,
+      "end_char": 1334
+    },
+    "homeric-4-s28-741": {
+      "text": "nymphs",
+      "category": "other_divinity",
+      "hymn_id": "homeric-4",
+      "sentence_index": 28,
+      "confidence": "high",
+      "start_char": 741,
+      "end_char": 747
+    },
+    "homeric-5-s1-117": {
+      "text": "the gold-filleted Hours",
+      "category": "other_divinity",
+      "hymn_id": "homeric-5",
+      "sentence_index": 1,
+      "confidence": "very_high",
+      "start_char": 117,
+      "end_char": 140
+    },
+    "homeric-13-s2-37": {
+      "text": "all goddesses",
+      "category": "other_divinity",
+      "hymn_id": "homeric-13",
+      "sentence_index": 2,
+      "confidence": "very_high",
+      "start_char": 37,
+      "end_char": 50
+    },
+    "homeric-17-s0-120": {
+      "text": "the deathless gods",
+      "category": "other_divinity",
+      "hymn_id": "homeric-17",
+      "sentence_index": 0,
+      "confidence": "very_high",
+      "start_char": 120,
+      "end_char": 138
+    },
+    "homeric-18-s1-38": {
+      "text": "dancing nymphs",
+      "category": "other_divinity",
+      "hymn_id": "homeric-18",
+      "sentence_index": 1,
+      "confidence": "high",
+      "start_char": 38,
+      "end_char": 52
+    },
+    "homeric-18-s5-13": {
+      "text": "the clear-voiced nymphs",
+      "category": "other_divinity",
+      "hymn_id": "homeric-18",
+      "sentence_index": 5,
+      "confidence": "very_high",
+      "start_char": 13,
+      "end_char": 36
+    },
+    "homeric-18-s5-121": {
+      "text": "Echo",
+      "category": "other_divinity",
+      "hymn_id": "homeric-18",
+      "sentence_index": 5,
+      "confidence": "very_high",
+      "start_char": 121,
+      "end_char": 125
+    },
+    "homeric-21-s1-18": {
+      "text": "the gods",
+      "category": "other_divinity",
+      "hymn_id": "homeric-21",
+      "sentence_index": 1,
+      "confidence": "very_high",
+      "start_char": 18,
+      "end_char": 26
+    },
+    "homeric-25-s1-0": {
+      "text": "the rich-haired Nymphs",
+      "category": "other_divinity",
+      "hymn_id": "homeric-25",
+      "sentence_index": 1,
+      "confidence": "very_high",
+      "start_char": 0,
+      "end_char": 22
+    },
+    "homeric-25-s2-9": {
+      "text": "the goddesses",
+      "category": "other_divinity",
+      "hymn_id": "homeric-25",
+      "sentence_index": 2,
+      "confidence": "very_high",
+      "start_char": 9,
+      "end_char": 22
+    },
+    "homeric-25-s3-4": {
+      "text": "the Nymphs",
+      "category": "other_divinity",
+      "hymn_id": "homeric-25",
+      "sentence_index": 3,
+      "confidence": "very_high",
+      "start_char": 4,
+      "end_char": 14
+    },
+    "homeric-31-s0-83": {
+      "text": "long-winged Moon",
+      "category": "other_divinity",
+      "hymn_id": "homeric-31",
+      "sentence_index": 0,
+      "confidence": "very_high",
+      "start_char": 83,
+      "end_char": 99
+    },
+    "homeric-31-s4-123": {
+      "text": "the deathless gods",
+      "category": "other_divinity",
+      "hymn_id": "homeric-31",
+      "sentence_index": 4,
+      "confidence": "very_high",
+      "start_char": 123,
+      "end_char": 141
+    },
+    "orphic-0-s2-131": {
+      "text": "the glorious Nymphs",
+      "category": "other_divinity",
+      "hymn_id": "orphic-0",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 131,
+      "end_char": 150
+    },
+    "orphic-0-s4-9": {
+      "text": "the armed Kouretes",
+      "category": "other_divinity",
+      "hymn_id": "orphic-0",
+      "sentence_index": 4,
+      "confidence": "very_high",
+      "start_char": 9,
+      "end_char": 27
+    },
+    "orphic-0-s4-113": {
+      "text": "the Idaian gods",
+      "category": "other_divinity",
+      "hymn_id": "orphic-0",
+      "sentence_index": 4,
+      "confidence": "very_high",
+      "start_char": 113,
+      "end_char": 128
+    },
+    "orphic-0-s4-29": {
+      "text": "the Korybantes",
+      "category": "other_divinity",
+      "hymn_id": "orphic-0",
+      "sentence_index": 4,
+      "confidence": "very_high",
+      "start_char": 29,
+      "end_char": 43
+    },
+    "orphic-0-s4-49": {
+      "text": "the Kabeiroi",
+      "category": "other_divinity",
+      "hymn_id": "orphic-0",
+      "sentence_index": 4,
+      "confidence": "very_high",
+      "start_char": 49,
+      "end_char": 61
+    },
+    "orphic-0-s8-136": {
+      "text": "divinities dwelling in the sky",
+      "category": "other_divinity",
+      "hymn_id": "orphic-0",
+      "sentence_index": 8,
+      "confidence": "high",
+      "start_char": 136,
+      "end_char": 166
+    },
+    "orphic-0-s8-95": {
+      "text": "Daimon baneful to mortals",
+      "category": "other_divinity",
+      "hymn_id": "orphic-0",
+      "sentence_index": 8,
+      "confidence": "high",
+      "start_char": 95,
+      "end_char": 120
+    },
+    "orphic-0-s8-63": {
+      "text": "the holy Daimon",
+      "category": "other_divinity",
+      "hymn_id": "orphic-0",
+      "sentence_index": 8,
+      "confidence": "high",
+      "start_char": 63,
+      "end_char": 78
+    },
+    "orphic-1-s1-55": {
+      "text": "tomb spirit",
+      "category": "other_divinity",
+      "hymn_id": "orphic-1",
+      "sentence_index": 1,
+      "confidence": "high",
+      "start_char": 55,
+      "end_char": 66
+    },
+    "orphic-3-s4-187": {
+      "text": "dreadful Necessity",
+      "category": "other_divinity",
+      "hymn_id": "orphic-3",
+      "sentence_index": 4,
+      "confidence": "high",
+      "start_char": 187,
+      "end_char": 205
+    },
+    "orphic-7-s0-90": {
+      "text": "holy daimones",
+      "category": "other_divinity",
+      "hymn_id": "orphic-7",
+      "sentence_index": 0,
+      "confidence": "very_high",
+      "start_char": 90,
+      "end_char": 103
+    },
+    "orphic-10-s4-0": {
+      "text": "A rich and mighty divinity",
+      "category": "other_divinity",
+      "hymn_id": "orphic-10",
+      "sentence_index": 4,
+      "confidence": "high",
+      "start_char": 0,
+      "end_char": 26
+    },
+    "orphic-11-s1-64": {
+      "text": "Seasons",
+      "category": "other_divinity",
+      "hymn_id": "orphic-11",
+      "sentence_index": 1,
+      "confidence": "high",
+      "start_char": 64,
+      "end_char": 71
+    },
+    "orphic-15-s1-55": {
+      "text": "goddess",
+      "category": "other_divinity",
+      "hymn_id": "orphic-15",
+      "sentence_index": 1,
+      "confidence": "medium",
+      "start_char": 55,
+      "end_char": 62
+    },
+    "orphic-15-s1-67": {
+      "text": "mother",
+      "category": "other_divinity",
+      "hymn_id": "orphic-15",
+      "sentence_index": 1,
+      "confidence": "medium",
+      "start_char": 67,
+      "end_char": 73
+    },
+    "orphic-21-s0-0": {
+      "text": "Airy Clouds",
+      "category": "other_divinity",
+      "hymn_id": "orphic-21",
+      "sentence_index": 0,
+      "confidence": "very_high",
+      "start_char": 0,
+      "end_char": 11
+    },
+    "orphic-22-s2-76": {
+      "text": "nymphs",
+      "category": "other_divinity",
+      "hymn_id": "orphic-22",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 76,
+      "end_char": 82
+    },
+    "orphic-30-s2-36": {
+      "text": "you and your fair-girdled nurses",
+      "category": "other_divinity",
+      "hymn_id": "orphic-30",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 36,
+      "end_char": 68
+    },
+    "orphic-39-s0-117": {
+      "text": "the nocturnal Koures",
+      "category": "other_divinity",
+      "hymn_id": "orphic-39",
+      "sentence_index": 0,
+      "confidence": "very_high",
+      "start_char": 117,
+      "end_char": 137
+    },
+    "orphic-39-s2-32": {
+      "text": "your twofold divinity",
+      "category": "other_divinity",
+      "hymn_id": "orphic-39",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 32,
+      "end_char": 53
+    },
+    "orphic-41-s0-47": {
+      "text": "immortal gods",
+      "category": "other_divinity",
+      "hymn_id": "orphic-41",
+      "sentence_index": 0,
+      "confidence": "high",
+      "start_char": 47,
+      "end_char": 60
+    },
+    "orphic-43-s0-0": {
+      "text": "Seasons",
+      "category": "other_divinity",
+      "hymn_id": "orphic-43",
+      "sentence_index": 0,
+      "confidence": "very_high",
+      "start_char": 0,
+      "end_char": 7
+    },
+    "orphic-43-s0-54": {
+      "text": "Eunomia",
+      "category": "other_divinity",
+      "hymn_id": "orphic-43",
+      "sentence_index": 0,
+      "confidence": "very_high",
+      "start_char": 54,
+      "end_char": 61
+    },
+    "orphic-43-s0-66": {
+      "text": "Dike",
+      "category": "other_divinity",
+      "hymn_id": "orphic-43",
+      "sentence_index": 0,
+      "confidence": "very_high",
+      "start_char": 66,
+      "end_char": 70
+    },
+    "orphic-43-s2-66": {
+      "text": "the Graces",
+      "category": "other_divinity",
+      "hymn_id": "orphic-43",
+      "sentence_index": 2,
+      "confidence": "very_high",
+      "start_char": 66,
+      "end_char": 76
+    },
+    "orphic-43-s2-52": {
+      "text": "the Fates",
+      "category": "other_divinity",
+      "hymn_id": "orphic-43",
+      "sentence_index": 2,
+      "confidence": "very_high",
+      "start_char": 52,
+      "end_char": 61
+    },
+    "orphic-45-s1-49": {
+      "text": "holy Maenads",
+      "category": "other_divinity",
+      "hymn_id": "orphic-45",
+      "sentence_index": 1,
+      "confidence": "very_high",
+      "start_char": 49,
+      "end_char": 61
+    },
+    "orphic-46-s1-76": {
+      "text": "the graceful Nymphs",
+      "category": "other_divinity",
+      "hymn_id": "orphic-46",
+      "sentence_index": 1,
+      "confidence": "very_high",
+      "start_char": 76,
+      "end_char": 95
+    },
+    "orphic-51-s0-2": {
+      "text": "Nymphs",
+      "category": "other_divinity",
+      "hymn_id": "orphic-51",
+      "sentence_index": 0,
+      "confidence": "very_high",
+      "start_char": 2,
+      "end_char": 8
+    },
+    "orphic-51-s4-77": {
+      "text": "Hamadryad maidens",
+      "category": "other_divinity",
+      "hymn_id": "orphic-51",
+      "sentence_index": 4,
+      "confidence": "very_high",
+      "start_char": 77,
+      "end_char": 94
+    },
+    "orphic-53-s0-83": {
+      "text": "the fair-tressed Nymphs",
+      "category": "other_divinity",
+      "hymn_id": "orphic-53",
+      "sentence_index": 0,
+      "confidence": "high",
+      "start_char": 83,
+      "end_char": 106
+    },
+    "orphic-55-s5-164": {
+      "text": "dark-faced nymphs",
+      "category": "other_divinity",
+      "hymn_id": "orphic-55",
+      "sentence_index": 5,
+      "confidence": "high",
+      "start_char": 164,
+      "end_char": 181
+    },
+    "orphic-56-s2-0": {
+      "text": "Two-horned spirit of growth",
+      "category": "other_divinity",
+      "hymn_id": "orphic-56",
+      "sentence_index": 2,
+      "confidence": "very_high",
+      "start_char": 0,
+      "end_char": 27
+    },
+    "orphic-59-s0-376": {
+      "text": "glory",
+      "category": "other_divinity",
+      "hymn_id": "orphic-59",
+      "sentence_index": 0,
+      "confidence": "high",
+      "start_char": 376,
+      "end_char": 381
+    },
+    "orphic-59-s1-28": {
+      "text": "the other immortals",
+      "category": "other_divinity",
+      "hymn_id": "orphic-59",
+      "sentence_index": 1,
+      "confidence": "high",
+      "start_char": 28,
+      "end_char": 47
+    },
+    "orphic-60-s0-65": {
+      "text": "full-bosomed Eunomia",
+      "category": "other_divinity",
+      "hymn_id": "orphic-60",
+      "sentence_index": 0,
+      "confidence": "high",
+      "start_char": 65,
+      "end_char": 85
+    },
+    "orphic-60-s0-103": {
+      "text": "blessed Euphrosyne",
+      "category": "other_divinity",
+      "hymn_id": "orphic-60",
+      "sentence_index": 0,
+      "confidence": "high",
+      "start_char": 103,
+      "end_char": 121
+    },
+    "orphic-60-s0-87": {
+      "text": "Aglaia",
+      "category": "other_divinity",
+      "hymn_id": "orphic-60",
+      "sentence_index": 0,
+      "confidence": "very_high",
+      "start_char": 87,
+      "end_char": 93
+    },
+    "orphic-60-s0-95": {
+      "text": "Thalia",
+      "category": "other_divinity",
+      "hymn_id": "orphic-60",
+      "sentence_index": 0,
+      "confidence": "very_high",
+      "start_char": 95,
+      "end_char": 101
+    },
+    "orphic-65-s0-47": {
+      "text": "daimon",
+      "category": "other_divinity",
+      "hymn_id": "orphic-65",
+      "sentence_index": 0,
+      "confidence": "high",
+      "start_char": 47,
+      "end_char": 53
+    },
+    "orphic-69-s3-65": {
+      "text": "phantoms airy",
+      "category": "other_divinity",
+      "hymn_id": "orphic-69",
+      "sentence_index": 3,
+      "confidence": "high",
+      "start_char": 65,
+      "end_char": 78
+    },
+    "orphic-70-s1-58": {
+      "text": "in charge of Necessity",
+      "category": "other_divinity",
+      "hymn_id": "orphic-70",
+      "sentence_index": 1,
+      "confidence": "high",
+      "start_char": 58,
+      "end_char": 80
+    },
+    "orphic-70-s3-133": {
+      "text": "maidens of the night",
+      "category": "other_divinity",
+      "hymn_id": "orphic-70",
+      "sentence_index": 3,
+      "confidence": "very_high",
+      "start_char": 133,
+      "end_char": 153
+    },
+    "orphic-78-s1-0": {
+      "text": "Murky, dark, journeying night",
+      "category": "other_divinity",
+      "hymn_id": "orphic-78",
+      "sentence_index": 1,
+      "confidence": "very_high",
+      "start_char": 0,
+      "end_char": 29
+    }
+  },
+  "contexts": {
+    "homeric-2-s11-404": {
+      "context": "will greatly lord it among [gods] and men all over the",
+      "full_sentence": "And Delos rejoiced and answered and said: 'Leto, most glorious daughter of great Coeus, joyfully would I receive your child the far-shooting lord; for it is all too true that I am ill-spoken of among men, whereas thus I should become very greatly honored. But this saying I fear, and I will not hide it from you, Leto. They say that Apollo will be one that is very haughty and will greatly lord it among gods and men all over the fruitful earth. Therefore, I greatly fear in heart and spirit that as soon as he sees the light of the sun, he will scorn this island — for truly I have but a hard, rocky soil — and overturn me and thrust me down with his feet in the depths of the sea; then will the great ocean wash deep above my head for ever, and he will go to another land such as will please him, there to make his temple and wooded groves. So many-footed creatures of the sea will make their lairs in me and black seals their dwellings undisturbed, because I lack people. Yet if you will but dare to swear a great oath, goddess, that here first he will build a glorious temple to be an oracle for men, then let him afterwards make temples and wooded groves amongst all men; for surely he will be greatly renowned.' So said Delos."
+    },
+    "homeric-2-s15-28": {
+      "context": "there were with her all [the chiefest of the goddesses] , Dione and Rhea and",
+      "full_sentence": "And there were with her all the chiefest of the goddesses, Dione and Rhea and Ichnaea and Themis and loud-moaning Amphitrite and the other deathless goddesses save white-armed Hera, who sat in the halls of cloud-gathering Zeus."
+    },
+    "homeric-2-s15-129": {
+      "context": "Themis and loud-moaning Amphitrite and [the other deathless goddesses] save white-armed Hera, who sat",
+      "full_sentence": "And there were with her all the chiefest of the goddesses, Dione and Rhea and Ichnaea and Themis and loud-moaning Amphitrite and the other deathless goddesses save white-armed Hera, who sat in the halls of cloud-gathering Zeus."
+    },
+    "homeric-2-s17-4": {
+      "context": "But [the goddesses] sent out Iris from the",
+      "full_sentence": "But the goddesses sent out Iris from the well-set isle to bring Eilithyia, promising her a great necklace strung with golden threads, nine cubits long."
+    },
+    "homeric-2-s23-28": {
+      "context": "Straightway, great Phoebus, [the goddesses] washed you purely and cleanly",
+      "full_sentence": "Straightway, great Phoebus, the goddesses washed you purely and cleanly with sweet water, and swathed you in a white garment of fine texture, new-woven, and fastened a golden band about you."
+    },
+    "homeric-2-s26-42": {
+      "context": "Phoebus Apollo spoke out among [the deathless goddesses] : 'The lyre and the",
+      "full_sentence": "Forth-with Phoebus Apollo spoke out among the deathless goddesses: 'The lyre and the curved bow shall ever be dear to me, and I will declare to men the unfailing will of Zeus.' So said Phoebus, the long-haired god who shoots afar and began to walk upon the wide-pathed earth; and all the goddesses were amazed at him."
+    },
+    "homeric-2-s26-280": {
+      "context": "upon the wide-pathed earth; and [all the goddesses] were amazed at him.",
+      "full_sentence": "Forth-with Phoebus Apollo spoke out among the deathless goddesses: 'The lyre and the curved bow shall ever be dear to me, and I will declare to men the unfailing will of Zeus.' So said Phoebus, the long-haired god who shoots afar and began to walk upon the wide-pathed earth; and all the goddesses were amazed at him."
+    },
+    "homeric-3-s21-172": {
+      "context": "where the divine cattle of [the blessed gods] had their steads and grazed",
+      "full_sentence": "The Sun was going down beneath the earth towards Ocean with his horses and chariot when Hermes came hurrying to the shadowy mountains of Pieria, where the divine cattle of the blessed gods had their steads and grazed the pleasant, unmown meadows."
+    },
+    "homeric-4-s17-61": {
+      "context": "the glittering doors, and there [the Graces] bathed her with heavenly oil",
+      "full_sentence": "There she went in and put to the glittering doors, and there the Graces bathed her with heavenly oil such as blooms upon the bodies of the eternal gods — oil divinely sweet, which she had by her, filled with fragrance."
+    },
+    "homeric-4-s27-247": {
+      "context": "maybe, you are one of [the Graces] come hither, who bear the",
+      "full_sentence": "And Anchises was seized with love, and said to her: 'Hail, lady, whoever of the blessed ones you are that are come to this house, whether Artemis, or Leto, or golden Aphrodite, or high-born Themis, or bright-eyed Athena. Or, maybe, you are one of the Graces come hither, who bear the gods company and are called immortal, or else one of the Nymphs who haunt the pleasant woods, or of those who inhabit this lovely mountain and the springs of rivers and grassy meads. I will make you an altar upon a high peak in a far seen place, and will sacrifice rich offerings to you at all seasons. And do you feel kindly towards me and grant that I may become a man very eminent among the Trojans, and give me strong offspring for the time to come. As for my own self, let me live long and happily, seeing the light of the sun, and come to the threshold of old age, a man prosperous among the people.'"
+    },
+    "homeric-4-s27-337": {
+      "context": "immortal, or else one of [the Nymphs] who haunt the pleasant woods,",
+      "full_sentence": "And Anchises was seized with love, and said to her: 'Hail, lady, whoever of the blessed ones you are that are come to this house, whether Artemis, or Leto, or golden Aphrodite, or high-born Themis, or bright-eyed Athena. Or, maybe, you are one of the Graces come hither, who bear the gods company and are called immortal, or else one of the Nymphs who haunt the pleasant woods, or of those who inhabit this lovely mountain and the springs of rivers and grassy meads. I will make you an altar upon a high peak in a far seen place, and will sacrifice rich offerings to you at all seasons. And do you feel kindly towards me and grant that I may become a man very eminent among the Trojans, and give me strong offspring for the time to come. As for my own self, let me live long and happily, seeing the light of the sun, and come to the threshold of old age, a man prosperous among the people.'"
+    },
+    "homeric-4-s28-1300": {
+      "context": "of Argos, went back to [the families of the deathless gods] ...",
+      "full_sentence": "Thereupon Aphrodite the daughter of Zeus answered him: 'Anchises, most glorious of all men born on earth, know that I am no goddess: why do you liken me to the deathless ones. Nay, I am but a mortal, and a woman was the mother that bare me. Otreus of famous name is my father, if so be you have heard of him, and he reigns over all Phrygia rich in fortresses. But I know your speech well beside my own, for a Trojan nurse brought me up at home: she took me from my dear mother and reared me thenceforth when I was a little child. So comes it, then, that I well know your tongue also. And now the Slayer of Argus with the golden wand has caught me up from the dance of huntress Artemis, her with the golden arrows. For there were many of us, nymphs and marriageable  maidens, playing together; and an innumerable company encircled us: from these the Slayer of Argus with the golden wand rapt me away. He carried me over many fields of mortal men and over much land untilled and unpossessed, where savage wild-beasts roam through shady coombes, until I thought never again to touch the life-giving earth with my feet. And he said that I should be called the wedded wife of Anchises, and should bear you goodly children. But when he had told and advised me, he, the strong Slayer of Argos, went back to the families of the deathless gods..."
+    },
+    "homeric-4-s28-741": {
+      "context": "there were many of us, [nymphs] and marriageable maidens, playing together;",
+      "full_sentence": "Thereupon Aphrodite the daughter of Zeus answered him: 'Anchises, most glorious of all men born on earth, know that I am no goddess: why do you liken me to the deathless ones. Nay, I am but a mortal, and a woman was the mother that bare me. Otreus of famous name is my father, if so be you have heard of him, and he reigns over all Phrygia rich in fortresses. But I know your speech well beside my own, for a Trojan nurse brought me up at home: she took me from my dear mother and reared me thenceforth when I was a little child. So comes it, then, that I well know your tongue also. And now the Slayer of Argus with the golden wand has caught me up from the dance of huntress Artemis, her with the golden arrows. For there were many of us, nymphs and marriageable  maidens, playing together; and an innumerable company encircled us: from these the Slayer of Argus with the golden wand rapt me away. He carried me over many fields of mortal men and over much land untilled and unpossessed, where savage wild-beasts roam through shady coombes, until I thought never again to touch the life-giving earth with my feet. And he said that I should be called the wedded wife of Anchises, and should bear you goodly children. But when he had told and advised me, he, the strong Slayer of Argos, went back to the families of the deathless gods..."
+    },
+    "homeric-5-s1-117": {
+      "context": "in soft foam, and there [the gold-filleted Hours] welcomed her joyously.",
+      "full_sentence": "There the moist breath of the western wind wafted her over the waves of the loud-moaning sea in soft foam, and there the gold-filleted Hours welcomed her joyously."
+    },
+    "homeric-13-s2-37": {
+      "context": "in my song and to [all goddesses] as well.",
+      "full_sentence": "And so hail to you in my song and to all goddesses as well."
+    },
+    "homeric-17-s0-120": {
+      "context": "in flocks, luck-bringing messenger of [the deathless gods] .",
+      "full_sentence": "I sing of Cyllenian Hermes, the Slayer of Argus, lord of Cyllene and Arcadia rich in flocks, luck-bringing messenger of the deathless gods."
+    },
+    "homeric-18-s1-38": {
+      "context": "wooded glades he wanders with [dancing nymphs] who foot it on some",
+      "full_sentence": "Through wooded glades he wanders with dancing nymphs who foot it on some sheer cliff's edge, calling upon Pan, the shepherd-god, long-haired, unkempt."
+    },
+    "homeric-18-s5-13": {
+      "context": "At that hour [the clear-voiced nymphs] are with him and move",
+      "full_sentence": "At that hour the clear-voiced nymphs are with him and move with nimble feet, singing by some spring of dark water, while Echo wails about the mountain-top, and the god on this side or on that of the choirs, or at times sidling into the midst, plies it nimbly with his feet."
+    },
+    "homeric-18-s5-121": {
+      "context": "spring of dark water, while [Echo] wails about the mountain-top, and",
+      "full_sentence": "At that hour the clear-voiced nymphs are with him and move with nimble feet, singing by some spring of dark water, while Echo wails about the mountain-top, and the god on this side or on that of the choirs, or at times sidling into the midst, plies it nimbly with his feet."
+    },
+    "homeric-21-s1-18": {
+      "context": "A two-fold office [the gods] allotted you, O Shaker of",
+      "full_sentence": "A two-fold office the gods allotted you, O Shaker of the Earth, to be a tamer of horses and a saviour of ships."
+    },
+    "homeric-25-s1-0": {
+      "context": "[The rich-haired Nymphs] received him in their bosoms",
+      "full_sentence": "The rich-haired Nymphs received him in their bosoms from the lord his father and fostered and nurtured him carefully in the dells of Nysa, where by the will of his father he grew up in a sweet-smelling cave, being reckoned among the immortals."
+    },
+    "homeric-25-s2-9": {
+      "context": "But when [the goddesses] had brought him up, a",
+      "full_sentence": "But when the goddesses had brought him up, a god oft hymned, then began he to wander continually through the woody coombes, thickly wreathed with ivy and laurel."
+    },
+    "homeric-25-s3-4": {
+      "context": "And [the Nymphs] followed in his train with",
+      "full_sentence": "And the Nymphs followed in his train with him for their leader; and the boundless forest was filled with their outcry."
+    },
+    "homeric-31-s0-83": {
+      "context": "in song, tell of the [long-winged Moon] .",
+      "full_sentence": "And next, sweet voiced Muses, daughters of Zeus, well-skilled in song, tell of the long-winged Moon."
+    },
+    "homeric-31-s4-123": {
+      "context": "daughter Pandia, exceeding lovely amongst [the deathless gods] .",
+      "full_sentence": "Once the Son of Cronos was joined with her in love; and she conceived and bare a daughter Pandia, exceeding lovely amongst the deathless gods."
+    },
+    "orphic-0-s2-131": {
+      "context": "and Piety, I call upon [the glorious Nymphs] and upon Pan the greatest,",
+      "full_sentence": "I call on Hebe, and Eileithyia, and the noble ardor of Herakles, I call upon the great blessings of Justice and Piety, I call upon the glorious Nymphs and upon Pan the greatest, I call upon Hera, buxom wife of aegis-bearing Zeus."
+    },
+    "orphic-0-s4-9": {
+      "context": "I invoke [the armed Kouretes] , the Korybantes, and the",
+      "full_sentence": "I invoke the armed Kouretes, the Korybantes, and the Kabeiroi, the great Saviors, Zeus' ageless scions, I invoke the Idaian gods, and Hermes, messenger and herald."
+    },
+    "orphic-0-s4-113": {
+      "context": "Zeus' ageless scions, I invoke [the Idaian gods] , and Hermes, messenger and",
+      "full_sentence": "I invoke the armed Kouretes, the Korybantes, and the Kabeiroi, the great Saviors, Zeus' ageless scions, I invoke the Idaian gods, and Hermes, messenger and herald."
+    },
+    "orphic-0-s4-29": {
+      "context": "I invoke the armed Kouretes, [the Korybantes] , and the Kabeiroi, the",
+      "full_sentence": "I invoke the armed Kouretes, the Korybantes, and the Kabeiroi, the great Saviors, Zeus' ageless scions, I invoke the Idaian gods, and Hermes, messenger and herald."
+    },
+    "orphic-0-s4-49": {
+      "context": "armed Kouretes, the Korybantes, and [the Kabeiroi] , the great Saviors, Zeus'",
+      "full_sentence": "I invoke the armed Kouretes, the Korybantes, and the Kabeiroi, the great Saviors, Zeus' ageless scions, I invoke the Idaian gods, and Hermes, messenger and herald."
+    },
+    "orphic-0-s8-136": {
+      "context": "to mortals, then I invoke [divinities dwelling in the sky] , in the air, in",
+      "full_sentence": "I call on all these gentle gods, and I call on Pronoia, and on the holy Daimon, I also call on Daimon baneful to mortals, then I invoke divinities dwelling in the sky, in the air, in the water, on earth, under the earth, and in the fiery element."
+    },
+    "orphic-0-s8-95": {
+      "context": "Daimon, I also call on [Daimon baneful to mortals] , then I invoke divinities",
+      "full_sentence": "I call on all these gentle gods, and I call on Pronoia, and on the holy Daimon, I also call on Daimon baneful to mortals, then I invoke divinities dwelling in the sky, in the air, in the water, on earth, under the earth, and in the fiery element."
+    },
+    "orphic-0-s8-63": {
+      "context": "call on Pronoia, and on [the holy Daimon] , I also call on",
+      "full_sentence": "I call on all these gentle gods, and I call on Pronoia, and on the holy Daimon, I also call on Daimon baneful to mortals, then I invoke divinities dwelling in the sky, in the air, in the water, on earth, under the earth, and in the fiery element."
+    },
+    "orphic-1-s1-55": {
+      "context": "then in the sea, saffron-cloaked, [tomb spirit] reveling in the souls of",
+      "full_sentence": "In heaven, on earth, then in the sea, saffron-cloaked, tomb spirit reveling in the souls of the dead, daughter of Perses, haunting deserted places, delighting in deer, nocturnal, dog-loving, monstrous queen, devouring wild beasts, ungirt and repulsive."
+    },
+    "orphic-3-s4-187": {
+      "context": "you flee into Hades, for [dreadful Necessity] governs all things.",
+      "full_sentence": "Ever incomplete, terrestrial, and then again celestial, you circle around in pursuit of sprightly phantoms, you force light into the nether world, and then again you flee into Hades, for dreadful Necessity governs all things."
+    },
+    "orphic-7-s0-90": {
+      "context": "devotional prayers I summon the [holy daimones] .",
+      "full_sentence": "I call forth the sacred light of the heavenly Stars, with devotional prayers I summon the holy daimones."
+    },
+    "orphic-10-s4-0": {
+      "context": "[A rich and mighty divinity] , you give shape and",
+      "full_sentence": "A rich and mighty divinity, you give shape and form to all things."
+    },
+    "orphic-11-s1-64": {
+      "context": "O restless companion of the [Seasons] !",
+      "full_sentence": "Come, O blessed and frolicsome one, O restless companion of the Seasons!"
+    },
+    "orphic-15-s1-55": {
+      "context": "to light divine works, earth, [goddess] and mother, the hills swept",
+      "full_sentence": "O king, you have brought to light divine works, earth, goddess and mother, the hills swept by the shrill winds, the sea and the host of the stars, marshaled by the sky."
+    },
+    "orphic-15-s1-67": {
+      "context": "divine works, earth, goddess and [mother] , the hills swept by",
+      "full_sentence": "O king, you have brought to light divine works, earth, goddess and mother, the hills swept by the shrill winds, the sea and the host of the stars, marshaled by the sky."
+    },
+    "orphic-21-s0-0": {
+      "context": "[Airy Clouds] , you nourish fruits and",
+      "full_sentence": "Airy Clouds, you nourish fruits and rove the sky, you bring rain as you are driven everywhere by the wind."
+    },
+    "orphic-22-s2-76": {
+      "context": "of every spring round which [nymphs] swarm, hear me, O holy",
+      "full_sentence": "Mother of Kypris, mother of dark clouds, mother of every spring round which nymphs swarm, hear me, O holy one, please help, send a fair tail wind to ships, O blessed one."
+    },
+    "orphic-30-s2-36": {
+      "context": "my voice, O blessed one, [you and your fair-girdled nurses] , breathe on me in",
+      "full_sentence": "Hearken to my voice, O blessed one, you and your fair-girdled nurses, breathe on me in a spirit of perfect kindness."
+    },
+    "orphic-39-s0-117": {
+      "context": "one of the forbidding countenance, [the nocturnal Koures] who saves us from dreadful",
+      "full_sentence": "I call upon the greatest king of eternal earth, blessed Korybas, the warlike, the one of the forbidding countenance, the nocturnal Koures who saves us from dreadful fear."
+    },
+    "orphic-39-s2-32": {
+      "context": "the shapes, O lord, of [your twofold divinity] ; your blood is tainted",
+      "full_sentence": "Many are the shapes, O lord, of your twofold divinity; your blood is tainted with the murder of twin brothers."
+    },
+    "orphic-41-s0-47": {
+      "context": "goddess and many-named mother of [immortal gods] and of mortal men, weary",
+      "full_sentence": "Queen Antaia, goddess and many-named mother of immortal gods and of mortal men, weary from searching, weary from wandering far and wide, you once ended your fast in the valley of Eleusis, you came to Hades for noble Persephone."
+    },
+    "orphic-43-s0-0": {
+      "context": "[Seasons] , daughters of Themis, daughters",
+      "full_sentence": "Seasons, daughters of Themis, daughters of Lord Zeus, Eunomia and Dike and thrice-blessed Eirene, pure spirits of spring, of blossoming meadows, you are found in every color, in all scents wafted by the breezes."
+    },
+    "orphic-43-s0-54": {
+      "context": "Themis, daughters of Lord Zeus, [Eunomia] and Dike and thrice-blessed Eirene,",
+      "full_sentence": "Seasons, daughters of Themis, daughters of Lord Zeus, Eunomia and Dike and thrice-blessed Eirene, pure spirits of spring, of blossoming meadows, you are found in every color, in all scents wafted by the breezes."
+    },
+    "orphic-43-s0-66": {
+      "context": "of Lord Zeus, Eunomia and [Dike] and thrice-blessed Eirene, pure spirits",
+      "full_sentence": "Seasons, daughters of Themis, daughters of Lord Zeus, Eunomia and Dike and thrice-blessed Eirene, pure spirits of spring, of blossoming meadows, you are found in every color, in all scents wafted by the breezes."
+    },
+    "orphic-43-s2-66": {
+      "context": "Persephone, when the Fates and [the Graces] in circling dances come forth",
+      "full_sentence": "At play you are companions of holy Persephone, when the Fates and the Graces in circling dances come forth to the light, pleasing Zeus and their mother, giver of fruits."
+    },
+    "orphic-43-s2-52": {
+      "context": "companions of holy Persephone, when [the Fates] and the Graces in circling",
+      "full_sentence": "At play you are companions of holy Persephone, when the Fates and the Graces in circling dances come forth to the light, pleasing Zeus and their mother, giver of fruits."
+    },
+    "orphic-45-s1-49": {
+      "context": "swords, you delight in the [holy Maenads] , as you howl throughout",
+      "full_sentence": "You delight in bloody swords, you delight in the holy Maenads, as you howl throughout Olympos, all-roaring and frenzied Bacchos."
+    },
+    "orphic-46-s1-76": {
+      "context": "as frenzy drove you and [the graceful Nymphs] on and on.",
+      "full_sentence": "The forests once felt your feet quiver in the dance as frenzy drove you and the graceful Nymphs on and on."
+    },
+    "orphic-51-s0-2": {
+      "context": "O [Nymphs] , daughters of great-hearted Okeanos,",
+      "full_sentence": "O Nymphs, daughters of great-hearted Okeanos, you dwell inside the earth's damp caves; you are as secret as your paths, O joyous, O chthonic nurses of Bacchos."
+    },
+    "orphic-51-s4-77": {
+      "context": "many, you help them grow, [Hamadryad maidens] , playful, water-loving.",
+      "full_sentence": "Though you are tender, cold delights you; you feed many, you help them grow, Hamadryad maidens, playful, water-loving."
+    },
+    "orphic-53-s0-83": {
+      "context": "annually, chthonic Dionysos, together with [the fair-tressed Nymphs] he is roused.",
+      "full_sentence": "I call upon Bacchos, the god we worship annually, chthonic Dionysos, together with the fair-tressed Nymphs he is roused."
+    },
+    "orphic-55-s5-164": {
+      "context": "in the company of the [dark-faced nymphs] as light-footed they frisk over",
+      "full_sentence": "Come, whether you ride your swan-drawn chariot over the sea's billows, joining the creatures of the deep as they dance in circles, or on land in the company of the dark-faced nymphs as light-footed they frisk over the sandy beaches."
+    },
+    "orphic-56-s2-0": {
+      "context": "[Two-horned spirit of growth] , much loved and wept",
+      "full_sentence": "Two-horned spirit of growth, much loved and wept for, fair one, joyful hunter, god of the luxuriant mane, desire is in you, O sweet blossom, O son of Aphrodite and Eros, born on the bed of lovely-tressed Persephone."
+    },
+    "orphic-59-s0-376": {
+      "context": "realm of the dead, where [glory] drives her chariot on all",
+      "full_sentence": "Boundless Fates, dear children of dark Night, hear my prayer, O many-named dwellers on the lake of heaven, where the frozen water is broken by night's warmth in the shady hollow of a sleek cave; from there you fly to the vast earth, home of mortals, from there, clothed in purple, you march toward men, whose noble aims match their vain hopes, in the realm of the dead, where glory drives her chariot on all over the earthbeyond the ends of Justice, of anxious hope, of primeval law, of the measureless principle of order."
+    },
+    "orphic-59-s1-28": {
+      "context": "In life Fate alone watches; [the other immortals] who dwell on the peaks",
+      "full_sentence": "In life Fate alone watches; the other immortals who dwell on the peaks of snowy Olympos do not, except for Zeus' perfect eye."
+    },
+    "orphic-60-s0-65": {
+      "context": "Graces, daughters of Zeus and [full-bosomed Eunomia] , Aglaia, Thalia, blessed Euphrosyne,",
+      "full_sentence": "Hear me, O illustrious, O renowned Graces, daughters of Zeus and full-bosomed Eunomia, Aglaia, Thalia, blessed Euphrosyne, lovely, wise, and pure mothers of joy, many-shaped, ever-blooming, beloved of mortals."
+    },
+    "orphic-60-s0-103": {
+      "context": "and full-bosomed Eunomia, Aglaia, Thalia, [blessed Euphrosyne] , lovely, wise, and pure",
+      "full_sentence": "Hear me, O illustrious, O renowned Graces, daughters of Zeus and full-bosomed Eunomia, Aglaia, Thalia, blessed Euphrosyne, lovely, wise, and pure mothers of joy, many-shaped, ever-blooming, beloved of mortals."
+    },
+    "orphic-60-s0-87": {
+      "context": "of Zeus and full-bosomed Eunomia, [Aglaia] , Thalia, blessed Euphrosyne, lovely,",
+      "full_sentence": "Hear me, O illustrious, O renowned Graces, daughters of Zeus and full-bosomed Eunomia, Aglaia, Thalia, blessed Euphrosyne, lovely, wise, and pure mothers of joy, many-shaped, ever-blooming, beloved of mortals."
+    },
+    "orphic-60-s0-95": {
+      "context": "Zeus and full-bosomed Eunomia, Aglaia, [Thalia] , blessed Euphrosyne, lovely, wise,",
+      "full_sentence": "Hear me, O illustrious, O renowned Graces, daughters of Zeus and full-bosomed Eunomia, Aglaia, Thalia, blessed Euphrosyne, lovely, wise, and pure mothers of joy, many-shaped, ever-blooming, beloved of mortals."
+    },
+    "orphic-65-s0-47": {
+      "context": "Unbreakable, strong-spirited, mighty, powerful [daimon] , delighting in arms, indomitable,",
+      "full_sentence": "Unbreakable, strong-spirited, mighty, powerful daimon, delighting in arms, indomitable, man-slaying, wall-battering, lord Ares, yours is the din of arms."
+    },
+    "orphic-69-s3-65": {
+      "context": "your realm is in Hades, [phantoms airy] , invisible, swift as thought",
+      "full_sentence": "O dreaded maidens of the thousand faces, your realm is in Hades, phantoms airy, invisible, swift as thought you are."
+    },
+    "orphic-70-s1-58": {
+      "context": "you keep a careful eye, [in charge of Necessity] , you punish the unjust.",
+      "full_sentence": "Over the lives of impious mortals you keep a careful eye, in charge of Necessity, you punish the unjust."
+    },
+    "orphic-70-s3-133": {
+      "context": "hideous, nocturnal, fateful, snake-haired, terrible [maidens of the night] , it is you I",
+      "full_sentence": "Everlasting, repugnant, frightful, sovereign, paralyzing the limbs with madness, hideous, nocturnal, fateful, snake-haired, terrible maidens of the night, it is you I summon to bring me holiness of mind."
+    },
+    "orphic-78-s1-0": {
+      "context": "[Murky, dark, journeying night] you send below the earth",
+      "full_sentence": "Murky, dark, journeying night you send below the earth when you arrive; mortal men you lead to work as you tend to their lives."
+    }
+  }
+}

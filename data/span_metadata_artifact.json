@@ -1,0 +1,2502 @@
+{
+  "spans": {
+    "homeric-1-s3-174": {
+      "text": "his immortal horses",
+      "category": "artifact",
+      "hymn_id": "homeric-1",
+      "sentence_index": 3,
+      "confidence": "high",
+      "start_char": 174,
+      "end_char": 193
+    },
+    "homeric-1-s3-64": {
+      "text": "the lovely toy",
+      "category": "artifact",
+      "hymn_id": "homeric-1",
+      "sentence_index": 3,
+      "confidence": "high",
+      "start_char": 64,
+      "end_char": 78
+    },
+    "homeric-1-s4-30": {
+      "text": "his golden car",
+      "category": "artifact",
+      "hymn_id": "homeric-1",
+      "sentence_index": 4,
+      "confidence": "high",
+      "start_char": 30,
+      "end_char": 44
+    },
+    "homeric-1-s7-92": {
+      "text": "sweet offerings",
+      "category": "artifact",
+      "hymn_id": "homeric-1",
+      "sentence_index": 7,
+      "confidence": "high",
+      "start_char": 92,
+      "end_char": 107
+    },
+    "homeric-1-s8-126": {
+      "text": "immortal chariot",
+      "category": "artifact",
+      "hymn_id": "homeric-1",
+      "sentence_index": 8,
+      "confidence": "high",
+      "start_char": 126,
+      "end_char": 142
+    },
+    "homeric-1-s10-98": {
+      "text": "her dark cloak",
+      "category": "artifact",
+      "hymn_id": "homeric-1",
+      "sentence_index": 10,
+      "confidence": "high",
+      "start_char": 98,
+      "end_char": 112
+    },
+    "homeric-1-s12-140": {
+      "text": "sweet draught of nectar",
+      "category": "artifact",
+      "hymn_id": "homeric-1",
+      "sentence_index": 12,
+      "confidence": "high",
+      "start_char": 140,
+      "end_char": 163
+    },
+    "homeric-1-s12-60": {
+      "text": "flaming torches",
+      "category": "artifact",
+      "hymn_id": "homeric-1",
+      "sentence_index": 12,
+      "confidence": "high",
+      "start_char": 60,
+      "end_char": 75
+    },
+    "homeric-1-s12-123": {
+      "text": "ambrosia",
+      "category": "artifact",
+      "hymn_id": "homeric-1",
+      "sentence_index": 12,
+      "confidence": "high",
+      "start_char": 123,
+      "end_char": 131
+    },
+    "homeric-1-s13-62": {
+      "text": "torch",
+      "category": "artifact",
+      "hymn_id": "homeric-1",
+      "sentence_index": 13,
+      "confidence": "high",
+      "start_char": 62,
+      "end_char": 67
+    },
+    "homeric-1-s16-897": {
+      "text": "swift chariot",
+      "category": "artifact",
+      "hymn_id": "homeric-1",
+      "sentence_index": 16,
+      "confidence": "high",
+      "start_char": 897,
+      "end_char": 910
+    },
+    "homeric-1-s16-394": {
+      "text": "his chariot",
+      "category": "artifact",
+      "hymn_id": "homeric-1",
+      "sentence_index": 16,
+      "confidence": "high",
+      "start_char": 394,
+      "end_char": 405
+    },
+    "homeric-1-s16-841": {
+      "text": "his horses",
+      "category": "artifact",
+      "hymn_id": "homeric-1",
+      "sentence_index": 16,
+      "confidence": "high",
+      "start_char": 841,
+      "end_char": 851
+    },
+    "homeric-1-s21-113": {
+      "text": "pitchers of bronze",
+      "category": "artifact",
+      "hymn_id": "homeric-1",
+      "sentence_index": 21,
+      "confidence": "high",
+      "start_char": 113,
+      "end_char": 131
+    },
+    "homeric-1-s23-578": {
+      "text": "stern-cables of the ship",
+      "category": "artifact",
+      "hymn_id": "homeric-1",
+      "sentence_index": 23,
+      "confidence": "high",
+      "start_char": 578,
+      "end_char": 602
+    },
+    "homeric-1-s23-433": {
+      "text": "swift craft",
+      "category": "artifact",
+      "hymn_id": "homeric-1",
+      "sentence_index": 23,
+      "confidence": "high",
+      "start_char": 433,
+      "end_char": 444
+    },
+    "homeric-2-s1-133": {
+      "text": "his bright bow",
+      "category": "artifact",
+      "hymn_id": "homeric-2",
+      "sentence_index": 1,
+      "confidence": "high",
+      "start_char": 133,
+      "end_char": 147
+    },
+    "homeric-2-s2-202": {
+      "text": "golden peg",
+      "category": "artifact",
+      "hymn_id": "homeric-2",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 202,
+      "end_char": 212
+    },
+    "homeric-2-s3-83": {
+      "text": "a golden cup",
+      "category": "artifact",
+      "hymn_id": "homeric-2",
+      "sentence_index": 3,
+      "confidence": "high",
+      "start_char": 83,
+      "end_char": 95
+    },
+    "homeric-2-s3-73": {
+      "text": "nectar",
+      "category": "artifact",
+      "hymn_id": "homeric-2",
+      "sentence_index": 3,
+      "confidence": "high",
+      "start_char": 73,
+      "end_char": 79
+    },
+    "homeric-2-s10-453": {
+      "text": "temple of far-shooting Apollo",
+      "category": "artifact",
+      "hymn_id": "homeric-2",
+      "sentence_index": 10,
+      "confidence": "high",
+      "start_char": 453,
+      "end_char": 482
+    },
+    "homeric-2-s10-266": {
+      "text": "rich temple",
+      "category": "artifact",
+      "hymn_id": "homeric-2",
+      "sentence_index": 10,
+      "confidence": "high",
+      "start_char": 266,
+      "end_char": 277
+    },
+    "homeric-2-s11-1064": {
+      "text": "glorious temple",
+      "category": "artifact",
+      "hymn_id": "homeric-2",
+      "sentence_index": 11,
+      "confidence": "high",
+      "start_char": 1064,
+      "end_char": 1079
+    },
+    "homeric-2-s11-817": {
+      "text": "temple",
+      "category": "artifact",
+      "hymn_id": "homeric-2",
+      "sentence_index": 11,
+      "confidence": "high",
+      "start_char": 817,
+      "end_char": 823
+    },
+    "homeric-2-s12-212": {
+      "text": "his fragrant altar",
+      "category": "artifact",
+      "hymn_id": "homeric-2",
+      "sentence_index": 12,
+      "confidence": "high",
+      "start_char": 212,
+      "end_char": 230
+    },
+    "homeric-2-s12-235": {
+      "text": "precinct",
+      "category": "artifact",
+      "hymn_id": "homeric-2",
+      "sentence_index": 12,
+      "confidence": "high",
+      "start_char": 235,
+      "end_char": 243
+    },
+    "homeric-2-s17-89": {
+      "text": "a great necklace strung with golden threads",
+      "category": "artifact",
+      "hymn_id": "homeric-2",
+      "sentence_index": 17,
+      "confidence": "high",
+      "start_char": 89,
+      "end_char": 132
+    },
+    "homeric-2-s23-109": {
+      "text": "a white garment of fine texture",
+      "category": "artifact",
+      "hymn_id": "homeric-2",
+      "sentence_index": 23,
+      "confidence": "high",
+      "start_char": 109,
+      "end_char": 140
+    },
+    "homeric-2-s23-166": {
+      "text": "a golden band",
+      "category": "artifact",
+      "hymn_id": "homeric-2",
+      "sentence_index": 23,
+      "confidence": "high",
+      "start_char": 166,
+      "end_char": 179
+    },
+    "homeric-2-s24-104": {
+      "text": "ambrosia",
+      "category": "artifact",
+      "hymn_id": "homeric-2",
+      "sentence_index": 24,
+      "confidence": "high",
+      "start_char": 104,
+      "end_char": 112
+    },
+    "homeric-2-s24-93": {
+      "text": "nectar",
+      "category": "artifact",
+      "hymn_id": "homeric-2",
+      "sentence_index": 24,
+      "confidence": "high",
+      "start_char": 93,
+      "end_char": 99
+    },
+    "homeric-2-s25-104": {
+      "text": "golden cords",
+      "category": "artifact",
+      "hymn_id": "homeric-2",
+      "sentence_index": 25,
+      "confidence": "high",
+      "start_char": 104,
+      "end_char": 116
+    },
+    "homeric-2-s25-135": {
+      "text": "bands",
+      "category": "artifact",
+      "hymn_id": "homeric-2",
+      "sentence_index": 25,
+      "confidence": "high",
+      "start_char": 135,
+      "end_char": 140
+    },
+    "homeric-2-s26-68": {
+      "text": "The lyre and the curved bow",
+      "category": "artifact",
+      "hymn_id": "homeric-2",
+      "sentence_index": 26,
+      "confidence": "high",
+      "start_char": 68,
+      "end_char": 95
+    },
+    "homeric-2-s29-26": {
+      "text": "wooded groves",
+      "category": "artifact",
+      "hymn_id": "homeric-2",
+      "sentence_index": 29,
+      "confidence": "high",
+      "start_char": 26,
+      "end_char": 39
+    },
+    "homeric-2-s29-9": {
+      "text": "your temples",
+      "category": "artifact",
+      "hymn_id": "homeric-2",
+      "sentence_index": 29,
+      "confidence": "high",
+      "start_char": 9,
+      "end_char": 21
+    },
+    "homeric-3-s9-231": {
+      "text": "rich gaud for covering",
+      "category": "artifact",
+      "hymn_id": "homeric-3",
+      "sentence_index": 9,
+      "confidence": "high",
+      "start_char": 231,
+      "end_char": 253
+    },
+    "homeric-3-s9-260": {
+      "text": "spangled shell",
+      "category": "artifact",
+      "hymn_id": "homeric-3",
+      "sentence_index": 9,
+      "confidence": "high",
+      "start_char": 260,
+      "end_char": 274
+    },
+    "homeric-3-s10-91": {
+      "text": "his charming toy",
+      "category": "artifact",
+      "hymn_id": "homeric-3",
+      "sentence_index": 10,
+      "confidence": "high",
+      "start_char": 91,
+      "end_char": 107
+    },
+    "homeric-3-s11-85": {
+      "text": "scoop of grey iron",
+      "category": "artifact",
+      "hymn_id": "homeric-3",
+      "sentence_index": 11,
+      "confidence": "high",
+      "start_char": 85,
+      "end_char": 103
+    },
+    "homeric-3-s13-98": {
+      "text": "the shell of the tortoise",
+      "category": "artifact",
+      "hymn_id": "homeric-3",
+      "sentence_index": 13,
+      "confidence": "high",
+      "start_char": 98,
+      "end_char": 123
+    },
+    "homeric-3-s14-86": {
+      "text": "seven strings of sheep-gut",
+      "category": "artifact",
+      "hymn_id": "homeric-3",
+      "sentence_index": 14,
+      "confidence": "high",
+      "start_char": 86,
+      "end_char": 112
+    },
+    "homeric-3-s14-38": {
+      "text": "cross-piece",
+      "category": "artifact",
+      "hymn_id": "homeric-3",
+      "sentence_index": 14,
+      "confidence": "high",
+      "start_char": 38,
+      "end_char": 49
+    },
+    "homeric-3-s14-19": {
+      "text": "horns",
+      "category": "artifact",
+      "hymn_id": "homeric-3",
+      "sentence_index": 14,
+      "confidence": "high",
+      "start_char": 19,
+      "end_char": 24
+    },
+    "homeric-3-s15-79": {
+      "text": "the lovely thing",
+      "category": "artifact",
+      "hymn_id": "homeric-3",
+      "sentence_index": 15,
+      "confidence": "high",
+      "start_char": 79,
+      "end_char": 95
+    },
+    "homeric-3-s18-110": {
+      "text": "the abundant cauldrons",
+      "category": "artifact",
+      "hymn_id": "homeric-3",
+      "sentence_index": 18,
+      "confidence": "high",
+      "start_char": 110,
+      "end_char": 132
+    },
+    "homeric-3-s18-73": {
+      "text": "the tripods",
+      "category": "artifact",
+      "hymn_id": "homeric-3",
+      "sentence_index": 18,
+      "confidence": "high",
+      "start_char": 73,
+      "end_char": 84
+    },
+    "homeric-3-s20-12": {
+      "text": "the hollow lyre",
+      "category": "artifact",
+      "hymn_id": "homeric-3",
+      "sentence_index": 20,
+      "confidence": "high",
+      "start_char": 12,
+      "end_char": 27
+    },
+    "homeric-3-s21-60": {
+      "text": "his horses and chariot",
+      "category": "artifact",
+      "hymn_id": "homeric-3",
+      "sentence_index": 21,
+      "confidence": "high",
+      "start_char": 60,
+      "end_char": 82
+    },
+    "homeric-3-s24-269": {
+      "text": "light sandals",
+      "category": "artifact",
+      "hymn_id": "homeric-3",
+      "sentence_index": 24,
+      "confidence": "high",
+      "start_char": 269,
+      "end_char": 282
+    },
+    "homeric-3-s30-53": {
+      "text": "the drinking-troughs",
+      "category": "artifact",
+      "hymn_id": "homeric-3",
+      "sentence_index": 30,
+      "confidence": "high",
+      "start_char": 53,
+      "end_char": 73
+    },
+    "homeric-3-s31-161": {
+      "text": "pile of wood",
+      "category": "artifact",
+      "hymn_id": "homeric-3",
+      "sentence_index": 31,
+      "confidence": "high",
+      "start_char": 161,
+      "end_char": 173
+    },
+    "homeric-3-s32-51": {
+      "text": "the knife",
+      "category": "artifact",
+      "hymn_id": "homeric-3",
+      "sentence_index": 32,
+      "confidence": "high",
+      "start_char": 51,
+      "end_char": 60
+    },
+    "homeric-3-s33-37": {
+      "text": "fire-sticks",
+      "category": "artifact",
+      "hymn_id": "homeric-3",
+      "sentence_index": 33,
+      "confidence": "high",
+      "start_char": 37,
+      "end_char": 48
+    },
+    "homeric-3-s33-53": {
+      "text": "fire",
+      "category": "artifact",
+      "hymn_id": "homeric-3",
+      "sentence_index": 33,
+      "confidence": "high",
+      "start_char": 53,
+      "end_char": 57
+    },
+    "homeric-3-s37-154": {
+      "text": "the paunch full of dark blood",
+      "category": "artifact",
+      "hymn_id": "homeric-3",
+      "sentence_index": 37,
+      "confidence": "high",
+      "start_char": 154,
+      "end_char": 183
+    },
+    "homeric-3-s37-130": {
+      "text": "the honorable chine",
+      "category": "artifact",
+      "hymn_id": "homeric-3",
+      "sentence_index": 37,
+      "confidence": "high",
+      "start_char": 130,
+      "end_char": 149
+    },
+    "homeric-3-s38-51": {
+      "text": "the hides",
+      "category": "artifact",
+      "hymn_id": "homeric-3",
+      "sentence_index": 38,
+      "confidence": "high",
+      "start_char": 51,
+      "end_char": 60
+    },
+    "homeric-3-s39-80": {
+      "text": "a smooth, flat stone",
+      "category": "artifact",
+      "hymn_id": "homeric-3",
+      "sentence_index": 39,
+      "confidence": "high",
+      "start_char": 80,
+      "end_char": 100
+    },
+    "homeric-3-s39-33": {
+      "text": "the rich meats",
+      "category": "artifact",
+      "hymn_id": "homeric-3",
+      "sentence_index": 39,
+      "confidence": "high",
+      "start_char": 33,
+      "end_char": 47
+    },
+    "homeric-3-s41-52": {
+      "text": "all the flesh",
+      "category": "artifact",
+      "hymn_id": "homeric-3",
+      "sentence_index": 41,
+      "confidence": "high",
+      "start_char": 52,
+      "end_char": 65
+    },
+    "homeric-3-s41-40": {
+      "text": "the fat",
+      "category": "artifact",
+      "hymn_id": "homeric-3",
+      "sentence_index": 41,
+      "confidence": "high",
+      "start_char": 40,
+      "end_char": 47
+    },
+    "homeric-3-s43-49": {
+      "text": "his sandals",
+      "category": "artifact",
+      "hymn_id": "homeric-3",
+      "sentence_index": 43,
+      "confidence": "high",
+      "start_char": 49,
+      "end_char": 60
+    },
+    "homeric-4-s3-63": {
+      "text": "cars variously wrought with bronze",
+      "category": "artifact",
+      "hymn_id": "homeric-4",
+      "sentence_index": 3,
+      "confidence": "high",
+      "start_char": 63,
+      "end_char": 97
+    },
+    "homeric-4-s3-43": {
+      "text": "chariots of war",
+      "category": "artifact",
+      "hymn_id": "homeric-4",
+      "sentence_index": 3,
+      "confidence": "high",
+      "start_char": 43,
+      "end_char": 58
+    },
+    "homeric-4-s4-167": {
+      "text": "the lyre",
+      "category": "artifact",
+      "hymn_id": "homeric-4",
+      "sentence_index": 4,
+      "confidence": "high",
+      "start_char": 167,
+      "end_char": 175
+    },
+    "homeric-4-s16-89": {
+      "text": "her sweet-smelling temple",
+      "category": "artifact",
+      "hymn_id": "homeric-4",
+      "sentence_index": 16,
+      "confidence": "high",
+      "start_char": 89,
+      "end_char": 114
+    },
+    "homeric-4-s16-57": {
+      "text": "fragrant altar",
+      "category": "artifact",
+      "hymn_id": "homeric-4",
+      "sentence_index": 16,
+      "confidence": "high",
+      "start_char": 57,
+      "end_char": 71
+    },
+    "homeric-4-s17-29": {
+      "text": "the glittering doors",
+      "category": "artifact",
+      "hymn_id": "homeric-4",
+      "sentence_index": 17,
+      "confidence": "high",
+      "start_char": 29,
+      "end_char": 49
+    },
+    "homeric-4-s17-154": {
+      "text": "oil divinely sweet",
+      "category": "artifact",
+      "hymn_id": "homeric-4",
+      "sentence_index": 17,
+      "confidence": "high",
+      "start_char": 154,
+      "end_char": 172
+    },
+    "homeric-4-s17-88": {
+      "text": "heavenly oil",
+      "category": "artifact",
+      "hymn_id": "homeric-4",
+      "sentence_index": 17,
+      "confidence": "high",
+      "start_char": 88,
+      "end_char": 100
+    },
+    "homeric-4-s18-45": {
+      "text": "rich clothes",
+      "category": "artifact",
+      "hymn_id": "homeric-4",
+      "sentence_index": 18,
+      "confidence": "high",
+      "start_char": 45,
+      "end_char": 57
+    },
+    "homeric-4-s18-96": {
+      "text": "gold",
+      "category": "artifact",
+      "hymn_id": "homeric-4",
+      "sentence_index": 18,
+      "confidence": "high",
+      "start_char": 96,
+      "end_char": 100
+    },
+    "homeric-4-s24-86": {
+      "text": "shining garments",
+      "category": "artifact",
+      "hymn_id": "homeric-4",
+      "sentence_index": 24,
+      "confidence": "high",
+      "start_char": 86,
+      "end_char": 102
+    },
+    "homeric-4-s25-63": {
+      "text": "a splendid robe of gold",
+      "category": "artifact",
+      "hymn_id": "homeric-4",
+      "sentence_index": 25,
+      "confidence": "high",
+      "start_char": 63,
+      "end_char": 86
+    },
+    "homeric-4-s25-20": {
+      "text": "a robe",
+      "category": "artifact",
+      "hymn_id": "homeric-4",
+      "sentence_index": 25,
+      "confidence": "high",
+      "start_char": 20,
+      "end_char": 26
+    },
+    "homeric-4-s26-14": {
+      "text": "twisted brooches",
+      "category": "artifact",
+      "hymn_id": "homeric-4",
+      "sentence_index": 26,
+      "confidence": "high",
+      "start_char": 14,
+      "end_char": 30
+    },
+    "homeric-4-s26-35": {
+      "text": "shining earrings",
+      "category": "artifact",
+      "hymn_id": "homeric-4",
+      "sentence_index": 26,
+      "confidence": "high",
+      "start_char": 35,
+      "end_char": 51
+    },
+    "homeric-4-s26-107": {
+      "text": "lovely necklaces",
+      "category": "artifact",
+      "hymn_id": "homeric-4",
+      "sentence_index": 26,
+      "confidence": "high",
+      "start_char": 107,
+      "end_char": 123
+    },
+    "homeric-4-s27-549": {
+      "text": "rich offerings",
+      "category": "artifact",
+      "hymn_id": "homeric-4",
+      "sentence_index": 27,
+      "confidence": "high",
+      "start_char": 549,
+      "end_char": 563
+    },
+    "homeric-4-s27-483": {
+      "text": "an altar",
+      "category": "artifact",
+      "hymn_id": "homeric-4",
+      "sentence_index": 27,
+      "confidence": "high",
+      "start_char": 483,
+      "end_char": 491
+    },
+    "homeric-4-s28-617": {
+      "text": "the golden wand",
+      "category": "artifact",
+      "hymn_id": "homeric-4",
+      "sentence_index": 28,
+      "confidence": "high",
+      "start_char": 617,
+      "end_char": 632
+    },
+    "homeric-4-s28-870": {
+      "text": "the golden wand",
+      "category": "artifact",
+      "hymn_id": "homeric-4",
+      "sentence_index": 28,
+      "confidence": "high",
+      "start_char": 870,
+      "end_char": 885
+    },
+    "homeric-5-s2-132": {
+      "text": "ornaments of orichalc and precious gold",
+      "category": "artifact",
+      "hymn_id": "homeric-5",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 132,
+      "end_char": 171
+    },
+    "homeric-5-s2-22": {
+      "text": "heavenly garments",
+      "category": "artifact",
+      "hymn_id": "homeric-5",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 22,
+      "end_char": 39
+    },
+    "homeric-5-s2-194": {
+      "text": "golden necklaces",
+      "category": "artifact",
+      "hymn_id": "homeric-5",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 194,
+      "end_char": 210
+    },
+    "homeric-5-s2-83": {
+      "text": "crown of gold",
+      "category": "artifact",
+      "hymn_id": "homeric-5",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 83,
+      "end_char": 96
+    },
+    "homeric-5-s2-254": {
+      "text": "jewels",
+      "category": "artifact",
+      "hymn_id": "homeric-5",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 254,
+      "end_char": 260
+    },
+    "homeric-6-s0-262": {
+      "text": "purple robe",
+      "category": "artifact",
+      "hymn_id": "homeric-6",
+      "sentence_index": 0,
+      "confidence": "high",
+      "start_char": 262,
+      "end_char": 273
+    },
+    "homeric-6-s1-73": {
+      "text": "a well-decked ship",
+      "category": "artifact",
+      "hymn_id": "homeric-6",
+      "sentence_index": 1,
+      "confidence": "high",
+      "start_char": 73,
+      "end_char": 91
+    },
+    "homeric-6-s2-118": {
+      "text": "their ship",
+      "category": "artifact",
+      "hymn_id": "homeric-6",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 118,
+      "end_char": 128
+    },
+    "homeric-6-s3-79": {
+      "text": "the withes",
+      "category": "artifact",
+      "hymn_id": "homeric-6",
+      "sentence_index": 3,
+      "confidence": "high",
+      "start_char": 79,
+      "end_char": 89
+    },
+    "homeric-6-s3-45": {
+      "text": "the bonds",
+      "category": "artifact",
+      "hymn_id": "homeric-6",
+      "sentence_index": 3,
+      "confidence": "high",
+      "start_char": 45,
+      "end_char": 54
+    },
+    "homeric-6-s4-164": {
+      "text": "the well-built ship",
+      "category": "artifact",
+      "hymn_id": "homeric-6",
+      "sentence_index": 4,
+      "confidence": "high",
+      "start_char": 164,
+      "end_char": 183
+    },
+    "homeric-6-s5-111": {
+      "text": "the sheets",
+      "category": "artifact",
+      "hymn_id": "homeric-6",
+      "sentence_index": 5,
+      "confidence": "high",
+      "start_char": 111,
+      "end_char": 121
+    },
+    "homeric-6-s5-91": {
+      "text": "the ship",
+      "category": "artifact",
+      "hymn_id": "homeric-6",
+      "sentence_index": 5,
+      "confidence": "high",
+      "start_char": 91,
+      "end_char": 99
+    },
+    "homeric-6-s5-83": {
+      "text": "sail",
+      "category": "artifact",
+      "hymn_id": "homeric-6",
+      "sentence_index": 5,
+      "confidence": "high",
+      "start_char": 83,
+      "end_char": 87
+    },
+    "homeric-6-s8-13": {
+      "text": "sweet, fragrant wine",
+      "category": "artifact",
+      "hymn_id": "homeric-6",
+      "sentence_index": 8,
+      "confidence": "high",
+      "start_char": 13,
+      "end_char": 33
+    },
+    "homeric-6-s8-63": {
+      "text": "the black ship",
+      "category": "artifact",
+      "hymn_id": "homeric-6",
+      "sentence_index": 8,
+      "confidence": "very_high",
+      "start_char": 63,
+      "end_char": 77
+    },
+    "homeric-6-s9-225": {
+      "text": "the thole-pins",
+      "category": "artifact",
+      "hymn_id": "homeric-6",
+      "sentence_index": 9,
+      "confidence": "high",
+      "start_char": 225,
+      "end_char": 239
+    },
+    "homeric-6-s9-145": {
+      "text": "the mast",
+      "category": "artifact",
+      "hymn_id": "homeric-6",
+      "sentence_index": 9,
+      "confidence": "high",
+      "start_char": 145,
+      "end_char": 153
+    },
+    "homeric-6-s9-258": {
+      "text": "garlands",
+      "category": "artifact",
+      "hymn_id": "homeric-6",
+      "sentence_index": 9,
+      "confidence": "high",
+      "start_char": 258,
+      "end_char": 266
+    },
+    "homeric-6-s10-74": {
+      "text": "the ship",
+      "category": "artifact",
+      "hymn_id": "homeric-6",
+      "sentence_index": 10,
+      "confidence": "high",
+      "start_char": 74,
+      "end_char": 82
+    },
+    "homeric-8-s1-67": {
+      "text": "her all-golden chariot",
+      "category": "artifact",
+      "hymn_id": "homeric-8",
+      "sentence_index": 1,
+      "confidence": "high",
+      "start_char": 67,
+      "end_char": 89
+    },
+    "homeric-13-s1-25": {
+      "text": "the sound of rattles",
+      "category": "artifact",
+      "hymn_id": "homeric-13",
+      "sentence_index": 1,
+      "confidence": "high",
+      "start_char": 25,
+      "end_char": 45
+    },
+    "homeric-13-s1-68": {
+      "text": "the voice of flutes",
+      "category": "artifact",
+      "hymn_id": "homeric-13",
+      "sentence_index": 1,
+      "confidence": "high",
+      "start_char": 68,
+      "end_char": 87
+    },
+    "homeric-18-s6-23": {
+      "text": "spotted lynx-pelt",
+      "category": "artifact",
+      "hymn_id": "homeric-18",
+      "sentence_index": 6,
+      "confidence": "high",
+      "start_char": 23,
+      "end_char": 40
+    },
+    "homeric-18-s12-74": {
+      "text": "wrapped in warm skins of mountain hares",
+      "category": "artifact",
+      "hymn_id": "homeric-18",
+      "sentence_index": 12,
+      "confidence": "high",
+      "start_char": 74,
+      "end_char": 113
+    },
+    "homeric-18-s15-19": {
+      "text": "with a song",
+      "category": "artifact",
+      "hymn_id": "homeric-18",
+      "sentence_index": 15,
+      "confidence": "high",
+      "start_char": 19,
+      "end_char": 30
+    },
+    "homeric-20-s0-186": {
+      "text": "his high-pitched lyre",
+      "category": "artifact",
+      "hymn_id": "homeric-20",
+      "sentence_index": 0,
+      "confidence": "high",
+      "start_char": 186,
+      "end_char": 207
+    },
+    "homeric-23-s0-94": {
+      "text": "soft oil",
+      "category": "artifact",
+      "hymn_id": "homeric-23",
+      "sentence_index": 0,
+      "confidence": "high",
+      "start_char": 94,
+      "end_char": 102
+    },
+    "homeric-26-s1-103": {
+      "text": "grievous shafts",
+      "category": "artifact",
+      "hymn_id": "homeric-26",
+      "sentence_index": 1,
+      "confidence": "high",
+      "start_char": 103,
+      "end_char": 118
+    },
+    "homeric-26-s1-53": {
+      "text": "golden bow",
+      "category": "artifact",
+      "hymn_id": "homeric-26",
+      "sentence_index": 1,
+      "confidence": "high",
+      "start_char": 53,
+      "end_char": 63
+    },
+    "homeric-26-s4-23": {
+      "text": "curved bow",
+      "category": "artifact",
+      "hymn_id": "homeric-26",
+      "sentence_index": 4,
+      "confidence": "high",
+      "start_char": 23,
+      "end_char": 33
+    },
+    "homeric-26-s4-42": {
+      "text": "arrows",
+      "category": "artifact",
+      "hymn_id": "homeric-26",
+      "sentence_index": 4,
+      "confidence": "high",
+      "start_char": 42,
+      "end_char": 48
+    },
+    "homeric-26-s4-54": {
+      "text": "heads",
+      "category": "artifact",
+      "hymn_id": "homeric-26",
+      "sentence_index": 4,
+      "confidence": "medium",
+      "start_char": 54,
+      "end_char": 59
+    },
+    "homeric-27-s1-48": {
+      "text": "arrayed in warlike arms of flashing gold",
+      "category": "artifact",
+      "hymn_id": "homeric-27",
+      "sentence_index": 1,
+      "confidence": "high",
+      "start_char": 48,
+      "end_char": 88
+    },
+    "homeric-27-s2-354": {
+      "text": "swift-footed horses",
+      "category": "artifact",
+      "hymn_id": "homeric-27",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 354,
+      "end_char": 373
+    },
+    "homeric-27-s2-436": {
+      "text": "heavenly armour",
+      "category": "artifact",
+      "hymn_id": "homeric-27",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 436,
+      "end_char": 451
+    },
+    "homeric-27-s2-100": {
+      "text": "a sharp spear",
+      "category": "artifact",
+      "hymn_id": "homeric-27",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 100,
+      "end_char": 113
+    },
+    "homeric-28-s1-71": {
+      "text": "sweet wine",
+      "category": "artifact",
+      "hymn_id": "homeric-28",
+      "sentence_index": 1,
+      "confidence": "high",
+      "start_char": 71,
+      "end_char": 81
+    },
+    "homeric-29-s4-123": {
+      "text": "filled with good things",
+      "category": "artifact",
+      "hymn_id": "homeric-29",
+      "sentence_index": 4,
+      "confidence": "medium",
+      "start_char": 123,
+      "end_char": 146
+    },
+    "homeric-29-s4-51": {
+      "text": "laden with corn",
+      "category": "artifact",
+      "hymn_id": "homeric-29",
+      "sentence_index": 4,
+      "confidence": "medium",
+      "start_char": 51,
+      "end_char": 66
+    },
+    "homeric-30-s2-110": {
+      "text": "his golden helmet",
+      "category": "artifact",
+      "hymn_id": "homeric-30",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 110,
+      "end_char": 127
+    },
+    "homeric-30-s3-136": {
+      "text": "a rich, fine-spun garment",
+      "category": "artifact",
+      "hymn_id": "homeric-30",
+      "sentence_index": 3,
+      "confidence": "high",
+      "start_char": 136,
+      "end_char": 161
+    },
+    "homeric-30-s4-29": {
+      "text": "golden-yoked chariot",
+      "category": "artifact",
+      "hymn_id": "homeric-30",
+      "sentence_index": 4,
+      "confidence": "high",
+      "start_char": 29,
+      "end_char": 49
+    },
+    "homeric-31-s2-216": {
+      "text": "her strong-necked, shining team",
+      "category": "artifact",
+      "hymn_id": "homeric-31",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 216,
+      "end_char": 247
+    },
+    "homeric-31-s2-34": {
+      "text": "the light of her golden crown",
+      "category": "artifact",
+      "hymn_id": "homeric-31",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 34,
+      "end_char": 63
+    },
+    "homeric-31-s2-180": {
+      "text": "her far-gleaming raiment",
+      "category": "artifact",
+      "hymn_id": "homeric-31",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 180,
+      "end_char": 204
+    },
+    "homeric-32-s2-55": {
+      "text": "vows of white lambs",
+      "category": "artifact",
+      "hymn_id": "homeric-32",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 55,
+      "end_char": 74
+    },
+    "homeric-32-s2-160": {
+      "text": "the ship",
+      "category": "artifact",
+      "hymn_id": "homeric-32",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 160,
+      "end_char": 168
+    },
+    "orphic-2-s2-9": {
+      "text": "the keys",
+      "category": "artifact",
+      "hymn_id": "orphic-2",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 9,
+      "end_char": 17
+    },
+    "orphic-8-s1-98": {
+      "text": "dancing horses",
+      "category": "artifact",
+      "hymn_id": "orphic-8",
+      "sentence_index": 1,
+      "confidence": "high",
+      "start_char": 98,
+      "end_char": 112
+    },
+    "orphic-8-s2-57": {
+      "text": "hold the golden lyre",
+      "category": "artifact",
+      "hymn_id": "orphic-8",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 57,
+      "end_char": 77
+    },
+    "orphic-8-s5-79": {
+      "text": "four-horse chariot",
+      "category": "artifact",
+      "hymn_id": "orphic-8",
+      "sentence_index": 5,
+      "confidence": "high",
+      "start_char": 79,
+      "end_char": 97
+    },
+    "orphic-8-s5-53": {
+      "text": "screaming whip",
+      "category": "artifact",
+      "hymn_id": "orphic-8",
+      "sentence_index": 5,
+      "confidence": "high",
+      "start_char": 53,
+      "end_char": 67
+    },
+    "orphic-12-s4-170": {
+      "text": "with your poisonous darts",
+      "category": "artifact",
+      "hymn_id": "orphic-12",
+      "sentence_index": 4,
+      "confidence": "high",
+      "start_char": 170,
+      "end_char": 195
+    },
+    "orphic-12-s4-130": {
+      "text": "with club in hand",
+      "category": "artifact",
+      "hymn_id": "orphic-12",
+      "sentence_index": 4,
+      "confidence": "high",
+      "start_char": 130,
+      "end_char": 147
+    },
+    "orphic-14-s0-48": {
+      "text": "your sacred chariot",
+      "category": "artifact",
+      "hymn_id": "orphic-14",
+      "sentence_index": 0,
+      "confidence": "high",
+      "start_char": 48,
+      "end_char": 67
+    },
+    "orphic-15-s2-35": {
+      "text": "the thunderbolt",
+      "category": "artifact",
+      "hymn_id": "orphic-15",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 35,
+      "end_char": 50
+    },
+    "orphic-15-s2-54": {
+      "text": "your scepter",
+      "category": "artifact",
+      "hymn_id": "orphic-15",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 54,
+      "end_char": 66
+    },
+    "orphic-17-s0-71": {
+      "text": "the bronze trident",
+      "category": "artifact",
+      "hymn_id": "orphic-17",
+      "sentence_index": 0,
+      "confidence": "high",
+      "start_char": 71,
+      "end_char": 89
+    },
+    "orphic-17-s4-46": {
+      "text": "ships",
+      "category": "artifact",
+      "hymn_id": "orphic-17",
+      "sentence_index": 4,
+      "confidence": "high",
+      "start_char": 46,
+      "end_char": 51
+    },
+    "orphic-18-s2-24": {
+      "text": "wealth of the year's fruits",
+      "category": "artifact",
+      "hymn_id": "orphic-18",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 24,
+      "end_char": 51
+    },
+    "orphic-18-s3-0": {
+      "text": "Your throne",
+      "category": "artifact",
+      "hymn_id": "orphic-18",
+      "sentence_index": 3,
+      "confidence": "high",
+      "start_char": 0,
+      "end_char": 11
+    },
+    "orphic-19-s0-157": {
+      "text": "a god's thunderbolt",
+      "category": "artifact",
+      "hymn_id": "orphic-19",
+      "sentence_index": 0,
+      "confidence": "high",
+      "start_char": 157,
+      "end_char": 176
+    },
+    "orphic-19-s1-137": {
+      "text": "a shower of arrows",
+      "category": "artifact",
+      "hymn_id": "orphic-19",
+      "sentence_index": 1,
+      "confidence": "high",
+      "start_char": 137,
+      "end_char": 155
+    },
+    "orphic-19-s5-47": {
+      "text": "the fiery thunderbolt",
+      "category": "artifact",
+      "hymn_id": "orphic-19",
+      "sentence_index": 5,
+      "confidence": "high",
+      "start_char": 47,
+      "end_char": 68
+    },
+    "orphic-19-s7-6": {
+      "text": "this libation",
+      "category": "artifact",
+      "hymn_id": "orphic-19",
+      "sentence_index": 7,
+      "confidence": "high",
+      "start_char": 6,
+      "end_char": 19
+    },
+    "orphic-21-s2-27": {
+      "text": "your dewy cloaks",
+      "category": "artifact",
+      "hymn_id": "orphic-21",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 27,
+      "end_char": 43
+    },
+    "orphic-23-s1-96": {
+      "text": "Demeter's sacred throne",
+      "category": "artifact",
+      "hymn_id": "orphic-23",
+      "sentence_index": 1,
+      "confidence": "high",
+      "start_char": 96,
+      "end_char": 119
+    },
+    "orphic-24-s0-96": {
+      "text": "Demeter's sacred throne",
+      "category": "artifact",
+      "hymn_id": "orphic-24",
+      "sentence_index": 0,
+      "confidence": "high",
+      "start_char": 96,
+      "end_char": 119
+    },
+    "orphic-27-s1-5": {
+      "text": "your swift chariot",
+      "category": "artifact",
+      "hymn_id": "orphic-27",
+      "sentence_index": 1,
+      "confidence": "high",
+      "start_char": 5,
+      "end_char": 23
+    },
+    "orphic-27-s2-117": {
+      "text": "the throne in the middle",
+      "category": "artifact",
+      "hymn_id": "orphic-27",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 117,
+      "end_char": 141
+    },
+    "orphic-27-s2-109": {
+      "text": "throne",
+      "category": "artifact",
+      "hymn_id": "orphic-27",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 109,
+      "end_char": 115
+    },
+    "orphic-28-s2-90": {
+      "text": "the blameless tool of peace",
+      "category": "artifact",
+      "hymn_id": "orphic-28",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 90,
+      "end_char": 117
+    },
+    "orphic-29-s0-92": {
+      "text": "gracious sacrifice",
+      "category": "artifact",
+      "hymn_id": "orphic-29",
+      "sentence_index": 0,
+      "confidence": "high",
+      "start_char": 92,
+      "end_char": 110
+    },
+    "orphic-31-s0-99": {
+      "text": "discordant is the lyre",
+      "category": "artifact",
+      "hymn_id": "orphic-31",
+      "sentence_index": 0,
+      "confidence": "high",
+      "start_char": 99,
+      "end_char": 121
+    },
+    "orphic-32-s2-0": {
+      "text": "Arms",
+      "category": "artifact",
+      "hymn_id": "orphic-32",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 0,
+      "end_char": 4
+    },
+    "orphic-34-s0-181": {
+      "text": "golden lyre",
+      "category": "artifact",
+      "hymn_id": "orphic-34",
+      "sentence_index": 0,
+      "confidence": "high",
+      "start_char": 181,
+      "end_char": 192
+    },
+    "orphic-34-s0-194": {
+      "text": "the seeds",
+      "category": "artifact",
+      "hymn_id": "orphic-34",
+      "sentence_index": 0,
+      "confidence": "high",
+      "start_char": 194,
+      "end_char": 203
+    },
+    "orphic-34-s0-209": {
+      "text": "the plows",
+      "category": "artifact",
+      "hymn_id": "orphic-34",
+      "sentence_index": 0,
+      "confidence": "high",
+      "start_char": 209,
+      "end_char": 218
+    },
+    "orphic-34-s6-31": {
+      "text": "your versatile lyre",
+      "category": "artifact",
+      "hymn_id": "orphic-34",
+      "sentence_index": 6,
+      "confidence": "high",
+      "start_char": 31,
+      "end_char": 50
+    },
+    "orphic-34-s8-117": {
+      "text": "the master seal",
+      "category": "artifact",
+      "hymn_id": "orphic-34",
+      "sentence_index": 8,
+      "confidence": "high",
+      "start_char": 117,
+      "end_char": 132
+    },
+    "orphic-38-s0-25": {
+      "text": "the weapons of Ares",
+      "category": "artifact",
+      "hymn_id": "orphic-38",
+      "sentence_index": 0,
+      "confidence": "high",
+      "start_char": 25,
+      "end_char": 44
+    },
+    "orphic-38-s2-21": {
+      "text": "the weapons of Ares",
+      "category": "artifact",
+      "hymn_id": "orphic-38",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 21,
+      "end_char": 40
+    },
+    "orphic-38-s3-119": {
+      "text": "the glories in your gleaming armor",
+      "category": "artifact",
+      "hymn_id": "orphic-38",
+      "sentence_index": 3,
+      "confidence": "high",
+      "start_char": 119,
+      "end_char": 153
+    },
+    "orphic-40-s7-44": {
+      "text": "fruits of summer",
+      "category": "artifact",
+      "hymn_id": "orphic-40",
+      "sentence_index": 7,
+      "confidence": "high",
+      "start_char": 44,
+      "end_char": 60
+    },
+    "orphic-42-s0-49": {
+      "text": "fennel stalk",
+      "category": "artifact",
+      "hymn_id": "orphic-42",
+      "sentence_index": 0,
+      "confidence": "high",
+      "start_char": 49,
+      "end_char": 61
+    },
+    "orphic-42-s1-78": {
+      "text": "fragrant temple",
+      "category": "artifact",
+      "hymn_id": "orphic-42",
+      "sentence_index": 1,
+      "confidence": "high",
+      "start_char": 78,
+      "end_char": 93
+    },
+    "orphic-44-s1-32": {
+      "text": "the blazing thunderbolt",
+      "category": "artifact",
+      "hymn_id": "orphic-44",
+      "sentence_index": 1,
+      "confidence": "very_high",
+      "start_char": 32,
+      "end_char": 55
+    },
+    "orphic-44-s3-94": {
+      "text": "the ritual of the holy mysteries",
+      "category": "artifact",
+      "hymn_id": "orphic-44",
+      "sentence_index": 3,
+      "confidence": "high",
+      "start_char": 94,
+      "end_char": 126
+    },
+    "orphic-44-s3-62": {
+      "text": "the sacred ritual of the table",
+      "category": "artifact",
+      "hymn_id": "orphic-44",
+      "sentence_index": 3,
+      "confidence": "high",
+      "start_char": 62,
+      "end_char": 92
+    },
+    "orphic-45-s1-15": {
+      "text": "bloody swords",
+      "category": "artifact",
+      "hymn_id": "orphic-45",
+      "sentence_index": 1,
+      "confidence": "high",
+      "start_char": 15,
+      "end_char": 28
+    },
+    "orphic-50-s2-86": {
+      "text": "your thyrsos",
+      "category": "artifact",
+      "hymn_id": "orphic-50",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 86,
+      "end_char": 98
+    },
+    "orphic-51-s6-55": {
+      "text": "streams of pure rain",
+      "category": "artifact",
+      "hymn_id": "orphic-51",
+      "sentence_index": 6,
+      "confidence": "high",
+      "start_char": 55,
+      "end_char": 75
+    },
+    "orphic-55-s3-5": {
+      "text": "maddening love-charms",
+      "category": "artifact",
+      "hymn_id": "orphic-55",
+      "sentence_index": 3,
+      "confidence": "high",
+      "start_char": 5,
+      "end_char": 26
+    },
+    "orphic-55-s4-176": {
+      "text": "golden chariot",
+      "category": "artifact",
+      "hymn_id": "orphic-55",
+      "sentence_index": 4,
+      "confidence": "high",
+      "start_char": 176,
+      "end_char": 190
+    },
+    "orphic-55-s5-28": {
+      "text": "swan-drawn chariot",
+      "category": "artifact",
+      "hymn_id": "orphic-55",
+      "sentence_index": 5,
+      "confidence": "high",
+      "start_char": 28,
+      "end_char": 46
+    },
+    "orphic-59-s0-393": {
+      "text": "chariot",
+      "category": "artifact",
+      "hymn_id": "orphic-59",
+      "sentence_index": 0,
+      "confidence": "high",
+      "start_char": 393,
+      "end_char": 400
+    },
+    "orphic-62-s0-76": {
+      "text": "the sacred throne",
+      "category": "artifact",
+      "hymn_id": "orphic-62",
+      "sentence_index": 0,
+      "confidence": "high",
+      "start_char": 76,
+      "end_char": 93
+    },
+    "orphic-66-s3-34": {
+      "text": "this holy libation",
+      "category": "artifact",
+      "hymn_id": "orphic-66",
+      "sentence_index": 3,
+      "confidence": "high",
+      "start_char": 34,
+      "end_char": 52
+    },
+    "orphic-68-s3-46": {
+      "text": "wealth",
+      "category": "artifact",
+      "hymn_id": "orphic-68",
+      "sentence_index": 3,
+      "confidence": "high",
+      "start_char": 46,
+      "end_char": 52
+    },
+    "orphic-70-s2-52": {
+      "text": "flesh-eating darts of light",
+      "category": "artifact",
+      "hymn_id": "orphic-70",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 52,
+      "end_char": 79
+    },
+    "orphic-71-s0-129": {
+      "text": "sacred bed",
+      "category": "artifact",
+      "hymn_id": "orphic-71",
+      "sentence_index": 0,
+      "confidence": "high",
+      "start_char": 129,
+      "end_char": 139
+    },
+    "orphic-73-s1-185": {
+      "text": "the keys to joy and sorrow",
+      "category": "artifact",
+      "hymn_id": "orphic-73",
+      "sentence_index": 1,
+      "confidence": "medium",
+      "start_char": 185,
+      "end_char": 211
+    },
+    "orphic-75-s2-22": {
+      "text": "ships",
+      "category": "artifact",
+      "hymn_id": "orphic-75",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 22,
+      "end_char": 27
+    },
+    "orphic-81-s1-95": {
+      "text": "soft light wind",
+      "category": "artifact",
+      "hymn_id": "orphic-81",
+      "sentence_index": 1,
+      "confidence": "high",
+      "start_char": 95,
+      "end_char": 110
+    },
+    "orphic-81-s1-79": {
+      "text": "gentle passage",
+      "category": "artifact",
+      "hymn_id": "orphic-81",
+      "sentence_index": 1,
+      "confidence": "high",
+      "start_char": 79,
+      "end_char": 93
+    },
+    "orphic-84-s2-130": {
+      "text": "these offerings",
+      "category": "artifact",
+      "hymn_id": "orphic-84",
+      "sentence_index": 2,
+      "confidence": "high",
+      "start_char": 130,
+      "end_char": 145
+    },
+    "orphic-85-s0-193": {
+      "text": "fetters unforged",
+      "category": "artifact",
+      "hymn_id": "orphic-85",
+      "sentence_index": 0,
+      "confidence": "medium",
+      "start_char": 193,
+      "end_char": 209
+    },
+    "orphic-87-s4-37": {
+      "text": "sacrifices",
+      "category": "artifact",
+      "hymn_id": "orphic-87",
+      "sentence_index": 4,
+      "confidence": "high",
+      "start_char": 37,
+      "end_char": 47
+    }
+  },
+  "contexts": {
+    "homeric-1-s3-174": {
+      "context": "lord, Host of Many, with [his immortal horses] sprang out upon her —",
+      "full_sentence": "And the girl was amazed and reached out with both hands to take the lovely toy; but the wide-pathed earth yawned there in the plain of Nysa, and the lord, Host of Many, with his immortal horses sprang out upon her — the Son of Cronos, He who has many names."
+    },
+    "homeric-1-s3-64": {
+      "context": "with both hands to take [the lovely toy] ; but the wide-pathed earth",
+      "full_sentence": "And the girl was amazed and reached out with both hands to take the lovely toy; but the wide-pathed earth yawned there in the plain of Nysa, and the lord, Host of Many, with his immortal horses sprang out upon her — the Son of Cronos, He who has many names."
+    },
+    "homeric-1-s4-30": {
+      "context": "caught her up reluctant on [his golden car] and bare her away lamenting.",
+      "full_sentence": "He caught her up reluctant on his golden car and bare her away lamenting."
+    },
+    "homeric-1-s7-92": {
+      "context": "where many pray, and receiving [sweet offerings] from mortal men.",
+      "full_sentence": "But he was sitting aloof, apart from the gods, in his temple where many pray, and receiving sweet offerings from mortal men."
+    },
+    "homeric-1-s8-126": {
+      "context": "leave of Zeus on his [immortal chariot] — his own brother's child",
+      "full_sentence": "So he, that son of Cronos, of many names, who is Ruler of Many and Host of Many, was bearing her away by leave of Zeus on his immortal chariot — his own brother's child and all unwilling."
+    },
+    "homeric-1-s10-98": {
+      "context": "hair with her dear hands: [her dark cloak] she cast down from both",
+      "full_sentence": "Bitter pain seized her heart, and she rent the covering upon her divine hair with her dear hands: her dark cloak she cast down from both her shoulders and sped, like a wild-bird, over the firm land and yielding sea, seeking her child."
+    },
+    "homeric-1-s12-140": {
+      "context": "never tasted ambrosia and the [sweet draught of nectar] , nor sprinkled her body",
+      "full_sentence": "Then for nine days queenly Deo wandered over the earth with flaming torches in her hands, so grieved that she never tasted ambrosia and the sweet draught of nectar, nor sprinkled her body with water."
+    },
+    "homeric-1-s12-60": {
+      "context": "wandered over the earth with [flaming torches] in her hands, so grieved",
+      "full_sentence": "Then for nine days queenly Deo wandered over the earth with flaming torches in her hands, so grieved that she never tasted ambrosia and the sweet draught of nectar, nor sprinkled her body with water."
+    },
+    "homeric-1-s12-123": {
+      "context": "grieved that she never tasted [ambrosia] and the sweet draught of",
+      "full_sentence": "Then for nine days queenly Deo wandered over the earth with flaming torches in her hands, so grieved that she never tasted ambrosia and the sweet draught of nectar, nor sprinkled her body with water."
+    },
+    "homeric-1-s13-62": {
+      "context": "had come, Hecate, with a [torch] in her hands, met her,",
+      "full_sentence": "But when the tenth enlightening dawn had come, Hecate, with a torch in her hands, met her, and spoke to her and told her news: 'Queenly Demeter, bringer of seasons and giver of good gifts, what god of heaven or what mortal man has rapt away Persephone and pierced with sorrow your dear heart? For I heard her voice, yet saw not with my eyes who it was. But I tell you truly and shortly all I know.' So, then, said Hecate."
+    },
+    "homeric-1-s16-897": {
+      "context": "chiding they quickly whirled the [swift chariot] along, like long-winged birds.",
+      "full_sentence": "And the Son of Hyperion answered her: 'Queen Demeter, daughter of rich-haired Rhea, I will tell you the truth; for I greatly reverence and pity you in your grief for your trim-ankled daughter. None other of the deathless gods is to blame, but only cloud-gathering Zeus who gave her to Hades, her father's brother, to be called his buxom wife. And Hades seized her and took her loudly crying in his chariot down to his realm of mist and gloom. Yet, goddess, cease your loud lament and keep not vain anger unrelentingly: Aidoneus, the Ruler of Many, is no unfitting husband among the deathless gods for your child, being your own brother and born of the same stock: also, for honor, he has that third share which he received when division was made at the first, and is appointed lord of those among whom he dwells.' So he spake, and called to his horses: and at his chiding they quickly whirled the swift chariot along, like long-winged birds."
+    },
+    "homeric-1-s16-394": {
+      "context": "took her loudly crying in [his chariot] down to his realm of",
+      "full_sentence": "And the Son of Hyperion answered her: 'Queen Demeter, daughter of rich-haired Rhea, I will tell you the truth; for I greatly reverence and pity you in your grief for your trim-ankled daughter. None other of the deathless gods is to blame, but only cloud-gathering Zeus who gave her to Hades, her father's brother, to be called his buxom wife. And Hades seized her and took her loudly crying in his chariot down to his realm of mist and gloom. Yet, goddess, cease your loud lament and keep not vain anger unrelentingly: Aidoneus, the Ruler of Many, is no unfitting husband among the deathless gods for your child, being your own brother and born of the same stock: also, for honor, he has that third share which he received when division was made at the first, and is appointed lord of those among whom he dwells.' So he spake, and called to his horses: and at his chiding they quickly whirled the swift chariot along, like long-winged birds."
+    },
+    "homeric-1-s16-841": {
+      "context": "he spake, and called to [his horses] : and at his chiding",
+      "full_sentence": "And the Son of Hyperion answered her: 'Queen Demeter, daughter of rich-haired Rhea, I will tell you the truth; for I greatly reverence and pity you in your grief for your trim-ankled daughter. None other of the deathless gods is to blame, but only cloud-gathering Zeus who gave her to Hades, her father's brother, to be called his buxom wife. And Hades seized her and took her loudly crying in his chariot down to his realm of mist and gloom. Yet, goddess, cease your loud lament and keep not vain anger unrelentingly: Aidoneus, the Ruler of Many, is no unfitting husband among the deathless gods for your child, being your own brother and born of the same stock: also, for honor, he has that third share which he received when division was made at the first, and is appointed lord of those among whom he dwells.' So he spake, and called to his horses: and at his chiding they quickly whirled the swift chariot along, like long-winged birds."
+    },
+    "homeric-1-s21-113": {
+      "context": "water, to carry it in [pitchers of bronze] to their dear father's house:",
+      "full_sentence": "There the daughters of Celeus, son of Eleusis, saw her, as they were coming for easy-drawn water, to carry it in pitchers of bronze to their dear father's house: four were they and like goddesses in the flower of their girlhood, Callidice and Cleisidice and lovely Demo and Callithoë who was the eldest of them all."
+    },
+    "homeric-1-s23-578": {
+      "context": "ready a meal by the [stern-cables of the ship] . But my heart craved",
+      "full_sentence": "And she, that queen among goddesses answered them saying: 'Hail, dear children, whosoever you are of woman-kind. I will tell you my story; for it is not unseemly that I should tell you truly what you ask. Doso is my name, for my stately mother gave it me. And now I am come from Crete over the sea's wide back — not willingly; but against my liking, by force of strength, pirates brought me thence. Afterwards they put in with their swift craft to Thoricus, and there the women landed on the shore in full throng and the men likewise, and they began to make ready a meal by the stern-cables of the ship. But my heart craved not pleasant food, and I fled secretly across the dark country and escaped my masters, that they should not take me unpurchased across the sea, there to win a price for me. And so I wandered and am come here: and I know not at all what land this is or what people are in it. But may all those who dwell on Olympus give you husbands and birth of children as parents desire, so you take pity on me, maidens, ...'"
+    },
+    "homeric-1-s23-433": {
+      "context": "they put in with their [swift craft] to Thoricus, and there the",
+      "full_sentence": "And she, that queen among goddesses answered them saying: 'Hail, dear children, whosoever you are of woman-kind. I will tell you my story; for it is not unseemly that I should tell you truly what you ask. Doso is my name, for my stately mother gave it me. And now I am come from Crete over the sea's wide back — not willingly; but against my liking, by force of strength, pirates brought me thence. Afterwards they put in with their swift craft to Thoricus, and there the women landed on the shore in full throng and the men likewise, and they began to make ready a meal by the stern-cables of the ship. But my heart craved not pleasant food, and I fled secretly across the dark country and escaped my masters, that they should not take me unpurchased across the sea, there to win a price for me. And so I wandered and am come here: and I know not at all what land this is or what people are in it. But may all those who dwell on Olympus give you husbands and birth of children as parents desire, so you take pity on me, maidens, ...'"
+    },
+    "homeric-2-s1-133": {
+      "context": "draws near, as he bends [his bright bow] .",
+      "full_sentence": "As he goes through the house of Zeus, the gods tremble before him and all spring up from their seats when he draws near, as he bends his bright bow."
+    },
+    "homeric-2-s2-202": {
+      "context": "and hangs them on a [golden peg] against a pillar of his",
+      "full_sentence": "But Leto alone stays by the side of Zeus who delights in thunder; and then she unstrings his bow, and closes his quiver, and takes his archery from his strong shoulders in her hands and hangs them on a golden peg against a pillar of his father's house."
+    },
+    "homeric-2-s3-83": {
+      "context": "Father gives him nectar in [a golden cup] welcoming his dear son, while",
+      "full_sentence": "Then she leads him to a seat and makes him sit: and the Father gives him nectar in a golden cup welcoming his dear son, while the other gods make him sit down there, and queenly Leto rejoices because she bare a mighty son and an archer."
+    },
+    "homeric-2-s3-73": {
+      "context": "and the Father gives him [nectar] in a golden cup welcoming",
+      "full_sentence": "Then she leads him to a seat and makes him sit: and the Father gives him nectar in a golden cup welcoming his dear son, while the other gods make him sit down there, and queenly Leto rejoices because she bare a mighty son and an archer."
+    },
+    "homeric-2-s10-453": {
+      "context": "But if you have the [temple of far-shooting Apollo] , all men will bring",
+      "full_sentence": "But they greatly trembled and feared, and none, not even the richest of them, dared receive Phoebus, until queenly Leto set foot on Delos and uttered winged words and asked her: 'Delos, if you would be willing to be the abode of my son Phoebus Apollo and make him a rich temple — for no other will touch you, as you will find: and I think you will never be rich in oxen and sheep, nor bear vintage nor yet produce plants abundantly. But if you have the temple of far-shooting Apollo, all men will bring you hecatombs and gather here, and incessant savour of rich sacrifice will always arise, and you will feed those who dwell in you from the hand of strangers; for truly your own soil is not rich.' So spake Leto."
+    },
+    "homeric-2-s10-266": {
+      "context": "Apollo and make him a [rich temple] — for no other will",
+      "full_sentence": "But they greatly trembled and feared, and none, not even the richest of them, dared receive Phoebus, until queenly Leto set foot on Delos and uttered winged words and asked her: 'Delos, if you would be willing to be the abode of my son Phoebus Apollo and make him a rich temple — for no other will touch you, as you will find: and I think you will never be rich in oxen and sheep, nor bear vintage nor yet produce plants abundantly. But if you have the temple of far-shooting Apollo, all men will bring you hecatombs and gather here, and incessant savour of rich sacrifice will always arise, and you will feed those who dwell in you from the hand of strangers; for truly your own soil is not rich.' So spake Leto."
+    },
+    "homeric-2-s11-1064": {
+      "context": "first he will build a [glorious temple] to be an oracle for",
+      "full_sentence": "And Delos rejoiced and answered and said: 'Leto, most glorious daughter of great Coeus, joyfully would I receive your child the far-shooting lord; for it is all too true that I am ill-spoken of among men, whereas thus I should become very greatly honored. But this saying I fear, and I will not hide it from you, Leto. They say that Apollo will be one that is very haughty and will greatly lord it among gods and men all over the fruitful earth. Therefore, I greatly fear in heart and spirit that as soon as he sees the light of the sun, he will scorn this island — for truly I have but a hard, rocky soil — and overturn me and thrust me down with his feet in the depths of the sea; then will the great ocean wash deep above my head for ever, and he will go to another land such as will please him, there to make his temple and wooded groves. So many-footed creatures of the sea will make their lairs in me and black seals their dwellings undisturbed, because I lack people. Yet if you will but dare to swear a great oath, goddess, that here first he will build a glorious temple to be an oracle for men, then let him afterwards make temples and wooded groves amongst all men; for surely he will be greatly renowned.' So said Delos."
+    },
+    "homeric-2-s11-817": {
+      "context": "him, there to make his [temple] and wooded groves. So many-footed",
+      "full_sentence": "And Delos rejoiced and answered and said: 'Leto, most glorious daughter of great Coeus, joyfully would I receive your child the far-shooting lord; for it is all too true that I am ill-spoken of among men, whereas thus I should become very greatly honored. But this saying I fear, and I will not hide it from you, Leto. They say that Apollo will be one that is very haughty and will greatly lord it among gods and men all over the fruitful earth. Therefore, I greatly fear in heart and spirit that as soon as he sees the light of the sun, he will scorn this island — for truly I have but a hard, rocky soil — and overturn me and thrust me down with his feet in the depths of the sea; then will the great ocean wash deep above my head for ever, and he will go to another land such as will please him, there to make his temple and wooded groves. So many-footed creatures of the sea will make their lairs in me and black seals their dwellings undisturbed, because I lack people. Yet if you will but dare to swear a great oath, goddess, that here first he will build a glorious temple to be an oracle for men, then let him afterwards make temples and wooded groves amongst all men; for surely he will be greatly renowned.' So said Delos."
+    },
+    "homeric-2-s12-212": {
+      "context": "surely Phoebus shall have here [his fragrant altar] and precinct, and you he",
+      "full_sentence": "And Leto swear the great oath of the gods: 'Now hear this, Earth and wide Heaven above, and dropping water of Styx (this is the strongest and most awful oath for the blessed gods), surely Phoebus shall have here his fragrant altar and precinct, and you he shall honor above all.'"
+    },
+    "homeric-2-s12-235": {
+      "context": "here his fragrant altar and [precinct] , and you he shall",
+      "full_sentence": "And Leto swear the great oath of the gods: 'Now hear this, Earth and wide Heaven above, and dropping water of Styx (this is the strongest and most awful oath for the blessed gods), surely Phoebus shall have here his fragrant altar and precinct, and you he shall honor above all.'"
+    },
+    "homeric-2-s17-89": {
+      "context": "to bring Eilithyia, promising her [a great necklace strung with golden threads] , nine cubits long.",
+      "full_sentence": "But the goddesses sent out Iris from the well-set isle to bring Eilithyia, promising her a great necklace strung with golden threads, nine cubits long."
+    },
+    "homeric-2-s23-109": {
+      "context": "water, and swathed you in [a white garment of fine texture] , new-woven, and fastened a",
+      "full_sentence": "Straightway, great Phoebus, the goddesses washed you purely and cleanly with sweet water, and swathed you in a white garment of fine texture, new-woven, and fastened a golden band about you."
+    },
+    "homeric-2-s23-166": {
+      "context": "fine texture, new-woven, and fastened [a golden band] about you.",
+      "full_sentence": "Straightway, great Phoebus, the goddesses washed you purely and cleanly with sweet water, and swathed you in a white garment of fine texture, new-woven, and fastened a golden band about you."
+    },
+    "homeric-2-s24-104": {
+      "context": "Themis duly poured nectar and [ambrosia] with her divine hands: and",
+      "full_sentence": "Now Leto did not give Apollo, bearer of the golden blade, her breast; but Themis duly poured nectar and ambrosia with her divine hands: and Leto was glad because she had borne a strong son and an archer."
+    },
+    "homeric-2-s24-93": {
+      "context": "breast; but Themis duly poured [nectar] and ambrosia with her divine",
+      "full_sentence": "Now Leto did not give Apollo, bearer of the golden blade, her breast; but Themis duly poured nectar and ambrosia with her divine hands: and Leto was glad because she had borne a strong son and an archer."
+    },
+    "homeric-2-s25-104": {
+      "context": "longer then be held by [golden cords] nor confined with bands, but",
+      "full_sentence": "But as soon as you had tasted that divine heavenly food, O Phoebus, you could no longer then be held by golden cords nor confined with bands, but all their ends were undone."
+    },
+    "homeric-2-s25-135": {
+      "context": "golden cords nor confined with [bands] , but all their ends",
+      "full_sentence": "But as soon as you had tasted that divine heavenly food, O Phoebus, you could no longer then be held by golden cords nor confined with bands, but all their ends were undone."
+    },
+    "homeric-2-s26-68": {
+      "context": "among the deathless goddesses: ' [The lyre and the curved bow] shall ever be dear to",
+      "full_sentence": "Forth-with Phoebus Apollo spoke out among the deathless goddesses: 'The lyre and the curved bow shall ever be dear to me, and I will declare to men the unfailing will of Zeus.' So said Phoebus, the long-haired god who shoots afar and began to walk upon the wide-pathed earth; and all the goddesses were amazed at him."
+    },
+    "homeric-2-s29-26": {
+      "context": "Many are your temples and [wooded groves] , and all peaks and",
+      "full_sentence": "Many are your temples and wooded groves, and all peaks and towering bluffs."
+    },
+    "homeric-2-s29-9": {
+      "context": "Many are [your temples] and wooded groves, and all",
+      "full_sentence": "Many are your temples and wooded groves, and all peaks and towering bluffs."
+    },
+    "homeric-3-s9-231": {
+      "context": "you. Where got you that [rich gaud for covering] , that spangled shell —",
+      "full_sentence": "When he saw it, the luck-bringing son of Zeus laughed and said: 'An omen of great luck for me so soon. I do not slight it. Hail, comrade of the feast, lovely in shape, sounding at the dance. With joy I meet you. Where got you that rich gaud for covering, that spangled shell — a tortoise living in the mountains. But I will take and carry you within: you shall help me and I will do you no disgrace, though first of all you must profit me. It is better to be at home: harm may come out of doors. Living, you shall be a spell against mischievous witchcraft; but if you die, then you shall make sweetest song."
+    },
+    "homeric-3-s9-260": {
+      "context": "rich gaud for covering, that [spangled shell] — a tortoise living in",
+      "full_sentence": "When he saw it, the luck-bringing son of Zeus laughed and said: 'An omen of great luck for me so soon. I do not slight it. Hail, comrade of the feast, lovely in shape, sounding at the dance. With joy I meet you. Where got you that rich gaud for covering, that spangled shell — a tortoise living in the mountains. But I will take and carry you within: you shall help me and I will do you no disgrace, though first of all you must profit me. It is better to be at home: harm may come out of doors. Living, you shall be a spell against mischievous witchcraft; but if you die, then you shall make sweetest song."
+    },
+    "homeric-3-s10-91": {
+      "context": "back into the house carrying [his charming toy] .",
+      "full_sentence": "Thus speaking, he took up the tortoise in both hands and went back into the house carrying his charming toy."
+    },
+    "homeric-3-s11-85": {
+      "context": "of the mountain-tortoise with a [scoop of grey iron] .",
+      "full_sentence": "Then he cut off its limbs and scooped out the marrow of the mountain-tortoise with a scoop of grey iron."
+    },
+    "homeric-3-s13-98": {
+      "context": "across the back and through [the shell of the tortoise] , and then stretched ox",
+      "full_sentence": "He cut stalks of reed to measure and fixed them, fastening their ends across the back and through the shell of the tortoise, and then stretched ox hide all over it by his skill."
+    },
+    "homeric-3-s14-86": {
+      "context": "two of them, and stretched [seven strings of sheep-gut] .",
+      "full_sentence": "Also he put in the horns and fitted a cross-piece upon the two of them, and stretched seven strings of sheep-gut."
+    },
+    "homeric-3-s14-38": {
+      "context": "the horns and fitted a [cross-piece] upon the two of them,",
+      "full_sentence": "Also he put in the horns and fitted a cross-piece upon the two of them, and stretched seven strings of sheep-gut."
+    },
+    "homeric-3-s14-19": {
+      "context": "Also he put in the [horns] and fitted a cross-piece upon",
+      "full_sentence": "Also he put in the horns and fitted a cross-piece upon the two of them, and stretched seven strings of sheep-gut."
+    },
+    "homeric-3-s15-79": {
+      "context": "the key, as he held [the lovely thing] .",
+      "full_sentence": "But when he had made it he proved each string in turn with the key, as he held the lovely thing."
+    },
+    "homeric-3-s18-110": {
+      "context": "all about the house, and [the abundant cauldrons] .",
+      "full_sentence": "He celebrated, too, the handmaids of the nymph, and her bright home, and the tripods all about the house, and the abundant cauldrons."
+    },
+    "homeric-3-s18-73": {
+      "context": "and her bright home, and [the tripods] all about the house, and",
+      "full_sentence": "He celebrated, too, the handmaids of the nymph, and her bright home, and the tripods all about the house, and the abundant cauldrons."
+    },
+    "homeric-3-s20-12": {
+      "context": "And he took [the hollow lyre] and laid it in his",
+      "full_sentence": "And he took the hollow lyre and laid it in his sacred cradle, and sprang from the sweet-smelling hall to a watch-place, pondering sheer trickery in his heart — deeds such as knavish folk pursue in the dark night-time; for he longed to taste flesh."
+    },
+    "homeric-3-s21-60": {
+      "context": "the earth towards Ocean with [his horses and chariot] when Hermes came hurrying to",
+      "full_sentence": "The Sun was going down beneath the earth towards Ocean with his horses and chariot when Hermes came hurrying to the shadowy mountains of Pieria, where the divine cattle of the blessed gods had their steads and grazed the pleasant, unmown meadows."
+    },
+    "homeric-3-s24-269": {
+      "context": "securely under his feet as [light sandals] .",
+      "full_sentence": "Then he wove sandals with wicker-work by the sand of the sea, wonderful things, unthought of, unimagined; for he mixed together tamarisk and myrtle-twigs, fastening together an armful of their fresh, young wood, and tied them, leaves and all securely under his feet as light sandals."
+    },
+    "homeric-3-s30-53": {
+      "context": "to the high-roofed byres and [the drinking-troughs] that were before the noble",
+      "full_sentence": "And they came unwearied to the high-roofed byres and the drinking-troughs that were before the noble meadow."
+    },
+    "homeric-3-s31-161": {
+      "context": "dewy galingal, he gathered a [pile of wood] and began to seek the",
+      "full_sentence": "Then, after he had well-fed the loud-bellowing cattle with fodder and driven them into the byre, close-packed and chewing lotus and dewy galingal, he gathered a pile of wood and began to seek the art of fire."
+    },
+    "homeric-3-s32-51": {
+      "context": "branch and trimmed it with [the knife] held firmly in his hand:",
+      "full_sentence": "He chose a stout laurel branch and trimmed it with the knife held firmly in his hand: and the hot smoke rose up."
+    },
+    "homeric-3-s33-37": {
+      "context": "was Hermes who first invented [fire-sticks] and fire.",
+      "full_sentence": "For it was Hermes who first invented fire-sticks and fire."
+    },
+    "homeric-3-s33-53": {
+      "context": "who first invented fire-sticks and [fire] .",
+      "full_sentence": "For it was Hermes who first invented fire-sticks and fire."
+    },
+    "homeric-3-s37-154": {
+      "context": "and the honorable chine and [the paunch full of dark blood] all together.",
+      "full_sentence": "Then he went on from task to task: first he cut up the rich, fatted meat, and pierced it with wooden spits, and roasted flesh and the honorable chine and the paunch full of dark blood all together."
+    },
+    "homeric-3-s37-130": {
+      "context": "spits, and roasted flesh and [the honorable chine] and the paunch full of",
+      "full_sentence": "Then he went on from task to task: first he cut up the rich, fatted meat, and pierced it with wooden spits, and roasted flesh and the honorable chine and the paunch full of dark blood all together."
+    },
+    "homeric-3-s38-51": {
+      "context": "the ground, and spread out [the hides] on a rugged rock: and",
+      "full_sentence": "He laid them there upon the ground, and spread out the hides on a rugged rock: and so they are still there many ages afterwards, a long, long time after all this, and are continually."
+    },
+    "homeric-3-s39-80": {
+      "context": "prepared and put them on [a smooth, flat stone] , and divided them into",
+      "full_sentence": "Next glad-hearted Hermes dragged the rich meats he had prepared and put them on a smooth, flat stone, and divided them into twelve portions distributed by lot, making each portion wholly honorable."
+    },
+    "homeric-3-s39-33": {
+      "context": "Next glad-hearted Hermes dragged [the rich meats] he had prepared and put",
+      "full_sentence": "Next glad-hearted Hermes dragged the rich meats he had prepared and put them on a smooth, flat stone, and divided them into twelve portions distributed by lot, making each portion wholly honorable."
+    },
+    "homeric-3-s41-52": {
+      "context": "high-roofed byre the fat and [all the flesh] , placing them high up",
+      "full_sentence": "But he put away in the high-roofed byre the fat and all the flesh, placing them high up to be a token of his youthful theft."
+    },
+    "homeric-3-s41-40": {
+      "context": "away in the high-roofed byre [the fat] and all the flesh, placing",
+      "full_sentence": "But he put away in the high-roofed byre the fat and all the flesh, placing them high up to be a token of his youthful theft."
+    },
+    "homeric-3-s43-49": {
+      "context": "duly finished all, he threw [his sandals] into deep-eddying Alpheus, and quenched",
+      "full_sentence": "And when the god had duly finished all, he threw his sandals into deep-eddying Alpheus, and quenched the embers, covering the black ashes with sand, and so spent the night while Selene's soft light shone down."
+    },
+    "homeric-4-s3-63": {
+      "context": "make chariots of war and [cars variously wrought with bronze] , and she, too, teaches",
+      "full_sentence": "She first taught earthly craftsmen to make chariots of war and cars variously wrought with bronze, and she, too, teaches tender maidens in the house and puts knowledge of goodly arts in each one's mind."
+    },
+    "homeric-4-s3-43": {
+      "context": "taught earthly craftsmen to make [chariots of war] and cars variously wrought with",
+      "full_sentence": "She first taught earthly craftsmen to make chariots of war and cars variously wrought with bronze, and she, too, teaches tender maidens in the house and puts knowledge of goodly arts in each one's mind."
+    },
+    "homeric-4-s4-167": {
+      "context": "wild beasts in the mountains, [the lyre] also and dancing and thrilling",
+      "full_sentence": "Nor does laughter-loving Aphrodite ever tame in love Artemis, the huntress with shafts of gold; for she loves archery and the slaying of wild beasts in the mountains, the lyre also and dancing and thrilling cries and shady woods and the cities of upright men."
+    },
+    "homeric-4-s16-89": {
+      "context": "fragrant altar, and passed into [her sweet-smelling temple] .",
+      "full_sentence": "She went to Cyprus, to Paphos, where her precinct is and fragrant altar, and passed into her sweet-smelling temple."
+    },
+    "homeric-4-s16-57": {
+      "context": "where her precinct is and [fragrant altar] , and passed into her",
+      "full_sentence": "She went to Cyprus, to Paphos, where her precinct is and fragrant altar, and passed into her sweet-smelling temple."
+    },
+    "homeric-4-s17-29": {
+      "context": "went in and put to [the glittering doors] , and there the Graces",
+      "full_sentence": "There she went in and put to the glittering doors, and there the Graces bathed her with heavenly oil such as blooms upon the bodies of the eternal gods — oil divinely sweet, which she had by her, filled with fragrance."
+    },
+    "homeric-4-s17-154": {
+      "context": "of the eternal gods — [oil divinely sweet] , which she had by",
+      "full_sentence": "There she went in and put to the glittering doors, and there the Graces bathed her with heavenly oil such as blooms upon the bodies of the eternal gods — oil divinely sweet, which she had by her, filled with fragrance."
+    },
+    "homeric-4-s17-88": {
+      "context": "the Graces bathed her with [heavenly oil] such as blooms upon the",
+      "full_sentence": "There she went in and put to the glittering doors, and there the Graces bathed her with heavenly oil such as blooms upon the bodies of the eternal gods — oil divinely sweet, which she had by her, filled with fragrance."
+    },
+    "homeric-4-s18-45": {
+      "context": "Aphrodite put on all her [rich clothes] , and when she had",
+      "full_sentence": "And laughter-loving Aphrodite put on all her rich clothes, and when she had decked herself with gold, she left sweet-smelling Cyprus and went in haste towards Troy, swiftly travelling high up among the clouds."
+    },
+    "homeric-4-s18-96": {
+      "context": "she had decked herself with [gold] , she left sweet-smelling Cyprus",
+      "full_sentence": "And laughter-loving Aphrodite put on all her rich clothes, and when she had decked herself with gold, she left sweet-smelling Cyprus and went in haste towards Troy, swiftly travelling high up among the clouds."
+    },
+    "homeric-4-s24-86": {
+      "context": "her mien and height and [shining garments] .",
+      "full_sentence": "Now when Anchises saw her, he marked her well and wondered at her mien and height and shining garments."
+    },
+    "homeric-4-s25-63": {
+      "context": "out-shining the brightness of fire, [a splendid robe of gold] , enriched with all manner",
+      "full_sentence": "For she was clad in a robe out-shining the brightness of fire, a splendid robe of gold, enriched with all manner of needlework, which shimmered like the moon over her tender breasts, a marvel to see."
+    },
+    "homeric-4-s25-20": {
+      "context": "For she was clad in [a robe] out-shining the brightness of fire,",
+      "full_sentence": "For she was clad in a robe out-shining the brightness of fire, a splendid robe of gold, enriched with all manner of needlework, which shimmered like the moon over her tender breasts, a marvel to see."
+    },
+    "homeric-4-s26-14": {
+      "context": "Also she wore [twisted brooches] and shining earrings in the",
+      "full_sentence": "Also she wore twisted brooches and shining earrings in the form of flowers; and round her soft throat were lovely necklaces."
+    },
+    "homeric-4-s26-35": {
+      "context": "she wore twisted brooches and [shining earrings] in the form of flowers;",
+      "full_sentence": "Also she wore twisted brooches and shining earrings in the form of flowers; and round her soft throat were lovely necklaces."
+    },
+    "homeric-4-s26-107": {
+      "context": "round her soft throat were [lovely necklaces] .",
+      "full_sentence": "Also she wore twisted brooches and shining earrings in the form of flowers; and round her soft throat were lovely necklaces."
+    },
+    "homeric-4-s27-549": {
+      "context": "seen place, and will sacrifice [rich offerings] to you at all seasons.",
+      "full_sentence": "And Anchises was seized with love, and said to her: 'Hail, lady, whoever of the blessed ones you are that are come to this house, whether Artemis, or Leto, or golden Aphrodite, or high-born Themis, or bright-eyed Athena. Or, maybe, you are one of the Graces come hither, who bear the gods company and are called immortal, or else one of the Nymphs who haunt the pleasant woods, or of those who inhabit this lovely mountain and the springs of rivers and grassy meads. I will make you an altar upon a high peak in a far seen place, and will sacrifice rich offerings to you at all seasons. And do you feel kindly towards me and grant that I may become a man very eminent among the Trojans, and give me strong offspring for the time to come. As for my own self, let me live long and happily, seeing the light of the sun, and come to the threshold of old age, a man prosperous among the people.'"
+    },
+    "homeric-4-s27-483": {
+      "context": "meads. I will make you [an altar] upon a high peak in",
+      "full_sentence": "And Anchises was seized with love, and said to her: 'Hail, lady, whoever of the blessed ones you are that are come to this house, whether Artemis, or Leto, or golden Aphrodite, or high-born Themis, or bright-eyed Athena. Or, maybe, you are one of the Graces come hither, who bear the gods company and are called immortal, or else one of the Nymphs who haunt the pleasant woods, or of those who inhabit this lovely mountain and the springs of rivers and grassy meads. I will make you an altar upon a high peak in a far seen place, and will sacrifice rich offerings to you at all seasons. And do you feel kindly towards me and grant that I may become a man very eminent among the Trojans, and give me strong offspring for the time to come. As for my own self, let me live long and happily, seeing the light of the sun, and come to the threshold of old age, a man prosperous among the people.'"
+    },
+    "homeric-4-s28-617": {
+      "context": "the Slayer of Argus with [the golden wand] has caught me up from",
+      "full_sentence": "Thereupon Aphrodite the daughter of Zeus answered him: 'Anchises, most glorious of all men born on earth, know that I am no goddess: why do you liken me to the deathless ones. Nay, I am but a mortal, and a woman was the mother that bare me. Otreus of famous name is my father, if so be you have heard of him, and he reigns over all Phrygia rich in fortresses. But I know your speech well beside my own, for a Trojan nurse brought me up at home: she took me from my dear mother and reared me thenceforth when I was a little child. So comes it, then, that I well know your tongue also. And now the Slayer of Argus with the golden wand has caught me up from the dance of huntress Artemis, her with the golden arrows. For there were many of us, nymphs and marriageable  maidens, playing together; and an innumerable company encircled us: from these the Slayer of Argus with the golden wand rapt me away. He carried me over many fields of mortal men and over much land untilled and unpossessed, where savage wild-beasts roam through shady coombes, until I thought never again to touch the life-giving earth with my feet. And he said that I should be called the wedded wife of Anchises, and should bear you goodly children. But when he had told and advised me, he, the strong Slayer of Argos, went back to the families of the deathless gods..."
+    },
+    "homeric-4-s28-870": {
+      "context": "the Slayer of Argus with [the golden wand] rapt me away. He carried",
+      "full_sentence": "Thereupon Aphrodite the daughter of Zeus answered him: 'Anchises, most glorious of all men born on earth, know that I am no goddess: why do you liken me to the deathless ones. Nay, I am but a mortal, and a woman was the mother that bare me. Otreus of famous name is my father, if so be you have heard of him, and he reigns over all Phrygia rich in fortresses. But I know your speech well beside my own, for a Trojan nurse brought me up at home: she took me from my dear mother and reared me thenceforth when I was a little child. So comes it, then, that I well know your tongue also. And now the Slayer of Argus with the golden wand has caught me up from the dance of huntress Artemis, her with the golden arrows. For there were many of us, nymphs and marriageable  maidens, playing together; and an innumerable company encircled us: from these the Slayer of Argus with the golden wand rapt me away. He carried me over many fields of mortal men and over much land untilled and unpossessed, where savage wild-beasts roam through shady coombes, until I thought never again to touch the life-giving earth with my feet. And he said that I should be called the wedded wife of Anchises, and should bear you goodly children. But when he had told and advised me, he, the strong Slayer of Argos, went back to the families of the deathless gods..."
+    },
+    "homeric-5-s2-132": {
+      "context": "her pierced ears they hung [ornaments of orichalc and precious gold] , and adorned her with",
+      "full_sentence": "They clothed her with heavenly garments: on her head they put a fine, well-wrought crown of gold, and in her pierced ears they hung ornaments of orichalc and precious gold, and adorned her with golden necklaces over her soft neck and snow-white breasts, jewels which the gold-filleted Hours wear themselves whenever they go to their father's house to join the lovely dances of the gods."
+    },
+    "homeric-5-s2-22": {
+      "context": "They clothed her with [heavenly garments] : on her head they",
+      "full_sentence": "They clothed her with heavenly garments: on her head they put a fine, well-wrought crown of gold, and in her pierced ears they hung ornaments of orichalc and precious gold, and adorned her with golden necklaces over her soft neck and snow-white breasts, jewels which the gold-filleted Hours wear themselves whenever they go to their father's house to join the lovely dances of the gods."
+    },
+    "homeric-5-s2-194": {
+      "context": "gold, and adorned her with [golden necklaces] over her soft neck and",
+      "full_sentence": "They clothed her with heavenly garments: on her head they put a fine, well-wrought crown of gold, and in her pierced ears they hung ornaments of orichalc and precious gold, and adorned her with golden necklaces over her soft neck and snow-white breasts, jewels which the gold-filleted Hours wear themselves whenever they go to their father's house to join the lovely dances of the gods."
+    },
+    "homeric-5-s2-83": {
+      "context": "they put a fine, well-wrought [crown of gold] , and in her pierced",
+      "full_sentence": "They clothed her with heavenly garments: on her head they put a fine, well-wrought crown of gold, and in her pierced ears they hung ornaments of orichalc and precious gold, and adorned her with golden necklaces over her soft neck and snow-white breasts, jewels which the gold-filleted Hours wear themselves whenever they go to their father's house to join the lovely dances of the gods."
+    },
+    "homeric-5-s2-254": {
+      "context": "soft neck and snow-white breasts, [jewels] which the gold-filleted Hours wear",
+      "full_sentence": "They clothed her with heavenly garments: on her head they put a fine, well-wrought crown of gold, and in her pierced ears they hung ornaments of orichalc and precious gold, and adorned her with golden necklaces over her soft neck and snow-white breasts, jewels which the gold-filleted Hours wear themselves whenever they go to their father's house to join the lovely dances of the gods."
+    },
+    "homeric-6-s0-262": {
+      "context": "strong shoulders he wore a [purple robe]",
+      "full_sentence": "I will tell of Dionysus, the son of glorious Semele, how he appeared on a jutting headland by the shore of the fruitless sea, seeming like a stripling in the first flush of manhood: his rich, dark hair was waving about him, and on his strong shoulders he wore a purple robe"
+    },
+    "homeric-6-s1-73": {
+      "context": "sparkling sea Tyrsenian pirates on [a well-decked ship] — a miserable doom led",
+      "full_sentence": "Presently there came swiftly over the sparkling sea Tyrsenian pirates on a well-decked ship — a miserable doom led them on."
+    },
+    "homeric-6-s2-118": {
+      "context": "straightway put him on board [their ship] exultingly; for they thought him",
+      "full_sentence": "When they saw him they made signs to one another and sprang out quickly, and seizing him straightway put him on board their ship exultingly; for they thought him the son of heaven-nurtured kings."
+    },
+    "homeric-6-s3-79": {
+      "context": "would not hold him, and [the withes] fell far away from his",
+      "full_sentence": "They sought to bind him with rude bonds, but the bonds would not hold him, and the withes fell far away from his hands and feet: and he sat with a smile in his dark eyes."
+    },
+    "homeric-6-s3-45": {
+      "context": "him with rude bonds, but [the bonds] would not hold him, and",
+      "full_sentence": "They sought to bind him with rude bonds, but the bonds would not hold him, and the withes fell far away from his hands and feet: and he sat with a smile in his dark eyes."
+    },
+    "homeric-6-s4-164": {
+      "context": "that he is. Not even [the well-built ship] can carry him. Surely this",
+      "full_sentence": "Then the helmsman understood all and cried out at once to his fellows and said: 'Madmen, what god is this whom you have taken and bind, strong that he is. Not even the well-built ship can carry him. Surely this is either Zeus or Apollo who has the silver bow, or Poseidon, for he looks not like mortal men but like the gods who dwell on Olympus. Come, then, let us set him free upon the dark shore at once: do not lay hands on him, lest he grow angry and stir up dangerous winds and heavy squalls.'. So said he."
+    },
+    "homeric-6-s5-111": {
+      "context": "on the ship: catch all [the sheets] . As for this fellow",
+      "full_sentence": "But the master chid him with taunting words: 'Madman, mark the wind and help hoist sail on the ship: catch all the sheets. As for this fellow we men will see to him: I reckon he is bound for Egypt or for Cyprus or to the Hyperboreans or further still. But in the end he will speak out and tell us his friends and all his wealth and his brothers, now that providence has thrown him in our way.'"
+    },
+    "homeric-6-s5-91": {
+      "context": "and help hoist sail on [the ship] : catch all the sheets.",
+      "full_sentence": "But the master chid him with taunting words: 'Madman, mark the wind and help hoist sail on the ship: catch all the sheets. As for this fellow we men will see to him: I reckon he is bound for Egypt or for Cyprus or to the Hyperboreans or further still. But in the end he will speak out and tell us his friends and all his wealth and his brothers, now that providence has thrown him in our way.'"
+    },
+    "homeric-6-s5-83": {
+      "context": "the wind and help hoist [sail] on the ship: catch all",
+      "full_sentence": "But the master chid him with taunting words: 'Madman, mark the wind and help hoist sail on the ship: catch all the sheets. As for this fellow we men will see to him: I reckon he is bound for Egypt or for Cyprus or to the Hyperboreans or further still. But in the end he will speak out and tell us his friends and all his wealth and his brothers, now that providence has thrown him in our way.'"
+    },
+    "homeric-6-s8-13": {
+      "context": "First of all [sweet, fragrant wine] ran streaming throughout all the",
+      "full_sentence": "First of all sweet, fragrant wine ran streaming throughout all the black ship and a heavenly smell arose, so that all the seamen were seized with amazement when they saw it."
+    },
+    "homeric-6-s8-63": {
+      "context": "wine ran streaming throughout all [the black ship] and a heavenly smell arose,",
+      "full_sentence": "First of all sweet, fragrant wine ran streaming throughout all the black ship and a heavenly smell arose, so that all the seamen were seized with amazement when they saw it."
+    },
+    "homeric-6-s9-225": {
+      "context": "growing on it; and all [the thole-pins] were covered with garlands.",
+      "full_sentence": "And all at once a vine spread out both ways along the top of the sail with many clusters hanging down from it, and a dark ivy-plant twined about the mast, blossoming with flowers, and with rich berries growing on it; and all the thole-pins were covered with garlands."
+    },
+    "homeric-6-s9-145": {
+      "context": "a dark ivy-plant twined about [the mast] , blossoming with flowers, and",
+      "full_sentence": "And all at once a vine spread out both ways along the top of the sail with many clusters hanging down from it, and a dark ivy-plant twined about the mast, blossoming with flowers, and with rich berries growing on it; and all the thole-pins were covered with garlands."
+    },
+    "homeric-6-s9-258": {
+      "context": "the thole-pins were covered with [garlands] .",
+      "full_sentence": "And all at once a vine spread out both ways along the top of the sail with many clusters hanging down from it, and a dark ivy-plant twined about the mast, blossoming with flowers, and with rich berries growing on it; and all the thole-pins were covered with garlands."
+    },
+    "homeric-6-s10-74": {
+      "context": "bade the helmsman to put [the ship] to land.",
+      "full_sentence": "When the pirates saw all this, then at last they bade the helmsman to put the ship to land."
+    },
+    "homeric-8-s1-67": {
+      "context": "in reeds, and swiftly drives [her all-golden chariot] through Smyrna to vine-clad Claros",
+      "full_sentence": "She waters her horses from Meles deep in reeds, and swiftly drives her all-golden chariot through Smyrna to vine-clad Claros where Apollo, god of the silver bow, sits waiting for the far-shooting goddess who delights in arrows."
+    },
+    "homeric-13-s1-25": {
+      "context": "She is well-pleased with [the sound of rattles] and of timbrels, with the",
+      "full_sentence": "She is well-pleased with the sound of rattles and of timbrels, with the voice of flutes and the outcry of wolves and bright-eyed lions, with echoing hills and wooded coombes."
+    },
+    "homeric-13-s1-68": {
+      "context": "rattles and of timbrels, with [the voice of flutes] and the outcry of wolves",
+      "full_sentence": "She is well-pleased with the sound of rattles and of timbrels, with the voice of flutes and the outcry of wolves and bright-eyed lions, with echoing hills and wooded coombes."
+    },
+    "homeric-18-s6-23": {
+      "context": "his back he wears a [spotted lynx-pelt] , and he delights in",
+      "full_sentence": "On his back he wears a spotted lynx-pelt, and he delights in high-pitched songs in a soft meadow where crocuses and sweet-smelling hyacinths bloom at random in the grass."
+    },
+    "homeric-18-s12-74": {
+      "context": "deathless gods, carrying his son [wrapped in warm skins of mountain hares] , and set him down",
+      "full_sentence": "And he went quickly to the abodes of the deathless gods, carrying his son wrapped in warm skins of mountain hares, and set him down beside Zeus and showed him to the rest of the gods."
+    },
+    "homeric-18-s15-19": {
+      "context": "I seek your favour [with a song] .",
+      "full_sentence": "I seek your favour with a song."
+    },
+    "homeric-20-s0-186": {
+      "context": "you the sweet-tongued minstrel, holding [his high-pitched lyre] , always sings both first",
+      "full_sentence": "Phoebus, of you even the swan sings with clear voice to the beating of his wings, as he alights upon the bank by the eddying river Peneus; and of you the sweet-tongued minstrel, holding his high-pitched lyre, always sings both first and last."
+    },
+    "homeric-23-s0-94": {
+      "context": "Far-shooter at goodly Pytho, with [soft oil] dripping ever from your locks,",
+      "full_sentence": "Hestia, you who tend the holy house of the lord Apollo, the Far-shooter at goodly Pytho, with soft oil dripping ever from your locks, come now into this house, come, having one mind with Zeus the all-wise — draw near, and withal bestow grace upon my song."
+    },
+    "homeric-26-s1-103": {
+      "context": "the chase, and sends out [grievous shafts] .",
+      "full_sentence": "Over the shadowy hills and windy peaks she draws her golden bow, rejoicing in the chase, and sends out grievous shafts."
+    },
+    "homeric-26-s1-53": {
+      "context": "windy peaks she draws her [golden bow] , rejoicing in the chase,",
+      "full_sentence": "Over the shadowy hills and windy peaks she draws her golden bow, rejoicing in the chase, and sends out grievous shafts."
+    },
+    "homeric-26-s4-23": {
+      "context": "There she hangs up her [curved bow] and her arrows, and heads",
+      "full_sentence": "There she hangs up her curved bow and her arrows, and heads and leads the dances, gracefully arrayed, while all they utter their heavenly voice, singing how neat-ankled Leto bare children supreme among the immortals both in thought and in deed."
+    },
+    "homeric-26-s4-42": {
+      "context": "her curved bow and her [arrows] , and heads and leads",
+      "full_sentence": "There she hangs up her curved bow and her arrows, and heads and leads the dances, gracefully arrayed, while all they utter their heavenly voice, singing how neat-ankled Leto bare children supreme among the immortals both in thought and in deed."
+    },
+    "homeric-26-s4-54": {
+      "context": "bow and her arrows, and [heads] and leads the dances, gracefully",
+      "full_sentence": "There she hangs up her curved bow and her arrows, and heads and leads the dances, gracefully arrayed, while all they utter their heavenly voice, singing how neat-ankled Leto bare children supreme among the immortals both in thought and in deed."
+    },
+    "homeric-27-s1-48": {
+      "context": "her from his awful head, [arrayed in warlike arms of flashing gold] , and awe seized all",
+      "full_sentence": "Wise Zeus himself bare her from his awful head, arrayed in warlike arms of flashing gold, and awe seized all the gods as they gazed."
+    },
+    "homeric-27-s2-354": {
+      "context": "Son of Hyperion stopped his [swift-footed horses] a long while, until the",
+      "full_sentence": "But Athena sprang quickly from the immortal head and stood before Zeus who holds the aegis, shaking a sharp spear: great Olympus began to reel horribly at the might of the bright-eyed goddess, and earth round about cried fearfully, and the sea was moved and tossed with dark waves, while foam burst forth suddenly: the bright Son of Hyperion stopped his swift-footed horses a long while, until the maiden Pallas Athena had stripped the heavenly armour from her immortal shoulders."
+    },
+    "homeric-27-s2-436": {
+      "context": "Pallas Athena had stripped the [heavenly armour] from her immortal shoulders.",
+      "full_sentence": "But Athena sprang quickly from the immortal head and stood before Zeus who holds the aegis, shaking a sharp spear: great Olympus began to reel horribly at the might of the bright-eyed goddess, and earth round about cried fearfully, and the sea was moved and tossed with dark waves, while foam burst forth suddenly: the bright Son of Hyperion stopped his swift-footed horses a long while, until the maiden Pallas Athena had stripped the heavenly armour from her immortal shoulders."
+    },
+    "homeric-27-s2-100": {
+      "context": "who holds the aegis, shaking [a sharp spear] : great Olympus began to",
+      "full_sentence": "But Athena sprang quickly from the immortal head and stood before Zeus who holds the aegis, shaking a sharp spear: great Olympus began to reel horribly at the might of the bright-eyed goddess, and earth round about cried fearfully, and the sea was moved and tossed with dark waves, while foam burst forth suddenly: the bright Son of Hyperion stopped his swift-footed horses a long while, until the maiden Pallas Athena had stripped the heavenly armour from her immortal shoulders."
+    },
+    "homeric-28-s1-71": {
+      "context": "one does not duly pour [sweet wine] in offering to Hestia both",
+      "full_sentence": "For without you mortals hold no banquet — where one does not duly pour sweet wine in offering to Hestia both first and last."
+    },
+    "homeric-29-s4-123": {
+      "context": "cattle, and his house is [filled with good things] .",
+      "full_sentence": "He has all things abundantly: his fruitful land is laden with corn, his pastures are covered with cattle, and his house is filled with good things."
+    },
+    "homeric-29-s4-51": {
+      "context": "abundantly: his fruitful land is [laden with corn] , his pastures are covered",
+      "full_sentence": "He has all things abundantly: his fruitful land is laden with corn, his pastures are covered with cattle, and his house is filled with good things."
+    },
+    "homeric-30-s2-110": {
+      "context": "gazes with his eyes from [his golden helmet] .",
+      "full_sentence": "As he rides in his chariot, he shines upon men and deathless gods, and piercingly he gazes with his eyes from his golden helmet."
+    },
+    "homeric-30-s3-136": {
+      "context": "gracefully enclose his far-seen face: [a rich, fine-spun garment] glows upon his body and",
+      "full_sentence": "Bright rays beam dazzlingly from him, and his bright locks streaming from the temples of his head gracefully enclose his far-seen face: a rich, fine-spun garment glows upon his body and flutters in the wind: and stallions carry him."
+    },
+    "homeric-30-s4-29": {
+      "context": "when he has stayed his [golden-yoked chariot] and horses, he rests there",
+      "full_sentence": "Then, when he has stayed his golden-yoked chariot and horses, he rests there upon the highest point of heaven, until he marvelously drives them down again through heaven to Ocean."
+    },
+    "homeric-31-s2-216": {
+      "context": "her far-gleaming raiment, and yoked [her strong-necked, shining team] , drives on her long-maned",
+      "full_sentence": "The air, unlit before, glows with the light of her golden crown, and her rays beam clear, whensoever bright Selene having bathed her lovely body in the waters of Ocean, and donned her far-gleaming raiment, and yoked her strong-necked, shining team, drives on her long-maned horses at full speed, at eventime in the mid-month: then her great orbit is full and then her beams shine brightest as she increases."
+    },
+    "homeric-31-s2-34": {
+      "context": "air, unlit before, glows with [the light of her golden crown] , and her rays beam",
+      "full_sentence": "The air, unlit before, glows with the light of her golden crown, and her rays beam clear, whensoever bright Selene having bathed her lovely body in the waters of Ocean, and donned her far-gleaming raiment, and yoked her strong-necked, shining team, drives on her long-maned horses at full speed, at eventime in the mid-month: then her great orbit is full and then her beams shine brightest as she increases."
+    },
+    "homeric-31-s2-180": {
+      "context": "waters of Ocean, and donned [her far-gleaming raiment] , and yoked her strong-necked,",
+      "full_sentence": "The air, unlit before, glows with the light of her golden crown, and her rays beam clear, whensoever bright Selene having bathed her lovely body in the waters of Ocean, and donned her far-gleaming raiment, and yoked her strong-necked, shining team, drives on her long-maned horses at full speed, at eventime in the mid-month: then her great orbit is full and then her beams shine brightest as she increases."
+    },
+    "homeric-32-s2-55": {
+      "context": "sons of great Zeus with [vows of white lambs] , going to the forepart",
+      "full_sentence": "Then the shipmen call upon the sons of great Zeus with vows of white lambs, going to the forepart of the prow; but the strong wind and the waves of the sea lay the ship under water, until suddenly these two are seen darting through the air on tawny wings."
+    },
+    "homeric-32-s2-160": {
+      "context": "waves of the sea lay [the ship] under water, until suddenly these",
+      "full_sentence": "Then the shipmen call upon the sons of great Zeus with vows of white lambs, going to the forepart of the prow; but the strong wind and the waves of the sea lay the ship under water, until suddenly these two are seen darting through the air on tawny wings."
+    },
+    "orphic-2-s2-9": {
+      "context": "You hold [the keys] , you are accessible to",
+      "full_sentence": "You hold the keys, you are accessible to all, O mistress, gracious and fond of nurture, you have power in every house, and you delight in festivities."
+    },
+    "orphic-8-s1-98": {
+      "context": "seasons as you ride your [dancing horses] , you rush, you rush",
+      "full_sentence": "On the right you beget dawn, on the left you beget night, you temper the seasons as you ride your dancing horses, you rush, you rush very swiftly, O fiery and bright-faced charioteer, you press on your course in endless whirl."
+    },
+    "orphic-8-s2-57": {
+      "context": "to the pious as you [hold the golden lyre] , the harmony of cosmic",
+      "full_sentence": "Harsh to the impious, you teach good to the pious as you hold the golden lyre, the harmony of cosmic motion, as you command noble deeds, as you nurture the seasons."
+    },
+    "orphic-8-s5-79": {
+      "context": "your screaming whip drives the [four-horse chariot] on.",
+      "full_sentence": "Eye of justice and light of life, O charioteer, your screaming whip drives the four-horse chariot on."
+    },
+    "orphic-8-s5-53": {
+      "context": "of life, O charioteer, your [screaming whip] drives the four-horse chariot on.",
+      "full_sentence": "Eye of justice and light of life, O charioteer, your screaming whip drives the four-horse chariot on."
+    },
+    "orphic-12-s4-170": {
+      "context": "hand drive evil bane away, [with your poisonous darts] do ward off cruel death.",
+      "full_sentence": "Immortal, world-wise, boundless and irrepressible, come, O blessed one, come, O blessed one, bringing all charms against disease, with club in hand drive evil bane away, with your poisonous darts do ward off cruel death."
+    },
+    "orphic-12-s4-130": {
+      "context": "bringing all charms against disease, [with club in hand] drive evil bane away, with",
+      "full_sentence": "Immortal, world-wise, boundless and irrepressible, come, O blessed one, come, O blessed one, bringing all charms against disease, with club in hand drive evil bane away, with your poisonous darts do ward off cruel death."
+    },
+    "orphic-14-s0-48": {
+      "context": "Rhea, daughter of many-faced Protogonos, [your sacred chariot] is drawn by bull-slayers, you",
+      "full_sentence": "Mighty Rhea, daughter of many-faced Protogonos, your sacred chariot is drawn by bull-slayers, you dance to the sound of drums and cymbals, O frenzy-loving maiden, O mother of Zeus, aegis-bearing lord of Olympos."
+    },
+    "orphic-15-s2-35": {
+      "context": "Kronian Zeus, strong-spirited god, [the thunderbolt] is your scepter, father of",
+      "full_sentence": "Kronian Zeus, strong-spirited god, the thunderbolt is your scepter, father of all, beginning and end of all, earth-shaker, increaser and purifier, all-shaker, god of thunder and lightning, Zeus the sower."
+    },
+    "orphic-15-s2-54": {
+      "context": "strong-spirited god, the thunderbolt is [your scepter] , father of all, beginning",
+      "full_sentence": "Kronian Zeus, strong-spirited god, the thunderbolt is your scepter, father of all, beginning and end of all, earth-shaker, increaser and purifier, all-shaker, god of thunder and lightning, Zeus the sower."
+    },
+    "orphic-17-s0-71": {
+      "context": "earth, horse god, you hold [the bronze trident] in your hand, you dwell",
+      "full_sentence": "Hearken, dark-maned Poseidon, holder of the earth, horse god, you hold the bronze trident in your hand, you dwell in the foundations of the full-bosomed sea."
+    },
+    "orphic-17-s4-46": {
+      "context": "foundations of the earth and [ships] moving at full tilt, bringing",
+      "full_sentence": "May you save the foundations of the earth and ships moving at full tilt, bringing peace, health, and blameless prosperity."
+    },
+    "orphic-18-s2-24": {
+      "context": "To mankind you give the [wealth of the year's fruits] , yours is the third",
+      "full_sentence": "To mankind you give the wealth of the year's fruits, yours is the third portion, earth, queen of all, seat of the gods, mighty lap of mortals."
+    },
+    "orphic-18-s3-0": {
+      "context": "[Your throne] rests on a dark realm,",
+      "full_sentence": "Your throne rests on a dark realm, the realm of distant, of untiring, of windless, and of impassive Hades; it does rest on gloomy Acheron, the river who girds the roots of the earth."
+    },
+    "orphic-19-s0-157": {
+      "context": "seat of the gods with [a god's thunderbolt] .",
+      "full_sentence": "Father Zeus, sublime is the course of the blazing cosmos you drive on, ethereal and lofty the flash of your lightning as you shake the seat of the gods with a god's thunderbolt."
+    },
+    "orphic-19-s1-137": {
+      "context": "gales, you hurl roaring thunder, [a shower of arrows] .",
+      "full_sentence": "The fire of your lightning emblazons the rain clouds, you bring storms and hurricanes, you bring mighty gales, you hurl roaring thunder, a shower of arrows."
+    },
+    "orphic-19-s5-47": {
+      "context": "that cloaks heaven, you hurl [the fiery thunderbolt] .",
+      "full_sentence": "You tear the robe that cloaks heaven, you hurl the fiery thunderbolt."
+    },
+    "orphic-19-s7-6": {
+      "context": "Enjoy [this libation] and give all things pleasing",
+      "full_sentence": "Enjoy this libation and give all things pleasing to the heart: a life of prosperity, queenly health, divine peace that nurtures youths, crowned with honors, a life ever blooming with cheerful thoughts."
+    },
+    "orphic-21-s2-27": {
+      "context": "you I offer my prayers: [your dewy cloaks] , blown by fair breezes,",
+      "full_sentence": "To you I offer my prayers: your dewy cloaks, blown by fair breezes, send fruit-nourishing rains to mother Earth."
+    },
+    "orphic-23-s1-96": {
+      "context": "earth, O beginning of all, [Demeter's sacred throne] trembles when you hold prisoner",
+      "full_sentence": "O Nereus, god of great renown, O foundation of the sea, O end of the earth, O beginning of all, Demeter's sacred throne trembles when you hold prisoner the gusty winds driven to your gloomy depths."
+    },
+    "orphic-24-s0-96": {
+      "context": "earth, O beginning of all, [Demeter's sacred throne] trembles when you hold prisoner",
+      "full_sentence": "O Nereus, god of great renown, O foundation of the sea, O end of the earth, O beginning of all, Demeter's sacred throne trembles when you hold prisoner the gusty winds driven to your gloomy depths."
+    },
+    "orphic-27-s1-5": {
+      "context": "Yoke [your swift chariot] drawn by bull-slaying lions, and",
+      "full_sentence": "Yoke your swift chariot drawn by bull-slaying lions, and join our prayers, O mighty goddess."
+    },
+    "orphic-27-s2-117": {
+      "context": "cosmos yours is the throne, [the throne in the middle] , because the earth is",
+      "full_sentence": "You bring things to pass, O many-named and revered one, you are queen of the sky; in the cosmos yours is the throne, the throne in the middle, because the earth is yours, and you give gentle nourishment to mortals."
+    },
+    "orphic-27-s2-109": {
+      "context": "the cosmos yours is the [throne] , the throne in the",
+      "full_sentence": "You bring things to pass, O many-named and revered one, you are queen of the sky; in the cosmos yours is the throne, the throne in the middle, because the earth is yours, and you give gentle nourishment to mortals."
+    },
+    "orphic-28-s2-90": {
+      "context": "who holds in his hands [the blameless tool of peace] .",
+      "full_sentence": "Interpreter of all you are, and a profiteer who frees us of cares, who holds in his hands the blameless tool of peace."
+    },
+    "orphic-29-s0-92": {
+      "context": "Demeter, come and accept this [gracious sacrifice] .",
+      "full_sentence": "Persephone, blessed daughter of great Zeus, sole offspring of Demeter, come and accept this gracious sacrifice."
+    },
+    "orphic-31-s0-99": {
+      "context": "whose feet pound the ground, [discordant is the lyre] you strike as you pace,",
+      "full_sentence": "Leaping Kouretes, stepping to the sound of arms, howling mountain men whose feet pound the ground, discordant is the lyre you strike as you pace, light of foot, O renowned marshals, O arm-carrying guards, priests in the train of a mother struck with mountain frenzy."
+    },
+    "orphic-32-s2-0": {
+      "context": "[Arms] please you, and you strike",
+      "full_sentence": "Arms please you, and you strike men's souls with frenzy, O vigorous maiden, O horrid-tempered one, slayer of Gorgo, O blessed mother of the arts, you shun the bed of love, you bring madness to the wicked, you bring prudence to the virtuous, O impetuous one."
+    },
+    "orphic-34-s0-181": {
+      "context": "Pythian god, yours are the [golden lyre] , the seeds, and the",
+      "full_sentence": "Come, O blessed Paian, O slayer of Tityos, O Phoibos, O Lykoreus, giver of riches, illustrious dweller of Memphis, O god to whom we cry “Ië,” O Titan and Pythian god, yours are the golden lyre, the seeds, and the plows."
+    },
+    "orphic-34-s0-194": {
+      "context": "yours are the golden lyre, [the seeds] , and the plows.",
+      "full_sentence": "Come, O blessed Paian, O slayer of Tityos, O Phoibos, O Lykoreus, giver of riches, illustrious dweller of Memphis, O god to whom we cry “Ië,” O Titan and Pythian god, yours are the golden lyre, the seeds, and the plows."
+    },
+    "orphic-34-s0-209": {
+      "context": "golden lyre, the seeds, and [the plows] .",
+      "full_sentence": "Come, O blessed Paian, O slayer of Tityos, O Phoibos, O Lykoreus, giver of riches, illustrious dweller of Memphis, O god to whom we cry “Ië,” O Titan and Pythian god, yours are the golden lyre, the seeds, and the plows."
+    },
+    "orphic-34-s6-31": {
+      "context": "You make everything bloom with [your versatile lyre] , you harmonize the poles,",
+      "full_sentence": "You make everything bloom with your versatile lyre, you harmonize the poles, now reaching the highest pitch, now the lowest, now again with a Doric mode, harmoniously balancing the poles, you keep the living races distinct."
+    },
+    "orphic-34-s8-117": {
+      "context": "is for this you have [the master seal] of the entire cosmos.",
+      "full_sentence": "This is why mortals call you lord and Pan, the two-horned god who sends the whistling winds; it is for this you have the master seal of the entire cosmos."
+    },
+    "orphic-38-s0-25": {
+      "context": "Bronze-beating Kouretes, [the weapons of Ares] are yours.",
+      "full_sentence": "Bronze-beating Kouretes, the weapons of Ares are yours."
+    },
+    "orphic-38-s2-21": {
+      "context": "O immortal Kouretes, [the weapons of Ares] are yours.",
+      "full_sentence": "O immortal Kouretes, the weapons of Ares are yours."
+    },
+    "orphic-38-s3-119": {
+      "context": "your nimble feet, and with [the glories in your gleaming armor] .",
+      "full_sentence": "You rule Okeanos, you rule the sea and the forests, the earth resounds with the pounding of your nimble feet, and with the glories in your gleaming armor."
+    },
+    "orphic-40-s7-44": {
+      "context": "pure one, come with the [fruits of summer] , bring peace, bring the",
+      "full_sentence": "Come, O blessed and pure one, come with the fruits of summer, bring peace, bring the welcome rule of law, bring riches, too, and prosperity, and bring health that governs all."
+    },
+    "orphic-42-s0-49": {
+      "context": "law-giving Dionysos, who carried the [fennel stalk] , unforgettable and many-named seed",
+      "full_sentence": "I call upon law-giving Dionysos, who carried the fennel stalk, unforgettable and many-named seed of Eubouleus, I call upon the sacred and holy, upon the ineffable queen Mise, whose twofold nature is male and female."
+    },
+    "orphic-42-s1-78": {
+      "context": "delight in Eleusis in your [fragrant temple] , or with Mother you",
+      "full_sentence": "Redeeming Iacchos, lord, I summon you, whether you delight in Eleusis in your fragrant temple, or with Mother you partake of mystic rites in Phrygia, or you rejoice in Kypros with fair-wreathed Kythereia, or yet you exult in fields wheat-bearing and hallowed along Egypt's river with your divine mother, the revered and black-robed Isis, as your train of nurses tends to your needs."
+    },
+    "orphic-44-s1-32": {
+      "context": "driven to great pain by [the blazing thunderbolt] , which, through the counsels",
+      "full_sentence": "She was driven to great pain by the blazing thunderbolt, which, through the counsels of Kronian Zeus, the immortal god, burned her."
+    },
+    "orphic-44-s3-94": {
+      "context": "sacred ritual of the table, [the ritual of the holy mysteries] .",
+      "full_sentence": "For all mortal men reenact your travail for your son Bacchos: the sacred ritual of the table, the ritual of the holy mysteries."
+    },
+    "orphic-44-s3-62": {
+      "context": "travail for your son Bacchos: [the sacred ritual of the table] , the ritual of the",
+      "full_sentence": "For all mortal men reenact your travail for your son Bacchos: the sacred ritual of the table, the ritual of the holy mysteries."
+    },
+    "orphic-45-s1-15": {
+      "context": "You delight in [bloody swords] , you delight in the",
+      "full_sentence": "You delight in bloody swords, you delight in the holy Maenads, as you howl throughout Olympos, all-roaring and frenzied Bacchos."
+    },
+    "orphic-50-s2-86": {
+      "context": "and a reveler you are, [your thyrsos] drives to frenzy, you are",
+      "full_sentence": "A sorrow-hating joy to mortals, O lovely-haired..., a redeemer and a reveler you are, your thyrsos drives to frenzy, you are kind-hearted to all gods and mortals who see your light."
+    },
+    "orphic-51-s6-55": {
+      "context": "sacrifice with joyful heart, pour [streams of pure rain] during the grain-giving seasons.",
+      "full_sentence": "Come to this blessed sacrifice with joyful heart, pour streams of pure rain during the grain-giving seasons."
+    },
+    "orphic-55-s3-5": {
+      "context": "Your [maddening love-charms] yoke mortals, they yoke the",
+      "full_sentence": "Your maddening love-charms yoke mortals, they yoke the many races of beasts to unbridled passion."
+    },
+    "orphic-55-s4-176": {
+      "context": "you may be driving your [golden chariot] in the plain, you may",
+      "full_sentence": "Come, O goddess born in Kypros: you may be on Olympos, O queen, exulting in the beauty of your face, you may be in Syria, country of fine frankincense, you may be driving your golden chariot in the plain, you may lord it over Egypt's fertile river bed."
+    },
+    "orphic-55-s5-28": {
+      "context": "Come, whether you ride your [swan-drawn chariot] over the sea's billows, joining",
+      "full_sentence": "Come, whether you ride your swan-drawn chariot over the sea's billows, joining the creatures of the deep as they dance in circles, or on land in the company of the dark-faced nymphs as light-footed they frisk over the sandy beaches."
+    },
+    "orphic-59-s0-393": {
+      "context": "dead, where glory drives her [chariot] on all over the earthbeyond",
+      "full_sentence": "Boundless Fates, dear children of dark Night, hear my prayer, O many-named dwellers on the lake of heaven, where the frozen water is broken by night's warmth in the shady hollow of a sleek cave; from there you fly to the vast earth, home of mortals, from there, clothed in purple, you march toward men, whose noble aims match their vain hopes, in the realm of the dead, where glory drives her chariot on all over the earthbeyond the ends of Justice, of anxious hope, of primeval law, of the measureless principle of order."
+    },
+    "orphic-62-s0-76": {
+      "context": "Dike, who is seated upon [the sacred throne] of lord Zeus.",
+      "full_sentence": "I sing of the all-seeing eye of comely and radiant Dike, who is seated upon the sacred throne of lord Zeus."
+    },
+    "orphic-66-s3-34": {
+      "context": "as I summon you to [this holy libation] , that you may always",
+      "full_sentence": "Hear me, lord, as I summon you to this holy libation, that you may always come gentle to joyful deeds, end the savage rage of untiring fire as nature itself burns in our own bodies."
+    },
+    "orphic-68-s3-46": {
+      "context": "is without profit for men: [wealth] , the sweet giver of",
+      "full_sentence": "Apart from you all is without profit for men: wealth, the sweet giver of abundance for those who feast, fails, and man never reaches the many pains of old age."
+    },
+    "orphic-70-s2-52": {
+      "context": "your awesome eyes flash forth [flesh-eating darts of light] .",
+      "full_sentence": "Black-skinned queens, your awesome eyes flash forth flesh-eating darts of light."
+    },
+    "orphic-71-s0-129": {
+      "context": "the Kokytos river upon the [sacred bed] of Kronian Zeus.",
+      "full_sentence": "I call upon Melinoe, saffron-cloaked nymph of the earth, whom revered Persephone bore by the mouth of the Kokytos river upon the sacred bed of Kronian Zeus."
+    },
+    "orphic-73-s1-185": {
+      "context": "out with toil, you possess [the keys to joy and sorrow] as well.",
+      "full_sentence": "Great Zeus, wide roving, avenger, king of all, giver of wealth when you enter the house in the abundance of your powers, you refresh the life of mortals worn out with toil, you possess the keys to joy and sorrow as well."
+    },
+    "orphic-75-s2-22": {
+      "context": "When storms come upon [ships] that ever rove the seas,",
+      "full_sentence": "When storms come upon ships that ever rove the seas, you alone appear incarnate to save men, to stay the harsh anger over the briny swell."
+    },
+    "orphic-81-s1-95": {
+      "context": "you bring a gentle passage, [soft light wind] .",
+      "full_sentence": "Vernal, meadow-haunting, you are loved by harbors because to ships you bring a gentle passage, soft light wind."
+    },
+    "orphic-81-s1-79": {
+      "context": "to ships you bring a [gentle passage] , soft light wind.",
+      "full_sentence": "Vernal, meadow-haunting, you are loved by harbors because to ships you bring a gentle passage, soft light wind."
+    },
+    "orphic-84-s2-130": {
+      "context": "O blessed one, kindly accept [these offerings] , waft upon us prosperity,",
+      "full_sentence": "Home of the blessed gods, men's mighty buttress, eternal, many-shaped, beloved, grass-yellow, smile, O blessed one, kindly accept these offerings, waft upon us prosperity, breathe upon us gentle-handed health."
+    },
+    "orphic-85-s0-193": {
+      "context": "all, binding their bodies with [fetters unforged] .",
+      "full_sentence": "Sleep, you are lord of all, lord of blessed gods and of mortal men, of every living thing the broad earth nurtures, for you alone are master of all, you do visit all, binding their bodies with fetters unforged."
+    },
+    "orphic-87-s4-37": {
+      "context": "one, with pious vows, with [sacrifices] , I beg you, I",
+      "full_sentence": "O blessed one, with pious vows, with sacrifices, I beg you, I pray to you, grant me long life, that old age might be a noble prize among men."
+    }
+  }
+}
