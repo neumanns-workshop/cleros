@@ -2,6 +2,27 @@
 
 Cleros is a web application that uses advanced text processing to interact with ancient Greek hymn corpora, specifically focusing on a combined collection of Homeric and Orphic Hymns within a single-column user interface. The application leverages embedding models for semantic search and text analysis.
 
+## Submodule Setup
+
+This repository is designed to be used as a submodule within the [Neumann's Workshop website](https://github.com/neumanns-workshop/neumanns-workshop.github.io). The application is deployed to GitHub Pages and is accessible at https://neumanns-workshop.github.io/cleros/.
+
+### Using as a Submodule
+
+To add this as a submodule to the main repository:
+
+```bash
+# From the root of the main repository
+git submodule add https://github.com/neumanns-workshop/cleros.git cleros
+git submodule update --init --recursive
+```
+
+To update the submodule to the latest version:
+
+```bash
+# From the root of the main repository
+git submodule update --remote --merge
+```
+
 ## Architecture Overview
 
 The application follows a modern React architecture with TypeScript and consists of several key components:
