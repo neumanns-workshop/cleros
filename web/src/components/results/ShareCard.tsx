@@ -48,7 +48,7 @@ const getCategoryHexColor = (category: string): string => {
     case "other_divinity":
       return "#ffca28"; // Amber
     default:
-      return "#bdbdbd"; // Lighter Grey default (catches 'other')
+      return "#4DD0E1"; // Cyan (matches index.css) - was "#bdbdbd" (Lighter Grey)
   }
 };
 
