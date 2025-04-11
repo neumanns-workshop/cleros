@@ -2,9 +2,17 @@ import React, { useMemo, useEffect, useCallback } from 'react';
 import { Container, Typography, Box, CircularProgress, Divider } from '@mui/material';
 import { ResultDisplay } from './ResultDisplay';
 import { useOracleContext } from '../../context/OracleContext';
+import { TypewritingQuote } from "./TypewritingQuote";
+import { AnimatedEllipsis } from "./AnimatedEllipsis";
 
 export const OracleResponse: React.FC = () => {
-  const { results, error, modelLoading, isLoading } = useOracleContext();
+  const {
+    error,
+    modelLoading,
+    isLoading,
+    isContextDataLoading,
+    selectedHymnNumber,
+  } = useOracleContext();
 
   // Random quote selection
   const quotes = useMemo(() => [
@@ -26,51 +34,39 @@ export const OracleResponse: React.FC = () => {
     return quotes[dayOfYear % quotes.length];
   }, [quotes]);
 
+  // Determine if initial loading (model or context data) is happening
+  const isInitializing = modelLoading || isContextDataLoading;
+
   // Set initial focus for keyboard users
   useEffect(() => {
-    // If there are results, focus on the results container
-    if (results.length > 0) {
+    if (selectedHymnNumber) {
       const resultsSection = document.getElementById('oracle-results-section');
       if (resultsSection) {
         resultsSection.focus();
       }
-    // If there's an error, focus on the error message
     } else if (error) {
       const errorMessage = document.getElementById('oracle-error-message');
       if (errorMessage) {
         errorMessage.focus();
       }
-    // Otherwise, focus on the welcome message when content is ready
-    } else if (!isLoading && !modelLoading) {
+    } else if (!isLoading && !isInitializing) {
       const welcomeSection = document.getElementById('oracle-welcome-section');
       if (welcomeSection) {
         welcomeSection.focus();
       }
     }
-  }, [results, error, isLoading, modelLoading]);
+  }, [selectedHymnNumber, error, isLoading, isInitializing]);
 
   // Handle keyboard shortcuts
   const handleKeyDown = useCallback((event: React.KeyboardEvent) => {
-    // If ESC key is pressed in results view, it could be used to return to welcome view
-    // (This would require state management changes to actually implement)
-    if (event.key === 'Escape' && results.length > 0) {
+    if (event.key === 'Escape' && selectedHymnNumber) {
       console.log('Escape key pressed - could be used to return to welcome screen');
     }
-  }, [results]);
+  }, [selectedHymnNumber]);
 
-  // Custom focus style that maintains the aesthetic
-  const focusStyle = {
-    outline: 'none',
-    '&:focus-visible': {
-      boxShadow: '0 0 0 2px rgba(255, 255, 255, 0.4)',
-      borderRadius: '4px',
-      transition: 'box-shadow 0.2s ease-in-out',
-    },
-  };
-
-  // Render welcome message if there are no results yet and not loading
+  // Render welcome message if there are no results yet and not initializing
   const renderWelcomeMessage = () => {
-    if (results.length === 0 && !error && !isLoading && !modelLoading) {
+    if (!selectedHymnNumber && !error && !isLoading && !isInitializing) {
       return (
         <Box 
           id="oracle-welcome-section"
@@ -85,7 +81,7 @@ export const OracleResponse: React.FC = () => {
             width: '100%',
             height: '100%',
             px: 3,
-            ...focusStyle,
+            outline: 'none',
           }}
         >
           <Box
@@ -114,22 +110,12 @@ export const OracleResponse: React.FC = () => {
               }} 
             />
             
-            <Typography 
-              variant="body1" 
-              component="blockquote"
-              aria-label="Daily philosophical quote"
-              sx={{ 
-                fontStyle: 'italic', 
-                opacity: 0.6, 
-                maxWidth: '450px', 
-                mx: 'auto',
-                letterSpacing: '0.03em',
-                fontWeight: 300,
-                fontSize: '0.95rem'
-              }}
-            >
-              {selectedQuote}
-            </Typography>
+            {/* Show animated ellipsis during init, typewriting quote after */}
+            {isInitializing ? (
+              <AnimatedEllipsis />
+            ) : (
+              <TypewritingQuote quote={selectedQuote} />
+            )}
           </Box>
         </Box>
       );
@@ -137,9 +123,10 @@ export const OracleResponse: React.FC = () => {
     return null;
   };
 
-  // Show a loading indicator when loading
+  // Show a loading indicator when loading (Divination in progress)
   const renderLoadingState = () => {
-    if (isLoading || modelLoading) {
+    if (isLoading) {
+      const loadingText = "Performing Divination...";
       return (
         <Box 
           role="status"
@@ -169,7 +156,7 @@ export const OracleResponse: React.FC = () => {
               opacity: 0.8
             }}
           >
-            Consulting the oracle
+            {loadingText}
           </Typography>
         </Box>
       );
@@ -191,7 +178,7 @@ export const OracleResponse: React.FC = () => {
             opacity: 0.9,
             fontWeight: 500,
             p: 2,
-            ...focusStyle,
+            outline: 'none',
           }}
         >
           {error}
@@ -201,44 +188,48 @@ export const OracleResponse: React.FC = () => {
     return null;
   };
 
+  // Render the main results section (modified logic)
+  const renderResultsSection = () => {
+    if (!isLoading && !isInitializing && selectedHymnNumber !== null) {
+      return (
+        <Box 
+          component="section" 
+          id="oracle-results-section"
+          aria-label={`Oracle results for Hymn ${selectedHymnNumber}`}
+          tabIndex={-1}
+          sx={{ 
+            mx: 'auto',
+            width: '100%',
+            py: 3,
+            outline: 'none',
+          }}
+        >
+          <ResultDisplay />
+        </Box>
+      );
+    }
+    return null;
+  };
+
   return (
     <Container 
       maxWidth={false} 
-      component="main"
+      component="div"
       aria-label="Oracle response area"
       onKeyDown={handleKeyDown}
       sx={{ 
         mx: 'auto', 
-        maxWidth: '650px !important', 
+        maxWidth: '700px !important',
         lineHeight: 1.6,
         height: '100%',
         display: 'flex',
         flexDirection: 'column',
-        p: 0
+        p: 0,
       }}
     >
       {renderWelcomeMessage()}
       {renderLoadingState()}
-      
-      {results.length > 0 && (
-        <Box 
-          component="section" 
-          id="oracle-results-section"
-          aria-label="Oracle results"
-          tabIndex={0}
-          sx={{ 
-            ...focusStyle,
-            // Center the content horizontally
-            mx: 'auto',
-            width: '100%',
-          }}
-        >
-          {results.map((result, index) => (
-            <ResultDisplay key={index} result={result} />
-          ))}
-        </Box>
-      )}
-
+      {renderResultsSection()}
       {renderErrorMessage()}
     </Container>
   );

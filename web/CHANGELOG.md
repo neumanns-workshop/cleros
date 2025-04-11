@@ -2,6 +2,28 @@
 
 All notable changes to the Cleros web interface will be documented in this file.
 
+## [2.0.0] - 2025-04-11
+
+### Changed
+- Major data structure refactoring: consolidated individual hymn files into a single hymns.json
+- Moved from file-per-hymn structure to a unified data model for improved performance
+- Updated TensorFlow.js from 3.x to 4.22.0 for better compatibility and performance
+- Redesigned entity span handling with categorized embeddings
+- Simplified UI by removing sidebar and improving main content layout
+- Improved responsive design for better mobile experience
+
+### Added
+- Contextual span highlighting with new component
+- Share functionality with export options
+- Animation improvements including typewriter effect enhancements
+- Better error handling and fallback scenarios
+- Additional entity categories for more precise highlighting
+
+### Removed
+- Sidebar component in favor of cleaner UI
+- Deity context provider (functionality merged into Oracle context)
+- Several deprecated components and utility functions
+
 ## [1.1.0-beta] - 2025-04-07
 
 ### Changed

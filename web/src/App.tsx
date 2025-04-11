@@ -10,9 +10,6 @@ import {
 } from '@mui/material';
 import { OracleProvider } from './context/OracleContext';
 import { StyleProvider, useStyle } from './context/StyleContext';
-import { DeityProvider } from './context/DeityContext';
-import { SidebarProvider } from './context/SidebarContext';
-import { Sidebar } from './components/layout/Sidebar';
 import { MainContent } from './components/layout/MainContent';
 import { InfoDialog } from './components/shared/InfoDialog';
 
@@ -356,7 +353,6 @@ const ThemedApp: React.FC = () => {
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
       <Box sx={{ display: 'flex', minHeight: '100vh', bgcolor: 'background.default' }}>
-        <Sidebar />
         <MainContent />
         <InfoDialog />
       </Box>
@@ -365,19 +361,24 @@ const ThemedApp: React.FC = () => {
 };
 
 const App: React.FC = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+
   return (
     <ErrorBoundary>
       <StyleProvider>
         <OracleProvider>
-          <DeityProvider>
-            <SidebarProvider>
-              <ThemedApp />
-            </SidebarProvider>
-          </DeityProvider>
+          <ThemedApp />
         </OracleProvider>
       </StyleProvider>
     </ErrorBoundary>
   );
 };
 
-export default App;
+const Root: React.FC = () => (
+  <ThemeProvider theme={createTheme()}>
+    <App />
+  </ThemeProvider>
+);
+
+export default Root;

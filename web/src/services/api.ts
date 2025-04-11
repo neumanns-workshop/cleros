@@ -15,9 +15,6 @@ export interface APIResponse<T> {
   error?: string;
 }
 
-// Simple cache to avoid repeated fetches for the same data
-const dataCache: Record<string, APIResponse<any>> = {};
-
 // Helper function to ensure paths are correctly formed
 function ensureCorrectPath(path: string): string {
   // Make sure the path starts with /
@@ -68,12 +65,4 @@ export async function fetchLocalData<T>(dataPath: string): Promise<APIResponse<T
       error: error?.message || 'Unknown error' 
     };
   }
-}
-
-// Clear cache for testing or when needed
-export function clearAPICache(): void {
-  console.log('[API] Clearing cache');
-  Object.keys(dataCache).forEach(key => {
-    delete dataCache[key];
-  });
 }

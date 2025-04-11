@@ -1,0 +1,11 @@
+{
+  "name": "embedding-regeneration",
+  "version": "1.0.0",
+  "description": "Script to regenerate embeddings using TF.js",
+  "main": "generate-use-embeddings.js",
+  "type": "module",
+  "dependencies": {
+    "@tensorflow-models/universal-sentence-encoder": "1.3.3",
+    "@tensorflow/tfjs-node": "3.18.0"
+  }
+} 

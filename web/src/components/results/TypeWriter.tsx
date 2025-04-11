@@ -1,15 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { Typography } from '@mui/material';
 import { HighlightedText } from '../shared/HighlightedText';
+import { ProcessedClauseData } from '../../types';
 
 interface TypeWriterProps {
   text: string;
-  hymnId: string;
-  lineNum: number;
+  spans: ProcessedClauseData[];
+  topHymnClauseIds?: Set<string>;
   onComplete: () => void;
 }
 
-export const TypeWriter: React.FC<TypeWriterProps> = ({ text, hymnId, lineNum, onComplete }) => {
+export const TypeWriter: React.FC<TypeWriterProps> = ({ 
+  text, 
+  spans,
+  topHymnClauseIds,
+  onComplete 
+}) => {
   const [displayText, setDisplayText] = useState('');
   
   useEffect(() => {
@@ -47,8 +53,8 @@ export const TypeWriter: React.FC<TypeWriterProps> = ({ text, hymnId, lineNum, o
     >
       <HighlightedText 
         text={displayText}
-        hymnId={hymnId}
-        lineNum={lineNum}
+        spans={spans}
+        topHymnClauseIds={topHymnClauseIds}
       />
       {displayText.length < text.length && (
         <span

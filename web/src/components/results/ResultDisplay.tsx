@@ -1,287 +1,277 @@
-import React, { useMemo } from 'react';
-import { Box, Typography, Collapse, Button } from '@mui/material';
-import { TypeWriter } from './TypeWriter';
-import { useOracleContext } from '../../context/OracleContext';
-import { HymnResult } from '../../types';
-import { HighlightedText } from '../shared/HighlightedText';
-import { fixFragmentedText } from '../../utils/textUtils';
+import React, { useMemo, useCallback, useState, useEffect } from "react";
+import { Box, Typography, Collapse, Button, Chip } from "@mui/material";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { TypeWriter } from "./TypeWriter";
+import { useOracleContext } from "../../context/OracleContext";
+import { HighlightedText } from "../shared/HighlightedText";
+import { fixFragmentedText } from "../../utils/textUtils";
+import { ProcessedSentenceData, ProcessedClauseData } from "../../types";
 
-interface ResultDisplayProps {
-  result: HymnResult;
-}
+export const ResultDisplay: React.FC = React.memo(() => {
+  const {
+    isTyping,
+    setIsTyping,
+    expanded,
+    setExpanded,
+    selectedHymnNumber,
+    primarySentence,
+    allSentencesForHymn,
+    selectedHymnOrigin,
+    selectedHymnTitle,
+    divinationTimestamp,
+    topHymnClauseIds,
+  } = useOracleContext();
 
-export const ResultDisplay: React.FC<ResultDisplayProps> = React.memo(({ result }) => {
-  const { isTyping, setIsTyping, expanded, setExpanded } = useOracleContext();
-  
-  // Memoize the main text line for better performance with fragment fixing
-  // Now with fallback to next best lines if the top-ranked is empty
-  const mainLine = useMemo(() => {
-    // Try to get the top-ranked line first
-    let baseText = '';
-    let originalIndex = 0;
-    
-    // Sort the lines by rank to ensure we try them in order of relevance
-    const sortedLines = [...result.lines].sort((a, b) => a.rank - b.rank);
-    
-    // Try each line in order until we find a non-empty one after processing
-    for (const line of sortedLines) {
-      const processedText = fixFragmentedText(line.text);
-      if (processedText) {
-        baseText = processedText;
-        originalIndex = line.originalIndex;
-        break;
-      }
+  const [typewriterKey, setTypewriterKey] = useState(0);
+
+  useEffect(() => {
+    if (primarySentence) {
+      setTypewriterKey((prev) => prev + 1);
+      setIsTyping(true);
     }
-    
-    // If no valid lines are found, fallback to the first line with any content
-    if (!baseText && result.lines.length > 0) {
-      for (const line of result.lines) {
-        if (line.text.trim()) {
-          baseText = line.text;
-          originalIndex = line.originalIndex;
-          break;
-        }
-      }
-    }
-    
-    console.log('Selected main line:', { 
-      text: baseText, 
-      originalIndex,
-      linesCount: result.lines.length,
-      firstFewLines: result.lines.slice(0, 3).map(l => ({ 
-        rank: l.rank, 
-        text: l.text.substring(0, 30) + (l.text.length > 30 ? '...' : ''),
-        processedText: fixFragmentedText(l.text).substring(0, 30) + (fixFragmentedText(l.text).length > 30 ? '...' : '')
-      }))
-    });
-    
-    return { text: baseText, originalIndex };
-  }, [result.lines]);
-  
-  // Memoize secondary lines to avoid re-renders and fix fragmented text
-  const secondaryLines = useMemo(() => 
-    result.lines.map((line, lineIndex) => {
-      const opacity = line.rank === 0 ? 1 :
-                      line.rank === 1 ? 0.8 :
-                      line.rank === 2 ? 0.6 :
-                      0.4;
-      
-      // Fix fragmented text before rendering
-      const fixedText = fixFragmentedText(line.text);
-      
-      // Skip empty text (this will hide lines that contain only periods or commas)
-      if (!fixedText) return null;
-                      
-      return (
-        <Typography
-          key={lineIndex}
-          variant="body1"
-          sx={{
-            opacity,
-            transition: 'opacity 0.5s ease-in-out',
-            marginLeft: '1rem',
-            marginBottom: 2,
-            color: '#e0e0e0',  // Updated text color
-            willChange: 'opacity',
-          }}
-        >
-          <HighlightedText 
-            text={fixedText}
-            hymnId={String(result.hymn)}
-            lineNum={line.originalIndex}
-          />
-        </Typography>
-      );
-    }).filter(Boolean), // Remove nulls
-  [result.lines, result.hymn]);
-  
-  return (
-    <Box sx={{ mb: 6 }} role="article" aria-label={`Oracle response for: ${result.question}`}>
-      <Typography variant="h1" component="h1" gutterBottom align="center" sx={{ 
-        mb: 3, 
-        letterSpacing: '0.2em'
-      }}>
-        {result.title}
-      </Typography>
+  }, [primarySentence, setIsTyping]);
 
-      {/* Incense and timestamp display */}
-      <Box sx={{ 
-        display: 'flex', 
-        flexDirection: 'column', 
-        alignItems: 'center',
-        mb: 3,
-        opacity: 0.7
-      }}
-      aria-label="Ritual details"
-      >
-        {result.incense && (
+  const processedSentences = useMemo(() => {
+    if (!allSentencesForHymn) return [];
+
+    // Process sentences, fix text, and determine opacity
+    const sentencesWithData = allSentencesForHymn
+      .map((sentence) => {
+        const fixedText = fixFragmentedText(sentence.text);
+
+        // Pass the full list of clauses; HighlightedText will handle filtering
+        const spansToHighlight = sentence.clauses;
+
+        return {
+          ...sentence,
+          fixedText,
+          lineSpans: spansToHighlight, // Use the full clause list
+          rankOpacity: 1.0,
+        };
+      })
+      .filter((s) => s.fixedText);
+
+    // Sort by COMBINED score (descending) to determine rank for opacity
+    const sortedByScore = [...sentencesWithData].sort(
+      (a, b) => b.combined_score - a.combined_score,
+    );
+
+    const numSentences = sortedByScore.length;
+    const minOpacity = 0.2;
+    const maxOpacity = 1.0;
+    const opacityRange = maxOpacity - minOpacity;
+    const opacityStep =
+      numSentences > 1 ? opacityRange / (numSentences - 1) : 0; // Avoid division by zero if only 1 sentence
+
+    // Assign opacity based on rank (using combined score rank)
+    const sentencesWithRankOpacity = sortedByScore.map((sentence, index) => ({
+      ...sentence,
+      rankOpacity: maxOpacity - index * opacityStep,
+    }));
+    // --- End Rank-Based Opacity Calculation ---
+
+    // Re-sort back to original sentence order for display
+    return sentencesWithRankOpacity.sort(
+      (a, b) => a.sentence_index - b.sentence_index,
+    );
+  }, [allSentencesForHymn]);
+
+  const secondaryLines = useMemo(() => {
+    if (!processedSentences) return [];
+
+    return processedSentences
+      .map((sentence) => {
+        if (!sentence.fixedText) return null;
+
+        return (
           <Typography
-            variant="body2"
-            align="center"
-            sx={{
-              fontStyle: 'italic',
-              color: '#e0e0e0',
-              mb: 1
-            }}
-          >
-            {result.incense}
-          </Typography>
-        )}
-        {result.timestamp && (
-          <Typography
-            variant="body2"
-            align="center"
-            component="time"
-            dateTime={result.timestamp}
-            sx={{
-              fontSize: '0.8rem',
-              color: '#e0e0e0'
-            }}
-          >
-            {new Date(result.timestamp).toLocaleString()}
-          </Typography>
-        )}
-      </Box>
-      
-      {/* Horizontal rule before question - subtle gray */}
-      <Box 
-        sx={{
-          width: '40%',
-          margin: '0 auto 2rem auto',
-          height: '1px',
-          background: 'linear-gradient(90deg, rgba(224,224,224,0) 0%, rgba(224,224,224,0.15) 50%, rgba(224,224,224,0) 100%)'
-        }}
-        role="separator"
-        aria-hidden="true"
-      />
-
-      {/* User question */}
-      {result.question && (
-        <Typography
-          variant="body1"
-          align="center"
-          component="blockquote"
-          aria-label="Your question"
-          sx={{
-            mb: 4,
-            backgroundColor: 'transparent !important',
-            background: 'transparent !important',
-            color: '#e0e0e0',  // Updated text color
-            padding: 2,
-            borderRadius: 1,
-            fontFamily: 'inherit',
-            boxShadow: 'none',
-            '&::before, &::after': {
-              backgroundColor: 'transparent !important',
-              background: 'transparent !important'
-            }
-          }}
-        >
-          {result.question}
-        </Typography>
-      )}
-
-      {/* Horizontal rule after question - subtle gray */}
-      <Box 
-        sx={{
-          width: '40%',
-          margin: '0 auto 2rem auto',
-          height: '1px',
-          background: 'linear-gradient(90deg, rgba(224,224,224,0) 0%, rgba(224,224,224,0.15) 50%, rgba(224,224,224,0) 100%)'
-        }}
-        role="separator"
-        aria-hidden="true"
-      />
-
-      {/* Oracle response */}
-      <Box
-        sx={{
-          marginBottom: 2,
-          display: 'flex',
-          justifyContent: 'center',
-        }}
-        aria-live="polite"
-        aria-atomic="true"
-      >
-        {isTyping ? (
-          <TypeWriter 
-            text={mainLine.text}
-            hymnId={String(result.hymn)}
-            lineNum={mainLine.originalIndex} 
-            onComplete={() => setIsTyping(false)}
-          />
-        ) : (
-          <Typography
+            key={`${sentence.hymn_id}-${sentence.sentence_index}`}
             variant="body1"
-            component="p"
             sx={{
-              opacity: 1,
-              color: '#e0e0e0',  // Updated text color
-              willChange: 'opacity',
-              fontWeight: expanded ? 500 : 400,
-              textAlign: 'center',
-              maxWidth: '560px',
-              mx: 'auto'
+              opacity: sentence.rankOpacity, // Use pre-calculated rank-based opacity
+              transition: "opacity 0.5s ease-in-out",
+              marginLeft: "1rem",
+              marginBottom: 2,
+              color: "#e0e0e0",
+              willChange: "opacity",
             }}
           >
-            <HighlightedText 
-              text={mainLine.text}
-              hymnId={String(result.hymn)}
-              lineNum={mainLine.originalIndex}
+            <HighlightedText
+              text={sentence.fixedText}
+              spans={sentence.lineSpans} // Pass full list of clauses
+              topHymnClauseIds={topHymnClauseIds} // Pass the set of top IDs
             />
           </Typography>
-        )}
-      </Box>
+        );
+      })
+      .filter(Boolean);
+  }, [processedSentences, topHymnClauseIds]);
 
-      {/* Divider always present */}
+  if (!primarySentence) {
+    return null;
+  }
+
+  const fixedPrimaryText = fixFragmentedText(primarySentence.text);
+  // Prepare the full spans list for the primary sentence
+  const primarySpans = primarySentence.clauses;
+
+  const handleExpandToggle = () => {
+    setExpanded(!expanded);
+  };
+
+  return (
+    <Box
+      role="article"
+      aria-label={`Details for ${selectedHymnTitle || `${selectedHymnOrigin || "Hymn"} ${selectedHymnNumber || "??"}`}`}
+    >
+      {/* Header Section - Display Title AND Origin/Number/Timestamp */}
       <Box
         sx={{
-          width: '30%',
-          margin: '0 auto 1rem auto',
-          height: '1px',
-          background: 'linear-gradient(90deg, rgba(224,224,224,0) 0%, rgba(224,224,224,0.1) 50%, rgba(224,224,224,0) 100%)',
-          opacity: 0.6,
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          mb: 3,
+          opacity: 0.9,
+        }}
+        aria-label="Divination details"
+      >
+        {/* Display Title */}
+        <Typography
+          variant="h5"
+          component="h2"
+          sx={{ color: "#e0e0e0", mb: 0.5, textAlign: "center" }}
+        >
+          {selectedHymnTitle || `Hymn ${selectedHymnNumber || "??"}`}
+        </Typography>
+        {/* Display Origin/Number Tag and Timestamp on a second line as Chips */}
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            flexWrap: "wrap",
+            gap: 1,
+            mt: 0.5,
+          }}
+        >
+          {selectedHymnOrigin && (
+            <Chip
+              label={selectedHymnOrigin.toLowerCase()}
+              size="small"
+              variant="outlined"
+              sx={{
+                color: "rgba(224, 224, 224, 0.6)",
+                borderColor: "rgba(224, 224, 224, 0.2)",
+                fontSize: "0.65rem",
+                height: "20px",
+                letterSpacing: "0.05em",
+              }}
+            />
+          )}
+          {divinationTimestamp && (
+            // Revert timestamp to Typography for better spacing
+            <Typography
+              variant="caption"
+              component="time"
+              dateTime={new Date(divinationTimestamp).toISOString()}
+              sx={{
+                color: "rgba(224, 224, 224, 0.6)",
+                fontSize: "0.75rem", // Slightly larger than chip
+                letterSpacing: "0.04em",
+              }}
+            >
+              {`· ${divinationTimestamp}`}
+            </Typography>
+          )}
+        </Box>
+      </Box>
+      {/* Optional Divider */}
+      <Box
+        sx={{
+          width: "40%",
+          margin: "0 auto 2rem auto",
+          height: "1px",
+          background:
+            "linear-gradient(90deg, rgba(224,224,224,0) 0%, rgba(224,224,224,0.15) 50%, rgba(224,224,224,0) 100%)",
         }}
         role="separator"
         aria-hidden="true"
       />
 
-      {/* Toggle button - always visible */}
-      <Box sx={{ 
-        display: 'flex', 
-        justifyContent: 'center',
-        mb: expanded ? 2 : 0
-      }}>
-        <Button
-          onClick={() => !isTyping && setExpanded(!expanded)}
-          aria-expanded={expanded}
-          aria-controls={`expanded-response-${result.hymn}`}
-          sx={{
-            color: 'rgba(224, 224, 224, 0.5)',
-            textTransform: 'none',
-            '&:hover': {
-              color: 'rgba(224, 224, 224, 0.8)',
-            },
-          }}
-        >
-          {expanded ? 'Show less' : 'Show more'}
-        </Button>
-      </Box>
-
-      {/* Show complete text when expanded */}
-      <Collapse in={expanded} timeout="auto">
-        <Box sx={{ 
-          pl: 2, 
-          mt: 2,
-          maxWidth: '560px',
-          mx: 'auto'
-        }}
-        id={`expanded-response-${result.hymn}`}
-        aria-label="Additional oracle insights"
-        >          
-          {secondaryLines}
+      {/* --- Primary Sentence Display --- */}
+      {fixedPrimaryText && (
+        // Wrap the conditional rendering and add ID here
+        <Box id="share-card-render-target" sx={{ mb: 2 }}>
+          {isTyping ? (
+            <TypeWriter
+              key={typewriterKey}
+              text={fixedPrimaryText}
+              spans={primarySpans}
+              onComplete={() => setIsTyping(false)}
+              topHymnClauseIds={topHymnClauseIds}
+            />
+          ) : (
+            <Typography
+              variant="body1"
+              sx={{
+                opacity: 1,
+                color: "#e0e0e0",
+                position: "relative",
+                textAlign: "center",
+                maxWidth: "560px",
+                mx: "auto",
+                // mb: 2 // Margin now on the wrapper Box
+              }}
+              component="div"
+            >
+              <HighlightedText
+                text={fixedPrimaryText}
+                spans={primarySpans}
+                topHymnClauseIds={topHymnClauseIds}
+              />
+            </Typography>
+          )}
         </Box>
-      </Collapse>
+      )}
+
+      {/* --- Expand Button & Secondary Lines --- */}
+      {allSentencesForHymn && allSentencesForHymn.length > 1 && (
+        <>
+          <Box sx={{ display: "flex", justifyContent: "center", mb: 2 }}>
+            <Button
+              onClick={handleExpandToggle}
+              aria-expanded={expanded}
+              aria-controls="context-lines"
+              variant="text"
+              size="small"
+              sx={{
+                color: "rgba(224, 224, 224, 0.7)",
+                fontSize: "0.8rem",
+                textTransform: "lowercase",
+              }}
+            >
+              {expanded ? "Hide Full Text" : "Show Full Text"}
+              {/* <ExpandMoreIcon sx={{ transform: expanded ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.3s' }} /> // Temporarily commented out */}
+            </Button>
+          </Box>
+          <Collapse
+            in={expanded}
+            timeout="auto"
+            unmountOnExit
+            id="context-lines"
+          >
+            <Box
+              sx={{
+                mt: 2,
+                pl: 2,
+                borderLeft: "1px solid rgba(255, 255, 255, 0.2)",
+              }}
+            >
+              {secondaryLines}
+            </Box>
+          </Collapse>
+        </>
+      )}
     </Box>
   );
-}); 
+});
