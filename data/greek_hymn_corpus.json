@@ -1,0 +1,1813 @@
+{
+    "id": "greek-hymn-corpus",
+    "name": "Greek Hymn Corpus",
+    "collections": [
+        {
+            "id": "homeric",
+            "name": "Homeric Hymns",
+            "provenance": {
+                "author": "Anonymous",
+                "translators": [
+                    "Hugh G. Evelyn-White"
+                ],
+                "source": "Hesiod, The Homeric Hymns and Homerica",
+                "publisher": "William Heinmann; The Macmillan Co.",
+                "year": 1914,
+                "location": "London; New York"
+            }
+        },
+        {
+            "id": "orphic",
+            "name": "Orphic Hymns",
+            "provenance": {
+                "author": "Anonymous",
+                "translators": [
+                    "Apostolos N. Athanassakis",
+                    "Benjamin M. Wolkow"
+                ],
+                "source": "The Orphic Hymns",
+                "publisher": "The Johns Hopkins University Press",
+                "year": 2013,
+                "location": "Baltimore, Maryland"
+            }
+        }
+    ],
+    "hymns": [
+        {
+            "id": "homeric-0",
+            "title": "HYMN Α΄. TO DIONYSUS A΄",
+            "deities": [
+                "Dionysus"
+            ],
+            "sentences": [
+                "For some say, at Dracanum; and some, on windy Icarus; and some, in Naxos, O Heaven-born, Insewn; and others by the deep-eddying river Alpheus that pregnant Semele bare you to Zeus the thunder-lover.",
+                "And others yet, lord, say you were born in Thebes; but all these lie.",
+                "The Father of men and gods gave you birth remote from men and secretly from white-armed Hera.",
+                "There is a certain Nysa, a mountain most high and richly grown with woods, far off in Phoenice, near the streams of Aegyptus ... 'and men will lay up for her many offerings in her shrines. And as these things are three, so shall mortals ever sacrifice perfect hecatombs to you at your feasts each three years.' The Son of Cronos spoke and nodded with his dark brows.",
+                "And the divine locks of the king flowed forward from his immortal head, and he made great Olympus reel. So spake wise Zeus and ordained it with a nod.",
+                "Be favorable, O Insewn, Inspirer of frenzied women! we singers sing of you as we begin and as we end a strain, and none forgetting you may call holy song to mind.",
+                "And so, farewell, Dionysus, Insewn, with your mother Semele whom men call Thyone."
+            ]
+        },
+        {
+            "id": "homeric-1",
+            "title": "HYMN B΄. TO DEMETER A΄",
+            "deities": [
+                "Demeter"
+            ],
+            "sentences": [
+                "I begin to sing of rich-haired Demeter, awful goddess — of her and her trim-ankled daughter whom Aidoneus rapt away, given to him by all-seeing Zeus the loud-thunderer.",
+                "Apart from Demeter, lady of the golden sword and glorious fruits, she was playing with the deep-bosomed daughters of Oceanus and gathering flowers over a soft meadow, roses and crocuses and beautiful violets, irises also and hyacinths and the narcissus, which Earth made to grow at the will of Zeus and to please the Host of Many, to be a snare for the bloom-like girl — a marvellous, radiant flower.",
+                "It was a thing of awe whether for deathless gods or mortal men to see: from its root grew a hundred blooms and it smelled most sweetly, so that all wide heaven above and the whole earth and the sea's salt swell laughed for joy.",
+                "And the girl was amazed and reached out with both hands to take the lovely toy; but the wide-pathed earth yawned there in the plain of Nysa, and the lord, Host of Many, with his immortal horses sprang out upon her — the Son of Cronos, He who has many names.",
+                "He caught her up reluctant on his golden car and bare her away lamenting.",
+                "Then she cried out shrilly with her voice, calling upon her father, the Son of Cronos, who is most high and excellent.",
+                "But no one, either of the deathless gods or of mortal men, heard her voice, nor yet the olive-trees bearing rich fruit: only tender-hearted Hecate, bright-coiffed, the daughter of Persaeus, heard the girl from her cave, and the lord Helios, Hyperion's bright son, as she cried to her father, the Son of Cronos.",
+                "But he was sitting aloof, apart from the gods, in his temple where many pray, and receiving sweet offerings from mortal men.",
+                "So he, that son of Cronos, of many names, who is Ruler of Many and Host of Many, was bearing her away by leave of Zeus on his immortal chariot — his own brother's child and all unwilling.",
+                "And so long as she, the goddess, yet beheld earth and starry heaven and the strong-flowing sea where fishes shoal, and the rays of the sun, and still hoped to see her dear mother and the tribes of the eternal gods, so long hope calmed her great heart for all her trouble⋯and the heights of the mountains and the depths of the sea rang with her immortal voice: and her queenly mother heard her.",
+                "Bitter pain seized her heart, and she rent the covering upon her divine hair with her dear hands: her dark cloak she cast down from both her shoulders and sped, like a wild-bird, over the firm land and yielding sea, seeking her child.",
+                "But no one would tell her the truth, neither god nor mortal man; and of the birds of omen none came with true news for her.",
+                "Then for nine days queenly Deo wandered over the earth with flaming torches in her hands, so grieved that she never tasted ambrosia and the sweet draught of nectar, nor sprinkled her body with water.",
+                "But when the tenth enlightening dawn had come, Hecate, with a torch in her hands, met her, and spoke to her and told her news: 'Queenly Demeter, bringer of seasons and giver of good gifts, what god of heaven or what mortal man has rapt away Persephone and pierced with sorrow your dear heart? For I heard her voice, yet saw not with my eyes who it was. But I tell you truly and shortly all I know.' So, then, said Hecate.",
+                "And the daughter of rich-haired Rhea answered her not, but sped swiftly with her, holding flaming torches in her hands.",
+                "So they came to Helios, who is watchman of both gods and men, and stood in front of his horses: and the bright goddess enquired of him: 'Helios, do you at least regard me, goddess as I am, if ever by word or deed of mine I have cheered your heart and spirit. Through the fruitless air I heard the thrilling cry of my daughter whom I bare, sweet scion of my body and lovely in form, as of one seized violently; though with my eyes I saw nothing. But you — for with your beams you look down from the bright upper air over all the earth and sea — tell me truly of my dear child, if you have seen her anywhere, what god or mortal man has violently seized her against her will and mine, and so made off.' So said she.",
+                "And the Son of Hyperion answered her: 'Queen Demeter, daughter of rich-haired Rhea, I will tell you the truth; for I greatly reverence and pity you in your grief for your trim-ankled daughter. None other of the deathless gods is to blame, but only cloud-gathering Zeus who gave her to Hades, her father's brother, to be called his buxom wife. And Hades seized her and took her loudly crying in his chariot down to his realm of mist and gloom. Yet, goddess, cease your loud lament and keep not vain anger unrelentingly: Aidoneus, the Ruler of Many, is no unfitting husband among the deathless gods for your child, being your own brother and born of the same stock: also, for honor, he has that third share which he received when division was made at the first, and is appointed lord of those among whom he dwells.' So he spake, and called to his horses: and at his chiding they quickly whirled the swift chariot along, like long-winged birds.",
+                "But grief yet more terrible and savage came into the heart of Demeter, and thereafter she was so angered with the dark-clouded Son of Cronos that she avoided the gathering of the gods and high Olympus, and went to the towns and rich fields of men, disfiguring her form a long while.",
+                "And no one of men or deep-bosomed women knew her when they saw her, until she came to the house of wise Celeus who then was lord of fragrant Eleusis.",
+                "Vexed in her dear heart, she sat near the wayside by the Maiden Well, from which the women of the place were used to draw water, in a shady place over which grew an olive shrub.",
+                "And she was like an ancient woman who is cut off from childbearing and the gifts of garland-loving Aphrodite, like the nurses of kings' children who deal justice, or like the house-keepers in their echoing halls.",
+                "There the daughters of Celeus, son of Eleusis, saw her, as they were coming for easy-drawn water, to carry it in pitchers of bronze to their dear father's house: four were they and like goddesses in the flower of their girlhood, Callidice and Cleisidice and lovely Demo and Callithoë who was the eldest of them all.",
+                "They knew her not — for the gods are not easily discerned by mortals — but standing near by her spoke winged words: 'Old mother, whence and who are you of folk born long ago? Why are you gone away from the city and do not draw near the houses? For there in the shady halls are women of just such age as you, and others younger; and they would welcome you both by word and by deed.' Thus they said.",
+                "And she, that queen among goddesses answered them saying: 'Hail, dear children, whosoever you are of woman-kind. I will tell you my story; for it is not unseemly that I should tell you truly what you ask. Doso is my name, for my stately mother gave it me. And now I am come from Crete over the sea's wide back — not willingly; but against my liking, by force of strength, pirates brought me thence. Afterwards they put in with their swift craft to Thoricus, and there the women landed on the shore in full throng and the men likewise, and they began to make ready a meal by the stern-cables of the ship. But my heart craved not pleasant food, and I fled secretly across the dark country and escaped my masters, that they should not take me unpurchased across the sea, there to win a price for me. And so I wandered and am come here: and I know not at all what land this is or what people are in it. But may all those who dwell on Olympus give you husbands and birth of children as parents desire, so you take pity on me, maidens, ...'"
+            ]
+        },
+        {
+            "id": "homeric-2",
+            "title": "HYMN Γ΄. TO DELIAN AND PYTHIAN APOLLO",
+            "deities": [
+                "Apollo"
+            ],
+            "sentences": [
+                "I will remember and not be unmindful of Apollo who shoots afar.",
+                "As he goes through the house of Zeus, the gods tremble before him and all spring up from their seats when he draws near, as he bends his bright bow.",
+                "But Leto alone stays by the side of Zeus who delights in thunder; and then she unstrings his bow, and closes his quiver, and takes his archery from his strong shoulders in her hands and hangs them on a golden peg against a pillar of his father's house.",
+                "Then she leads him to a seat and makes him sit: and the Father gives him nectar in a golden cup welcoming his dear son, while the other gods make him sit down there, and queenly Leto rejoices because she bare a mighty son and an archer.",
+                "Rejoice, blessed Leto, for you bare glorious children, the lord Apollo and Artemis who delights in arrows; her in Ortygia, and him in rocky Delos, as you rested against the great mass of the Cynthian hill hard by a palm-tree by the streams of Inopus.",
+                "How, then, shall I sing of you who in all ways are a worthy theme of song.",
+                "For everywhere, O Phoebus, the whole range of song is fallen to you, both over the mainland that rears heifers and over the isles.",
+                "All mountain-peaks and high headlands of lofty hills and rivers flowing out to the deep and beaches sloping seawards and havens of the sea are your delight.",
+                "Shall I sing how at the first Leto bare you to be the joy of men, as she rested against Mount Cynthus in that rocky isle, in sea-girt Delos — while on either hand a dark wave rolled on landwards driven by shrill winds — whence arising you rule over all mortal men.",
+                "Among those who are in Crete, and in the township of Athens, and in the isle of Aegina and Euboea, famous for ships, in Aegae and Eiresiae and Peparethus near the sea, in Thracian Athos and Pelion's towering heights and Thracian Samos and the shady hills of Ida, in Scyros and Phocaea and the high hill of Autocane and fair-lying Imbros and smouldering Lemnos and rich Lesbos, home of Macar, the son of Aeolus, and Chios, brightest of all the isles that lie in the sea, and craggy Mimas and the heights of Corycus and gleaming Claros and the sheer hill of Aesagea and watered Samos and the steep heights of Mycale, in Miletus and Cos, the city of Meropian men, and steep Cnidos and windy Carpathos, in Naxos and Paros and rocky Rhenaea — so far roamed Leto in travail with the god who shoots afar, to see if any land would be willing to make a dwelling for her son.",
+                "But they greatly trembled and feared, and none, not even the richest of them, dared receive Phoebus, until queenly Leto set foot on Delos and uttered winged words and asked her: 'Delos, if you would be willing to be the abode of my son Phoebus Apollo and make him a rich temple — for no other will touch you, as you will find: and I think you will never be rich in oxen and sheep, nor bear vintage nor yet produce plants abundantly. But if you have the temple of far-shooting Apollo, all men will bring you hecatombs and gather here, and incessant savour of rich sacrifice will always arise, and you will feed those who dwell in you from the hand of strangers; for truly your own soil is not rich.' So spake Leto.",
+                "And Delos rejoiced and answered and said: 'Leto, most glorious daughter of great Coeus, joyfully would I receive your child the far-shooting lord; for it is all too true that I am ill-spoken of among men, whereas thus I should become very greatly honored. But this saying I fear, and I will not hide it from you, Leto. They say that Apollo will be one that is very haughty and will greatly lord it among gods and men all over the fruitful earth. Therefore, I greatly fear in heart and spirit that as soon as he sees the light of the sun, he will scorn this island — for truly I have but a hard, rocky soil — and overturn me and thrust me down with his feet in the depths of the sea; then will the great ocean wash deep above my head for ever, and he will go to another land such as will please him, there to make his temple and wooded groves. So many-footed creatures of the sea will make their lairs in me and black seals their dwellings undisturbed, because I lack people. Yet if you will but dare to swear a great oath, goddess, that here first he will build a glorious temple to be an oracle for men, then let him afterwards make temples and wooded groves amongst all men; for surely he will be greatly renowned.' So said Delos.",
+                "And Leto swear the great oath of the gods: 'Now hear this, Earth and wide Heaven above, and dropping water of Styx (this is the strongest and most awful oath for the blessed gods), surely Phoebus shall have here his fragrant altar and precinct, and you he shall honor above all.'",
+                "Now when Leto had sworn and ended her oath, Delos was very glad at the birth of the far-shooting lord.",
+                "But Leto was racked nine days and nine nights with pangs beyond wont.",
+                "And there were with her all the chiefest of the goddesses, Dione and Rhea and Ichnaea and Themis and loud-moaning Amphitrite and the other deathless goddesses save white-armed Hera, who sat in the halls of cloud-gathering Zeus.",
+                "Only Eilithyia, goddess of sore travail, had not heard of Leto's trouble, for she sat on the top of Olympus beneath golden clouds by white-armed Hera's contriving, who kept her close through envy, because Leto with the lovely tresses was soon to bear a son faultless and strong.",
+                "But the goddesses sent out Iris from the well-set isle to bring Eilithyia, promising her a great necklace strung with golden threads, nine cubits long.",
+                "And they bade Iris call her aside from white-armed Hera, lest she might afterwards turn her from coming with her words.",
+                "When swift Iris, fleet of foot as the wind, had heard all this, she set to run; and quickly finishing all the distance she came to the home of the gods, sheer Olympus, and forthwith called Eilithyia out from the hall to the door and spoke winged words to her, telling her all as the goddesses who dwell on Olympus had bidden her.",
+                "So she moved the heart of Eilithyia in her dear breast; and they went their way, like shy wild-doves in their going.",
+                "And as soon as Eilithyia the goddess of sore travail set foot on Delos, the pains of birth seized Leto, and she longed to bring forth; so she cast her arms about a palm tree and kneeled on the soft meadow while the earth laughed for joy beneath.",
+                "Then the child leaped forth to the light, and all the goddesses raised a cry.",
+                "Straightway, great Phoebus, the goddesses washed you purely and cleanly with sweet water, and swathed you in a white garment of fine texture, new-woven, and fastened a golden band about you.",
+                "Now Leto did not give Apollo, bearer of the golden blade, her breast; but Themis duly poured nectar and ambrosia with her divine hands: and Leto was glad because she had borne a strong son and an archer.",
+                "But as soon as you had tasted that divine heavenly food, O Phoebus, you could no longer then be held by golden cords nor confined with bands, but all their ends were undone.",
+                "Forth-with Phoebus Apollo spoke out among the deathless goddesses: 'The lyre and the curved bow shall ever be dear to me, and I will declare to men the unfailing will of Zeus.' So said Phoebus, the long-haired god who shoots afar and began to walk upon the wide-pathed earth; and all the goddesses were amazed at him.",
+                "Then with gold all Delos [was laden, beholding the child of Zeus and Leto, for joy because the god chose her above the islands and shore to make his dwelling in her: and she loved him yet more in her heart] blossomed as does a mountain-top with woodland flowers.",
+                "And you, O lord Apollo, god of the silver bow, shooting afar, now walked on craggy Cynthus, and now kept wandering about the islands and the people in them.",
+                "Many are your temples and wooded groves, and all peaks and towering bluffs."
+            ]
+        },
+        {
+            "id": "homeric-3",
+            "title": "HYMN Δ΄. TO HERMES Α΄",
+            "deities": [
+                "Hermes"
+            ],
+            "sentences": [
+                "Muse, sing of Hermes, the son of Zeus and Maia, lord of Cyllene and Arcadia rich in flocks, the luck-bringing messenger of the immortals whom Maia bare, the rich-tressed nymph, when she was joined in love with Zeus, — a shy goddess, for she avoided the company of the blessed gods, and lived within a deep, shady cave.",
+                "There the son of Cronos used to lie with the rich-tressed nymph, unseen by deathless gods and mortal men, at dead of night while sweet sleep should hold white-armed Hera fast.",
+                "And when the purpose of great Zeus was fulfilled, and the tenth moon with her was fixed in heaven, she was delivered and a notable thing was come to pass.",
+                "For then she bare a son, of many shifts, blandly cunning, a robber, a cattle driver, a bringer of dreams, a watcher by night, a thief at the gates, one who was soon to show forth wonderful deeds among the deathless gods.",
+                "Born with the dawning, at mid-day he played on the lyre, and in the evening he stole the cattle of far-shooting Apollo on the fourth day of the month; for on that day queenly Maia bare him.",
+                "So soon as he had leaped from his mother's heavenly womb, he lay not long waiting in his holy cradle, but he sprang up and sought the oxen of Apollo.",
+                "But as he stepped over the threshold of the high-roofed cave, he found a tortoise there and gained endless delight.",
+                "For it was Hermes who first made the tortoise a singer.",
+                "The creature fell in his way at the courtyard gate, where it was feeding on the rich grass before the dwelling, waddling along.",
+                "When he saw it, the luck-bringing son of Zeus laughed and said: 'An omen of great luck for me so soon. I do not slight it. Hail, comrade of the feast, lovely in shape, sounding at the dance. With joy I meet you. Where got you that rich gaud for covering, that spangled shell — a tortoise living in the mountains. But I will take and carry you within: you shall help me and I will do you no disgrace, though first of all you must profit me. It is better to be at home: harm may come out of doors. Living, you shall be a spell against mischievous witchcraft; but if you die, then you shall make sweetest song.",
+                "Thus speaking, he took up the tortoise in both hands and went back into the house carrying his charming toy.",
+                "Then he cut off its limbs and scooped out the marrow of the mountain-tortoise with a scoop of grey iron.",
+                "As a swift thought darts through the heart of a man when thronging cares haunt him, or as bright glances flash from the eye, so glorious Hermes planned both thought and deed at once.",
+                "He cut stalks of reed to measure and fixed them, fastening their ends across the back and through the shell of the tortoise, and then stretched ox hide all over it by his skill.",
+                "Also he put in the horns and fitted a cross-piece upon the two of them, and stretched seven strings of sheep-gut.",
+                "But when he had made it he proved each string in turn with the key, as he held the lovely thing.",
+                "At the touch of his hand it sounded marvelously; and, as he tried it, the god sang sweet random snatches, even as youths bandy taunts at festivals.",
+                "He sang of Zeus the son of Cronos and neat-shod Maia, the converse which they had before in the comradeship of love, telling all the glorious tale of his own begetting.",
+                "He celebrated, too, the handmaids of the nymph, and her bright home, and the tripods all about the house, and the abundant cauldrons.",
+                "But while he was singing of all these, his heart was bent on other matters.",
+                "And he took the hollow lyre and laid it in his sacred cradle, and sprang from the sweet-smelling hall to a watch-place, pondering sheer trickery in his heart — deeds such as knavish folk pursue in the dark night-time; for he longed to taste flesh.",
+                "The Sun was going down beneath the earth towards Ocean with his horses and chariot when Hermes came hurrying to the shadowy mountains of Pieria, where the divine cattle of the blessed gods had their steads and grazed the pleasant, unmown meadows.",
+                "Of these the Son of Maia, the sharp-eyed slayer of Argus then cut off from the herd fifty loud-lowing kine, and drove them straggling-wise across a sandy place, turning their hoof-prints aside.",
+                "Also, he bethought him of a crafty ruse and reversed the marks of their hoofs, making the front behind and the hind before, while he himself walked the other way.",
+                "Then he wove sandals with wicker-work by the sand of the sea, wonderful things, unthought of, unimagined; for he mixed together tamarisk and myrtle-twigs, fastening together an armful of their fresh, young wood, and tied them, leaves and all securely under his feet as light sandals.",
+                "That brushwood the glorious Slayer of Argus plucked in Pieria as he was preparing for his journey, making shift as one making haste for a long journey.",
+                "But an old man tilling his flowering vineyard saw him as he was hurrying down the plain through grassy Onchestus.",
+                "So the Son of Maia began and said to him: 'Old man, digging about your vines with bowed shoulders, surely you shall have much wine when all these bear fruit, if you obey me and strictly remember not to have seen what you have seen, and not to have heard what you have heard, and to keep silent when nothing of your own is harmed.'",
+                "When he had said this much, he hurried the strong cattle on together: through many shadowy mountains and echoing gorges and flowery plains glorious Hermes drove them.",
+                "And now the divine night, his dark ally, was mostly passed, and dawn that sets folk to work was quickly coming on, while bright Selene, daughter of the lord Pallas, Megamedes' son, had just climbed her watch-post, when the strong Son of Zeus drove the wide-browed cattle of Phoebus Apollo to the river Alpheus.",
+                "And they came unwearied to the high-roofed byres and the drinking-troughs that were before the noble meadow.",
+                "Then, after he had well-fed the loud-bellowing cattle with fodder and driven them into the byre, close-packed and chewing lotus and dewy galingal, he gathered a pile of wood and began to seek the art of fire.",
+                "He chose a stout laurel branch and trimmed it with the knife held firmly in his hand: and the hot smoke rose up.",
+                "For it was Hermes who first invented fire-sticks and fire.",
+                "Next he took many dried sticks and piled them thick and plenty in a sunken trench: and flame began to glow, spreading afar the blast of fierce-burning fire.",
+                "And while the strength of glorious Hephaestus was beginning to kindle the fire, he dragged out two lowing, horned cows close to the fire; for great strength was with him.",
+                "He threw them both panting upon their backs on the ground, and rolled them on their sides, bending their necks over, and pierced their vital chord.",
+                "Then he went on from task to task: first he cut up the rich, fatted meat, and pierced it with wooden spits, and roasted flesh and the honorable chine and the paunch full of dark blood all together.",
+                "He laid them there upon the ground, and spread out the hides on a rugged rock: and so they are still there many ages afterwards, a long, long time after all this, and are continually.",
+                "Next glad-hearted Hermes dragged the rich meats he had prepared and put them on a smooth, flat stone, and divided them into twelve portions distributed by lot, making each portion wholly honorable.",
+                "Then glorious Hermes longed for the sacrificial meat, for the sweet savour wearied him, god though he was; nevertheless his proud heart was not prevailed upon to devour the flesh, although he greatly desired.",
+                "But he put away in the high-roofed byre the fat and all the flesh, placing them high up to be a token of his youthful theft.",
+                "And after that he gathered dry sticks and utterly destroyed with fire all the hoofs and all the heads.",
+                "And when the god had duly finished all, he threw his sandals into deep-eddying Alpheus, and quenched the embers, covering the black ashes with sand, and so spent the night while Selene's soft light shone down.",
+                "Then the god went straight back again at dawn to the bright crests of Cyllene, and no one met him on the long journey either of the blessed gods or mortal men..."
+            ]
+        },
+        {
+            "id": "homeric-4",
+            "title": "HYMN Ε΄. TO APHRODITE Α΄",
+            "deities": [
+                "Aphrodite"
+            ],
+            "sentences": [
+                "Muse, tell me the deeds of golden Aphrodite the Cyprian, who stirs up sweet passion in the gods and subdues the tribes of mortal men and birds that fly in air and all the many creatures that the dry land rears, and all that the sea: all these love the deeds of rich-crowned Cytherea.",
+                "Yet there are three hearts that she cannot bend nor yet ensnare.",
+                "First is the daughter of Zeus who holds the aegis, bright-eyed Athena; for she has no pleasure in the deeds of golden Aphrodite, but delights in wars and in the work of Ares, in strifes and battles and in preparing famous crafts.",
+                "She first taught earthly craftsmen to make chariots of war and cars variously wrought with bronze, and she, too, teaches tender maidens in the house and puts knowledge of goodly arts in each one's mind.",
+                "Nor does laughter-loving Aphrodite ever tame in love Artemis, the huntress with shafts of gold; for she loves archery and the slaying of wild beasts in the mountains, the lyre also and dancing and thrilling cries and shady woods and the cities of upright men.",
+                "Nor yet does the pure maiden Hestia love Aphrodite's works.",
+                "She was the first-born child of wily Cronos and youngest too, by will of Zeus who holds the aegis, — a queenly maid whom both Poseidon and Apollo sought to wed.",
+                "But she was wholly unwilling, nay, stubbornly refused; and touching the head of father Zeus who holds the aegis, she, that fair goddess, swear a great oath which has in truth been fulfilled, that she would be a maiden all her days.",
+                "So Zeus the Father gave her an high honor instead of marriage, and she has her place in the midst of the house and has the richest portion.",
+                "In all the temples of the gods she has a share of honor, and among all mortal men she is chief of the goddesses.",
+                "Of these three Aphrodite cannot bend or ensnare the hearts.",
+                "But of all others there is nothing among the blessed gods or among mortal men that has escaped Aphrodite.",
+                "Even the heart of Zeus, who delights in thunder, is led astray by her; though he is greatest of all and has the lot of highest majesty, she beguiles even his wise heart whensoever she pleases, and mates him with mortal women, unknown to Hera, his sister and his wife, the grandest far in beauty among the deathless goddesses —most glorious is she whom wily Cronos with her mother Rhea did beget: and Zeus, whose wisdom is everlasting, made her his chaste and careful wife.",
+                "But upon Aphrodite herself Zeus cast sweet desire to be joined in love with a mortal man, to the end that, very soon, not even she should be innocent of a mortal's love; lest laughter-loving Aphrodite should one day softly smile and say mockingly among all the gods that she had joined the gods in love with mortal women who bare sons of death to the deathless gods, and had mated the goddesses with mortal men.",
+                "And so he put in her heart sweet desire for Anchises who at that time among the steep hills of many-fountained Ida was tending cattle, and in shape was like the immortal gods.",
+                "Therefore, when laughter-loving Aphrodite saw him, she loved him, and terribly desire seized her in her heart.",
+                "She went to Cyprus, to Paphos, where her precinct is and fragrant altar, and passed into her sweet-smelling temple.",
+                "There she went in and put to the glittering doors, and there the Graces bathed her with heavenly oil such as blooms upon the bodies of the eternal gods — oil divinely sweet, which she had by her, filled with fragrance.",
+                "And laughter-loving Aphrodite put on all her rich clothes, and when she had decked herself with gold, she left sweet-smelling Cyprus and went in haste towards Troy, swiftly travelling high up among the clouds.",
+                "So she came to many-fountained Ida, the mother of wild creatures and went straight to the homestead across the mountains.",
+                "After her came grey wolves, fawning on her, and grim-eyed lions, and bears, and fleet leopards, ravenous for deer: and she was glad in heart to see them, and put desire in their breasts, so that they all mated, two together, about the shadowy coombes.",
+                "But she herself came to the neat-built shelters, and him she found left quite alone in the homestead — the hero Anchises who was comely as the gods.",
+                "All the others were following the herds over the grassy pastures, and he, left quite alone in the homestead, was roaming hither and thither and playing thrillingly upon the lyre.",
+                "And Aphrodite, the daughter of Zeus stood before him, being like a pure maiden in height and mien, that he should not be frightened when he took heed of her with his eyes.",
+                "Now when Anchises saw her, he marked her well and wondered at her mien and height and shining garments.",
+                "For she was clad in a robe out-shining the brightness of fire, a splendid robe of gold, enriched with all manner of needlework, which shimmered like the moon over her tender breasts, a marvel to see.",
+                "Also she wore twisted brooches and shining earrings in the form of flowers; and round her soft throat were lovely necklaces.",
+                "And Anchises was seized with love, and said to her: 'Hail, lady, whoever of the blessed ones you are that are come to this house, whether Artemis, or Leto, or golden Aphrodite, or high-born Themis, or bright-eyed Athena. Or, maybe, you are one of the Graces come hither, who bear the gods company and are called immortal, or else one of the Nymphs who haunt the pleasant woods, or of those who inhabit this lovely mountain and the springs of rivers and grassy meads. I will make you an altar upon a high peak in a far seen place, and will sacrifice rich offerings to you at all seasons. And do you feel kindly towards me and grant that I may become a man very eminent among the Trojans, and give me strong offspring for the time to come. As for my own self, let me live long and happily, seeing the light of the sun, and come to the threshold of old age, a man prosperous among the people.'",
+                "Thereupon Aphrodite the daughter of Zeus answered him: 'Anchises, most glorious of all men born on earth, know that I am no goddess: why do you liken me to the deathless ones. Nay, I am but a mortal, and a woman was the mother that bare me. Otreus of famous name is my father, if so be you have heard of him, and he reigns over all Phrygia rich in fortresses. But I know your speech well beside my own, for a Trojan nurse brought me up at home: she took me from my dear mother and reared me thenceforth when I was a little child. So comes it, then, that I well know your tongue also. And now the Slayer of Argus with the golden wand has caught me up from the dance of huntress Artemis, her with the golden arrows. For there were many of us, nymphs and marriageable  maidens, playing together; and an innumerable company encircled us: from these the Slayer of Argus with the golden wand rapt me away. He carried me over many fields of mortal men and over much land untilled and unpossessed, where savage wild-beasts roam through shady coombes, until I thought never again to touch the life-giving earth with my feet. And he said that I should be called the wedded wife of Anchises, and should bear you goodly children. But when he had told and advised me, he, the strong Slayer of Argos, went back to the families of the deathless gods..."
+            ]
+        },
+        {
+            "id": "homeric-5",
+            "title": "HYMN Ϛ΄. TO APHRODITE Β΄",
+            "deities": [
+                "Aphrodite"
+            ],
+            "sentences": [
+                "I will sing of stately Aphrodite, gold-crowned and beautiful, whose dominion is the walled cities of all sea-set Cyprus.",
+                "There the moist breath of the western wind wafted her over the waves of the loud-moaning sea in soft foam, and there the gold-filleted Hours welcomed her joyously.",
+                "They clothed her with heavenly garments: on her head they put a fine, well-wrought crown of gold, and in her pierced ears they hung ornaments of orichalc and precious gold, and adorned her with golden necklaces over her soft neck and snow-white breasts, jewels which the gold-filleted Hours wear themselves whenever they go to their father's house to join the lovely dances of the gods.",
+                "And when they had fully decked her, they brought her to the gods, who welcomed her when they saw her, giving her their hands.",
+                "Each one of them prayed that he might lead her home to be his wedded wife, so greatly were they amazed at the beauty of violet-crowned Cytherea.",
+                "Hail, sweetly-winning, coy-eyed goddess.",
+                "Grant that I may gain the victory in this contest, and order you my song.",
+                "And now I will remember you and another song also."
+            ]
+        },
+        {
+            "id": "homeric-6",
+            "title": "HYMN Ζ΄. TO DIONYSIS B΄",
+            "deities": [
+                "Dionysus"
+            ],
+            "sentences": [
+                "I will tell of Dionysus, the son of glorious Semele, how he appeared on a jutting headland by the shore of the fruitless sea, seeming like a stripling in the first flush of manhood: his rich, dark hair was waving about him, and on his strong shoulders he wore a purple robe",
+                "Presently there came swiftly over the sparkling sea Tyrsenian pirates on a well-decked ship — a miserable doom led them on.",
+                "When they saw him they made signs to one another and sprang out quickly, and seizing him straightway put him on board their ship exultingly; for they thought him the son of heaven-nurtured kings.",
+                "They sought to bind him with rude bonds, but the bonds would not hold him, and the withes fell far away from his hands and feet: and he sat with a smile in his dark eyes.",
+                "Then the helmsman understood all and cried out at once to his fellows and said: 'Madmen, what god is this whom you have taken and bind, strong that he is. Not even the well-built ship can carry him. Surely this is either Zeus or Apollo who has the silver bow, or Poseidon, for he looks not like mortal men but like the gods who dwell on Olympus. Come, then, let us set him free upon the dark shore at once: do not lay hands on him, lest he grow angry and stir up dangerous winds and heavy squalls.'. So said he.",
+                "But the master chid him with taunting words: 'Madman, mark the wind and help hoist sail on the ship: catch all the sheets. As for this fellow we men will see to him: I reckon he is bound for Egypt or for Cyprus or to the Hyperboreans or further still. But in the end he will speak out and tell us his friends and all his wealth and his brothers, now that providence has thrown him in our way.'",
+                "When he had said this, he had mast and sail hoisted on the ship, and the wind filled the sail and the crew hauled taut the sheets on either side.",
+                "But soon strange things were seen among them.",
+                "First of all sweet, fragrant wine ran streaming throughout all the black ship and a heavenly smell arose, so that all the seamen were seized with amazement when they saw it.",
+                "And all at once a vine spread out both ways along the top of the sail with many clusters hanging down from it, and a dark ivy-plant twined about the mast, blossoming with flowers, and with rich berries growing on it; and all the thole-pins were covered with garlands.",
+                "When the pirates saw all this, then at last they bade the helmsman to put the ship to land.",
+                "But the god changed into a dreadful lion there on the ship, in the bows, and roared loudly: amidships also he showed his wonders and created a shaggy bear which stood up ravening, while on the forepeak was the lion glaring fiercely with scowling brows.",
+                "And so the sailors fled into the stern and crowded bemused about the right-minded helmsman, until suddenly the lion sprang upon the master and seized him; and when the sailors saw it they leapt out overboard one and all into the bright sea, escaping from a miserable fate, and were changed into dolphins.",
+                "But on the helmsman Dionysus had mercy and held him back and made him altogether happy, saying to him: 'Take courage, good ... you have found favour with my heart. I am loud-crying Dionysus whom Cadmus' daughter Semele bare of union with Zeus.'",
+                "Hail, child of fair-faced Semele.",
+                "He who forgets you can in no wise order sweet song."
+            ]
+        },
+        {
+            "id": "homeric-7",
+            "title": "HYMN Η΄. TO ARES",
+            "deities": [
+                "Ares"
+            ],
+            "sentences": [
+                "Ares, exceeding in strength, chariot-rider, golden-helmed, doughty in heart, shield-bearer, Saviour of cities, harnessed in bronze, strong of arm, unwearying, mighty with the spear, O defence of Olympus, father of warlike Victory, ally of Themis, stern governor of the rebellious, leader of righteous men, sceptred King of manliness, who whirl your fiery sphere among the planets in their sevenfold courses through the aether wherein your blazing steeds ever bear you above the third firmament of heaven; hear me, helper of men, giver of dauntless youth.",
+                "Shed down a kindly ray from above upon my life, and strength of war, that I may be able to drive away bitter cowardice from my head and crush down the deceitful impulses of my soul.",
+                "Restrain also the keen fury of my heart which provokes me to tread the ways of blood-curdling strife.",
+                "Rather, O blessed one, give you me boldness to abide within the harmless laws of peace, avoiding strife and hatred and the violent fiends of death."
+            ]
+        },
+        {
+            "id": "homeric-8",
+            "title": "HYMN Θ΄. TO ARTEMIS Α΄",
+            "deities": [
+                "Artemis"
+            ],
+            "sentences": [
+                "Muse, sing of Artemis, sister of the Far-shooter, the virgin who delights in arrows, who was fostered with Apollo.",
+                "She waters her horses from Meles deep in reeds, and swiftly drives her all-golden chariot through Smyrna to vine-clad Claros where Apollo, god of the silver bow, sits waiting for the far-shooting goddess who delights in arrows.",
+                "And so hail to you, Artemis, in my song and to all goddesses as well.",
+                "Of you first I sing and with you I begin; now that I have begun with you, I will turn to another song."
+            ]
+        },
+        {
+            "id": "homeric-9",
+            "title": "HYMN Ι΄. TO APHRODITE Γ΄",
+            "deities": [
+                "Aphrodite"
+            ],
+            "sentences": [
+                "Of Cytherea, born in Cyprus, I will sing.",
+                "She gives kindly gifts to men: smiles are ever on her lovely face, and lovely is the brightness that plays over it.",
+                "Hail, goddess, queen of well-built Salamis and sea-girt Cyprus; grant me a cheerful song.",
+                "And now I will remember you and another song also."
+            ]
+        },
+        {
+            "id": "homeric-10",
+            "title": "HYMN ΙΑ΄. TO ATHENA Α΄",
+            "deities": [
+                "Athena"
+            ],
+            "sentences": [
+                "Of Pallas Athena, guardian of the city, I begin to sing.",
+                "Dread is she, and with Ares she loves deeds of war, the sack of cities and the shouting and the battle.",
+                "It is she who saves the people as they go out to war and come back.",
+                "Hail, goddess, and give us good fortune with happiness."
+            ]
+        },
+        {
+            "id": "homeric-11",
+            "title": "HYMN ΙΒ΄. TO HERA",
+            "deities": [
+                "Hera"
+            ],
+            "sentences": [
+                "I sing of golden-throned Hera whom Rhea bare.",
+                "Queen of the immortals is she, surpassing all in beauty: she is the sister and the wife of loud-thundering Zeus — the glorious one whom all the blessed throughout high Olympus reverence and honor even as Zeus who delights in thunder."
+            ]
+        },
+        {
+            "id": "homeric-12",
+            "title": "HYMN ΙΓ΄. TO DEMETER B΄",
+            "deities": [
+                "Demeter"
+            ],
+            "sentences": [
+                "I begin to sing of rich-haired Demeter, awful goddess, of her and of her daughter lovely Persephone.",
+                "Hail, goddess.",
+                "Keep this city safe, and govern my song."
+            ]
+        },
+        {
+            "id": "homeric-13",
+            "title": "HYMN ΙΔ΄. TO THE MOTHER OF THE GODS",
+            "deities": [
+                "Mother of the Gods"
+            ],
+            "sentences": [
+                "I Prithee, clear-voiced Muse, daughter of mighty Zeus, sing of the mother of all gods and men.",
+                "She is well-pleased with the sound of rattles and of timbrels, with the voice of flutes and the outcry of wolves and bright-eyed lions, with echoing hills and wooded coombes.",
+                "And so hail to you in my song and to all goddesses as well."
+            ]
+        },
+        {
+            "id": "homeric-14",
+            "title": "HYMN ΙΕ΄. TO HERACLES",
+            "deities": [
+                "Heracles"
+            ],
+            "sentences": [
+                "I will sing of Heracles, the son of Zeus and much the mightiest of men on earth.",
+                "Alcmena bare him in Thebes, the city of lovely dances, when the dark-clouded Son of Cronos had lain with her.",
+                "Once he used to wander over unmeasured tracts of land and sea at the bidding of King Eurystheus, and himself did many deeds of violence and endured many; but now he lives happily in the glorious home of snowy Olympus, and has neat-ankled Hebe for his wife.",
+                "Hail, lord, son of Zeus.",
+                "Give me success and prosperity."
+            ]
+        },
+        {
+            "id": "homeric-15",
+            "title": "HYMN ΙϚ΄. TO ASCLEPIUS",
+            "deities": [
+                "Asclepius"
+            ],
+            "sentences": [
+                "I begin to sing of Asclepius, son of Apollo and healer of sicknesses.",
+                "In the Dotian plain fair Coronis, daughter of King Phlegyas, bare him, a great joy to men, a soother of cruel pangs.",
+                "And so hail to you, lord: in my song I make my prayer to thee."
+            ]
+        },
+        {
+            "id": "homeric-16",
+            "title": "HYMN ΙΖ΄. TO THE DIOSCURI Α΄",
+            "deities": [
+                "Dioscuri"
+            ],
+            "sentences": [
+                "Sing, clear-voiced Muse, of Castor and Polydeuces, the Tyndaridae, who sprang from Olympian Zeus.",
+                "Beneath the heights of Taygetus stately Leda bare them, when the dark-clouded Son of Cronos had privily bent her to his will.",
+                "Hail, children of Tyndareus, riders upon swift horses."
+            ]
+        },
+        {
+            "id": "homeric-17",
+            "title": "HYMN ΙΗ΄. TO HERMES Β΄",
+            "deities": [
+                "Hermes"
+            ],
+            "sentences": [
+                "I sing of Cyllenian Hermes, the Slayer of Argus, lord of Cyllene and Arcadia rich in flocks, luck-bringing messenger of the deathless gods.",
+                "He was born of Maia, the daughter of Atlas, when she had mated with Zeus — a shy goddess she.",
+                "Ever she avoided the throng of the blessed gods and lived in a shadowy cave, and there the Son of Cronos used to lie with the rich-tressed nymph at dead of night, while white-armed Hera lay bound in sweet sleep: and neither deathless god nor mortal man knew it.",
+                "And so hail to you, Son of Zeus and Maia; with you I have begun: now I will turn to another song.",
+                "Hail, Hermes, giver of grace, guide, and giver of good things."
+            ]
+        },
+        {
+            "id": "homeric-18",
+            "title": "HYMN ΙΘ΄. TO PAN",
+            "deities": [
+                "Pan"
+            ],
+            "sentences": [
+                "Muse, tell me about Pan, the dear son of Hermes, with his goat's feet and two horns — a lover of merry noise.",
+                "Through wooded glades he wanders with dancing nymphs who foot it on some sheer cliff's edge, calling upon Pan, the shepherd-god, long-haired, unkempt.",
+                "He has every snowy crest and the mountain peaks and rocky crests for his domain; hither and thither he goes through the close thickets, now lured by soft streams, and now he presses on amongst towering crags and climbs up to the highest peak that overlooks the flocks.",
+                "Often he courses through the glistening high mountains, and often on the shouldered hills he speeds along slaying wild beasts, this keen-eyed god.",
+                "Only at evening, as he returns from the chase, he sounds his note, playing sweet and low on his pipes of reed: not even she could excel him in melody —that bird who in flower-laden spring pouring forth her lament utters honey-voiced song amid the leaves.",
+                "At that hour the clear-voiced nymphs are with him and move with nimble feet, singing by some spring of dark water, while Echo wails about the mountain-top, and the god on this side or on that of the choirs, or at times sidling into the midst, plies it nimbly with his feet.",
+                "On his back he wears a spotted lynx-pelt, and he delights in high-pitched songs in a soft meadow where crocuses and sweet-smelling hyacinths bloom at random in the grass.",
+                "They sing of the blessed gods and high Olympus and choose to tell of such an one as luck-bringing Hermes above the rest, how he is the swift messenger of all the gods, and how he came to Arcadia, the land of many springs and mother of flocks, there where his sacred place is as god of Cyllene.",
+                "For there, though a god, he used to tend curly-fleeced sheep in the service of a mortal man, because there fell on him and waxed strong melting desire to wed the rich-tressed daughter of Dryops, and there he brought about the merry marriage.",
+                "And in the house she bare Hermes a dear son who from his birth was marvellous to look upon, with goat's feet and two horns —a noisy, merry-laughing child.",
+                "But when the nurse saw his uncouth face and full beard, she was afraid and sprang up and fled and left the child.",
+                "Then luck-bringing Hermes received him and took him in his arms: very glad in his heart was the god.",
+                "And he went quickly to the abodes of the deathless gods, carrying his son wrapped in warm skins of mountain hares, and set him down beside Zeus and showed him to the rest of the gods.",
+                "Then all the immortals were glad in heart and Bacchic Dionysus in especial; and they called the boy Pan because he delighted all their hearts.",
+                "And so hail to you, lord.",
+                "I seek your favour with a song.",
+                "And now I will remember you and another song also."
+            ]
+        },
+        {
+            "id": "homeric-19",
+            "title": "HYMN Κ΄. TO HEPHAESTUS",
+            "deities": [
+                "Hephaestus"
+            ],
+            "sentences": [
+                "Sing, clear-voiced Muse, of Hephaestus famed for inventions.",
+                "With bright-eyed Athena he taught men glorious crafts throughout the world — men who before used to dwell in caves in the mountains like wild beasts.",
+                "But now that they have learned crafts through Hephaestus the famed worker, easily they live a peaceful life in their own houses the whole year round.",
+                "Be gracious, Hephaestus, and grant me success and prosperity."
+            ]
+        },
+        {
+            "id": "homeric-20",
+            "title": "HYMN ΚΑ΄. TO APOLLO",
+            "deities": [
+                "Apollo"
+            ],
+            "sentences": [
+                "Phoebus, of you even the swan sings with clear voice to the beating of his wings, as he alights upon the bank by the eddying river Peneus; and of you the sweet-tongued minstrel, holding his high-pitched lyre, always sings both first and last.",
+                "And so hail to you, lord.",
+                "I seek your favor with my song."
+            ]
+        },
+        {
+            "id": "homeric-21",
+            "title": "HYMN ΚΒ΄. TO POSEIDON",
+            "deities": [
+                "Poseidon"
+            ],
+            "sentences": [
+                "I begin to sing about Poseidon, the great god, mover of the earth and fruitless sea, god of the deep who is also lord of Helicon and wide Aegae.",
+                "A two-fold office the gods allotted you, O Shaker of the Earth, to be a tamer of horses and a saviour of ships.",
+                "Hail, Poseidon, Holder of the Earth, dark-haired lord.",
+                "O blessed one, be kindly in heart and help those who voyage in ships."
+            ]
+        },
+        {
+            "id": "homeric-22",
+            "title": "HYMN ΚΓ΄. TO ZEUS",
+            "deities": [
+                "Zeus"
+            ],
+            "sentences": [
+                "I will sing of Zeus, chiefest among the gods and greatest, all-seeing, the lord of all, the fulfiller who whispers words of wisdom to Themis as she sits leaning towards him.",
+                "Be gracious, all-seeing Son of Cronos, most excellent and great."
+            ]
+        },
+        {
+            "id": "homeric-23",
+            "title": "HYMN ΚΔ΄. TO HESTIA Α΄",
+            "deities": [
+                "Hestia"
+            ],
+            "sentences": [
+                "Hestia, you who tend the holy house of the lord Apollo, the Far-shooter at goodly Pytho, with soft oil dripping ever from your locks, come now into this house, come, having one mind with Zeus the all-wise — draw near, and withal bestow grace upon my song."
+            ]
+        },
+        {
+            "id": "homeric-24",
+            "title": "HYMN ΚΕ΄. TO THE MUSES AND APOLLO",
+            "deities": [
+                "Muses",
+                "Apollo"
+            ],
+            "sentences": [
+                "I will begin with the Muses and Apollo and Zeus.",
+                "For it is through the Muses and Apollo that there are singers upon the earth and players upon the lyre; but kings are from Zeus.",
+                "Happy is he whom the Muses love: sweet flows speech from his lips.",
+                "Hail, children of Zeus.",
+                "Give honor to my song.",
+                "And now I will remember you and another song also."
+            ]
+        },
+        {
+            "id": "homeric-25",
+            "title": "HYMN ΚϚ΄. TO DIONYSUS Γ΄",
+            "deities": [
+                "Dionysus"
+            ],
+            "sentences": [
+                "I begin to sing of ivy-crowned Dionysus, the loud-crying god, splendid son of Zeus and glorious Semele.",
+                "The rich-haired Nymphs received him in their bosoms from the lord his father and fostered and nurtured him carefully in the dells of Nysa, where by the will of his father he grew up in a sweet-smelling cave, being reckoned among the immortals.",
+                "But when the goddesses had brought him up, a god oft hymned, then began he to wander continually through the woody coombes, thickly wreathed with ivy and laurel.",
+                "And the Nymphs followed in his train with him for their leader; and the boundless forest was filled with their outcry.",
+                "And so hail to you, Dionysus, god of abundant clusters.",
+                "Grant that we may come again rejoicing to this season, and from that season onwards for many a year."
+            ]
+        },
+        {
+            "id": "homeric-26",
+            "title": "HYMN ΚΖ΄. TO ARTEMIS Β΄",
+            "deities": [
+                "Artemis"
+            ],
+            "sentences": [
+                "I sing of Artemis, whose shafts are of gold, who cheers on the hounds, the pure maiden, shooter of stags, who delights in archery, own sister to Apollo with the golden sword.",
+                "Over the shadowy hills and windy peaks she draws her golden bow, rejoicing in the chase, and sends out grievous shafts.",
+                "The tops of the high mountains tremble and the tangled wood echoes awesomely with the outcry of beasts: earth quakes and the sea also where fishes shoal.",
+                "But the goddess with a bold heart turns every way destroying the race of wild beasts: and when she is satisfied and has cheered her heart, this huntress who delights in arrows slackens her supple bow and goes to the great house of her dear brother Phoebus Apollo, to the rich land of Delphi, there to order the lovely dance of the Muses and Graces.",
+                "There she hangs up her curved bow and her arrows, and heads and leads the dances, gracefully arrayed, while all they utter their heavenly voice, singing how neat-ankled Leto bare children supreme among the immortals both in thought and in deed.",
+                "Hail to you, children of Zeus and rich-haired Leto.",
+                "And now I will remember you and another song also."
+            ]
+        },
+        {
+            "id": "homeric-27",
+            "title": "HYMN ΚΗ΄. TO ATHENA Β΄",
+            "deities": [
+                "Athena"
+            ],
+            "sentences": [
+                "I begin to sing of Pallas Athena, the glorious goddess, bright-eyed, inventive, unbending of heart, pure virgin, saviour of cities, courageous, Tritogeneia.",
+                "Wise Zeus himself bare her from his awful head, arrayed in warlike arms of flashing gold, and awe seized all the gods as they gazed.",
+                "But Athena sprang quickly from the immortal head and stood before Zeus who holds the aegis, shaking a sharp spear: great Olympus began to reel horribly at the might of the bright-eyed goddess, and earth round about cried fearfully, and the sea was moved and tossed with dark waves, while foam burst forth suddenly: the bright Son of Hyperion stopped his swift-footed horses a long while, until the maiden Pallas Athena had stripped the heavenly armour from her immortal shoulders.",
+                "And wise Zeus was glad.",
+                "And so hail to you, daughter of Zeus who holds the aegis.",
+                "Now I will remember you and another song as well."
+            ]
+        },
+        {
+            "id": "homeric-28",
+            "title": "HYMN ΚΘ΄. TO HESTIA Β΄",
+            "deities": [
+                "Hestia"
+            ],
+            "sentences": [
+                "Hestia, in the high dwellings of all, both deathless gods and men who walk on earth, you have gained an everlasting abode and highest honor: glorious is your portion and your right.",
+                "For without you mortals hold no banquet — where one does not duly pour sweet wine in offering to Hestia both first and last.",
+                "And you, Slayer of Argus, Son of Zeus and Maia, messenger of the blessed gods, bearer of the golden rod, giver of good, be favorable and help us, you and Hestia, the worshipful and dear.",
+                "Come and dwell in this glorious house in friendship together; for you two, well knowing the noble actions of men, aid on their wisdom and their strength.",
+                "Hail, Daughter of Cronos, and you also, Hermes, bearer of the golden rod.",
+                "Now I will remember you and another song also."
+            ]
+        },
+        {
+            "id": "homeric-29",
+            "title": "HYMN Λ΄. TO EARTH",
+            "deities": [
+                "Earth"
+            ],
+            "sentences": [
+                "I will sing of well-founded Earth, mother of all, eldest of all beings.",
+                "She feeds all creatures that are in the world, all that go upon the goodly land, and all that are in the paths of the seas, and all that fly: all these are fed of her store.",
+                "Through you, O queen, men are blessed in their children and blessed in their harvests, and to you it belongs to give means of life to mortal men and to take it away.",
+                "Happy is the man whom you delight to honor.",
+                "He has all things abundantly: his fruitful land is laden with corn, his pastures are covered with cattle, and his house is filled with good things.",
+                "Such men rule orderly in their cities of fair women: great riches and wealth follow them: their sons exult with ever-fresh delight, and their daughters in flower-laden bands play and skip merrily over the soft flowers of the field.",
+                "Thus is it with those whom you honor O holy goddess, bountiful spirit.",
+                "Hail, Mother of the gods, wife of starry Heaven; freely bestow upon me for this my song substance that cheers the heart.",
+                "And now I will remember you and another song also."
+            ]
+        },
+        {
+            "id": "homeric-30",
+            "title": "HYMN ΛΑ΄. TO HELIOS",
+            "deities": [
+                "Helios"
+            ],
+            "sentences": [
+                "And now, O Muse Calliope, daughter of Zeus, begin to sing of glowing Helios whom mild-eyed Euryphaessa, the far-shining one, bare to the Son of Earth and starry Heaven.",
+                "For Hyperion wedded glorious Euryphaessa, his own sister, who bare him lovely children, rosy-armed Eos and rich-tressed Selene and tireless Helios who is like the deathless gods.",
+                "As he rides in his chariot, he shines upon men and deathless gods, and piercingly he gazes with his eyes from his golden helmet.",
+                "Bright rays beam dazzlingly from him, and his bright locks streaming from the temples of his head gracefully enclose his far-seen face: a rich, fine-spun garment glows upon his body and flutters in the wind: and stallions carry him.",
+                "Then, when he has stayed his golden-yoked chariot and horses, he rests there upon the highest point of heaven, until he marvelously drives them down again through heaven to Ocean.",
+                "Hail to you, lord.",
+                "Freely bestow on me substance that cheers the heart.",
+                "And now that I have begun with you, I will celebrate the race of mortal men half-divine whose deeds the Muses have showed to mankind."
+            ]
+        },
+        {
+            "id": "homeric-31",
+            "title": "HYMN ΛΒ΄. TO SELENE",
+            "deities": [
+                "Selene"
+            ],
+            "sentences": [
+                "And next, sweet voiced Muses, daughters of Zeus, well-skilled in song, tell of the long-winged Moon.",
+                "From her immortal head a radiance is shown from heaven and embraces earth; and great is the beauty that ariseth from her shining light.",
+                "The air, unlit before, glows with the light of her golden crown, and her rays beam clear, whensoever bright Selene having bathed her lovely body in the waters of Ocean, and donned her far-gleaming raiment, and yoked her strong-necked, shining team, drives on her long-maned horses at full speed, at eventime in the mid-month: then her great orbit is full and then her beams shine brightest as she increases.",
+                "So she is a sure token and a sign to mortal men.",
+                "Once the Son of Cronos was joined with her in love; and she conceived and bare a daughter Pandia, exceeding lovely amongst the deathless gods.",
+                "Hail, white-armed goddess, bright Selene, mild, bright-tressed queen.",
+                "And now I will leave you and sing the glories of men half-divine, whose deeds minstrels, the servants of the Muses, celebrate with lovely lips."
+            ]
+        },
+        {
+            "id": "homeric-32",
+            "title": "HYMN ΛΓ΄. TO THE DIOSCURI Β΄",
+            "deities": [
+                "Dioscuri"
+            ],
+            "sentences": [
+                "Bright-eyed Muses, tell of the Tyndaridae, the Sons of Zeus, glorious children of neat-ankled Leda, Castor the tamer of horses, and blameless Polydeuces.",
+                "When Leda had lain with the dark-clouded Son of Cronos, she bare them beneath the peak of the great hill Taygetus — children who are deliverers of men on earth and of swift-going ships when stormy gales rage over the ruthless sea.",
+                "Then the shipmen call upon the sons of great Zeus with vows of white lambs, going to the forepart of the prow; but the strong wind and the waves of the sea lay the ship under water, until suddenly these two are seen darting through the air on tawny wings.",
+                "Forthwith they allay the blasts of the cruel winds and still the waves upon the surface of the white sea: fair signs are they and deliverance from toil.",
+                "And when the shipmen see them they are glad and have rest from their pain and labour.",
+                "Hail, Tyndaridae, riders upon swift horses.",
+                "Now I will remember you and another song also."
+            ]
+        },
+        {
+            "id": "orphic-0",
+            "title": "HYMN Α΄. ORPHEUS TO MOUSAIOS",
+            "deities": [
+                "Mousaios"
+            ],
+            "sentences": [
+                "Learn now, Mousaios, a mystical and most holy rite, a prayer which surely excels all others.",
+                "Kind Zeus and Earth, heavenly and pure flames of Sun, sacred light of Moon, and of all the Stars; Poseidon, too, dark-maned holder of the earth, pure Persephone, Demeter of the splendid fruit, Artemis, arrow-pouring maiden, kindly Phoibos, dwelling on the sacred ground of Delphoi, and Dionysos, the dancer, whose honors among the blessed gods are the highest; strong-spirited Ares, holy and mighty Hephaistos, then the goddess foam-born, to whose lot fell sublime gifts, and you, divinity excellent, king of the underworld.",
+                "I call on Hebe, and Eileithyia, and the noble ardor of Herakles, I call upon the great blessings of Justice and Piety, I call upon the glorious Nymphs and upon Pan the greatest, I call upon Hera, buxom wife of aegis-bearing Zeus.",
+                "And I call upon lovely Mnemosyne, I call upon the holy Muses, all nine, and then I call upon the Graces, the Seasons, and the Year, upon fair-tressed Leto, and upon divine and revered Dione.",
+                "I invoke the armed Kouretes, the Korybantes, and the Kabeiroi, the great Saviors, Zeus' ageless scions, I invoke the Idaian gods, and Hermes, messenger and herald.",
+                "Of those in the sky, I invoke Themis, diviner of men, and then I invoke Night, oldest of all, and I do invoke light-bringing Day.",
+                "Faith, Dike, I invoke, I invoke blameless Thesmodoteira, and Rhea, and Kronos, and dark-veiled Tethys, the great Okeanos, and all of his daughters.",
+                "I invoke the might preeminent of Atlas and Aion, of Time the ever-flowing, and of the splendid water of the Styx.",
+                "I call on all these gentle gods, and I call on Pronoia, and on the holy Daimon, I also call on Daimon baneful to mortals, then I invoke divinities dwelling in the sky, in the air, in the water, on earth, under the earth, and in the fiery element.",
+                "Ino, Leukothea, Palaimon, giver of bliss, sweet-speaking Nike, queenly Adrasteia, I call upon the great king Asklepios, who grants soothing, upon the battle-stirring maiden Pallas, and upon all the winds, I call upon Thunder, and upon the parts of the four-pillared cosmos.",
+                "I invoke the Mother of the immortals, Attis and Men, I invoke the goddess Ourania, and the immortal and holy Adonis, Beginning and End, too, which to all is most important, and I ask them to come in a spirit of joyous mercy to this holy rite, to this reverent libation."
+            ]
+        },
+        {
+            "id": "orphic-1",
+            "title": "HYMN Β΄. TO HEKATE",
+            "deities": [
+                "Hecate"
+            ],
+            "sentences": [
+                "Lovely Hekate of the roads and of the crossroads I invoke.",
+                "In heaven, on earth, then in the sea, saffron-cloaked, tomb spirit reveling in the souls of the dead, daughter of Perses, haunting deserted places, delighting in deer, nocturnal, dog-loving, monstrous queen, devouring wild beasts, ungirt and repulsive.",
+                "Herder of bulls, queen and mistress of the whole world, leader, nymph, mountain-roaming nurturer of youths, maiden, I beseech you to come to these holy rites, ever with joyous heart, ever favoring the oxherd."
+            ]
+        },
+        {
+            "id": "orphic-2",
+            "title": "HYMN Γ΄. TO PROTHYRAIA",
+            "deities": [
+                "Prothyraia"
+            ],
+            "sentences": [
+                "Hear me, O revered goddess, O many-named divinity, O sight sweet to women in labor, you offer them aid in travail.",
+                "You save women, and you alone love children, O kindly goddess of swift birth, ever helpful to young women, O Prothyraia.",
+                "You hold the keys, you are accessible to all, O mistress, gracious and fond of nurture, you have power in every house, and you delight in festivities.",
+                "You loosen girdles, and though invisible you are seen in every deed, you share pain, you rejoice in every birth, O Eileithyia, you free from pain those in terrible distress.",
+                "Upon you alone pregnant women call, O comforter of souls, and in you alone there is relief from pains of labor.",
+                "Artemis, Eileithyia, reverend Prothyraia, hear, O blessed one, help me and grant offspring; save me, savior of all, for it is in your nature to do so."
+            ]
+        },
+        {
+            "id": "orphic-3",
+            "title": "HYMN Δ΄. TO NIGHT",
+            "deities": [
+                "Night"
+            ],
+            "sentences": [
+                "I shall sing of Night, mother of gods and men; we call Night Kypris, she gave birth to all.",
+                "Hear, O blessed goddess, jet-black and starlit, for you delight in the quiet and slumber-filled serenity.",
+                "Cheerful and delightful, lover of the nightlong revel, mother of dreams, you free us from cares, you offer us welcome respite from toil.",
+                "Giver of sleep, beloved of all, you gleam in the darkness as you drive your steeds.",
+                "Ever incomplete, terrestrial, and then again celestial, you circle around in pursuit of sprightly phantoms, you force light into the nether world, and then again you flee into Hades, for dreadful Necessity governs all things.",
+                "But now, O blessed one, beatific, desired by all, I call on you to grant a kind ear to my voice of supplication, and to come, benevolent, to disperse fears that glisten in the night."
+            ]
+        },
+        {
+            "id": "orphic-4",
+            "title": "HYMN Ε΄. TO SKY",
+            "deities": [
+                "Sky"
+            ],
+            "sentences": [
+                "Sky, father of all, eternal cosmic element, primeval beginning of all, end of all, lord of the universe, moving about the earth like a sphere.",
+                "You are home of the blessed gods, your motion is a roaring whirl, you envelop all, celestial and terrestrial guard.",
+                "Physis' invincible drive lies in your breast.",
+                "Dark-blue, indomitable, shimmering, variform, all-seeing father of Kronos, blessed and most sublime divinity, hearken, bring a life of holiness to the new initiates."
+            ]
+        },
+        {
+            "id": "orphic-5",
+            "title": "HYMN Ϛ΄. TO ETHER",
+            "deities": [
+                "Ether"
+            ],
+            "sentences": [
+                "Yours are Zeus' lofty dwelling, endless power, too; of the stars, of the sun, and of the moon you claim a share.",
+                "O tamer of all, O fire-breather, O life's spark for every creature, sublime Ether, best cosmic element, radiant, luminous, starlit offspring, I call upon you and I beseech you to be temperate and clear."
+            ]
+        },
+        {
+            "id": "orphic-6",
+            "title": "HYMN Ζ΄. TO PROTOGONOS",
+            "deities": [
+                "Protogonos"
+            ],
+            "sentences": [
+                "Upon two-natured Protogonos, great and ether-tossed, I call; born of the egg, delighting in his golden wings, the begetter of blessed gods and mortal men; he bellows like a bull.",
+                "Erikepaios, seed unforgettable, attended by many rites, ineffable, hidden, brilliant scion, forever in whirring motion, you scattered the dark mist, the mist that lay before your eyes.",
+                "Flapping your wings, you whirled about throughout this world, you brought pure light.",
+                "For this I call you Phanes, yes, I call you Lord Priapos, I call you bright-eyed Antauges.",
+                "O blessed one of the many counsels and of the many seeds, come joyfully to the celebrants of this holy rite, of this very intricate rite."
+            ]
+        },
+        {
+            "id": "orphic-7",
+            "title": "HYMN Η΄. TO THE STARS",
+            "deities": [
+                "Stars"
+            ],
+            "sentences": [
+                "I call forth the sacred light of the heavenly Stars, with devotional prayers I summon the holy daimones.",
+                "Heavenly Stars, dear children of black Night, round your thrones you move in circles, you spin in circular ways, O brilliant and fiery begetters of all, you do reveal fate, everyone's fate, you determine the divine path for mortals.",
+                "Wandering in midair, you gaze upon the seven luminous orbits.",
+                "In heaven and on earth, ever indestructible on your blazing trail, you shine upon the darkness of the cloak night wears.",
+                "Coruscating and gleaming, kingly and nocturnal, visit the learned contests of this sacred rite, finish a noble race for works of renown."
+            ]
+        },
+        {
+            "id": "orphic-8",
+            "title": "HYMN Θ΄. TO THE SUN",
+            "deities": [
+                "Sun"
+            ],
+            "sentences": [
+                "Hear me, O blessed one, eternal eye that sees all, Titan radiant as gold, Hyperion, celestial light, self-born, untiring, sweet sight to living creatures.",
+                "On the right you beget dawn, on the left you beget night, you temper the seasons as you ride your dancing horses, you rush, you rush very swiftly, O fiery and bright-faced charioteer, you press on your course in endless whirl.",
+                "Harsh to the impious, you teach good to the pious as you hold the golden lyre, the harmony of cosmic motion, as you command noble deeds, as you nurture the seasons.",
+                "Piping lord of the world, fiery circle of motion, life-bringing, coruscating, life-giving, fruit-bearing, Paian, eternal and pure father of time, O immortal Zeus, you are the clear, you are the brilliant, you are the all-encompassing cosmic eye, both when you set and when you shine your lovely and radiant light.",
+                "A paragon of justice, O water-loving lord of the cosmos, you guard pledges and ever the highest, you do help all.",
+                "Eye of justice and light of life, O charioteer, your screaming whip drives the four-horse chariot on.",
+                "Hear my words and show life's sweetness to the initiates."
+            ]
+        },
+        {
+            "id": "orphic-9",
+            "title": "HYMN Ι΄. TO SELENE",
+            "deities": [
+                "Selene"
+            ],
+            "sentences": [
+                "Hear me, O divine queen, O light-bringing and splendid Selene, O bull-horned Moon, crossing the air as you race with night.",
+                "Nocturnal, torch-bearing, maiden of beautiful stars, O Moon, waxing and waning, feminine and masculine, luminous, lover of horses, mother of time, bearer of fruit, amber-colored, moody, shining in the night, all-seeing and vigilant, surrounded by beautiful stars, you delight in the quiet and in the richness of the night, you grant fulfillment and favor, as, like a jewel, you shine in the night.",
+                "Long-cloaked marshal of the stars, wise maiden whose motion is circular, come, O blessed and gentle lady, lady of the stars, through your own light shine and save, O maiden, your new initiates."
+            ]
+        },
+        {
+            "id": "orphic-10",
+            "title": "HYMN ΙΑ΄. TO PHYSIS",
+            "deities": [
+                "Physis"
+            ],
+            "sentences": [
+                "O Physis, resourceful mother of all, industrious and rich divinity, oldest of all, queen, all-taming and indomitable, O lustrous ruler, ever-honored mistress of all, highest goddess, imperishable, first-born, fabled glorifier of men, nocturnal, radiant with constellations, light-bringing, irrepressible, you move swiftly, your steps are noiseless, O pure marshal of the gods, O end that has no end.",
+                "All partake of you, you alone partake of no one.",
+                "Self-fathered, hence fatherless, virtue itself, joyous, great, you are accessible, O nurse of flowers, you lovingly mingle and twine, you lead and rule, you bring life and nourishment to all.",
+                "Self-sufficient, many-named persuasion of the Graces, Dike herself, queen of heaven, queen of the earth and of the sea, bitter to the vulgar, sweet to those who obey you, wise in all, giver of all, nurturing queen of all, abundant nourishment is yours as you dissolve whatever ripens, father and mother of all, nurturer and nurse, giver of swift birth, O blessed one, giver of wealth of seeds and of the fever of seasons.",
+                "A rich and mighty divinity, you give shape and form to all things.",
+                "Eternal, setting all in motion, skilled and discreet, you are ever turning the swift stream into an unceasing eddy, flowing in all things, circular and ever changing form, fair-throned and precious, you alone accomplish your designs, mighty mistress of booming thunder, you rule over those who hold the scepter, O loud-roaring divinity, fearless, all-taming, destined fate, fire-breathing, you are life everlasting, you are immortal providence.",
+                "You are all things to all, because you alone do.",
+                "You are the all, you alone do, you bring peace and health, you bring growth to all."
+            ]
+        },
+        {
+            "id": "orphic-11",
+            "title": "HYMN ΙΒ΄. TO PAN",
+            "deities": [
+                "Pan"
+            ],
+            "sentences": [
+                "I call upon Pan, the pastoral god, I call upon the universe, upon the sky, the sea, and the land, queen of all, I also call upon immortal fire; all these are Pan's realm.",
+                "Come, O blessed and frolicsome one, O restless companion of the Seasons!",
+                "Goat-limbed, reveling, lover of frenzy, star-haunting, weaver of playful song, song of cosmic harmony, you induce fantasies of dread into the minds of mortals, you delight in gushing springs, surrounded by goatherds and oxherds, you dance with the nymphs, you sharp-eyed hunter, lover of Echo.",
+                "Present in all growth, begetter of all, many-named divinity, light-bringing lord of the cosmos, fructifying Paian, cave-loving and wrathful, veritable Zeus with horns, the earth's endless plain is supported by you, and the deep-flowing water of the weariless sea yields to you, Okeanos who girds the earth with his eddying stream gives way to you, and so does the air we breathe, the air that kindles all life, and above us the sublime eye of weightless fire; at your behest all these are kept wide apart.",
+                "Your providence alters the natures of all, on the boundless earth you offer nourishment to mankind.",
+                "Come, frenzy-loving, spirit-possessed, come to these sacred libations, come and bring my life to a good end.",
+                "Send your madness, O Pan, to the ends of the earth."
+            ]
+        },
+        {
+            "id": "orphic-12",
+            "title": "HYMN ΙΓ΄. TO HERAKLES",
+            "deities": [
+                "Heracles"
+            ],
+            "sentences": [
+                "Herakles, stout-hearted and mighty, powerful Titan, strong-handed, indomitable, doer of valiant deeds, shape-shifter, O gentle and endless father of time, ineffable, lord of all, many pray to you, all-conquering and mighty archer and seer, omnivorous begetter of all, peak of all, helper to all, for the sake of men you subdued and tamed savage races.",
+                "Peace was your desire; she brings dazzling honors and nurtures youths.",
+                "Self-grown, weariless, bravest child of the earth, O illustrious Paion, your primordial scales gleam.",
+                "Round your head dawn and dark night cling, and your twelve deeds of valor stretch from east to west.",
+                "Immortal, world-wise, boundless and irrepressible, come, O blessed one, come, O blessed one, bringing all charms against disease, with club in hand drive evil bane away, with your poisonous darts do ward off cruel death."
+            ]
+        },
+        {
+            "id": "orphic-13",
+            "title": "HYMN ΙΔ΄. TO KRONOS",
+            "deities": [
+                "Kronos"
+            ],
+            "sentences": [
+                "Everlasting father of blessed gods and men, resourceful, pure and mighty, O powerful Titan, you consume all things and replenish them, too.",
+                "Unbreakable is the hold you have on the boundless cosmos, O Kronos, begetter of time, Kronos of the shifting stories, child of Earth, child of starry Sky.",
+                "In you there is birth and decline, O revered and prudent lord of Rhea, you are the progenitor, you dwell in every part of the world.",
+                "I am a suppliant, hear my voice, O wily and brave one, and to a good life bring a blameless end."
+            ]
+        },
+        {
+            "id": "orphic-14",
+            "title": "HYMN ΙΕ΄. TO RHEA",
+            "deities": [
+                "Rhea"
+            ],
+            "sentences": [
+                "Mighty Rhea, daughter of many-faced Protogonos, your sacred chariot is drawn by bull-slayers, you dance to the sound of drums and cymbals, O frenzy-loving maiden, O mother of Zeus, aegis-bearing lord of Olympos.",
+                "Illustrious and honored, Kronos' blessed consort, you delight in the mountains and in the horrid shrieks of mortals.",
+                "Strong-spirited Rhea, queen of queens, lover of the battle din, liar, savior, redeemer, first by birth, mother of gods and of mortals, from you come the earth, and the wide sky above, and the sea and the winds.",
+                "Ethereal and restless, come, O blessed goddess, O gentle-minded savior, come, bring peace and wealth and abundance of possessions, and do send death and the filth of pollution to the ends of the earth."
+            ]
+        },
+        {
+            "id": "orphic-15",
+            "title": "HYMN ΙϚ΄. TO ZEUS",
+            "deities": [
+                "Zeus"
+            ],
+            "sentences": [
+                "Much-honored Zeus, great god, indestructible Zeus, we lay before you in prayer redeeming testimony.",
+                "O king, you have brought to light divine works, earth, goddess and mother, the hills swept by the shrill winds, the sea and the host of the stars, marshaled by the sky.",
+                "Kronian Zeus, strong-spirited god, the thunderbolt is your scepter, father of all, beginning and end of all, earth-shaker, increaser and purifier, all-shaker, god of thunder and lightning, Zeus the sower.",
+                "Hear me, god of many faces, grant me unblemished health, please grant me divine peace and riches, please grant me glory without blame."
+            ]
+        },
+        {
+            "id": "orphic-16",
+            "title": "HYMN ΙΖ΄. TO HERA",
+            "deities": [
+                "Hera"
+            ],
+            "sentences": [
+                "You lodge yourself in dark hollows, and your form is airy, O Hera, blessed queen of all, consort of Zeus.",
+                "The soft breezes you send to mortals nourish the soul, O mother of rains, mother of the winds, you give birth to all.",
+                "Life does not exist without you, growth does not exist without you.",
+                "You are in everything, even in the air we venerate, you are queen, and you are mistress.",
+                "You toss and turn when the rushing wind tosses and turns.",
+                "O blessed goddess, many-named queen of all, may you come with kindness on your joyous face."
+            ]
+        },
+        {
+            "id": "orphic-17",
+            "title": "HYMN ΙΗ΄. TO POSEIDON",
+            "deities": [
+                "Poseidon"
+            ],
+            "sentences": [
+                "Hearken, dark-maned Poseidon, holder of the earth, horse god, you hold the bronze trident in your hand, you dwell in the foundations of the full-bosomed sea.",
+                "Shaker of the earth, deep-roaring ruler of the waters, the waves are your blossoms, O gracious one, as you urge horses and chariots on, rushing on the sea, splashing through the rippling brine.",
+                "The unfathomable sea fell to your lot, the third portion.",
+                "Waves and their wild dwellers please you, O spirit of the deep.",
+                "May you save the foundations of the earth and ships moving at full tilt, bringing peace, health, and blameless prosperity."
+            ]
+        },
+        {
+            "id": "orphic-18",
+            "title": "HYMN ΙΘ΄. TO PLOUTON",
+            "deities": [
+                "Plouton"
+            ],
+            "sentences": [
+                "You dwell below the earth, O strong-spirited one, a meadow in Tartaros, thick-shaded and dark.",
+                "Sceptered Chthonic Zeus, please accept this sacrifice, O Plouton, holder of the keys to the whole earth.",
+                "To mankind you give the wealth of the year's fruits, yours is the third portion, earth, queen of all, seat of the gods, mighty lap of mortals.",
+                "Your throne rests on a dark realm, the realm of distant, of untiring, of windless, and of impassive Hades; it does rest on gloomy Acheron, the river who girds the roots of the earth.",
+                "All-receiver, master of death, master of mortals, host of many, Euboulos, you once took as your bride pure Demeter's daughter: you tore her away from the meadow, and through the sea you carried her to an Attic cave upon your steeds— it was the district of Eleusis, it was the district of Eleusis, where the gates to Hades are.",
+                "You alone were born to judge deeds obscure and conspicuous.",
+                "Holiest and illustrious ruler of all, frenzied god, you delight in the respect and in the reverence of your worshippers.",
+                "I summon you, come with favor, come with joy to the initiates."
+            ]
+        },
+        {
+            "id": "orphic-19",
+            "title": "HYMN Κ΄. TO ZEUS THE THUNDERBOLT",
+            "deities": [
+                "Zeus"
+            ],
+            "sentences": [
+                "Father Zeus, sublime is the course of the blazing cosmos you drive on, ethereal and lofty the flash of your lightning as you shake the seat of the gods with a god's thunderbolt.",
+                "The fire of your lightning emblazons the rain clouds, you bring storms and hurricanes, you bring mighty gales, you hurl roaring thunder, a shower of arrows.",
+                "Horrific might and strength sets all aflame, dreadful missile makes hearts pound and hair bristle.",
+                "Holy and invincible, it comes with a sudden crash, an endless spiral of noise, omnivorous in its drive, unbreakable and threatening, ineluctable, too, the gale's sharp and smoke-filled shafts swoop down with a flash dreaded by land and sea.",
+                "Wild beasts cringe when they hear the noise, faces reflect the brilliance of thunder roaring in the celestial hollows.",
+                "You tear the robe that cloaks heaven, you hurl the fiery thunderbolt.",
+                "O blessed one..., the anger of the sea waves, the anger of the mountain peaks— we all know your power.",
+                "Enjoy this libation and give all things pleasing to the heart: a life of prosperity, queenly health, divine peace that nurtures youths, crowned with honors, a life ever blooming with cheerful thoughts."
+            ]
+        },
+        {
+            "id": "orphic-20",
+            "title": "HYMN ΚΑ΄. TO ASTRAPAIOS ZEUS",
+            "deities": [
+                "Zeus"
+            ],
+            "sentences": [
+                "I call upon great and pure, upon resounding and illustrious, upon ethereal and blazing Zeus, whose racing fire shines through the air.",
+                "Your light flashes through the clouds with an ear-splitting clap.",
+                "O horrid, O wrathful and pure, O invincible god, lord of lightning, I call upon you, O begetter of all, O great king, to be kind and to bring a sweet end to my life."
+            ]
+        },
+        {
+            "id": "orphic-21",
+            "title": "HYMN ΚΒ΄. TO THE CLOUDS",
+            "deities": [
+                "Clouds"
+            ],
+            "sentences": [
+                "Airy Clouds, you nourish fruits and rove the sky, you bring rain as you are driven everywhere by the wind.",
+                "Filled with blazing thunder, filled with water, you resound with awesome crashes in the air-filled vault of heaven as you are repelled by the attack of raging winds.",
+                "To you I offer my prayers: your dewy cloaks, blown by fair breezes, send fruit-nourishing rains to mother Earth."
+            ]
+        },
+        {
+            "id": "orphic-22",
+            "title": "HYMN ΚΓ΄. TO THE SEA",
+            "deities": [
+                "Sea"
+            ],
+            "sentences": [
+                "I call upon gray-eyed Tethys, bride of Okeanos, dark-veiled queen whose waves dance as they are blown onto the land by the sweet breezes.",
+                "You break your tall waves upon the rocky beaches, you are calmed by races that are gentle and smooth, you delight in ships, your waters feed wild beasts.",
+                "Mother of Kypris, mother of dark clouds, mother of every spring round which nymphs swarm, hear me, O holy one, please help, send a fair tail wind to ships, O blessed one."
+            ]
+        },
+        {
+            "id": "orphic-23",
+            "title": "HYMN ΚΔ΄. TO NEREUS",
+            "deities": [
+                "Nereus"
+            ],
+            "sentences": [
+                "The sea's foundations are your realm, the abode of blue-black darkness, you exult in the beauty of your fifty daughters as they dance amid the waves.",
+                "O Nereus, god of great renown, O foundation of the sea, O end of the earth, O beginning of all, Demeter's sacred throne trembles when you hold prisoner the gusty winds driven to your gloomy depths.",
+                "O blessed one, ward off earthquakes and send to the initiates peace and prosperity."
+            ]
+        },
+        {
+            "id": "orphic-24",
+            "title": "HYMN ΚΕ΄. TO THE NEREIDS",
+            "deities": [
+                "Nereids"
+            ],
+            "sentences": [
+                "O Nereus, god of great renown, O foundation of the sea, O end of the earth, O beginning of all, Demeter's sacred throne trembles when you hold prisoner the gusty winds driven to your gloomy depths.",
+                "O blessed one, ward off earthquakes and send to the initiates peace and prosperity and gentle-handed health."
+            ]
+        },
+        {
+            "id": "orphic-25",
+            "title": "HYMN ΚϚ΄. TO PROTEUS",
+            "deities": [
+                "Proteus"
+            ],
+            "sentences": [
+                "I call upon Proteus, key-holding master of the sea, first-born, who showed the beginnings of all nature, changing matter into a great variety of forms.",
+                "Honored by all, he is wise, and he knows what is now, what was before, and what will be in the future.",
+                "He has all at his disposal, transformed far beyond all other immortals who dwell on snowy Olympos and fly through the air and over land and sea, for Physis was the first to place everything in Proteus.",
+                "Father, attended by holy providence, visit the mystic initiates, and bring a good end to a life of industry and prosperity."
+            ]
+        },
+        {
+            "id": "orphic-26",
+            "title": "HYMN ΚΖ΄. TO EARTH",
+            "deities": [
+                "Earth"
+            ],
+            "sentences": [
+                "Divine Earth, mother of men and of the blessed gods, you nourish all, you give all, you bring all to fruition, you destroy all.",
+                "When the season is fair, you teem with fruit and growing blossoms, O multi-formed maiden, seat of the immortal cosmos, in the pains of labor you bring forth all fruit.",
+                "Eternal, revered, deep-bosomed and blessed, your joy is the sweet breath of grass, O goddess bedecked with flowers, yours is the joy of the rain, the intricate realm of the stars revolves in endless and awesome flow.",
+                "O blessed goddess, may you multiply the delicious fruits, and may you and the beautiful Seasons grant me kindly favor."
+            ]
+        },
+        {
+            "id": "orphic-27",
+            "title": "HYMN ΚΗ΄. TO THE MOTHER OF THE GODS",
+            "deities": [
+                "Mother of the Gods"
+            ],
+            "sentences": [
+                "Divine are your honors, O mother of the gods and nurturer of all.",
+                "Yoke your swift chariot drawn by bull-slaying lions, and join our prayers, O mighty goddess.",
+                "You bring things to pass, O many-named and revered one, you are queen of the sky; in the cosmos yours is the throne, the throne in the middle, because the earth is yours, and you give gentle nourishment to mortals.",
+                "Of you were born gods and men, you hold sway over the rivers and over all the sea.",
+                "Hestia is one of your names, they call you giver of prosperity, because you bestow on men all manner of blessings.",
+                "Come to this rite, queen whom the drum delights, all-taming savior of Phrygia, consort of Kronos, honored child of Sky, frenzy-loving nurturer of life, joyously and graciously visit our deeds of piety."
+            ]
+        },
+        {
+            "id": "orphic-28",
+            "title": "HYMN ΚΘ΄. TO HERMES",
+            "deities": [
+                "Hermes"
+            ],
+            "sentences": [
+                "Hear me, Hermes, messenger of Zeus, son of Maia, almighty in heart, lord of the deceased, judge of contests, gentle and clever, O Argeiphontes, you are the guide of the flying sandals, a man-loving prophet to mortals.",
+                "A vigorous god, you delight in exercise and in deceit.",
+                "Interpreter of all you are, and a profiteer who frees us of cares, who holds in his hands the blameless tool of peace.",
+                "Lord of Korykos, blessed, helpful, and skilled in words, you assist in work and you are a friend of mortals in need.",
+                "You wield the dreaded, the respected weapon of speech.",
+                "Hear my prayer and grant a good end to a life of industry, gracious talk, and mindfulness."
+            ]
+        },
+        {
+            "id": "orphic-29",
+            "title": "HYMN Λ΄. TO PERSEPHONE",
+            "deities": [
+                "Persephone"
+            ],
+            "sentences": [
+                "Persephone, blessed daughter of great Zeus, sole offspring of Demeter, come and accept this gracious sacrifice.",
+                "Much-honored spouse of Plouton, discreet and life-giving, you command the gates of Hades in the bowels of the earth, lovely-tressed Praxidike, pure bloom of Deo, mother of the Erinyes, queen of the nether world, secretly sired by Zeus in clandestine union.",
+                "Mother of loud-roaring, many-shaped Eubouleus, radiant and luminous, playmate of the Seasons, revered and almighty, maiden rich in fruits, brilliant and horned, only-beloved of mortals, in spring you take your joy in the meadow of breezes, you show your holy figure in branches teeming with grass-green fruits, in autumn you were made a kidnapper's bride.",
+                "You alone are life and death to toiling mortals, O Persephone, you nourish all, always, and kill them, too.",
+                "Hearken, O blessed goddess, send forth the fruits of the earth as you blossom in peace, and in gentle-handed health bring a blessed life and a splendid old age to him who is sailing to your realm, O queen, and to mighty Plouton’s kingdom."
+            ]
+        },
+        {
+            "id": "orphic-30",
+            "title": "HYMN ΛΑ΄. TO DIONYSOS",
+            "deities": [
+                "Dionysus"
+            ],
+            "sentences": [
+                "I call upon loud-roaring, reveling Dionysos, primeval, two-natured, thrice-born Bacchic lord, savage, ineffable, secretive, two-horned and two-shaped, ivy-covered, bull-faced, warlike, howling, pure.",
+                "You take raw flesh in triennial feasts, wrapped in foliage, decked with grape clusters, resourceful Eubouleus, immortal god sired by Zeus when he mated with Persephone in unspeakable union.",
+                "Hearken to my voice, O blessed one, you and your fair-girdled nurses, breathe on me in a spirit of perfect kindness."
+            ]
+        },
+        {
+            "id": "orphic-31",
+            "title": "HYMN ΛΒ΄. HYMN TO THE KOURETES",
+            "deities": [
+                "Kouretes"
+            ],
+            "sentences": [
+                "Leaping Kouretes, stepping to the sound of arms, howling mountain men whose feet pound the ground, discordant is the lyre you strike as you pace, light of foot, O renowned marshals, O arm-carrying guards, priests in the train of a mother struck with mountain frenzy.",
+                "Kindly visit the people who praise you with words, with joyous heart be gracious to the oxherd."
+            ]
+        },
+        {
+            "id": "orphic-32",
+            "title": "HYMN ΛΓ΄. TO ATHENE",
+            "deities": [
+                "Athena"
+            ],
+            "sentences": [
+                "Reverend Pallas, great Zeus bore you by himself, noble and blessed goddess, brave in the din of war.",
+                "Renowned and cave-haunting, spoken of and then ineffable, your domain is on wind-swept hilltops, shaded mountains, dells that charm your heart.",
+                "Arms please you, and you strike men's souls with frenzy, O vigorous maiden, O horrid-tempered one, slayer of Gorgo, O blessed mother of the arts, you shun the bed of love, you bring madness to the wicked, you bring prudence to the virtuous, O impetuous one.",
+                "Male and female, shrewd begetter of war, she-dragon of the many shapes, frenzy-loving, illustrious, destroyer of the Phlegraian Giants, driver of horses, victorious Tritogeneia, O goddess, you free us from suffering, day and night, ever into the small hours.",
+                "Hear my prayer and give me a full measure of peace, of riches, and of health, accompanied by happy seasons, O gray-eyed and inventive queen, to whom many offer their prayers."
+            ]
+        },
+        {
+            "id": "orphic-33",
+            "title": "HYMN ΛΔ΄. TO NIKE",
+            "deities": [
+                "Nike"
+            ],
+            "sentences": [
+                "I call upon mighty Nike, beloved of mortals; she alone frees man from the eagerness for contest, from dissent, when men face each other in battle.",
+                "In war you are the judge of deeds deserving prizes; sweet is the boast you grant after the onslaught.",
+                "Nike, mistress of all, on your good name depends noble glory, glory that comes from the strife and teems with festivities.",
+                "O blessed and beloved one, come with joy in your eyes, come for works of renown, bring me noble glory."
+            ]
+        },
+        {
+            "id": "orphic-34",
+            "title": "HYMN ΛΕ΄. TO APOLLON",
+            "deities": [
+                "Apollo"
+            ],
+            "sentences": [
+                "Come, O blessed Paian, O slayer of Tityos, O Phoibos, O Lykoreus, giver of riches, illustrious dweller of Memphis, O god to whom we cry “Ië,” O Titan and Pythian god, yours are the golden lyre, the seeds, and the plows.",
+                "Grynean, Sminthian, slayer of Python, Delphic diviner, wild, light-bringing, lovable god you are, O glorious youth.",
+                "You shoot your arrows from afar, you lead the Muses into dance, O holy one, you are Bacchos, Didymeus, Loxias, too, lord of Delos, you are the eye that sees all, you bring light to mortals, your hair is golden, your oracular utterance is clear.",
+                "Hear me with kindly heart as I pray for people.",
+                "You gaze upon all the ethereal vastness, upon the rich earth you look through the twilight.",
+                "In the quiet darkness of a night lit with stars you see earth's roots below, you hold the bounds of the whole world; the beginning and the end to come are yours.",
+                "You make everything bloom with your versatile lyre, you harmonize the poles, now reaching the highest pitch, now the lowest, now again with a Doric mode, harmoniously balancing the poles, you keep the living races distinct.",
+                "You have infused harmony into the lot of all men, giving them an equal measure of winter and summer: the lowest notes you strike in the winter, the highest notes you make distinct in the summer, your mode is Doric for spring's lovely and blooming season.",
+                "This is why mortals call you lord and Pan, the two-horned god who sends the whistling winds; it is for this you have the master seal of the entire cosmos.",
+                "O blessed one, hear the suppliant voice of the initiates and save them."
+            ]
+        },
+        {
+            "id": "orphic-35",
+            "title": "HYMN ΛϚ΄. TO LETO",
+            "deities": [
+                "Leto"
+            ],
+            "sentences": [
+                "Dark-veiled Leto, revered goddess, mother of twins, great-souled daughter of Koios, queen to whom many pray, to your lot fell the birth pains for Zeus' fair children, you bore Phoibos and arrow-pouring Artemis, her on Ortygia, him on rocky Delos.",
+                "Hear, lady goddess, come with favor in your heart to bring a sweet end to this all-holy rite."
+            ]
+        },
+        {
+            "id": "orphic-36",
+            "title": "HYMN ΛΖ΄. TO ARTEMIS",
+            "deities": [
+                "Artemis"
+            ],
+            "sentences": [
+                "Hear me, O queen, Zeus' daughter of many names, Titanic and Bacchic, revered, renowned archer, torch-bearing goddess bringing light to all, Diktynna, helper at childbirth, you help women in labor, though you know not what labor is.",
+                "O frenzy-loving huntress, you loosen girdles and drive distress away; swift arrow-pouring goddess of the outdoors, you roam in the night.",
+                "Fame-bringing and affable, redeeming and masculine in appearance, Orthia, goddess of swift birth, you are a nurturer of mortal youths, immortal and yet of this earth, you slay wild beasts, O blessed one, your realm is in the mountain forest, you hunt deer.",
+                "O revered and mighty queen of all, fair-blossomed, eternal, sylvan, dog-loving, many-shaped lady of Kydonia, come, dear goddess, as savior to all the initiates, accessible to all, bringing forth the beautiful fruit of the earth, lovely peace, and fair-tressed health.",
+                "May you dispatch diseases and pain to the peaks of the mountains."
+            ]
+        },
+        {
+            "id": "orphic-37",
+            "title": "HYMN ΛΗ΄. TO THE TITANS",
+            "deities": [
+                "Titans"
+            ],
+            "sentences": [
+                "Titans, glorious children of Sky and Earth, ancestors of our fathers, you dwell down below in Tartarean homes, in the bowels of the earth.",
+                "From you are descended all toiling mortals, the brood of the sea and of the land, then the brood of the birds, of all generations of the world born of you.",
+                "I call upon you to banish harsh anger if some earthly forefather of mine stormed your homes."
+            ]
+        },
+        {
+            "id": "orphic-38",
+            "title": "HYMN ΛΘ΄. TO THE KOURETES",
+            "deities": [
+                "Kouretes"
+            ],
+            "sentences": [
+                "Bronze-beating Kouretes, the weapons of Ares are yours.",
+                "Dwellers of heaven, of earth and sea, thrice-blessed ones, life-giving breezes, glorious saviors of the world, you dwell in the sacred land of Samothrace, you ward off dangers for mortals roaming the seas, you were first to set up sacred rites for mortals.",
+                "O immortal Kouretes, the weapons of Ares are yours.",
+                "You rule Okeanos, you rule the sea and the forests, the earth resounds with the pounding of your nimble feet, and with the glories in your gleaming armor.",
+                "All wild beasts cringe at your onrush, the din and the shouts rise heavenward, the dust from your feet, as you march briskly, reaches the clouds; every flower is in bloom.",
+                "Immortal gods, you nurture, you also destroy when you fret angrily over mankind, you ruin livelihoods and possessions, you ruin men themselves ... the great deep-eddying sea groans, lofty trees are uprooted, they fall upon the earth, the noisy tremor of the leaves echoes in the sky.",
+                "Kouretes, Korybantes, mighty lords, masters of Samothrace, true Dioskouroi, ever-blowing breezes, soul-nurturing and airy, you're called celestial twins on Olympos.",
+                "Gentle saviors, you bring fair breezes and clear weather, nurturers of seasons and of fruits, breathe upon us, O lords."
+            ]
+        },
+        {
+            "id": "orphic-39",
+            "title": "HYMN Μ΄. TO KORYBAS",
+            "deities": [
+                "Korybas"
+            ],
+            "sentences": [
+                "I call upon the greatest king of eternal earth, blessed Korybas, the warlike, the one of the forbidding countenance, the nocturnal Koures who saves us from dreadful fear.",
+                "Korybas, you save us from fantasies as you wander in deserted places.",
+                "Many are the shapes, O lord, of your twofold divinity; your blood is tainted with the murder of twin brothers.",
+                "You follow Deo's thinking, you changed your holy form into the shape of a savage, dark dragon.",
+                "O blessed one, hear our voices, banish harsh anger, free from fantasies souls stunned by compulsions."
+            ]
+        },
+        {
+            "id": "orphic-40",
+            "title": "HYMN ΜΑ΄. TO ELEUSINIAN DEMETER",
+            "deities": [
+                "Demeter"
+            ],
+            "sentences": [
+                "Deo, divine mother of all, goddess of many names, revered Demeter, nurturer of youths, giver of prosperity and wealth, you nourish the ears of corn, O giver of all, you delight in peace and in toilsome labor.",
+                "Present at sowing, heaping, and threshing, O spirit of the unripe fruit, you dwell in the sacred valley of Eleusis.",
+                "Charming and lovely, you give sustenance to all mortals; you were the first to yoke the ploughing ox, the first to send up from below a rich, a lovely harvest for mortals.",
+                "You are growth and blooming, O illustrious companion of Bromios, torch-bearing and pure, you delight in the summer's yield.",
+                "From beneath the earth you appear, gentle to all, O holy and youth-nurturing lover of children and of fair offspring.",
+                "You yoke your chariot to bridled dragons, round your throne you whirl and howl in ecstasy.",
+                "You are an only daughter, but you have many children and many powers over mortals; the variety of flowers reflect your myriad faces and your sacred blossoms.",
+                "Come, O blessed and pure one, come with the fruits of summer, bring peace, bring the welcome rule of law, bring riches, too, and prosperity, and bring health that governs all."
+            ]
+        },
+        {
+            "id": "orphic-41",
+            "title": "HYMN ΜΒ΄. TO MOTHER ANTAIA",
+            "deities": [
+                "Antaia"
+            ],
+            "sentences": [
+                "Queen Antaia, goddess and many-named mother of immortal gods and of mortal men, weary from searching, weary from wandering far and wide, you once ended your fast in the valley of Eleusis, you came to Hades for noble Persephone.",
+                "Your guide was the innocent child of Dysaules, who brought the news of pure Chthonic Zeus' holy union; you bore divine Euboulos by yielding to human need.",
+                "O goddess, O queen to whom many pray, I beseech you to come graciously to your pious initiate."
+            ]
+        },
+        {
+            "id": "orphic-42",
+            "title": "HYMN ΜΓ΄. TO MISE",
+            "deities": [
+                "Mise"
+            ],
+            "sentences": [
+                "I call upon law-giving Dionysos, who carried the fennel stalk, unforgettable and many-named seed of Eubouleus, I call upon the sacred and holy, upon the ineffable queen Mise, whose twofold nature is male and female.",
+                "Redeeming Iacchos, lord, I summon you, whether you delight in Eleusis in your fragrant temple, or with Mother you partake of mystic rites in Phrygia, or you rejoice in Kypros with fair-wreathed Kythereia, or yet you exult in fields wheat-bearing and hallowed along Egypt's river with your divine mother, the revered and black-robed Isis, as your train of nurses tends to your needs.",
+                "Lady, kindheartedly come to the noble contests of our initiation."
+            ]
+        },
+        {
+            "id": "orphic-43",
+            "title": "HYMN ΜΔ΄. TO THE SEASONS",
+            "deities": [
+                "Seasons"
+            ],
+            "sentences": [
+                "Seasons, daughters of Themis, daughters of Lord Zeus, Eunomia and Dike and thrice-blessed Eirene, pure spirits of spring, of blossoming meadows, you are found in every color, in all scents wafted by the breezes.",
+                "Ever-blooming, revolving, and sweet-faced, O Seasons, you cloak yourselves with the dew of luxuriant flowers.",
+                "At play you are companions of holy Persephone, when the Fates and the Graces in circling dances come forth to the light, pleasing Zeus and their mother, giver of fruits.",
+                "Come to the new initiates and their holy and reverent rites, bring perfect seasons for the growth of goodly fruit."
+            ]
+        },
+        {
+            "id": "orphic-44",
+            "title": "HYMN ΜΕ΄. TO SEMELE",
+            "deities": [
+                "Semele"
+            ],
+            "sentences": [
+                "I call upon the daughter of Kadmos, queen of all, fair Semele of the lovely tresses, of the full bosom, mother of thyrsos-bearing, joyous Dionysos.",
+                "She was driven to great pain by the blazing thunderbolt, which, through the counsels of Kronian Zeus, the immortal god, burned her.",
+                "Noble Persephone granted her honors among mortal men, honors given every third year.",
+                "For all mortal men reenact your travail for your son Bacchos: the sacred ritual of the table, the ritual of the holy mysteries."
+            ]
+        },
+        {
+            "id": "orphic-45",
+            "title": "HYMN ΜϚ΄. HYMN TO DIONYSOS BASSAREUS AND TRIENNIAL",
+            "deities": [
+                "Dionysus"
+            ],
+            "sentences": [
+                "Come blessed Dionysos, bull-faced god conceived in fire, Bassareus and Bacchos, many-named master of all.",
+                "You delight in bloody swords, you delight in the holy Maenads, as you howl throughout Olympos, all-roaring and frenzied Bacchos.",
+                "Armed with the thyrsos, wrathful in the extreme, you are honored by all gods and all men who dwell upon the earth.",
+                "Come, blessed and leaping god, bring abundant joy to all."
+            ]
+        },
+        {
+            "id": "orphic-46",
+            "title": "HYMN ΜΖ΄. TO LIKNITES",
+            "deities": [
+                "Liknites"
+            ],
+            "sentences": [
+                "I summon to these prayers Dionysos Liknites, born at Nysa, blossoming, beloved and kindly Bacchos, nursling of the Nymphs and of fair-wreathed Aphrodite.",
+                "The forests once felt your feet quiver in the dance as frenzy drove you and the graceful Nymphs on and on.",
+                "The counsels of Zeus brought you to noble Persephone, who reared you to be loved by the deathless gods.",
+                "Kindheartedly come, O blessed one, accept the gift of this sacrifice."
+            ]
+        },
+        {
+            "id": "orphic-47",
+            "title": "HYMN ΜΗ΄. TO PERIKIONIOS",
+            "deities": [
+                "Perikionios"
+            ],
+            "sentences": [
+                "I call upon Bacchos Perikionios, giver of wine; he enveloped all of Kadmos' house, with his might he harnessed, he calmed the heaving earth, when the blazing thunderbolt, when the raging gale stirred all the land, as everyone's bonds sprang loose.",
+                "Blessed reveler, come with joyful heart."
+            ]
+        },
+        {
+            "id": "orphic-48",
+            "title": "HYMN ΜΘ΄. TO SABAZIOS",
+            "deities": [
+                "Sabazios"
+            ],
+            "sentences": [
+                "Hear me, father Sabazios, son of Kronos, illustrious god, you sewed into your thigh Bacchic Dionysos, the roaring Eiraphiotes, that he might come whole to noble Tmolos by the side of fair-cheeked Hipta.",
+                "O blessed ruler of Phrygia, supreme king of all, come kindheartedly to the aid of the initiates."
+            ]
+        },
+        {
+            "id": "orphic-49",
+            "title": "HYMN Ν΄. TO HIPTA",
+            "deities": [
+                "Hipta"
+            ],
+            "sentences": [
+                "I call upon Hipta, nurse of Bacchos, maiden possessed, in mystic rites she takes part, she exults in the worship of pure Sabos and in the dances of roaring Iacchos.",
+                "O queen and chthonic mother, hear my prayer, whether you are on Ida, Phrygia's sacred mountain, or you take your pleasure on Tmolos, fair seat of the Lydians, come to these rites with joy on your holy face."
+            ]
+        },
+        {
+            "id": "orphic-50",
+            "title": "HYMN ΝΑ΄. TO LYSIOS LENAIOS",
+            "deities": [
+                "Lysios Lenaios"
+            ],
+            "sentences": [
+                "Hear, O blessed son of Zeus and of two mothers, Bacchos of the vintage, unforgettable seed, many-named and redeeming daimōn, holy offspring of the gods, reveling Bacchos, born of secrecy, plump giver of many joys, of fruits which grow well.",
+                "Mighty and many-shaped god, you burst forth from the earth to reach the wine press, to become a healer for men's pain, O sacred blossom!",
+                "A sorrow-hating joy to mortals, O lovely-haired..., a redeemer and a reveler you are, your thyrsos drives to frenzy, you are kind-hearted to all gods and mortals who see your light.",
+                "I call upon you now, come, O sweet bringer of fruit."
+            ]
+        },
+        {
+            "id": "orphic-51",
+            "title": "HYMN ΝΒ΄. TO THE NYMPHS",
+            "deities": [
+                "Nymphs"
+            ],
+            "sentences": [
+                "O Nymphs, daughters of great-hearted Okeanos, you dwell inside the earth's damp caves; you are as secret as your paths, O joyous, O chthonic nurses of Bacchos.",
+                "You nurture fruits, you haunt meadows, O sprightly and pure travelers of the winding roads, who delight in caves and grottos.",
+                "Swift, light-footed, and clothed in dew, you frequent springs, visible and invisible, in ravines and among flowers you shout and frisk with Pan upon mountainsides, gliding down on rocks, you hum with clear voice.",
+                "O mountain-haunting maidens of the fields, of gushing springs and of woodlands, sweet-smelling virgins, clothed in white, fresh as the breeze, herds of goats, pastures, splendid fruit, you protect; wild animals love you.",
+                "Though you are tender, cold delights you; you feed many, you help them grow, Hamadryad maidens, playful, water-loving.",
+                "Spring is your joy, O Nysian and frenzied, O healing ones, in the company of Bacchos and Deo, you bring grace to mortals.",
+                "Come to this blessed sacrifice with joyful heart, pour streams of pure rain during the grain-giving seasons."
+            ]
+        },
+        {
+            "id": "orphic-52",
+            "title": "HYMN ΝΓ΄. TO THE GOD OF TRIENNIAL FEASTS",
+            "deities": [
+                "Dionysus"
+            ],
+            "sentences": [
+                "I call upon you, blessed, many-named, frenzied Bacchos, bull-horned, Nysian, Lysios, Lenaios, conceived in fire.",
+                "Nourished in the thigh, Liknites, you lead torch-lit processions, you lead them in the night, O filleted, O thyrsos-shaking Eubouleus.",
+                "Your nature three-fold, your rites ineffable, O secret offspring of Zeus, primeval, Erikepaios, father and son of the gods, you take raw flesh, and sceptered you lead us into the madness of revel and dance, into the frenzy of triennial feasts that bestow calm on us.",
+                "You burst forth from the earth in a blaze..., O son of two mothers, horned and clad in fawn skin, you roam the mountains, O lord worshipped in annual feasts.",
+                "Paian of the golden spear, nursling, decked with grapes, Bassaros, exulting in ivy, followed by many maidens..., joyous and all-abounding, come, O blessed one, to the initiates."
+            ]
+        },
+        {
+            "id": "orphic-53",
+            "title": "HYMN ΝΔ΄. TO THE GOD OF ANNUAL FEASTS",
+            "deities": [
+                "Dionysus"
+            ],
+            "sentences": [
+                "I call upon Bacchos, the god we worship annually, chthonic Dionysos, together with the fair-tressed Nymphs he is roused.",
+                "In the sacred halls of Persephone he slumbers and puts to sleep pure Bacchic time, every third year.",
+                "When he himself stirs up the triennial revel again, he sings a hymn together with his fair-girdled nurses.",
+                "As the seasons revolve, he puts to sleep and wakes up the years.",
+                "O blessed and fruit-giving Bacchos, O horned spirit of the unripe fruit, come to this most sacred rite with a glow of joy on your face, come teeming with fruit that is holy and perfect."
+            ]
+        },
+        {
+            "id": "orphic-54",
+            "title": "HYMN ΝΕ΄. TO SILENOS SATYROS AND THE BACCHAE",
+            "deities": [
+                "Silenos Satyros",
+                "Bacchae"
+            ],
+            "sentences": [
+                "Hear me, foster father of Bacchos, father and nurturer, best of the Silenoi, honored by all the gods, honored by mortal men in the same triennial feasts.",
+                "Pure and prized marshal of the pastoral band, wakeful reveler and companion of the fair-girt nurses, leader of the ivy-crowned Naiads and of the Bacchantes, take all the Satyrs, half-men, half-beast, come howling to the Bacchic lord.",
+                "The Bacchantes escort the holy Lenaian procession in sacred litanies revealing torch-lit rites, shouting, thyrsos-loving, finding calm in the revels."
+            ]
+        },
+        {
+            "id": "orphic-55",
+            "title": "HYMN ΝϚ΄. TO APHRODITE",
+            "deities": [
+                "Aphrodite"
+            ],
+            "sentences": [
+                "Heavenly, smiling Aphrodite, praised in many hymns, sea-born revered goddess of generation, you like the night-long revel, you couple lovers at night, O scheming mother of Necessity.",
+                "Everything comes from you: you have yoked the world, you control all three realms, you give birth to all, to everything in heaven, to everything upon the fruitful earth, to everything in the depths of the sea, O venerable companion of Bacchos.",
+                "You delight in festivities, O bride-like mother of the Erotes, O Persuasion, whose joy is in the bed of love, secretive giver of grace, visible and invisible, lovely-tressed daughter of a noble father, bridal feast companion of the gods, sceptered, she-wolf, beloved and man-loving, giver of birth and life.",
+                "Your maddening love-charms yoke mortals, they yoke the many races of beasts to unbridled passion.",
+                "Come, O goddess born in Kypros: you may be on Olympos, O queen, exulting in the beauty of your face, you may be in Syria, country of fine frankincense, you may be driving your golden chariot in the plain, you may lord it over Egypt's fertile river bed.",
+                "Come, whether you ride your swan-drawn chariot over the sea's billows, joining the creatures of the deep as they dance in circles, or on land in the company of the dark-faced nymphs as light-footed they frisk over the sandy beaches.",
+                "Come lady, even if you are in Kypros that cherishes you, where fair maidens and chaste brides throughout the year sing of you, O blessed one, as they sing of immortal, pure Adonis.",
+                "Come, O beautiful, O comely goddess, I summon you with holy words, I summon you with a pious soul."
+            ]
+        },
+        {
+            "id": "orphic-56",
+            "title": "HYMN ΝΖ΄. TO ADONIS",
+            "deities": [
+                "Adonis"
+            ],
+            "sentences": [
+                "Hear my prayer, O best, O many-named god.",
+                "Fine-haired, solitary, ever bursting with lovely song, Eubouleus, many-shaped, noble nurturer of all, male and female in one ... unwithering bloom, O Adonis, you vanish and then shine again in the fair season's turn.",
+                "Two-horned spirit of growth, much loved and wept for, fair one, joyful hunter, god of the luxuriant mane, desire is in you, O sweet blossom, O son of Aphrodite and Eros, born on the bed of lovely-tressed Persephone.",
+                "You dwell deep in murky Tartaros, then again toward Olympos you carry your blossoming body.",
+                "Come, O blessed one, bring earth's fruits to the initiates."
+            ]
+        },
+        {
+            "id": "orphic-57",
+            "title": "HYMN ΝΗ΄. TO CHTHONIC HERMES",
+            "deities": [
+                "Hermes"
+            ],
+            "sentences": [
+                "You dwell on the road all must take, the road of no return, by the Kokytos, you guide the souls of mortals to the nether gloom.",
+                "Hermes, offspring of Dionysos who revels in the dance, and of Aphrodite, the Paphian maiden of the fluttering eyelids, you haunt the sacred house of Persephone as guide throughout the earth of ill-fated souls, the souls you bring to their destined harbor when their time has come; you charm them with your sacred wand, you give them sleep from which you rouse them again.",
+                "It is to you indeed that Persephone gave the high office throughout broad Tartaros to lead the way for the everlasting souls of men.",
+                "O blessed one, grant a good end for the labors of the initiates."
+            ]
+        },
+        {
+            "id": "orphic-58",
+            "title": "HYMN ΝΘ΄. TO EROS",
+            "deities": [
+                "Eros"
+            ],
+            "sentences": [
+                "I call upon you, great, pure, lovely and sweet Eros, winged archer who runs swiftly on a path of fire, who plays together with gods and mortal men.",
+                "Inventive, two-natured, you are master of all: of the sky's ether, of the sea and the land, of the all-begetting winds, which for mortals the goddess of grass and grain nurtures, of all that lies in Tartaros, of all that lies in the roaring sea; you alone govern the course of all these.",
+                "O blessed one, come to the initiates with pure thought, banish from them vile impulses."
+            ]
+        },
+        {
+            "id": "orphic-59",
+            "title": "HYMN Ξ΄. TO THE FATES",
+            "deities": [
+                "Fates"
+            ],
+            "sentences": [
+                "Boundless Fates, dear children of dark Night, hear my prayer, O many-named dwellers on the lake of heaven, where the frozen water is broken by night's warmth in the shady hollow of a sleek cave; from there you fly to the vast earth, home of mortals, from there, clothed in purple, you march toward men, whose noble aims match their vain hopes, in the realm of the dead, where glory drives her chariot on all over the earthbeyond the ends of Justice, of anxious hope, of primeval law, of the measureless principle of order.",
+                "In life Fate alone watches; the other immortals who dwell on the peaks of snowy Olympos do not, except for Zeus' perfect eye.",
+                "Fate and Zeus' mind know all things for all time.",
+                "I pray to you to come, gently and kindly, Atropos, Lakhesis, Klotho, offspring of noble stock.",
+                "Airy, invisible, inexorable, ever indestructible, you give all and take all, being to men the same as necessity.",
+                "Fates, hear my prayers, receive my libations, come gently to the initiates, free them from pain."
+            ]
+        },
+        {
+            "id": "orphic-60",
+            "title": "HYMN ΞΑ΄. TO THE GRACES",
+            "deities": [
+                "Graces"
+            ],
+            "sentences": [
+                "Hear me, O illustrious, O renowned Graces, daughters of Zeus and full-bosomed Eunomia, Aglaia, Thalia, blessed Euphrosyne, lovely, wise, and pure mothers of joy, many-shaped, ever-blooming, beloved of mortals.",
+                "We pray that each in her turn with a flower's beauty on her face, enchanting, come, ever gentle, to the initiates to bring them prosperity."
+            ]
+        },
+        {
+            "id": "orphic-61",
+            "title": "HYMN ΞΒ΄. HYMN TO NEMESIS",
+            "deities": [
+                "Nemesis"
+            ],
+            "sentences": [
+                "Nemesis, I call upon you, O goddess, O great queen, your all-seeing eye looks upon the lives of man's many races.",
+                "Eternal and revered, you alone rejoice in the just, you change and vary, you shift your word.",
+                "All who bear the yoke of mortality fear you, you care about the thoughts of all; the arrogant soul, the reckless one, finds no escape.",
+                "You see all, you hear all, you arbitrate all.",
+                "O sublime deity, in whom dwells justice for men, come, blessed and pure one, ever helpful to the initiates, grant nobility of mind, put an end to repulsive thoughts, thoughts unholy, fickle and haughty."
+            ]
+        },
+        {
+            "id": "orphic-62",
+            "title": "HYMN ΞΓ΄. TO DIKE",
+            "deities": [
+                "Dike"
+            ],
+            "sentences": [
+                "I sing of the all-seeing eye of comely and radiant Dike, who is seated upon the sacred throne of lord Zeus.",
+                "From heaven you watch the lives of the many human races, you crush the unjust with just retribution, matching things lawless through the truth of equality.",
+                "For whenever base opinions prevail in difficult verdicts, because men wish more than is fair, you intervene and rouse justice against her foes.",
+                "An enemy of the unjust, you are a gentle goddess to the just.",
+                "O goddess, come evenhanded to thoughts that are noble, until that fated day descends on my life."
+            ]
+        },
+        {
+            "id": "orphic-63",
+            "title": "HYMN ΞΔ΄. TO JUSTICE",
+            "deities": [
+                "Justice"
+            ],
+            "sentences": [
+                "O paragon of justice to mortals, blessed and beloved one, you take equal pleasure in all men who are just.",
+                "Honored by all and blissful, O bold, O lofty Justice, you are pure of thought, you reward propriety, your own conscience is unbreakable for you break all who do not submit to your yoke, but ... in their greed upset the balance of your mighty scales.",
+                "Dauntless, charming, a lover of revel loved by all, you rejoice in peace, you strive for a life that is stable.",
+                "You loath unfairness, but fairness delights you; in you knowledge of virtue reaches its noble goal.",
+                "Hear, O goddess, rightly shatter wicked men, so that mortals who eat of the fruits of this earth and also all living creatures nursed in the bosom of Earth, the divine mother, nursed in the bosom of sea-dwelling Zeus, may follow a path both balanced and noble."
+            ]
+        },
+        {
+            "id": "orphic-64",
+            "title": "HYMN ΞΕ΄. HYMN TO NOMOS",
+            "deities": [
+                "Nomos"
+            ],
+            "sentences": [
+                "Upon the holy lord of men and gods I call, heavenly Nomos, who arranges the stars and sets a fair limit between the earth and the waters of the sea; it is his laws that ever preserve nature's balance, obedient and steady.",
+                "Journeying on the heavens, he brings the laws from above, with a roar he drives out malicious envy.",
+                "Nomos summons a good end to mortal life, he alone steers the course of everything that breathes, ever the steadfast companion of righteous thought.",
+                "Primeval and wise, in peace he shares the same house with all who abide by the law, bringing harsh vengeance upon the lawless.",
+                "O blessed bringer of prosperity, beloved of all and honored, with kindness of heart send forth memory of you, O mighty one."
+            ]
+        },
+        {
+            "id": "orphic-65",
+            "title": "HYMN ΞϚ΄. TO ARES",
+            "deities": [
+                "Ares"
+            ],
+            "sentences": [
+                "Unbreakable, strong-spirited, mighty, powerful daimon, delighting in arms, indomitable, man-slaying, wall-battering, lord Ares, yours is the din of arms.",
+                "Ever bespattered with blood, you find joy in killing in the fray of battle, O horrid one, your desire is for the rude clash of swords and spears.",
+                "Stay the rage, stay the strife, relax pain's grip on my soul, yield to the wish of Kypris, yield to the revels of Lyaios, exchange the might of arms for the works of Deo, yearning for youth-nurturing peace, bliss-bringing peace."
+            ]
+        },
+        {
+            "id": "orphic-66",
+            "title": "HYMN ΞΖ΄. TO HEPHAISTOS",
+            "deities": [
+                "Hephaestus"
+            ],
+            "sentences": [
+                "Hephaistos, powerful and strong-spirited, unwearying fire, shining in the gleam of flames, a god bringing light to mortals, mighty-handed, eternal artisan, worker, part of the cosmos, blameless element, most sublime, all-eating, all-taming, all-haunting— ether, sun, stars, moon, pure light: all these parts of Hephaistos are revealed to mortals.",
+                "All homes, all cities, all nations are yours.",
+                "O mighty giver of many blessings, you dwell in human bodies.",
+                "Hear me, lord, as I summon you to this holy libation, that you may always come gentle to joyful deeds, end the savage rage of untiring fire as nature itself burns in our own bodies."
+            ]
+        },
+        {
+            "id": "orphic-67",
+            "title": "HYMN ΞΗ΄. TO ASKLEPIOS",
+            "deities": [
+                "Asclepius"
+            ],
+            "sentences": [
+                "Asklepios, lord Paian, healer of all, you charm away the pains of men who suffer.",
+                "Come, mighty and soothing, bring health, put an end to sickness, then to the harsh fate of death.",
+                "O blessed spirit of joyful growth, O helper, you ward off evil, honored and mighty son of Phoibos Apollon.",
+                "Enemy of disease, consort of Hygieia the blameless, come as savior, O blessed one, bring life to a good end."
+            ]
+        },
+        {
+            "id": "orphic-68",
+            "title": "HYMN ΞΘ΄. TO HYGEIA",
+            "deities": [
+                "Hygeia"
+            ],
+            "sentences": [
+                "Charming queen of all, lovely and blooming, blessed Hygeia, mother of all, bringer of bliss, hear me.",
+                "Through you vanish the illnesses that afflict man, through you every house blossoms to the fullness of joy.",
+                "The arts thrive when the world desires you, O queen, loathed by Hades, the destroyer of souls.",
+                "Apart from you all is without profit for men: wealth, the sweet giver of abundance for those who feast, fails, and man never reaches the many pains of old age.",
+                "Goddess, come, ever-helpful to the initiates, keep away the evil distress of unbearable diseases."
+            ]
+        },
+        {
+            "id": "orphic-69",
+            "title": "HYMN Ο΄. TO THE ERINYES",
+            "deities": [
+                "Erinyes"
+            ],
+            "sentences": [
+                "Hear, Tisiphone, Allekto, noble Megaira, revered goddesses whose Bacchic cries resound.",
+                "Nocturnal and clandestine, you live deep down in the dank cave by the sacred water of the Styx.",
+                "Men's unholy designs do incur your anger; rabid and arrogant, you howl over Necessity's dictates, clothed in animal skins, you cause the deep pains of retribution.",
+                "O dreaded maidens of the thousand faces, your realm is in Hades, phantoms airy, invisible, swift as thought you are.",
+                "The speedy flames of the sun and the moon's glow cannot arouse life's delights without your aid, neither can the excellence of wisdom, as well as the virtue and the joy in bold enterprise and in the sleekness of fair youth.",
+                "Upon the races of all men that remain countless, you gaze as the eye of Dike, ever in charge of justice.",
+                "O snake-haired and many-shaped goddesses of fate, change my thoughts of life into gentle and soft ones."
+            ]
+        },
+        {
+            "id": "orphic-70",
+            "title": "HYMN ΟΑ΄. TO THE EUMENIDES",
+            "deities": [
+                "Eumenides"
+            ],
+            "sentences": [
+                "Hear me and be gracious, O renowned Eumenides, O pure daughters of the great Chthonic Zeus and of lovely Persephone, fair-tressed maiden.",
+                "Over the lives of impious mortals you keep a careful eye, in charge of Necessity, you punish the unjust.",
+                "Black-skinned queens, your awesome eyes flash forth flesh-eating darts of light.",
+                "Everlasting, repugnant, frightful, sovereign, paralyzing the limbs with madness, hideous, nocturnal, fateful, snake-haired, terrible maidens of the night, it is you I summon to bring me holiness of mind."
+            ]
+        },
+        {
+            "id": "orphic-71",
+            "title": "HYMN ΟΒ΄. TO MELINOE",
+            "deities": [
+                "Melinoe"
+            ],
+            "sentences": [
+                "I call upon Melinoe, saffron-cloaked nymph of the earth, whom revered Persephone bore by the mouth of the Kokytos river upon the sacred bed of Kronian Zeus.",
+                "In the guise of Plouton Zeus tricked Persephone and through wily plots bedded her; a two-bodied specter sprang forth from Persephone's fury.",
+                "This specter drives mortals to madness with her airy apparitions as she appears in weird shapes and strange forms, now plain to the eye, now shadowy, now shining in the darkness— all this in unnerving attacks in the gloom of night.",
+                "O goddess, O queen of those below, I beseech you to banish the soul's frenzy to the ends of the earth, show to the initiates a kindly and holy face."
+            ]
+        },
+        {
+            "id": "orphic-72",
+            "title": "HYMN ΟΓ΄. TO TYCHE",
+            "deities": [
+                "Tyche"
+            ],
+            "sentences": [
+                "I summon you here through prayer, Tyche, noble ruler, gentle goddess of the roads, for wealth and possessions, I summon you as Artemis the guide, renowned and sprung from the loins of Eubouleus, your wish is irresistible.",
+                "Funereal and delusive, you are the theme of men's songs.",
+                "In you lies the great variety of men's livelihood: to some you grant a wealth of blessings and possessions, to others you bring evil poverty if you harbor anger against them.",
+                "O goddess, I beseech you, come in kindness to my life, grant me happiness, grant me abundant wealth."
+            ]
+        },
+        {
+            "id": "orphic-73",
+            "title": "HYMN ΟΔ΄. TO DAIMON",
+            "deities": [
+                "Daimon"
+            ],
+            "sentences": [
+                "I call upon Daimon, the grand and the dreaded leader, gentle Zeus, who gives birth to all, who gives livelihood to mortals.",
+                "Great Zeus, wide roving, avenger, king of all, giver of wealth when you enter the house in the abundance of your powers, you refresh the life of mortals worn out with toil, you possess the keys to joy and sorrow as well.",
+                "So, O pure and blessed one, drive painful cares away, cares that dispatch ruin to all that live throughout the whole earth, and bring a glorious end to my life, a sweet and noble one."
+            ]
+        },
+        {
+            "id": "orphic-74",
+            "title": "HYMN ΟΕ΄. TO LEUKOTHEA",
+            "deities": [
+                "Leukothea"
+            ],
+            "sentences": [
+                "I call upon Leukothea, daughter of Kadmos, revered goddess, mighty nurturer of fair-wreathed Dionysos.",
+                "Hearken, O goddess, O mistress of the deep-bosomed sea, you delight in waves, you are the greatest savior to mortals, on you depends the unsteady heave of seafaring ships, you alone save men from wretched death at sea, men to whom you swiftly come as welcome savior.",
+                "O divine lady, come to the aid of well-benched ships, do kindly save them, bring upon the sea a fair tail wind to the initiates."
+            ]
+        },
+        {
+            "id": "orphic-75",
+            "title": "HYMN ΟϚ΄. TO PALAIMON",
+            "deities": [
+                "Palaimon"
+            ],
+            "sentences": [
+                "Comrade of joyous Dionysos in the revel of the dance, you dwell in the sea's pure, restless depths.",
+                "I call upon you, O Palaimon, to come to these sacred rites with kindness in your heart, with joy on your youthful face, come to save your initiates on land and on sea.",
+                "When storms come upon ships that ever rove the seas, you alone appear incarnate to save men, to stay the harsh anger over the briny swell."
+            ]
+        },
+        {
+            "id": "orphic-76",
+            "title": "HYMN ΟΖ΄. TO THE MUSES",
+            "deities": [
+                "Muses"
+            ],
+            "sentences": [
+                "Daughters of Mnemosyne, daughters of thundering Zeus, Pierian Muses, renowned and illustrious, many-shaped and beloved of the mortals you visit, you give birth to unblemished virtue in every discipline, you nourish the soul, you set thought aright as you become leaders, as you become mistresses of the mind's power.",
+                "Sacred and mystic rites you taught to mortals, Kleio, Euterpe, Thaleia, Melpomene, Terpsichore, Erato, Polymnia, Ourania, mother Kalliope, mighty goddess Hagne.",
+                "Do come to the initiates, O goddesses, in your manifold holiness, do bring glory and emulation that is lovely and sung by many."
+            ]
+        },
+        {
+            "id": "orphic-77",
+            "title": "HYMN ΟΗ΄. TO MNEMOSYNE",
+            "deities": [
+                "Mnemosyne"
+            ],
+            "sentences": [
+                "I call upon queen Mnemosyne, Zeus' consort, who gave birth to the holy, the sacred, the clear-voiced Muses.",
+                "Evil oblivion that harms the mind is alien to her who gives coherence to the mind and soul of mortals.",
+                "She increases men's power, their ability to think, sweet and vigilant, she reminds us of all the thoughts we store forever in our breasts, never straying and ever rousing the mind to action.",
+                "O blessed goddess, for the initiates stir the memory of the sacred rite, ward off oblivion from them."
+            ]
+        },
+        {
+            "id": "orphic-78",
+            "title": "HYMN ΟΘ΄. TO DAWN",
+            "deities": [
+                "Dawn"
+            ],
+            "sentences": [
+                "Hear, O goddess, you bring the light of day to mortals, resplendent Dawn, you blush throughout the world, messenger of the great, the illustrious Titan.",
+                "Murky, dark, journeying night you send below the earth when you arrive; mortal men you lead to work as you tend to their lives.",
+                "The race of mortal men delights in you, no one escapes your sight as you look down from on high, when from your eyelids you shake off sweet sleep, when there is joy for every mortal, for every reptile, for animals, for birds, for the broods the sea contains.",
+                "All blessings that come from work are your gift.",
+                "Goddess, blessed and pure, give more sacred light to the initiates."
+            ]
+        },
+        {
+            "id": "orphic-79",
+            "title": "HYMN Π΄. TO THEMIS",
+            "deities": [
+                "Themis"
+            ],
+            "sentences": [
+                "I call upon pure Themis, daughter of noble Sky and Earth, Themis the young, the lovely-faced maiden, the first to show mortals the holy oracle as prophetess of the gods in her Delphic hideaway on Pythian ground where Python was king.",
+                "You taught lord Phoibos the art of giving laws.",
+                "Amid reverence and honor you shine in the night, for you were first to teach men holy worship, howling to Bacchos in nights of revelry; from you come the honors of the gods, the honors of the holy mysteries.",
+                "O blessed maiden, come in a joyous, in a kindly spirit to your very sacred, to your mystical rites."
+            ]
+        },
+        {
+            "id": "orphic-80",
+            "title": "HYMN ΠΑ΄. TO BOREAS",
+            "deities": [
+                "Boreas"
+            ],
+            "sentences": [
+                "Freezing Boreas, your wintry breezes make the world's lofty air quiver, come from snowy Thrace!",
+                "Dissolve the rebellious alliance of clouds and moist air, turn the water to rushing drops of rain, bring fair weather everywhere, brighten Ether's face as the sun's rays shine upon the earth."
+            ]
+        },
+        {
+            "id": "orphic-81",
+            "title": "HYMN ΠΒ΄. TO ZEPHYROS",
+            "deities": [
+                "Zephyros"
+            ],
+            "sentences": [
+                "Western breezes born of the open sea, ethereal wonders, as you blow gently your whisper brings rest from toil.",
+                "Vernal, meadow-haunting, you are loved by harbors because to ships you bring a gentle passage, soft light wind.",
+                "Come in a generous spirit, blow in unblemished ways, O airy, O invisible, O light-winged ones."
+            ]
+        },
+        {
+            "id": "orphic-82",
+            "title": "HYMN ΠΓ΄. TO NOTOS",
+            "deities": [
+                "Notos"
+            ],
+            "sentences": [
+                "Quickly leaping through the moist air as both of your swift wings vibrate, O father of rain, come, riding the southern clouds.",
+                "Zeus did grant you this lofty prerogative: to send the rain-giving clouds from sky to earth.",
+                "For this we pray to you, O blessed one, take delight in our sacrifice, do send fruit-nourishing rains to mother Earth."
+            ]
+        },
+        {
+            "id": "orphic-83",
+            "title": "HYMN ΠΔ΄. TO OKEANOS",
+            "deities": [
+                "Oceanus"
+            ],
+            "sentences": [
+                "I summon Okeanos, ageless, eternal father, begetter of immortal gods, begetter of mortal men.",
+                "Your waves, O Okeanos, gird the boundaries of the earth.",
+                "From you come all the seas, from you come all the rivers, from you come the pure, the flowing waters of earth's springs.",
+                "Hear me, O blessed god, O highest, O divine purifier, where you end the earth ends, the pole begins where ships glide on, come, grant favor, grant grace to the initiates."
+            ]
+        },
+        {
+            "id": "orphic-84",
+            "title": "HYMN ΠΕ΄. TO HESTIA",
+            "deities": [
+                "Hestia"
+            ],
+            "sentences": [
+                "Queen Hestia, daughter of mighty Kronos, mistress of ever-burning fire, you dwell in the center of the house.",
+                "May you raise the holy initiates in these sacred rites, may you grant them unwithering youth, wealth as well, prudence and purity.",
+                "Home of the blessed gods, men's mighty buttress, eternal, many-shaped, beloved, grass-yellow, smile, O blessed one, kindly accept these offerings, waft upon us prosperity, breathe upon us gentle-handed health."
+            ]
+        },
+        {
+            "id": "orphic-85",
+            "title": "HYMN ΠϚ΄. TO SLEEP",
+            "deities": [
+                "Sleep"
+            ],
+            "sentences": [
+                "Sleep, you are lord of all, lord of blessed gods and of mortal men, of every living thing the broad earth nurtures, for you alone are master of all, you do visit all, binding their bodies with fetters unforged.",
+                "You free us of cares, you offer sweet respite from toil, you grant holy solace to our every sorrow, you save souls by easing them into the thought of Death, since to Death and Oblivion you are a true brother.",
+                "But, O blessed one, I beseech you to come sweet-tempered, to be a kindly savior of the initiates, that they may serve the gods."
+            ]
+        },
+        {
+            "id": "orphic-86",
+            "title": "HYMN ΠΖ΄. TO DREAM",
+            "deities": [
+                "Dream"
+            ],
+            "sentences": [
+                "I call upon you, blessed, long-winged, baneful Dream, messenger of things to come, greatest prophet to mortals.",
+                "In the quiet of sweet sleep you come silent, you speak to the soul, you rouse men's minds, in their sleep you whisper the will of the gods; silent you come to show the future to silent souls that walk the noble path of devotion to the gods.",
+                "Good always wins the race in people's minds, good leads their lives to pleasures anticipated, to a respite from suffering, that god himself may reveal the firmament of the divine lords through vows and sacrifices.",
+                "The end to which the pious come is always so sweeter, but to the impious never does a dreamy phantom, a prophet of evil deeds, reveal future need so that they may find the cure from pain to come.",
+                "But, O blessed one, I beg you, show me the behests of the gods, in all things bring me close to the path that is straight, do not through weird apparitions show me evil signs."
+            ]
+        },
+        {
+            "id": "orphic-87",
+            "title": "HYMN 88΄. TO DEATH",
+            "deities": [
+                "Death"
+            ],
+            "sentences": [
+                "Hear me, you who steer the path of all mortals and give sacred time to all from whom you are distant.",
+                "Your sleep tears the soul free from the body's hold, whenever you undo nature's powerful bonds, bringing the long slumber, the endless one, to the living.",
+                "Common to all, you are unjust to some, when you bring swift end to youthful life at its peak.",
+                "In you alone is executed the verdict common to all, for to entreaties and to prayers you alone are deaf.",
+                "O blessed one, with pious vows, with sacrifices, I beg you, I pray to you, grant me long life, that old age might be a noble prize among men."
+            ]
+        }
+    ]
+}
