@@ -85,6 +85,3 @@ package-lock.json
 *.bak
 *.swp
 *~ /neumanns-workshop.github.io/
-
-# Deprecated files and experiments
-/deprecated/

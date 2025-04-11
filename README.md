@@ -1,8 +1,6 @@
-# Cleros (Beta)
+# Cleros
 
-Cleros is a web application that uses advanced text processing to interact with ancient texts, specifically focusing on Orphic Hymns. The application leverages embedding models for semantic search and text analysis.
-
-> **Note:** This is a beta release. Some features may not be fully stable.
+Cleros is a web application that uses advanced text processing to interact with ancient Greek hymn corpora, specifically focusing on a combined collection of Homeric and Orphic Hymns within a single-column user interface. The application leverages embedding models for semantic search and text analysis.
 
 ## Architecture Overview
 
