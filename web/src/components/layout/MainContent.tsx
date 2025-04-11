@@ -252,6 +252,9 @@ export const MainContent: React.FC = React.memo(() => {
           textAlign: 'center',
         }}
       >
+        <Box sx={{ display: 'flex', justifyContent: 'center', mb: 2 }}>
+          <DonateButton />
+        </Box>
         <Typography variant="caption" sx={{ display: 'block', color: 'text.secondary' }}>
           © {new Date().getFullYear()} Jared Neumann Consulting, LLC
         </Typography>
