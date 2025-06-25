@@ -313,90 +313,86 @@ export const ShareButton: React.FC = React.memo(() => {
         <DialogTitle sx={{ textAlign: "center" }}>
           Share Your Cleros Reading
         </DialogTitle>
-        <DialogContent>
+        <DialogContent sx={{ textAlign: "center", p: 2 }}>
           {imageDataUrl && (
-            <Box sx={{ mt: 2, textAlign: "center" }}>
-              <img
-                src={imageDataUrl}
-                alt="Cleros Reading"
-                style={{
-                  maxWidth: "100%",
-                  maxHeight: "300px",
-                  border: "1px solid #ddd",
-                }}
-              />
-            </Box>
-          )}
-
-          <Box sx={{ mt: 3, textAlign: "center" }}>
-            <Typography variant="subtitle1" gutterBottom>
-              Share Options
-            </Typography>
-            <Box
-              sx={{
-                display: "flex",
-                gap: 1,
-                flexWrap: "wrap",
-                justifyContent: "center",
+            <img
+              src={imageDataUrl}
+              alt="Generated Cleros reading"
+              style={{
+                maxWidth: "100%",
+                border: `1px solid ${theme.palette.divider}`,
+                borderRadius: "4px",
               }}
+            />
+          )}
+        </DialogContent>
+        <DialogActions sx={{ flexDirection: "column", p: 2, gap: 1.5 }}>
+          <Box
+            sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              gap: 1,
+              width: "100%",
+            }}
+          >
+            <Button
+              onClick={copyImageToClipboard}
+              variant="outlined"
+              fullWidth
             >
-              <Button size="small" variant="outlined" onClick={handleDownload}>
-                Download
-              </Button>
-
+              Copy Image
+            </Button>
+            <Button onClick={handleDownload} variant="outlined" fullWidth>
+              Download
+            </Button>
+            <Button onClick={copyTextContent} variant="outlined" fullWidth>
+              Copy Text
+            </Button>
+            <Button onClick={copyLink} variant="outlined" fullWidth>
+              Copy Link
+            </Button>
+          </Box>
+          <Box sx={{ width: "100%", mt: 1 }}>
+            {!embedCode ? (
               <Button
-                size="small"
+                onClick={generateEmbedCode}
                 variant="outlined"
-                onClick={copyImageToClipboard}
+                fullWidth
               >
-                Copy Image
+                Embed
               </Button>
-
-              <Button size="small" variant="outlined" onClick={copyTextContent}>
-                Copy Text
+            ) : (
+              <Button
+                onClick={copyEmbedCode}
+                variant="outlined"
+                fullWidth
+              >
+                Embed
               </Button>
-
-              {!embedCode ? (
-                <Button
-                  size="small"
-                  variant="outlined"
-                  onClick={generateEmbedCode}
-                >
-                  Embed
-                </Button>
-              ) : (
-                <Button size="small" variant="outlined" onClick={copyEmbedCode}>
-                  Embed
-                </Button>
-              )}
-            </Box>
-
-            {embedCode && (
-              <Box sx={{ mt: 2 }}>
-                <TextField
-                  fullWidth
-                  variant="outlined"
-                  value={embedCode}
-                  multiline
-                  rows={4}
-                  size="small"
-                  InputProps={{
-                    readOnly: true,
-                  }}
-                />
-                <Typography
-                  variant="caption"
-                  sx={{ display: "block", mt: 1, color: "text.secondary" }}
-                >
-                  Note: This embed code contains the entire image data and may
-                  be large.
-                </Typography>
-              </Box>
             )}
           </Box>
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={closeShareDialog}>Close</Button>
+          {embedCode && (
+            <Box sx={{ mt: 2 }}>
+              <TextField
+                fullWidth
+                variant="outlined"
+                value={embedCode}
+                multiline
+                rows={4}
+                size="small"
+                InputProps={{
+                  readOnly: true,
+                }}
+              />
+              <Typography
+                variant="caption"
+                sx={{ display: "block", mt: 1, color: "text.secondary" }}
+              >
+                Note: This embed code contains the entire image data and may
+                be large.
+              </Typography>
+            </Box>
+          )}
         </DialogActions>
       </Dialog>
 

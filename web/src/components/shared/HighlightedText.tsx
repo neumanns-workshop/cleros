@@ -1,5 +1,4 @@
 import React from "react";
-import tinycolor from "tinycolor2";
 import { ProcessedClauseData } from "../../types"; // Import from shared types
 
 interface HighlightedTextProps {

@@ -1,7 +1,6 @@
 import React, { useState, useCallback, useMemo } from "react";
 import {
   TextField,
-  Box,
   CircularProgress,
   InputAdornment,
   IconButton,

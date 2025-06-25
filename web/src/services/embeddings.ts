@@ -20,10 +20,6 @@ interface HymnEmbeddings {
     };
 }
 
-// Use a CDN-hosted model that works reliably in browsers
-// The correct URL format for TensorFlow Hub models
-const MODEL_URL = 'https://tfhub.dev/tensorflow/tfjs-model/universal-sentence-encoder-lite/1/default/1';
-
 let embedder: useTypes.UniversalSentenceEncoder | null = null;
 let tfjs: typeof tfTypes | null = null;
 let useModel: typeof useTypes | null = null;

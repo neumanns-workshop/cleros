@@ -1,4 +1,4 @@
-import React, { useMemo, useEffect, useState } from 'react';
+import React, { useMemo, useEffect } from 'react';
 import { 
   Box, 
   ThemeProvider, 
@@ -42,13 +42,6 @@ class ErrorBoundary extends React.Component<{children: React.ReactNode}, {hasErr
 // Theme component that uses style context
 const ThemedApp: React.FC = () => {
   const { font } = useStyle();
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
-
-  // Debug log to check viewport detection
-  useEffect(() => {
-    console.log('App: Detected viewport =', isMobile ? 'mobile' : 'desktop');
-  }, [isMobile]);
 
   // Monochromatic theme colors
   const colorTheme = {

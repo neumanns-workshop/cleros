@@ -1,11 +1,9 @@
-import React, { useMemo, useCallback, useState, useEffect } from "react";
+import React, { useMemo, useState, useEffect } from "react";
 import { Box, Typography, Collapse, Button, Chip } from "@mui/material";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { TypeWriter } from "./TypeWriter";
 import { useOracleContext } from "../../context/OracleContext";
 import { HighlightedText } from "../shared/HighlightedText";
 import { fixFragmentedText } from "../../utils/textUtils";
-import { ProcessedSentenceData, ProcessedClauseData } from "../../types";
 
 export const ResultDisplay: React.FC = React.memo(() => {
   const {

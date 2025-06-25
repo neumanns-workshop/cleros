@@ -3,9 +3,6 @@ import {
   Box,
   Typography,
   Divider,
-  List,
-  ListItem,
-  ListItemText,
   useTheme,
 } from "@mui/material";
 import { ProcessedSentenceData, ProcessedClauseData } from "../../types";
@@ -138,7 +135,6 @@ export const ShareCard: React.FC<ShareCardProps> = React.memo(
 
     // Define hardcoded colors based on the theme observed in App.tsx
     const primaryTextColor = "#e0e0e0"; // theme.palette.text.primary
-    const secondaryTextColor = "#a0a0a0"; // Accent/secondary for timestamps, etc.
     const slightlyDimmedTextColor = "#cccccc"; // Approx primary text with 0.8 opacity
     const dimmedTextColor = "#b0b0b0"; // Approx primary text with 0.6 opacity
     const veryDimmedTextColor = "#888888"; // Approx primary text with 0.5 opacity

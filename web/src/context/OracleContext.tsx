@@ -561,6 +561,7 @@ export const OracleProvider: React.FC<{ children: ReactNode }> = ({
       embedderInstance,
       hymnEmbeddings,
       availableHymnKeys,
+      divinationTimestamp,
     ],
   );
 

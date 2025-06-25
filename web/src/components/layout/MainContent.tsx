@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { 
     Box, 
     useTheme, 
@@ -68,9 +68,6 @@ export const MainContent: React.FC = React.memo(() => {
     "Should I take this job?",
     "My relationship is in trouble. What should I do?",
   ];
-
-  // Determine if we should center the content (only center when there is no primary sentence)
-  const shouldCenterContent = !primarySentence;
 
   return (
     <Box
