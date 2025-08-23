@@ -1,0 +1,50 @@
+{
+  "corpus": "tablets",
+  "type": "sentence_embeddings",
+  "total_sentences": 10,
+  "embedding_dimension": 384,
+  "model": "all-MiniLM-L6-v2",
+  "created": "2025-08-22T12:39:52.419051",
+  "mapping": [
+    {
+      "id": "tablets_1_1",
+      "index": 0
+    },
+    {
+      "id": "tablets_2_1",
+      "index": 1
+    },
+    {
+      "id": "tablets_3_1",
+      "index": 2
+    },
+    {
+      "id": "tablets_4_1",
+      "index": 3
+    },
+    {
+      "id": "tablets_5_1",
+      "index": 4
+    },
+    {
+      "id": "tablets_6_1",
+      "index": 5
+    },
+    {
+      "id": "tablets_7_1",
+      "index": 6
+    },
+    {
+      "id": "tablets_8_1",
+      "index": 7
+    },
+    {
+      "id": "tablets_9_1",
+      "index": 8
+    },
+    {
+      "id": "tablets_10_1",
+      "index": 9
+    }
+  ]
+}

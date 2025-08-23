@@ -1,0 +1,184 @@
+{
+  "title": "Orphic Golden Tablets — Parallel Greek-English Edition",
+  "created": "2025-08-21T10:23:31.926667",
+  "format": "Archaeological tablets with facing translations",
+  "organization": "By provenance and formula family",
+  "tablets": [
+    {
+      "id": "Hipponion_B",
+      "provenance": "Hipponion (Vibo Valentia), South Italy",
+      "date": "late 5th–4th c.",
+      "formula_family": [
+        "B",
+        "C",
+        "D"
+      ],
+      "parallel_text": {
+        "greek": "παῖς γῆς εἰμὶ καὶ οὐρανοῦ ἀστερόεντος· διψῶ καὶ ἀπόλλυμαι· τῆς Μνημοσύνης λίμνης πότισόν με.",
+        "english": "I am a child of Gē and of starry Ouranos; I thirst and I am perishing; give me to drink from the Lake of Mnemosyne.",
+        "note": "παῖς marks ritual self-identification as offspring of the cosmogonic deities Earth (Gē) and Sky (Ouranos), with ἀστερόεντος “starry” as a fixed epithet. διψῶ καὶ ἀπόλλυμαι expresses the soul’s dire need (“I am thirsty and perishing”). λίμνη “lake/pool” of Mnemosyne (the goddess Memory) contrasts with the Lethe-tradition; some tablets read κρήνη “spring.” πότισόν με is an imperative addressed to the guardians/attendants at the waters, functioning as a password request."
+      },
+      "ritual_context": {
+        "use": "Self-identification + request to Guardians; instructs to avoid Lethe/seek Mnemosyne.",
+        "ui_hint": "Gold tablet with two lines: identity + Mnemosyne request."
+      }
+    },
+    {
+      "id": "Petelia_C",
+      "provenance": "Petelia (Strongoli), South Italy",
+      "date": "3rd–2nd c.",
+      "formula_family": [
+        "C",
+        "D"
+      ],
+      "parallel_text": {
+        "greek": "ἀριστερὰ πηγὴ—μή πλησιάσῃς· δεξιᾷ παρὰ κυπάρισσον λευκήν· τῆς Μνημοσύνης λίμνην ζήτησον.",
+        "english": "Do not approach the spring on the left; by the white cypress on the right, seek the Lake of Mnemosyne.",
+        "note": "The line is deliberately elliptical and directional: δεξιᾷ means “on the right (hand),” and παρὰ with the accusative (“beside”) governs κυπάρισσον λευκήν, “the white cypress,” a set formula in these tablets. The prohibition μή πλησιάσῃς is an aorist-subjunctive negative command. In the Orphic context the left-hand spring is conventionally the water of Lethe (to be avoided), while the initiate is to seek the Lake of Mnemosyne."
+      },
+      "ritual_context": {
+        "use": "Road-choice + water-source instruction.",
+        "ui_hint": "Map-charm: left vs right; white cypress glyph."
+      }
+    },
+    {
+      "id": "Thurii_A",
+      "provenance": "Thurii, South Italy",
+      "date": "4th c.",
+      "formula_family": [
+        "A"
+      ],
+      "parallel_text": {
+        "greek": "ἥκω καθαρός ἐκ καθαρῶν· ἱκετεύω θεούς.",
+        "english": "I have come, pure, from the pure; I supplicate the gods.",
+        "note": "ἥκω is a present with the sense ‘I have come/am arrived’; καθαρός ἐκ καθαρῶν is a ritual purity formula (‘pure from the pure,’ i.e., from among the pure or through pure rites); καθαρός here is masculine (other tablets show gender variation); ἱκετεύω uses formal suppliant language, likely addressed to chthonic gods in the afterlife context."
+      },
+      "ritual_context": {
+        "use": "Purity-credential before underworld powers.",
+        "ui_hint": "Seal with ‘pure-from-pure’ as header."
+      }
+    },
+    {
+      "id": "Pharsalos_B",
+      "provenance": "Pharsalos, Thessaly",
+      "date": "4th c.",
+      "formula_family": [
+        "B",
+        "C"
+      ],
+      "parallel_text": {
+        "greek": "παῖς γῆς καὶ οὐρανοῦ· τῆς Μνημοσύνης ἔκπιε· Λήθην φεῦγε.",
+        "english": "I am a child of Ge and Ouranos; drink from Mnemosyne; shun Lethe.",
+        "note": "The first phrase is an elliptical self-identification typical of the tablets; “I am” is understood. Ge (Gē) and Ouranos are the deified Earth and Sky; many translate simply “Earth and Sky.” Ἔκπιε is an aorist imperative of ekpinō, “drink out/from,” taking the genitive; in context it means to drink from the spring of Mnemosyne (Memory). Φεῦγε (present imperative) conveys ongoing avoidance—i.e., keep away from Lethe, the river/personification of Forgetfulness. Some recensions read πίε (“drink”) and elsewhere add “starry” to Ouranos (οὐρανοῦ ἀστερόεντος)."
+      },
+      "ritual_context": {
+        "use": "Identity + water-choice.",
+        "ui_hint": "Two-line credential + prohibition icon for Lethe."
+      }
+    },
+    {
+      "id": "Entella_B",
+      "provenance": "Entella, Sicily",
+      "date": "4th c.",
+      "formula_family": [
+        "B",
+        "C"
+      ],
+      "parallel_text": {
+        "greek": "παῖς γῆς... Μνημοσύνης πόμα δός·",
+        "english": "Child of Earth … grant the draught of Mnemosyne.",
+        "note": "The ellipsis marks a lacuna/omission in a well-known Orphic formula that typically reads, “I am a child of Earth and of starry Ouranos …,” followed by the petition at the spring: “grant the draught of Mnemosyne.” γῆ (Earth) here likely evokes the goddess Ge; capitalization signals divinity. πόμα is a ritual ‘draught’ or ‘drink’ (not merely a cup), and δός is an imperative addressed to the underworld guardians of the spring; the implied indirect object is the speaker. Mnemosyne (Memory) is invoked as the contrast to Lethe, whose water must be avoided."
+      },
+      "ritual_context": {
+        "use": "Request formula to Guardians.",
+        "ui_hint": "Short identity + request."
+      }
+    },
+    {
+      "id": "Pelinna_E",
+      "provenance": "Pelinna, Thessaly (ivy-shaped leaves)",
+      "date": "late 4th–3rd c.",
+      "formula_family": [
+        "E"
+      ],
+      "parallel_text": {
+        "greek": "λέγε Περσεφόνῃ· Βάκχιος αὐτὸς ἔλυσέ σε.",
+        "english": "Say to Persephonē: Bakkhios himself released you.",
+        "note": "Bakkhios = Dionysos. ἔλυσε (“released/loosed”) marks ritual liberation of the initiate. The second-person pronoun σε reflects the tablet’s instructional voice; some witnesses read με (“me”), aligning the reported speech with first person. The sense in either case is that the Bacchic god has freed the initiate."
+      },
+      "ritual_context": {
+        "use": "Manumission/release credential from Dionysos.",
+        "ui_hint": "Single declarative line; ivy motif."
+      }
+    },
+    {
+      "id": "Crete_short_B",
+      "provenance": "Eleutherna & Cretan sites",
+      "date": "3rd–2nd c.",
+      "formula_family": [
+        "B"
+      ],
+      "parallel_text": {
+        "greek": "παῖς γῆς εἰμὶ καὶ οὐρανοῦ ἀστερόεντος.",
+        "english": "I am a child of Earth and of starry Ouranos.",
+        "note": "παῖς = “child/offspring,” a formulaic self-identification. γῆς and οὐρανός can be read as the primordial deities (Gē/Gaia and Ouranos) or as cosmic Earth and Sky; ἀστερόεντος is the epic epithet “starry.” Transliteration of Ouranos signals the possible theonymic reading in this ritual password."
+      },
+      "ritual_context": {
+        "use": "Minimal identity credential.",
+        "ui_hint": "One-line gold slip; minimal style."
+      }
+    },
+    {
+      "id": "‘Guardians’_C",
+      "provenance": "Composite (B-group exemplars)",
+      "date": "—",
+      "formula_family": [
+        "C"
+      ],
+      "parallel_text": {
+        "greek": "φύλακες παρεστήκασι· εἴπατε... δίψω· πότισόν με ἐκ τῆς Μνημοσύνης.",
+        "english": "The guardians stand by; say: … “I am thirsty; give me to drink from Mnemosyne.”",
+        "note": "φύλακες παρεστήκασι: perfect with present force, “are stationed/stand present,” a stock formula at the spring of Memory. εἴπατε is 2nd plural imperative “say”; many tablets have εἴπε (2nd sg.); the ellipsis signals the standard password (e.g., “I am a child of Earth and starry Sky…”). δίψω “I am thirsty/parched”; πότισόν με “give me to drink.” ἐκ τῆς Μνημοσύνης literally “from Mnemosyne,” i.e., from the spring/lake of Memory implied by the Orphic context. Mnemosyne is retained as a theonym."
+      },
+      "ritual_context": {
+        "use": "Password exchange with guardians of the lake.",
+        "ui_hint": "Dialogic charm; call-and-response format."
+      }
+    },
+    {
+      "id": "‘Right-hand Road’_D",
+      "provenance": "Composite (Petelia et al.)",
+      "date": "—",
+      "formula_family": [
+        "D"
+      ],
+      "parallel_text": {
+        "greek": "δεξιᾷ ὁδός· παρὰ κυπάρισσον λευκήν· ἀριστερὰν μὴ λάβοις.",
+        "english": "There is a road to the right, beside a white cypress; do not take the left-hand road.",
+        "note": "δεξιᾷ is an adverbial/locative dative (“on/to the right”); παρά with the accusative means “by/beside.” κυπάρισσον (acc. sg. fem.) with λευκήν (acc. sg. fem.) = “white cypress,” a recurrent Orphic landmark. ἀριστερὰν μὴ λάβοις is a prohibition; λάβοις (aorist optative) functions jussively in this epigraphic/poetic register, with ὁδόν (“road”) understood from the first clause."
+      },
+      "ritual_context": {
+        "use": "Wayfinding instruction in Hades.",
+        "ui_hint": "Directional sigil (→) and cypress icon."
+      }
+    },
+    {
+      "id": "‘Blessed Fate’_closure",
+      "provenance": "Hipponion/Pelinna endings",
+      "date": "—",
+      "formula_family": [
+        "B",
+        "E"
+      ],
+      "parallel_text": {
+        "greek": "ἄλλων μύσταισιν ὁμοίως ἔσῃ μάκαρ.",
+        "english": "Like the other initiates, you shall be blessed.",
+        "note": "μύσταισιν ('initiates') is dative with ὁμοίως ('in like manner'), giving 'like the other initiates.' μάκαρ ('blessed') functions predicatively with ἔσῃ ('you will be'); a vocative reading ('O blessed one') is possible but the predicative sense suits the assurance of the initiate’s blessed status among peers in the afterlife."
+      },
+      "ritual_context": {
+        "use": "Closing beatitude after successful answers.",
+        "ui_hint": "Footer line on minted lamella."
+      }
+    }
+  ]
+}

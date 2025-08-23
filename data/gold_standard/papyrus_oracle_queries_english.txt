@@ -1,0 +1,89 @@
+PAPYRUS ORACLE QUERIES — ENGLISH TRANSLATION
+==================================================
+Translated by GPT-5 Reasoning System
+Created: August 21, 2025
+
+ANCIENT VOICES: CONSULTATIONS TO EGYPTIAN GODS
+Oracle consultation texts from Roman Egypt (1st-3rd c. CE)
+
+P.Oxy. 74 5017
+Category: Health
+Intent: HEALTH, HEALING, DIVINE_GUIDANCE
+Formula: if-will-happen
+Papyri.info URL: http://papyri.info/ddbdp/p.oxy;74;5017
+Petitioner: Euphoros
+
+"To Zeus Helios, the Great Sarapis, and the gods who share the shrine."
+
+P.Oxy. 9 1213
+Category: Marriage
+Intent: MARRIAGE, RELATIONSHIP, PERMISSION
+Formula: if-granted
+Papyri.info URL: http://papyri.info/ddbdp/p.oxy;9;1213
+Petitioner: Menandros
+
+"To Zeus Helios, to great Sarapis, and to the co-dwelling gods. Menandros asks whether it has been granted to me to marry. Grant me this."
+
+P.Oxy. 42 3078
+Category: Health
+Intent: HEALTH, MEDICAL, PERMISSION
+Formula: permission-request
+Papyri.info URL: http://papyri.info/ddbdp/p.oxy;42;3078
+Petitioner: Anonymous
+
+"To Zeus-Helios Sarapis the Victory-bearer. If you permit me to consult Hermeinos the Hermopolite, a physician, for the treatment of the eyes, and this is to my advantage, grant me this."
+
+SB 26 16731
+Category: Administrative
+Intent: ADMINISTRATIVE, ANXIETY, CAREER
+Formula: whether-question
+Trismegistos URL: http://papyri.info/trismegistos/88400
+Petitioner: Sotas
+
+"To Lord Soknopaios, the great god, and to Ammon, the greatest gods: Sotas petitions—if the nomarch is not going to be angry with me or conduct an inquiry into my affairs, because I write the pittakia of Valerius, grant me this."
+
+P.Oxy. 8 1149
+Category: Business
+Intent: BUSINESS, ECONOMIC, ADVANTAGE
+Formula: if-better-or-advantageous
+Princeton URL: https://dpul.princeton.edu/papyri/catalog/3t945v281
+Petitioner: Nike
+
+"To Zeus Helios, the Great Sarapis, and the co-enshrined gods. Nike asks whether it is to her advantage to purchase Sarapion, a boy, from Tasarapion; grant me this."
+
+P.Mich. 6 423
+Category: Health
+Intent: HEALTH, DIVINE_GUIDANCE
+Formula: general-petition
+Papyri.info URL: https://papyri.info/ddbdp/p.mich;6;423
+Petitioner: Dionysios
+
+"To Sarapis and Isis and all the gods. Dionysios petitions the god concerning his illness, whether it is advantageous for him to return home."
+
+BGU 1 154
+Category: Marriage
+Intent: MARRIAGE, RELATIONSHIP
+Formula: concerning-X
+Papyri.info URL: https://papyri.info/ddbdp/bgu;1;154
+Petitioner: Dionysios (or on his behalf)
+
+"To Zeus Helios, the Great Sarapis, and the co-dwelling gods. Concerning marriage. Whether it is advantageous for Dionysios to marry Herais, daughter of Herakleides."
+
+P.Oslo 3 143
+Category: Legal
+Intent: LEGAL, JUSTICE, ADVANTAGE
+Formula: if-better-or-advantageous
+Papyri.info URL: https://papyri.info/ddbdp/p.oslo;3;143
+Petitioner: Apollonios
+
+"To Zeus Helios, the great Sarapis. Apollonios requests: if it is to his advantage to counter-sue Herakleides about the inheritance claims, grant me this."
+
+SB 12 10929
+Category: Travel
+Intent: TRAVEL, SAFETY, ADVANTAGE
+Formula: if-better-or-advantageous
+Papyri.info URL: https://papyri.info/ddbdp/sb;12;10929
+Petitioner: Herakleides
+
+"To Zeus Helios, to Great Sarapis, and to the co-dwelling gods. Herakleides asks whether it is advantageous for him to go up to Alexandria for his own business, grant me this."
+

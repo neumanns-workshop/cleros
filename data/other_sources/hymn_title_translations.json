@@ -1,0 +1,542 @@
+[
+  {
+    "type": "proem",
+    "greek": "Orpheus to Mousaios",
+    "english": "Orpheus to Mousaios",
+    "number": null
+  },
+  {
+    "type": "hymn",
+    "greek": "Ὕμνος εἰς Ἑκάτην.",
+    "english": "Hymn to Hekate.",
+    "number": 1
+  },
+  {
+    "type": "hymn",
+    "greek": "Προθυραίας",
+    "english": "To Prothyraia",
+    "number": 2
+  },
+  {
+    "type": "hymn",
+    "greek": "Νυκτός",
+    "english": "Of Nyx.",
+    "number": 3
+  },
+  {
+    "type": "hymn",
+    "greek": "Οὐρανοῦ",
+    "english": "Of Ouranos",
+    "number": 4
+  },
+  {
+    "type": "hymn",
+    "greek": "Αἰθέρος",
+    "english": "Of Aither",
+    "number": 5
+  },
+  {
+    "type": "hymn",
+    "greek": "Πρωτογόνου",
+    "english": "Of Protogonos",
+    "number": 6
+  },
+  {
+    "type": "hymn",
+    "greek": "Ἄστρων",
+    "english": "of the stars",
+    "number": 7
+  },
+  {
+    "type": "hymn",
+    "greek": "Ἡλίου",
+    "english": "To Helios",
+    "number": 8
+  },
+  {
+    "type": "hymn",
+    "greek": "Σελήνης",
+    "english": "To Selene",
+    "number": 9
+  },
+  {
+    "type": "hymn",
+    "greek": "Φύσεως",
+    "english": "To Physis (Nature)",
+    "number": 10
+  },
+  {
+    "type": "hymn",
+    "greek": "Πανός",
+    "english": "To Pan",
+    "number": 11
+  },
+  {
+    "type": "hymn",
+    "greek": "Ἡρακλέος",
+    "english": "Of Herakles",
+    "number": 12
+  },
+  {
+    "type": "hymn",
+    "greek": "Κρόνου",
+    "english": "Of Kronos",
+    "number": 13
+  },
+  {
+    "type": "hymn",
+    "greek": "Ῥέας",
+    "english": "Of Rhea",
+    "number": 14
+  },
+  {
+    "type": "hymn",
+    "greek": "Διός",
+    "english": "of Zeus",
+    "number": 15
+  },
+  {
+    "type": "hymn",
+    "greek": "Ἥρας",
+    "english": "Of Hera",
+    "number": 16
+  },
+  {
+    "type": "hymn",
+    "greek": "Ποσειδῶνος",
+    "english": "Of Poseidōn.",
+    "number": 17
+  },
+  {
+    "type": "hymn",
+    "greek": "Εἰς Πλούτωνα.",
+    "english": "To Plouton.",
+    "number": 18
+  },
+  {
+    "type": "hymn",
+    "greek": "Κεραυνίου Διός",
+    "english": "Of Zeus the Thunderbolt-wielder.",
+    "number": 19
+  },
+  {
+    "type": "hymn",
+    "greek": "Διὸς Ἀστραπέως",
+    "english": "Of Zeus Astrapheus",
+    "number": 20
+  },
+  {
+    "type": "hymn",
+    "greek": "Νεφελῶν",
+    "english": "of clouds",
+    "number": 21
+  },
+  {
+    "type": "hymn",
+    "greek": "Τηθύος",
+    "english": "To Tethys.",
+    "number": 22
+  },
+  {
+    "type": "hymn",
+    "greek": "Νηρέως",
+    "english": "Of Nereus",
+    "number": 23
+  },
+  {
+    "type": "hymn",
+    "greek": "Νηρηίδων",
+    "english": "Of the Nereids",
+    "number": 24
+  },
+  {
+    "type": "hymn",
+    "greek": "Πρωτέως",
+    "english": "Of Proteus",
+    "number": 25
+  },
+  {
+    "type": "hymn",
+    "greek": "Γῆς",
+    "english": "Of Gē.",
+    "number": 26
+  },
+  {
+    "type": "hymn",
+    "greek": "Μητρὸς θεῶν",
+    "english": "Of the Mother of the Gods.",
+    "number": 27
+  },
+  {
+    "type": "hymn",
+    "greek": "Ἑρμοῦ",
+    "english": "Of Hermes.",
+    "number": 28
+  },
+  {
+    "type": "hymn",
+    "greek": "Ὕμνος Περσεφόνης.",
+    "english": "Hymn to Persephonē.",
+    "number": 29
+  },
+  {
+    "type": "hymn",
+    "greek": "Διονύσου",
+    "english": "Of Dionysos",
+    "number": 30
+  },
+  {
+    "type": "hymn",
+    "greek": "Ὕμνος Κουρήτων Α.",
+    "english": "Hymn to the Kouretes (A).",
+    "number": 31
+  },
+  {
+    "type": "hymn",
+    "greek": "Ὕμνος Ἀθην ᾶς",
+    "english": "Hymn to Athena",
+    "number": 32
+  },
+  {
+    "type": "hymn",
+    "greek": "Νίκης",
+    "english": "Of Nike",
+    "number": 33
+  },
+  {
+    "type": "hymn",
+    "greek": "Ἀ πόλλωνος",
+    "english": "Of Apollon",
+    "number": 34
+  },
+  {
+    "type": "hymn",
+    "greek": "Λητο ῦς",
+    "english": "of Leto",
+    "number": 35
+  },
+  {
+    "type": "hymn",
+    "greek": "Ἀ ρτέμιδος",
+    "english": "To Artemis",
+    "number": 36
+  },
+  {
+    "type": "hymn",
+    "greek": "Τιτάνων",
+    "english": "Of the Titanes.",
+    "number": 37
+  },
+  {
+    "type": "hymn",
+    "greek": "Κουρήτων Β",
+    "english": "To the Kouretes, II",
+    "number": 38
+  },
+  {
+    "type": "hymn",
+    "greek": "Κορύβαντος",
+    "english": "To Korybas",
+    "number": 39
+  },
+  {
+    "type": "hymn",
+    "greek": "Δήμητρος Ἐλευσινίας",
+    "english": "Of Demeter, the Eleusinian.",
+    "number": 40
+  },
+  {
+    "type": "hymn",
+    "greek": "Μητρὸς Ἀνταίας",
+    "english": "Of Mother Antaia.",
+    "number": 41
+  },
+  {
+    "type": "hymn",
+    "greek": "Μίσης",
+    "english": "To Mise",
+    "number": 42
+  },
+  {
+    "type": "hymn",
+    "greek": "Ὡρῶν",
+    "english": "Of the Horai",
+    "number": 43
+  },
+  {
+    "type": "hymn",
+    "greek": "Σεμέλης",
+    "english": "Of Semelê",
+    "number": 44
+  },
+  {
+    "type": "hymn",
+    "greek": "Ὕμνος Διονύσου Βασσαρέως Τριετηρικού.",
+    "english": "Hymn to Dionysos Bassareus, of the Trieteric rite.",
+    "number": 45
+  },
+  {
+    "type": "hymn",
+    "greek": "Λικνίτου",
+    "english": "Of Liknites",
+    "number": 46
+  },
+  {
+    "type": "hymn",
+    "greek": "Βάκχου Περικιονίου",
+    "english": "To Bakchos Perikionios",
+    "number": 47
+  },
+  {
+    "type": "hymn",
+    "greek": "Σαβαζίου",
+    "english": "To Sabazios",
+    "number": 48
+  },
+  {
+    "type": "hymn",
+    "greek": "Ἵ ππας",
+    "english": "mares",
+    "number": 49
+  },
+  {
+    "type": "hymn",
+    "greek": "Λυσίου Ληναίου ὕμνος.",
+    "english": "Hymn to Lysios Lenaios.",
+    "number": 50
+  },
+  {
+    "type": "hymn",
+    "greek": "Νυμφ ῶν",
+    "english": "Of the Nymphai",
+    "number": 51
+  },
+  {
+    "type": "hymn",
+    "greek": "Τριετηρικοῦ",
+    "english": "Of the Trieteric",
+    "number": 52
+  },
+  {
+    "type": "hymn",
+    "greek": "Ἀμφιετοῦς",
+    "english": "of the Biennial One",
+    "number": 53
+  },
+  {
+    "type": "hymn",
+    "greek": "Σιληνοῦ, σ ατύρου, Βακχ ῶν",
+    "english": "Of Seilenos, of the Satyros, of the Bacchoi.",
+    "number": 54
+  },
+  {
+    "type": "hymn",
+    "greek": "Ε ἰς Ἀφροδίτην, ὕ μνος.",
+    "english": "To Aphroditē, a hymn.",
+    "number": 55
+  },
+  {
+    "type": "hymn",
+    "greek": "Ἀδώνιδος",
+    "english": "Of Adonis",
+    "number": 56
+  },
+  {
+    "type": "hymn",
+    "greek": "Ἑ ρμο ῦ Χθονίου",
+    "english": "To Hermes Chthonios",
+    "number": 57
+  },
+  {
+    "type": "hymn",
+    "greek": "Ἔ ρωτος",
+    "english": "To Eros",
+    "number": 58
+  },
+  {
+    "type": "hymn",
+    "greek": "Μοιρ ῶν",
+    "english": "Of the Moirai",
+    "number": 59
+  },
+  {
+    "type": "hymn",
+    "greek": "Χαρίτων",
+    "english": "Of the Charites.",
+    "number": 60
+  },
+  {
+    "type": "hymn",
+    "greek": "Νεμέσεως ὕμνος.",
+    "english": "Hymn to Nemesis.",
+    "number": 61
+  },
+  {
+    "type": "hymn",
+    "greek": "Δίκης",
+    "english": "Of Dikê",
+    "number": 62
+  },
+  {
+    "type": "hymn",
+    "greek": "Δικαιοσύνης",
+    "english": "Of Justice.",
+    "number": 63
+  },
+  {
+    "type": "hymn",
+    "greek": "Ὕμνος Νόμου.",
+    "english": "Hymn to Nomos",
+    "number": 64
+  },
+  {
+    "type": "hymn",
+    "greek": "Ἄ ρεος",
+    "english": "of Ares",
+    "number": 65
+  },
+  {
+    "type": "hymn",
+    "greek": "Ἡφαίστου",
+    "english": "Of Hephaistos",
+    "number": 66
+  },
+  {
+    "type": "hymn",
+    "greek": "Ἀ σκληπιο ῦ",
+    "english": "Of Asklepios",
+    "number": 67
+  },
+  {
+    "type": "hymn",
+    "greek": "Ὑ γείας",
+    "english": "Of Hygieia",
+    "number": 68
+  },
+  {
+    "type": "hymn",
+    "greek": "Ε ὐμενίδων A",
+    "english": "To the Eumenides.",
+    "number": 69
+  },
+  {
+    "type": "hymn",
+    "greek": "Ε ὐμενίδων B",
+    "english": "To the Eumenides (B)",
+    "number": 70
+  },
+  {
+    "type": "hymn",
+    "greek": "Μηλινόης",
+    "english": "Of Melinoë",
+    "number": 71
+  },
+  {
+    "type": "hymn",
+    "greek": "Τύχης",
+    "english": "To Tychē",
+    "number": 72
+  },
+  {
+    "type": "hymn",
+    "greek": "Δαίμονος",
+    "english": "Of the Daimon",
+    "number": 73
+  },
+  {
+    "type": "hymn",
+    "greek": "Λευκοθέας",
+    "english": "To Leukothea",
+    "number": 74
+  },
+  {
+    "type": "hymn",
+    "greek": "Παλαίμονος",
+    "english": "Of Palaimon",
+    "number": 75
+  },
+  {
+    "type": "hymn",
+    "greek": "Μουσῶν",
+    "english": "of the Mousai",
+    "number": 76
+  },
+  {
+    "type": "hymn",
+    "greek": "Μνημοσύνης",
+    "english": "To Mnemosyne",
+    "number": 77
+  },
+  {
+    "type": "hymn",
+    "greek": "Ἠοῦ ς",
+    "english": "of Ēōs",
+    "number": 78
+  },
+  {
+    "type": "hymn",
+    "greek": "Θέμιδος",
+    "english": "Of Themis",
+    "number": 79
+  },
+  {
+    "type": "hymn",
+    "greek": "Βορέου",
+    "english": "To Boreas",
+    "number": 80
+  },
+  {
+    "type": "hymn",
+    "greek": "Ζεφύρου",
+    "english": "Of Zephyros",
+    "number": 81
+  },
+  {
+    "type": "hymn",
+    "greek": "Νότου",
+    "english": "Of Notos",
+    "number": 82
+  },
+  {
+    "type": "hymn",
+    "greek": "Ὠ κεανο ῦ",
+    "english": "O Okeanos!",
+    "number": 83
+  },
+  {
+    "type": "hymn",
+    "greek": "Ἑ στίας",
+    "english": "Of Hestia",
+    "number": 84
+  },
+  {
+    "type": "hymn",
+    "greek": "Ὕ πνου",
+    "english": "To Hypnos",
+    "number": 85
+  },
+  {
+    "type": "hymn",
+    "greek": "Ὀνείρου",
+    "english": "To Oneiros",
+    "number": 86
+  },
+  {
+    "type": "hymn",
+    "greek": "Θανάτου",
+    "english": "To Thanatos",
+    "number": 87
+  },
+  {
+    "type": "hymn",
+    "greek": "Ὕμνος εἰς Ἄρεα",
+    "english": "Hymn to Ares",
+    "number": 88
+  },
+  {
+    "type": "appendix",
+    "greek": "Ὀρφικὸς Ὕμνος εἰς Δία (Κοσμογονικός)",
+    "english": "Orphic Hymn to Zeus (Cosmogonic)",
+    "number": null
+  }
+]

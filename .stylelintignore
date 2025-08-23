@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+build/
+dist/
+coverage/
+
+# Generated files
+*.min.css
+
+# Archives
+# attic/ - commented out to allow IDE access
+
+# Cache directories
+.cache/
+**/.cache/
+

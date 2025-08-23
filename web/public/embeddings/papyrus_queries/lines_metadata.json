@@ -1,0 +1,46 @@
+{
+  "corpus": "papyrus_queries",
+  "type": "line_embeddings",
+  "total_lines": 9,
+  "embedding_dimension": 384,
+  "model": "all-MiniLM-L6-v2",
+  "created": "2025-08-22T12:39:52.496994",
+  "mapping": [
+    {
+      "id": "papyrus_queries_1_1_1",
+      "index": 0
+    },
+    {
+      "id": "papyrus_queries_2_1_1",
+      "index": 1
+    },
+    {
+      "id": "papyrus_queries_3_1_1",
+      "index": 2
+    },
+    {
+      "id": "papyrus_queries_4_1_1",
+      "index": 3
+    },
+    {
+      "id": "papyrus_queries_5_1_1",
+      "index": 4
+    },
+    {
+      "id": "papyrus_queries_6_1_1",
+      "index": 5
+    },
+    {
+      "id": "papyrus_queries_7_1_1",
+      "index": 6
+    },
+    {
+      "id": "papyrus_queries_8_1_1",
+      "index": 7
+    },
+    {
+      "id": "papyrus_queries_9_1_1",
+      "index": 8
+    }
+  ]
+}

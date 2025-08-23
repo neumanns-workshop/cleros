@@ -84,3 +84,6 @@ package-lock.json
 *.bak
 *.swp
 *~ /neumanns-workshop.github.io/
+
+# Archived development files (visible but not actively linted)
+# attic/ - commented out to allow IDE access

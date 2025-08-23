@@ -1,0 +1,31 @@
+{
+  "title": "Orphic Lithica",
+  "type": "epic_poem", 
+  "total_sentences": 193,
+  "sections": [
+    {
+      "title": "Introduction & Divine Gifts",
+      "section_number": 1,
+      "description": "Hermes' gifts, nature of divine knowledge, general principles",
+      "sentence_range": { "start": 1, "end": 56 }
+    },
+    {
+      "title": "Stones of Power",
+      "section_number": 2, 
+      "description": "Magical properties and uses of various stones",
+      "sentence_range": { "start": 57, "end": 112 }
+    },
+    {
+      "title": "Ritual Applications",
+      "section_number": 3,
+      "description": "Sacred practices and ceremonial uses",
+      "sentence_range": { "start": 113, "end": 150 }
+    },
+    {
+      "title": "Divine Connections",
+      "section_number": 4,
+      "description": "Links between stones and deities, cosmic principles",
+      "sentence_range": { "start": 151, "end": 193 }
+    }
+  ]
+}

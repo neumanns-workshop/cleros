@@ -1,0 +1,712 @@
+{
+  "title": "Dodona Oracle Queries — Web Edition",
+  "source_file": "dodona_oracle_queries.json",
+  "created": "2025-01-18T12:30:00.000000",
+  "format": "Web-compatible structure preserving query content",
+  "structure_method": "Individual query sections",
+  "sections": [
+    {
+      "title": "DVC 219B — Household & Safety",
+      "type": "query",
+      "query_id": "DVC 219B",
+      "category": "Household & Safety",
+      "intent": [
+        "FAMILY",
+        "SAFETY",
+        "HOUSEHOLD"
+      ],
+      "formula_type": "which-god",
+      "url": "https://dodonaonline.com/lamellae/dvc-219b/",
+      "original_line_count": 1,
+      "sentence_count": 1,
+      "sentences": [
+        {
+          "sentence_id": 1,
+          "line_range": {
+            "start": 1,
+            "end": 1,
+            "lines": [
+              1
+            ]
+          },
+          "text": {
+            "english": "To which of the gods should I pray concerning my household and safety?",
+            "greek": "τίνι θεῶν εὔχομαι περὶ οἰκίας καὶ σωτηρίας;"
+          },
+          "line_count": 1,
+          "line_details": [
+            {
+              "line": 1,
+              "english": "To which of the gods should I pray concerning my household and safety?",
+              "greek": "τίνι θεῶν εὔχομαι περὶ οἰκίας καὶ σωτηρίας;",
+              "note": "εὔχομαι in oracular petitions commonly means “pray” (often with the nuance of making a vow). The possessive with οἰκία (‘household’) is understood though not expressed. σωτηρία denotes physical safety/preservation rather than theological ‘salvation.’ The phrase τίνι θεῶν uses a partitive genitive, ‘which (one) of the gods.’"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "DVC 268A — Public: Sign/Omen",
+      "type": "query",
+      "query_id": "DVC 268A",
+      "category": "Public: Sign/Omen",
+      "intent": [
+        "PUBLIC",
+        "OMEN",
+        "PROGNOSIS"
+      ],
+      "formula_type": "sign-interpretation + better/advantageous",
+      "url": "https://dodonaonline.com/lamellae/dvc-268a/",
+      "original_line_count": 1,
+      "sentence_count": 1,
+      "sentences": [
+        {
+          "sentence_id": 1,
+          "line_range": {
+            "start": 1,
+            "end": 1,
+            "lines": [
+              1
+            ]
+          },
+          "text": {
+            "english": "The city inquires concerning the portent: what is better and more advantageous?",
+            "greek": "ἡ πόλις ἐπερωτᾷ περὶ τοῦ σημεῖου· τί λώϊον καὶ ἄμεινον;"
+          },
+          "line_count": 1,
+          "line_details": [
+            {
+              "line": 1,
+              "english": "The city inquires concerning the portent: what is better and more advantageous?",
+              "greek": "ἡ πόλις ἐπερωτᾷ περὶ τοῦ σημεῖου· τί λώϊον καὶ ἄμεινον;",
+              "note": "σημεῖον = ‘sign, portent,’ i.e., an omen attributed to Zeus; the query seeks guidance on its import. τί λώϊον καὶ ἄμεινον is a Dodonaic formula (‘what is better and more advantageous?’), with λώϊον (epic/poetic comparative) roughly synonymous with ἄμεινον; an implicit ‘course of action’ is understood."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "DVC 632 — Success / Which god",
+      "type": "query",
+      "query_id": "DVC 632",
+      "category": "Success / Which god",
+      "intent": [
+        "SUCCESS",
+        "WHICH-GOD"
+      ],
+      "formula_type": "which-god + success",
+      "url": "https://dodonaonline.com/lamellae/dvc-632/",
+      "original_line_count": 1,
+      "sentence_count": 1,
+      "sentences": [
+        {
+          "sentence_id": 1,
+          "line_range": {
+            "start": 1,
+            "end": 1,
+            "lines": [
+              1
+            ]
+          },
+          "text": {
+            "english": "To which of the gods am I to sacrifice and pray, in order that I may prosper?",
+            "greek": "τίνι θεῶν θύω καὶ εὔχομαι ἵνα εὖ πράξω;"
+          },
+          "line_count": 1,
+          "line_details": [
+            {
+              "line": 1,
+              "english": "To which of the gods am I to sacrifice and pray, in order that I may prosper?",
+              "greek": "τίνι θεῶν θύω καὶ εὔχομαι ἵνα εὖ πράξω;",
+              "note": "θύω denotes offering (typically animal) sacrifice; εὔχομαι here has the cultic sense “to pray.” The idiom εὖ πράξω means “to prosper, fare well.” The construction ἵνα + subjunctive (πράξω) expresses purpose. The present indicative in this consultative question (“am I to…?”) is common in Dodona queries."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "DVC 1093A — Safety of Family",
+      "type": "query",
+      "query_id": "DVC 1093A",
+      "category": "Safety of Family",
+      "intent": [
+        "FAMILY",
+        "SAFETY",
+        "HEALTH"
+      ],
+      "formula_type": "concerning-safety",
+      "url": "https://dodonaonline.com/lamellae/dvc-1093a/",
+      "original_line_count": 1,
+      "sentence_count": 1,
+      "sentences": [
+        {
+          "sentence_id": 1,
+          "line_range": {
+            "start": 1,
+            "end": 1,
+            "lines": [
+              1
+            ]
+          },
+          "text": {
+            "english": "Concerning the safety of the child and the wife: what should be done?",
+            "greek": "περὶ σωτηρίας παιδὸς καὶ γυναικός· τί χρὴ ποιεῖν;"
+          },
+          "line_count": 1,
+          "line_details": [
+            {
+              "line": 1,
+              "english": "Concerning the safety of the child and the wife: what should be done?",
+              "greek": "περὶ σωτηρίας παιδὸς καὶ γυναικός· τί χρὴ ποιεῖν;",
+              "note": "σωτηρία denotes safety/preservation; I render it as “safety.” The possessive (“my”) is understood from context but not expressed. τί χρὴ ποιεῖν is the stereotyped Dodona formula, literally “what is it necessary to do?”, here translated idiomatically as “what should be done?”."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "DVC 1124B — Legal Dispute (general)",
+      "type": "query",
+      "query_id": "DVC 1124B",
+      "category": "Legal Dispute (general)",
+      "intent": [
+        "LEGAL"
+      ],
+      "formula_type": "concerning-X",
+      "url": "https://dodonaonline.com/lamellae/dvc-1124b/",
+      "original_line_count": 1,
+      "sentence_count": 1,
+      "sentences": [
+        {
+          "sentence_id": 1,
+          "line_range": {
+            "start": 1,
+            "end": 1,
+            "lines": [
+              1
+            ]
+          },
+          "text": {
+            "english": "Concerning the lawsuit: what should be done?",
+            "greek": "περὶ τῆς δίκης· τί χρή;"
+          },
+          "line_count": 1,
+          "line_details": [
+            {
+              "line": 1,
+              "english": "Concerning the lawsuit: what should be done?",
+              "greek": "περὶ τῆς δίκης· τί χρή;",
+              "note": "δίκη here means a legal case/lawsuit rather than abstract ‘justice’; τί χρή is an abbreviated oracular formula for τί χρὴ (ποιεῖν), ‘what should [one] do?’"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "DVC 1148A — Travel",
+      "type": "query",
+      "query_id": "DVC 1148A",
+      "category": "Travel",
+      "intent": [
+        "TRAVEL",
+        "SAFETY"
+      ],
+      "formula_type": "travel-safety",
+      "url": "https://dodonaonline.com/lamellae/dvc-1148a/",
+      "original_line_count": 1,
+      "sentence_count": 1,
+      "sentences": [
+        {
+          "sentence_id": 1,
+          "line_range": {
+            "start": 1,
+            "end": 1,
+            "lines": [
+              1
+            ]
+          },
+          "text": {
+            "english": "Concerning a journey: is it safe? What is preferable?",
+            "greek": "περὶ πορείας· ἆρ’ ἀσφαλές; τί λώϊον;"
+          },
+          "line_count": 1,
+          "line_details": [
+            {
+              "line": 1,
+              "english": "Concerning a journey: is it safe? What is preferable?",
+              "greek": "περὶ πορείας· ἆρ’ ἀσφαλές; τί λώϊον;",
+              "note": "πορεία means ‘journey/travel’ (also ‘march’ in military contexts). ἆρα marks a yes/no question; ἀσφαλές is the neuter predicate ‘safe.’ τί λώϊον employs the comparative λώϊος ‘better, preferable,’ with an ellipsis of the understood course of action (‘to do’), a typical Dodona brevity."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "DVC 1268A — Procreation / Progeny",
+      "type": "query",
+      "query_id": "DVC 1268A",
+      "category": "Procreation / Progeny",
+      "intent": [
+        "PROCREATION",
+        "FAMILY"
+      ],
+      "formula_type": "which-god",
+      "url": "https://dodonaonline.com/lamellae/dvc-1268a/",
+      "original_line_count": 1,
+      "sentence_count": 1,
+      "sentences": [
+        {
+          "sentence_id": 1,
+          "line_range": {
+            "start": 1,
+            "end": 1,
+            "lines": [
+              1
+            ]
+          },
+          "text": {
+            "english": "Concerning progeny: To which of the gods should I pray or offer sacrifice, so that children may be born?",
+            "greek": "περὶ γενεᾶς· τίνι θεῶν εὔχομαι ἢ θύω ἵνα τέκνα γένηται;"
+          },
+          "line_count": 1,
+          "line_details": [
+            {
+              "line": 1,
+              "english": "Concerning progeny: To which of the gods should I pray or offer sacrifice, so that children may be born?",
+              "greek": "περὶ γενεᾶς· τίνι θεῶν εὔχομαι ἢ θύω ἵνα τέκνα γένηται;",
+              "note": "περὶ γενεᾶς functions as a topic heading (“concerning offspring/lineage”). τίνι θεῶν combines the dative of the verb with a partitive genitive (“which of the gods”). εὔχομαι here = “pray” (cultic), and θύω = “offer sacrifice.” ἵνα τέκνα γένηται expresses purpose; the subject and beneficiary (“to me/us”) are understood."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "DVC 1313B — Business",
+      "type": "query",
+      "query_id": "DVC 1313B",
+      "category": "Business",
+      "intent": [
+        "BUSINESS",
+        "SUCCESS"
+      ],
+      "formula_type": "if-better-or-advantageous",
+      "url": "https://dodonaonline.com/lamellae/dvc-1313b/",
+      "original_line_count": 1,
+      "sentence_count": 1,
+      "sentences": [
+        {
+          "sentence_id": 1,
+          "line_range": {
+            "start": 1,
+            "end": 1,
+            "lines": [
+              1
+            ]
+          },
+          "text": {
+            "english": "Concerning a business undertaking: what is more advantageous and better?",
+            "greek": "περὶ πραγματείας· τί λώϊον καὶ ἄμεινον;"
+          },
+          "line_count": 1,
+          "line_details": [
+            {
+              "line": 1,
+              "english": "Concerning a business undertaking: what is more advantageous and better?",
+              "greek": "περὶ πραγματείας· τί λώϊον καὶ ἄμεινον;",
+              "note": "πραγματεία has a broad range (“affair, occupation, enterprise;” sometimes even “lawsuit”); in Dodona dossiers it often denotes trade or a business venture, hence the rendering “business undertaking.” λώϊον (epic form, with diaeresis) means “more advantageous/preferable,” and its pairing with ἄμεινον (“better”) is a formulaic pleonasm in oracular questions; the object (“what [course of action]”) is understood elliptically."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "DVC 1381B — Possessions / Property",
+      "type": "query",
+      "query_id": "DVC 1381B",
+      "category": "Possessions / Property",
+      "intent": [
+        "PROPERTY",
+        "WEALTH"
+      ],
+      "formula_type": "concerning-X",
+      "url": "https://dodonaonline.com/lamellae/dvc-1381b/",
+      "original_line_count": 1,
+      "sentence_count": 1,
+      "sentences": [
+        {
+          "sentence_id": 1,
+          "line_range": {
+            "start": 1,
+            "end": 1,
+            "lines": [
+              1
+            ]
+          },
+          "text": {
+            "english": "Concerning property: what ought to be done?",
+            "greek": "περὶ κτημάτων· τί χρή;"
+          },
+          "line_count": 1,
+          "line_details": [
+            {
+              "line": 1,
+              "english": "Concerning property: what ought to be done?",
+              "greek": "περὶ κτημάτων· τί χρή;",
+              "note": "τί χρή is an elliptical oracular formula for “what ought [to be done]?”, with impersonal χρή (‘it is necessary/one ought’); κτήματα denotes possessions or estate."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "DVC 1395A — Manumission",
+      "type": "query",
+      "query_id": "DVC 1395A",
+      "category": "Manumission",
+      "intent": [
+        "SLAVERY",
+        "LEGAL"
+      ],
+      "formula_type": "if-better-or-advantageous",
+      "url": "https://dodonaonline.com/lamellae/dvc-1395a/",
+      "original_line_count": 1,
+      "sentence_count": 1,
+      "sentences": [
+        {
+          "sentence_id": 1,
+          "line_range": {
+            "start": 1,
+            "end": 1,
+            "lines": [
+              1
+            ]
+          },
+          "text": {
+            "english": "Concerning the manumission of a slave: what is better and more advantageous?",
+            "greek": "περὶ ἀφέσεως δούλου· τί λώϊον καὶ ἄμεινον;"
+          },
+          "line_count": 1,
+          "line_details": [
+            {
+              "line": 1,
+              "english": "Concerning the manumission of a slave: what is better and more advantageous?",
+              "greek": "περὶ ἀφέσεως δούλου· τί λώϊον καὶ ἄμεινον;",
+              "note": "ἀφέσεως: legal term for the release/manumission of a slave; at Dodona typically refers to freeing a slave by dedication to the god. τί λώϊον καὶ ἄμεινον: a standard oracular formula asking for the preferable course (‘which is better and more advantageous?’), elliptical for ‘what should one do?’."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "DVC 1411 — Manumission / Judgment",
+      "type": "query",
+      "query_id": "DVC 1411",
+      "category": "Manumission / Judgment",
+      "intent": [
+        "SLAVERY",
+        "LEGAL"
+      ],
+      "formula_type": "concerning-X",
+      "url": "https://dodonaonline.com/lamellae/dvc-1411/",
+      "original_line_count": 1,
+      "sentence_count": 1,
+      "sentences": [
+        {
+          "sentence_id": 1,
+          "line_range": {
+            "start": 1,
+            "end": 1,
+            "lines": [
+              1
+            ]
+          },
+          "text": {
+            "english": "Concerning release or adjudication: what is to be done?",
+            "greek": "περὶ ἀφέσεως ἢ κρίσεως· τί χρή;"
+          },
+          "line_count": 1,
+          "line_details": [
+            {
+              "line": 1,
+              "english": "Concerning release or adjudication: what is to be done?",
+              "greek": "περὶ ἀφέσεως ἢ κρίσεως· τί χρή;",
+              "note": "ἀφέσις here likely means abandoning/remitting a legal claim (i.e., dropping the suit), contrasted with κρίσις “judgment/adjudication, trial.” τί χρὴ is elliptic for “what should (I/we) do?” in oracular queries."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "DVC 2319A — Harvest / Crops",
+      "type": "query",
+      "query_id": "DVC 2319A",
+      "category": "Harvest / Crops",
+      "intent": [
+        "AGRICULTURE",
+        "SUCCESS"
+      ],
+      "formula_type": "if-will-happen",
+      "url": "https://dodonaonline.com/lamellae/dvc-2319a/",
+      "original_line_count": 1,
+      "sentence_count": 1,
+      "sentences": [
+        {
+          "sentence_id": 1,
+          "line_range": {
+            "start": 1,
+            "end": 1,
+            "lines": [
+              1
+            ]
+          },
+          "text": {
+            "english": "Concerning the crops: would they turn out complete?",
+            "greek": "περὶ τῶν καρπῶν· ἦ ἂν ἐντελεῖς γένοιντο;"
+          },
+          "line_count": 1,
+          "line_details": [
+            {
+              "line": 1,
+              "english": "Concerning the crops: would they turn out complete?",
+              "greek": "περὶ τῶν καρπῶν· ἦ ἂν ἐντελεῖς γένοιντο;",
+              "note": "ἐντελεῖς (“complete, entire”) here likely conveys “full/abundant” with reference to the yield; γένοιντο is the potential optative (“would they become/turn out”), with ἦ ἄν marking a question about the prospective outcome. “Crops” renders καρποί in its agricultural sense."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "DVC 2384B — Payment / Money",
+      "type": "query",
+      "query_id": "DVC 2384B",
+      "category": "Payment / Money",
+      "intent": [
+        "DEBT",
+        "MONEY"
+      ],
+      "formula_type": "concerning-X",
+      "url": "https://dodonaonline.com/lamellae/dvc-2384b/",
+      "original_line_count": 1,
+      "sentence_count": 1,
+      "sentences": [
+        {
+          "sentence_id": 1,
+          "line_range": {
+            "start": 1,
+            "end": 1,
+            "lines": [
+              1
+            ]
+          },
+          "text": {
+            "english": "Concerning repayment/fulfilment: what should be done?",
+            "greek": "περὶ ἀποδοσέως/πληρωμῆς· τί χρή;"
+          },
+          "line_count": 1,
+          "line_details": [
+            {
+              "line": 1,
+              "english": "Concerning repayment/fulfilment: what should be done?",
+              "greek": "περὶ ἀποδοσέως/πληρωμῆς· τί χρή;",
+              "note": "ἀποδοσέως/πληρωμῆς presents alternative or variant terms; both denote “payment/fulfilment,” often of a vow or other obligation. τί χρή is a standard oracular formula meaning “what is necessary/what should be done?”"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "DVC 2430 — Olive tree (supplement)",
+      "type": "query",
+      "query_id": "DVC 2430",
+      "category": "Olive tree (supplement)",
+      "intent": [
+        "RITUAL",
+        "AGRICULTURE"
+      ],
+      "formula_type": "supplementary-question",
+      "url": "https://dodonaonline.com/lamellae/dvc-2430/",
+      "original_line_count": 1,
+      "sentence_count": 1,
+      "sentences": [
+        {
+          "sentence_id": 1,
+          "line_range": {
+            "start": 1,
+            "end": 1,
+            "lines": [
+              1
+            ]
+          },
+          "text": {
+            "english": "or belonging to another and not this one?",
+            "greek": "ἢ ἀλλότριον καὶ οὐ τήνδε;"
+          },
+          "line_count": 1,
+          "line_details": [
+            {
+              "line": 1,
+              "english": "or belonging to another and not this one?",
+              "greek": "ἢ ἀλλότριον καὶ οὐ τήνδε;",
+              "note": "ἀλλότριον (neut.) means “belonging to another; someone else’s,” used substantively. The feminine demonstrative τήνδε (“this [one]”) presupposes a feminine noun understood from the context (e.g., γυνή “woman/wife”). The gender mismatch suggests ellipsis typical of Dodona queries; some editors emend to ἀλλοτρίαν to agree with an implied feminine referent. The line is the second alternative in a binary question."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "DVC 2432 — Ritual prescription (olive tree)",
+      "type": "query",
+      "query_id": "DVC 2432",
+      "category": "Ritual prescription (olive tree)",
+      "intent": [
+        "RITUAL",
+        "AGRICULTURE"
+      ],
+      "formula_type": "answer-prescribing-rites",
+      "url": "https://dodonaonline.com/lamellae/dvc-2432/",
+      "original_line_count": 1,
+      "sentence_count": 1,
+      "sentences": [
+        {
+          "sentence_id": 1,
+          "line_range": {
+            "start": 1,
+            "end": 1,
+            "lines": [
+              1
+            ]
+          },
+          "text": {
+            "english": "[lacuna / no text]",
+            "greek": "—"
+          },
+          "line_count": 1,
+          "line_details": [
+            {
+              "line": 1,
+              "english": "[lacuna / no text]",
+              "greek": "—",
+              "note": "The line consists only of an em dash, which in editorial practice typically marks a lacuna or illegible/missing text; there is no Greek to translate. Without further context from the tablet or edition, the content cannot be restored."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "DVC 2521A — Legal Dispute: Win?",
+      "type": "query",
+      "query_id": "DVC 2521A",
+      "category": "Legal Dispute: Win?",
+      "intent": [
+        "LEGAL",
+        "OUTCOME"
+      ],
+      "formula_type": "if-will-win",
+      "url": "https://dodonaonline.com/lamellae/dvc-2521a/",
+      "original_line_count": 1,
+      "sentence_count": 1,
+      "sentences": [
+        {
+          "sentence_id": 1,
+          "line_range": {
+            "start": 1,
+            "end": 1,
+            "lines": [
+              1
+            ]
+          },
+          "text": {
+            "english": "Shall I win the lawsuit?",
+            "greek": "αἶ νικήσω τὴν δίκην;"
+          },
+          "line_count": 1,
+          "line_details": [
+            {
+              "line": 1,
+              "english": "Shall I win the lawsuit?",
+              "greek": "αἶ νικήσω τὴν δίκην;",
+              "note": "αἶ is a Northwest Greek/Doric yes–no interrogative particle (cf. Attic ἆρα). νικήσω is formally ambiguous between future indicative and aorist subjunctive; in oracle questions it is best taken as future indicative. δίκη here means ‘lawsuit, legal case,’ not abstract ‘justice.’"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "DVC 2525A — Health (what to do)",
+      "type": "query",
+      "query_id": "DVC 2525A",
+      "category": "Health (what to do)",
+      "intent": [
+        "HEALTH",
+        "HOW-TO"
+      ],
+      "formula_type": "what-should-I-do",
+      "url": "https://dodonaonline.com/lamellae/dvc-2525a/",
+      "original_line_count": 1,
+      "sentence_count": 1,
+      "sentences": [
+        {
+          "sentence_id": 1,
+          "line_range": {
+            "start": 1,
+            "end": 1,
+            "lines": [
+              1
+            ]
+          },
+          "text": {
+            "english": "Concerning my body: what should I do to be in good health?",
+            "greek": "περὶ τοῦ σώματος· τί ποιήσας/ποιήσω ὑγιαίνω;"
+          },
+          "line_count": 1,
+          "line_details": [
+            {
+              "line": 1,
+              "english": "Concerning my body: what should I do to be in good health?",
+              "greek": "περὶ τοῦ σώματος· τί ποιήσας/ποιήσω ὑγιαίνω;",
+              "note": "The transmitted text has a variant ποιήσας/ποιήσω: either an aorist participle (‘having done [what]’) or a deliberative aorist subjunctive (‘what should I do?’). In both, a purpose relation to ὑγιαίνω (‘be in good health’) is understood, with ἵνα/ὅπως often omitted in Dodona formulae; the present ὑγιαίνω carries the sense ‘so that I may be healthy.’ περὶ τοῦ σώματος is the standard rubric ‘about [my] body/health.’"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "DVC 3009A — Health",
+      "type": "query",
+      "query_id": "DVC 3009A",
+      "category": "Health",
+      "intent": [
+        "HEALTH"
+      ],
+      "formula_type": "concerning-X",
+      "url": "https://dodonaonline.com/lamellae/dvc-3009a/",
+      "original_line_count": 1,
+      "sentence_count": 1,
+      "sentences": [
+        {
+          "sentence_id": 1,
+          "line_range": {
+            "start": 1,
+            "end": 1,
+            "lines": [
+              1
+            ]
+          },
+          "text": {
+            "english": "Concerning health: what is to be done?",
+            "greek": "περὶ ὑγιείας· τί χρή;"
+          },
+          "line_count": 1,
+          "line_details": [
+            {
+              "line": 1,
+              "english": "Concerning health: what is to be done?",
+              "greek": "περὶ ὑγιείας· τί χρή;",
+              "note": "τί χρή is a formulaic oracular inquiry using the impersonal χρή (“it is necessary/required”), with an implied infinitive such as ποιεῖν; hence the sense is “what should be done?” (often understood as “what should I do?”). The subject is unspecified."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

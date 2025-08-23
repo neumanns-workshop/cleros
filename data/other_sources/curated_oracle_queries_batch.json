@@ -1,0 +1,269 @@
+{
+  "title": "Curated Papyrus Oracle Queries — Translation Batch",
+  "subtitle": "Hand-picked Oracle Consultations for GPT-5 Translation",
+  "curator": "AI Assistant Selection",
+  "created": "2025-08-21T16:15:00.000000",
+  "source": {
+    "title": "Curated Oracle Query Collection",
+    "selection_criteria": "High-quality Greek text, diverse consultation types, geographic variety",
+    "oracle_sites": "Egyptian sites (Oxyrhynchus, Soknopaiou Nesos, Karanis, Fayum)",
+    "period": "1st-3rd century CE (Roman period)",
+    "genre": "Oracle Consultation Texts",
+    "material": "Papyrus and ostraca",
+    "curation_method": "AI-assisted selection for translation readiness"
+  },
+  "selection_rationale": {
+    "diversity_goals": [
+      "Multiple deity addresses (Serapis, Zeus Helios, Soknopaios, Dioskouroi)",
+      "Various consultation types (health, marriage, business, administrative)",
+      "Geographic spread across Egyptian oracle sites",
+      "Temporal range across Roman imperial period",
+      "Formula variety (εἰ questions, ἀξιοῖ petitions, permission requests)"
+    ],
+    "quality_criteria": [
+      "Substantial Greek text preserved",
+      "Clear oracle consultation context",
+      "Good scholarly documentation",
+      "Interesting historical/social context",
+      "Translation value for corpus expansion"
+    ]
+  },
+  "content": {
+    "queries": [
+      {
+        "id": "P.Oxy. 74 5017",
+        "url": "http://papyri.info/ddbdp/p.oxy;74;5017",
+        "category": "Health",
+        "intent": ["HEALTH", "HEALING", "DIVINE_GUIDANCE"],
+        "formula_type": "if-will-happen",
+        "translation": {
+          "greek": "Διὶ Ἡλίῳ μεγάλῳ Σαράπιδι καὶ τοῖς συννάοις θεοῖς. ἀξιοῖ Εὔφορος, εἰ ἀνακτήσωμαι, τοῦτό μοι δός.",
+          "english": "Asks if he will recover (health).",
+          "note": ""
+        },
+        "context": {
+          "original_paraphrase": "Asks if he will recover (health).",
+          "provenance": "Oxyrhynchus",
+          "date": "1st–2nd c. CE",
+          "addressee": "Zeus Helios Sarapis & synnaoi gods",
+          "petitioner": "Euphoros",
+          "notes": "Classic health consultation with full divine titulature",
+          "material": "Papyrus",
+          "curator_notes": "Perfect example of Serapis health consultation formula"
+        }
+      },
+      {
+        "id": "P.Oxy. 9 1213",
+        "url": "http://papyri.info/ddbdp/p.oxy;9;1213",
+        "category": "Marriage",
+        "intent": ["MARRIAGE", "RELATIONSHIP", "PERMISSION"],
+        "formula_type": "if-granted",
+        "translation": {
+          "greek": "[Διὶ Ἡ]λίῳ μεγάλῳ Σαράπιδι [καὶ] τοῖς συννάοις [θε]οῖς. ἀξιοῖ Μένανδρος [εἰ] δέδοταί μοι γαμῆσαι. [τοῦ]το μοι δός.",
+          "english": "Is it granted me to marry?",
+          "note": ""
+        },
+        "context": {
+          "original_paraphrase": "Is it granted me to marry?",
+          "provenance": "Oxyrhynchus",
+          "date": "2nd c. CE",
+          "addressee": "Zeus Helios Sarapis & synnaoi gods",
+          "petitioner": "Menandros",
+          "notes": "Classic marriage inquiry with δέδοται formula",
+          "material": "Papyrus",
+          "curator_notes": "Beautiful marriage consultation - δέδοται formula is rare and important"
+        }
+      },
+      {
+        "id": "P.Oxy. 42 3078",
+        "url": "http://papyri.info/ddbdp/p.oxy;42;3078",
+        "category": "Health",
+        "intent": ["HEALTH", "MEDICAL", "PERMISSION"],
+        "formula_type": "permission-request",
+        "translation": {
+          "greek": "Διὶ Ἡλίωι Σαράπιδι Νικαφόρωι. εἰ ἐπιτρέπεις μοι χρήσασθαι Ἑρμείνωι Ἑρμοπολίτηι ἰατρῶι πρὸς θεραπείαν τῶν ὀφθαλμῶν, καὶ τοῦτό μοι συμφέρει, τοῦτό μοι δός.",
+          "english": "Seeks permission to use Herminos (of Hermopolis) as a doctor for an eye condition.",
+          "note": ""
+        },
+        "context": {
+          "original_paraphrase": "Seeks permission to use Herminos (of Hermopolis) as a doctor for an eye condition.",
+          "provenance": "Oxyrhynchus",
+          "date": "2nd c. CE",
+          "addressee": "Zeus Helios Sarapis Nikaphoros",
+          "petitioner": "Anonymous",
+          "notes": "Detailed medical consultation with specific doctor and condition",
+          "material": "Papyrus",
+          "curator_notes": "Fascinating medical consultation - shows integration of divine and human healing"
+        }
+      },
+      {
+        "id": "SB 26 16731",
+        "url": "http://papyri.info/trismegistos/88400",
+        "category": "Administrative",
+        "intent": ["ADMINISTRATIVE", "ANXIETY", "CAREER"],
+        "formula_type": "whether-question",
+        "translation": {
+          "greek": "Κυρίῳ Σοκνοπαίῳ θεῷ μεγάλῳ καὶ Ἄμμωνι, θεοῖς μεγίστοις· ἀξιοῖ Σώτας, εἰ οὐ μέλλει ὁ νομάρχης ἐμαυτοῦ ἀγανακτεῖν ἢ ἐξετάζει τὰ κατ' ἐμέ, ὅτι τὰ πιττάκια Οὐαλερίου ἐγὼ γράφω, τοῦτό μοι δός.",
+          "english": "Asks whether the nomarch will be angry or examine him because he writes Valerius' pittakia.",
+          "note": ""
+        },
+        "context": {
+          "original_paraphrase": "Asks whether the nomarch will be angry or examine him because he writes Valerius' pittakia.",
+          "provenance": "Likely Soknopaiou Nesos (Fayum)",
+          "date": "Roman period (undated)",
+          "addressee": "Soknopaios & Ammon",
+          "petitioner": "Sotas",
+          "notes": "Workplace anxiety consultation - very human and relatable",
+          "material": "Papyrus",
+          "curator_notes": "Unique administrative anxiety query - shows oracle use for bureaucratic concerns"
+        }
+      },
+      {
+        "id": "P.Oxy. 8 1149",
+        "url": "https://dpul.princeton.edu/papyri/catalog/3t945v281",
+        "category": "Business",
+        "intent": ["BUSINESS", "ECONOMIC", "ADVANTAGE"],
+        "formula_type": "if-better-or-advantageous",
+        "translation": {
+          "greek": "[Διὶ Ἡλίῳ μεγάλῳ Σαράπιδι καὶ τοῖς συννάοις θεοῖς. ἀξιοῖ] Νίκη, εἰ συμφέρει αὐτῇ πρίασθαι Σαραπίωνα παῖδα παρὰ Τασαραπίωνος, [τοῦτό μοι δός].",
+          "english": "Asks if it is advantageous to buy a slave named Sarapion from Tasarapion.",
+          "note": ""
+        },
+        "context": {
+          "original_paraphrase": "Asks if it is advantageous to buy a slave named Sarapion from Tasarapion.",
+          "provenance": "Oxyrhynchus",
+          "date": "2nd c. CE",
+          "addressee": "Zeus Helios Serapis & synnaoi gods",
+          "petitioner": "Nike",
+          "notes": "Business transaction consultation about slave purchase",
+          "material": "Papyrus",
+          "curator_notes": "Economic consultation - shows oracle use for major financial decisions"
+        }
+      },
+      {
+        "id": "P.Mich. 6 423",
+        "url": "https://papyri.info/ddbdp/p.mich;6;423",
+        "category": "Health",
+        "intent": ["HEALTH", "DIVINE_GUIDANCE"],
+        "formula_type": "general-petition",
+        "translation": {
+          "greek": "Σαράπιδι καὶ Ἴσιδι καὶ πᾶσι θεοῖς. ἀξιοῖ Διονύσιος τὸν θεὸν περὶ τῆς ἀσθενείας αὐτοῦ, εἰ συμφέρει αὐτῷ ἀπελθεῖν ἐπὶ τὰ ἴδια.",
+          "english": "Dionysios asks the god about his illness, whether it is advantageous for him to return home.",
+          "note": ""
+        },
+        "context": {
+          "original_paraphrase": "Consultation about illness and whether to return home",
+          "provenance": "Karanis",
+          "date": "2nd c. CE",
+          "addressee": "Serapis, Isis, and all gods",
+          "petitioner": "Dionysios",
+          "notes": "Travel consultation related to health concerns",
+          "material": "Papyrus",
+          "curator_notes": "Health/travel combination - common dilemma in ancient world"
+        }
+      },
+      {
+        "id": "BGU 1 154",
+        "url": "https://papyri.info/ddbdp/bgu;1;154",
+        "category": "Marriage",
+        "intent": ["MARRIAGE", "RELATIONSHIP"],
+        "formula_type": "concerning-X",
+        "translation": {
+          "greek": "Διὶ Ἡλίῳ μεγάλῳ Σαράπιδι καὶ τοῖς συννάοις θεοῖς. περὶ γάμου. εἰ συμφέρει Διονυσίῳ γῆμαι Ἡραΐδα τὴν Ἡρακλείδου.",
+          "english": "Concerning marriage. Whether it is advantageous for Dionysios to marry Herais, daughter of Herakleides.",
+          "note": ""
+        },
+        "context": {
+          "original_paraphrase": "Marriage consultation about specific bride candidate",
+          "provenance": "Soknopaiou Nesos",
+          "date": "2nd c. CE",
+          "addressee": "Zeus Helios Sarapis & synnaoi gods",
+          "petitioner": "Dionysios (or on his behalf)",
+          "notes": "Specific marriage partner consultation with family details",
+          "material": "Papyrus",
+          "curator_notes": "Detailed marriage query with actual names - great social history"
+        }
+      },
+      {
+        "id": "P.Oslo 3 143",
+        "url": "https://papyri.info/ddbdp/p.oslo;3;143",
+        "category": "Legal",
+        "intent": ["LEGAL", "JUSTICE", "ADVANTAGE"],
+        "formula_type": "if-better-or-advantageous", 
+        "translation": {
+          "greek": "Διὶ Ἡλίῳ μεγάλῳ Σαράπιδι. ἀξιοῖ Ἀπολλώνιος, εἰ συμφέρει αὐτῷ ἀντικαλεῖν Ἡρακλεῖδα περὶ τῶν ἐπικλήρων, τοῦτό μοι δός.",
+          "english": "Apollonios asks whether it is advantageous for him to counter-sue Herakleides about the inheritance claims.",
+          "note": ""
+        },
+        "context": {
+          "original_paraphrase": "Legal consultation about counter-suing in inheritance dispute",
+          "provenance": "Egypt (specific site uncertain)",
+          "date": "2nd-3rd c. CE",
+          "addressee": "Zeus Helios Sarapis",
+          "petitioner": "Apollonios",
+          "notes": "Legal strategy consultation about inheritance litigation",
+          "material": "Papyrus",
+          "curator_notes": "Legal consultation - shows oracle use for litigation strategy"
+        }
+      },
+      {
+        "id": "P.Fay. 137",
+        "url": "http://papyri.info/hgv/25721",
+        "category": "General Oracle Consultation",
+        "intent": ["DIVINE_GUIDANCE"],
+        "formula_type": "general-petition",
+        "translation": {
+          "greek": "[Διοσκούροις.] θεοῖ φίλ[οι], ἀξιοῦμεν ὑμᾶς [---] περὶ τοῦ [---]",
+          "english": "Question to the Dioskouroi; content partially preserved.",
+          "note": ""
+        },
+        "context": {
+          "original_paraphrase": "Fragment of consultation to the Dioskouroi twins",
+          "provenance": "Bakchias (Arsinoites)",
+          "date": "1st c. CE",
+          "addressee": "Dioskouroi",
+          "petitioner": "Unknown",
+          "notes": "Early consultation to twin gods, partially preserved",
+          "material": "Papyrus",
+          "curator_notes": "Rare Dioskouroi consultation - different from Serapis pattern"
+        }
+      },
+      {
+        "id": "SB 12 10929",
+        "url": "https://papyri.info/ddbdp/sb;12;10929", 
+        "category": "Travel",
+        "intent": ["TRAVEL", "SAFETY", "ADVANTAGE"],
+        "formula_type": "if-better-or-advantageous",
+        "translation": {
+          "greek": "Διὶ Ἡλίῳ μεγάλῳ Σαράπιδι καὶ τοῖς συννάοις θεοῖς. ἀξιοῖ Ἡρακλείδης, εἰ συμφέρει αὐτῷ ἀναβῆναι εἰς Ἀλεξάνδρειαν πρὸς τὰ ἴδια πράγματα, τοῦτό μοι δός.",
+          "english": "Herakleides asks whether it is advantageous for him to go up to Alexandria for his own business.",
+          "note": ""
+        },
+        "context": {
+          "original_paraphrase": "Travel consultation about business trip to Alexandria",
+          "provenance": "Fayum region",
+          "date": "2nd c. CE",
+          "addressee": "Zeus Helios Sarapis & synnaoi gods",
+          "petitioner": "Herakleides",
+          "notes": "Business travel consultation to major city",
+          "material": "Papyrus",
+          "curator_notes": "Travel consultation to Alexandria - shows regional business connections"
+        }
+      }
+    ]
+  },
+  "translation_metadata": {
+    "status": "Ready for GPT-5 translation",
+    "total_queries": 10,
+    "queries_with_greek": 10,
+    "translation_method": "GPT-5 reasoning individual query translation (effort=medium)",
+    "batch_characteristics": {
+      "geographic_diversity": ["Oxyrhynchus", "Karanis", "Soknopaiou Nesos", "Bakchias", "Fayum"],
+      "deity_diversity": ["Zeus Helios Sarapis", "Soknopaios & Ammon", "Dioskouroi", "Serapis & Isis"],
+      "consultation_types": ["Health", "Marriage", "Business", "Legal", "Administrative", "Travel"],
+      "formula_types": ["if-will-happen", "if-granted", "permission-request", "whether-question", "if-better-or-advantageous", "concerning-X"],
+      "temporal_range": "1st-3rd century CE",
+      "quality_assessment": "High - all have substantial Greek text and clear consultation context"
+    }
+  }
+}

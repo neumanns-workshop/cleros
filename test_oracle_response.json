@@ -1,0 +1,54 @@
+{
+  "timestamp": 1755863444.9589992,
+  "query": "Test query about wisdom and guidance",
+  "random_source": "local",
+  "selections": {
+    "hymns": {
+      "corpus_name": "Orphic Hymns",
+      "role": "Invocation",
+      "sentence_id": 159,
+      "section_title": "Ὑ γείας",
+      "line_range": {
+        "start": 11,
+        "end": 11,
+        "lines": [
+          11
+        ]
+      },
+      "text": "For you alone hold sway over all, and you rule all.",
+      "line_count": 1
+    },
+    "argonautica": {
+      "corpus_name": "Orphic Argonautica",
+      "role": "Narrative",
+      "sentence_id": 19,
+      "section_title": "Orphic Argonautica — Side-by-Side Edition",
+      "line_range": {
+        "start": 82,
+        "end": 82,
+        "lines": [
+          82
+        ]
+      },
+      "text": "A Thessalian, Aisonides; and I declare myself your guest‑friend.",
+      "line_count": 1
+    },
+    "lithica": {
+      "corpus_name": "Orphic Lithica",
+      "role": "Praxis",
+      "sentence_id": 81,
+      "section_title": "Orphic Lithica - Parallel Edition",
+      "line_range": {
+        "start": 303,
+        "end": 305,
+        "lines": [
+          303,
+          304,
+          305
+        ]
+      },
+      "text": "For into them indeed Hēlios cast a great life-bringing breath, so that mortals straightway might acc...",
+      "line_count": 3
+    }
+  }
+}

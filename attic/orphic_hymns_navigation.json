@@ -1,0 +1,36 @@
+{
+  "title": "Orphic Hymns",
+  "type": "hymnal_collection", 
+  "total_sentences": 218,
+  "hymns": [
+    {
+      "title": "Orpheus to Mousaios",
+      "hymn_number": 0,
+      "type": "proem",
+      "description": "Prologue and invocation of divine powers",
+      "sentence_range": { "start": 1, "end": 3 }
+    },
+    {
+      "title": "To Hekate",
+      "hymn_number": 1,
+      "type": "hymn", 
+      "description": "Invocation to the goddess of crossroads and magic",
+      "sentence_range": { "start": 4, "end": 6 }
+    },
+    {
+      "title": "To Prothyraia",
+      "hymn_number": 2,
+      "type": "hymn",
+      "description": "To the goddess who guards doorways",
+      "sentence_range": { "start": 7, "end": 9 }
+    },
+    {
+      "title": "To Night",
+      "hymn_number": 3,
+      "type": "hymn",
+      "description": "To the primordial goddess of night", 
+      "sentence_range": { "start": 10, "end": 12 }
+    }
+  ],
+  "note": "This is a sample structure - the complete file would include all 87 hymns with their proper sentence ranges"
+}
