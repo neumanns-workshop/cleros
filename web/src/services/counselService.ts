@@ -26,6 +26,20 @@ export interface SentenceEmbeddingData {
   corpusData: CorpusData; // The unified corpus file
 }
 
+export interface EnhancedSentenceData {
+  sentence_id: number;
+  text: {
+    english: string;
+    greek?: string;
+  };
+  line_details: LineDetail[];
+  line_count?: number;
+  part_number: number;
+  part_title: string;
+  incense?: string;
+  incense_greek?: string;
+}
+
 export interface SentenceUnit {
   id: number;
   text: string; // Just the English text string
@@ -211,7 +225,7 @@ class ClientCounselService {
     let bestScore = -1;
 
     // Create embedding ID to sentence data lookup from corpus
-    const embeddingIdToSentence: Map<string, any> = new Map();
+    const embeddingIdToSentence: Map<string, EnhancedSentenceData> = new Map();
     for (const part of embeddingData.corpusData.parts) {
       // Bibliomancy Filter 1: Exclude proems and appendices (only if part_type is defined)
       if (part.part_type && (part.part_type === 'proem' || part.part_type === 'appendix')) {
