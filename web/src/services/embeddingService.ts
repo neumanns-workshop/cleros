@@ -59,7 +59,7 @@ export interface LineEmbeddingData {
 export interface SentenceEmbeddingData {
     metadata: {
         mapping: Array<{
-            sentence_id: number;
+            id: string;
             index: number;
         }>;
     };
@@ -210,12 +210,15 @@ class EmbeddingService {
         return cached;
     }
 
-    public async getSentenceEmbedding(corpus: string, sentenceId: number, _partNumber: number = 1): Promise<number[] | undefined> {
+    public async getSentenceEmbedding(corpus: string, sentenceId: number, partNumber: number = 1): Promise<number[] | undefined> {
         try {
             const embeddingData = await this.loadSentenceEmbeddings(corpus);
             
+            // The mapping ID has format "corpus_part_sentence" (e.g. "hymns_0_1")
+            const expectedId = `${corpus}_${partNumber}_${sentenceId}`;
+            
             // Find the mapping for this sentence ID
-            const mapping = embeddingData.metadata.mapping?.find(m => m.sentence_id === sentenceId);
+            const mapping = embeddingData.metadata.mapping?.find(m => m.id === expectedId);
             
             if (!mapping) {
                 return undefined;
