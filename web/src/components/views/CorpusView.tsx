@@ -82,18 +82,23 @@ export const CorpusView: React.FC<CorpusViewProps> = ({
         ? `${hymnsSelection.source} • ${formatTitle(hymnsSelection.sectionTitle)} • ${hymnsSelection.incense.english}`
         : `${hymnsSelection.source} • ${formatTitle(hymnsSelection.sectionTitle)}`;
 
-      lines.push({
-        line: null,
-        english: hymnsTitle,
-        note: selectionNote + bestLineInfo,
-        isHeader: true,
-        sourceLink: {
-          corpus: 'hymns',
-          sentenceId: hymnsSelection.sentenceId,
-          sectionTitle: hymnsSelection.sectionTitle,
-          key: (hymnsSelection as any).partNumber
+              const partNumber = (hymnsSelection as any).partNumber;
+        if (partNumber === undefined) {
+          console.warn('⚠️ partNumber is undefined for hymns selection:', hymnsSelection);
         }
-      });
+        
+        lines.push({
+          line: null,
+          english: hymnsTitle,
+          note: selectionNote + bestLineInfo,
+          isHeader: true,
+          sourceLink: {
+            corpus: 'hymns',
+            sentenceId: hymnsSelection.sentenceId,
+            sectionTitle: hymnsSelection.sectionTitle,
+            key: partNumber !== undefined ? String(partNumber) : undefined
+          }
+        });
 
       // Add each line from the sentence with original line numbers
       if (report.selections.hymns.lineDetails && report.selections.hymns.lineDetails.length > 0) {
@@ -159,7 +164,8 @@ export const CorpusView: React.FC<CorpusViewProps> = ({
               corpus: 'argonautica',
               sentenceId: report.selections.argonautica!.sentenceId,
               sectionTitle: report.selections.argonautica!.sectionTitle,
-              lineNumber: lineDetail.line
+              lineNumber: lineDetail.line,
+              key: (report.selections.argonautica as any).partNumber !== undefined ? String((report.selections.argonautica as any).partNumber) : undefined
             }
           });
         });
@@ -206,7 +212,8 @@ export const CorpusView: React.FC<CorpusViewProps> = ({
               corpus: 'lithica',
               sentenceId: report.selections.lithica!.sentenceId,
               sectionTitle: report.selections.lithica!.sectionTitle,
-              lineNumber: lineDetail.line
+              lineNumber: lineDetail.line,
+              key: (report.selections.lithica as any).partNumber !== undefined ? String((report.selections.lithica as any).partNumber) : undefined
             }
           });
         });

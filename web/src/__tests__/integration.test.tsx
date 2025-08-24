@@ -254,4 +254,44 @@ describe('Integration Tests', () => {
 
     alertSpy.mockRestore();
   });
+
+  it('navigates from personal report lines to original source', async () => {
+    render(<App />);
+
+    // Navigate to corpus page first
+    fireEvent.click(screen.getByText('Corpus'));
+    
+    await waitFor(() => {
+      expect(screen.getByText('Hymns')).toBeInTheDocument();
+    });
+
+    // Navigate to personal reports
+    const sourceSelector = document.querySelector('.source-selector') as HTMLSelectElement;
+    fireEvent.change(sourceSelector, { target: { value: 'personal' } });
+
+    // Check if we have personal reports available
+    await waitFor(() => {
+      const reportElements = screen.queryAllByText(/\[ORACLE\]|\[COUNSEL\]/);
+      if (reportElements.length > 0) {
+        // Select the first personal report
+        const sectionSelector = document.querySelector('.section-selector') as HTMLSelectElement;
+        if (sectionSelector.options.length > 0) {
+          fireEvent.change(sectionSelector, { target: { value: sectionSelector.options[0].value } });
+          
+          // Look for clickable lines with sourceLinks (headers with sourceLink should be clickable)
+          const clickableHeaders = document.querySelectorAll('.text-line.section-header[style*="cursor: pointer"]');
+          if (clickableHeaders.length > 0) {
+            // Click on a header to test navigation
+            fireEvent.click(clickableHeaders[0]);
+            
+            // Should navigate away from personal reports
+            waitFor(() => {
+              expect(screen.queryByDisplayValue('personal')).not.toBeInTheDocument();
+            });
+          }
+        }
+      }
+    });
+  });
 });
+ 

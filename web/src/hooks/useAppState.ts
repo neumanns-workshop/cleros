@@ -321,12 +321,26 @@ export const useAppState = () => {
       // Set the source corpus first
       setSelectedSource(sourceLink.corpus);
       
-      // Navigate directly using the key
-      if (sourceLink.key) {
-        setSelectedSection(sourceLink.key);
+      // Navigate directly using the key, or find it by sectionTitle
+      if (sourceLink.key !== undefined) {
+        setSelectedSection(sourceLink.key.toString());
         console.log(`📍 Navigating to part: ${sourceLink.key}`);
+      } else if (sourceLink.sectionTitle && corpusData[sourceLink.corpus]) {
+        // Fallback: find the part by matching sectionTitle
+        const corpus = corpusData[sourceLink.corpus];
+        const part = corpus.parts?.find((p: any) => 
+          p.title_english === sourceLink.sectionTitle || 
+          p.title === sourceLink.sectionTitle ||
+          p.part_title === sourceLink.sectionTitle
+        );
+        if (part) {
+          setSelectedSection(part.key.toString());
+          console.log(`📍 Found part by title '${sourceLink.sectionTitle}': ${part.key}`);
+        } else {
+          console.log(`⚠️ Could not find part with title '${sourceLink.sectionTitle}' in ${sourceLink.corpus}`);
+        }
       } else {
-        console.log('⚠️ No key provided in sourceLink:', sourceLink);
+        console.log('⚠️ No key or sectionTitle provided in sourceLink:', sourceLink);
       }
       
       // Clear current responses AFTER setting the new source/section to avoid race condition
