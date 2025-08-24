@@ -35,41 +35,41 @@ export const AncientQuerySimulation: React.FC<QuerySimulationProps> = ({
 
   const steps: SimulationStep[] = [
     {
-      id: "ancient-voice",
-      title: "Ancient Voice",
-      description: "A consultation carved in lead at Dodona",
+      id: 'ancient-voice',
+      title: 'Ancient Voice',
+      description: 'A consultation carved in lead at Dodona',
       icon: <Scroll className="w-5 h-5" />,
       content: ancientQuery.text,
       highlight: false
     },
     {
-      id: "semantic-search",
-      title: "Semantic Understanding", 
-      description: "AI interprets the ancient concern",
+      id: 'semantic-search',
+      title: 'Semantic Understanding', 
+      description: 'AI interprets the ancient concern',
       icon: <Sparkles className="w-5 h-5" />,
       content: `Query analyzed for themes: ${ancientQuery.category.toLowerCase()}`,
       highlight: true
     },
     {
-      id: "corpus-search",
-      title: "Corpus Consultation",
-      description: "Searching sacred texts for wisdom",
+      id: 'corpus-search',
+      title: 'Corpus Consultation',
+      description: 'Searching sacred texts for wisdom',
       icon: <BookOpen className="w-5 h-5" />,
       content: `Scanning ${modernResponse.source} for relevant passages...`,
       highlight: true
     },
     {
-      id: "wisdom-found",
-      title: "Ancient Wisdom",
-      description: "Relevant passage discovered",
+      id: 'wisdom-found',
+      title: 'Ancient Wisdom',
+      description: 'Relevant passage discovered',
       icon: <Lightbulb className="w-5 h-5" />,
       content: modernResponse.passage,
       highlight: false
     },
     {
-      id: "interpretation",
-      title: "Divine Response",
-      description: "Contextual interpretation for the petitioner",
+      id: 'interpretation',
+      title: 'Divine Response',
+      description: 'Contextual interpretation for the petitioner',
       icon: <Sparkles className="w-5 h-5" />,
       content: modernResponse.interpretation,
       highlight: false
@@ -121,7 +121,7 @@ export const AncientQuerySimulation: React.FC<QuerySimulationProps> = ({
         <div className="text-sm text-ancient-gold-400 font-medium mb-2">
           {ancientQuery.petitioner}
         </div>
-        <div className="font-greek text-gray-300 mb-2">
+        <div className="font-sans text-gray-300 mb-2">
           {ancientQuery.greek}
         </div>
         <div className="text-gray-200 italic">
@@ -155,7 +155,7 @@ export const AncientQuerySimulation: React.FC<QuerySimulationProps> = ({
               {step.highlight && index === currentStep ? (
                 <motion.div
                   animate={{ rotate: 360 }}
-                  transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+                  transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
                 >
                   {step.icon}
                 </motion.div>
@@ -254,7 +254,7 @@ export const AncientQuerySimulation: React.FC<QuerySimulationProps> = ({
         <div className="relative h-1 bg-gray-800 rounded-full overflow-hidden">
           <motion.div
             className="absolute left-0 top-0 h-full bg-gradient-to-r from-ancient-gold-500 to-mystical-purple-500"
-            initial={{ width: "0%" }}
+            initial={{ width: '0%' }}
             animate={{ 
               width: `${((currentStep + 1) / steps.length) * 100}%` 
             }}
@@ -270,16 +270,16 @@ export const AncientQuerySimulation: React.FC<QuerySimulationProps> = ({
 export const SampleQuerySimulation: React.FC = () => {
   const sampleData = {
     ancientQuery: {
-      text: "Concerning the safety of the child and the wife: what should be done?",
-      greek: "περὶ σωτηρίας τοῦ παιδίου καὶ τῆς γυναικός· τί δεῖ ποιεῖν;",
-      category: "Family Safety",
-      petitioner: "Worried father at Dodona, 4th century BCE"
+      text: 'Concerning the safety of the child and the wife: what should be done?',
+      greek: 'περὶ σωτηρίας τοῦ παιδίου καὶ τῆς γυναικός· τί δεῖ ποιεῖν;',
+      category: 'Family Safety',
+      petitioner: 'Worried father at Dodona, 4th century BCE'
     },
     modernResponse: {
-      source: "Orphic Hymns - Hymn to Nature",
-      passage: "But, goddess, I entreat you, in prosperous seasons, to bring peace and health, and the increase of all good things...",
+      source: 'Orphic Hymns - Hymn to Nature',
+      passage: 'But, goddess, I entreat you, in prosperous seasons, to bring peace and health, and the increase of all good things...',
       relevance: 0.847,
-      interpretation: "The sacred texts counsel seeking divine protection through proper reverence to Nature, who brings health and prosperity to families under her care."
+      interpretation: 'The sacred texts counsel seeking divine protection through proper reverence to Nature, who brings health and prosperity to families under her care.'
     }
   };
 

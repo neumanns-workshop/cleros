@@ -5,15 +5,16 @@ export { Footer } from './layout/Footer';
 // View Components
 export { HomeView } from './views/HomeView';
 export { AboutView } from './views/AboutView';
+export { CorpusView } from './views/CorpusView';
 
 // Common Components
 export { LoadingOverlay } from './common/LoadingOverlay';
 export { ModeSwitcher } from './common/Modeswitcher';
 export { ConsultationForm } from './common/ConsultationForm';
 export { AncientQueryCarousel } from './common/AncientQueryCarousel';
+export { default as ShareDialog } from './common/ShareDialog';
+export { default as ShareCard } from './common/ShareCard';
 
-// Existing Components (to be refactored)
+// Core Components
 export { default as OracleLine } from './OracleLine';
 export { default as AncientQuerySimulation } from './AncientQuerySimulation';
-export { default as VoicesFromThePast } from './VoicesFromThePast';
-export { OracleResponseComponent } from './OracleResponse';

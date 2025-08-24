@@ -2,9 +2,9 @@
   "corpus": "tablets",
   "type": "line_embeddings",
   "total_lines": 10,
-  "embedding_dimension": 512,
-  "model": "universal-sentence-encoder",
-  "created": "2025-08-23T21:04:53.903270",
+  "embedding_dimension": 384,
+  "model": "all-MiniLM-L6-v2",
+  "created": "2025-08-23T23:09:25.970919",
   "mapping": [
     {
       "id": "tablets_1_1_1",

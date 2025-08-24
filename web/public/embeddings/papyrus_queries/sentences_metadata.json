@@ -2,9 +2,9 @@
   "corpus": "papyrus_queries",
   "type": "sentence_embeddings",
   "total_sentences": 9,
-  "embedding_dimension": 512,
-  "model": "universal-sentence-encoder",
-  "created": "2025-08-23T21:04:53.909921",
+  "embedding_dimension": 384,
+  "model": "all-MiniLM-L6-v2",
+  "created": "2025-08-23T23:09:26.031716",
   "mapping": [
     {
       "id": "papyrus_queries_1_1",

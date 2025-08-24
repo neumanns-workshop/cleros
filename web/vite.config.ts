@@ -1,7 +1,7 @@
 /// <reference types="vitest" />
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import path from 'path'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -9,16 +9,16 @@ export default defineConfig({
   test: {
     globals: true,
     environment: 'jsdom',
-    setupFiles: './src/test/setup.ts',
+    setupFiles: './src/test/setup.ts'
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'),
-    },
+      '@': path.resolve(__dirname, './src')
+    }
   },
   server: {
     port: 3000,
-    open: true,
+    open: true
   },
   build: {
     outDir: 'dist',
@@ -28,7 +28,7 @@ export default defineConfig({
         manualChunks: {
           vendor: ['react', 'react-dom'],
           transformers: ['@xenova/transformers'],
-          motion: ['framer-motion'],
+          motion: ['framer-motion']
         }
       }
     }
@@ -37,6 +37,6 @@ export default defineConfig({
     include: ['@xenova/transformers']
   },
   define: {
-    global: 'globalThis',
-  },
-})
+    global: 'globalThis'
+  }
+});

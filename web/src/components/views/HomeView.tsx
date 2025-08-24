@@ -46,11 +46,34 @@ export const HomeView: React.FC<HomeViewProps> = ({
   });
 
   React.useEffect(() => {
+    const recentQueries = [currentIndex]; // Track recent queries to avoid immediate repeats
+    
     const interval = setInterval(() => {
-      setCurrentIndex(Math.floor(Math.random() * ancientQueries.length));
+      setCurrentIndex(prev => {
+        let nextIndex;
+        let attempts = 0;
+        
+        // Try to get a query that wasn't recently shown
+        do {
+          nextIndex = Math.floor(Math.random() * ancientQueries.length);
+          attempts++;
+        } while (recentQueries.includes(nextIndex) && attempts < 10);
+        
+        // Add to recent queries and keep only last 3-4 queries in memory
+        recentQueries.push(nextIndex);
+        if (recentQueries.length > Math.min(4, Math.floor(ancientQueries.length / 3))) {
+          recentQueries.shift();
+        }
+        
+        console.log(`🔄 HomeView Carousel: Switching from ${prev} (${ancientQueries[prev]?.id}) to ${nextIndex} (${ancientQueries[nextIndex]?.id})`);
+        console.log(`🎯 Recent indices: [${recentQueries.join(', ')}]`);
+        
+        return nextIndex;
+      });
     }, 15000);
+    
     return () => clearInterval(interval);
-  }, []);
+  }, []); // Remove currentIndex dependency to prevent restarting the interval
 
   const handleAncientQueryClick = () => {
     onAncientQueryClick(currentQuery.text);
@@ -63,8 +86,8 @@ export const HomeView: React.FC<HomeViewProps> = ({
         <div className="intro-text">
           <p>
             {searchMode === 'oracle' 
-              ? "Divine guidance (true random)"
-              : "Mortal advice (semantic)"
+              ? 'Divine guidance (true random)'
+              : 'Mortal advice (semantic)'
             }
             {isRandomOrgAvailable === false && (
               <span style={{ color: '#ff6b6b', fontSize: '0.9em', display: 'block' }}>

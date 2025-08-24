@@ -2,9 +2,9 @@
   "corpus": "hymns",
   "type": "line_embeddings",
   "total_lines": 1173,
-  "embedding_dimension": 512,
-  "model": "universal-sentence-encoder",
-  "created": "2025-08-23T21:04:53.801043",
+  "embedding_dimension": 384,
+  "model": "all-MiniLM-L6-v2",
+  "created": "2025-08-23T23:09:25.020880",
   "mapping": [
     {
       "id": "hymns_0_1_1",

@@ -20,14 +20,14 @@ class EmbeddingPipeline {
 
     async embed(text: string): Promise<number[]> {
         if (!EmbeddingPipeline.pipeline) {
-            throw new Error("Embedding pipeline not initialized.");
+            throw new Error('Embedding pipeline not initialized.');
         }
         
         try {
             // Generate embedding using the pipeline with mean pooling and normalization
             const output = await EmbeddingPipeline.pipeline(text, {
                 pooling: 'mean',
-                normalize: true,
+                normalize: true
             });
             
             // Convert tensor to regular array
@@ -164,7 +164,7 @@ class EmbeddingService {
             }
             
             return embedding;
-        } catch (error) {
+        } catch (_error) {
             return undefined;
         }
     }
@@ -201,12 +201,15 @@ class EmbeddingService {
         return this.sentenceEmbeddingsCache.get(corpus)!;
     }
 
-    public async getSentenceEmbedding(corpus: string, sentenceId: number): Promise<number[] | undefined> {
+    public async getSentenceEmbedding(corpus: string, sentenceId: number, partNumber: number = 1): Promise<number[] | undefined> {
         try {
             const embeddingData = await this.loadSentenceEmbeddings(corpus);
             
-            // Find the mapping for this sentence ID
-            const mapping = embeddingData.metadata.mapping?.find((m: any) => m.sentence_id === sentenceId);
+            // Construct the embedding ID in the format: corpus_part_sentence
+            const embeddingId = `${corpus}_${partNumber}_${sentenceId}`;
+            
+            // Find the mapping for this embedding ID
+            const mapping = embeddingData.metadata.mapping?.find((m: any) => m.id === embeddingId);
             
             if (!mapping) {
                 return undefined;
@@ -218,7 +221,7 @@ class EmbeddingService {
             }
             
             return embedding;
-        } catch (error) {
+        } catch (_error) {
             return undefined;
         }
     }

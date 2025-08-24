@@ -254,7 +254,7 @@ class ClientOracleService {
     
     keywords.forEach(keyword => {
       const regex = new RegExp(`\\b${keyword}\\b`, 'gi');
-      highlightedText = highlightedText.replace(regex, `<span class="keyword-highlight">$&</span>`);
+      highlightedText = highlightedText.replace(regex, '<span class="keyword-highlight">$&</span>');
     });
 
     return highlightedText;

@@ -2811,8 +2811,8 @@
       "part_number": 17,
       "part_title": "Of Poseidōn.",
       "part_type": "hymn",
-      "line_count": 19,
-      "sentence_count": 5,
+      "line_count": 10,
+      "sentence_count": 2,
       "sentences": [
         {
           "sentence_id": 1,
@@ -2913,117 +2913,6 @@
               "greek": "εἰρήνην, ὑγίειανἄγω ν, ἠδ’ ὄλβον ἀμεμφ ῆ.",
               "english": "bringing peace and health, and unblamed prosperity.",
               "note": "ἀμέμφῃ (dative used adverbially) = “blamelessly,” here “unblamed” qualifying prosperity (ὄλβος)."
-            }
-          ]
-        },
-        {
-          "sentence_id": 3,
-          "line_range": {
-            "start": 11,
-            "end": 12,
-            "lines": [
-              11,
-              12
-            ]
-          },
-          "text": {
-            "english": "Hear me, Poseidōn, child of Zeus, eldest-born, father of the blessed heavenly gods and of men as well.",
-            "greek": "Κλῦθι Ποσειδάων, Ζηνός παῖ πρεσβυγένεθλε, οὐρανίων μακάρων τε θεῶν πάτερ ἠδὲ καὶ ἀνδρ ῶν."
-          },
-          "line_count": 2,
-          "line_details": [
-            {
-              "line": 11,
-              "greek": "Κλῦθι Ποσειδάων, Ζηνός παῖ πρεσβυγένεθλε,",
-              "english": "Hear me, Poseidōn, child of Zeus, eldest-born,",
-              "note": "Textually problematic: Ζηνός παῖ “child of Zeus” is at odds with mainstream genealogy (son of Kronos); πρεσβυγένεθλος “eldest-born.” Likely secondary influence from Zeus-language; translation follows the transmitted reading."
-            },
-            {
-              "line": 12,
-              "greek": "οὐρανίων μακάρων τε θεῶν πάτερ ἠδὲ καὶ ἀνδρ ῶν.",
-              "english": "father of the blessed heavenly gods and of men as well.",
-              "note": "A stereotyped Zeus formula (“father of gods and men”); many editors suspect interpolation or formulaic contamination."
-            }
-          ]
-        },
-        {
-          "sentence_id": 4,
-          "line_range": {
-            "start": 13,
-            "end": 16,
-            "lines": [
-              13,
-              14,
-              15,
-              16
-            ]
-          },
-          "text": {
-            "english": "you who dwell upon the crest of Olympos’ peaks, having received to rule over all as second after Zeus; horse-lord, holding in your hands the bronze-wrought trident, wide-ruling, of gracious countenance, driving a chariot with a four-year-old team.",
-            "greek": "ὃς ναίεις κορυφαῖος ἐπ’ Οὐλύμποιο καρήνων δεύτερος ἐκ Δι ὸς εἰληχ ὼς πάντεσσιν ἀνάσσειν. ἵππιε, χαλκοτόρευτον ἔχων χείρεσσι τρίαιναν. εὐρύμεδον, χαριτῶπα, τετράορον ἅρμα διώκων."
-          },
-          "line_count": 4,
-          "line_details": [
-            {
-              "line": 13,
-              "greek": "ὃς ναίεις κορυφαῖος ἐπ’ Οὐλύμποιο καρήνων",
-              "english": "you who dwell upon the crest of Olympos’ peaks,",
-              "note": "κορυφαῖος … καρήνων = “at the very crest of the peaks,” epic pleonasm for the summit of Olympos."
-            },
-            {
-              "line": 14,
-              "greek": "δεύτερος ἐκ Δι ὸς εἰληχ ὼς πάντεσσιν ἀνάσσειν.",
-              "english": "having received to rule over all as second after Zeus;",
-              "note": "δεύτερος ἐκ Διός “second after Zeus”; εἰληχώς (perf. of λαγχάνω) links to the cosmic allotment motif."
-            },
-            {
-              "line": 15,
-              "greek": "ἵππιε, χαλκοτόρευτον ἔχων χείρεσσι τρίαιναν.",
-              "english": "horse-lord, holding in your hands the bronze-wrought trident,",
-              "note": "Repetition of line 2 is an epic/Orphic liturgical refrain."
-            },
-            {
-              "line": 16,
-              "greek": "εὐρύμεδον, χαριτῶπα, τετράορον ἅρμα διώκων.",
-              "english": "wide-ruling, of gracious countenance, driving a chariot with a four-year-old team.",
-              "note": "εὐρύμεδον “wide-ruling” (lit. “of broad sway”); τετράορον as at line 5 (see note there)."
-            }
-          ]
-        },
-        {
-          "sentence_id": 5,
-          "line_range": {
-            "start": 17,
-            "end": 19,
-            "lines": [
-              17,
-              18,
-              19
-            ]
-          },
-          "text": {
-            "english": "O lord almighty, most holy, gloriously honored, rejoicing in august mystic rites and in holy reverences, be gracious, revealing good fortune to the initiates.",
-            "greek": "ὦ ἄναξ παντοκράτωρ, ἱερώτατος, ἀγλαότιμε, σεμνο ῖς μυστοπόλοις χαίρων ὁσίοις τε σεβασμοῖς, ἵλαος ε ἴης, εὐτυχίην μύστῃσι προφαίνων."
-          },
-          "line_count": 3,
-          "line_details": [
-            {
-              "line": 17,
-              "greek": "ὦ ἄναξ παντοκράτωρ, ἱερώτατος, ἀγλαότιμε,",
-              "english": "O lord almighty, most holy, gloriously honored,",
-              "note": "παντοκράτωρ “almighty” is a traditional high-epic epithet (later prominent in other contexts too); ἀγλαότιμος “gloriously honored.”"
-            },
-            {
-              "line": 18,
-              "greek": "σεμνο ῖς μυστοπόλοις χαίρων ὁσίοις τε σεβασμοῖς,",
-              "english": "rejoicing in august mystic rites and in holy reverences,",
-              "note": "μυστοπόλοις “mystic-officiants/celebrants of mysteries”; σεβασμοί “acts of reverence, venerations.”"
-            },
-            {
-              "line": 19,
-              "greek": "ἵλαος ε ἴης, εὐτυχίην μύστῃσι προφαίνων.",
-              "english": "be gracious, revealing good fortune to the initiates.",
-              "note": "μύσται “initiates” in the mysteries; προφαίνων “revealing/manifesting,” with epiphanic nuance."
             }
           ]
         }
@@ -12696,6 +12585,128 @@
               "greek": "μέλλεν ἀπό κραδίης προφέρειν πάλι, θέσκελα ῥέζων.",
               "english": "he was about to bring them forth anew from his heart, working wonders.",
               "note": "Orphic theology: Zeus “was about to” re-emit all things from his heart; ‘θέσκελα ῥέζων’ = “working wonders,” the re-creation after cosmic ingathering."
+            }
+          ]
+        }
+      ],
+      "incense": null,
+      "incense_greek": null
+    },
+    {
+      "part_number": 90,
+      "part_title": "Orphic Hymn to Poseidon (Textual Variant)",
+      "part_type": "appendix",
+      "line_count": 9,
+      "sentence_count": 3,
+      "sentences": [
+        {
+          "sentence_id": 1,
+          "line_range": {
+            "start": 1,
+            "end": 2,
+            "lines": [
+              1,
+              2
+            ]
+          },
+          "text": {
+            "english": "Hear me, Poseidōn, child of Zeus, eldest-born, father of the blessed heavenly gods and of men as well.",
+            "greek": "Κλῦθι Ποσειδάων, Ζηνός παῖ πρεσβυγένεθλε, οὐρανίων μακάρων τε θεῶν πάτερ ἠδὲ καὶ ἀνδρ ῶν."
+          },
+          "line_count": 2,
+          "line_details": [
+            {
+              "line": 1,
+              "greek": "Κλῦθι Ποσειδάων, Ζηνός παῖ πρεσβυγένεθλε,",
+              "english": "Hear me, Poseidōn, child of Zeus, eldest-born,",
+              "note": "Textually problematic: Ζηνός παῖ \"child of Zeus\" is at odds with mainstream genealogy (son of Kronos); πρεσβυγένεθλος \"eldest-born.\" Likely secondary influence from Zeus-language; translation follows the transmitted reading."
+            },
+            {
+              "line": 2,
+              "greek": "οὐρανίων μακάρων τε θεῶν πάτερ ἠδὲ καὶ ἀνδρ ῶν.",
+              "english": "father of the blessed heavenly gods and of men as well.",
+              "note": "A stereotyped Zeus formula (\"father of gods and men\"); many editors suspect interpolation or formulaic contamination."
+            }
+          ]
+        },
+        {
+          "sentence_id": 2,
+          "line_range": {
+            "start": 3,
+            "end": 6,
+            "lines": [
+              3,
+              4,
+              5,
+              6
+            ]
+          },
+          "text": {
+            "english": "you who dwell upon the crest of Olympos' peaks, having received to rule over all as second after Zeus; horse-lord, holding in your hands the bronze-wrought trident, wide-ruling, of gracious countenance, driving a chariot with a four-year-old team.",
+            "greek": "ὃς ναίεις κορυφαῖος ἐπ' Οὐλύμποιο καρήνων δεύτερος ἐκ Δι ὸς εἰληχ ὼς πάντεσσιν ἀνάσσειν. ἵππιε, χαλκοτόρευτον ἔχων χείρεσσι τρίαιναν. εὐρύμεδον, χαριτῶπα, τετράορον ἅρμα διώκων."
+          },
+          "line_count": 4,
+          "line_details": [
+            {
+              "line": 3,
+              "greek": "ὃς ναίεις κορυφαῖος ἐπ' Οὐλύμποιο καρήνων",
+              "english": "you who dwell upon the crest of Olympos' peaks,",
+              "note": "κορυφαῖος … καρήνων = \"at the very crest of the peaks,\" epic pleonasm for the summit of Olympos."
+            },
+            {
+              "line": 4,
+              "greek": "δεύτερος ἐκ Δι ὸς εἰληχ ὼς πάντεσσιν ἀνάσσειν.",
+              "english": "having received to rule over all as second after Zeus;",
+              "note": "δεύτερος ἐκ Διός \"second after Zeus\"; εἰληχώς (perf. of λαγχάνω) links to the cosmic allotment motif."
+            },
+            {
+              "line": 5,
+              "greek": "ἵππιε, χαλκοτόρευτον ἔχων χείρεσσι τρίαιναν.",
+              "english": "horse-lord, holding in your hands the bronze-wrought trident,",
+              "note": "Repetition of line 2 from the main hymn is an epic/Orphic liturgical refrain."
+            },
+            {
+              "line": 6,
+              "greek": "εὐρύμεδον, χαριτῶπα, τετράορον ἅρμα διώκων.",
+              "english": "wide-ruling, of gracious countenance, driving a chariot with a four-year-old team.",
+              "note": "εὐρύμεδον \"wide-ruling\" (lit. \"of broad sway\"); τετράορον as at main hymn line 5."
+            }
+          ]
+        },
+        {
+          "sentence_id": 3,
+          "line_range": {
+            "start": 7,
+            "end": 9,
+            "lines": [
+              7,
+              8,
+              9
+            ]
+          },
+          "text": {
+            "english": "O lord almighty, most holy, gloriously honored, rejoicing in august mystic rites and in holy reverences, be gracious, revealing good fortune to the initiates.",
+            "greek": "ὦ ἄναξ παντοκράτωρ, ἱερώτατος, ἀγλαότιμε, σεμνο ῖς μυστοπόλοις χαίρων ὁσίοις τε σεβασμοῖς, ἵλαος ε ἴης, εὐτυχίην μύστῃσι προφαίνων."
+          },
+          "line_count": 3,
+          "line_details": [
+            {
+              "line": 7,
+              "greek": "ὦ ἄναξ παντοκράτωρ, ἱερώτατος, ἀγλαότιμε,",
+              "english": "O lord almighty, most holy, gloriously honored,",
+              "note": "παντοκράτωρ \"almighty\" is a traditional high-epic epithet; ἀγλαότιμος \"gloriously honored.\""
+            },
+            {
+              "line": 8,
+              "greek": "σεμνο ῖς μυστοπόλοις χαίρων ὁσίοις τε σεβασμοῖς,",
+              "english": "rejoicing in august mystic rites and in holy reverences,",
+              "note": "μυστοπόλοις \"mystic-officiants/celebrants of mysteries\"; σεβασμοί \"acts of reverence, venerations.\""
+            },
+            {
+              "line": 9,
+              "greek": "ἵλαος ε ἴης, εὐτυχίην μύστῃσι προφαίνων.",
+              "english": "be gracious, revealing good fortune to the initiates.",
+              "note": "μύσται \"initiates\" in the mysteries; προφαίνων \"revealing/manifesting,\" with epiphanic nuance."
             }
           ]
         }

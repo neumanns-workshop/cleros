@@ -2,9 +2,9 @@
   "corpus": "argonautica",
   "type": "sentence_embeddings",
   "total_sentences": 338,
-  "embedding_dimension": 512,
-  "model": "universal-sentence-encoder",
-  "created": "2025-08-23T21:04:53.835852",
+  "embedding_dimension": 384,
+  "model": "all-MiniLM-L6-v2",
+  "created": "2025-08-23T23:09:25.246241",
   "mapping": [
     {
       "id": "argonautica_1_1",

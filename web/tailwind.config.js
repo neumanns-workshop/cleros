@@ -49,9 +49,9 @@ export default {
         },
       },
       fontFamily: {
-        'serif': ['Crimson Text', 'Georgia', 'Times New Roman', 'serif'],
-        'sans': ['Inter', 'system-ui', 'sans-serif'],
-        'greek': ['GFS Didot', 'Crimson Text', 'serif'],
+        'serif': ['system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif'],
+        'sans': ['system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif'],
+        'greek': ['system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',

@@ -1,21 +1,128 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
+import { createPortal } from 'react-dom';
 import { ConsultationResponse } from '../../types/oracle';
+import ShareCard from './ShareCard';
+import { formatTitle } from '../../utils/stringUtils';
 
 interface ShareDialogProps {
   isOpen: boolean;
   onClose: () => void;
   response: ConsultationResponse | null;
+  // Add an optional parameter to specify which corpus to share, defaulting to all
+  selectedCorpus?: 'hymns' | 'argonautica' | 'lithica' | 'all';
 }
 
-const ShareDialog: React.FC<ShareDialogProps> = ({ isOpen, onClose, response }) => {
+const ShareDialog: React.FC<ShareDialogProps> = ({ isOpen, onClose, response, selectedCorpus = 'all' }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const cardRef = useRef<HTMLDivElement>(null);
+  const [feedbackMessage, setFeedbackMessage] = useState<string | null>(null);
 
-  if (!isOpen || !response || !response.shareableOptions || response.shareableOptions.length === 0) {
+  // Capitalize first letter of sentence
+  const capitalizeFirst = (text: string): string => {
+    if (!text) return text;
+    return text.charAt(0).toUpperCase() + text.slice(1);
+  };
+
+  // Get line range from original response data
+  const getLineRange = (corpus: string): string | null => {
+    if (!response || !response.selections) return null;
+    const selection = response.selections[corpus as keyof typeof response.selections];
+    if (selection?.lineDetails && selection.lineDetails.length > 0) {
+      if (selection.lineDetails.length === 1) {
+        return `l. ${selection.lineDetails[0].line}`;
+      } else {
+        const firstLine = selection.lineDetails[0].line;
+        const lastLine = selection.lineDetails[selection.lineDetails.length - 1].line;
+        return `ll. ${firstLine}-${lastLine}`;
+      }
+    }
+    return null;
+  };
+
+
+
+
+  if (!isOpen || !response || !response.selections) {
     return null;
   }
 
-  const options = response.shareableOptions;
+  // Create options from all oracle selections (truncated to 5 lines for display)
+  const options: Array<{
+    id: string;
+    type: 'sentence';
+    corpus: 'hymns' | 'argonautica' | 'lithica';
+    content: {
+      text: string;
+      lineCount: number;
+      sectionTitle: string;
+    };
+    metadata: {
+      sentenceId: number;
+      incense?: {
+        english: string;
+        greek?: string;
+      };
+    };
+  }> = [];
+  
+  if (selectedCorpus === 'all' || selectedCorpus === 'hymns') {
+    if (response.selections.hymns) {
+      options.push({
+        id: `hymns-${response.selections.hymns.sentenceId}`,
+        type: 'sentence',
+        corpus: 'hymns' as const,
+        content: {
+          text: response.selections.hymns.text.english,
+          lineCount: response.selections.hymns.lineDetails?.length || 0,
+          sectionTitle: response.selections.hymns.sectionTitle
+        },
+        metadata: {
+          sentenceId: response.selections.hymns.sentenceId,
+          incense: response.selections.hymns.incense
+        }
+      });
+    }
+  }
+  
+  if (selectedCorpus === 'all' || selectedCorpus === 'argonautica') {
+    if (response.selections.argonautica) {
+      options.push({
+        id: `argonautica-${response.selections.argonautica.sentenceId}`,
+        type: 'sentence',
+        corpus: 'argonautica' as const,
+        content: {
+          text: response.selections.argonautica.text.english,
+          lineCount: response.selections.argonautica.lineDetails?.length || 0,
+          sectionTitle: response.selections.argonautica.sectionTitle
+        },
+        metadata: {
+          sentenceId: response.selections.argonautica.sentenceId
+        }
+      });
+    }
+  }
+  
+  if (selectedCorpus === 'all' || selectedCorpus === 'lithica') {
+    if (response.selections.lithica) {
+      options.push({
+        id: `lithica-${response.selections.lithica.sentenceId}`,
+        type: 'sentence',
+        corpus: 'lithica' as const,
+        content: {
+          text: response.selections.lithica.text.english,
+          lineCount: response.selections.lithica.lineDetails?.length || 0,
+          sectionTitle: response.selections.lithica.sectionTitle
+        },
+        metadata: {
+          sentenceId: response.selections.lithica.sentenceId
+        }
+      });
+    }
+  }
+  
+  if (options.length === 0) {
+    return null;
+  }
+  
   const currentOption = options[currentIndex];
 
   const nextOption = () => {
@@ -30,207 +137,474 @@ const ShareDialog: React.FC<ShareDialogProps> = ({ isOpen, onClose, response }) 
     setCurrentIndex(index);
   };
 
-  const truncateQuery = (query: string, maxLength: number = 80): string | null => {
-    if (query.length <= maxLength) {
-      return query;
-    }
-    return null; // Skip if too long
-  };
 
 
 
-  const normalizeTitle = (title: string): string => {
-    // Apply the same normalization logic as the scripts
-    if (title.startsWith("Orpheus to") || title.startsWith("Hymn to")) {
-      return title;
-    }
-    
-    if (title.startsWith("Of ")) {
-      return title.replace("Of ", "To ").replace(/\.$/, '');
-    }
-    
-    if (!title.startsWith("To ") && !title.startsWith("Hymn")) {
-      return `To ${title}`;
-    }
-    
-    return title;
-  };
 
-  const getCorpusDisplayName = (corpus: string): string => {
-    const corpusMap: Record<string, string> = {
-      'hymns': 'Orphic Hymns',
-      'argonautica': 'Orphic Argonautica', 
-      'lithica': 'Orphic Lithica'
-    };
-    return corpusMap[corpus] || corpus;
+
+
+
+
+  const showFeedback = (message: string) => {
+    setFeedbackMessage(message);
+    setTimeout(() => setFeedbackMessage(null), 3000);
   };
 
   const copyToClipboard = async () => {
-    if (!cardRef.current) return;
-    
     try {
-      // For now, copy the text content. Later we'll add image generation
+      // Copy the text content
       const cardText = generateCardText();
       await navigator.clipboard.writeText(cardText);
       
-      // Could add a toast notification here
-      console.log('✅ Card text copied to clipboard');
+      showFeedback('✅ Text copied to clipboard');
     } catch (error) {
       console.error('Failed to copy to clipboard:', error);
+      showFeedback('❌ Failed to copy text');
+    }
+  };
+  
+  const copyImageToClipboard = async () => {
+    const shareCardElement = document.getElementById('share-card-render-target');
+    if (!shareCardElement) {
+      console.error('Share card element not found');
+      return;
+    }
+    
+    try {
+      // Wait a moment for rendering
+      await new Promise(resolve => setTimeout(resolve, 100));
+      
+      // Use html-to-image library
+      const htmlToImage = await import('html-to-image');
+      
+      const blob = await htmlToImage.toBlob(shareCardElement, { 
+        quality: 0.95,
+        width: 500 * 2,
+        height: shareCardElement.scrollHeight * 2,
+        style: {
+          transform: 'scale(2)',
+          transformOrigin: 'top left',
+          width: '500px',
+          height: `${shareCardElement.scrollHeight}px`
+        }
+      });
+      
+      if (blob) {
+        await navigator.clipboard.write([
+          new ClipboardItem({ 'image/png': blob })
+        ]);
+        showFeedback('✅ Image copied to clipboard');
+      }
+    } catch (error) {
+      console.error('Failed to copy image to clipboard:', error);
+      showFeedback('❌ Failed to copy image');
+    }
+  };
+
+  const saveAsImage = async () => {
+    const shareCardElement = document.getElementById('share-card-render-target');
+    if (!shareCardElement) {
+      console.error('Share card element not found');
+      return;
+    }
+    
+    try {
+      // Wait a moment for rendering
+      await new Promise(resolve => setTimeout(resolve, 100));
+      
+      // Use html-to-image library
+      const htmlToImage = await import('html-to-image');
+      
+      const dataUrl = await htmlToImage.toPng(shareCardElement, { 
+        quality: 0.95,
+        width: 500 * 2, // Fixed width since the card is 500px
+        height: shareCardElement.scrollHeight * 2,
+        style: {
+          transform: 'scale(2)',
+          transformOrigin: 'top left',
+          width: '500px',
+          height: `${shareCardElement.scrollHeight}px`
+        }
+      });
+      
+      // Create a download link
+      const link = document.createElement('a');
+      link.download = `cleros-oracle-${Date.now()}.png`;
+      link.href = dataUrl;
+      link.click();
+      
+      showFeedback('✅ Image saved to downloads');
+    } catch (error) {
+      console.error('Failed to save as image:', error);
+      showFeedback('❌ Failed to save image');
     }
   };
 
   const generateCardText = (): string => {
-    const truncatedQuery = truncateQuery(response.query);
-    const normalizedTitle = normalizeTitle(currentOption.content.sectionTitle);
-    const corpusName = getCorpusDisplayName(currentOption.corpus);
+    const currentTitle = currentOption.corpus === 'hymns' 
+      ? formatTitle(currentOption.content.sectionTitle)
+      : currentOption.content.sectionTitle;
     const incense = currentOption.metadata?.incense?.english;
+    const lineRange = getLineRange(currentOption.corpus);
     const timestamp = new Date(response.timestamp).toLocaleDateString();
     
-    let cardText = '';
+    let cardText = 'cleros | digital bibliomancy\n\n';
     
-    if (truncatedQuery) {
-      cardText += `"${truncatedQuery}"\n\n`;
+    cardText += `"${response.query}"\n\n`;
+    
+    // Format: CORPUS • Title, ll. X-Y • incense
+    let titleLine = `${currentOption.corpus.toUpperCase()} • ${currentTitle}`;
+    if (lineRange) {
+      titleLine += `, ${lineRange}`;
     }
-    
-    cardText += `${normalizedTitle}\n`;
-    cardText += `${corpusName}\n`;
-    
     if (incense) {
-      cardText += `${incense}\n`;
+      titleLine += ` • ${incense}`;
     }
+    cardText += `${titleLine}\n\n`;
     
-    cardText += `\n${timestamp}\n\n`;
-    cardText += `"${currentOption.content.text}"\n\n`;
-    cardText += `Generated by Cleros Oracle`;
+    cardText += `${capitalizeFirst(currentOption.content.text)}\n\n`;
+    
+    cardText += `${timestamp}\n`;
+    cardText += 'cleros.gbe.games';
     
     return cardText;
   };
 
   if (!isOpen) return null;
 
-  return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-      <div className="bg-gray-900 p-6 rounded-lg max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+  return createPortal(
+    <div 
+      style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        backgroundColor: 'rgba(0, 0, 0, 0.8)',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        zIndex: 1000,
+        padding: '20px'
+      }}
+    >
+      <div 
+        style={{
+          backgroundColor: '#111',
+          border: '1px solid #333',
+          borderRadius: '12px',
+          maxWidth: '900px',
+          width: '100%',
+          maxHeight: '90vh',
+          display: 'flex',
+          flexDirection: 'column',
+          overflow: 'hidden',
+          color: '#e0e0e0'
+        }}
+      >
         {/* Header */}
-        <div className="flex justify-between items-center mb-6">
-          <h2 className="text-xl font-bold text-white">Share Oracle Card</h2>
+        <div 
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            padding: '24px',
+            borderBottom: '1px solid #333',
+            flexShrink: 0
+          }}
+        >
+          <h2 
+            style={{
+              fontSize: '1.2rem',
+              fontWeight: 'normal',
+              color: '#e0e0e0',
+              textTransform: 'uppercase',
+              letterSpacing: '0.1em',
+              margin: 0
+            }}
+          >
+            Share Oracle Card
+          </h2>
           <button
             onClick={onClose}
-            className="text-gray-400 hover:text-white text-2xl"
+            style={{
+              padding: '8px',
+              backgroundColor: 'transparent',
+              border: 'none',
+              color: '#a0a0a0',
+              fontSize: '1.5rem',
+              cursor: 'pointer',
+              borderRadius: '4px'
+            }}
           >
-            ×
+            ✕
           </button>
         </div>
 
-        {/* Carousel Controls */}
-        <div className="flex items-center justify-between mb-4">
-          <button
-            onClick={prevOption}
-            disabled={options.length <= 1}
-            className="px-3 py-1 bg-purple-600 text-white rounded disabled:opacity-50 disabled:cursor-not-allowed hover:bg-purple-700"
+        {/* Feedback Message */}
+        {feedbackMessage && (
+          <div 
+            style={{
+              padding: '12px 24px',
+              backgroundColor: feedbackMessage.includes('❌') ? '#2d1b1b' : '#1b2d1b',
+              borderBottom: '1px solid #333',
+              color: feedbackMessage.includes('❌') ? '#ff9999' : '#99ff99',
+              fontSize: '0.9rem',
+              textAlign: 'center',
+              fontWeight: '500',
+              flexShrink: 0
+            }}
           >
-            ← Previous
-          </button>
-          
-          <div className="flex items-center space-x-2">
-            {options.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => goToOption(index)}
-                className={`w-3 h-3 rounded-full transition-colors ${
-                  index === currentIndex ? 'bg-purple-500' : 'bg-gray-600'
-                }`}
-              />
-            ))}
+            {feedbackMessage}
           </div>
-          
-          <button
-            onClick={nextOption}
-            disabled={options.length <= 1}
-            className="px-3 py-1 bg-purple-600 text-white rounded disabled:opacity-50 disabled:cursor-not-allowed hover:bg-purple-700"
-          >
-            Next →
-          </button>
-        </div>
+        )}
 
-        {/* Option Info */}
-        <div className="text-sm text-gray-400 mb-4 text-center">
-          Option {currentIndex + 1} of {options.length} • {currentOption.type} • 
-          {currentOption.type === 'sentence' && currentOption.content.lineCount && 
-            ` ${currentOption.content.lineCount} line${currentOption.content.lineCount !== 1 ? 's' : ''}`
-          }
-        </div>
-
-        {/* Card Preview */}
+        {/* Scrollable Content */}
         <div 
-          ref={cardRef}
-          className="bg-white text-black p-6 rounded-lg shadow-lg mb-6 min-h-[300px]"
+          style={{ 
+            flex: 1,
+            overflow: 'auto',
+            borderBottom: '1px solid #333'
+          }}
         >
-          {/* Query (if short enough) */}
-          {truncateQuery(response.query) && (
-            <div className="text-center mb-6">
-              <p className="text-sm italic text-gray-600">&ldquo;{truncateQuery(response.query)}&rdquo;</p>
+          <div style={{ padding: '24px' }}>
+          {/* Carousel Controls - Only show if multiple options */}
+          {options.length > 1 && (
+            <div 
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                marginBottom: '16px'
+              }}
+            >
+              <button
+                onClick={prevOption}
+                style={{
+                  background: 'transparent',
+                  border: '1px solid #a0a0a066',
+                  color: '#a0a0a0',
+                  padding: '0.5rem 1rem',
+                  borderRadius: '4px',
+                  fontSize: '0.85rem',
+                  cursor: 'pointer',
+                  transition: 'all 0.2s ease',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.1em'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.borderColor = '#ffffff';
+                  e.currentTarget.style.color = '#ffffff';
+                  e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.05)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.borderColor = '#a0a0a066';
+                  e.currentTarget.style.color = '#a0a0a0';
+                  e.currentTarget.style.backgroundColor = 'transparent';
+                }}
+              >
+                ← Previous
+              </button>
+              
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                {options.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => goToOption(index)}
+                    style={{
+                      width: '12px',
+                      height: '12px',
+                      borderRadius: '50%',
+                      border: 'none',
+                      cursor: 'pointer',
+                      backgroundColor: index === currentIndex ? '#9370db' : '#333',
+                      transition: 'all 0.2s ease'
+                    }}
+                  />
+                ))}
+              </div>
+              
+              <button
+                onClick={nextOption}
+                style={{
+                  background: 'transparent',
+                  border: '1px solid #a0a0a066',
+                  color: '#a0a0a0',
+                  padding: '0.5rem 1rem',
+                  borderRadius: '4px',
+                  fontSize: '0.85rem',
+                  cursor: 'pointer',
+                  transition: 'all 0.2s ease',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.1em'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.borderColor = '#ffffff';
+                  e.currentTarget.style.color = '#ffffff';
+                  e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.05)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.borderColor = '#a0a0a066';
+                  e.currentTarget.style.color = '#a0a0a0';
+                  e.currentTarget.style.backgroundColor = 'transparent';
+                }}
+              >
+                Next →
+              </button>
             </div>
           )}
 
-          {/* Source Attribution */}
-          <div className="text-center mb-4">
-            <h3 className="text-lg font-bold text-gray-800">
-              {normalizeTitle(currentOption.content.sectionTitle)}
-            </h3>
-            <p className="text-sm text-gray-600">{getCorpusDisplayName(currentOption.corpus)}</p>
-            {currentOption.metadata?.incense?.english && (
-              <p className="text-sm text-gray-500 italic">
-                {currentOption.metadata.incense.english}
-              </p>
-            )}
-          </div>
-
-          {/* Timestamp */}
-          <div className="text-center text-xs text-gray-400 mb-6">
-            {new Date(response.timestamp).toLocaleDateString()}
-          </div>
-
-          {/* Main Quote */}
-          <div className="text-center">
-            <blockquote className="text-base leading-relaxed text-gray-800 italic">
-&ldquo;{currentOption.content.text}&rdquo;
-            </blockquote>
-          </div>
-
-          {/* Footer placeholder for QR code and branding */}
-          <div className="mt-6 flex justify-between items-center text-xs text-gray-400">
-            <span>Generated by Cleros Oracle</span>
-            <div className="w-8 h-8 border border-gray-300 flex items-center justify-center">
-              QR
+          {/* Option Info */}
+          {options.length > 1 && (
+            <div 
+              style={{
+                fontSize: '0.85rem',
+                color: '#a0a0a0',
+                marginBottom: '16px',
+                textAlign: 'center',
+                textTransform: 'uppercase',
+                letterSpacing: '0.05em'
+              }}
+            >
+              {currentOption.corpus.toUpperCase()}
+              ({currentIndex + 1} of {options.length})
             </div>
+          )}
+
+          {/* Use the actual ShareCard component as preview */}
+          <div style={{ 
+            marginBottom: '24px',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center'
+          }}>
+            <ShareCard 
+              response={response}
+              currentOption={currentOption}
+            />
           </div>
         </div>
 
         {/* Action Buttons */}
-        <div className="flex space-x-3">
+        <div 
+          style={{
+            padding: '24px',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '12px',
+            justifyContent: 'center',
+            flexWrap: 'wrap',
+            flexShrink: 0
+          }}
+        >
           <button
-            onClick={copyToClipboard}
-            className="flex-1 px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-700 transition-colors"
+            onClick={copyImageToClipboard}
+            style={{
+              padding: '8px 12px',
+              backgroundColor: '#9370db',
+              border: 'none',
+              borderRadius: '4px',
+              color: 'white',
+              cursor: 'pointer',
+              fontSize: '0.85rem',
+              textTransform: 'uppercase',
+              letterSpacing: '0.1em',
+              transition: 'all 0.2s ease'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = '#8a63d2';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = '#9370db';
+            }}
           >
-            📋 Copy Text
+            Copy Image
           </button>
           <button
-            onClick={() => {/* TODO: Save as image */}}
-            className="flex-1 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition-colors"
+            onClick={saveAsImage}
+            style={{
+              background: 'transparent',
+              border: '1px solid #a0a0a066',
+              color: '#a0a0a0',
+              padding: '0.5rem 1rem',
+              borderRadius: '4px',
+              fontSize: '0.85rem',
+              cursor: 'pointer',
+              transition: 'all 0.2s ease',
+              textTransform: 'uppercase',
+              letterSpacing: '0.1em'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.borderColor = '#ffffff';
+              e.currentTarget.style.color = '#ffffff';
+              e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.05)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.borderColor = '#a0a0a066';
+              e.currentTarget.style.color = '#a0a0a0';
+              e.currentTarget.style.backgroundColor = 'transparent';
+            }}
           >
-            💾 Save Image
+            Save Image
+          </button>
+          <button
+            onClick={copyToClipboard}
+            style={{
+              background: 'transparent',
+              border: '1px solid #a0a0a066',
+              color: '#a0a0a0',
+              padding: '0.5rem 1rem',
+              borderRadius: '4px',
+              fontSize: '0.85rem',
+              cursor: 'pointer',
+              transition: 'all 0.2s ease',
+              textTransform: 'uppercase',
+              letterSpacing: '0.1em'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.borderColor = '#ffffff';
+              e.currentTarget.style.color = '#ffffff';
+              e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.05)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.borderColor = '#a0a0a066';
+              e.currentTarget.style.color = '#a0a0a0';
+              e.currentTarget.style.backgroundColor = 'transparent';
+            }}
+          >
+            Copy Text
           </button>
           <button
             onClick={onClose}
-            className="px-4 py-2 bg-gray-600 text-white rounded hover:bg-gray-700 transition-colors"
+            style={{
+              background: 'transparent',
+              border: '1px solid #a0a0a033',
+              color: '#a0a0a0',
+              padding: '0.5rem 1rem',
+              borderRadius: '4px',
+              fontSize: '0.85rem',
+              cursor: 'pointer',
+              transition: 'all 0.2s ease',
+              textTransform: 'uppercase',
+              letterSpacing: '0.1em'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.borderColor = '#a0a0a066';
+              e.currentTarget.style.color = '#e0e0e0';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.borderColor = '#a0a0a033';
+              e.currentTarget.style.color = '#a0a0a0';
+            }}
           >
             Close
           </button>
         </div>
+        </div>
       </div>
-    </div>
+
+    </div>,
+    document.body
   );
 };
 

@@ -164,7 +164,7 @@ class ClientCounselService {
       for (const sentence of part.sentences) {
         try {
           // Get sentence embedding using embeddingService
-          const sentenceEmbedding = await embeddingService.getSentenceEmbedding(corpusName, sentence.sentence_id);
+          const sentenceEmbedding = await embeddingService.getSentenceEmbedding(corpusName, sentence.sentence_id, part.part_number);
           if (!sentenceEmbedding) {
             continue; // Skip sentences without embeddings
           }

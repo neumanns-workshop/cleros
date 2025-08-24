@@ -216,8 +216,8 @@ export class SemanticLineRanker {
   ): Promise<BestSentenceResult | undefined> {
     
     try {
-      // Get sentence embedding
-      const sentenceEmbedding = await embeddingService.getSentenceEmbedding(corpus, sentenceId);
+      // Get sentence embedding (assume part number 1 for now - this may need refinement)
+      const sentenceEmbedding = await embeddingService.getSentenceEmbedding(corpus, sentenceId, 1);
       if (!sentenceEmbedding) return undefined;
 
       // Calculate semantic similarity
