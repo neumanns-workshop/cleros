@@ -7,7 +7,7 @@ export interface AncientQuery {
 export interface SelectionDetail {
   source: string;
   sectionTitle: string;
-  sentenceId: string;
+  sentenceId: number;
   totalSentences: number;
   text: {
     english: string;
@@ -29,6 +29,11 @@ export interface SelectionDetail {
 
 export interface OracleSelection extends SelectionDetail {
   randomIndex: number;
+  bestLine?: {
+    lineNumber: number;
+    score: number;
+    text: string;
+  };
 }
 
 export interface CounselSelection extends SelectionDetail {
@@ -36,6 +41,27 @@ export interface CounselSelection extends SelectionDetail {
   bestLine?: {
     lineNumber: number;
     score: number;
+    text: string;
+  };
+}
+
+export interface ShareableOption {
+  id: string;
+  type: 'sentence' | 'line';
+  corpus: 'hymns' | 'argonautica' | 'lithica';
+  score: number;
+  content: {
+    text: string;
+    lineCount?: number;
+    sectionTitle: string;
+  };
+  metadata?: {
+    sentenceId?: number;
+    lineNumber?: number;
+    incense?: {
+      english: string;
+      greek?: string;
+    };
   };
 }
 
@@ -48,15 +74,32 @@ export interface OracleResponse {
     argonautica?: OracleSelection;
     lithica?: OracleSelection;
   };
+  keywords: string[];
+  shareableOptions: ShareableOption[]; // Ranked by semantic relevance
+  overallBestLine?: {
+    corpus: 'hymns' | 'argonautica' | 'lithica';
+    lineNumber: number;
+    score: number;
+    text: string;
+  };
 }
 
 export interface CounselResponse {
   query: string;
   timestamp: number;
+  searchSource: 'semantic';
   selections: {
     hymns?: CounselSelection;
     argonautica?: CounselSelection;
     lithica?: CounselSelection;
+  };
+  keywords: string[];
+  shareableOptions: ShareableOption[]; // Ranked by semantic relevance  
+  overallBestLine?: {
+    corpus: 'hymns' | 'argonautica' | 'lithica';
+    lineNumber: number;
+    score: number;
+    text: string;
   };
 }
 

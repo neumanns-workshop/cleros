@@ -2,9 +2,9 @@
   "corpus": "dodona_queries",
   "type": "line_embeddings",
   "total_lines": 18,
-  "embedding_dimension": 384,
-  "model": "all-MiniLM-L6-v2",
-  "created": "2025-08-22T12:39:52.454464",
+  "embedding_dimension": 512,
+  "model": "universal-sentence-encoder",
+  "created": "2025-08-23T21:04:53.907970",
   "mapping": [
     {
       "id": "dodona_queries_1_1_1",

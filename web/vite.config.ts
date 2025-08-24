@@ -27,14 +27,14 @@ export default defineConfig({
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
-          transformers: ['@huggingface/transformers'],
+          transformers: ['@xenova/transformers'],
           motion: ['framer-motion'],
         }
       }
     }
   },
   optimizeDeps: {
-    include: ['@huggingface/transformers']
+    include: ['@xenova/transformers']
   },
   define: {
     global: 'globalThis',

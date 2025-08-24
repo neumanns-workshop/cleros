@@ -1,6 +1,5 @@
 import { useSemanticSimilarity } from '../services/clientSemanticScorer';
-import { OracleResponse } from '../services/oracleService';
-import { CounselResponse } from '../services/counselService';
+import { OracleResponse, CounselResponse } from '../types/oracle';
 
 interface LineData {
   isMarker?: boolean;
@@ -56,7 +55,7 @@ const OracleLine = ({ lineData, oracleResponse, onNavigate, onLineClick }: Oracl
             ...(sourceLink ? { cursor: 'pointer' } : {})
         } : {}),
         // No visual highlighting - clean and minimal
-        ...(onLineClick && !isHeader ? {
+        ...(typeof onLineClick === 'function' && !isHeader ? {
             cursor: 'pointer'
         } : {})
     };

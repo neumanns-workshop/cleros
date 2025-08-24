@@ -1,12 +1,14 @@
 import { useState, useEffect, useMemo } from 'react';
 import './App.css';
 import { useTypewriter } from './hooks/useTypewriter';
-import { oracleService, OracleResponse } from './services/oracleService';
-import { counselService, CounselResponse } from './services/counselService';
+import { oracleService } from './services/oracleService';
+import { counselService } from './services/counselService';
+import { OracleResponse, CounselResponse } from './types/oracle';
 import OracleLine from './components/OracleLine'; // Import the new component
 import { formatTitle } from './utils/stringUtils';
 import { Header } from './components/layout/Header';
 import { ViewType } from './types/app';
+import ShareDialog from './components/common/ShareDialog';
 
 
 
@@ -120,6 +122,7 @@ function App() {
   const [isRandomOrgAvailable, setIsRandomOrgAvailable] = useState<boolean | null>(null);
   const [personalOracleReports, setPersonalOracleReports] = useState<OracleResponse[]>([]);
   const [personalCounselReports, setPersonalCounselReports] = useState<CounselResponse[]>([]);
+  const [showShareDialog, setShowShareDialog] = useState(false);
   // Removed highlightedSentenceId as it's not currently used
 
   const currentQuery = ancientQueries[currentIndex];
@@ -801,7 +804,7 @@ function App() {
           setCurrentView('corpus');
           setSelectedSource('personal');
           setSelectedSection(`counsel_${response.timestamp}`);
-          setCurrentCounselResponse(response);
+          setCurrentCounselResponse(response as CounselResponse);
         } catch (error) {
           console.error('Error generating counsel response:', error);
           alert('Failed to generate counsel response. Please check the console for details.');
@@ -909,8 +912,37 @@ function App() {
             </div>
           </div>
           
+          {/* Share Button - Show when viewing personal reports */}
+          {selectedSource === 'personal' && (currentOracleResponse || currentCounselResponse) && (
+            <div style={{ 
+              padding: '12px 24px',
+              borderBottom: '1px solid #333',
+              backgroundColor: '#111'
+            }}>
+              <button 
+                onClick={() => setShowShareDialog(true)}
+                className="share-button"
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  padding: '10px 16px',
+                  backgroundColor: '#9370db',
+                  color: 'white',
+                  border: 'none',
+                  borderRadius: '6px',
+                  fontSize: '0.9rem',
+                  cursor: 'pointer',
+                  transition: 'background-color 0.2s'
+                }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#8a63d2'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#9370db'}
+              >
+                🎴 Create Share Card
+              </button>
+            </div>
+          )}
 
-          
           <div className="corpus-content">
             {loading ? (
               <div className="no-content">
@@ -989,6 +1021,15 @@ function App() {
         <footer className="app-footer">
           <p>© 2025 Galaxy Brain Entertainment</p>
         </footer>
+
+        {/* Share Dialog */}
+        {(currentOracleResponse || currentCounselResponse) && (
+          <ShareDialog 
+            isOpen={showShareDialog}
+            onClose={() => setShowShareDialog(false)}
+            response={currentOracleResponse || currentCounselResponse}
+          />
+        )}
       </div>
     );
   }
@@ -1141,7 +1182,7 @@ function App() {
               <ul>
                 <li>Athanassakis, Apostolos N. & Benjamin M. Wolkow. <em>The Orphic Hymns</em>. Baltimore: Johns Hopkins University Press, 2013.</li>
                 <li>Bernabé, Alberto. <em>Poetae Epici Graeci: Testimonia et Fragmenta</em>. Berlin: De Gruyter, 2004-2007.</li>
-                <li>Edmonds, Radcliffe G. <em>Myths of the Underworld Journey: Plato, Aristophanes, and the 'Orphic' Gold Tablets</em>. Cambridge: Cambridge University Press, 2004.</li>
+                <li>Edmonds, Radcliffe G. <em>Myths of the Underworld Journey: Plato, Aristophanes, and the &lsquo;Orphic&rsquo; Gold Tablets</em>. Cambridge: Cambridge University Press, 2004.</li>
                 <li>Edmonds, Radcliffe G. <em>Redefining Ancient Orphism: A Study in Greek Religion</em>. Cambridge: Cambridge University Press, 2013.</li>
                 <li>Graf, Fritz & Sarah Iles Johnston. <em>Ritual Texts for the Afterlife: Orpheus and the Bacchic Gold Tablets</em>. London: Routledge, 2007.</li>
                 <li>Johnston, Sarah Iles. <em>Ancient Greek Divination</em>. Chichester: Wiley-Blackwell, 2008.</li>

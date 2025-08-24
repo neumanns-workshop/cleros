@@ -73,7 +73,7 @@ export const formatReportAsLines = (
       isHeader: true,
       sourceLink: {
         corpus: 'hymns',
-        sentenceId: hymnsSelection.sentenceId,
+        sentenceId: hymnsSelection.sentenceId.toString(),
         sectionTitle: hymnsSelection.sectionTitle,
         key: (hymnsSelection as any).partNumber
       }
@@ -90,11 +90,11 @@ export const formatReportAsLines = (
           ...enrichLineData(lineDetail.line, 'hymns', lineDetail.english, corpusData),
           note: lineDetail.note || lineNote,
           part_number: (report.selections.hymns as any).partNumber,
-          sentence_id: report.selections.hymns!.sentenceId,
+          sentence_id: report.selections.hymns!.sentenceId.toString(),
           corpus_name: (report.selections.hymns as any).corpusName,
           sourceLink: {
             corpus: 'hymns',
-            sentenceId: report.selections.hymns!.sentenceId,
+            sentenceId: report.selections.hymns!.sentenceId.toString(),
             sectionTitle: report.selections.hymns!.sectionTitle,
             lineNumber: lineDetail.line
           }

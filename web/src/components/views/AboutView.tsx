@@ -18,7 +18,7 @@ export const AboutView = ({ currentView, setCurrentView }: AboutViewProps) => (
         <h3>Digital Bibliomancy</h3>
         <p>
           Cleros is a digital bibliomancy application that uses computational methods to consult ancient texts. 
-          Where Greeks and Romans sought guidance in Homer's <em>Iliad</em> and Virgil's <em>Aeneid</em>, this application 
+          Where Greeks and Romans sought guidance in Homer&rsquo;s <em>Iliad</em> and Virgil&rsquo;s <em>Aeneid</em>, this application 
           draws upon Orphic literature: the <em>Hymni</em>, <em>Argonautica</em>, and <em>Lithica</em>.
         </p>
         <p>
@@ -31,7 +31,7 @@ export const AboutView = ({ currentView, setCurrentView }: AboutViewProps) => (
       <section className="about-section">
         <h3>Etymology</h3>
         <p>
-          The name "Cleros" derives from κλῆρος (klēros), the Greek word meaning "lot" or "allotted portion"—
+          The name &ldquo;Cleros&rdquo; derives from κλῆρος (klēros), the Greek word meaning &ldquo;lot&rdquo; or &ldquo;allotted portion&rdquo;—
           the share of fate assigned to each person. Beyond simple chance, κλῆρος was the mechanism through 
           which divine will was thought to manifest in human affairs.
         </p>
@@ -80,8 +80,8 @@ export const AboutView = ({ currentView, setCurrentView }: AboutViewProps) => (
           <div className="corpus-text">
             <h4>Orphic Argonautica</h4>
             <p>
-              An epic poem recounting Jason's quest for the Golden Fleece from Orpheus's perspective. The text combines 
-              adventure narrative with Orphic theology, presenting the hero's journey as spiritual allegory.
+              An epic poem recounting Jason&rsquo;s quest for the Golden Fleece from Orpheus&rsquo;s perspective. The text combines 
+              adventure narrative with Orphic theology, presenting the hero&rsquo;s journey as spiritual allegory.
             </p>
           </div>
 

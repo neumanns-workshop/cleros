@@ -2,9 +2,9 @@
   "corpus": "hymns",
   "type": "sentence_embeddings",
   "total_sentences": 218,
-  "embedding_dimension": 384,
-  "model": "all-MiniLM-L6-v2",
-  "created": "2025-08-22T12:39:51.090820",
+  "embedding_dimension": 512,
+  "model": "universal-sentence-encoder",
+  "created": "2025-08-23T21:04:53.773201",
   "mapping": [
     {
       "id": "hymns_0_1",
@@ -839,43 +839,43 @@
       "index": 207
     },
     {
-      "id": "hymns_88_1",
+      "id": "hymns_89_1",
       "index": 208
     },
     {
-      "id": "hymns_88_2",
+      "id": "hymns_89_2",
       "index": 209
     },
     {
-      "id": "hymns_88_3",
+      "id": "hymns_89_3",
       "index": 210
     },
     {
-      "id": "hymns_88_4",
+      "id": "hymns_89_4",
       "index": 211
     },
     {
-      "id": "hymns_88_5",
+      "id": "hymns_89_5",
       "index": 212
     },
     {
-      "id": "hymns_88_6",
+      "id": "hymns_89_6",
       "index": 213
     },
     {
-      "id": "hymns_88_7",
+      "id": "hymns_89_7",
       "index": 214
     },
     {
-      "id": "hymns_88_8",
+      "id": "hymns_89_8",
       "index": 215
     },
     {
-      "id": "hymns_88_9",
+      "id": "hymns_89_9",
       "index": 216
     },
     {
-      "id": "hymns_88_10",
+      "id": "hymns_89_10",
       "index": 217
     }
   ]

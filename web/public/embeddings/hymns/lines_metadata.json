@@ -2,9 +2,9 @@
   "corpus": "hymns",
   "type": "line_embeddings",
   "total_lines": 1173,
-  "embedding_dimension": 384,
-  "model": "all-MiniLM-L6-v2",
-  "created": "2025-08-22T12:39:51.460880",
+  "embedding_dimension": 512,
+  "model": "universal-sentence-encoder",
+  "created": "2025-08-23T21:04:53.801043",
   "mapping": [
     {
       "id": "hymns_0_1_1",
@@ -4571,131 +4571,131 @@
       "index": 1140
     },
     {
-      "id": "hymns_88_1_1",
+      "id": "hymns_89_1_1",
       "index": 1141
     },
     {
-      "id": "hymns_88_2_2",
+      "id": "hymns_89_2_2",
       "index": 1142
     },
     {
-      "id": "hymns_88_3_3",
+      "id": "hymns_89_3_3",
       "index": 1143
     },
     {
-      "id": "hymns_88_4_4",
+      "id": "hymns_89_4_4",
       "index": 1144
     },
     {
-      "id": "hymns_88_5_5",
+      "id": "hymns_89_5_5",
       "index": 1145
     },
     {
-      "id": "hymns_88_6_6",
+      "id": "hymns_89_6_6",
       "index": 1146
     },
     {
-      "id": "hymns_88_7_7",
+      "id": "hymns_89_7_7",
       "index": 1147
     },
     {
-      "id": "hymns_88_7_8",
+      "id": "hymns_89_7_8",
       "index": 1148
     },
     {
-      "id": "hymns_88_7_9",
+      "id": "hymns_89_7_9",
       "index": 1149
     },
     {
-      "id": "hymns_88_7_10",
+      "id": "hymns_89_7_10",
       "index": 1150
     },
     {
-      "id": "hymns_88_8_11",
+      "id": "hymns_89_8_11",
       "index": 1151
     },
     {
-      "id": "hymns_88_8_12",
+      "id": "hymns_89_8_12",
       "index": 1152
     },
     {
-      "id": "hymns_88_8_13",
+      "id": "hymns_89_8_13",
       "index": 1153
     },
     {
-      "id": "hymns_88_8_14",
+      "id": "hymns_89_8_14",
       "index": 1154
     },
     {
-      "id": "hymns_88_8_15",
+      "id": "hymns_89_8_15",
       "index": 1155
     },
     {
-      "id": "hymns_88_8_16",
+      "id": "hymns_89_8_16",
       "index": 1156
     },
     {
-      "id": "hymns_88_8_17",
+      "id": "hymns_89_8_17",
       "index": 1157
     },
     {
-      "id": "hymns_88_8_18",
+      "id": "hymns_89_8_18",
       "index": 1158
     },
     {
-      "id": "hymns_88_8_19",
+      "id": "hymns_89_8_19",
       "index": 1159
     },
     {
-      "id": "hymns_88_8_20",
+      "id": "hymns_89_8_20",
       "index": 1160
     },
     {
-      "id": "hymns_88_9_21",
+      "id": "hymns_89_9_21",
       "index": 1161
     },
     {
-      "id": "hymns_88_9_22",
+      "id": "hymns_89_9_22",
       "index": 1162
     },
     {
-      "id": "hymns_88_9_23",
+      "id": "hymns_89_9_23",
       "index": 1163
     },
     {
-      "id": "hymns_88_9_24",
+      "id": "hymns_89_9_24",
       "index": 1164
     },
     {
-      "id": "hymns_88_9_25",
+      "id": "hymns_89_9_25",
       "index": 1165
     },
     {
-      "id": "hymns_88_9_26",
+      "id": "hymns_89_9_26",
       "index": 1166
     },
     {
-      "id": "hymns_88_9_27",
+      "id": "hymns_89_9_27",
       "index": 1167
     },
     {
-      "id": "hymns_88_9_28",
+      "id": "hymns_89_9_28",
       "index": 1168
     },
     {
-      "id": "hymns_88_9_29",
+      "id": "hymns_89_9_29",
       "index": 1169
     },
     {
-      "id": "hymns_88_9_30",
+      "id": "hymns_89_9_30",
       "index": 1170
     },
     {
-      "id": "hymns_88_10_31",
+      "id": "hymns_89_10_31",
       "index": 1171
     },
     {
-      "id": "hymns_88_10_32",
+      "id": "hymns_89_10_32",
       "index": 1172
     }
   ]

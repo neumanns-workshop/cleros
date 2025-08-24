@@ -91,7 +91,8 @@ export const HomeView: React.FC<HomeViewProps> = ({
       <Footer />
       {isGenerating && (
         <LoadingOverlay 
-          isGeneratingOracle={searchMode === 'oracle'} 
+          isGeneratingOracle={searchMode === 'oracle'}
+          isGeneratingCounsel={searchMode === 'sage'} 
         />
       )}
     </div>

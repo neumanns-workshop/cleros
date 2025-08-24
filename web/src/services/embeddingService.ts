@@ -1,34 +1,40 @@
-import { AutoTokenizer, AutoModel } from '@huggingface/transformers';
+import { pipeline } from '@xenova/transformers';
 
-// Ensure there is only one instance of the model and tokenizer
+// Type for the transformers.js pipeline
+type FeatureExtractionPipeline = any; // Note: @xenova/transformers doesn't export proper types yet
+
+// Ensure there is only one instance of the embedding pipeline
 class EmbeddingPipeline {
-    static tokenizer: AutoTokenizer | null = null;
-    static model: AutoModel | null = null;
+    static pipeline: FeatureExtractionPipeline | null = null;
     static instance: EmbeddingPipeline | null = null;
 
-    static async getInstance() {
+    static async getInstance(): Promise<EmbeddingPipeline> {
         if (this.instance === null) {
-            this.tokenizer = await AutoTokenizer.from_pretrained('Xenova/all-MiniLM-L6-v2');
-            this.model = await AutoModel.from_pretrained('Xenova/all-MiniLM-L6-v2');
+            console.log('🔮 Initializing transformers.js embedding pipeline...');
+            this.pipeline = await pipeline('feature-extraction', 'Xenova/all-MiniLM-L6-v2');
             this.instance = new EmbeddingPipeline();
+            console.log('✅ Embedding pipeline initialized successfully');
         }
         return this.instance;
     }
 
-    async embed(): Promise<number[]> {
-        // @ts-expect-error -- tsc is not happy with this
-        if (!EmbeddingPipeline.tokenizer || !EmbeddingPipeline.model) {
+    async embed(text: string): Promise<number[]> {
+        if (!EmbeddingPipeline.pipeline) {
             throw new Error("Embedding pipeline not initialized.");
         }
         
         try {
-            // TODO: Fix Hugging Face transformers API usage
-            // For now, return a placeholder embedding to prevent build errors
-            console.warn('Embedding service temporarily disabled - using placeholder embeddings');
-            return new Array(384).fill(0).map(() => Math.random() - 0.5);
+            // Generate embedding using the pipeline with mean pooling and normalization
+            const output = await EmbeddingPipeline.pipeline(text, {
+                pooling: 'mean',
+                normalize: true,
+            });
+            
+            // Convert tensor to regular array
+            return Array.from(output.data);
         } catch (error) {
             console.error('Embedding error:', error);
-            return new Array(384).fill(0);
+            throw error;
         }
     }
 }
@@ -43,6 +49,16 @@ export interface LineEmbeddingData {
         created: string;
         mapping: Array<{
             id: string;
+            index: number;
+        }>;
+    };
+    embeddings: number[][];
+}
+
+export interface SentenceEmbeddingData {
+    metadata: {
+        mapping: Array<{
+            sentence_id: number;
             index: number;
         }>;
     };
@@ -128,7 +144,6 @@ class EmbeddingService {
 
     public async getQueryEmbedding(query: string): Promise<number[]> {
         const pipeline = await this.modelPipeline;
-        // @ts-expect-error -- tsc is not happy with this
         return pipeline.embed(query);
     }
     
@@ -138,6 +153,60 @@ class EmbeddingService {
             
             // Find the mapping for this line ID in the format corpus_part_sentence_line
             const mapping = embeddingData.metadata.mapping.find(m => m.id === lineId);
+            
+            if (!mapping) {
+                return undefined;
+            }
+            
+            const embedding = embeddingData.embeddings[mapping.index];
+            if (!embedding) {
+                return undefined;
+            }
+            
+            return embedding;
+        } catch (error) {
+            return undefined;
+        }
+    }
+
+    private sentenceEmbeddingsCache: Map<string, Promise<SentenceEmbeddingData>> = new Map();
+
+    private async loadSentenceEmbeddings(corpus: string): Promise<SentenceEmbeddingData> {
+        if (!this.sentenceEmbeddingsCache.has(corpus)) {
+            const promise = (async () => {
+                const [metadataResponse] = await Promise.all([
+                    fetch(`/embeddings/${corpus}/sentences_metadata.json`)
+                ]);
+
+                if (!metadataResponse.ok) {
+                    throw new Error(`Failed to load sentence metadata: ${metadataResponse.status}`);
+                }
+
+                const metadata = await metadataResponse.json();
+
+                // Load the embedding vectors
+                const embeddingResponse = await fetch(`/embeddings/${corpus}/sentences.npy`);
+                if (!embeddingResponse.ok) {
+                    throw new Error(`Failed to load sentence embeddings: ${embeddingResponse.status}`);
+                }
+                
+                const embeddingBuffer = await embeddingResponse.arrayBuffer();
+                const embeddings = this.parseNumpyArray(embeddingBuffer);
+
+                return { metadata, embeddings };
+            })();
+
+            this.sentenceEmbeddingsCache.set(corpus, promise);
+        }
+        return this.sentenceEmbeddingsCache.get(corpus)!;
+    }
+
+    public async getSentenceEmbedding(corpus: string, sentenceId: number): Promise<number[] | undefined> {
+        try {
+            const embeddingData = await this.loadSentenceEmbeddings(corpus);
+            
+            // Find the mapping for this sentence ID
+            const mapping = embeddingData.metadata.mapping?.find((m: any) => m.sentence_id === sentenceId);
             
             if (!mapping) {
                 return undefined;

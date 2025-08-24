@@ -5,47 +5,10 @@
 
 import { embeddingService } from './embeddingService';
 import { synonymExpansionService } from './synonymExpansionService';
+import { semanticLineRanker } from './semanticLineRanker';
+import { CounselResponse } from '../types/oracle';
 
-export interface CounselResponse {
-  timestamp: number;
-  query: string;
-  searchSource: 'semantic';
-  selections: {
-    hymns?: CounselSelection;
-    argonautica?: CounselSelection;
-    lithica?: CounselSelection;
-  };
-  keywords: string[];
-  overallBestLine?: {
-    corpus: 'hymns' | 'argonautica' | 'lithica';
-    lineNumber: number;
-    score: number;
-    text: string;
-  };
-}
-
-export interface CounselSelection {
-  source: string;
-  sentenceId: number;
-  text: {
-    english: string;
-    greek?: string;
-  };
-  sectionTitle: string;
-  lineDetails: LineDetail[];
-  semanticScore: number;
-  totalSentences: number;
-  bestLine?: {
-    lineNumber: number;
-    score: number;
-    text: string;
-  };
-  incense?: {
-    english?: string;
-    greek?: string;
-  };
-  partNumber?: number;
-}
+// CounselResponse and CounselSelection interfaces moved to types/oracle.ts - import from there
 
 export interface LineDetail {
   line: number;
@@ -76,7 +39,7 @@ export interface SentenceUnit {
 }
 
 class ClientCounselService {
-  private sentenceEmbeddingsCache: Map<string, Promise<SentenceEmbeddingData>> = new Map();
+  private corpusDataCache: Map<string, Promise<any>> = new Map();
   private stopWords: Set<string> = new Set();
 
   constructor() {
@@ -101,76 +64,26 @@ class ClientCounselService {
   }
 
   /**
-   * Load sentence embeddings for a corpus
+   * Load corpus data only (embeddings handled by embeddingService)
    */
-  private async loadSentenceEmbeddings(corpusName: string): Promise<SentenceEmbeddingData> {
-    if (this.sentenceEmbeddingsCache.has(corpusName)) {
-      return this.sentenceEmbeddingsCache.get(corpusName)!;
+  private async loadCorpusData(corpusName: string): Promise<any> {
+    if (this.corpusDataCache.has(corpusName)) {
+      return this.corpusDataCache.get(corpusName)!;
     }
 
     const promise = (async () => {
-      // Load minimal metadata + embeddings + corpus separately
-      const [metadataResponse, corpusResponse] = await Promise.all([
-        fetch(`/embeddings/${corpusName}/sentences_metadata.json`),
-        fetch(`/corpus_20250822_121628/${corpusName}.json`)
-      ]);
-
-      if (!metadataResponse.ok) {
-        throw new Error(`Failed to load metadata: ${metadataResponse.status}`);
-      }
+      const corpusResponse = await fetch(`/corpus_20250822_121628/${corpusName}.json`);
       if (!corpusResponse.ok) {
         throw new Error(`Failed to load corpus: ${corpusResponse.status}`);
       }
-
-      const [metadata, corpusData] = await Promise.all([
-        metadataResponse.json(),
-        corpusResponse.json()
-      ]);
-
-      // Load the embedding vectors
-      const embeddingResponse = await fetch(`/embeddings/${corpusName}/sentences.npy`);
-      if (!embeddingResponse.ok) {
-        throw new Error(`Failed to load embeddings: ${embeddingResponse.status}`);
-      }
-      
-      const embeddingBuffer = await embeddingResponse.arrayBuffer();
-      const embeddings = this.parseNumpyArray(embeddingBuffer);
-
-      return {
-        metadata,
-        embeddings,
-        corpusData
-      };
+      return corpusResponse.json();
     })();
 
-    this.sentenceEmbeddingsCache.set(corpusName, promise);
+    this.corpusDataCache.set(corpusName, promise);
     return promise;
   }
 
-  private parseNumpyArray(buffer: ArrayBuffer): number[][] {
-    // Simple .npy parser for float32 arrays
-    // Skip the header and read the float32 data
-    const view = new DataView(buffer);
-    
-    // Skip numpy header (simplified - assumes our specific format)
-    let offset = 128; // Approximate header size
-    const floats = [];
-    
-    while (offset < buffer.byteLength) {
-      floats.push(view.getFloat32(offset, true)); // little endian
-      offset += 4;
-    }
-    
-    // Reshape to 2D array (assuming we know the dimensions from metadata)
-    const result: number[][] = [];
-    const embedding_dim = 384; // from all-MiniLM-L6-v2
-    
-    for (let i = 0; i < floats.length; i += embedding_dim) {
-      result.push(floats.slice(i, i + embedding_dim));
-    }
-    
-    return result;
-  }
+
 
   /**
    * Extract keywords from query text
@@ -234,13 +147,12 @@ class ClientCounselService {
     enhancedKeywords: any[]
   ): Promise<{ unit: SentenceUnit; score: number; corpus: string }> {
     
-    const embeddingData = await this.loadSentenceEmbeddings(corpusName);
+    const corpusData = await this.loadCorpusData(corpusName);
     let bestMatch = null;
     let bestScore = -1;
 
-    // Create embedding ID to sentence data lookup from corpus
-    const embeddingIdToSentence: Map<string, any> = new Map();
-    for (const part of embeddingData.corpusData.parts) {
+    // Iterate through corpus data and score each sentence
+    for (const part of corpusData.parts) {
       // Filter out overly general hymns at the part level
       if (corpusName === 'hymns') {
         // Skip proem (part 0) and appendix/cosmogenic content (part 88) - too general for semantic search
@@ -250,61 +162,46 @@ class ClientCounselService {
       }
       
       for (const sentence of part.sentences) {
-        // Construct embedding ID: corpus_part_sentence format (e.g., "hymns_0_1")
-        const embeddingId = `${corpusName}_${part.part_number}_${sentence.sentence_id}`;
-        embeddingIdToSentence.set(embeddingId, {
-          ...sentence,
-          part_number: part.part_number,
-          part_title: part.part_title,
-          incense: part.incense,
-          incense_greek: part.incense_greek
-        });
-      }
-    }
+        try {
+          // Get sentence embedding using embeddingService
+          const sentenceEmbedding = await embeddingService.getSentenceEmbedding(corpusName, sentence.sentence_id);
+          if (!sentenceEmbedding) {
+            continue; // Skip sentences without embeddings
+          }
 
-    // Iterate through embeddings using metadata mapping
-    for (const mapping of embeddingData.metadata.mapping) {
-      const embeddingIndex = mapping.index;
-      const embeddingId = mapping.id;
-      
-      // Filter out parts 0 and 88 for hymns at the embedding level too
-      if (corpusName === 'hymns') {
-        if (embeddingId.startsWith('hymns_0_') || embeddingId.startsWith('hymns_88_')) {
+          const text = sentence.text.english;
+
+          // Calculate semantic similarity
+          const semanticSimilarity = embeddingService.calculateCosineSimilarity(
+            queryEmbedding, 
+            sentenceEmbedding
+          );
+
+          // Apply enhanced keyword boost using pre-expanded keywords
+          const keywordBoost = this.calculateEnhancedKeywordBoost(text, enhancedKeywords);
+          
+          // Combined score (semantic gets 70% weight, keywords get 30% weight)
+          const finalScore = (semanticSimilarity * 0.7) + Math.min(keywordBoost, 0.3);
+
+          if (finalScore > bestScore) {
+            bestScore = finalScore;
+            bestMatch = { 
+              id: sentence.sentence_id, 
+              text, 
+              embedding: sentenceEmbedding,
+              sentenceData: {
+                ...sentence,
+                part_number: part.part_number,
+                part_title: part.part_title,
+                incense: part.incense,
+                incense_greek: part.incense_greek
+              }
+            };
+          }
+        } catch (error) {
+          console.warn(`Error processing sentence ${sentence.sentence_id} in ${corpusName}:`, error);
           continue;
         }
-      }
-      
-      const embedding = embeddingData.embeddings[embeddingIndex];
-      const sentenceData = embeddingIdToSentence.get(embeddingId);
-      
-      if (!embedding || !sentenceData) {
-        continue;
-      }
-      
-
-      
-      const text = sentenceData.text.english;
-
-      // Calculate semantic similarity
-      const semanticSimilarity = embeddingService.calculateCosineSimilarity(
-        queryEmbedding, 
-        embedding
-      );
-
-      // Apply enhanced keyword boost using pre-expanded keywords
-      const keywordBoost = this.calculateEnhancedKeywordBoost(text, enhancedKeywords);
-      
-      // Combined score (semantic gets 70% weight, keywords get 30% weight)
-      const finalScore = (semanticSimilarity * 0.7) + Math.min(keywordBoost, 0.3);
-
-      if (finalScore > bestScore) {
-        bestScore = finalScore;
-        bestMatch = { 
-          id: sentenceData.sentence_id, 
-          text, 
-          embedding,
-          sentenceData // Include full sentence data for later use
-        };
       }
     }
 
@@ -415,7 +312,6 @@ class ClientCounselService {
     
     // Clear caches to ensure fresh results with new filters
     this.clearCounselCache();
-    this.sentenceEmbeddingsCache.clear();
 
     try {
       // Get query embedding
@@ -464,11 +360,11 @@ class ClientCounselService {
         corpusName: 'lithica'
       };
 
-      // Get total sentence counts
+      // Get corpus data for total sentence counts
       const [hymnsData, argonauticaData, lithicaData] = await Promise.all([
-        this.loadSentenceEmbeddings('hymns'),
-        this.loadSentenceEmbeddings('argonautica'),
-        this.loadSentenceEmbeddings('lithica')
+        this.loadCorpusData('hymns'),
+        this.loadCorpusData('argonautica'),
+        this.loadCorpusData('lithica')
       ]);
 
       // Use the same enhanced keywords for line analysis (already expanded above)
@@ -486,12 +382,45 @@ class ClientCounselService {
         { corpus: 'lithica' as const, bestLine: lithicaBestLine }
       ]);
 
+      // Generate all shareable options for the share dialog carousel
+      const shareableOptions = await semanticLineRanker.generateAllShareableOptions([
+        {
+          corpus: 'hymns',
+          sentenceId: hymnsMatch.unit.id,
+          text: hymnsMatch.unit.text,
+          lineDetails: hymnsDetails.lineDetails,
+          sectionTitle: hymnsDetails.sectionTitle,
+          bestLine: hymnsBestLine,
+          incense: hymnsDetails.incense ? {
+            english: hymnsDetails.incense,
+            greek: hymnsDetails.incenseGreek
+          } : undefined
+        },
+        {
+          corpus: 'argonautica',
+          sentenceId: argonauticaMatch.unit.id,
+          text: argonauticaMatch.unit.text,
+          lineDetails: argonauticaDetails.lineDetails,
+          sectionTitle: argonauticaDetails.sectionTitle,
+          bestLine: argonauticaBestLine
+        },
+        {
+          corpus: 'lithica',
+          sentenceId: lithicaMatch.unit.id,
+          text: lithicaMatch.unit.text,
+          lineDetails: lithicaDetails.lineDetails,
+          sectionTitle: lithicaDetails.sectionTitle,
+          bestLine: lithicaBestLine
+        }
+      ], queryEmbedding, keywords);
+
       // Build counsel response
       const response: CounselResponse = {
         timestamp: Date.now(),
         query,
         searchSource: 'semantic',
         keywords,
+        shareableOptions,
         overallBestLine,
         selections: {
           hymns: {
@@ -501,7 +430,7 @@ class ClientCounselService {
             sectionTitle: hymnsDetails.sectionTitle,
             lineDetails: hymnsDetails.lineDetails,
             semanticScore: hymnsMatch.score,
-            totalSentences: hymnsData.metadata.total_sentences,
+            totalSentences: hymnsData.parts.reduce((total: number, part: any) => total + part.sentences.length, 0),
             bestLine: hymnsBestLine,
             partNumber: hymnsDetails.partNumber,
             incense: hymnsDetails.incense ? {
@@ -516,7 +445,7 @@ class ClientCounselService {
             sectionTitle: argonauticaDetails.sectionTitle,
             lineDetails: argonauticaDetails.lineDetails,
             semanticScore: argonauticaMatch.score,
-            totalSentences: argonauticaData.metadata.total_sentences,
+            totalSentences: argonauticaData.parts.reduce((total: number, part: any) => total + part.sentences.length, 0),
             bestLine: argonauticaBestLine
           },
           lithica: {
@@ -526,7 +455,7 @@ class ClientCounselService {
             sectionTitle: lithicaDetails.sectionTitle,
             lineDetails: lithicaDetails.lineDetails,
             semanticScore: lithicaMatch.score,
-            totalSentences: lithicaData.metadata.total_sentences,
+            totalSentences: lithicaData.parts.reduce((total: number, part: any) => total + part.sentences.length, 0),
             bestLine: lithicaBestLine
           }
         }

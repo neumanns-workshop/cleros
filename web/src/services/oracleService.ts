@@ -3,35 +3,9 @@
  * Implements pure random selection and oracle response generation
  */
 
-export interface OracleResponse {
-  timestamp: number;
-  query: string;
-  randomSource: 'random.org';
-  selections: {
-    hymns?: OracleSelection;
-    argonautica?: OracleSelection;
-    lithica?: OracleSelection;
-  };
-  keywords: string[];
-}
+import { OracleResponse } from '../types/oracle';
 
-export interface OracleSelection {
-  source: string;
-  sentenceId: number;
-  text: {
-    english: string;
-    greek?: string;
-  };
-  sectionTitle: string;
-  lineDetails: LineDetail[];
-  randomIndex: number;
-  totalSentences: number;
-  incense?: {
-    english?: string;
-    greek?: string;
-  };
-  partNumber?: number;
-}
+// OracleResponse and OracleSelection interfaces moved to types/oracle.ts - import from there
 
 export interface LineDetail {
   line: number;
@@ -63,6 +37,9 @@ export interface Sentence {
   };
   line_details: LineDetail[];
 }
+
+import { semanticLineRanker } from './semanticLineRanker';
+import { embeddingService } from './embeddingService';
 
 class ClientOracleService {
   private corpusCache: Map<string, CorpusData> = new Map();
@@ -305,12 +282,84 @@ class ClientOracleService {
       // Extract keywords for display purposes only (no semantic analysis)
       const keywords = this.extractKeywords(query);
 
+      // SEMANTIC LINE RANKING - Add post-processing to find best lines within randomly selected passages
+      // Get query embedding for semantic analysis
+      const queryEmbedding = await embeddingService.getQueryEmbedding(query);
+      
+      // Find best line in each randomly selected passage
+      const [hymnsBestLine, argonauticaBestLine, lithicaBestLine] = await Promise.all([
+        semanticLineRanker.findBestLineInPassage({
+          lineDetails: selections.hymns.sentence.line_details,
+          sectionTitle: (selections.hymns.section as any).title_english || selections.hymns.section.title,
+          partNumber: selections.hymns.section.part_number || 0,
+          sentenceId: selections.hymns.sentence.sentence_id,
+          corpusName: 'hymns'
+        }, queryEmbedding, undefined, keywords),
+        
+        semanticLineRanker.findBestLineInPassage({
+          lineDetails: selections.argonautica.sentence.line_details,
+          sectionTitle: (selections.argonautica.section as any).title_english || selections.argonautica.section.title,
+          partNumber: selections.argonautica.section.part_number || 0,
+          sentenceId: selections.argonautica.sentence.sentence_id,
+          corpusName: 'argonautica'
+        }, queryEmbedding, undefined, keywords),
+        
+        semanticLineRanker.findBestLineInPassage({
+          lineDetails: selections.lithica.sentence.line_details,
+          sectionTitle: (selections.lithica.section as any).title_english || selections.lithica.section.title,
+          partNumber: selections.lithica.section.part_number || 0,
+          sentenceId: selections.lithica.sentence.sentence_id,
+          corpusName: 'lithica'
+        }, queryEmbedding, undefined, keywords)
+      ]);
+
+      // Find overall best line across all selections for shareable card default
+      const overallBestLine = semanticLineRanker.findOverallBestLine([
+        { corpus: 'hymns' as const, bestLine: hymnsBestLine },
+        { corpus: 'argonautica' as const, bestLine: argonauticaBestLine },
+        { corpus: 'lithica' as const, bestLine: lithicaBestLine }
+      ]);
+
+      // Generate all shareable options for the share dialog carousel
+      const shareableOptions = await semanticLineRanker.generateAllShareableOptions([
+        {
+          corpus: 'hymns',
+          sentenceId: selections.hymns.sentence.sentence_id,
+          text: selections.hymns.sentence.text.english,
+          lineDetails: selections.hymns.sentence.line_details,
+          sectionTitle: (selections.hymns.section as any).title_english || selections.hymns.section.title,
+          bestLine: hymnsBestLine,
+          incense: selections.hymns.section.incense ? {
+            english: selections.hymns.section.incense,
+            greek: selections.hymns.section.incense_greek
+          } : undefined
+        },
+        {
+          corpus: 'argonautica',
+          sentenceId: selections.argonautica.sentence.sentence_id,
+          text: selections.argonautica.sentence.text.english,
+          lineDetails: selections.argonautica.sentence.line_details,
+          sectionTitle: (selections.argonautica.section as any).title_english || selections.argonautica.section.title,
+          bestLine: argonauticaBestLine
+        },
+        {
+          corpus: 'lithica',
+          sentenceId: selections.lithica.sentence.sentence_id,
+          text: selections.lithica.sentence.text.english,
+          lineDetails: selections.lithica.sentence.line_details,
+          sectionTitle: (selections.lithica.section as any).title_english || selections.lithica.section.title,
+          bestLine: lithicaBestLine
+        }
+      ], queryEmbedding, keywords);
+
       // Build oracle response - only possible with true random.org
       const response: OracleResponse = {
         timestamp: Date.now(),
         query,
         randomSource: 'random.org',
         keywords,
+        shareableOptions,
+        overallBestLine,
         selections: {
           hymns: {
             source: 'Hymns',
@@ -320,7 +369,8 @@ class ClientOracleService {
             lineDetails: selections.hymns.sentence.line_details,
             randomIndex: selections.hymns.index,
             totalSentences: selections.hymns.total,
-            partNumber: selections.hymns.section.part_number,
+            partNumber: selections.hymns.section.part_number || 0,
+            bestLine: hymnsBestLine,
             incense: selections.hymns.section.incense ? {
               english: selections.hymns.section.incense,
               greek: selections.hymns.section.incense_greek
@@ -333,7 +383,8 @@ class ClientOracleService {
             sectionTitle: (selections.argonautica.section as any).title_english || selections.argonautica.section.title,
             lineDetails: selections.argonautica.sentence.line_details,
             randomIndex: selections.argonautica.index,
-            totalSentences: selections.argonautica.total
+            totalSentences: selections.argonautica.total,
+            bestLine: argonauticaBestLine
           },
           lithica: {
             source: 'Lithica',
@@ -342,7 +393,8 @@ class ClientOracleService {
             sectionTitle: (selections.lithica.section as any).title_english || selections.lithica.section.title,
             lineDetails: selections.lithica.sentence.line_details,
             randomIndex: selections.lithica.index,
-            totalSentences: selections.lithica.total
+            totalSentences: selections.lithica.total,
+            bestLine: lithicaBestLine
           }
         }
       };

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { OracleResponse, OracleSelection } from '../services/oracleService';
-import { CounselSelection } from '../services/counselService';
+import { OracleResponse, OracleSelection, CounselSelection } from '../types/oracle';
 import { formatTitle } from '../utils/stringUtils';
 
 interface OracleResponseProps {
