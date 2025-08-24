@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+build/
+dist/
+coverage/
+
+# Generated files
+*.min.js
+*.bundle.js
+package-lock.json
+yarn.lock
+
+# Archives
+# attic/ - commented out to allow IDE access
+
+# Data files
+data/
+
+# Cache directories
+.cache/
+**/.cache/
+
+# Documentation that shouldn't be formatted
+CHANGELOG.md
+README.md
+

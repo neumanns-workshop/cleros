@@ -1,0 +1,396 @@
+import { useState, useEffect } from 'react';
+import { ViewType, SearchMode } from '../types/app';
+import { OracleResponse, CounselResponse } from '../types/oracle';
+import { AllCorpusData, CorpusPart, SourceLink } from '../types/corpus';
+import { oracleService } from '../services/oracleService';
+import { counselService } from '../services/counselService';
+import { formatTitle } from '../utils/stringUtils';
+
+// Note: Raw corpus data structure is inferred from the JSON files
+
+export const useAppState = () => {
+  // View state
+  const [currentView, setCurrentView] = useState<ViewType>('home');
+  
+  // Search state
+  const [searchQuery, setSearchQuery] = useState('');
+  const [searchMode, setSearchMode] = useState<SearchMode>('oracle');
+  
+  // Corpus state
+  const [selectedSource, setSelectedSource] = useState('hymns');
+  const [selectedSection, setSelectedSection] = useState('');
+  
+  // Response state
+  const [currentOracleResponse, setCurrentOracleResponse] = useState<OracleResponse | null>(null);
+  const [currentCounselResponse, setCurrentCounselResponse] = useState<CounselResponse | null>(null);
+  
+  // Loading state
+  const [isGeneratingOracle, setIsGeneratingOracle] = useState(false);
+  const [isGeneratingCounsel, setIsGeneratingCounsel] = useState(false);
+  const [isRandomOrgAvailable, setIsRandomOrgAvailable] = useState<boolean | null>(null);
+  
+  // Personal reports
+  const [personalOracleReports, setPersonalOracleReports] = useState<OracleResponse[]>([]);
+  const [personalCounselReports, setPersonalCounselReports] = useState<CounselResponse[]>([]);
+  
+  // Corpus data
+  const [corpusData, setCorpusData] = useState<AllCorpusData>({
+    hymns: null,
+    argonautica: null,
+    lithica: null,
+    tablets: null,
+    queries: null,
+    papyrusQueries: null
+  });
+  const [loading, setLoading] = useState(true);
+
+  // Check random.org availability for Oracle mode
+  useEffect(() => {
+    const checkRandomOrg = async () => {
+      try {
+        const available = await oracleService.checkRandomOrgAvailability();
+        setIsRandomOrgAvailable(available);
+        console.log(`🎲 Random.org ${available ? 'available' : 'unavailable'} - Oracle mode ${available ? 'enabled' : 'DISABLED'}`);
+        
+        // If random.org is unavailable and user is in oracle mode, switch to counsel
+        if (!available && searchMode === 'oracle') {
+          setSearchMode('sage');
+        }
+      } catch (error) {
+        console.error('Failed to check random.org availability:', error);
+        setIsRandomOrgAvailable(false);
+        if (searchMode === 'oracle') {
+          setSearchMode('sage');
+        }
+      }
+    };
+
+    checkRandomOrg();
+    loadPersonalReports();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // searchMode intentionally excluded to prevent re-checking on mode changes
+
+  // Load personal oracle and counsel reports from localStorage
+  const loadPersonalReports = () => {
+    try {
+      // Load oracle reports
+      const oracleKeys = Object.keys(localStorage).filter(key => 
+        key.startsWith('oracle_response_') && key !== 'oracle_response_latest'
+      );
+      
+      const oracleReports: OracleResponse[] = [];
+      oracleKeys.forEach(key => {
+        try {
+          const cached = localStorage.getItem(key);
+          if (cached) {
+            const cacheData = JSON.parse(cached);
+            oracleReports.push(cacheData.response);
+          }
+        } catch (error) {
+          console.warn(`Failed to parse cached oracle response ${key}:`, error);
+        }
+      });
+      
+      // Load counsel reports
+      const counselKeys = Object.keys(localStorage).filter(key => 
+        key.startsWith('counsel_response_') && key !== 'counsel_response_latest'
+      );
+      
+      const counselReports: CounselResponse[] = [];
+      counselKeys.forEach(key => {
+        try {
+          const cached = localStorage.getItem(key);
+          if (cached) {
+            const cacheData = JSON.parse(cached);
+            counselReports.push(cacheData.response);
+          }
+        } catch (error) {
+          console.warn(`Failed to parse cached counsel response ${key}:`, error);
+        }
+      });
+      
+      // Sort by timestamp (newest first)
+      oracleReports.sort((a, b) => b.timestamp - a.timestamp);
+      counselReports.sort((a, b) => b.timestamp - a.timestamp);
+      
+      setPersonalOracleReports(oracleReports);
+      setPersonalCounselReports(counselReports);
+      
+      console.log(`📋 Loaded ${oracleReports.length} oracle reports and ${counselReports.length} counsel reports`);
+    } catch (error) {
+      console.error('Failed to load personal reports:', error);
+    }
+  };
+
+  // Load all corpus data from JSON files
+  useEffect(() => {
+    const loadAllCorpusData = async () => {
+      try {
+        console.log('Loading corpus data...');
+        const [hymnsResponse, argonauticaResponse, lithicaResponse, tabletsResponse, queriesResponse, papyrusQueriesResponse] = await Promise.all([
+          fetch('/corpus_20250822_121628/hymns.json'),
+          fetch('/corpus_20250822_121628/argonautica.json'), 
+          fetch('/corpus_20250822_121628/lithica.json'),
+          fetch('/corpus_20250822_121628/tablets.json'),
+          fetch('/corpus_20250822_121628/dodona_queries.json'),
+          fetch('/corpus_20250822_121628/papyrus_queries.json')
+        ]);
+
+        const [hymnsData, argonauticaData, lithicaData, tabletsData, queriesData, papyrusQueriesData] = await Promise.all([
+          hymnsResponse.json(),
+          argonauticaResponse.json(),
+          lithicaResponse.json(),
+          tabletsResponse.json(),
+          queriesResponse.json(),
+          papyrusQueriesResponse.json()
+        ]);
+
+        // Use the raw parts structure directly
+        const processedData = {
+          hymns: {
+            metadata: hymnsData.metadata,
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            parts: (hymnsData.parts as any[]).map((part): CorpusPart => ({
+              ...part,
+              key: String(part.part_number),
+              title_english: formatTitle(part.part_title)
+            }))
+          },
+          argonautica: {
+            metadata: argonauticaData.metadata,
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            parts: (argonauticaData.parts as any[]).map((part): CorpusPart => ({
+              ...part,
+              key: String(part.part_number),
+              title_english: part.part_title
+            }))
+          },
+          lithica: {
+            metadata: lithicaData.metadata,
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            parts: (lithicaData.parts as any[]).map((part): CorpusPart => ({
+              ...part,
+              key: String(part.part_number),
+              title_english: part.part_title
+            }))
+          },
+          tablets: {
+            metadata: tabletsData.metadata,
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            parts: (tabletsData.parts as any[]).map((part): CorpusPart => ({
+              ...part,
+              key: part.tablet_id || `tablet${part.part_number}`,
+              title_english: part.part_title
+            }))
+          },
+          queries: {
+            metadata: queriesData.metadata,
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            parts: (queriesData.parts as any[]).map((part): CorpusPart => ({
+              ...part,
+              key: part.query_id || `query${part.part_number}`,
+              title_english: part.part_title
+            }))
+          },
+          papyrusQueries: {
+            metadata: papyrusQueriesData.metadata,
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            parts: (papyrusQueriesData.parts as any[]).map((part): CorpusPart => ({
+              ...part,
+              key: part.query_id || `query${part.part_number}`,
+              title_english: part.part_title
+            }))
+          }
+        };
+
+        setCorpusData(processedData);
+        console.log('✅ Corpus data loaded and processed successfully.');
+      } catch (error) {
+        console.error('Failed to load corpus data:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadAllCorpusData();
+  }, []);
+
+
+
+  // Update currentOracleResponse and currentCounselResponse when switching to personal reports
+  useEffect(() => {
+    if (selectedSource === 'personal') {
+      if (!selectedSection) {
+        setCurrentOracleResponse(null);
+        setCurrentCounselResponse(null);
+        return;
+      }
+      if (selectedSection.startsWith('oracle_')) {
+        const timestamp = parseInt(selectedSection.replace('oracle_', ''), 10);
+        const report = personalOracleReports.find(r => r.timestamp === timestamp);
+        if (report) {
+          console.log(`🔮 Loading personal oracle report: ${report.query.substring(0, 50)}...`);
+          setCurrentOracleResponse(report);
+          setCurrentCounselResponse(null);
+        } else {
+          console.warn(`⚠️ Personal oracle report not found for timestamp: ${timestamp}`);
+        }
+      } else if (selectedSection.startsWith('counsel_')) {
+        const timestamp = parseInt(selectedSection.replace('counsel_', ''), 10);
+        const report = personalCounselReports.find(r => r.timestamp === timestamp);
+        if (report) {
+          console.log(`🧠 Loading personal counsel report: ${report.query.substring(0, 50)}...`);
+          setCurrentCounselResponse(report);
+          setCurrentOracleResponse(null);
+        } else {
+          console.warn(`⚠️ Personal counsel report not found for timestamp: ${timestamp}`);
+        }
+      }
+    } else if (selectedSource !== 'personal') {
+      // Clear responses when not viewing personal reports
+      if (currentOracleResponse || currentCounselResponse) {
+        console.log(`🔄 Clearing responses (switched from personal to ${selectedSource})`);
+        setCurrentOracleResponse(null);
+        setCurrentCounselResponse(null);
+      }
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selectedSource, selectedSection, personalOracleReports, personalCounselReports]); // currentOracleResponse and currentCounselResponse intentionally excluded to prevent infinite loops
+
+  // Handle search
+  const handleSearch = async (query = searchQuery) => {
+    if (query.trim()) {
+      console.log(`Searching (${searchMode} mode):`, query);
+      
+      if (searchMode === 'oracle') {
+        // Oracle mode requires true randomness - no compromises
+        if (isRandomOrgAvailable === false) {
+          alert('Oracle mode is disabled: True randomness (random.org) is required for principled divination.');
+          return;
+        }
+        
+        setIsGeneratingOracle(true);
+        try {
+          const response = await oracleService.generateOracleResponse(query.trim());
+          // Cache the oracle response for corpus page
+          oracleService.cacheOracleResponse(response);
+          
+          // Reload personal reports to include the new one
+          loadPersonalReports();
+          
+          // Redirect to corpus page and select personal reports
+          setCurrentView('corpus');
+          setSelectedSource('personal');
+          setSelectedSection(`oracle_${response.timestamp}`);
+          setCurrentOracleResponse(response);
+        } catch (error) {
+          console.error('Error generating oracle response:', error);
+          alert('The oracle requires true randomness and cannot function at this time. Random.org is unavailable.');
+        } finally {
+          setIsGeneratingOracle(false);
+        }
+      } else {
+        // Counsel mode uses semantic search - no randomness required
+        setIsGeneratingCounsel(true);
+        try {
+          const response = await counselService.generateCounselResponse(query.trim());
+          // Cache the counsel response for corpus page
+          counselService.cacheCounselResponse(response);
+          
+          // Reload personal reports to include the new one
+          loadPersonalReports();
+          
+          // Redirect to corpus page and select personal reports
+          setCurrentView('corpus');
+          setSelectedSource('personal');
+          setSelectedSection(`counsel_${response.timestamp}`);
+          setCurrentCounselResponse(response as CounselResponse);
+        } catch (error) {
+          console.error('Error generating counsel response:', error);
+          alert('Failed to generate counsel response. Please check the console for details.');
+        } finally {
+          setIsGeneratingCounsel(false);
+        }
+      }
+    }
+  };
+
+  // Navigate to source corpus location
+  const navigateToSource = (sourceLink: SourceLink) => {
+    try {
+      console.log('🔗 Navigating to source:', sourceLink);
+      
+      // Set the source corpus first
+      setSelectedSource(sourceLink.corpus);
+      
+      // Navigate directly using the key, or find it by sectionTitle
+      if (sourceLink.key !== undefined) {
+        setSelectedSection(sourceLink.key.toString());
+        console.log(`📍 Navigating to part: ${sourceLink.key}`);
+      } else if (sourceLink.sectionTitle && corpusData[sourceLink.corpus]) {
+        // Fallback: find the part by matching sectionTitle
+        const corpus = corpusData[sourceLink.corpus];
+        const part = corpus?.parts?.find((p: CorpusPart) => 
+          p.title_english === sourceLink.sectionTitle || 
+          p.title === sourceLink.sectionTitle ||
+          p.part_title === sourceLink.sectionTitle
+        );
+        if (part) {
+          setSelectedSection(part.key.toString());
+          console.log(`📍 Found part by title '${sourceLink.sectionTitle}': ${part.key}`);
+        } else {
+          console.log(`⚠️ Could not find part with title '${sourceLink.sectionTitle}' in ${sourceLink.corpus}`);
+        }
+      } else {
+        console.log('⚠️ No key or sectionTitle provided in sourceLink:', sourceLink);
+      }
+      
+      // Clear current responses AFTER setting the new source/section to avoid race condition
+      setTimeout(() => {
+        setCurrentOracleResponse(null);
+        setCurrentCounselResponse(null);
+      }, 100);
+    } catch (error) {
+      console.error('Failed to navigate to source:', error);
+      alert('Could not navigate to original source location.');
+    }
+  };
+
+  return {
+    // View state
+    currentView,
+    setCurrentView,
+    
+    // Search state
+    searchQuery,
+    setSearchQuery,
+    searchMode,
+    setSearchMode,
+    
+    // Corpus state
+    selectedSource,
+    setSelectedSource,
+    selectedSection,
+    setSelectedSection,
+    corpusData,
+    loading,
+    
+    // Response state
+    currentOracleResponse,
+    currentCounselResponse,
+    
+    // Loading state
+    isGeneratingOracle,
+    isGeneratingCounsel,
+    isRandomOrgAvailable,
+    
+    // Personal reports
+    personalOracleReports,
+    personalCounselReports,
+    
+    // Actions
+    handleSearch,
+    navigateToSource,
+    loadPersonalReports
+  };
+};

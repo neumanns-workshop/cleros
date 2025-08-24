@@ -1,7 +1,7 @@
-# https://www.robotstxt.org/robotstxt.html
-# Allow all web crawlers
 User-agent: *
 Allow: /
+Allow: /terms
+Allow: /privacy
+Allow: /about
 
-# Sitemap location
-Sitemap: https://your-domain.com/sitemap.xml
+Sitemap: https://cleros.gbe.games/sitemap.xml

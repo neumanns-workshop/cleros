@@ -1,0 +1,27 @@
+# Archives - linting disabled but visible
+# attic/ - commented out to allow IDE access
+
+# Dependencies
+node_modules/
+
+# Build outputs
+build/
+dist/
+coverage/
+
+# Generated files
+*.min.js
+*.bundle.js
+
+# Archives - second instance also commented out
+# attic/
+
+# Data files
+data/
+
+# Cache directories
+.cache/
+**/.cache/
+
+# Environment files
+.env*

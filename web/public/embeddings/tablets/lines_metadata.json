@@ -1,0 +1,50 @@
+{
+  "corpus": "tablets",
+  "type": "line_embeddings",
+  "total_lines": 10,
+  "embedding_dimension": 384,
+  "model": "all-MiniLM-L6-v2",
+  "created": "2025-08-23T23:09:25.970919",
+  "mapping": [
+    {
+      "id": "tablets_1_1_1",
+      "index": 0
+    },
+    {
+      "id": "tablets_2_1_1",
+      "index": 1
+    },
+    {
+      "id": "tablets_3_1_1",
+      "index": 2
+    },
+    {
+      "id": "tablets_4_1_1",
+      "index": 3
+    },
+    {
+      "id": "tablets_5_1_1",
+      "index": 4
+    },
+    {
+      "id": "tablets_6_1_1",
+      "index": 5
+    },
+    {
+      "id": "tablets_7_1_1",
+      "index": 6
+    },
+    {
+      "id": "tablets_8_1_1",
+      "index": 7
+    },
+    {
+      "id": "tablets_9_1_1",
+      "index": 8
+    },
+    {
+      "id": "tablets_10_1_1",
+      "index": 9
+    }
+  ]
+}

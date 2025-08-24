@@ -1,0 +1,1362 @@
+{
+  "corpus": "argonautica",
+  "type": "sentence_embeddings",
+  "total_sentences": 338,
+  "embedding_dimension": 384,
+  "model": "all-MiniLM-L6-v2",
+  "created": "2025-08-23T23:09:25.246241",
+  "mapping": [
+    {
+      "id": "argonautica_1_1",
+      "index": 0
+    },
+    {
+      "id": "argonautica_1_2",
+      "index": 1
+    },
+    {
+      "id": "argonautica_1_3",
+      "index": 2
+    },
+    {
+      "id": "argonautica_1_4",
+      "index": 3
+    },
+    {
+      "id": "argonautica_1_5",
+      "index": 4
+    },
+    {
+      "id": "argonautica_1_6",
+      "index": 5
+    },
+    {
+      "id": "argonautica_1_7",
+      "index": 6
+    },
+    {
+      "id": "argonautica_1_8",
+      "index": 7
+    },
+    {
+      "id": "argonautica_1_9",
+      "index": 8
+    },
+    {
+      "id": "argonautica_1_10",
+      "index": 9
+    },
+    {
+      "id": "argonautica_1_11",
+      "index": 10
+    },
+    {
+      "id": "argonautica_1_12",
+      "index": 11
+    },
+    {
+      "id": "argonautica_1_13",
+      "index": 12
+    },
+    {
+      "id": "argonautica_1_14",
+      "index": 13
+    },
+    {
+      "id": "argonautica_1_15",
+      "index": 14
+    },
+    {
+      "id": "argonautica_1_16",
+      "index": 15
+    },
+    {
+      "id": "argonautica_1_17",
+      "index": 16
+    },
+    {
+      "id": "argonautica_1_18",
+      "index": 17
+    },
+    {
+      "id": "argonautica_1_19",
+      "index": 18
+    },
+    {
+      "id": "argonautica_1_20",
+      "index": 19
+    },
+    {
+      "id": "argonautica_1_21",
+      "index": 20
+    },
+    {
+      "id": "argonautica_1_22",
+      "index": 21
+    },
+    {
+      "id": "argonautica_2_23",
+      "index": 22
+    },
+    {
+      "id": "argonautica_2_24",
+      "index": 23
+    },
+    {
+      "id": "argonautica_2_25",
+      "index": 24
+    },
+    {
+      "id": "argonautica_2_26",
+      "index": 25
+    },
+    {
+      "id": "argonautica_2_27",
+      "index": 26
+    },
+    {
+      "id": "argonautica_2_28",
+      "index": 27
+    },
+    {
+      "id": "argonautica_2_29",
+      "index": 28
+    },
+    {
+      "id": "argonautica_2_30",
+      "index": 29
+    },
+    {
+      "id": "argonautica_2_31",
+      "index": 30
+    },
+    {
+      "id": "argonautica_2_32",
+      "index": 31
+    },
+    {
+      "id": "argonautica_2_33",
+      "index": 32
+    },
+    {
+      "id": "argonautica_2_34",
+      "index": 33
+    },
+    {
+      "id": "argonautica_2_35",
+      "index": 34
+    },
+    {
+      "id": "argonautica_2_36",
+      "index": 35
+    },
+    {
+      "id": "argonautica_2_37",
+      "index": 36
+    },
+    {
+      "id": "argonautica_2_38",
+      "index": 37
+    },
+    {
+      "id": "argonautica_2_39",
+      "index": 38
+    },
+    {
+      "id": "argonautica_2_40",
+      "index": 39
+    },
+    {
+      "id": "argonautica_2_41",
+      "index": 40
+    },
+    {
+      "id": "argonautica_2_42",
+      "index": 41
+    },
+    {
+      "id": "argonautica_2_43",
+      "index": 42
+    },
+    {
+      "id": "argonautica_2_44",
+      "index": 43
+    },
+    {
+      "id": "argonautica_2_45",
+      "index": 44
+    },
+    {
+      "id": "argonautica_2_46",
+      "index": 45
+    },
+    {
+      "id": "argonautica_2_47",
+      "index": 46
+    },
+    {
+      "id": "argonautica_2_48",
+      "index": 47
+    },
+    {
+      "id": "argonautica_2_49",
+      "index": 48
+    },
+    {
+      "id": "argonautica_2_50",
+      "index": 49
+    },
+    {
+      "id": "argonautica_2_51",
+      "index": 50
+    },
+    {
+      "id": "argonautica_2_52",
+      "index": 51
+    },
+    {
+      "id": "argonautica_2_53",
+      "index": 52
+    },
+    {
+      "id": "argonautica_2_54",
+      "index": 53
+    },
+    {
+      "id": "argonautica_2_55",
+      "index": 54
+    },
+    {
+      "id": "argonautica_2_56",
+      "index": 55
+    },
+    {
+      "id": "argonautica_2_57",
+      "index": 56
+    },
+    {
+      "id": "argonautica_2_58",
+      "index": 57
+    },
+    {
+      "id": "argonautica_2_59",
+      "index": 58
+    },
+    {
+      "id": "argonautica_2_60",
+      "index": 59
+    },
+    {
+      "id": "argonautica_2_61",
+      "index": 60
+    },
+    {
+      "id": "argonautica_2_62",
+      "index": 61
+    },
+    {
+      "id": "argonautica_2_63",
+      "index": 62
+    },
+    {
+      "id": "argonautica_2_64",
+      "index": 63
+    },
+    {
+      "id": "argonautica_2_65",
+      "index": 64
+    },
+    {
+      "id": "argonautica_2_66",
+      "index": 65
+    },
+    {
+      "id": "argonautica_2_67",
+      "index": 66
+    },
+    {
+      "id": "argonautica_2_68",
+      "index": 67
+    },
+    {
+      "id": "argonautica_2_69",
+      "index": 68
+    },
+    {
+      "id": "argonautica_2_70",
+      "index": 69
+    },
+    {
+      "id": "argonautica_2_71",
+      "index": 70
+    },
+    {
+      "id": "argonautica_2_72",
+      "index": 71
+    },
+    {
+      "id": "argonautica_2_73",
+      "index": 72
+    },
+    {
+      "id": "argonautica_2_74",
+      "index": 73
+    },
+    {
+      "id": "argonautica_3_75",
+      "index": 74
+    },
+    {
+      "id": "argonautica_3_76",
+      "index": 75
+    },
+    {
+      "id": "argonautica_3_77",
+      "index": 76
+    },
+    {
+      "id": "argonautica_3_78",
+      "index": 77
+    },
+    {
+      "id": "argonautica_3_79",
+      "index": 78
+    },
+    {
+      "id": "argonautica_3_80",
+      "index": 79
+    },
+    {
+      "id": "argonautica_3_81",
+      "index": 80
+    },
+    {
+      "id": "argonautica_3_82",
+      "index": 81
+    },
+    {
+      "id": "argonautica_3_83",
+      "index": 82
+    },
+    {
+      "id": "argonautica_3_84",
+      "index": 83
+    },
+    {
+      "id": "argonautica_3_85",
+      "index": 84
+    },
+    {
+      "id": "argonautica_3_86",
+      "index": 85
+    },
+    {
+      "id": "argonautica_3_87",
+      "index": 86
+    },
+    {
+      "id": "argonautica_3_88",
+      "index": 87
+    },
+    {
+      "id": "argonautica_3_89",
+      "index": 88
+    },
+    {
+      "id": "argonautica_3_90",
+      "index": 89
+    },
+    {
+      "id": "argonautica_3_91",
+      "index": 90
+    },
+    {
+      "id": "argonautica_3_92",
+      "index": 91
+    },
+    {
+      "id": "argonautica_3_93",
+      "index": 92
+    },
+    {
+      "id": "argonautica_3_94",
+      "index": 93
+    },
+    {
+      "id": "argonautica_3_95",
+      "index": 94
+    },
+    {
+      "id": "argonautica_3_96",
+      "index": 95
+    },
+    {
+      "id": "argonautica_3_97",
+      "index": 96
+    },
+    {
+      "id": "argonautica_3_98",
+      "index": 97
+    },
+    {
+      "id": "argonautica_3_99",
+      "index": 98
+    },
+    {
+      "id": "argonautica_3_100",
+      "index": 99
+    },
+    {
+      "id": "argonautica_3_101",
+      "index": 100
+    },
+    {
+      "id": "argonautica_3_102",
+      "index": 101
+    },
+    {
+      "id": "argonautica_3_103",
+      "index": 102
+    },
+    {
+      "id": "argonautica_3_104",
+      "index": 103
+    },
+    {
+      "id": "argonautica_3_105",
+      "index": 104
+    },
+    {
+      "id": "argonautica_3_106",
+      "index": 105
+    },
+    {
+      "id": "argonautica_3_107",
+      "index": 106
+    },
+    {
+      "id": "argonautica_3_108",
+      "index": 107
+    },
+    {
+      "id": "argonautica_3_109",
+      "index": 108
+    },
+    {
+      "id": "argonautica_3_110",
+      "index": 109
+    },
+    {
+      "id": "argonautica_3_111",
+      "index": 110
+    },
+    {
+      "id": "argonautica_3_112",
+      "index": 111
+    },
+    {
+      "id": "argonautica_3_113",
+      "index": 112
+    },
+    {
+      "id": "argonautica_3_114",
+      "index": 113
+    },
+    {
+      "id": "argonautica_3_115",
+      "index": 114
+    },
+    {
+      "id": "argonautica_3_116",
+      "index": 115
+    },
+    {
+      "id": "argonautica_3_117",
+      "index": 116
+    },
+    {
+      "id": "argonautica_3_118",
+      "index": 117
+    },
+    {
+      "id": "argonautica_3_119",
+      "index": 118
+    },
+    {
+      "id": "argonautica_3_120",
+      "index": 119
+    },
+    {
+      "id": "argonautica_3_121",
+      "index": 120
+    },
+    {
+      "id": "argonautica_3_122",
+      "index": 121
+    },
+    {
+      "id": "argonautica_3_123",
+      "index": 122
+    },
+    {
+      "id": "argonautica_3_124",
+      "index": 123
+    },
+    {
+      "id": "argonautica_3_125",
+      "index": 124
+    },
+    {
+      "id": "argonautica_3_126",
+      "index": 125
+    },
+    {
+      "id": "argonautica_4_127",
+      "index": 126
+    },
+    {
+      "id": "argonautica_4_128",
+      "index": 127
+    },
+    {
+      "id": "argonautica_4_129",
+      "index": 128
+    },
+    {
+      "id": "argonautica_4_130",
+      "index": 129
+    },
+    {
+      "id": "argonautica_4_131",
+      "index": 130
+    },
+    {
+      "id": "argonautica_4_132",
+      "index": 131
+    },
+    {
+      "id": "argonautica_4_133",
+      "index": 132
+    },
+    {
+      "id": "argonautica_4_134",
+      "index": 133
+    },
+    {
+      "id": "argonautica_4_135",
+      "index": 134
+    },
+    {
+      "id": "argonautica_4_136",
+      "index": 135
+    },
+    {
+      "id": "argonautica_4_137",
+      "index": 136
+    },
+    {
+      "id": "argonautica_4_138",
+      "index": 137
+    },
+    {
+      "id": "argonautica_4_139",
+      "index": 138
+    },
+    {
+      "id": "argonautica_4_140",
+      "index": 139
+    },
+    {
+      "id": "argonautica_4_141",
+      "index": 140
+    },
+    {
+      "id": "argonautica_4_142",
+      "index": 141
+    },
+    {
+      "id": "argonautica_4_143",
+      "index": 142
+    },
+    {
+      "id": "argonautica_4_144",
+      "index": 143
+    },
+    {
+      "id": "argonautica_4_145",
+      "index": 144
+    },
+    {
+      "id": "argonautica_4_146",
+      "index": 145
+    },
+    {
+      "id": "argonautica_4_147",
+      "index": 146
+    },
+    {
+      "id": "argonautica_4_148",
+      "index": 147
+    },
+    {
+      "id": "argonautica_4_149",
+      "index": 148
+    },
+    {
+      "id": "argonautica_4_150",
+      "index": 149
+    },
+    {
+      "id": "argonautica_4_151",
+      "index": 150
+    },
+    {
+      "id": "argonautica_4_152",
+      "index": 151
+    },
+    {
+      "id": "argonautica_4_153",
+      "index": 152
+    },
+    {
+      "id": "argonautica_4_154",
+      "index": 153
+    },
+    {
+      "id": "argonautica_4_155",
+      "index": 154
+    },
+    {
+      "id": "argonautica_4_156",
+      "index": 155
+    },
+    {
+      "id": "argonautica_4_157",
+      "index": 156
+    },
+    {
+      "id": "argonautica_4_158",
+      "index": 157
+    },
+    {
+      "id": "argonautica_4_159",
+      "index": 158
+    },
+    {
+      "id": "argonautica_4_160",
+      "index": 159
+    },
+    {
+      "id": "argonautica_4_161",
+      "index": 160
+    },
+    {
+      "id": "argonautica_4_162",
+      "index": 161
+    },
+    {
+      "id": "argonautica_4_163",
+      "index": 162
+    },
+    {
+      "id": "argonautica_4_164",
+      "index": 163
+    },
+    {
+      "id": "argonautica_4_165",
+      "index": 164
+    },
+    {
+      "id": "argonautica_4_166",
+      "index": 165
+    },
+    {
+      "id": "argonautica_4_167",
+      "index": 166
+    },
+    {
+      "id": "argonautica_4_168",
+      "index": 167
+    },
+    {
+      "id": "argonautica_4_169",
+      "index": 168
+    },
+    {
+      "id": "argonautica_4_170",
+      "index": 169
+    },
+    {
+      "id": "argonautica_4_171",
+      "index": 170
+    },
+    {
+      "id": "argonautica_4_172",
+      "index": 171
+    },
+    {
+      "id": "argonautica_4_173",
+      "index": 172
+    },
+    {
+      "id": "argonautica_4_174",
+      "index": 173
+    },
+    {
+      "id": "argonautica_4_175",
+      "index": 174
+    },
+    {
+      "id": "argonautica_4_176",
+      "index": 175
+    },
+    {
+      "id": "argonautica_4_177",
+      "index": 176
+    },
+    {
+      "id": "argonautica_4_178",
+      "index": 177
+    },
+    {
+      "id": "argonautica_4_179",
+      "index": 178
+    },
+    {
+      "id": "argonautica_4_180",
+      "index": 179
+    },
+    {
+      "id": "argonautica_4_181",
+      "index": 180
+    },
+    {
+      "id": "argonautica_4_182",
+      "index": 181
+    },
+    {
+      "id": "argonautica_4_183",
+      "index": 182
+    },
+    {
+      "id": "argonautica_4_184",
+      "index": 183
+    },
+    {
+      "id": "argonautica_4_185",
+      "index": 184
+    },
+    {
+      "id": "argonautica_4_186",
+      "index": 185
+    },
+    {
+      "id": "argonautica_4_187",
+      "index": 186
+    },
+    {
+      "id": "argonautica_4_188",
+      "index": 187
+    },
+    {
+      "id": "argonautica_4_189",
+      "index": 188
+    },
+    {
+      "id": "argonautica_4_190",
+      "index": 189
+    },
+    {
+      "id": "argonautica_4_191",
+      "index": 190
+    },
+    {
+      "id": "argonautica_4_192",
+      "index": 191
+    },
+    {
+      "id": "argonautica_4_193",
+      "index": 192
+    },
+    {
+      "id": "argonautica_4_194",
+      "index": 193
+    },
+    {
+      "id": "argonautica_4_195",
+      "index": 194
+    },
+    {
+      "id": "argonautica_4_196",
+      "index": 195
+    },
+    {
+      "id": "argonautica_4_197",
+      "index": 196
+    },
+    {
+      "id": "argonautica_4_198",
+      "index": 197
+    },
+    {
+      "id": "argonautica_5_199",
+      "index": 198
+    },
+    {
+      "id": "argonautica_5_200",
+      "index": 199
+    },
+    {
+      "id": "argonautica_5_201",
+      "index": 200
+    },
+    {
+      "id": "argonautica_5_202",
+      "index": 201
+    },
+    {
+      "id": "argonautica_5_203",
+      "index": 202
+    },
+    {
+      "id": "argonautica_5_204",
+      "index": 203
+    },
+    {
+      "id": "argonautica_5_205",
+      "index": 204
+    },
+    {
+      "id": "argonautica_5_206",
+      "index": 205
+    },
+    {
+      "id": "argonautica_5_207",
+      "index": 206
+    },
+    {
+      "id": "argonautica_5_208",
+      "index": 207
+    },
+    {
+      "id": "argonautica_5_209",
+      "index": 208
+    },
+    {
+      "id": "argonautica_5_210",
+      "index": 209
+    },
+    {
+      "id": "argonautica_5_211",
+      "index": 210
+    },
+    {
+      "id": "argonautica_5_212",
+      "index": 211
+    },
+    {
+      "id": "argonautica_5_213",
+      "index": 212
+    },
+    {
+      "id": "argonautica_5_214",
+      "index": 213
+    },
+    {
+      "id": "argonautica_5_215",
+      "index": 214
+    },
+    {
+      "id": "argonautica_5_216",
+      "index": 215
+    },
+    {
+      "id": "argonautica_5_217",
+      "index": 216
+    },
+    {
+      "id": "argonautica_5_218",
+      "index": 217
+    },
+    {
+      "id": "argonautica_5_219",
+      "index": 218
+    },
+    {
+      "id": "argonautica_5_220",
+      "index": 219
+    },
+    {
+      "id": "argonautica_5_221",
+      "index": 220
+    },
+    {
+      "id": "argonautica_5_222",
+      "index": 221
+    },
+    {
+      "id": "argonautica_5_223",
+      "index": 222
+    },
+    {
+      "id": "argonautica_5_224",
+      "index": 223
+    },
+    {
+      "id": "argonautica_5_225",
+      "index": 224
+    },
+    {
+      "id": "argonautica_5_226",
+      "index": 225
+    },
+    {
+      "id": "argonautica_5_227",
+      "index": 226
+    },
+    {
+      "id": "argonautica_5_228",
+      "index": 227
+    },
+    {
+      "id": "argonautica_5_229",
+      "index": 228
+    },
+    {
+      "id": "argonautica_5_230",
+      "index": 229
+    },
+    {
+      "id": "argonautica_5_231",
+      "index": 230
+    },
+    {
+      "id": "argonautica_5_232",
+      "index": 231
+    },
+    {
+      "id": "argonautica_5_233",
+      "index": 232
+    },
+    {
+      "id": "argonautica_5_234",
+      "index": 233
+    },
+    {
+      "id": "argonautica_5_235",
+      "index": 234
+    },
+    {
+      "id": "argonautica_5_236",
+      "index": 235
+    },
+    {
+      "id": "argonautica_5_237",
+      "index": 236
+    },
+    {
+      "id": "argonautica_5_238",
+      "index": 237
+    },
+    {
+      "id": "argonautica_5_239",
+      "index": 238
+    },
+    {
+      "id": "argonautica_5_240",
+      "index": 239
+    },
+    {
+      "id": "argonautica_5_241",
+      "index": 240
+    },
+    {
+      "id": "argonautica_5_242",
+      "index": 241
+    },
+    {
+      "id": "argonautica_5_243",
+      "index": 242
+    },
+    {
+      "id": "argonautica_5_244",
+      "index": 243
+    },
+    {
+      "id": "argonautica_5_245",
+      "index": 244
+    },
+    {
+      "id": "argonautica_5_246",
+      "index": 245
+    },
+    {
+      "id": "argonautica_5_247",
+      "index": 246
+    },
+    {
+      "id": "argonautica_5_248",
+      "index": 247
+    },
+    {
+      "id": "argonautica_5_249",
+      "index": 248
+    },
+    {
+      "id": "argonautica_5_250",
+      "index": 249
+    },
+    {
+      "id": "argonautica_5_251",
+      "index": 250
+    },
+    {
+      "id": "argonautica_5_252",
+      "index": 251
+    },
+    {
+      "id": "argonautica_5_253",
+      "index": 252
+    },
+    {
+      "id": "argonautica_5_254",
+      "index": 253
+    },
+    {
+      "id": "argonautica_5_255",
+      "index": 254
+    },
+    {
+      "id": "argonautica_5_256",
+      "index": 255
+    },
+    {
+      "id": "argonautica_5_257",
+      "index": 256
+    },
+    {
+      "id": "argonautica_5_258",
+      "index": 257
+    },
+    {
+      "id": "argonautica_5_259",
+      "index": 258
+    },
+    {
+      "id": "argonautica_5_260",
+      "index": 259
+    },
+    {
+      "id": "argonautica_5_261",
+      "index": 260
+    },
+    {
+      "id": "argonautica_5_262",
+      "index": 261
+    },
+    {
+      "id": "argonautica_5_263",
+      "index": 262
+    },
+    {
+      "id": "argonautica_5_264",
+      "index": 263
+    },
+    {
+      "id": "argonautica_5_265",
+      "index": 264
+    },
+    {
+      "id": "argonautica_5_266",
+      "index": 265
+    },
+    {
+      "id": "argonautica_5_267",
+      "index": 266
+    },
+    {
+      "id": "argonautica_5_268",
+      "index": 267
+    },
+    {
+      "id": "argonautica_5_269",
+      "index": 268
+    },
+    {
+      "id": "argonautica_5_270",
+      "index": 269
+    },
+    {
+      "id": "argonautica_5_271",
+      "index": 270
+    },
+    {
+      "id": "argonautica_5_272",
+      "index": 271
+    },
+    {
+      "id": "argonautica_5_273",
+      "index": 272
+    },
+    {
+      "id": "argonautica_5_274",
+      "index": 273
+    },
+    {
+      "id": "argonautica_5_275",
+      "index": 274
+    },
+    {
+      "id": "argonautica_5_276",
+      "index": 275
+    },
+    {
+      "id": "argonautica_5_277",
+      "index": 276
+    },
+    {
+      "id": "argonautica_5_278",
+      "index": 277
+    },
+    {
+      "id": "argonautica_5_279",
+      "index": 278
+    },
+    {
+      "id": "argonautica_5_280",
+      "index": 279
+    },
+    {
+      "id": "argonautica_5_281",
+      "index": 280
+    },
+    {
+      "id": "argonautica_5_282",
+      "index": 281
+    },
+    {
+      "id": "argonautica_5_283",
+      "index": 282
+    },
+    {
+      "id": "argonautica_5_284",
+      "index": 283
+    },
+    {
+      "id": "argonautica_5_285",
+      "index": 284
+    },
+    {
+      "id": "argonautica_5_286",
+      "index": 285
+    },
+    {
+      "id": "argonautica_5_287",
+      "index": 286
+    },
+    {
+      "id": "argonautica_5_288",
+      "index": 287
+    },
+    {
+      "id": "argonautica_5_289",
+      "index": 288
+    },
+    {
+      "id": "argonautica_5_290",
+      "index": 289
+    },
+    {
+      "id": "argonautica_5_291",
+      "index": 290
+    },
+    {
+      "id": "argonautica_5_292",
+      "index": 291
+    },
+    {
+      "id": "argonautica_5_293",
+      "index": 292
+    },
+    {
+      "id": "argonautica_5_294",
+      "index": 293
+    },
+    {
+      "id": "argonautica_5_295",
+      "index": 294
+    },
+    {
+      "id": "argonautica_5_296",
+      "index": 295
+    },
+    {
+      "id": "argonautica_5_297",
+      "index": 296
+    },
+    {
+      "id": "argonautica_5_298",
+      "index": 297
+    },
+    {
+      "id": "argonautica_5_299",
+      "index": 298
+    },
+    {
+      "id": "argonautica_5_300",
+      "index": 299
+    },
+    {
+      "id": "argonautica_5_301",
+      "index": 300
+    },
+    {
+      "id": "argonautica_5_302",
+      "index": 301
+    },
+    {
+      "id": "argonautica_5_303",
+      "index": 302
+    },
+    {
+      "id": "argonautica_5_304",
+      "index": 303
+    },
+    {
+      "id": "argonautica_5_305",
+      "index": 304
+    },
+    {
+      "id": "argonautica_5_306",
+      "index": 305
+    },
+    {
+      "id": "argonautica_5_307",
+      "index": 306
+    },
+    {
+      "id": "argonautica_5_308",
+      "index": 307
+    },
+    {
+      "id": "argonautica_5_309",
+      "index": 308
+    },
+    {
+      "id": "argonautica_5_310",
+      "index": 309
+    },
+    {
+      "id": "argonautica_5_311",
+      "index": 310
+    },
+    {
+      "id": "argonautica_5_312",
+      "index": 311
+    },
+    {
+      "id": "argonautica_5_313",
+      "index": 312
+    },
+    {
+      "id": "argonautica_5_314",
+      "index": 313
+    },
+    {
+      "id": "argonautica_5_315",
+      "index": 314
+    },
+    {
+      "id": "argonautica_5_316",
+      "index": 315
+    },
+    {
+      "id": "argonautica_5_317",
+      "index": 316
+    },
+    {
+      "id": "argonautica_5_318",
+      "index": 317
+    },
+    {
+      "id": "argonautica_5_319",
+      "index": 318
+    },
+    {
+      "id": "argonautica_5_320",
+      "index": 319
+    },
+    {
+      "id": "argonautica_5_321",
+      "index": 320
+    },
+    {
+      "id": "argonautica_5_322",
+      "index": 321
+    },
+    {
+      "id": "argonautica_5_323",
+      "index": 322
+    },
+    {
+      "id": "argonautica_5_324",
+      "index": 323
+    },
+    {
+      "id": "argonautica_5_325",
+      "index": 324
+    },
+    {
+      "id": "argonautica_5_326",
+      "index": 325
+    },
+    {
+      "id": "argonautica_5_327",
+      "index": 326
+    },
+    {
+      "id": "argonautica_5_328",
+      "index": 327
+    },
+    {
+      "id": "argonautica_5_329",
+      "index": 328
+    },
+    {
+      "id": "argonautica_5_330",
+      "index": 329
+    },
+    {
+      "id": "argonautica_5_331",
+      "index": 330
+    },
+    {
+      "id": "argonautica_5_332",
+      "index": 331
+    },
+    {
+      "id": "argonautica_5_333",
+      "index": 332
+    },
+    {
+      "id": "argonautica_5_334",
+      "index": 333
+    },
+    {
+      "id": "argonautica_5_335",
+      "index": 334
+    },
+    {
+      "id": "argonautica_5_336",
+      "index": 335
+    },
+    {
+      "id": "argonautica_5_337",
+      "index": 336
+    },
+    {
+      "id": "argonautica_5_338",
+      "index": 337
+    }
+  ]
+}

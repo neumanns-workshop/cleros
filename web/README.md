@@ -1,118 +1,157 @@
 # Cleros Web Interface
 
-This is the web interface for the Cleros project, providing an interactive user interface for the algorithmic divination system based on the Orphic Hymns.
+A modern React application for consulting ancient Greek texts through digital bibliomancy. This interface provides two modes of text consultation: Oracle (random selection) and Counsel (semantic search).
 
-## Features
+## Architecture
 
-### Interface Controls
-- **Sidebar Toggle**: Use `Cmd/Ctrl + \` to toggle the sidebar
-- **Click-to-Close**: Click anywhere in the main content area to close the sidebar
-- Clean and minimalist interface with centered content
+### Components Structure
 
-### Divination Interface
-- Clean and minimalist interface for oracle queries
-- Typewriter effect for dramatic presentation of oracle responses
-- Collapsible view for expanded context
-- Dark mode aesthetic suited to the mystical context
+```
+src/
+├── components/
+│   ├── layout/              # Layout components (Header, Footer)
+│   ├── views/               # Page-level view components
+│   │   ├── HomeView.tsx     # Landing page with consultation form
+│   │   ├── AboutView.tsx    # About page with project information
+│   │   └── CorpusView.tsx   # Corpus browser and results display
+│   ├── common/              # Reusable UI components
+│   │   ├── LoadingOverlay.tsx
+│   │   ├── ModeSwitcher.tsx
+│   │   ├── ConsultationForm.tsx
+│   │   ├── AncientQueryCarousel.tsx
+│   │   ├── ShareDialog.tsx
+│   │   └── ShareCard.tsx
+│   └── OracleLine.tsx       # Component for displaying text lines
+├── hooks/                   # Custom React hooks
+│   ├── useAppState.ts       # Main application state management
+│   ├── useTypewriter.ts     # Typewriter effect for carousel
+│   ├── useCorpusData.ts     # Corpus data loading
+│   └── usePersonalReports.ts
+├── services/                # Business logic and external APIs
+│   ├── oracleService.ts     # Oracle mode (random selection)
+│   ├── counselService.ts    # Counsel mode (semantic search)
+│   ├── embeddingService.ts  # Text embeddings and similarity
+│   └── semanticLineRanker.ts
+├── types/                   # TypeScript type definitions
+├── constants/               # Application constants
+└── utils/                   # Utility functions
+```
 
-### Available Sources
-- **Orphic Hymns** - Currently implemented and fully functional
-- **Coming Soon:** Homer, Virgil, and Gnostic texts (options visible but currently disabled)
+### Key Features
 
-### Deity Classification System
-- Deity names in the hymns are automatically highlighted according to their category:
-  - **Olympian** - Major gods residing on Mount Olympus (Zeus, Apollo, Athene, etc.)
-  - **Chthonic** - Underworld or earth deities (Persephone, Plouton, etc.)
-  - **Titan** - Pre-Olympian primordial deities (Kronos, Rhea, etc.)
-  - **Nature** - Deities representing natural forces (Nereus, Pan, etc.)
-  - **Abstract** - Deities representing concepts (Nemesis, Sleep, etc.)
-  - **Other** - Miscellaneous divine entities not fitting other categories
+- **Oracle Mode**: True random selection using atmospheric noise from random.org
+- **Counsel Mode**: Semantic search using transformer models for text similarity
+- **Corpus Browser**: Navigate and read all ancient texts
+- **Personal Reports**: Save and review consultation history
+- **Share Functionality**: Create shareable cards of consultations
+- **Responsive Design**: Works on desktop and mobile devices
 
-### Alias System
-- Recognizes multiple variants and epithets of deity names, mapping them to their primary names:
-  - Apollo -> Pythian, Apollon, Grynean, etc.
-  - Dionysos -> Bacchos, Bromios, Perikionios, etc.
-  - Plouton -> Hades, Chthonic Zeus, etc.
-  - ...and many more
+## Development
 
-### Support Options
-- Ko-fi donation button integrated directly in the sidebar
-- Popup window implementation for seamless donation experience
-- No backend or API keys required
+### Prerequisites
 
-## Deployment
+- Node.js 18+
+- npm or yarn
 
-### Development
+### Setup
+
 ```bash
 # Install dependencies
 npm install
 
 # Start development server
-npm start
-```
+npm run dev
 
-### Production Build
-```bash
-# Create optimized production build
+# Run tests
+npm test
+
+# Run linter
+npm run lint
+npm run lint:fix
+
+# Build for production
 npm run build
-
-# The build folder will contain static files ready for deployment
 ```
 
-### Deployment Options
+### Testing
 
-#### Static Hosting (Recommended)
-The application is a static site that can be hosted on any static file hosting service:
+The project includes comprehensive testing:
 
-1. Upload the contents of the `build` directory to your static hosting service (Netlify, Vercel, GitHub Pages, etc.)
-2. Configure your hosting service to handle SPA routing by redirecting all requests to index.html
-
-#### Server Deployment with Nginx
-If deploying to your own server, use the included nginx.conf as a template:
+- **Unit Tests**: Individual component and service testing
+- **Integration Tests**: End-to-end workflow testing
+- **Mock Services**: Isolated testing with mocked external dependencies
 
 ```bash
-# Copy build files to server
-scp -r build/ user@your-server:/var/www/cleros
+# Run all tests
+npm test
 
-# Configure nginx (use the nginx.conf file as a template)
-sudo nano /etc/nginx/sites-available/cleros
+# Run tests with UI
+npm test:ui
 
-# Enable the site
-sudo ln -s /etc/nginx/sites-available/cleros /etc/nginx/sites-enabled/
-sudo systemctl reload nginx
+# Run tests with coverage
+npm test:coverage
 ```
 
-For more detailed deployment instructions, see the [../docs/DEPLOYMENT.md](../docs/DEPLOYMENT.md) file.
+### Code Quality
 
-For information about payment integration, see [../docs/PAYMENT_SETUP.md](../docs/PAYMENT_SETUP.md).
+- **ESLint**: Configured with TypeScript and React rules
+- **TypeScript**: Strict type checking for better code quality
+- **Vitest**: Modern testing framework with fast execution
 
-## Technology Stack
-- React with TypeScript
-- Material-UI components
-- Context API for state management
-- Custom hooks for data fetching
-- CSS variables for theming
+## Architecture Decisions
 
-## Project Structure
-- `components/` - React components
-  - `shared/` - Reusable components like HighlightedText
-  - `results/` - Oracle response display components
-  - `layout/` - Structural layout components including DonateButton
-- `context/` - React contexts for state management
-  - `DeityContext` - Provider for deity classification data
-  - `OracleContext` - Provider for oracle query and result data
-- `services/` - Data fetching and processing
-  - `deities.ts` - Deity classification and alias handling
-- `types/` - TypeScript type definitions
-- `utils/` - Utility functions and constants
+### State Management
 
-## Deity Highlighting
-The `HighlightedText` component analyzes text and automatically highlights deity names based on the classification data. It supports:
-- Multiple occurrences of the same deity
-- Exact character offsets for precise highlighting
-- Deity aliases and epithets
-- CSS variables for consistent coloring
+Uses a custom `useAppState` hook instead of external state management libraries for:
+- Simpler debugging and testing
+- Reduced bundle size
+- Direct control over state updates
+- Type safety with TypeScript
 
----
+### Component Organization
 
-*This web interface is part of the Cleros project, synthesizing traditional divinatory frameworks with modern computational techniques to explore the intersection of meaning-making, statistical analysis, and the interpretive act.*
+- **View Components**: Handle routing and page-level logic
+- **Common Components**: Reusable UI elements
+- **Layout Components**: Application structure
+- **Business Logic**: Separated into service layer
+
+### Services Layer
+
+- **oracleService**: Handles true random selection using random.org API
+- **counselService**: Manages semantic search with transformer models
+- **embeddingService**: Handles text embeddings and similarity calculations
+
+### Testing Strategy
+
+- **Component Tests**: Verify UI behavior and user interactions
+- **Service Tests**: Test business logic and external API integration
+- **Integration Tests**: Verify complete user workflows
+- **Mock Strategy**: Isolate units under test from external dependencies
+
+## Performance Considerations
+
+- **Code Splitting**: Automatic chunking for vendors and features
+- **Lazy Loading**: Dynamic imports for large components
+- **Caching**: LocalStorage for consultation history
+- **Embedding Optimization**: Efficient vector similarity calculations
+
+## Deployment
+
+The application is built with Vite for optimal production builds:
+
+```bash
+npm run build
+```
+
+Outputs optimized static files to `dist/` directory ready for deployment to any static hosting service.
+
+## Contributing
+
+1. Follow the existing code style (ESLint configuration)
+2. Write tests for new features
+3. Update type definitions as needed
+4. Document significant changes
+
+## License
+
+MIT License - see LICENSE file for details.

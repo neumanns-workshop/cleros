@@ -233,9 +233,200 @@ const timeComponents = [
 const hashInput = `${embeddingSum}-${embeddingMean}-${embeddingMax}-${embeddingMin}-${embeddingStdDev}-${timeComponents.join('-')}`;
 ```
 
+## Gold Standard Corpus & Semantic Search
+
+Cleros includes a comprehensive gold standard corpus of ancient Greek religious texts with state-of-the-art semantic embeddings for advanced search and analysis.
+
+### Corpus Contents
+
+The gold standard corpus (`data/gold_standard/`) contains 5 collections spanning 8 centuries of ancient Greek religious literature:
+
+| **Collection** | **Period** | **Items** | **Lines** | **Type** |
+|----------------|------------|-----------|-----------|----------|
+| **Orphic Argonautica** | 4th-6th century CE | 1 epic | 1,376 lines | Epic narrative poetry |
+| **Orphic Lithica** | 4th-6th century CE | 1 poem | 779 lines | Didactic mineralogy |
+| **Orphic Hymns** | 2nd-3rd century CE | 90 pieces | 1,173 lines | Ritual invocations |
+| **Orphic Golden Tablets** | 5th-2nd century BCE | 10 tablets | 10 formulae | Funerary instructions |
+| **Dodona Oracle Queries** | 5th-2nd century BCE | 18 queries | 18 consultations | Oracle consultations |
+| **TOTAL** | | **120 texts** | **3,356 items** | Mixed formats |
+
+### Sentence-Based Chunking
+
+The corpus uses intelligent sentence-based chunking that preserves scholarly structure while creating semantically coherent units:
+
+- **Period-boundary detection**: Uses periods at line endings as reliable sentence markers  
+- **Atomic unit preservation**: Tablets and oracle queries remain as complete units (already semantically atomic)
+- **Line-level metadata**: All scholarly apparatus (line numbers, Greek text, philological notes) preserved
+- **Compression results**: 3,328 lines → 749 sentences (avg 4.4 lines per sentence)
+
+#### Chunking Statistics by Corpus
+
+| **Corpus** | **Original Lines** | **Sentences** | **Avg Lines/Sentence** |
+|------------|-------------------|---------------|------------------------|
+| Orphic Hymns | 1,173 | 218 | 5.38 |
+| Orphic Argonautica | 1,376 | 338 | 4.07 |
+| Orphic Lithica | 779 | 193 | 4.04 |
+| Golden Tablets | 10 | 10 | 1.0 (atomic) |
+| Oracle Queries | 18 | 18 | 1.0 (atomic) |
+
+### Semantic Embeddings
+
+The corpus includes **dual embedding systems** for different use cases:
+
+#### Server-Side Embeddings (High Performance)
+- **Model**: `nomic-embed-text:latest` via Ollama (768-dimensional vectors)
+- **Coverage**: 777 semantic units with 100% success rate
+- **Infrastructure**: Local Ollama (no external API dependencies)
+- **Use case**: Backend processing, research, high-precision search
+
+#### Client-Side Embeddings (Browser Compatible)
+- **Model**: `all-MiniLM-L6-v2` via transformers.js (384-dimensional vectors)
+- **Coverage**: 777 semantic units with 100% success rate  
+- **Infrastructure**: Browser-native transformers.js (`Xenova/all-MiniLM-L6-v2`)
+- **Use case**: Real-time client-side semantic search, web applications
+
+Both embedding sets provide **complete coverage** with identical chunking but different dimensions optimized for their respective use cases.
+
+#### Embedding Files Structure
+
+```
+embeddings/
+├── {corpus_name}/                                # Server-side (Ollama/Nomic)
+│   ├── {corpus}_sentence_embeddings.json        # Full data + 768D embeddings
+│   ├── {corpus}_embeddings.npy                  # NumPy array for fast loading
+│   └── {corpus}_metadata.json                   # Quick reference
+├── {corpus_name}_client/                        # Client-side (transformers.js)
+│   ├── {corpus}_client_embeddings.json          # Full data + 384D embeddings
+│   ├── {corpus}_client_embeddings.npy           # NumPy array for backend use
+│   └── {corpus}_client_metadata.json            # Quick reference
+└── scripts/
+    ├── generate_sentence_embeddings.py          # Ollama/Nomic generator
+    ├── generate_atomic_embeddings.py            # Ollama/Nomic atomic units
+    ├── generate_client_embeddings.py            # Client-compatible generator
+    └── client_search_example.js                 # Browser integration example
+```
+
+### Generating Embeddings
+
+#### Prerequisites
+
+- [Ollama](https://ollama.ai/) installed locally
+- Nomic Embed Text model: `ollama pull nomic-embed-text`
+
+#### Generate All Embeddings
+
+```bash
+# 1. Create sentence chunks from parallel JSON files
+python scripts/sentence_chunker.py
+
+# 2. Generate server-side embeddings (Ollama/Nomic - 768D)
+python embeddings/scripts/generate_sentence_embeddings.py  # Chunked corpora
+python embeddings/scripts/generate_atomic_embeddings.py    # Tablets & queries
+
+# 3. Generate client-side embeddings (transformers.js - 384D)
+python embeddings/scripts/generate_client_embeddings.py    # All corpora
+```
+
+#### Test Semantic Search
+
+```bash
+# Test semantic search using oracle queries as examples
+python embeddings/scripts/test_with_oracle_queries.py
+```
+
+This test demonstrates cross-corpus semantic search using real ancient consultation patterns, showing how oracle queries find thematically related content across hymns, tablets, and other texts.
+
+**Example Results:**
+- **Household & Safety query** → finds protective hymn passages (46.7% similarity), divine intervention in Argonautica (32.2%), purification tablets (32.6%)
+- **Legal Dispute query** → finds justice-related hymn passages (18.9%), judicial decision narratives (18.7%), wisdom guidance (17.2%)  
+- **Health queries** → finds healing hymn invocations (34.5%), medical mineralogy passages (28.4%), restorative tablet formulae (18.7%)
+- **Success/Prosperity queries** → finds blessing hymns (50.1%), ritual sacrifice instructions (53.8%), initiate benedictions (40.2%)
+
+### Usage Examples
+
+#### Load Embeddings for Similarity Search
+
+```python
+import json
+import numpy as np
+
+# Load sentence embeddings
+with open('embeddings/orphic_hymns/orphic_hymns_sentence_embeddings.json') as f:
+    hymns_data = json.load(f)
+
+# Load embeddings as NumPy array for fast operations
+embeddings = np.load('embeddings/orphic_hymns/orphic_hymns_embeddings.npy')
+
+# Find similar sentences using cosine similarity
+from sklearn.metrics.pairwise import cosine_similarity
+query_embedding = get_query_embedding("divine wisdom")  # Your embedding function
+similarities = cosine_similarity([query_embedding], embeddings)[0]
+```
+
+#### Access Metadata
+
+```python
+# Quick access to corpus metadata
+with open('embeddings/golden_tablets/golden_tablets_metadata.json') as f:
+    tablets = json.load(f)
+    
+for tablet in tablets['tablets']:
+    print(f"{tablet['tablet_id']}: {tablet['text_preview']}")
+```
+
+### Search Capabilities
+
+The embedded corpus supports:
+
+- **Cross-corpus semantic search**: Find similar concepts across different text types
+- **Intent-based queries**: Search oracle queries by consultation type  
+- **Ritual pattern matching**: Identify similar formulations in golden tablets
+- **Thematic exploration**: Discover conceptual connections in poetic works
+- **Scholarly precision**: All results maintain line-level scholarly apparatus
+
+#### Client-Side Integration Example
+
+```javascript
+import { pipeline } from '@huggingface/transformers';
+
+// Initialize semantic search
+const extractor = await pipeline('feature-extraction', 'Xenova/all-MiniLM-L6-v2');
+
+// Load corpus embeddings
+const hymnsResponse = await fetch('/embeddings/orphic_hymns_client/orphic_hymns_client_embeddings.json');
+const hymnsData = await hymnsResponse.json();
+
+// Search function
+async function searchCleros(queryText, topK = 5) {
+    // Generate query embedding
+    const queryEmbedding = await extractor(queryText, { pooling: 'mean', normalize: true });
+    const queryVector = queryEmbedding.tolist()[0];
+    
+    // Calculate similarities
+    const results = hymnsData.units.map(unit => ({
+        text: unit.text.english,
+        section: unit.section_title,
+        similarity: cosineSimilarity(queryVector, unit.embedding)
+    }));
+    
+    // Return top results
+    return results.sort((a, b) => b.similarity - a.similarity).slice(0, topK);
+}
+
+// Example usage
+const results = await searchCleros("divine protection and safety");
+results.forEach(result => {
+    console.log(`${(result.similarity * 100).toFixed(1)}%: ${result.text.substring(0, 100)}...`);
+});
+```
+
+**Live Testing**: Use oracle queries as real-world test cases to validate semantic search quality and cross-corpus thematic discovery.
+
 ## Technical Capabilities
 
-- Neural embedding-based text analysis
+- Neural embedding-based text analysis (Nomic Embed Text)
+- Sentence-boundary semantic chunking
+- Local Ollama integration (privacy-preserving)
 - Deterministic hashing with temporal integration
 - Cosine similarity measurement for relevance ranking
 - Natural language processing for entity recognition
@@ -263,7 +454,7 @@ This allows you to interactively classify deities and entities by entering their
 #### Batch Classification
 
 ```bash
-python tools/entity_classifier.py batch --output data/enriched/deities/deity_classifications.json
+python tools/entity_classifier.py batch --output data/2_enriched/deities/deity_classifications.json
 ```
 
 This classifies all entities extracted from the linguistic analysis of the Orphic Hymns. Each entity is classified using its original textual context from the hymns, providing more accurate and contextually-aware classifications.
@@ -271,13 +462,13 @@ This classifies all entities extracted from the linguistic analysis of the Orphi
 #### Visualization
 
 ```bash
-python tools/visualize_classifications.py --show
+python tools/visualize_classifications.py --output-dir data/2_enriched/deities/visualizations
 ```
 
 To visualize the classification results and save the visualizations:
 
 ```bash
-python tools/visualize_classifications.py --output-dir data/enriched/deities/visualizations
+python tools/visualize_classifications.py --output-dir data/2_enriched/deities/visualizations
 ```
 
 You can also export the results to a CSV file for easier viewing and analysis:

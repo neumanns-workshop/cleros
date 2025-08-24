@@ -1,0 +1,188 @@
+{
+  "title": "Papyrus Oracle Query Expansion Candidates",
+  "created": "2025-08-21T16:12:19.569552",
+  "total_candidates": 10,
+  "search_strategy": {
+    "target_databases": [
+      "papyri_info_base",
+      "trismegistos_base",
+      "duke_papyrus_base"
+    ],
+    "oracle_keywords": [
+      "Διὶ Ἡλίῳ",
+      "Σαράπιδι",
+      "ἀξιοῖ",
+      "δός",
+      "συννάοις θεοῖς",
+      "ἐπιτρέπεις",
+      "δέδοται",
+      "τοῦτό μοι",
+      "oracle consultation",
+      "ticket oracle",
+      "divine petition",
+      "religious consultation",
+      "oracle question",
+      "consultation papyrus"
+    ],
+    "priority_collections": [
+      "P.Oxy",
+      "P.Mich",
+      "BGU",
+      "SB",
+      "P.Col",
+      "P.Fay",
+      "P.Tebt",
+      "P.Kar"
+    ]
+  },
+  "next_steps": [
+    "Search each candidate URL for full text",
+    "Download papyri with substantial Greek text",
+    "Verify oracle consultation context",
+    "Add to translation pipeline",
+    "Integrate with existing collection"
+  ],
+  "candidates": [
+    {
+      "papyrus_id": "P.Oxy. 12 1477",
+      "collection": "P.Oxy",
+      "title": "Oracle Consultation",
+      "description": "Religious consultation text from Oxyrhynchus",
+      "greek_text": "",
+      "url": "https://papyri.info/search?q=P.Oxy.+12+1477",
+      "provenance": "Oxyrhynchus",
+      "date": "2nd century CE",
+      "quality_score": 55,
+      "notes": [
+        "Check papyri.info for full text",
+        "Likely oracle consultation"
+      ]
+    },
+    {
+      "papyrus_id": "BGU 3 909",
+      "collection": "BGU",
+      "title": "Religious Consultation",
+      "description": "Divine petition or oracle query",
+      "greek_text": "",
+      "url": "https://papyri.info/search?q=BGU+3+909",
+      "provenance": "Egypt",
+      "date": "2nd-3rd century CE",
+      "quality_score": 55,
+      "notes": [
+        "Religious consultation context"
+      ]
+    },
+    {
+      "papyrus_id": "P.Mich. 3 159",
+      "collection": "P.Mich",
+      "title": "Oracle Question",
+      "description": "Divine consultation from Michigan collection",
+      "greek_text": "",
+      "url": "https://papyri.info/search?q=P.Mich.+3+159",
+      "provenance": "Karanis",
+      "date": "2nd century CE",
+      "quality_score": 45,
+      "notes": [
+        "Michigan collection - Karanis provenance"
+      ]
+    },
+    {
+      "papyrus_id": "P.Mich. 6 421",
+      "collection": "P.Mich",
+      "title": "Religious Petition",
+      "description": "Possible oracle consultation",
+      "greek_text": "",
+      "url": "https://papyri.info/search?q=P.Mich.+6+421",
+      "provenance": "Karanis",
+      "date": "3rd century CE",
+      "quality_score": 45,
+      "notes": [
+        "Religious petition format"
+      ]
+    },
+    {
+      "papyrus_id": "SB 14 11588",
+      "collection": "SB",
+      "title": "Oracle Consultation",
+      "description": "Supplementary collection oracle text",
+      "greek_text": "",
+      "url": "https://papyri.info/search?q=SB+14+11588",
+      "provenance": "Egypt",
+      "date": "Roman period",
+      "quality_score": 45,
+      "notes": [
+        "Sammelbuch supplement - check for Greek text"
+      ]
+    },
+    {
+      "papyrus_id": "SB 20 14699",
+      "collection": "SB",
+      "title": "Serapis Query",
+      "description": "Oracle consultation to Serapis",
+      "greek_text": "",
+      "url": "https://papyri.info/search?q=SB+20+14699",
+      "provenance": "Egypt",
+      "date": "2nd-3rd century CE",
+      "quality_score": 45,
+      "notes": [
+        "Serapis consultation - matches existing pattern"
+      ]
+    },
+    {
+      "papyrus_id": "P.Oxy. 36 2832",
+      "collection": "P.Oxy",
+      "title": "Serapis Oracle Query",
+      "description": "Consultation addressed to Serapis",
+      "greek_text": "",
+      "url": "https://papyri.info/search?q=P.Oxy.+36+2832",
+      "provenance": "Oxyrhynchus",
+      "date": "2nd-3rd century CE",
+      "quality_score": 35,
+      "notes": [
+        "Serapis oracle - fits collection pattern"
+      ]
+    },
+    {
+      "papyrus_id": "BGU 2 632",
+      "collection": "BGU",
+      "title": "Oracle Ticket",
+      "description": "Consultation ticket from Berlin collection",
+      "greek_text": "",
+      "url": "https://papyri.info/search?q=BGU+2+632",
+      "provenance": "Fayum region",
+      "date": "Roman period",
+      "quality_score": 35,
+      "notes": [
+        "Berlin collection oracle ticket"
+      ]
+    },
+    {
+      "papyrus_id": "P.Col. 8 208",
+      "collection": "P.Col",
+      "title": "Divine Consultation",
+      "description": "Oracle query from Columbia collection",
+      "greek_text": "",
+      "url": "https://papyri.info/search?q=P.Col.+8+208",
+      "provenance": "Egypt",
+      "date": "Roman period",
+      "quality_score": 35,
+      "notes": [
+        "Columbia collection candidate"
+      ]
+    },
+    {
+      "papyrus_id": "P.Fay. 333",
+      "collection": "P.Fay",
+      "title": "Oracle Ticket",
+      "description": "Consultation ticket from Fayum",
+      "greek_text": "",
+      "url": "https://papyri.info/search?q=P.Fay.+333",
+      "provenance": "Fayum",
+      "date": "2nd century CE",
+      "quality_score": 35,
+      "notes": [
+        "Fayum oracle ticket - companion to P.Fay. 137"
+      ]
+    }
+  ]
+}

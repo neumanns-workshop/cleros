@@ -1,0 +1,82 @@
+{
+  "corpus": "dodona_queries",
+  "type": "sentence_embeddings",
+  "total_sentences": 18,
+  "embedding_dimension": 384,
+  "model": "all-MiniLM-L6-v2",
+  "created": "2025-08-23T23:09:25.992484",
+  "mapping": [
+    {
+      "id": "dodona_queries_1_1",
+      "index": 0
+    },
+    {
+      "id": "dodona_queries_2_1",
+      "index": 1
+    },
+    {
+      "id": "dodona_queries_3_1",
+      "index": 2
+    },
+    {
+      "id": "dodona_queries_4_1",
+      "index": 3
+    },
+    {
+      "id": "dodona_queries_5_1",
+      "index": 4
+    },
+    {
+      "id": "dodona_queries_6_1",
+      "index": 5
+    },
+    {
+      "id": "dodona_queries_7_1",
+      "index": 6
+    },
+    {
+      "id": "dodona_queries_8_1",
+      "index": 7
+    },
+    {
+      "id": "dodona_queries_9_1",
+      "index": 8
+    },
+    {
+      "id": "dodona_queries_10_1",
+      "index": 9
+    },
+    {
+      "id": "dodona_queries_11_1",
+      "index": 10
+    },
+    {
+      "id": "dodona_queries_12_1",
+      "index": 11
+    },
+    {
+      "id": "dodona_queries_13_1",
+      "index": 12
+    },
+    {
+      "id": "dodona_queries_14_1",
+      "index": 13
+    },
+    {
+      "id": "dodona_queries_15_1",
+      "index": 14
+    },
+    {
+      "id": "dodona_queries_16_1",
+      "index": 15
+    },
+    {
+      "id": "dodona_queries_17_1",
+      "index": 16
+    },
+    {
+      "id": "dodona_queries_18_1",
+      "index": 17
+    }
+  ]
+}

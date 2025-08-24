@@ -1,56 +1,62 @@
-/**
- * String utilities
- */
 
-/**
- * Creates a hash code from a string
- * This is a simple and fast hash function similar to Java's String.hashCode()
- *
- * @param str The string to hash
- * @returns A hash code integer
- */
-export function hashCode(str: string): number {
-  let hash = 0;
-  for (let i = 0; i < str.length; i++) {
-    hash = (hash << 5) - hash + str.charCodeAt(i);
-    hash |= 0; // Convert to 32bit integer
-  }
-  return hash;
-}
+export const highlightKeywordsInText = (text: string, keywords: string[]): string => {
+  if (!keywords || keywords.length === 0 || !text) return text;
+  
+  let highlightedText = text;
+  
+  keywords.forEach(keyword => {
+    // Use a regex to find whole words, case-insensitively
+    const regex = new RegExp(`\\b(${keyword})\\b`, 'gi');
+    highlightedText = highlightedText.replace(
+      regex, 
+      `<span class="keyword-highlight">${keyword}</span>`
+    );
+  });
+  
+  return highlightedText;
+};
 
-/**
- * Generates a more cryptographically secure hash using SHA-256
- * Note: This is async because it uses the Web Crypto API
- *
- * @param str The string to hash
- * @returns A hex string representation of the hash
- */
-export async function sha256Hash(str: string): Promise<string> {
-  try {
-    const encoder = new TextEncoder();
-    const data = encoder.encode(str);
-    const hashBuffer = await crypto.subtle.digest("SHA-256", data);
-    const hashArray = Array.from(new Uint8Array(hashBuffer));
-    const hashHex = hashArray
-      .map((b) => b.toString(16).padStart(2, "0"))
-      .join("");
-    return hashHex;
-  } catch (error) {
-    console.error("Error generating SHA-256 hash:", error);
-    // Fallback to simple hash
-    return hashCode(str).toString(16);
-  }
-}
+export const formatTitle = (title: string): string => {
+  if (!title) return '';
 
-/**
- * Truncates a string to a maximum length with ellipsis
- *
- * @param str The string to truncate
- * @param maxLength Maximum length (default: 100)
- * @returns The truncated string
- */
-export function truncate(str: string, maxLength: number = 100): string {
-  if (!str) return "";
-  if (str.length <= maxLength) return str;
-  return `${str.substring(0, maxLength)}...`;
-}
+  // 1. Remove trailing period
+  const trimmedTitle = title.trim().replace(/\.$/, '');
+
+  // Articles and prepositions that should be lowercase (except when first word)
+  const lowercaseArticles = new Set(['the', 'of', 'to', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'by', 'for', 'with', 'from']);
+
+  // 2. Capitalize first letter of each word, handling parentheses and articles
+  const titleCased = trimmedTitle
+    .split(' ')
+    .map((word, index) => {
+        const isFirstWord = index === 0;
+        
+        if (word.startsWith('(')) {
+            const innerWord = word.slice(1);
+            const shouldCapitalize = isFirstWord || !lowercaseArticles.has(innerWord.toLowerCase());
+            return '(' + (shouldCapitalize ? 
+                innerWord.charAt(0).toUpperCase() + innerWord.slice(1).toLowerCase() :
+                innerWord.toLowerCase());
+        }
+        
+        // Preserve case for Roman numerals (e.g., I, V, X)
+        if (/^[IVXLC]+$/.test(word)) {
+            return word.toUpperCase();
+        }
+        
+        // First word is always capitalized, articles are lowercase unless first
+        if (isFirstWord || !lowercaseArticles.has(word.toLowerCase())) {
+            return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+        } else {
+            return word.toLowerCase();
+        }
+    })
+    .join(' ');
+
+    // 3. Replace leading "Of " with "To "
+    if (titleCased.startsWith('Of ')) {
+        return 'To ' + titleCased.slice(3);
+    }
+
+    return titleCased;
+};
