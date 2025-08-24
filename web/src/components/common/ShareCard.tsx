@@ -81,7 +81,7 @@ const ShareCard: React.FC<ShareCardProps> = React.memo(({ response, currentOptio
         hour: 'numeric',
         minute: '2-digit'
       });
-    } catch (e) {
+            } catch {
       return 'Invalid Date';
     }
   };
@@ -97,6 +97,7 @@ const ShareCard: React.FC<ShareCardProps> = React.memo(({ response, currentOptio
     // ShareCard component for display and image capture
     <div
       id={cardId}
+      data-testid="share-card-render-target"
       style={{
         width: '500px',
         maxWidth: '100%',

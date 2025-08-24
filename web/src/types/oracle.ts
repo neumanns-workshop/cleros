@@ -29,11 +29,7 @@ export interface SelectionDetail {
 
 export interface OracleSelection extends SelectionDetail {
   randomIndex: number;
-  bestLine?: {
-    lineNumber: number;
-    score: number;
-    text: string;
-  };
+  // Oracle mode uses pure randomness - no semantic line ranking
 }
 
 export interface CounselSelection extends SelectionDetail {
@@ -75,13 +71,7 @@ export interface OracleResponse {
     lithica?: OracleSelection;
   };
   keywords: string[];
-  shareableOptions: ShareableOption[]; // Ranked by semantic relevance
-  overallBestLine?: {
-    corpus: 'hymns' | 'argonautica' | 'lithica';
-    lineNumber: number;
-    score: number;
-    text: string;
-  };
+  shareableOptions: ShareableOption[]; // 3 random sentences (pure randomness)
 }
 
 export interface CounselResponse {

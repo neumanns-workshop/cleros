@@ -10,6 +10,7 @@ export const ModeSwitcher = ({ searchMode, setSearchMode, isRandomOrgAvailable }
   <div className="mode-switcher">
     <button 
       className={`mode-button ${searchMode === 'oracle' ? 'active' : ''}`}
+      title="Random selection using atmospheric noise"
       onClick={() => {
         if (isRandomOrgAvailable === false) {
           alert('Oracle mode requires true randomness from random.org for principled divination.');
@@ -27,6 +28,7 @@ export const ModeSwitcher = ({ searchMode, setSearchMode, isRandomOrgAvailable }
     </button>
     <button 
       className={`mode-button ${searchMode === 'sage' ? 'active' : ''}`}
+      title="Semantic search for relevant passages"
       onClick={() => setSearchMode('sage')}
     >
       Counsel

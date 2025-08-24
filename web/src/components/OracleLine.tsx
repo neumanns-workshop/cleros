@@ -1,19 +1,12 @@
 import { useSemanticSimilarity } from '../services/clientSemanticScorer';
 import { OracleResponse, CounselResponse } from '../types/oracle';
-
-interface LineData {
-  isMarker?: boolean;
-  english?: string;
-  isHeader?: boolean;
-  sourceLink?: any; // Keeping any for now as its shape is complex
-  line?: number | string;
-}
+import { EnrichedLineData, SourceLink } from '../types/corpus';
 
 interface OracleLineProps {
-  lineData: LineData;
+  lineData: EnrichedLineData;
   oracleResponse: OracleResponse | CounselResponse | null;
-  onNavigate: (sourceLink: any) => void;
-  onLineClick: (lineData: LineData) => void;
+  onNavigate: (sourceLink: SourceLink) => void;
+  onLineClick: (lineData: EnrichedLineData) => void;
 }
 
 const OracleLine = ({ lineData, oracleResponse, onNavigate, onLineClick }: OracleLineProps) => {

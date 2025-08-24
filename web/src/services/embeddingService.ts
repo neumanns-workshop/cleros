@@ -1,6 +1,7 @@
 import { pipeline } from '@xenova/transformers';
 
-// Type for the transformers.js pipeline
+// Type for the transformers.js pipeline  
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 type FeatureExtractionPipeline = any; // Note: @xenova/transformers doesn't export proper types yet
 
 // Ensure there is only one instance of the embedding pipeline
@@ -139,7 +140,11 @@ class EmbeddingService {
 
             this.lineEmbeddingsCache.set(corpus, promise);
         }
-        return this.lineEmbeddingsCache.get(corpus)!;
+        const cached = this.lineEmbeddingsCache.get(corpus);
+        if (!cached) {
+            throw new Error(`Failed to load line embeddings for corpus: ${corpus}`);
+        }
+        return cached;
     }
 
     public async getQueryEmbedding(query: string): Promise<number[]> {
@@ -164,7 +169,7 @@ class EmbeddingService {
             }
             
             return embedding;
-        } catch (_error) {
+        } catch {
             return undefined;
         }
     }
@@ -198,18 +203,19 @@ class EmbeddingService {
 
             this.sentenceEmbeddingsCache.set(corpus, promise);
         }
-        return this.sentenceEmbeddingsCache.get(corpus)!;
+        const cached = this.sentenceEmbeddingsCache.get(corpus);
+        if (!cached) {
+            throw new Error(`Failed to load sentence embeddings for corpus: ${corpus}`);
+        }
+        return cached;
     }
 
-    public async getSentenceEmbedding(corpus: string, sentenceId: number, partNumber: number = 1): Promise<number[] | undefined> {
+    public async getSentenceEmbedding(corpus: string, sentenceId: number, _partNumber: number = 1): Promise<number[] | undefined> {
         try {
             const embeddingData = await this.loadSentenceEmbeddings(corpus);
             
-            // Construct the embedding ID in the format: corpus_part_sentence
-            const embeddingId = `${corpus}_${partNumber}_${sentenceId}`;
-            
-            // Find the mapping for this embedding ID
-            const mapping = embeddingData.metadata.mapping?.find((m: any) => m.id === embeddingId);
+            // Find the mapping for this sentence ID
+            const mapping = embeddingData.metadata.mapping?.find(m => m.sentence_id === sentenceId);
             
             if (!mapping) {
                 return undefined;
@@ -221,7 +227,7 @@ class EmbeddingService {
             }
             
             return embedding;
-        } catch (_error) {
+        } catch {
             return undefined;
         }
     }

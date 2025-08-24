@@ -18,6 +18,7 @@ export interface CorpusPart {
   part_number: number;
   part_title: string;
   title_english?: string;
+  title?: string; // Legacy support
   key: string | number;
   incense?: string;
   lines?: LineDetail[];
@@ -46,6 +47,7 @@ export interface AllCorpusData {
   tablets: CorpusData | null;
   queries: CorpusData | null;
   papyrusQueries: CorpusData | null;
+  [key: string]: CorpusData | null; // Index signature for dynamic access
 }
 
 export interface SourceLink {
@@ -57,8 +59,13 @@ export interface SourceLink {
   source?: string;
 }
 
-export interface EnrichedLineData extends LineDetail {
+export interface EnrichedLineData {
+  line: number | string | null; // Allow different types for headers
+  english: string;
+  greek?: string;
+  note?: string;
   isHeader?: boolean;
+  isMarker?: boolean;
   part_number?: number;
   sentence_id?: string;
   corpus_name?: string;

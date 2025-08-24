@@ -4,18 +4,13 @@
  */
 
 import { embeddingService } from './embeddingService';
-import { synonymExpansionService } from './synonymExpansionService';
+import { synonymExpansionService, EnhancedKeywordData } from './synonymExpansionService';
 import { semanticLineRanker } from './semanticLineRanker';
 import { CounselResponse } from '../types/oracle';
+import { LineDetail } from '../types/corpus';
+import { CorpusData } from './oracleService';
 
 // CounselResponse and CounselSelection interfaces moved to types/oracle.ts - import from there
-
-export interface LineDetail {
-  line: number;
-  english: string;
-  greek?: string;
-  note?: string;
-}
 
 export interface SentenceEmbeddingData {
   metadata: {
@@ -28,18 +23,25 @@ export interface SentenceEmbeddingData {
     }>;
   };
   embeddings: number[][];
-  corpusData: any; // The unified corpus file
+  corpusData: CorpusData; // The unified corpus file
 }
 
 export interface SentenceUnit {
   id: number;
   text: string; // Just the English text string
   embedding: number[];
-  sentenceData?: any; // Optional sentence metadata
+  sentenceData: {
+    sentence_id: number;
+    part_number: number;
+    part_title: string;
+    line_details: LineDetail[];
+    incense?: string;
+    incense_greek?: string;
+  };
 }
 
 class ClientCounselService {
-  private corpusDataCache: Map<string, Promise<any>> = new Map();
+  private corpusDataCache: Map<string, Promise<CorpusData>> = new Map();
   private stopWords: Set<string> = new Set();
 
   constructor() {
@@ -66,9 +68,12 @@ class ClientCounselService {
   /**
    * Load corpus data only (embeddings handled by embeddingService)
    */
-  private async loadCorpusData(corpusName: string): Promise<any> {
+  private async loadCorpusData(corpusName: string): Promise<CorpusData> {
     if (this.corpusDataCache.has(corpusName)) {
-      return this.corpusDataCache.get(corpusName)!;
+      const cached = this.corpusDataCache.get(corpusName);
+      if (cached) {
+        return cached;
+      }
     }
 
     const promise = (async () => {
@@ -103,7 +108,7 @@ class ClientCounselService {
    */
   private calculateEnhancedKeywordBoost(
     text: string, 
-    enhancedKeywords: any[]
+    enhancedKeywords: EnhancedKeywordData[]
   ): number {
     if (!text || !enhancedKeywords || enhancedKeywords.length === 0) {
       return 0;
@@ -140,11 +145,13 @@ class ClientCounselService {
 
   /**
    * Find best semantic match in a corpus using pre-expanded keywords
+   * Filters data for bibliomancy: excludes proems/appendices, includes single-sentence parts,
+   * and for multi-sentence parts only includes sentences <= 6 lines
    */
   private async findBestMatch(
     corpusName: string, 
     queryEmbedding: number[], 
-    enhancedKeywords: any[]
+    enhancedKeywords: EnhancedKeywordData[]
   ): Promise<{ unit: SentenceUnit; score: number; corpus: string }> {
     
     const corpusData = await this.loadCorpusData(corpusName);
@@ -153,15 +160,21 @@ class ClientCounselService {
 
     // Iterate through corpus data and score each sentence
     for (const part of corpusData.parts) {
-      // Filter out overly general hymns at the part level
-      if (corpusName === 'hymns') {
-        // Skip proem (part 0) and appendix/cosmogenic content (part 88) - too general for semantic search
-        if (part.part_number === 0 || part.part_number === 88) {
-          continue; // Skip this entire part
-        }
+      // Bibliomancy Filter 1: Exclude proems and appendices (only if part_type is defined)
+      if (part.part_type && (part.part_type === 'proem' || part.part_type === 'appendix')) {
+        continue;
       }
       
       for (const sentence of part.sentences) {
+        // Handle parts that might not have all metadata
+        const sentenceCount = part.sentence_count || (part.sentences ? part.sentences.length : 0);
+        const lineCount = sentence.line_count || (sentence.line_details ? sentence.line_details.length : 1);
+        
+        // Bibliomancy Filter 2: For multi-sentence parts, only include sentences <= 6 lines
+        // (single-sentence parts are always included regardless of line count)
+        if (sentenceCount > 1 && lineCount > 6) {
+          continue;
+        }
         try {
           // Get sentence embedding using embeddingService
           const sentenceEmbedding = await embeddingService.getSentenceEmbedding(corpusName, sentence.sentence_id, part.part_number);
@@ -230,7 +243,7 @@ class ClientCounselService {
       corpusName: string;
     },
     queryEmbedding: number[],
-    enhancedKeywords: any[]
+    enhancedKeywords: EnhancedKeywordData[]
   ): Promise<{ lineNumber: number; score: number; text: string } | undefined> {
     
     let bestLine = null;
@@ -430,7 +443,7 @@ class ClientCounselService {
             sectionTitle: hymnsDetails.sectionTitle,
             lineDetails: hymnsDetails.lineDetails,
             semanticScore: hymnsMatch.score,
-            totalSentences: hymnsData.parts.reduce((total: number, part: any) => total + part.sentences.length, 0),
+            totalSentences: hymnsData.parts.reduce((total: number, part) => total + (part.sentences?.length || 0), 0),
             bestLine: hymnsBestLine,
             partNumber: hymnsDetails.partNumber,
             incense: hymnsDetails.incense ? {
@@ -445,7 +458,7 @@ class ClientCounselService {
             sectionTitle: argonauticaDetails.sectionTitle,
             lineDetails: argonauticaDetails.lineDetails,
             semanticScore: argonauticaMatch.score,
-            totalSentences: argonauticaData.parts.reduce((total: number, part: any) => total + part.sentences.length, 0),
+            totalSentences: argonauticaData.parts.reduce((total: number, part) => total + (part.sentences?.length || 0), 0),
             bestLine: argonauticaBestLine
           },
           lithica: {
@@ -455,7 +468,7 @@ class ClientCounselService {
             sectionTitle: lithicaDetails.sectionTitle,
             lineDetails: lithicaDetails.lineDetails,
             semanticScore: lithicaMatch.score,
-            totalSentences: lithicaData.parts.reduce((total: number, part: any) => total + part.sentences.length, 0),
+            totalSentences: lithicaData.parts.reduce((total: number, part) => total + (part.sentences?.length || 0), 0),
             bestLine: lithicaBestLine
           }
         }

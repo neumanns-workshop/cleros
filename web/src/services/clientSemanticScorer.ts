@@ -1,5 +1,6 @@
 import { embeddingService } from './embeddingService';
-
+import { EnrichedLineData } from '../types/corpus';
+import { OracleResponse, CounselResponse } from '../types/oracle';
 import { useState, useEffect } from 'react';
 
 export interface LineScore {
@@ -17,7 +18,11 @@ class ClientSemanticScorer {
     if (!this.queryEmbeddingCache.has(query)) {
       this.queryEmbeddingCache.set(query, embeddingService.getQueryEmbedding(query));
     }
-    return this.queryEmbeddingCache.get(query)!;
+    const cached = this.queryEmbeddingCache.get(query);
+    if (!cached) {
+      throw new Error(`Failed to get query embedding for: ${query}`);
+    }
+    return cached;
   }
 
 
@@ -36,7 +41,7 @@ class ClientSemanticScorer {
     return Math.min(totalBoost, 0.25);
   }
 
-  public async getSimilarity(corpus: string, lineData: any, query: string, keywords: string[]): Promise<number> {
+  public async getSimilarity(corpus: string, lineData: EnrichedLineData, query: string, keywords: string[]): Promise<number> {
     try {
       // Handle null/undefined lineData or header items
       if (!lineData || lineData.isHeader || lineData.isMarker || 
@@ -87,7 +92,7 @@ export const clientSemanticScorer = new ClientSemanticScorer();
 
 
 // React Hook for getting similarity score for a line
-export const useSemanticSimilarity = (corpus: string | undefined, lineData: any, oracleResponse: any | null) => {
+export const useSemanticSimilarity = (corpus: string | undefined, lineData: EnrichedLineData | null, oracleResponse: OracleResponse | CounselResponse | null) => {
   const [similarity, setSimilarity] = useState(0);
 
   useEffect(() => {

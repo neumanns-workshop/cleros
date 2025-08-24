@@ -1,6 +1,44 @@
 import { useState, useEffect } from 'react';
-import { AllCorpusData, CorpusData } from '../types/corpus';
+import { AllCorpusData, CorpusData, CorpusPart } from '../types/corpus';
 import { formatTitle } from '../utils/stringUtils';
+
+// Interface for raw JSON data from the API
+interface RawCorpusData {
+  metadata: {
+    name: string;
+    title: string;
+    description?: string;
+    total_parts?: number;
+    total_lines?: number;
+  };
+  parts: Array<{
+    part_number: number;
+    part_title: string;
+    key?: string | number;
+    incense?: string;
+    tablet_id?: string;
+    query_id?: string;
+    lines?: Array<{
+      line: number;
+      english: string;
+      greek?: string;
+      note?: string;
+    }>;
+    sentences?: Array<{
+      sentence_id: string;
+      text: {
+        english: string;
+        greek?: string;
+      };
+      line_details: Array<{
+        line: number;
+        english: string;
+        greek?: string;
+        note?: string;
+      }>;
+    }>;
+  }>;
+}
 
 export const useCorpusData = () => {
   const [corpusData, setCorpusData] = useState<AllCorpusData>({
@@ -68,9 +106,9 @@ export const useCorpusData = () => {
           papyrusQueries: papyrusQueriesData.parts?.length || 0
         });
 
-        const processCorpusData = (data: any): CorpusData => ({
+        const processCorpusData = (data: RawCorpusData): CorpusData => ({
           metadata: data.metadata,
-          parts: data.parts.map((part: any) => ({
+          parts: data.parts.map((part): CorpusPart => ({
             ...part,
             key: part.part_number,
             title_english: formatTitle(part.part_title)
@@ -83,7 +121,8 @@ export const useCorpusData = () => {
           lithica: processCorpusData(lithicaData),
           tablets: {
             metadata: tabletsData.metadata,
-            parts: tabletsData.parts.map((part: any) => ({
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            parts: (tabletsData.parts as any[]).map((part): CorpusPart => ({
               ...part,
               key: part.tablet_id || `tablet${part.part_number}`,
               title_english: part.part_title
@@ -91,7 +130,8 @@ export const useCorpusData = () => {
           },
           queries: {
             metadata: queriesData.metadata,
-            parts: queriesData.parts.map((part: any) => ({
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            parts: (queriesData.parts as any[]).map((part): CorpusPart => ({
               ...part,
               key: part.query_id || `query${part.part_number}`,
               title_english: part.part_title
@@ -99,7 +139,8 @@ export const useCorpusData = () => {
           },
           papyrusQueries: {
             metadata: papyrusQueriesData.metadata,
-            parts: papyrusQueriesData.parts.map((part: any) => ({
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            parts: (papyrusQueriesData.parts as any[]).map((part): CorpusPart => ({
               ...part,
               key: part.query_id || `query${part.part_number}`,
               title_english: part.part_title

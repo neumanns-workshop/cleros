@@ -1,8 +1,12 @@
 import { useState, useEffect } from 'react';
 import { ViewType, SearchMode } from '../types/app';
 import { OracleResponse, CounselResponse } from '../types/oracle';
+import { AllCorpusData, CorpusPart, SourceLink } from '../types/corpus';
 import { oracleService } from '../services/oracleService';
 import { counselService } from '../services/counselService';
+import { formatTitle } from '../utils/stringUtils';
+
+// Note: Raw corpus data structure is inferred from the JSON files
 
 export const useAppState = () => {
   // View state
@@ -30,12 +34,13 @@ export const useAppState = () => {
   const [personalCounselReports, setPersonalCounselReports] = useState<CounselResponse[]>([]);
   
   // Corpus data
-  const [corpusData, setCorpusData] = useState<any>({
+  const [corpusData, setCorpusData] = useState<AllCorpusData>({
     hymns: null,
     argonautica: null,
     lithica: null,
     tablets: null,
-    queries: null
+    queries: null,
+    papyrusQueries: null
   });
   const [loading, setLoading] = useState(true);
 
@@ -62,7 +67,8 @@ export const useAppState = () => {
 
     checkRandomOrg();
     loadPersonalReports();
-  }, []);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // searchMode intentionally excluded to prevent re-checking on mode changes
 
   // Load personal oracle and counsel reports from localStorage
   const loadPersonalReports = () => {
@@ -143,15 +149,17 @@ export const useAppState = () => {
         const processedData = {
           hymns: {
             metadata: hymnsData.metadata,
-            parts: hymnsData.parts.map((part: any) => ({
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            parts: (hymnsData.parts as any[]).map((part): CorpusPart => ({
               ...part,
               key: String(part.part_number),
-              title_english: part.part_title
+              title_english: formatTitle(part.part_title)
             }))
           },
           argonautica: {
             metadata: argonauticaData.metadata,
-            parts: argonauticaData.parts.map((part: any) => ({
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            parts: (argonauticaData.parts as any[]).map((part): CorpusPart => ({
               ...part,
               key: String(part.part_number),
               title_english: part.part_title
@@ -159,7 +167,8 @@ export const useAppState = () => {
           },
           lithica: {
             metadata: lithicaData.metadata,
-            parts: lithicaData.parts.map((part: any) => ({
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            parts: (lithicaData.parts as any[]).map((part): CorpusPart => ({
               ...part,
               key: String(part.part_number),
               title_english: part.part_title
@@ -167,7 +176,8 @@ export const useAppState = () => {
           },
           tablets: {
             metadata: tabletsData.metadata,
-            parts: tabletsData.parts.map((part: any) => ({
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            parts: (tabletsData.parts as any[]).map((part): CorpusPart => ({
               ...part,
               key: part.tablet_id || `tablet${part.part_number}`,
               title_english: part.part_title
@@ -175,7 +185,8 @@ export const useAppState = () => {
           },
           queries: {
             metadata: queriesData.metadata,
-            parts: queriesData.parts.map((part: any) => ({
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            parts: (queriesData.parts as any[]).map((part): CorpusPart => ({
               ...part,
               key: part.query_id || `query${part.part_number}`,
               title_english: part.part_title
@@ -183,7 +194,8 @@ export const useAppState = () => {
           },
           papyrusQueries: {
             metadata: papyrusQueriesData.metadata,
-            parts: papyrusQueriesData.parts.map((part: any) => ({
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            parts: (papyrusQueriesData.parts as any[]).map((part): CorpusPart => ({
               ...part,
               key: part.query_id || `query${part.part_number}`,
               title_english: part.part_title
@@ -203,18 +215,7 @@ export const useAppState = () => {
     loadAllCorpusData();
   }, []);
 
-  // Set default section after corpus data loads
-  useEffect(() => {
-    // Only set default if:
-    // 1. No section is selected
-    // 2. Data is loaded
-    // 3. We're viewing hymns (not navigating to another corpus)
-    // 4. We're not viewing personal reports
-    if (!selectedSection && !loading && selectedSource === 'hymns' && corpusData.hymns && corpusData.hymns.parts.length > 0) {
-      console.log('Defaulting to first hymns section');
-      setSelectedSection(corpusData.hymns.parts[0].key);
-    }
-  }, [loading, corpusData, selectedSection, selectedSource]);
+
 
   // Update currentOracleResponse and currentCounselResponse when switching to personal reports
   useEffect(() => {
@@ -253,7 +254,8 @@ export const useAppState = () => {
         setCurrentCounselResponse(null);
       }
     }
-  }, [selectedSource, selectedSection, personalOracleReports, personalCounselReports]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selectedSource, selectedSection, personalOracleReports, personalCounselReports]); // currentOracleResponse and currentCounselResponse intentionally excluded to prevent infinite loops
 
   // Handle search
   const handleSearch = async (query = searchQuery) => {
@@ -314,7 +316,7 @@ export const useAppState = () => {
   };
 
   // Navigate to source corpus location
-  const navigateToSource = (sourceLink: any) => {
+  const navigateToSource = (sourceLink: SourceLink) => {
     try {
       console.log('🔗 Navigating to source:', sourceLink);
       
@@ -328,7 +330,7 @@ export const useAppState = () => {
       } else if (sourceLink.sectionTitle && corpusData[sourceLink.corpus]) {
         // Fallback: find the part by matching sectionTitle
         const corpus = corpusData[sourceLink.corpus];
-        const part = corpus.parts?.find((p: any) => 
+        const part = corpus?.parts?.find((p: CorpusPart) => 
           p.title_english === sourceLink.sectionTitle || 
           p.title === sourceLink.sectionTitle ||
           p.part_title === sourceLink.sectionTitle

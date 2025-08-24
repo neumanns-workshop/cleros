@@ -25,7 +25,9 @@ class SynonymExpansionService {
 
   private async initializeWordNet(): Promise<void> {
     if (this.wordpos || this.isInitializing) {
-      return this.initializationPromise!;
+      if (this.initializationPromise) {
+        return this.initializationPromise;
+      }
     }
     
     this.isInitializing = true;
@@ -53,7 +55,10 @@ class SynonymExpansionService {
     const cacheKey = `${word}_${limit}`;
     
     if (this.synonymCache.has(cacheKey)) {
-      return this.synonymCache.get(cacheKey)!;
+      const cached = this.synonymCache.get(cacheKey);
+      if (cached) {
+        return cached;
+      }
     }
 
     // Always use fallback synonyms due to browser compatibility issues with WordPos

@@ -1,16 +1,17 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useCallback } from 'react';
 import { Header } from '../layout/Header';
 import { Footer } from '../layout/Footer';
 import ShareDialog from '../common/ShareDialog';
 import OracleLine from '../OracleLine';
 import { ViewType } from '../../types/app';
-import { OracleResponse, CounselResponse } from '../../types/oracle';
+import { OracleResponse, CounselResponse, OracleSelection, CounselSelection } from '../../types/oracle';
+import { AllCorpusData, EnrichedLineData, SourceLink, CorpusPart } from '../../types/corpus';
 import { formatTitle } from '../../utils/stringUtils';
 
 interface CorpusViewProps {
   currentView: ViewType;
   setCurrentView: (view: ViewType) => void;
-  corpusData: any;
+  corpusData: AllCorpusData;
   loading: boolean;
   selectedSource: string;
   setSelectedSource: (source: string) => void;
@@ -20,8 +21,8 @@ interface CorpusViewProps {
   currentCounselResponse: CounselResponse | null;
   personalOracleReports: OracleResponse[];
   personalCounselReports: CounselResponse[];
-  onNavigateToSource: (sourceLink: any) => void;
-  onLineClick: (line: any) => void;
+  onNavigateToSource: (sourceLink: SourceLink) => void;
+  onLineClick: (line: EnrichedLineData) => void;
 }
 
 export const CorpusView: React.FC<CorpusViewProps> = ({
@@ -40,12 +41,12 @@ export const CorpusView: React.FC<CorpusViewProps> = ({
   onNavigateToSource,
   onLineClick
 }) => {
-  const [selectedLine, setSelectedLine] = useState<any>(null);
+  const [selectedLine, setSelectedLine] = useState<EnrichedLineData | null>(null);
   const [showShareDialog, setShowShareDialog] = useState(false);
 
   // Format oracle or counsel report as lines for display
-  const formatReportAsLines = (report: OracleResponse | CounselResponse) => {
-    const lines = [];
+  const formatReportAsLines = (report: OracleResponse | CounselResponse): EnrichedLineData[] => {
+    const lines: EnrichedLineData[] = [];
 
     // Determine report type and source info
     const isOracle = 'randomSource' in report;
@@ -70,19 +71,22 @@ export const CorpusView: React.FC<CorpusViewProps> = ({
     // INVOCATION section
     if (report.selections.hymns) {
       const hymnsSelection = report.selections.hymns;
-      const selectionNote = isOracle 
-        ? `Random selection ${(hymnsSelection as any).randomIndex + 1} of ${hymnsSelection.totalSentences} sentences`
-        : `Semantic match: ${((hymnsSelection as any).semanticScore * 100).toFixed(1)}% relevance of ${hymnsSelection.totalSentences} sentences`;
+      const oracleSelection = hymnsSelection as OracleSelection;
+      const counselSelection = hymnsSelection as CounselSelection;
       
-      const bestLineInfo = !isOracle && (hymnsSelection as any).bestLine 
-        ? ` • Best line: ${(hymnsSelection as any).bestLine.lineNumber} (${((hymnsSelection as any).bestLine.score * 100).toFixed(1)}%)`
+      const selectionNote = isOracle 
+        ? `Random selection ${oracleSelection.randomIndex + 1} of ${hymnsSelection.totalSentences} sentences`
+        : `Semantic match: ${(counselSelection.semanticScore * 100).toFixed(1)}% relevance of ${hymnsSelection.totalSentences} sentences`;
+      
+      const bestLineInfo = !isOracle && counselSelection.bestLine 
+        ? ` • Best line: ${counselSelection.bestLine.lineNumber} (${(counselSelection.bestLine.score * 100).toFixed(1)}%)`
         : '';
       
       const hymnsTitle = hymnsSelection.incense
         ? `${hymnsSelection.source} • ${formatTitle(hymnsSelection.sectionTitle)} • ${hymnsSelection.incense.english}`
         : `${hymnsSelection.source} • ${formatTitle(hymnsSelection.sectionTitle)}`;
 
-              const partNumber = (hymnsSelection as any).partNumber;
+        const partNumber = hymnsSelection.partNumber;
         if (partNumber === undefined) {
           console.warn('⚠️ partNumber is undefined for hymns selection:', hymnsSelection);
         }
@@ -94,7 +98,7 @@ export const CorpusView: React.FC<CorpusViewProps> = ({
           isHeader: true,
           sourceLink: {
             corpus: 'hymns',
-            sentenceId: hymnsSelection.sentenceId,
+            sentenceId: hymnsSelection.sentenceId.toString(),
             sectionTitle: hymnsSelection.sectionTitle,
             key: partNumber !== undefined ? String(partNumber) : undefined
           }
@@ -102,21 +106,27 @@ export const CorpusView: React.FC<CorpusViewProps> = ({
 
       // Add each line from the sentence with original line numbers
       if (report.selections.hymns.lineDetails && report.selections.hymns.lineDetails.length > 0) {
-        report.selections.hymns.lineDetails.forEach((lineDetail: any) => {
+        report.selections.hymns.lineDetails.forEach((lineDetail) => {
+          const hymnsSelectionTyped = report.selections.hymns;
+          if (!hymnsSelectionTyped) return;
+          
+          const oracleHymns = hymnsSelectionTyped as OracleSelection;
+          const counselHymns = hymnsSelectionTyped as CounselSelection;
+          
           const lineNote = isOracle
-            ? `Line ${lineDetail.line} • Sentence ${report.selections.hymns!.sentenceId} • Random selection ${(report.selections.hymns as any).randomIndex + 1} of ${report.selections.hymns!.totalSentences}`
-            : `Line ${lineDetail.line} • Sentence ${report.selections.hymns!.sentenceId} • Semantic match: ${((report.selections.hymns as any).semanticScore * 100).toFixed(1)}% relevance`;
+            ? `Line ${lineDetail.line} • Sentence ${hymnsSelectionTyped.sentenceId} • Random selection ${oracleHymns.randomIndex + 1} of ${hymnsSelectionTyped.totalSentences}`
+            : `Line ${lineDetail.line} • Sentence ${hymnsSelectionTyped.sentenceId} • Semantic match: ${(counselHymns.semanticScore * 100).toFixed(1)}% relevance`;
           
           lines.push({
             ...lineDetail,
             note: lineDetail.note || lineNote,
-            part_number: (report.selections.hymns as any).partNumber,
-            sentence_id: report.selections.hymns!.sentenceId,
-            corpus_name: (report.selections.hymns as any).corpusName,
+            part_number: hymnsSelectionTyped.partNumber,
+            sentence_id: hymnsSelectionTyped.sentenceId.toString(),
+            corpus_name: hymnsSelectionTyped.corpusName,
             sourceLink: {
               corpus: 'hymns',
-              sentenceId: report.selections.hymns!.sentenceId,
-              sectionTitle: report.selections.hymns!.sectionTitle,
+              sentenceId: hymnsSelectionTyped.sentenceId.toString(),
+              sectionTitle: hymnsSelectionTyped.sectionTitle,
               lineNumber: lineDetail.line
             }
           });
@@ -127,45 +137,55 @@ export const CorpusView: React.FC<CorpusViewProps> = ({
     // NARRATIVE section (argonautica)
     if (report.selections.argonautica) {
       const argonauticaSelection = report.selections.argonautica;
-      const selectionNote = isOracle 
-        ? `Random selection ${(argonauticaSelection as any).randomIndex + 1} of ${argonauticaSelection.totalSentences} sentences`
-        : `Semantic match: ${((argonauticaSelection as any).semanticScore * 100).toFixed(1)}% relevance of ${argonauticaSelection.totalSentences} sentences`;
+      const oracleArg = argonauticaSelection as OracleSelection;
+      const counselArg = argonauticaSelection as CounselSelection;
       
-      const bestLineInfo = !isOracle && (argonauticaSelection as any).bestLine 
-        ? ` • Best line: ${(argonauticaSelection as any).bestLine.lineNumber} (${((argonauticaSelection as any).bestLine.score * 100).toFixed(1)}%)`
+      const selectionNote = isOracle 
+        ? `Random selection ${oracleArg.randomIndex + 1} of ${argonauticaSelection.totalSentences} sentences`
+        : `Semantic match: ${(counselArg.semanticScore * 100).toFixed(1)}% relevance of ${argonauticaSelection.totalSentences} sentences`;
+      
+      const bestLineInfo = !isOracle && counselArg.bestLine 
+        ? ` • Best line: ${counselArg.bestLine.lineNumber} (${(counselArg.bestLine.score * 100).toFixed(1)}%)`
         : '';
       
-      lines.push({
-        line: null,
-        english: `${argonauticaSelection.source} • ${formatTitle(argonauticaSelection.sectionTitle)}`,
-        note: selectionNote + bestLineInfo,
-        isHeader: true,
-        sourceLink: {
-          corpus: 'argonautica',
-          sentenceId: argonauticaSelection.sentenceId,
-          sectionTitle: argonauticaSelection.sectionTitle
-        }
-      });
+              lines.push({
+          line: null,
+          english: `${argonauticaSelection.source} • ${formatTitle(argonauticaSelection.sectionTitle)}`,
+          note: selectionNote + bestLineInfo,
+          isHeader: true,
+          sourceLink: {
+            corpus: 'argonautica',
+            sentenceId: argonauticaSelection.sentenceId.toString(),
+            sectionTitle: argonauticaSelection.sectionTitle,
+            key: argonauticaSelection.partNumber !== undefined ? String(argonauticaSelection.partNumber) : undefined
+          }
+        });
 
       // Add lines for argonautica
       if (report.selections.argonautica.lineDetails && report.selections.argonautica.lineDetails.length > 0) {
-        report.selections.argonautica.lineDetails.forEach((lineDetail: any) => {
+        report.selections.argonautica.lineDetails.forEach((lineDetail) => {
+          const argSelectionTyped = report.selections.argonautica;
+          if (!argSelectionTyped) return;
+          
+          const oracleArgTyped = argSelectionTyped as OracleSelection;
+          const counselArgTyped = argSelectionTyped as CounselSelection;
+          
           const lineNote = isOracle
-            ? `Line ${lineDetail.line} • Sentence ${report.selections.argonautica!.sentenceId} • Random selection ${(report.selections.argonautica as any).randomIndex + 1} of ${report.selections.argonautica!.totalSentences}`
-            : `Line ${lineDetail.line} • Sentence ${report.selections.argonautica!.sentenceId} • Semantic match: ${((report.selections.argonautica as any).semanticScore * 100).toFixed(1)}% relevance`;
+            ? `Line ${lineDetail.line} • Sentence ${argSelectionTyped.sentenceId} • Random selection ${oracleArgTyped.randomIndex + 1} of ${argSelectionTyped.totalSentences}`
+            : `Line ${lineDetail.line} • Sentence ${argSelectionTyped.sentenceId} • Semantic match: ${(counselArgTyped.semanticScore * 100).toFixed(1)}% relevance`;
           
           lines.push({
             ...lineDetail,
             note: lineDetail.note || lineNote,
-            part_number: (report.selections.argonautica as any).partNumber,
-            sentence_id: report.selections.argonautica!.sentenceId,
-            corpus_name: (report.selections.argonautica as any).corpusName,
+            part_number: argSelectionTyped.partNumber,
+            sentence_id: argSelectionTyped.sentenceId.toString(),
+            corpus_name: argSelectionTyped.corpusName,
             sourceLink: {
               corpus: 'argonautica',
-              sentenceId: report.selections.argonautica!.sentenceId,
-              sectionTitle: report.selections.argonautica!.sectionTitle,
+              sentenceId: argSelectionTyped.sentenceId.toString(),
+              sectionTitle: argSelectionTyped.sectionTitle,
               lineNumber: lineDetail.line,
-              key: (report.selections.argonautica as any).partNumber !== undefined ? String((report.selections.argonautica as any).partNumber) : undefined
+              key: argSelectionTyped.partNumber !== undefined ? String(argSelectionTyped.partNumber) : undefined
             }
           });
         });
@@ -175,12 +195,15 @@ export const CorpusView: React.FC<CorpusViewProps> = ({
     // PRAXIS section (lithica)
     if (report.selections.lithica) {
       const lithicaSelection = report.selections.lithica;
-      const selectionNote = isOracle 
-        ? `Random selection ${(lithicaSelection as any).randomIndex + 1} of ${lithicaSelection.totalSentences} sentences`
-        : `Semantic match: ${((lithicaSelection as any).semanticScore * 100).toFixed(1)}% relevance of ${lithicaSelection.totalSentences} sentences`;
+      const oracleLith = lithicaSelection as OracleSelection;
+      const counselLith = lithicaSelection as CounselSelection;
       
-      const bestLineInfo = !isOracle && (lithicaSelection as any).bestLine 
-        ? ` • Best line: ${(lithicaSelection as any).bestLine.lineNumber} (${((lithicaSelection as any).bestLine.score * 100).toFixed(1)}%)`
+      const selectionNote = isOracle 
+        ? `Random selection ${oracleLith.randomIndex + 1} of ${lithicaSelection.totalSentences} sentences`
+        : `Semantic match: ${(counselLith.semanticScore * 100).toFixed(1)}% relevance of ${lithicaSelection.totalSentences} sentences`;
+      
+      const bestLineInfo = !isOracle && counselLith.bestLine 
+        ? ` • Best line: ${counselLith.bestLine.lineNumber} (${(counselLith.bestLine.score * 100).toFixed(1)}%)`
         : '';
       
       lines.push({
@@ -190,30 +213,36 @@ export const CorpusView: React.FC<CorpusViewProps> = ({
         isHeader: true,
         sourceLink: {
           corpus: 'lithica',
-          sentenceId: lithicaSelection.sentenceId,
+          sentenceId: lithicaSelection.sentenceId.toString(),
           sectionTitle: lithicaSelection.sectionTitle
         }
       });
 
       // Add lines for lithica
       if (report.selections.lithica.lineDetails && report.selections.lithica.lineDetails.length > 0) {
-        report.selections.lithica.lineDetails.forEach((lineDetail: any) => {
+        report.selections.lithica.lineDetails.forEach((lineDetail) => {
+          const lithSelectionTyped = report.selections.lithica;
+          if (!lithSelectionTyped) return;
+          
+          const oracleLithTyped = lithSelectionTyped as OracleSelection;
+          const counselLithTyped = lithSelectionTyped as CounselSelection;
+          
           const lineNote = isOracle
-            ? `Line ${lineDetail.line} • Sentence ${report.selections.lithica!.sentenceId} • Random selection ${(report.selections.lithica as any).randomIndex + 1} of ${report.selections.lithica!.totalSentences}`
-            : `Line ${lineDetail.line} • Sentence ${report.selections.lithica!.sentenceId} • Semantic match: ${((report.selections.lithica as any).semanticScore * 100).toFixed(1)}% relevance`;
+            ? `Line ${lineDetail.line} • Sentence ${lithSelectionTyped.sentenceId} • Random selection ${oracleLithTyped.randomIndex + 1} of ${lithSelectionTyped.totalSentences}`
+            : `Line ${lineDetail.line} • Sentence ${lithSelectionTyped.sentenceId} • Semantic match: ${(counselLithTyped.semanticScore * 100).toFixed(1)}% relevance`;
           
           lines.push({
             ...lineDetail,
             note: lineDetail.note || lineNote,
-            part_number: (report.selections.lithica as any).partNumber,
-            sentence_id: report.selections.lithica!.sentenceId,
-            corpus_name: (report.selections.lithica as any).corpusName,
+            part_number: lithSelectionTyped.partNumber,
+            sentence_id: lithSelectionTyped.sentenceId.toString(),
+            corpus_name: lithSelectionTyped.corpusName,
             sourceLink: {
               corpus: 'lithica',
-              sentenceId: report.selections.lithica!.sentenceId,
-              sectionTitle: report.selections.lithica!.sectionTitle,
+              sentenceId: lithSelectionTyped.sentenceId.toString(),
+              sectionTitle: lithSelectionTyped.sectionTitle,
               lineNumber: lineDetail.line,
-              key: (report.selections.lithica as any).partNumber !== undefined ? String((report.selections.lithica as any).partNumber) : undefined
+              key: lithSelectionTyped.partNumber !== undefined ? String(lithSelectionTyped.partNumber) : undefined
             }
           });
         });
@@ -224,7 +253,7 @@ export const CorpusView: React.FC<CorpusViewProps> = ({
   };
 
   // Get current part data
-  const getCurrentPartData = () => {
+  const getCurrentPartData = useCallback(() => {
     if (selectedSource === 'personal') {
       if (selectedSection.startsWith('oracle_')) {
         const timestamp = parseInt(selectedSection.replace('oracle_', ''), 10);
@@ -246,11 +275,16 @@ export const CorpusView: React.FC<CorpusViewProps> = ({
     console.log(`📊 getCurrentPartData: source=${selectedSource}, section=${selectedSection}, sourceData available=${!!sourceData}`);
     
     if (sourceData && sourceData.parts) {
-      const part = sourceData.parts.find((s: any) => s.key === selectedSection);
-      console.log(`📄 Looking for part with key '${selectedSection}', found=${!!part}`);
+      // Handle empty selectedSection by using first part
+      if (!selectedSection) {
+        return [];
+      }
+      
+      const part = sourceData.parts.find((s: CorpusPart) => s.key === selectedSection);
+      console.log(`📄 Using selectedSection '${selectedSection}', found=${!!part}`);
       
       if (part) {
-        const lines: any[] = [];
+        const lines: EnrichedLineData[] = [];
         
         // Add part header
         const formattedTitle = formatTitle(part.part_title);
@@ -292,18 +326,18 @@ export const CorpusView: React.FC<CorpusViewProps> = ({
         return lines;
       } else {
         // Debug available parts when the requested section isn't found
-        const availableParts = sourceData.parts.map((p: any) => p.key).join(', ');
+        const availableParts = sourceData.parts.map((p: CorpusPart) => p.key).join(', ');
         console.log(`⚠️ Part '${selectedSection}' not found. Available parts: ${availableParts}`);
       }
     } else if (!sourceData) {
       console.log(`⚠️ No corpus data available for source '${selectedSource}'`);
     }
     return [];
-  };
+  }, [selectedSource, selectedSection, corpusData, personalOracleReports, personalCounselReports]);
 
   const currentLines = useMemo(() => {
     return getCurrentPartData();
-  }, [selectedSource, selectedSection, corpusData, personalOracleReports, personalCounselReports]);
+  }, [getCurrentPartData]);
 
   const handleSourceChange = (newSource: string) => {
     console.log(`📖 Source changed to: ${newSource}`);
@@ -327,7 +361,7 @@ export const CorpusView: React.FC<CorpusViewProps> = ({
       // For regular corpus data
       const newSourceData = corpusData[newSource as keyof typeof corpusData];
       if (newSourceData && newSourceData.parts && newSourceData.parts.length > 0) {
-        setSelectedSection(newSourceData.parts[0].key);
+        setSelectedSection(String(newSourceData.parts[0].key));
       } else {
         setSelectedSection('');
       }
@@ -339,12 +373,25 @@ export const CorpusView: React.FC<CorpusViewProps> = ({
     setSelectedSection(newSection);
   };
 
-  const handleLineClick = (line: any) => {
+  // Set selectedSection when switching sources or when corpus loads
+  React.useEffect(() => {
+    const sourceData = corpusData[selectedSource as keyof AllCorpusData];
+    if (sourceData?.parts && sourceData.parts.length > 0) {
+      if (sourceData?.parts?.[0]) {
+        const firstPartKey = sourceData.parts[0].key;
+        if (!selectedSection || selectedSource !== 'personal') {
+          setSelectedSection(String(firstPartKey));
+        }
+      }
+    }
+  }, [selectedSource, corpusData, selectedSection, setSelectedSection]);
+
+  const handleLineClick = (line: EnrichedLineData) => {
     setSelectedLine(line);
     onLineClick(line);
   };
 
-  const navigateToSource = (sourceLink: any) => {
+  const navigateToSource = (sourceLink: SourceLink) => {
     setSelectedLine(null);
     onNavigateToSource(sourceLink);
   };
@@ -392,7 +439,7 @@ export const CorpusView: React.FC<CorpusViewProps> = ({
                   </>
                 ) : (
                   // Use unified corpus structure - all parts have proper titles
-                  corpusData[selectedSource].parts.map((part: any) => (
+                  corpusData[selectedSource as keyof AllCorpusData]?.parts?.map((part: CorpusPart) => (
                     <option key={`${selectedSource}_${part.key}`} value={part.key}>
                       {part.title_english || part.title}
                     </option>
@@ -454,7 +501,7 @@ export const CorpusView: React.FC<CorpusViewProps> = ({
           ) : (
             <div className="line-display">
               {currentLines.length > 0 ? (
-                currentLines.map((lineData: any, index: number) => (
+                currentLines.map((lineData: EnrichedLineData, index: number) => (
                   <OracleLine
                     key={`${index}_${lineData.line}`}
                     lineData={lineData}
@@ -506,7 +553,7 @@ export const CorpusView: React.FC<CorpusViewProps> = ({
                   <div className="line-section">
                     <button 
                       className="source-button"
-                      onClick={() => navigateToSource(selectedLine.sourceLink)}
+                      onClick={() => selectedLine.sourceLink && navigateToSource(selectedLine.sourceLink)}
                     >
                       Go to {selectedLine.sourceLink.corpus.charAt(0).toUpperCase() + selectedLine.sourceLink.corpus.slice(1)}: {selectedLine.sourceLink.sectionTitle || `Line ${selectedLine.sourceLink.lineNumber}`}
                     </button>
@@ -518,7 +565,7 @@ export const CorpusView: React.FC<CorpusViewProps> = ({
         )}
       </div>
       
-      <Footer />
+      <Footer setCurrentView={setCurrentView} />
 
       {/* Share Dialog */}
       {(currentOracleResponse || currentCounselResponse) && (

@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
-import { HomeView, AboutView, CorpusView } from './components';
+import { HomeView, AboutView, CorpusView, PrivacyView, TermsView } from './components';
 import { useAppState } from './hooks/useAppState';
+import { EnrichedLineData } from './types/corpus';
 
 function App() {
   const {
@@ -38,7 +39,7 @@ function App() {
     handleSearch(queryText);
   };
 
-  const handleLineClick = (_line: any) => {
+  const handleLineClick = (_line: EnrichedLineData) => {
     // Line click handling is managed within the CorpusView component
   };
 
@@ -85,6 +86,24 @@ function App() {
         personalCounselReports={personalCounselReports}
         onNavigateToSource={navigateToSource}
         onLineClick={handleLineClick}
+      />
+    );
+  }
+
+  if (currentView === 'privacy') {
+    return (
+      <PrivacyView 
+        currentView={currentView} 
+        setCurrentView={setCurrentView} 
+      />
+    );
+  }
+
+  if (currentView === 'terms') {
+    return (
+      <TermsView 
+        currentView={currentView} 
+        setCurrentView={setCurrentView} 
       />
     );
   }

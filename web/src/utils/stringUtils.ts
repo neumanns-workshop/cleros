@@ -22,18 +22,34 @@ export const formatTitle = (title: string): string => {
   // 1. Remove trailing period
   const trimmedTitle = title.trim().replace(/\.$/, '');
 
-  // 2. Capitalize first letter of each word, handling parentheses
+  // Articles and prepositions that should be lowercase (except when first word)
+  const lowercaseArticles = new Set(['the', 'of', 'to', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'by', 'for', 'with', 'from']);
+
+  // 2. Capitalize first letter of each word, handling parentheses and articles
   const titleCased = trimmedTitle
     .split(' ')
-    .map(word => {
+    .map((word, index) => {
+        const isFirstWord = index === 0;
+        
         if (word.startsWith('(')) {
-            return '(' + word.charAt(1).toUpperCase() + word.slice(2).toLowerCase();
+            const innerWord = word.slice(1);
+            const shouldCapitalize = isFirstWord || !lowercaseArticles.has(innerWord.toLowerCase());
+            return '(' + (shouldCapitalize ? 
+                innerWord.charAt(0).toUpperCase() + innerWord.slice(1).toLowerCase() :
+                innerWord.toLowerCase());
         }
+        
         // Preserve case for Roman numerals (e.g., I, V, X)
         if (/^[IVXLC]+$/.test(word)) {
             return word.toUpperCase();
         }
-        return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+        
+        // First word is always capitalized, articles are lowercase unless first
+        if (isFirstWord || !lowercaseArticles.has(word.toLowerCase())) {
+            return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+        } else {
+            return word.toLowerCase();
+        }
     })
     .join(' ');
 

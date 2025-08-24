@@ -73,6 +73,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
     }, 15000);
     
     return () => clearInterval(interval);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []); // Remove currentIndex dependency to prevent restarting the interval
 
   const handleAncientQueryClick = () => {
@@ -83,35 +84,32 @@ export const HomeView: React.FC<HomeViewProps> = ({
     <div className="app">
       <Header currentView={currentView} setCurrentView={setCurrentView} />
       <main className="main-content">
-        <div className="intro-text">
-          <p>
-            {searchMode === 'oracle' 
-              ? 'Divine guidance (true random)'
-              : 'Mortal advice (semantic)'
-            }
-            {isRandomOrgAvailable === false && (
-              <span style={{ color: '#ff6b6b', fontSize: '0.9em', display: 'block' }}>
-                ⚠️ Oracle mode disabled: True randomness required
-              </span>
-            )}
-          </p>
-        </div>
         <ModeSwitcher 
           searchMode={searchMode}
           setSearchMode={setSearchMode}
           isRandomOrgAvailable={isRandomOrgAvailable}
         />
+        {isRandomOrgAvailable === false && (
+          <div className="intro-text">
+            <p>
+              <span style={{ color: '#ff6b6b', fontSize: '0.9em', display: 'block' }}>
+                ⚠️ Oracle mode disabled: True randomness required
+              </span>
+            </p>
+          </div>
+        )}
         <ConsultationForm
           searchQuery={searchQuery}
           setSearchQuery={setSearchQuery}
           onSubmit={onSubmit}
+          searchMode={searchMode}
         />
         <AncientQueryCarousel
           displayedText={displayedText}
           onQueryClick={handleAncientQueryClick}
         />
       </main>
-      <Footer />
+      <Footer setCurrentView={setCurrentView} />
       {isGenerating && (
         <LoadingOverlay 
           isGeneratingOracle={searchMode === 'oracle'}

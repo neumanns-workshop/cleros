@@ -4,15 +4,9 @@
  */
 
 import { embeddingService } from './embeddingService';
-import { synonymExpansionService } from './synonymExpansionService';
+import { synonymExpansionService, EnhancedKeywordData } from './synonymExpansionService';
 import { ShareableOption } from '../types/oracle';
-
-export interface LineDetail {
-  line: number;
-  english: string;
-  greek?: string;
-  note?: string;
-}
+import { LineDetail } from '../types/corpus';
 
 export interface BestLineResult {
   lineNumber: number;
@@ -41,7 +35,7 @@ export class SemanticLineRanker {
   /**
    * Calculate enhanced keyword boost using pre-expanded keywords
    */
-  private calculateEnhancedKeywordBoost(lineText: string, enhancedKeywords: any[]): number {
+  private calculateEnhancedKeywordBoost(lineText: string, enhancedKeywords: EnhancedKeywordData[]): number {
     if (!enhancedKeywords || enhancedKeywords.length === 0) return 0;
 
     let totalBoost = 0;
@@ -56,8 +50,8 @@ export class SemanticLineRanker {
       // Check synonym matches
       if (keywordObj.synonyms && Array.isArray(keywordObj.synonyms)) {
         for (const synonym of keywordObj.synonyms) {
-          if (synonym.term && lowerLineText.includes(synonym.term.toLowerCase())) {
-            totalBoost += synonym.weight || 0.05;
+          if (synonym && lowerLineText.includes(synonym.toLowerCase())) {
+            totalBoost += keywordObj.synonymWeight || 0.05;
           }
         }
       }
@@ -92,7 +86,7 @@ export class SemanticLineRanker {
   async findBestLineInPassage(
     passageData: PassageLineData,
     queryEmbedding: number[],
-    enhancedKeywords?: any[], // Enhanced keywords from synonym expansion
+    enhancedKeywords?: EnhancedKeywordData[], // Enhanced keywords from synonym expansion
     basicKeywords?: string[]  // Fallback basic keywords
   ): Promise<BestLineResult | undefined> {
     
@@ -191,7 +185,7 @@ export class SemanticLineRanker {
   /**
    * Get enhanced keywords using synonym expansion (for more sophisticated analysis)
    */
-  async getEnhancedKeywords(query: string): Promise<any[]> {
+  async getEnhancedKeywords(query: string): Promise<EnhancedKeywordData[]> {
     const basicKeywords = this.extractKeywords(query);
     
     return await synonymExpansionService.expandKeywords(
@@ -342,7 +336,7 @@ export class SemanticLineRanker {
     };
   }>> {
     
-    const shareableOptions: Array<any> = [];
+    const shareableOptions: ShareableOption[] = [];
 
     // 1. Add valid sentences (≤5 lines)
     for (const selection of oracleSelections) {

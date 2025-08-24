@@ -8,8 +8,7 @@ export default defineConfig({
   plugins: [react()],
   test: {
     globals: true,
-    environment: 'jsdom',
-    setupFiles: './src/test/setup.ts'
+    environment: 'jsdom'
   },
   resolve: {
     alias: {
@@ -27,8 +26,7 @@ export default defineConfig({
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
-          transformers: ['@xenova/transformers'],
-          motion: ['framer-motion']
+          transformers: ['@xenova/transformers']
         }
       }
     }

@@ -1,5 +1,5 @@
-import { OracleResponse, CounselResponse } from '../types/oracle';
-import { EnrichedLineData, AllCorpusData } from '../types/corpus';
+import { OracleResponse, CounselResponse, OracleSelection, CounselSelection } from '../types/oracle';
+import { EnrichedLineData, AllCorpusData, LineDetail } from '../types/corpus';
 import { formatTitle } from './stringUtils';
 
 // Helper function to enrich line data with corpus information
@@ -8,7 +8,7 @@ export const enrichLineData = (lineNumber: number, corpusName: string, basicEngl
   if (sourceData && sourceData.parts) {
     // Find the line in the corpus data
     for (const part of sourceData.parts) {
-      const foundLine = part.lines?.find((l: any) => l.line === lineNumber);
+      const foundLine = part.lines?.find((l: LineDetail) => l.line === lineNumber);
       if (foundLine) {
         return {
           line: lineNumber,
@@ -42,7 +42,7 @@ export const formatReportAsLines = (
   
   // QUERY section header (no line number)
   lines.push({
-    line: null as any,
+    line: 0,
     english: `QUERY (${mode})`,
     note: `Generated ${new Date(report.timestamp).toLocaleString()} via ${source}`,
     isHeader: true
@@ -58,16 +58,19 @@ export const formatReportAsLines = (
   // INVOCATION section
   if (report.selections.hymns) {
     const hymnsSelection = report.selections.hymns;
-    const selectionNote = isOracle 
-      ? `Random selection ${(hymnsSelection as any).randomIndex + 1} of ${hymnsSelection.totalSentences} sentences`
-      : `Semantic match: ${((hymnsSelection as any).semanticScore * 100).toFixed(1)}% relevance of ${hymnsSelection.totalSentences} sentences`;
+    const oracleHymns = hymnsSelection as OracleSelection;
+    const counselHymns = hymnsSelection as CounselSelection;
     
-    const bestLineInfo = !isOracle && (hymnsSelection as any).bestLine 
-      ? ` • Best line: ${(hymnsSelection as any).bestLine.lineNumber} (${((hymnsSelection as any).bestLine.score * 100).toFixed(1)}%)`
+    const selectionNote = isOracle 
+      ? `Random selection ${oracleHymns.randomIndex + 1} of ${hymnsSelection.totalSentences} sentences`
+      : `Semantic match: ${(counselHymns.semanticScore * 100).toFixed(1)}% relevance of ${hymnsSelection.totalSentences} sentences`;
+    
+    const bestLineInfo = !isOracle && counselHymns.bestLine 
+      ? ` • Best line: ${counselHymns.bestLine.lineNumber} (${(counselHymns.bestLine.score * 100).toFixed(1)}%)`
       : '';
     
     lines.push({
-      line: null as any,
+      line: 0,
       english: `INVOCATION • ${hymnsSelection.source} • ${formatTitle(hymnsSelection.sectionTitle)}`,
       note: selectionNote + bestLineInfo,
       isHeader: true,
@@ -75,27 +78,33 @@ export const formatReportAsLines = (
         corpus: 'hymns',
         sentenceId: hymnsSelection.sentenceId.toString(),
         sectionTitle: hymnsSelection.sectionTitle,
-        key: (hymnsSelection as any).partNumber
+        key: hymnsSelection.partNumber
       }
     });
 
     // Add each line from the sentence with original line numbers
     if (report.selections.hymns.lineDetails && report.selections.hymns.lineDetails.length > 0) {
-      report.selections.hymns.lineDetails.forEach((lineDetail: any) => {
+      report.selections.hymns.lineDetails.forEach((lineDetail) => {
+        const hymnsSelectionTyped = report.selections.hymns;
+        if (!hymnsSelectionTyped) return;
+        
+        const oracleHymnsTyped = hymnsSelectionTyped as OracleSelection;
+        const counselHymnsTyped = hymnsSelectionTyped as CounselSelection;
+        
         const lineNote = isOracle
-          ? `Line ${lineDetail.line} • Sentence ${report.selections.hymns!.sentenceId} • Random selection ${(report.selections.hymns as any).randomIndex + 1} of ${report.selections.hymns!.totalSentences}`
-          : `Line ${lineDetail.line} • Sentence ${report.selections.hymns!.sentenceId} • Semantic match: ${((report.selections.hymns as any).semanticScore * 100).toFixed(1)}% relevance`;
+          ? `Line ${lineDetail.line} • Sentence ${hymnsSelectionTyped.sentenceId} • Random selection ${oracleHymnsTyped.randomIndex + 1} of ${hymnsSelectionTyped.totalSentences}`
+          : `Line ${lineDetail.line} • Sentence ${hymnsSelectionTyped.sentenceId} • Semantic match: ${(counselHymnsTyped.semanticScore * 100).toFixed(1)}% relevance`;
         
         lines.push({
           ...enrichLineData(lineDetail.line, 'hymns', lineDetail.english, corpusData),
           note: lineDetail.note || lineNote,
-          part_number: (report.selections.hymns as any).partNumber,
-          sentence_id: report.selections.hymns!.sentenceId.toString(),
-          corpus_name: (report.selections.hymns as any).corpusName,
+          part_number: hymnsSelectionTyped.partNumber,
+          sentence_id: hymnsSelectionTyped.sentenceId.toString(),
+          corpus_name: hymnsSelectionTyped.corpusName,
           sourceLink: {
             corpus: 'hymns',
-            sentenceId: report.selections.hymns!.sentenceId.toString(),
-            sectionTitle: report.selections.hymns!.sectionTitle,
+            sentenceId: hymnsSelectionTyped.sentenceId.toString(),
+            sectionTitle: hymnsSelectionTyped.sectionTitle,
             lineNumber: lineDetail.line
           }
         });

@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 
 interface UseTypewriterOptions {
   text: string;
@@ -27,7 +27,7 @@ export const useTypewriter = ({
   const isActiveRef = useRef(true);
 
   // Calculate typing delay based on character
-  const getTypingDelay = (char: string): number => {
+  const getTypingDelay = useCallback((char: string): number => {
     if (char === '.' || char === '?' || char === '!' || char === ':' || char === ';') {
       return 300; // Longer pause after sentence endings
     } else if (char === ',' || char === '—' || char === '-') {
@@ -38,10 +38,10 @@ export const useTypewriter = ({
       // Slight randomization for human-like typing
       return speed + Math.random() * 40;
     }
-  };
+  }, [speed]);
 
   // Start the typewriter effect
-  const startTyping = () => {
+  const startTyping = useCallback(() => {
     if (!isActiveRef.current) return;
     
     const fullText = `"${text}"`;
@@ -75,7 +75,8 @@ export const useTypewriter = ({
     
     // Start after initial delay
     timeoutRef.current = setTimeout(typeNextChar, startDelay);
-  };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [text, speed, startDelay, getTypingDelay]); // getTypingDelay depends on speed, so it's correctly included
 
   // Reset function
   const reset = () => {
@@ -100,7 +101,7 @@ export const useTypewriter = ({
         timeoutRef.current = null;
       }
     };
-  }, [text]);
+  }, [text, startTyping]);
 
   // Cleanup on unmount
   useEffect(() => {

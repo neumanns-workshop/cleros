@@ -1,4 +1,4 @@
-export type ViewType = 'home' | 'corpus' | 'about';
+export type ViewType = 'home' | 'corpus' | 'about' | 'privacy' | 'terms';
 
 export type SearchMode = 'oracle' | 'sage';
 

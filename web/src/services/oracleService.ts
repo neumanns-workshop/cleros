@@ -4,24 +4,19 @@
  */
 
 import { OracleResponse } from '../types/oracle';
+import { LineDetail } from '../types/corpus';
 
 // OracleResponse and OracleSelection interfaces moved to types/oracle.ts - import from there
-
-export interface LineDetail {
-  line: number;
-  english: string;
-  greek?: string;
-  note?: string;
-}
 
 export interface CorpusData {
   title: string;
   sections: Section[];
-  parts: any[]; // Corpus parts structure
+  parts: CorpusPart[]; // Corpus parts structure
 }
 
 export interface Section {
   title: string;
+  title_english?: string;
   type: string;
   part_number?: number;
   sentences?: Sentence[];
@@ -36,10 +31,20 @@ export interface Sentence {
     greek?: string;
   };
   line_details: LineDetail[];
+  line_count?: number;
 }
 
-import { semanticLineRanker } from './semanticLineRanker';
-import { embeddingService } from './embeddingService';
+export interface CorpusPart {
+  part_number: number;
+  part_title: string;
+  part_type?: string;
+  sentence_count?: number;
+  sentences: Sentence[];
+  incense?: string;
+  incense_greek?: string;
+}
+
+// Oracle mode uses pure randomness - no semantic analysis needed
 
 class ClientOracleService {
   private corpusCache: Map<string, CorpusData> = new Map();
@@ -71,7 +76,10 @@ class ClientOracleService {
    */
   async loadCorpusData(corpusName: string): Promise<CorpusData> {
     if (this.corpusCache.has(corpusName)) {
-      return this.corpusCache.get(corpusName)!;
+      const cached = this.corpusCache.get(corpusName);
+      if (cached) {
+        return cached;
+      }
     }
 
     const fileMap = {
@@ -158,43 +166,110 @@ class ClientOracleService {
 
     /**
    * Select random sentences from all three corpora using random.org
+   * Filters data for bibliomancy: excludes proems/appendices, includes single-sentence parts,
+   * and for multi-sentence parts only includes sentences <= 6 lines
    */
   private async selectRandomSentences(hymnsCorpus: CorpusData, argonauticaCorpus: CorpusData, lithicaCorpus: CorpusData): Promise<{
     hymns: { sentence: Sentence; section: Section; index: number; total: number };
     argonautica: { sentence: Sentence; section: Section; index: number; total: number };
     lithica: { sentence: Sentence; section: Section; index: number; total: number };
   }> {
-    // Collect all sentences from each corpus - oracle mode includes everything including proem and appendix
+    // Collect sentences from each corpus with bibliomancy filtering
     const hymnsAllSentences: Array<{ sentence: Sentence; section: Section }> = [];
     const argonauticaAllSentences: Array<{ sentence: Sentence; section: Section }> = [];
     const lithicaAllSentences: Array<{ sentence: Sentence; section: Section }> = [];
 
-    hymnsCorpus.parts.forEach((part: any) => {
-      // Oracle mode includes ALL parts including proem (0), cosmogonic hymn (1), and appendix (88)
-      part.sentences.forEach((sentence: any) => {
-        hymnsAllSentences.push({ 
-          sentence, 
-          section: { 
-            title: part.part_title, 
-            type: part.part_type,
-            part_number: part.part_number,
-            incense: part.incense,
-            incense_greek: part.incense_greek
+    hymnsCorpus.parts.forEach((part: CorpusPart) => {
+      // Filter 1: Exclude proems and appendices (only if part_type is defined)
+      if (part.part_type && (part.part_type === 'proem' || part.part_type === 'appendix')) {
+        return;
+      }
+
+      // Handle parts that might not have all metadata (like test data)
+      const sentenceCount = part.sentence_count || (part.sentences ? part.sentences.length : 0);
+
+      // Filter 2: If part has only 1 sentence, include it regardless of line count
+      if (sentenceCount === 1) {
+        part.sentences.forEach((sentence: Sentence) => {
+          hymnsAllSentences.push({ 
+            sentence, 
+            section: { 
+              title: part.part_title || 'Unknown Section', 
+              type: part.part_type || 'section',
+              part_number: part.part_number,
+              incense: part.incense,
+              incense_greek: part.incense_greek
+            }
+          });
+        });
+      } else {
+        // Filter 3: For multi-sentence parts, only include sentences <= 6 lines
+        part.sentences.forEach((sentence: Sentence) => {
+          const lineCount = sentence.line_count || (sentence.line_details ? sentence.line_details.length : 1);
+          if (lineCount <= 6) {
+            hymnsAllSentences.push({ 
+              sentence, 
+              section: { 
+                title: part.part_title || 'Unknown Section', 
+                type: part.part_type || 'section',
+                part_number: part.part_number,
+                incense: part.incense,
+                incense_greek: part.incense_greek
+              }
+            });
           }
         });
-      });
+      }
     });
 
-    argonauticaCorpus.parts.forEach((part: any) => {
-      part.sentences.forEach((sentence: any) => {
-        argonauticaAllSentences.push({ sentence, section: { title: part.part_title, type: part.part_type } });
-      });
+    argonauticaCorpus.parts.forEach((part: CorpusPart) => {
+      // Filter 1: Exclude proems and appendices (only if part_type is defined)
+      if (part.part_type && (part.part_type === 'proem' || part.part_type === 'appendix')) {
+        return;
+      }
+
+      // Handle parts that might not have all metadata (like test data)
+      const sentenceCount = part.sentence_count || (part.sentences ? part.sentences.length : 0);
+
+      // Filter 2: If part has only 1 sentence, include it regardless of line count
+      if (sentenceCount === 1) {
+        part.sentences.forEach((sentence: Sentence) => {
+          argonauticaAllSentences.push({ sentence, section: { title: part.part_title || 'Unknown Section', type: part.part_type || 'section' } });
+        });
+      } else {
+        // Filter 3: For multi-sentence parts, only include sentences <= 6 lines
+        part.sentences.forEach((sentence: Sentence) => {
+          const lineCount = sentence.line_count || (sentence.line_details ? sentence.line_details.length : 1);
+          if (lineCount <= 6) {
+            argonauticaAllSentences.push({ sentence, section: { title: part.part_title || 'Unknown Section', type: part.part_type || 'section' } });
+          }
+        });
+      }
     });
 
-    lithicaCorpus.parts.forEach((part: any) => {
-      part.sentences.forEach((sentence: any) => {
-        lithicaAllSentences.push({ sentence, section: { title: part.part_title, type: part.part_type } });
-      });
+    lithicaCorpus.parts.forEach((part: CorpusPart) => {
+      // Filter 1: Exclude proems and appendices (only if part_type is defined)
+      if (part.part_type && (part.part_type === 'proem' || part.part_type === 'appendix')) {
+        return;
+      }
+
+      // Handle parts that might not have all metadata (like test data)
+      const sentenceCount = part.sentence_count || (part.sentences ? part.sentences.length : 0);
+
+      // Filter 2: If part has only 1 sentence, include it regardless of line count
+      if (sentenceCount === 1) {
+        part.sentences.forEach((sentence: Sentence) => {
+          lithicaAllSentences.push({ sentence, section: { title: part.part_title || 'Unknown Section', type: part.part_type || 'section' } });
+        });
+      } else {
+        // Filter 3: For multi-sentence parts, only include sentences <= 6 lines
+        part.sentences.forEach((sentence: Sentence) => {
+          const lineCount = sentence.line_count || (sentence.line_details ? sentence.line_details.length : 1);
+          if (lineCount <= 6) {
+            lithicaAllSentences.push({ sentence, section: { title: part.part_title || 'Unknown Section', type: part.part_type || 'section' } });
+          }
+        });
+      }
     });
 
     if (hymnsAllSentences.length === 0 || argonauticaAllSentences.length === 0 || lithicaAllSentences.length === 0) {
@@ -263,7 +338,7 @@ class ClientOracleService {
 
 
   /**
-   * Generate complete oracle response
+   * Generate complete oracle response using pure randomness
    */
   async generateOracleResponse(query: string): Promise<OracleResponse> {
     console.log('🔮 Generating oracle response for:', query);
@@ -282,95 +357,67 @@ class ClientOracleService {
       // Extract keywords for display purposes only (no semantic analysis)
       const keywords = this.extractKeywords(query);
 
-      // SEMANTIC LINE RANKING - Add post-processing to find best lines within randomly selected passages
-      // Get query embedding for semantic analysis
-      const queryEmbedding = await embeddingService.getQueryEmbedding(query);
-      
-      // Find best line in each randomly selected passage
-      const [hymnsBestLine, argonauticaBestLine, lithicaBestLine] = await Promise.all([
-        semanticLineRanker.findBestLineInPassage({
-          lineDetails: selections.hymns.sentence.line_details,
-          sectionTitle: (selections.hymns.section as any).title_english || selections.hymns.section.title,
-          partNumber: selections.hymns.section.part_number || 0,
-          sentenceId: selections.hymns.sentence.sentence_id,
-          corpusName: 'hymns'
-        }, queryEmbedding, undefined, keywords),
-        
-        semanticLineRanker.findBestLineInPassage({
-          lineDetails: selections.argonautica.sentence.line_details,
-          sectionTitle: (selections.argonautica.section as any).title_english || selections.argonautica.section.title,
-          partNumber: selections.argonautica.section.part_number || 0,
-          sentenceId: selections.argonautica.sentence.sentence_id,
-          corpusName: 'argonautica'
-        }, queryEmbedding, undefined, keywords),
-        
-        semanticLineRanker.findBestLineInPassage({
-          lineDetails: selections.lithica.sentence.line_details,
-          sectionTitle: (selections.lithica.section as any).title_english || selections.lithica.section.title,
-          partNumber: selections.lithica.section.part_number || 0,
-          sentenceId: selections.lithica.sentence.sentence_id,
-          corpusName: 'lithica'
-        }, queryEmbedding, undefined, keywords)
-      ]);
-
-      // Find overall best line across all selections for shareable card default
-      const overallBestLine = semanticLineRanker.findOverallBestLine([
-        { corpus: 'hymns' as const, bestLine: hymnsBestLine },
-        { corpus: 'argonautica' as const, bestLine: argonauticaBestLine },
-        { corpus: 'lithica' as const, bestLine: lithicaBestLine }
-      ]);
-
-      // Generate all shareable options for the share dialog carousel
-      const shareableOptions = await semanticLineRanker.generateAllShareableOptions([
+      // Create simple shareable options from the 3 random sentences
+      const shareableOptions = [
         {
-          corpus: 'hymns',
-          sentenceId: selections.hymns.sentence.sentence_id,
-          text: selections.hymns.sentence.text.english,
-          lineDetails: selections.hymns.sentence.line_details,
-          sectionTitle: (selections.hymns.section as any).title_english || selections.hymns.section.title,
-          bestLine: hymnsBestLine,
-          incense: selections.hymns.section.incense ? {
-            english: selections.hymns.section.incense,
-            greek: selections.hymns.section.incense_greek
-          } : undefined
+          id: `sentence-hymns-${selections.hymns.sentence.sentence_id}`,
+          type: 'sentence' as const,
+          corpus: 'hymns' as const,
+          score: 1, // All options equal in Oracle mode (pure random)
+          content: {
+            text: selections.hymns.sentence.text.english,
+            sectionTitle: selections.hymns.section.title_english || selections.hymns.section.title,
+            greek: selections.hymns.sentence.text.greek,
+            source: 'Orphic Hymns',
+            incense: selections.hymns.section.incense ? {
+              english: selections.hymns.section.incense,
+              greek: selections.hymns.section.incense_greek
+            } : undefined
+          }
         },
         {
-          corpus: 'argonautica',
-          sentenceId: selections.argonautica.sentence.sentence_id,
-          text: selections.argonautica.sentence.text.english,
-          lineDetails: selections.argonautica.sentence.line_details,
-          sectionTitle: (selections.argonautica.section as any).title_english || selections.argonautica.section.title,
-          bestLine: argonauticaBestLine
+          id: `sentence-argonautica-${selections.argonautica.sentence.sentence_id}`,
+          type: 'sentence' as const,
+          corpus: 'argonautica' as const,
+          score: 1,
+          content: {
+            text: selections.argonautica.sentence.text.english,
+            sectionTitle: selections.argonautica.section.title_english || selections.argonautica.section.title,
+            greek: selections.argonautica.sentence.text.greek,
+            source: 'Orphic Argonautica'
+          }
         },
         {
-          corpus: 'lithica',
-          sentenceId: selections.lithica.sentence.sentence_id,
-          text: selections.lithica.sentence.text.english,
-          lineDetails: selections.lithica.sentence.line_details,
-          sectionTitle: (selections.lithica.section as any).title_english || selections.lithica.section.title,
-          bestLine: lithicaBestLine
+          id: `sentence-lithica-${selections.lithica.sentence.sentence_id}`,
+          type: 'sentence' as const,
+          corpus: 'lithica' as const,
+          score: 1,
+          content: {
+            text: selections.lithica.sentence.text.english,
+            sectionTitle: selections.lithica.section.title_english || selections.lithica.section.title,
+            greek: selections.lithica.sentence.text.greek,
+            source: 'Orphic Lithica'
+          }
         }
-      ], queryEmbedding, keywords);
+      ];
 
-      // Build oracle response - only possible with true random.org
+      // Build oracle response - pure randomness, no semantic analysis
       const response: OracleResponse = {
         timestamp: Date.now(),
         query,
         randomSource: 'random.org',
         keywords,
         shareableOptions,
-        overallBestLine,
         selections: {
           hymns: {
             source: 'Hymns',
             sentenceId: selections.hymns.sentence.sentence_id,
             text: selections.hymns.sentence.text,
-            sectionTitle: (selections.hymns.section as any).title_english || selections.hymns.section.title,
+            sectionTitle: selections.hymns.section.title_english || selections.hymns.section.title,
             lineDetails: selections.hymns.sentence.line_details,
             randomIndex: selections.hymns.index,
             totalSentences: selections.hymns.total,
             partNumber: selections.hymns.section.part_number || 0,
-            bestLine: hymnsBestLine,
             incense: selections.hymns.section.incense ? {
               english: selections.hymns.section.incense,
               greek: selections.hymns.section.incense_greek
@@ -380,21 +427,19 @@ class ClientOracleService {
             source: 'Argonautica',
             sentenceId: selections.argonautica.sentence.sentence_id,
             text: selections.argonautica.sentence.text,
-            sectionTitle: (selections.argonautica.section as any).title_english || selections.argonautica.section.title,
+            sectionTitle: selections.argonautica.section.title_english || selections.argonautica.section.title,
             lineDetails: selections.argonautica.sentence.line_details,
             randomIndex: selections.argonautica.index,
-            totalSentences: selections.argonautica.total,
-            bestLine: argonauticaBestLine
+            totalSentences: selections.argonautica.total
           },
           lithica: {
             source: 'Lithica',
             sentenceId: selections.lithica.sentence.sentence_id,
             text: selections.lithica.sentence.text,
-            sectionTitle: (selections.lithica.section as any).title_english || selections.lithica.section.title,
+            sectionTitle: selections.lithica.section.title_english || selections.lithica.section.title,
             lineDetails: selections.lithica.sentence.line_details,
             randomIndex: selections.lithica.index,
-            totalSentences: selections.lithica.total,
-            bestLine: lithicaBestLine
+            totalSentences: selections.lithica.total
           }
         }
       };
