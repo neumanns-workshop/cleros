@@ -109,152 +109,79 @@ class ClientOracleService {
   }
 
   /**
-   * Get truly random numbers from random.org JSON-RPC API with authentication
+   * Get truly random numbers via secure Netlify function
    * Oracle divination requires true randomness or nothing.
    */
   private async getTrueRandomNumbers(min: number[], max: number[]): Promise<number[]> {
     try {
-      const apiKey = import.meta.env.RANDOMORG_API_KEY;
-      if (!apiKey) {
-        throw new Error('Random.org API key not configured');
-      }
-
-      const url = import.meta.env.RANDOMORG_API_ENDPOINT;
-      if (!url) {
-        throw new Error('Random.org API endpoint not configured');
-      }
-      
-      // Create individual requests for each range (JSON-RPC API handles ranges differently)
-      const requests = min.map((minVal, i) => ({
-        jsonrpc: '2.0',
-        method: 'generateIntegers',
-        params: {
-          apiKey: apiKey,
-          n: 1,
-          min: minVal,
-          max: max[i],
-          replacement: true,
-          base: 10
-        },
-        id: i + 1
-      }));
-
-      const response = await fetch(url, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(requests[0]) // For simplicity, make one request at a time
-      });
-
-      if (!response.ok) {
-        throw new Error(`Random.org HTTP error: ${response.status}`);
-      }
-      
-      const data = await response.json();
-      
-      if (data.error) {
-        throw new Error(`Random.org API error: ${data.error.message}`);
-      }
-
-      if (!data.result || !data.result.random || !Array.isArray(data.result.random.data)) {
-        throw new Error('Invalid response format from random.org');
-      }
-
-      // For multiple ranges, we'd need to make multiple requests
-      // For now, let's make sequential requests for each range
       const numbers: number[] = [];
       
+      // Make individual requests for each range
       for (let i = 0; i < min.length; i++) {
-        const request = {
-          jsonrpc: '2.0',
-          method: 'generateIntegers',
-          params: {
-            apiKey: apiKey,
-            n: 1,
-            min: min[i],
-            max: max[i],
-            replacement: true,
-            base: 10
-          },
-          id: i + 1
-        };
-
-        const resp = await fetch(url, {
+        const response = await fetch('/.netlify/functions/random-oracle', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
           },
-          body: JSON.stringify(request)
+          body: JSON.stringify({
+            min: min[i],
+            max: max[i],
+            count: 1
+          })
         });
 
-        if (!resp.ok) {
-          throw new Error(`Random.org HTTP error: ${resp.status}`);
+        if (!response.ok) {
+          throw new Error(`Random oracle function HTTP error: ${response.status}`);
         }
-
-        const result = await resp.json();
         
-        if (result.error) {
-          throw new Error(`Random.org API error: ${result.error.message}`);
+        const data = await response.json();
+        
+        if (!data.success) {
+          throw new Error(`Random oracle function error: ${data.error}`);
         }
 
-        numbers.push(result.result.random.data[0]);
+        if (!Array.isArray(data.data) || data.data.length === 0) {
+          throw new Error('Invalid response format from random oracle function');
+        }
+
+        numbers.push(data.data[0]);
       }
       
-      console.log('🎲 TRUE random.org randomness obtained:', numbers);
+      console.log('🎲 TRUE random.org randomness obtained via secure function:', numbers);
       return numbers;
       
     } catch (error) {
-      console.error('❌ Random.org failed - Oracle mode unavailable:', error);
+      console.error('❌ Random oracle failed - Oracle mode unavailable:', error);
       throw new Error('True randomness unavailable - Oracle cannot function');
     }
   }
 
   /**
-   * Check if random.org is available for oracle divination
+   * Check if random oracle function is available for oracle divination
    */
   async checkRandomOrgAvailability(): Promise<boolean> {
     try {
-      const apiKey = import.meta.env.RANDOMORG_API_KEY;
-      if (!apiKey) {
-        console.warn('Random.org API key not configured - Oracle mode unavailable');
-        return false;
-      }
-
-      const url = import.meta.env.RANDOMORG_API_ENDPOINT;
-      if (!url) {
-        throw new Error('Random.org API endpoint not configured');
-      }
-      
-      const request = {
-        jsonrpc: '2.0',
-        method: 'generateIntegers',
-        params: {
-          apiKey: apiKey,
-          n: 1,
-          min: 1,
-          max: 100,
-          replacement: true,
-          base: 10
-        },
-        id: 1
-      };
-
-      const response = await fetch(url, {
+      const response = await fetch('/.netlify/functions/random-oracle', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify(request)
+        body: JSON.stringify({
+          min: 1,
+          max: 100,
+          count: 1
+        })
       });
 
-      if (!response.ok) {
-        return false;
+      if (response.ok) {
+        const data = await response.json();
+        return data.success === true;
       }
-
-      const data = await response.json();
-      return !data.error && data.result && data.result.random;
-    } catch {
+      
+      return false;
+      
+    } catch (error) {
+      console.error('Random oracle availability check failed:', error);
       return false;
     }
   }

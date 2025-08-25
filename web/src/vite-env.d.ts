@@ -1,8 +1,8 @@
 /// <reference types="vite/client" />
 
 interface ImportMetaEnv {
-  readonly RANDOMORG_API_KEY?: string
-  readonly RANDOMORG_API_ENDPOINT?: string
+  // Client-side environment variables go here (with VITE_ prefix)
+  readonly NODE_ENV?: string
 }
 
 interface ImportMeta {

@@ -1,4 +1,11 @@
-import { pipeline } from '@xenova/transformers';
+import { pipeline, env } from '@xenova/transformers';
+
+// Configure transformers.js to use local cache
+env.useBrowserCache = true;
+env.allowLocalModels = true;
+env.allowRemoteModels = true;
+env.localModelPath = '/models/';
+env.cacheDir = './.cache';
 
 // Type for the transformers.js pipeline  
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -12,9 +19,23 @@ class EmbeddingPipeline {
     static async getInstance(): Promise<EmbeddingPipeline> {
         if (this.instance === null) {
             console.log('🔮 Initializing transformers.js embedding pipeline...');
-            this.pipeline = await pipeline('feature-extraction', 'Xenova/all-MiniLM-L6-v2');
-            this.instance = new EmbeddingPipeline();
-            console.log('✅ Embedding pipeline initialized successfully');
+            try {
+                this.pipeline = await pipeline('feature-extraction', 'Xenova/all-MiniLM-L6-v2', {
+                    progress_callback: (progress: { status?: string; name?: string; progress?: number }) => {
+                        if (progress.status === 'downloading') {
+                            console.log(`📥 Downloading ${progress.name}: ${Math.round(progress.progress || 0)}%`);
+                        } else if (progress.status === 'loading') {
+                            console.log(`🔄 Loading ${progress.name}...`);
+                        }
+                    },
+                    cache_dir: './.cache'
+                });
+                this.instance = new EmbeddingPipeline();
+                console.log('✅ Embedding pipeline initialized successfully');
+            } catch (error) {
+                console.error('❌ Failed to initialize embedding pipeline:', error);
+                throw error;
+            }
         }
         return this.instance;
     }

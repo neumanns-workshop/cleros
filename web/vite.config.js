@@ -35,5 +35,6 @@ export default defineConfig({
     },
     define: {
         global: 'globalThis'
-    }
+    },
+    assetsInclude: ['**/*.onnx', '**/*.wasm']
 });

@@ -8,27 +8,27 @@ Cleros requires a Random.org API key for Oracle mode functionality:
 
 1. **Get API Key**: Visit [Random.org API Keys](https://api.random.org/api-keys) to create a free account and generate an API key
 2. **Free Tier**: Provides 1,000 API requests per day at no cost
-3. **Configuration**: Set the environment variable `VITE_RANDOMORG_API_KEY`
+3. **Configuration**: Set the environment variable `RANDOMORG_API_KEY`
 
 ### For Local Development
 
-1. Copy `.env.example` to `.env`:
+1. Create a `.env` file in the project root:
    ```bash
-   cp web/.env.example web/.env
+   touch .env
    ```
 
-2. Edit `web/.env` and add your API configuration:
+2. Add your API configuration to `.env` (server-side only, never exposed to client):
    ```
-   VITE_RANDOMORG_API_KEY=your-actual-api-key-here
-   VITE_RANDOMORG_API_ENDPOINT=https://api.random.org/json-rpc/4/invoke
+   RANDOMORG_API_KEY=your-actual-api-key-here
+   RANDOMORG_API_ENDPOINT=https://api.random.org/json-rpc/4/invoke
    ```
 
 ### For Netlify Deployment
 
 1. In your Netlify dashboard, go to Site Settings → Environment Variables
 2. Add the environment variables:
-   - **Key**: `VITE_RANDOMORG_API_KEY` | **Value**: Your Random.org API key
-   - **Key**: `VITE_RANDOMORG_API_ENDPOINT` | **Value**: `https://api.random.org/json-rpc/4/invoke`
+   - **Key**: `RANDOMORG_API_KEY` | **Value**: Your Random.org API key
+   - **Key**: `RANDOMORG_API_ENDPOINT` | **Value**: `https://api.random.org/json-rpc/4/invoke`
 
 ### Without API Key
 

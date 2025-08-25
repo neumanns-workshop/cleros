@@ -87,3 +87,6 @@ package-lock.json
 
 # Archived development files (visible but not actively linted)
 # attic/ - commented out to allow IDE access
+
+# Local Netlify folder
+.netlify
