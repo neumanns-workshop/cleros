@@ -53,6 +53,35 @@
     Content-Type = "application/javascript"
 
 [[headers]]
+  for = "/*.mjs"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Content-Type = "application/javascript"
+
+[[headers]]
+  for = "/*.tsx"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Content-Type = "application/javascript"
+
+[[headers]]
+  for = "/*.ts"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Content-Type = "application/javascript"
+
+# Ensure ES modules are served with correct MIME type
+[[headers]]
+  for = "/src/*.tsx"
+  [headers.values]
+    Content-Type = "application/javascript"
+
+[[headers]]
+  for = "/src/*.ts"
+  [headers.values]
+    Content-Type = "application/javascript"
+
+[[headers]]
   for = "/*.wasm"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
