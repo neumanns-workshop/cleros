@@ -13,6 +13,13 @@
   NPM_FLAGS = "--include=dev"
   # Set RANDOMORG_API_KEY and RANDOMORG_API_ENDPOINT in Netlify dashboard
 
+# Force HTTPS redirect
+[[redirects]]
+  from = "http://cleros.gbe.games/*"
+  to = "https://cleros.gbe.games/:splat"
+  status = 301
+  force = true
+
 # SPA (Single Page Application) redirect rules
 [[redirects]]
   from = "/*"
@@ -30,6 +37,7 @@
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
     Cross-Origin-Embedder-Policy = "unsafe-none"
     Cross-Origin-Opener-Policy = "same-origin"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
 
 # CORS for functions
 [[headers]]
