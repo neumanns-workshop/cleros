@@ -213,7 +213,6 @@ class ClientOracleService {
   async checkRandomOrgAvailability(): Promise<boolean> {
     try {
       const apiKey = import.meta.env.VITE_RANDOMORG_API_KEY;
-      console.log('🔍 API Key:', apiKey ? 'PRESENT' : 'MISSING', 'Type:', typeof apiKey, 'Length:', apiKey?.length);
       if (!apiKey) {
         console.warn('Random.org API key not configured - Oracle mode unavailable');
         return false;
