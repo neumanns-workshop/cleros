@@ -150,19 +150,20 @@ export const useAppState = () => {
     }
   };
 
-  // Load all corpus data from JSON files
-  useEffect(() => {
-    const loadAllCorpusData = async () => {
-      try {
-        console.log('Loading corpus data...');
-        const [hymnsResponse, argonauticaResponse, lithicaResponse, tabletsResponse, queriesResponse, papyrusQueriesResponse] = await Promise.all([
-          fetch('/corpus_20250822_121628/hymns.json'),
-          fetch('/corpus_20250822_121628/argonautica.json'), 
-          fetch('/corpus_20250822_121628/lithica.json'),
-          fetch('/corpus_20250822_121628/tablets.json'),
-          fetch('/corpus_20250822_121628/dodona_queries.json'),
-          fetch('/corpus_20250822_121628/papyrus_queries.json')
-        ]);
+  // Lazy load corpus data only when needed (for search or corpus view)
+  const loadCorpusDataOnDemand = async () => {
+    if (corpusData) return corpusData; // Already loaded
+    
+    try {
+      console.log('📚 Loading corpus data on-demand...');
+      const [hymnsResponse, argonauticaResponse, lithicaResponse, tabletsResponse, queriesResponse, papyrusQueriesResponse] = await Promise.all([
+        fetch('/corpus_20250822_121628/hymns.json'),
+        fetch('/corpus_20250822_121628/argonautica.json'), 
+        fetch('/corpus_20250822_121628/lithica.json'),
+        fetch('/corpus_20250822_121628/tablets.json'),
+        fetch('/corpus_20250822_121628/dodona_queries.json'),
+        fetch('/corpus_20250822_121628/papyrus_queries.json')
+      ]);
 
         const [hymnsData, argonauticaData, lithicaData, tabletsData, queriesData, papyrusQueriesData] = await Promise.all([
           hymnsResponse.json(),
@@ -233,15 +234,15 @@ export const useAppState = () => {
 
         setCorpusData(processedData);
         console.log('✅ Corpus data loaded and processed successfully.');
+        return processedData;
       } catch (error) {
-        console.error('Failed to load corpus data:', error);
-      } finally {
-        setLoading(false);
+        console.error('❌ Failed to load corpus data:', error);
+        throw error;
       }
     };
-
-    loadAllCorpusData();
-  }, []);
+  
+    return loadCorpusDataOnDemand;
+  };
 
 
 
@@ -290,6 +291,17 @@ export const useAppState = () => {
     if (query.trim()) {
       console.log(`Searching (${searchMode} mode):`, query);
       
+      // Load corpus data before performing search (needed for results display)
+      setLoading(true);
+      try {
+        await loadCorpusDataOnDemand();
+      } catch (error) {
+        console.error('Failed to load corpus data for search:', error);
+        alert('Failed to load corpus data. Please check your internet connection.');
+        setLoading(false);
+        return;
+      }
+      
       if (searchMode === 'oracle') {
         // Oracle mode requires true randomness - no compromises
         if (isRandomOrgAvailable === false) {
@@ -316,11 +328,13 @@ export const useAppState = () => {
           alert('The oracle requires true randomness and cannot function at this time. Random.org is unavailable.');
         } finally {
           setIsGeneratingOracle(false);
+          setLoading(false);
         }
       } else {
         // Counsel mode uses semantic search - requires embeddings
         if (!isEmbeddingsAvailable) {
           alert('Semantic features are disabled or not yet initialized. Please try again later or check your internet connection.');
+          setLoading(false);
           return;
         }
         
@@ -347,15 +361,20 @@ export const useAppState = () => {
           }
         } finally {
           setIsGeneratingCounsel(false);
+          setLoading(false);
         }
       }
     }
   };
 
   // Navigate to source corpus location
-  const navigateToSource = (sourceLink: SourceLink) => {
+  const navigateToSource = async (sourceLink: SourceLink) => {
     try {
       console.log('🔗 Navigating to source:', sourceLink);
+      
+      // Load corpus data if needed
+      setLoading(true);
+      const data = await loadCorpusDataOnDemand();
       
       // Set the source corpus first
       setSelectedSource(sourceLink.corpus);
@@ -364,9 +383,9 @@ export const useAppState = () => {
       if (sourceLink.key !== undefined) {
         setSelectedSection(sourceLink.key.toString());
         console.log(`📍 Navigating to part: ${sourceLink.key}`);
-      } else if (sourceLink.sectionTitle && corpusData[sourceLink.corpus]) {
+      } else if (sourceLink.sectionTitle && data[sourceLink.corpus]) {
         // Fallback: find the part by matching sectionTitle
-        const corpus = corpusData[sourceLink.corpus];
+        const corpus = data[sourceLink.corpus];
         const part = corpus?.parts?.find((p: CorpusPart) => 
           p.title_english === sourceLink.sectionTitle || 
           p.title === sourceLink.sectionTitle ||
@@ -387,11 +406,28 @@ export const useAppState = () => {
         setCurrentOracleResponse(null);
         setCurrentCounselResponse(null);
       }, 100);
+      
+      setLoading(false);
     } catch (error) {
       console.error('Failed to navigate to source:', error);
       alert('Could not navigate to original source location.');
+      setLoading(false);
     }
   };
+
+  // Load corpus data when navigating to corpus view
+  useEffect(() => {
+    if (currentView === 'corpus' && !corpusData) {
+      console.log('📖 Loading corpus data for corpus view...');
+      setLoading(true);
+      loadCorpusDataOnDemand().then(() => {
+        setLoading(false);
+      }).catch((error) => {
+        console.error('Failed to load corpus data for corpus view:', error);
+        setLoading(false);
+      });
+    }
+  }, [currentView, corpusData]);
 
   return {
     // View state

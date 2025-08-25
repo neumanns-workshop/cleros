@@ -391,9 +391,9 @@ export const CorpusView: React.FC<CorpusViewProps> = ({
     onLineClick(line);
   };
 
-  const navigateToSource = (sourceLink: SourceLink) => {
+  const navigateToSource = async (sourceLink: SourceLink) => {
     setSelectedLine(null);
-    onNavigateToSource(sourceLink);
+    await onNavigateToSource(sourceLink);
   };
 
   return (
@@ -553,7 +553,7 @@ export const CorpusView: React.FC<CorpusViewProps> = ({
                   <div className="line-section">
                     <button 
                       className="source-button"
-                      onClick={() => selectedLine.sourceLink && navigateToSource(selectedLine.sourceLink)}
+                      onClick={async () => selectedLine.sourceLink && await navigateToSource(selectedLine.sourceLink)}
                     >
                       Go to {selectedLine.sourceLink.corpus.charAt(0).toUpperCase() + selectedLine.sourceLink.corpus.slice(1)}: {selectedLine.sourceLink.sectionTitle || `Line ${selectedLine.sourceLink.lineNumber}`}
                     </button>
