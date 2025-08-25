@@ -6,9 +6,7 @@
 
 [build.environment]
   NPM_FLAGS = "--include=dev"
-  # Random.org API configuration for Oracle mode - set these in Netlify dashboard
-  # VITE_RANDOMORG_API_KEY = "your-api-key-here"  
-  # VITE_RANDOMORG_API_ENDPOINT = "https://api.random.org/json-rpc/4/invoke"
+  # Set VITE_RANDOMORG_API_KEY and VITE_RANDOMORG_API_ENDPOINT in Netlify dashboard
 
 # SPA (Single Page Application) redirect rules
 [[redirects]]
