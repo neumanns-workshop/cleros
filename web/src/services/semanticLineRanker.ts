@@ -268,7 +268,7 @@ export class SemanticLineRanker {
 
   /**
    * Find the best shareable sentence across oracle selections
-   * Returns best sentence ≤5 lines, or undefined if none qualify
+   * Returns best sentence ≤6 lines, or undefined if none qualify
    */
   async findBestShareableSentence(
     oracleSelections: Array<{
@@ -288,8 +288,8 @@ export class SemanticLineRanker {
     for (const selection of oracleSelections) {
       const lineCount = selection.lineDetails.length;
       
-      // Only consider sentences ≤5 lines for shareability
-      if (lineCount <= 5) {
+      // Only consider sentences ≤6 lines for shareability
+      if (lineCount <= 6) {
         const scoredSentence = await this.scoreSentence(
           selection.corpus,
           selection.sentenceId,
@@ -308,7 +308,7 @@ export class SemanticLineRanker {
 
     // Find the best scoring sentence
     if (candidateSentences.length === 0) {
-      console.log('🚫 No sentences ≤5 lines found for sharing');
+      console.log('🚫 No sentences ≤6 lines found for sharing');
       return undefined;
     }
 
@@ -361,11 +361,11 @@ export class SemanticLineRanker {
     
     const shareableOptions: ShareableOption[] = [];
 
-    // 1. Add valid sentences (≤5 lines)
+    // 1. Add valid sentences (≤6 lines)
     for (const selection of oracleSelections) {
       const lineCount = selection.lineDetails.length;
       
-      if (lineCount <= 5) {
+      if (lineCount <= 6) {
         const scoredSentence = await this.scoreSentence(
           selection.corpus,
           selection.sentenceId,
@@ -430,7 +430,7 @@ export class SemanticLineRanker {
     });
 
     const validCount = shareableOptions.filter(opt => opt.type === 'sentence').length;
-    console.log(`🎴 Generated ${shareableOptions.length} shareable options (${validCount} valid sentences ≤5 lines)`);
+    console.log(`🎴 Generated ${shareableOptions.length} shareable options (${validCount} valid sentences ≤6 lines)`);
     
     return shareableOptions;
   }
