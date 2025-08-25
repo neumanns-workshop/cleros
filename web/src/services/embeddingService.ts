@@ -1,17 +1,22 @@
-import { pipeline, env } from '@xenova/transformers';
+// Dynamic import for transformers to enable code splitting
+let transformersModule: any = null;
 
-// Configure transformers.js to use local cache
-env.useBrowserCache = true;
-env.allowLocalModels = true;
-env.allowRemoteModels = true;
-
-// Try to ensure models path exists by using a relative path that will work even if /models/ doesn't exist
-// Fall back to the remote models if local path fails
-env.localModelPath = './models/';
-env.cacheDir = './.cache';
-
-// Allow downloading from HF hub if local models not available
-env.allowRemoteModels = true;
+async function loadTransformers() {
+  if (!transformersModule) {
+    console.log('🔮 Loading transformers module...');
+    transformersModule = await import('@xenova/transformers');
+    
+    // Configure transformers.js after loading
+    const { env } = transformersModule;
+    env.useBrowserCache = true;
+    env.allowLocalModels = true;
+    env.allowRemoteModels = true;
+    env.localModelPath = './models/';
+    env.cacheDir = './.cache';
+    env.allowRemoteModels = true;
+  }
+  return transformersModule;
+}
 
 // Global flags for UI to check embedding status
 // Extend Window interface to avoid any
@@ -50,6 +55,9 @@ class EmbeddingPipeline {
         if (this.instance === null) {
             console.log('🔮 Initializing transformers.js embedding pipeline...');
             try {
+                // Load transformers module dynamically
+                const { pipeline } = await loadTransformers();
+                
                 // Try with more graceful error handling and retries
                 try {
                     // First try with local paths
