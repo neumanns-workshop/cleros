@@ -7,6 +7,30 @@ env.allowRemoteModels = true;
 env.localModelPath = '/models/';
 env.cacheDir = './.cache';
 
+// Global flags for UI to check embedding status
+// Extend Window interface to avoid any
+declare global {
+  interface Window {
+    __EMBEDDINGS_AVAILABLE__: boolean;
+    __EMBEDDINGS_UNAVAILABLE__: boolean;
+  }
+}
+
+const extWindow = window;
+extWindow.__EMBEDDINGS_AVAILABLE__ = false;
+extWindow.__EMBEDDINGS_UNAVAILABLE__ = false;
+
+// Helper to dispatch embedding status change events
+function notifyEmbeddingStatusChange(available: boolean) {
+  extWindow.__EMBEDDINGS_AVAILABLE__ = available;
+  extWindow.__EMBEDDINGS_UNAVAILABLE__ = !available;
+  
+  // Dispatch custom event for components to listen to
+  window.dispatchEvent(new CustomEvent('embeddingStatusChanged', { 
+    detail: { available } 
+  }));
+}
+
 // Type for the transformers.js pipeline  
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type FeatureExtractionPipeline = any; // Note: @xenova/transformers doesn't export proper types yet
@@ -32,9 +56,13 @@ class EmbeddingPipeline {
                 });
                 this.instance = new EmbeddingPipeline();
                 console.log('✅ Embedding pipeline initialized successfully');
+                notifyEmbeddingStatusChange(true);
             } catch (error) {
                 console.error('❌ Failed to initialize embedding pipeline:', error);
-                throw error;
+                // Create instance but throw error when used
+                this.instance = new EmbeddingPipeline();
+                console.log('⚠️ Semantic features will be DISABLED');
+                notifyEmbeddingStatusChange(false);
             }
         }
         return this.instance;

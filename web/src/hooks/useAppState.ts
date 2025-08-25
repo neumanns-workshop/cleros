@@ -28,6 +28,7 @@ export const useAppState = () => {
   const [isGeneratingOracle, setIsGeneratingOracle] = useState(false);
   const [isGeneratingCounsel, setIsGeneratingCounsel] = useState(false);
   const [isRandomOrgAvailable, setIsRandomOrgAvailable] = useState<boolean | null>(null);
+  const [isEmbeddingsAvailable, setIsEmbeddingsAvailable] = useState<boolean | null>(null);
   
   // Personal reports
   const [personalOracleReports, setPersonalOracleReports] = useState<OracleResponse[]>([]);
@@ -44,9 +45,10 @@ export const useAppState = () => {
   });
   const [loading, setLoading] = useState(true);
 
-  // Check random.org availability for Oracle mode
+  // Check API availability and embeddings status
   useEffect(() => {
-    const checkRandomOrg = async () => {
+    const checkAvailability = async () => {
+      // Check random.org availability
       try {
         const available = await oracleService.checkRandomOrgAvailability();
         setIsRandomOrgAvailable(available);
@@ -63,9 +65,35 @@ export const useAppState = () => {
           setSearchMode('counsel');
         }
       }
+      
+      // Check embeddings availability via the global flag
+      const checkEmbeddings = () => {
+        // Using Window interface extension from embeddingService.ts
+        const available = !!window.__EMBEDDINGS_AVAILABLE__;
+        const unavailable = !!window.__EMBEDDINGS_UNAVAILABLE__;
+        
+        if (available) {
+          setIsEmbeddingsAvailable(true);
+          console.log('✨ Semantic features ENABLED - Embeddings available');
+        } else if (unavailable) {
+          setIsEmbeddingsAvailable(false);
+          console.log('⚠️ Semantic features DISABLED - Embeddings unavailable');
+        } else {
+          // Not determined yet
+          setIsEmbeddingsAvailable(null);
+        }
+      };
+      
+      // Check immediately and also listen for status changes
+      checkEmbeddings();
+      window.addEventListener('embeddingStatusChanged', checkEmbeddings);
+      
+      return () => {
+        window.removeEventListener('embeddingStatusChanged', checkEmbeddings);
+      };
     };
 
-    checkRandomOrg();
+    checkAvailability();
     loadPersonalReports();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []); // searchMode intentionally excluded to prevent re-checking on mode changes
@@ -290,7 +318,12 @@ export const useAppState = () => {
           setIsGeneratingOracle(false);
         }
       } else {
-        // Counsel mode uses semantic search - no randomness required
+        // Counsel mode uses semantic search - requires embeddings
+        if (isEmbeddingsAvailable === false) {
+          alert('Semantic features are disabled: Embedding model could not be loaded. Please try again later or check your internet connection.');
+          return;
+        }
+        
         setIsGeneratingCounsel(true);
         try {
           const response = await counselService.generateCounselResponse(query.trim());
@@ -307,7 +340,11 @@ export const useAppState = () => {
           setCurrentCounselResponse(response as CounselResponse);
         } catch (error) {
           console.error('Error generating counsel response:', error);
-          alert('Failed to generate counsel response. Please check the console for details.');
+          if (isEmbeddingsAvailable === false) {
+            alert('Semantic features are disabled: Embedding model could not be loaded.');
+          } else {
+            alert('Failed to generate counsel response. Please check the console for details.');
+          }
         } finally {
           setIsGeneratingCounsel(false);
         }
@@ -383,6 +420,7 @@ export const useAppState = () => {
     isGeneratingOracle,
     isGeneratingCounsel,
     isRandomOrgAvailable,
+    isEmbeddingsAvailable,
     
     // Personal reports
     personalOracleReports,

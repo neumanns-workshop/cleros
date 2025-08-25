@@ -14,15 +14,39 @@ export interface LineScore {
 class ClientSemanticScorer {
   private queryEmbeddingCache: Map<string, Promise<number[]>> = new Map();
 
-  private getQueryEmbedding(query: string): Promise<number[]> {
+  private embeddingsFunctional: boolean = true;
+
+  private async getQueryEmbedding(query: string): Promise<number[] | null> {
+    // If embeddings already failed, don't retry constantly
+    if (!this.embeddingsFunctional) {
+      return null;
+    }
+    
     if (!this.queryEmbeddingCache.has(query)) {
-      this.queryEmbeddingCache.set(query, embeddingService.getQueryEmbedding(query));
+      try {
+        const embedding = embeddingService.getQueryEmbedding(query);
+        this.queryEmbeddingCache.set(query, embedding);
+      } catch (err) {
+        // Error details already logged by embedding service
+        console.warn('Embedding service unavailable - semantic features disabled', err);
+        this.embeddingsFunctional = false;
+        return null;
+      }
     }
-    const cached = this.queryEmbeddingCache.get(query);
-    if (!cached) {
-      throw new Error(`Failed to get query embedding for: ${query}`);
+    
+    try {
+      const cached = this.queryEmbeddingCache.get(query);
+      if (!cached) {
+        return null;
+      }
+      const result = await cached;
+      return result;
+    } catch (err) {
+      // Error details already logged by embedding service
+      console.warn('Failed to get embedding - semantic features disabled', err);
+      this.embeddingsFunctional = false;
+      return null;
     }
-    return cached;
   }
 
 
@@ -51,37 +75,48 @@ class ClientSemanticScorer {
 
       const queryEmbedding = await this.getQueryEmbedding(query);
       
+      // If embedding failed, fall back to keyword-only scoring
+      if (!queryEmbedding) {
+        const keywordScore = this.calculateBasicKeywordBoost(lineData.english || '', keywords);
+        return keywordScore * 2; // Give keyword matches more weight when embeddings unavailable
+      }
+      
       // Use the unified corpus structure - construct proper line ID
       if (lineData.part_number != null && lineData.sentence_id != null && lineData.corpus_name) {
         const lineId = `${lineData.corpus_name}_${lineData.part_number}_${lineData.sentence_id}_${lineData.line}`;
 
-        
-        const lineEmbedding = await embeddingService.getLineEmbedding(corpus, lineId);
+        try {
+          const lineEmbedding = await embeddingService.getLineEmbedding(corpus, lineId);
 
-        if (lineEmbedding) {
+          if (lineEmbedding) {
+            // Calculate semantic similarity
+            const semanticSimilarity = embeddingService.calculateCosineSimilarity(
+              queryEmbedding, 
+              lineEmbedding
+            );
 
-          // Calculate semantic similarity
-          const semanticSimilarity = embeddingService.calculateCosineSimilarity(
-            queryEmbedding, 
-            lineEmbedding
-          );
-
-          // Add basic keyword boost (no synonym expansion - that was done during counsel generation)
-          const keywordBoost = this.calculateBasicKeywordBoost(lineData.english || '', keywords);
-          
-          // Combine scores (capped at 1.0)
-          const combinedScore = Math.min(semanticSimilarity + keywordBoost, 1.0);
-          
-          return combinedScore;
+            // Add basic keyword boost (no synonym expansion - that was done during counsel generation)
+            const keywordBoost = this.calculateBasicKeywordBoost(lineData.english || '', keywords);
+            
+            // Combine scores (capped at 1.0)
+            const combinedScore = Math.min(semanticSimilarity + keywordBoost, 1.0);
+            
+            return combinedScore;
+          }
+        } catch (err) {
+          // Error details already logged by embedding service
+          console.warn('Error getting line embedding - falling back to keywords', err);
+          this.embeddingsFunctional = false;
         }
       }
       
       // Fallback to basic keyword scoring (no synonym expansion)
       const keywordScore = this.calculateBasicKeywordBoost(lineData.english || '', keywords);
-      return keywordScore;
+      return keywordScore * 2; // Give keyword matches more weight when semantic scoring fails
 
     } catch (error) {
       console.error('Error calculating similarity:', error);
+      this.embeddingsFunctional = false;
       return 0;
     }
   }

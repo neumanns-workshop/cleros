@@ -82,38 +82,55 @@ export class SemanticLineRanker {
 
   /**
    * Find the best line within a passage using line-level embeddings
+   * With graceful degradation when embeddings are unavailable
    */
   async findBestLineInPassage(
     passageData: PassageLineData,
-    queryEmbedding: number[],
+    queryEmbedding: number[] | null, // Allow null for when embeddings unavailable
     enhancedKeywords?: EnhancedKeywordData[], // Enhanced keywords from synonym expansion
     basicKeywords?: string[]  // Fallback basic keywords
   ): Promise<BestLineResult | undefined> {
     
     let bestLine = null;
     let bestScore = -1;
+    const embeddingsAvailable = queryEmbedding !== null;
 
     for (const lineDetail of passageData.lineDetails) {
       try {
-        // Construct proper line ID: corpus_part_sentence_line
-        const lineId = `${passageData.corpusName}_${passageData.partNumber}_${passageData.sentenceId}_${lineDetail.line}`;
+        let semanticSimilarity = 0;
         
-        // Get line embedding from embedding service
-        const lineEmbedding = await embeddingService.getLineEmbedding(passageData.corpusName, lineId);
-        if (!lineEmbedding) continue;
+        // Only attempt semantic scoring if embeddings are available
+        if (embeddingsAvailable && queryEmbedding) {
+          try {
+            // Construct proper line ID: corpus_part_sentence_line
+            const lineId = `${passageData.corpusName}_${passageData.partNumber}_${passageData.sentenceId}_${lineDetail.line}`;
+            
+            // Get line embedding from embedding service
+            const lineEmbedding = await embeddingService.getLineEmbedding(passageData.corpusName, lineId);
+            if (lineEmbedding) {
+              // Calculate semantic similarity
+              semanticSimilarity = embeddingService.calculateCosineSimilarity(
+                queryEmbedding, 
+                lineEmbedding
+              );
+            }
+          } catch (err) {
+            // Continue with semanticSimilarity = 0
+            console.warn(`Skipping semantic scoring for line ${lineDetail.line}`, err);
+          }
+        }
 
-        // Calculate semantic similarity
-        const semanticSimilarity = embeddingService.calculateCosineSimilarity(
-          queryEmbedding, 
-          lineEmbedding
-        );
-
-        // Apply keyword boost
+        // Apply keyword boost - this works even when embeddings fail
         let keywordBoost = 0;
         if (enhancedKeywords) {
           keywordBoost = this.calculateEnhancedKeywordBoost(lineDetail.english, enhancedKeywords);
         } else if (basicKeywords) {
           keywordBoost = this.calculateBasicKeywordBoost(lineDetail.english, basicKeywords);
+        }
+        
+        // Give keywords more weight when embeddings aren't available
+        if (!embeddingsAvailable) {
+          keywordBoost *= 2;
         }
         
         // Combined score (clamped to [0, 1])
@@ -130,6 +147,12 @@ export class SemanticLineRanker {
       } catch (error) {
         console.warn(`Error scoring line ${lineDetail.line} in ${passageData.corpusName}:`, error);
       }
+    }
+
+    // If we didn't find any matching lines, don't default to first line
+    // Return undefined so the UI can handle this state appropriately
+    if (!bestLine) {
+      console.warn('No lines matched the query - returning undefined');
     }
 
     return bestLine || undefined;
