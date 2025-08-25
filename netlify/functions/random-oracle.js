@@ -8,18 +8,22 @@ exports.handler = async (event, context) => {
   }
 
   const apiKey = process.env.RANDOMORG_API_KEY;
-  const apiUrl = process.env.RANDOMORG_API_ENDPOINT || 'https://api.random.org/json-rpc/4/invoke';
+  const apiUrl = process.env.RANDOMORG_API_ENDPOINT;
 
-  if (!apiKey) {
-    console.error('❌ RANDOMORG_API_KEY environment variable not set');
+  if (!apiKey || !apiUrl) {
+    const missingVars = [];
+    if (!apiKey) missingVars.push('RANDOMORG_API_KEY');
+    if (!apiUrl) missingVars.push('RANDOMORG_API_ENDPOINT');
+    
+    console.error(`❌ Missing environment variables: ${missingVars.join(', ')}`);
     return {
       statusCode: 500,
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({ 
-        error: 'Random.org API key not configured',
-        details: 'Please set RANDOMORG_API_KEY environment variable in Netlify dashboard',
+        error: 'Random.org API not configured',
+        details: `Please set the following environment variables in Netlify dashboard: ${missingVars.join(', ')}`,
         setup_url: 'https://docs.netlify.com/configure-builds/environment-variables/'
       })
     };

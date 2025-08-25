@@ -20,15 +20,17 @@ Cleros requires a Random.org API key for Oracle mode functionality:
 2. Add your API configuration to `.env` (server-side only, never exposed to client):
    ```
    RANDOMORG_API_KEY=your-actual-api-key-here
-   RANDOMORG_API_ENDPOINT=https://api.random.org/json-rpc/4/invoke
+   RANDOMORG_API_ENDPOINT=[see Random.org API documentation]
    ```
+   
+   **Note**: Set RANDOMORG_API_ENDPOINT to the standard Random.org JSON-RPC v4 endpoint.
 
 ### For Netlify Deployment
 
 1. In your Netlify dashboard, go to Site Settings → Environment Variables
 2. Add the environment variables:
    - **Key**: `RANDOMORG_API_KEY` | **Value**: Your Random.org API key
-   - **Key**: `RANDOMORG_API_ENDPOINT` | **Value**: `https://api.random.org/json-rpc/4/invoke`
+   - **Key**: `RANDOMORG_API_ENDPOINT` | **Value**: The Random.org JSON-RPC endpoint (contact support if needed)
 
 ### Without API Key
 
