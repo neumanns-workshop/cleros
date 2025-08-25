@@ -119,7 +119,7 @@ class ClientOracleService {
         throw new Error('Random.org API key not configured');
       }
 
-      const url = import.meta.env.VITE_RANDOMORG_API_ENDPOINT || 'https://api.random.org/json-rpc/4/invoke';
+      const url = import.meta.env.VITE_RANDOMORG_API_ENDPOINT;
       
       // Create individual requests for each range (JSON-RPC API handles ranges differently)
       const requests = min.map((minVal, i) => ({
@@ -218,7 +218,7 @@ class ClientOracleService {
         return false;
       }
 
-      const url = import.meta.env.VITE_RANDOMORG_API_ENDPOINT || 'https://api.random.org/json-rpc/4/invoke';
+      const url = import.meta.env.VITE_RANDOMORG_API_ENDPOINT;
       const request = {
         jsonrpc: '2.0',
         method: 'generateIntegers',
