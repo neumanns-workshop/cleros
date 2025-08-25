@@ -1,6 +1,6 @@
 [build]
   base = "."
-  command = "cd web && npm run build && cp -r ../netlify/functions/ dist/.netlify/functions/"
+  command = "cd web && npm ci && npm run build && cp -r ../netlify/functions/ dist/.netlify/functions/"
   publish = "web/dist"
   node_version = "18"
 
