@@ -114,12 +114,12 @@ class ClientOracleService {
    */
   private async getTrueRandomNumbers(min: number[], max: number[]): Promise<number[]> {
     try {
-      const apiKey = import.meta.env.VITE_RANDOMORG_API_KEY || import.meta.env.RANDOMORG_API_KEY;
+      const apiKey = import.meta.env.RANDOMORG_API_KEY;
       if (!apiKey) {
         throw new Error('Random.org API key not configured');
       }
 
-      const url = import.meta.env.VITE_RANDOMORG_API_ENDPOINT;
+      const url = import.meta.env.RANDOMORG_API_ENDPOINT;
       if (!url) {
         throw new Error('Random.org API endpoint not configured');
       }
@@ -215,13 +215,13 @@ class ClientOracleService {
    */
   async checkRandomOrgAvailability(): Promise<boolean> {
     try {
-      const apiKey = import.meta.env.VITE_RANDOMORG_API_KEY;
+      const apiKey = import.meta.env.RANDOMORG_API_KEY;
       if (!apiKey) {
         console.warn('Random.org API key not configured - Oracle mode unavailable');
         return false;
       }
 
-      const url = import.meta.env.VITE_RANDOMORG_API_ENDPOINT;
+      const url = import.meta.env.RANDOMORG_API_ENDPOINT;
       if (!url) {
         throw new Error('Random.org API endpoint not configured');
       }

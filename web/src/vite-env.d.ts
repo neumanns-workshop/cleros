@@ -1,8 +1,8 @@
 /// <reference types="vite/client" />
 
 interface ImportMetaEnv {
-  readonly VITE_RANDOMORG_API_KEY?: string
-  readonly VITE_RANDOMORG_API_ENDPOINT?: string
+  readonly RANDOMORG_API_KEY?: string
+  readonly RANDOMORG_API_ENDPOINT?: string
 }
 
 interface ImportMeta {

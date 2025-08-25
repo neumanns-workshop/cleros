@@ -6,7 +6,7 @@
 
 [build.environment]
   NPM_FLAGS = "--include=dev"
-  # Set VITE_RANDOMORG_API_KEY and VITE_RANDOMORG_API_ENDPOINT in Netlify dashboard
+  # Set RANDOMORG_API_KEY and RANDOMORG_API_ENDPOINT in Netlify dashboard
 
 # SPA (Single Page Application) redirect rules
 [[redirects]]

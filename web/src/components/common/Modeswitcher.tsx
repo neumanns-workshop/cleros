@@ -27,9 +27,9 @@ export const ModeSwitcher = ({ searchMode, setSearchMode, isRandomOrgAvailable }
       Oracle {isRandomOrgAvailable === false && '(Disabled)'}
     </button>
     <button 
-      className={`mode-button ${searchMode === 'sage' ? 'active' : ''}`}
+      className={`mode-button ${searchMode === 'counsel' ? 'active' : ''}`}
       title="Semantic search for relevant passages"
-      onClick={() => setSearchMode('sage')}
+      onClick={() => setSearchMode('counsel')}
     >
       Counsel
     </button>

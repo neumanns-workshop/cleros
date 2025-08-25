@@ -1,6 +1,6 @@
 export type ViewType = 'home' | 'corpus' | 'about' | 'privacy' | 'terms';
 
-export type SearchMode = 'oracle' | 'sage';
+export type SearchMode = 'oracle' | 'counsel';
 
 export type SourceType = 'hymns' | 'argonautica' | 'lithica' | 'tablets' | 'queries' | 'papyrusQueries' | 'personal';
 

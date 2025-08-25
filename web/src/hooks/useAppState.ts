@@ -54,13 +54,13 @@ export const useAppState = () => {
         
         // If random.org is unavailable and user is in oracle mode, switch to counsel
         if (!available && searchMode === 'oracle') {
-          setSearchMode('sage');
+          setSearchMode('counsel');
         }
       } catch (error) {
         console.error('Failed to check random.org availability:', error);
         setIsRandomOrgAvailable(false);
         if (searchMode === 'oracle') {
-          setSearchMode('sage');
+          setSearchMode('counsel');
         }
       }
     };
