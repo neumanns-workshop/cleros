@@ -319,7 +319,7 @@ export const useAppState = () => {
         }
       } else {
         // Counsel mode uses semantic search - requires embeddings
-        if (isEmbeddingsAvailable === false || isEmbeddingsAvailable === null) {
+        if (!isEmbeddingsAvailable) {
           alert('Semantic features are disabled or not yet initialized. Please try again later or check your internet connection.');
           return;
         }
@@ -340,7 +340,7 @@ export const useAppState = () => {
           setCurrentCounselResponse(response as CounselResponse);
         } catch (error) {
           console.error('Error generating counsel response:', error);
-          if (isEmbeddingsAvailable === false || isEmbeddingsAvailable === null) {
+          if (!isEmbeddingsAvailable) {
             alert('Semantic features are disabled or not yet initialized.');
           } else {
             alert('Failed to generate counsel response. Please check the console for details.');
