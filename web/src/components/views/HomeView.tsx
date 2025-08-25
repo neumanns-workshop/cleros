@@ -17,6 +17,7 @@ interface HomeViewProps {
   searchQuery: string;
   setSearchQuery: (query: string) => void;
   isRandomOrgAvailable: boolean | null;
+  isEmbeddingsAvailable: boolean | null;
   isGenerating: boolean;
   onSubmit: (e: React.FormEvent) => void;
   onAncientQueryClick: (query: string) => void;
@@ -30,6 +31,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
   searchQuery,
   setSearchQuery,
   isRandomOrgAvailable,
+  isEmbeddingsAvailable,
   isGenerating,
   onSubmit,
   onAncientQueryClick
@@ -88,13 +90,21 @@ export const HomeView: React.FC<HomeViewProps> = ({
           searchMode={searchMode}
           setSearchMode={setSearchMode}
           isRandomOrgAvailable={isRandomOrgAvailable}
+          isEmbeddingsAvailable={isEmbeddingsAvailable}
         />
-        {isRandomOrgAvailable === false && (
+        {(isRandomOrgAvailable === false || !isEmbeddingsAvailable) && (
           <div className="intro-text">
             <p>
-              <span style={{ color: '#ff6b6b', fontSize: '0.9em', display: 'block' }}>
-                ⚠️ Oracle mode disabled: True randomness required
-              </span>
+              {isRandomOrgAvailable === false && (
+                <span style={{ color: '#ff6b6b', fontSize: '0.9em', display: 'block' }}>
+                  ⚠️ Oracle mode disabled: True randomness required
+                </span>
+              )}
+              {!isEmbeddingsAvailable && (
+                <span style={{ color: '#ff6b6b', fontSize: '0.9em', display: 'block' }}>
+                  ⚠️ Counsel mode disabled: Embedding models unavailable
+                </span>
+              )}
             </p>
           </div>
         )}

@@ -4,8 +4,14 @@ import { pipeline, env } from '@xenova/transformers';
 env.useBrowserCache = true;
 env.allowLocalModels = true;
 env.allowRemoteModels = true;
-env.localModelPath = '/models/';
+
+// Try to ensure models path exists by using a relative path that will work even if /models/ doesn't exist
+// Fall back to the remote models if local path fails
+env.localModelPath = './models/';
 env.cacheDir = './.cache';
+
+// Allow downloading from HF hub if local models not available
+env.allowRemoteModels = true;
 
 // Global flags for UI to check embedding status
 // Extend Window interface to avoid any
@@ -44,16 +50,36 @@ class EmbeddingPipeline {
         if (this.instance === null) {
             console.log('🔮 Initializing transformers.js embedding pipeline...');
             try {
-                this.pipeline = await pipeline('feature-extraction', 'Xenova/all-MiniLM-L6-v2', {
-                    progress_callback: (progress: { status?: string; name?: string; progress?: number }) => {
-                        if (progress.status === 'downloading') {
-                            console.log(`📥 Downloading ${progress.name}: ${Math.round(progress.progress || 0)}%`);
-                        } else if (progress.status === 'loading') {
-                            console.log(`🔄 Loading ${progress.name}...`);
-                        }
-                    },
-                    cache_dir: './.cache'
-                });
+                // Try with more graceful error handling and retries
+                try {
+                    // First try with local paths
+                    this.pipeline = await pipeline('feature-extraction', 'Xenova/all-MiniLM-L6-v2', {
+                        progress_callback: (progress: { status?: string; name?: string; progress?: number }) => {
+                            if (progress.status === 'downloading') {
+                                console.log(`📥 Downloading ${progress.name}: ${Math.round(progress.progress || 0)}%`);
+                            } else if (progress.status === 'loading') {
+                                console.log(`🔄 Loading ${progress.name}...`);
+                            }
+                        },
+                        cache_dir: './.cache',
+                        local_files_only: true
+                    });
+                } catch (localError) {
+                    console.warn('⚠️ Local models not found, falling back to remote:', localError);
+                    
+                    // Fall back to remote if local fails
+                    this.pipeline = await pipeline('feature-extraction', 'Xenova/all-MiniLM-L6-v2', {
+                        progress_callback: (progress: { status?: string; name?: string; progress?: number }) => {
+                            if (progress.status === 'downloading') {
+                                console.log(`📥 Downloading ${progress.name}: ${Math.round(progress.progress || 0)}%`);
+                            } else if (progress.status === 'loading') {
+                                console.log(`🔄 Loading ${progress.name}...`);
+                            }
+                        },
+                        cache_dir: './.cache'
+                    });
+                }
+                
                 this.instance = new EmbeddingPipeline();
                 console.log('✅ Embedding pipeline initialized successfully');
                 notifyEmbeddingStatusChange(true);
