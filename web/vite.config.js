@@ -21,11 +21,13 @@ export default defineConfig({
     build: {
         outDir: 'dist',
         sourcemap: true,
+        chunkSizeWarningLimit: 1000,
         rollupOptions: {
             output: {
                 manualChunks: {
                     vendor: ['react', 'react-dom'],
-                    transformers: ['@xenova/transformers']
+                    // Move transformers to be loaded dynamically instead of in a separate chunk
+                    // This will be loaded on-demand when embedding functionality is actually used
                 }
             }
         }

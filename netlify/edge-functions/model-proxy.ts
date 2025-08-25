@@ -24,6 +24,11 @@ export default async (request: Request, context: Context) => {
     'tokenizer_config.json': `${HUGGINGFACE_BASE_URL}/${MODEL_NAME}/resolve/main/tokenizer_config.json`,
     'onnx/model.onnx': `${HUGGINGFACE_BASE_URL}/${MODEL_NAME}/resolve/main/onnx/model.onnx`,
     'onnx/model_quantized.onnx': `${HUGGINGFACE_BASE_URL}/${MODEL_NAME}/resolve/main/onnx/model_quantized.onnx`,
+    // Add WASM files that transformers.js might need
+    'ort-wasm.wasm': `https://cdn.jsdelivr.net/npm/onnxruntime-web@1.19.2/dist/ort-wasm.wasm`,
+    'ort-wasm-simd.wasm': `https://cdn.jsdelivr.net/npm/onnxruntime-web@1.19.2/dist/ort-wasm-simd.wasm`,
+    'ort-wasm-threaded.wasm': `https://cdn.jsdelivr.net/npm/onnxruntime-web@1.19.2/dist/ort-wasm-threaded.wasm`,
+    'ort-wasm-simd-threaded.wasm': `https://cdn.jsdelivr.net/npm/onnxruntime-web@1.19.2/dist/ort-wasm-simd-threaded.wasm`,
   };
   
   const huggingfaceUrl = fileMapping[filename];
@@ -41,10 +46,21 @@ export default async (request: Request, context: Context) => {
       throw new Error(`HuggingFace responded with ${response.status}: ${response.statusText}`);
     }
     
-    const contentType = response.headers.get('content-type') || 
-                       (filename.endsWith('.json') ? 'application/json' : 
-                        filename.endsWith('.onnx') ? 'application/octet-stream' : 
-                        'application/octet-stream');
+    // Set proper MIME types for different file types
+    let contentType = response.headers.get('content-type');
+    if (!contentType) {
+      if (filename.endsWith('.json')) {
+        contentType = 'application/json';
+      } else if (filename.endsWith('.onnx')) {
+        contentType = 'application/octet-stream';
+      } else if (filename.endsWith('.wasm')) {
+        contentType = 'application/wasm';
+      } else if (filename.endsWith('.bin')) {
+        contentType = 'application/octet-stream';
+      } else {
+        contentType = 'application/octet-stream';
+      }
+    }
     
     // Cache for 1 year since model files don't change
     const headers = new Headers({

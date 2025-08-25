@@ -11,7 +11,8 @@ async function loadTransformers() {
     env.useBrowserCache = true;
     env.allowLocalModels = true;
     env.allowRemoteModels = true;
-    env.localModelPath = './models/';
+    // Use the path that matches our edge function
+    env.localModelPath = '/models/';
     env.cacheDir = './.cache';
     env.allowRemoteModels = true;
   }
@@ -60,8 +61,8 @@ class EmbeddingPipeline {
                 
                 // Try with more graceful error handling and retries
                 try {
-                    // First try with local paths
-                    this.pipeline = await pipeline('feature-extraction', 'Xenova/all-MiniLM-L6-v2', {
+                    // Try with the edge function path format first
+                    this.pipeline = await pipeline('feature-extraction', 'all-MiniLM-L6-v2', {
                         progress_callback: (progress: { status?: string; name?: string; progress?: number }) => {
                             if (progress.status === 'downloading') {
                                 console.log(`📥 Downloading ${progress.name}: ${Math.round(progress.progress || 0)}%`);
@@ -73,9 +74,9 @@ class EmbeddingPipeline {
                         local_files_only: true
                     });
                 } catch (localError) {
-                    console.warn('⚠️ Local models not found, falling back to remote:', localError);
+                    console.warn('⚠️ Edge function models not found, falling back to HuggingFace:', localError);
                     
-                    // Fall back to remote if local fails
+                    // Fall back to HuggingFace directly if edge function fails
                     this.pipeline = await pipeline('feature-extraction', 'Xenova/all-MiniLM-L6-v2', {
                         progress_callback: (progress: { status?: string; name?: string; progress?: number }) => {
                             if (progress.status === 'downloading') {
