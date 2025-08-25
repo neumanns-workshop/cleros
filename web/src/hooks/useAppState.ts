@@ -319,8 +319,8 @@ export const useAppState = () => {
         }
       } else {
         // Counsel mode uses semantic search - requires embeddings
-        if (isEmbeddingsAvailable === false) {
-          alert('Semantic features are disabled: Embedding model could not be loaded. Please try again later or check your internet connection.');
+        if (isEmbeddingsAvailable === false || isEmbeddingsAvailable === null) {
+          alert('Semantic features are disabled or not yet initialized. Please try again later or check your internet connection.');
           return;
         }
         
@@ -340,8 +340,8 @@ export const useAppState = () => {
           setCurrentCounselResponse(response as CounselResponse);
         } catch (error) {
           console.error('Error generating counsel response:', error);
-          if (isEmbeddingsAvailable === false) {
-            alert('Semantic features are disabled: Embedding model could not be loaded.');
+          if (isEmbeddingsAvailable === false || isEmbeddingsAvailable === null) {
+            alert('Semantic features are disabled or not yet initialized.');
           } else {
             alert('Failed to generate counsel response. Please check the console for details.');
           }
