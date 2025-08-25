@@ -21,7 +21,7 @@ export const PrivacyView: React.FC<PrivacyViewProps> = ({
           <h1 className="text-3xl font-bold mb-6 text-center">Privacy Policy</h1>
           
           <div className="prose prose-invert max-w-none space-y-6">
-            <p className="text-sm text-gray-300"><strong>Last updated: January 15, 2025</strong></p>
+            <p className="text-sm text-gray-100"><strong>Last updated: January 15, 2025</strong></p>
             
             <section>
               <h2 className="text-xl font-semibold mb-3">Introduction</h2>

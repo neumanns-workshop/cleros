@@ -9,13 +9,13 @@ interface FooterProps {
 export const Footer: React.FC<FooterProps> = ({ setCurrentView }) => (
   <footer className="app-footer mt-8 py-6 border-t border-purple-500/30">
     <div className="container mx-auto px-4 text-center">
-      <p className="text-gray-300 mb-2">© 2025 Galaxy Brain Entertainment</p>
+      <p className="text-gray-100 mb-2">© 2025 Galaxy Brain Entertainment</p>
       {setCurrentView && (
         <div className="flex justify-center space-x-4 text-sm">
           <a 
             href="#"
             onClick={(e) => { e.preventDefault(); setCurrentView('privacy'); }}
-            className="text-gray-400 hover:text-purple-300 underline underline-offset-2 hover:no-underline transition-colors"
+            className="text-gray-200 hover:text-purple-300 underline underline-offset-2 hover:no-underline transition-colors"
           >
             Privacy Policy
           </a>
@@ -23,7 +23,7 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentView }) => (
           <a 
             href="#"
             onClick={(e) => { e.preventDefault(); setCurrentView('terms'); }}
-            className="text-gray-400 hover:text-purple-300 underline underline-offset-2 hover:no-underline transition-colors"
+            className="text-gray-200 hover:text-purple-300 underline underline-offset-2 hover:no-underline transition-colors"
           >
             Terms of Service
           </a>
