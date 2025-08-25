@@ -11,10 +11,12 @@ export const ModeSwitcher = ({ searchMode, setSearchMode, isRandomOrgAvailable, 
   <div className="mode-switcher">
     <button 
       className={`mode-button ${searchMode === 'oracle' ? 'active' : ''}`}
-      title="Random selection using atmospheric noise"
+      title={isRandomOrgAvailable === false 
+        ? 'Oracle mode disabled: Requires true randomness from random.org for principled divination'
+        : 'Random selection using atmospheric noise from random.org'
+      }
       onClick={() => {
         if (isRandomOrgAvailable === false) {
-          alert('Oracle mode requires true randomness from random.org for principled divination.');
           return;
         }
         setSearchMode('oracle');
@@ -29,10 +31,12 @@ export const ModeSwitcher = ({ searchMode, setSearchMode, isRandomOrgAvailable, 
     </button>
     <button 
       className={`mode-button ${searchMode === 'counsel' ? 'active' : ''}`}
-      title="Semantic search for relevant passages"
+      title={!isEmbeddingsAvailable 
+        ? 'Counsel mode disabled: Embedding models are loading or unavailable. Please wait or try again later.'
+        : 'Semantic search for relevant passages using AI embeddings'
+      }
       onClick={() => {
         if (!isEmbeddingsAvailable) {
-          alert('Counsel mode requires embedding models which are not available. Please try again later.');
           return;
         }
         setSearchMode('counsel');

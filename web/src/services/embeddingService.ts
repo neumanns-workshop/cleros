@@ -16,6 +16,15 @@ async function loadTransformers() {
     env.localModelPath = '/models/';
     env.cacheDir = './.cache';
     env.allowRemoteModels = true;
+    
+    // Additional configuration for proper asset loading
+    env.backends = {
+      onnx: {
+        wasm: {
+          wasmPaths: '/assets/'
+        }
+      }
+    };
   }
   return transformersModule;
 }

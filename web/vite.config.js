@@ -7,7 +7,8 @@ export default defineConfig({
     plugins: [react()],
     test: {
         globals: true,
-        environment: 'jsdom'
+        environment: 'jsdom',
+        exclude: ['**/node_modules/**', '**/dist/**', '**/e2e/**']
     },
     resolve: {
         alias: {
@@ -25,7 +26,7 @@ export default defineConfig({
         rollupOptions: {
             output: {
                 manualChunks: {
-                    vendor: ['react', 'react-dom'],
+                    vendor: ['react', 'react-dom']
                     // Move transformers to be loaded dynamically instead of in a separate chunk
                     // This will be loaded on-demand when embedding functionality is actually used
                 }
@@ -33,10 +34,14 @@ export default defineConfig({
         }
     },
     optimizeDeps: {
-        include: ['@xenova/transformers']
+        include: ['@xenova/transformers'],
+        exclude: ['@xenova/transformers/dist/ort-wasm-simd.wasm', 'sharp']
     },
     define: {
         global: 'globalThis'
+    },
+    worker: {
+        format: 'es'
     },
     assetsInclude: ['**/*.onnx', '**/*.wasm']
 });

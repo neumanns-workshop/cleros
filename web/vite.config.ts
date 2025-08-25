@@ -35,10 +35,14 @@ export default defineConfig({
     }
   },
   optimizeDeps: {
-    include: ['@xenova/transformers']
+    include: ['@xenova/transformers'],
+    exclude: ['@xenova/transformers/dist/ort-wasm-simd.wasm', 'sharp']
   },
   define: {
     global: 'globalThis'
+  },
+  worker: {
+    format: 'es'
   },
   assetsInclude: ['**/*.onnx', '**/*.wasm']
 });

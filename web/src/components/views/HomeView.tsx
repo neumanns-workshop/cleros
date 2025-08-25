@@ -92,22 +92,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
           isRandomOrgAvailable={isRandomOrgAvailable}
           isEmbeddingsAvailable={isEmbeddingsAvailable}
         />
-        {(isRandomOrgAvailable === false || !isEmbeddingsAvailable) && (
-          <div className="intro-text">
-            <p>
-              {isRandomOrgAvailable === false && (
-                <span style={{ color: '#ff6b6b', fontSize: '0.9em', display: 'block' }}>
-                  ⚠️ Oracle mode disabled: True randomness required
-                </span>
-              )}
-              {!isEmbeddingsAvailable && (
-                <span style={{ color: '#ff6b6b', fontSize: '0.9em', display: 'block' }}>
-                  ⚠️ Counsel mode disabled: Embedding models unavailable
-                </span>
-              )}
-            </p>
-          </div>
-        )}
+
         <ConsultationForm
           searchQuery={searchQuery}
           setSearchQuery={setSearchQuery}
