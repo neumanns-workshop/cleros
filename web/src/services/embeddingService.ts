@@ -1,4 +1,5 @@
 // Dynamic import for transformers to enable code splitting
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 let transformersModule: any = null;
 
 async function loadTransformers() {

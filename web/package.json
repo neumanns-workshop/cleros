@@ -12,6 +12,9 @@
     "preview": "vite preview",
     "test": "vitest",
     "test:ui": "vitest --ui",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:headed": "playwright test --headed",
     "precompute-embeddings": "node scripts/precomputeTestEmbeddings.js"
   },
   "dependencies": {
@@ -48,5 +51,6 @@
     "wordpos": "^2.1.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.55.0"
   }
 }

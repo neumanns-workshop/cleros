@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { ViewType, SearchMode } from '../types/app';
 import { OracleResponse, CounselResponse } from '../types/oracle';
 import { AllCorpusData, CorpusPart, SourceLink } from '../types/corpus';
@@ -151,7 +151,7 @@ export const useAppState = () => {
   };
 
   // Lazy load corpus data only when needed (for search or corpus view)
-  const loadCorpusDataOnDemand = async () => {
+  const loadCorpusDataOnDemand = useCallback(async () => {
     if (corpusData) return corpusData; // Already loaded
     
     try {
@@ -239,10 +239,7 @@ export const useAppState = () => {
         console.error('❌ Failed to load corpus data:', error);
         throw error;
       }
-    };
-  
-    return loadCorpusDataOnDemand;
-  };
+    }, [corpusData, setCorpusData]);
 
 
 
@@ -383,9 +380,9 @@ export const useAppState = () => {
       if (sourceLink.key !== undefined) {
         setSelectedSection(sourceLink.key.toString());
         console.log(`📍 Navigating to part: ${sourceLink.key}`);
-      } else if (sourceLink.sectionTitle && data[sourceLink.corpus]) {
+      } else if (sourceLink.sectionTitle && data[sourceLink.corpus as keyof typeof data]) {
         // Fallback: find the part by matching sectionTitle
-        const corpus = data[sourceLink.corpus];
+        const corpus = data[sourceLink.corpus as keyof typeof data];
         const part = corpus?.parts?.find((p: CorpusPart) => 
           p.title_english === sourceLink.sectionTitle || 
           p.title === sourceLink.sectionTitle ||
@@ -427,7 +424,7 @@ export const useAppState = () => {
         setLoading(false);
       });
     }
-  }, [currentView, corpusData]);
+  }, [currentView, corpusData, loadCorpusDataOnDemand]);
 
   return {
     // View state

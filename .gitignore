@@ -90,3 +90,11 @@ package-lock.json
 
 # Local Netlify folder
 .netlify
+
+# Testing artifacts
+web/playwright-report/
+web/test-results/
+web/tsconfig.tsbuildinfo
+
+# Lighthouse reports
+lighthouse-report.json
