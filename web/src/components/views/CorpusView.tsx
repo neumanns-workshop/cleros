@@ -454,8 +454,7 @@ export const CorpusView: React.FC<CorpusViewProps> = ({
         {selectedSource === 'personal' && (currentOracleResponse || currentCounselResponse) && (
           <div style={{ 
             padding: '12px 24px',
-            borderBottom: '1px solid #333',
-            backgroundColor: '#111'
+            borderBottom: '1px solid #a8a8a833'
           }}>
             <button 
               onClick={() => setShowShareDialog(true)}
@@ -464,9 +463,9 @@ export const CorpusView: React.FC<CorpusViewProps> = ({
                 alignItems: 'center',
                 gap: '6px',
                 padding: '8px 16px',
-                backgroundColor: '#9370db',
-                color: '#ffffff',
-                border: '1px solid #9370db',
+                backgroundColor: 'transparent',
+                color: '#a8a8a8',
+                border: '1px solid #a8a8a866',
                 borderRadius: '6px',
                 fontSize: '0.85rem',
                 fontWeight: '500',
@@ -476,16 +475,14 @@ export const CorpusView: React.FC<CorpusViewProps> = ({
                 transition: 'all 0.2s ease'
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = '#a478e4';
-                e.currentTarget.style.borderColor = '#a478e4';
-                e.currentTarget.style.transform = 'translateY(-1px)';
-                e.currentTarget.style.boxShadow = '0 4px 12px rgba(147, 112, 219, 0.3)';
+                e.currentTarget.style.backgroundColor = '#d4af3722';
+                e.currentTarget.style.borderColor = '#d4af37';
+                e.currentTarget.style.color = '#d4af37';
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = '#9370db';
-                e.currentTarget.style.borderColor = '#9370db';
-                e.currentTarget.style.transform = 'translateY(0px)';
-                e.currentTarget.style.boxShadow = 'none';
+                e.currentTarget.style.backgroundColor = 'transparent';
+                e.currentTarget.style.borderColor = '#a8a8a866';
+                e.currentTarget.style.color = '#a8a8a8';
               }}
             >
               Share
@@ -555,7 +552,7 @@ export const CorpusView: React.FC<CorpusViewProps> = ({
                       className="source-button"
                       onClick={async () => selectedLine.sourceLink && await navigateToSource(selectedLine.sourceLink)}
                     >
-                      Go to {selectedLine.sourceLink.corpus.charAt(0).toUpperCase() + selectedLine.sourceLink.corpus.slice(1)}: {selectedLine.sourceLink.sectionTitle || `Line ${selectedLine.line}`}
+                      Go to line
                     </button>
                   </div>
                 )}
