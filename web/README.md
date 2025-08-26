@@ -19,7 +19,6 @@ A sophisticated React application for consulting ancient Greek texts through dig
 ### Machine Learning Stack
 - **@xenova/transformers** (transformers.js) for client-side AI
 - **all-MiniLM-L6-v2** model for semantic embeddings (384D vectors)
-- **Web Workers** for non-blocking ML operations
 - **Cosine similarity** for semantic matching
 - **Synonym expansion** for enhanced keyword matching
 
@@ -61,10 +60,7 @@ src/
 │   ├── embeddingService.ts  # Text embeddings and similarity calculations
 │   ├── semanticLineRanker.ts # Advanced semantic ranking algorithms
 │   ├── synonymExpansionService.ts # Keyword expansion for better matching
-│   ├── mlCacheManager.ts    # ML model caching and memory management
-│   └── workerManager.ts     # Web Worker coordination
-├── workers/                 # Web Workers for intensive computations
-│   └── embeddingWorker.ts   # ML embedding generation in background
+
 ├── types/                   # TypeScript definitions for type safety
 │   ├── app.ts               # Application-wide types
 │   ├── corpus.ts           # Corpus data structures
@@ -87,7 +83,7 @@ src/
 
 **Counsel Mode: Semantic Intelligence**
 - AI-powered semantic search using **all-MiniLM-L6-v2** transformer model
-- Client-side ML processing with **transformers.js** and Web Workers
+- Client-side ML processing with **transformers.js**
 - 384-dimensional vector embeddings for precise semantic matching
 - Enhanced keyword expansion with synonym analysis
 - Combines semantic similarity (70%) with keyword relevance (30%)
@@ -97,9 +93,7 @@ src/
 
 **Performance Optimizations:**
 - **Code splitting** with ML-specific chunks loaded on demand
-- **Web Workers** prevent main thread blocking during ML operations
 - **Lazy loading** of transformer models until first Counsel use
-- **Memory-conscious** model management with singleton patterns
 - **Embedding caching** with efficient NumPy array parsing
 
 **Semantic Processing:**
@@ -272,7 +266,6 @@ This project emphasizes **real-world testing** over mocking to ensure production
 
 **Memory Management:**
 - **Singleton patterns** for ML models to prevent memory leaks
-- **Web Workers** for ML operations to keep main thread responsive
 - **Lazy loading** - ML models only load when Counsel mode is first used
 - **Efficient caching** with cleanup strategies for embeddings
 - **NumPy array parsing** for optimal vector storage
@@ -374,7 +367,7 @@ npm run lint           # Code quality
 **Key Values:**
 - **Authenticity**: Oracle mode maintains pure bibliomantic tradition
 - **Innovation**: Counsel mode showcases cutting-edge semantic search
-- **Performance**: Client-side ML with Web Workers and intelligent caching
+- **Performance**: Client-side ML with intelligent caching
 - **Accessibility**: Universal design for all users and devices
 - **Quality**: Real-world testing ensures production reliability
 
