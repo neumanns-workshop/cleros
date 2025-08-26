@@ -58,6 +58,7 @@ const OracleLine = ({ lineData, oracleResponse, onNavigate, onLineClick }: Oracl
             className={`text-line ${isHeader ? 'section-header' : ''}`}
             onClick={handleLineClick}
             style={lineStyle}
+            data-line={lineData.line}
         >
             <span className="line-number" style={{ opacity: isHeader ? 0 : 1 }}>
                 {isHeader ? '' : lineData.line}

@@ -101,14 +101,14 @@ const ShareCard: React.FC<ShareCardProps> = React.memo(({ response, currentOptio
       style={{
         width: '500px',
         maxWidth: '100%',
-        backgroundColor: '#1a1a1a', // Dark background
-        color: '#e0e0e0', // Primary text color
+        backgroundColor: '#242830', // Card background
+        color: '#f5f4f0', // Primary text color
         padding: '24px',
         borderRadius: '8px',
         fontFamily: "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
         textAlign: 'center' as const,
         boxShadow: '0 4px 20px rgba(0,0,0,0.15)',
-        border: '1px solid #333'
+        border: '1px solid #a8a8a833'
       }}
     >
       {/* Header */}
@@ -124,7 +124,7 @@ const ShareCard: React.FC<ShareCardProps> = React.memo(({ response, currentOptio
         >
           <h1 
             style={{ 
-              color: '#e0e0e0',
+              color: '#f5f4f0',
               fontSize: '1.5rem',
               fontWeight: 500,
               letterSpacing: '0.15em',
@@ -136,7 +136,7 @@ const ShareCard: React.FC<ShareCardProps> = React.memo(({ response, currentOptio
           </h1>
           <span 
             style={{
-              color: '#b0b0b0',
+              color: '#a8a8a8',
               fontSize: '1rem',
               fontWeight: 300,
               letterSpacing: '0.08em',
@@ -149,7 +149,7 @@ const ShareCard: React.FC<ShareCardProps> = React.memo(({ response, currentOptio
         <div 
           style={{
             height: '1px',
-            backgroundColor: '#333',
+            backgroundColor: '#a8a8a833',
             margin: '16px 0'
           }}
         />
@@ -158,11 +158,11 @@ const ShareCard: React.FC<ShareCardProps> = React.memo(({ response, currentOptio
       {/* Query */}
       <div 
         style={{ 
-          color: '#cccccc',
+          color: '#a8a8a8',
           fontStyle: 'italic',
           fontSize: '0.9rem',
           marginBottom: '18px',
-          opacity: 0.75,
+          opacity: 0.8,
           fontWeight: 300
         }}
       >
@@ -175,14 +175,16 @@ const ShareCard: React.FC<ShareCardProps> = React.memo(({ response, currentOptio
         <div 
           style={{
             height: '1px',
-            backgroundColor: '#444',
-            width: '60px',
+            backgroundColor: '#a8a8a833',
+            width: '15%',
+            minWidth: '40px',
+            maxWidth: '60px',
             margin: '0 auto 9px auto'
           }}
         />
         <div 
           style={{ 
-            color: '#cccccc',
+            color: '#a8a8a8',
             fontSize: '0.85rem',
             fontWeight: '500',
             lineHeight: 1.4,
@@ -194,15 +196,15 @@ const ShareCard: React.FC<ShareCardProps> = React.memo(({ response, currentOptio
           <span style={{ textTransform: 'uppercase', fontWeight: '500' }}>
             {currentOption.corpus}
           </span>
-          <span style={{ margin: '0 8px', color: '#999' }}>•</span>
+          <span style={{ margin: '0 8px', color: '#a8a8a8' }}>•</span>
           {/* Title and line info */}
           {currentOption.corpus === 'hymns' 
             ? formatTitle(currentOption.content.sectionTitle)
             : currentOption.content.sectionTitle}
           {getLineRange(currentOption.corpus) && (
             <>
-              <span style={{ color: '#999' }}>,</span>
-              <span style={{ margin: '0 0 0 4px', color: '#999' }}>
+              <span style={{ color: '#a8a8a8' }}>,</span>
+              <span style={{ margin: '0 0 0 4px', color: '#a8a8a8' }}>
                 {getLineRange(currentOption.corpus)}
               </span>
             </>
@@ -218,8 +220,10 @@ const ShareCard: React.FC<ShareCardProps> = React.memo(({ response, currentOptio
         <div 
           style={{
             height: '1px',
-            backgroundColor: '#444',
-            width: '60px',
+            backgroundColor: '#a8a8a833',
+            width: '15%',
+            minWidth: '40px',
+            maxWidth: '60px',
             margin: '0 auto 12px auto'
           }}
         />
@@ -255,8 +259,8 @@ const ShareCard: React.FC<ShareCardProps> = React.memo(({ response, currentOptio
           style={{
             position: 'absolute',
             bottom: '25px',
-            left: '60px',
-            right: '60px',
+            left: '15%',
+            right: '15%',
             height: '1px',
             backgroundColor: '#333'
           }}

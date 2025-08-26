@@ -13,66 +13,66 @@ export const PrivacyView: React.FC<PrivacyViewProps> = ({
   setCurrentView
 }) => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white">
+    <div className="app">
       <Header currentView={currentView} setCurrentView={setCurrentView} />
       
-      <main className="container mx-auto px-4 py-8 max-w-4xl">
-        <div className="bg-black/30 backdrop-blur-sm rounded-lg p-8 border border-purple-500/30">
-          <h1 className="text-3xl font-bold mb-6 text-center">Privacy Policy</h1>
+      <main className="about-view">
+        <div style={{ backgroundColor: '#242830', border: '1px solid #a8a8a833', borderRadius: '8px', padding: '2rem' }}>
+          <h2 style={{ color: '#d4af37', textAlign: 'center', marginBottom: '2rem' }}>Privacy Policy</h2>
           
-          <div className="prose prose-invert max-w-none space-y-6">
-            <p className="text-sm text-gray-100"><strong>Last updated: January 15, 2025</strong></p>
+          <div style={{ color: '#f5f4f0', lineHeight: '1.6' }}>
+            <p style={{ fontSize: '0.9rem', color: '#a8a8a8', marginBottom: '1.5rem' }}><strong>Last updated: January 15, 2025</strong></p>
             
-            <section>
-              <h2 className="text-xl font-semibold mb-3">Introduction</h2>
-              <p>
+            <section style={{ marginBottom: '2rem' }}>
+              <h3 style={{ color: '#d4af37', fontSize: '1.3rem', marginBottom: '1rem' }}>Introduction</h3>
+              <p style={{ marginBottom: '1rem' }}>
                 Cleros ("we," "our," or "us") respects your privacy and is committed to protecting your personal information. 
                 This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our 
                 ancient oracle consultation platform.
               </p>
             </section>
 
-            <section>
-              <h2 className="text-xl font-semibold mb-3">Information We Collect</h2>
-              <ul className="list-disc list-inside space-y-2">
-                <li><strong>Consultation Records:</strong> Your oracle queries and responses are stored locally on your device to provide historical access to your consultations.</li>
-                <li><strong>Preferences:</strong> Your selected mode (modern/ancient) and theme preferences are stored locally.</li>
-                <li>We do not collect any personally identifiable information.</li>
+            <section style={{ marginBottom: '2rem' }}>
+              <h3 style={{ color: '#d4af37', fontSize: '1.3rem', marginBottom: '1rem' }}>Information We Collect</h3>
+              <ul style={{ marginLeft: '1.5rem', marginBottom: '1rem' }}>
+                <li style={{ marginBottom: '0.5rem' }}><strong>Consultation Records:</strong> Your oracle queries and responses are stored locally on your device to provide historical access to your consultations.</li>
+                <li style={{ marginBottom: '0.5rem' }}><strong>Preferences:</strong> Your selected mode (modern/ancient) and theme preferences are stored locally.</li>
+                <li style={{ marginBottom: '0.5rem' }}>We do not collect any personally identifiable information.</li>
               </ul>
             </section>
 
-            <section>
-              <h2 className="text-xl font-semibold mb-3">How We Use Your Information</h2>
-              <p>
+            <section style={{ marginBottom: '2rem' }}>
+              <h3 style={{ color: '#d4af37', fontSize: '1.3rem', marginBottom: '1rem' }}>How We Use Your Information</h3>
+              <p style={{ marginBottom: '1rem' }}>
                 We do not collect or use any of your personal information. All consultation data and preferences are stored 
                 locally on your device and are not transmitted to our servers.
               </p>
             </section>
 
-            <section>
-              <h2 className="text-xl font-semibold mb-3">Data Sharing</h2>
-              <ul className="list-disc list-inside space-y-2">
-                <li>We do not share, sell, or transmit any of your data to third parties.</li>
-                <li>All oracle consultations remain private and local to your device.</li>
+            <section style={{ marginBottom: '2rem' }}>
+              <h3 style={{ color: '#d4af37', fontSize: '1.3rem', marginBottom: '1rem' }}>Data Sharing</h3>
+              <ul style={{ marginLeft: '1.5rem', marginBottom: '1rem' }}>
+                <li style={{ marginBottom: '0.5rem' }}>We do not share, sell, or transmit any of your data to third parties.</li>
+                <li style={{ marginBottom: '0.5rem' }}>All oracle consultations remain private and local to your device.</li>
               </ul>
             </section>
 
-            <section>
-              <h2 className="text-xl font-semibold mb-3">Your Rights & Controls</h2>
-              <p>You have full control over your data:</p>
-              <p><strong>Data Management:</strong></p>
-              <ul className="list-disc list-inside space-y-2 mt-2">
-                <li>You can clear your browser cache to reset all of your consultation history at any time.</li>
-                <li>Deleting the application from your device will permanently remove all associated data.</li>
+            <section style={{ marginBottom: '2rem' }}>
+              <h3 style={{ color: '#d4af37', fontSize: '1.3rem', marginBottom: '1rem' }}>Your Rights & Controls</h3>
+              <p style={{ marginBottom: '1rem' }}>You have full control over your data:</p>
+              <p style={{ marginBottom: '0.5rem' }}><strong>Data Management:</strong></p>
+              <ul style={{ marginLeft: '1.5rem', marginBottom: '1rem' }}>
+                <li style={{ marginBottom: '0.5rem' }}>You can clear your browser cache to reset all of your consultation history at any time.</li>
+                <li style={{ marginBottom: '0.5rem' }}>Deleting the application from your device will permanently remove all associated data.</li>
               </ul>
             </section>
 
-            <section>
-              <h2 className="text-xl font-semibold mb-3">Contact Us</h2>
-              <p>If you have questions about this Privacy Policy, please contact us at:</p>
-              <ul className="list-disc list-inside space-y-2 mt-2">
-                <li>Email: social@gbe.games</li>
-                <li>Website: cleros.gbe.games</li>
+            <section style={{ marginBottom: '2rem' }}>
+              <h3 style={{ color: '#d4af37', fontSize: '1.3rem', marginBottom: '1rem' }}>Contact Us</h3>
+              <p style={{ marginBottom: '1rem' }}>If you have questions about this Privacy Policy, please contact us at:</p>
+              <ul style={{ marginLeft: '1.5rem', marginBottom: '1rem' }}>
+                <li style={{ marginBottom: '0.5rem' }}>Email: <a href="mailto:social@gbe.games" style={{ color: '#d4af37', textDecoration: 'underline' }}>social@gbe.games</a></li>
+                <li style={{ marginBottom: '0.5rem' }}>Website: <a href="https://cleros.gbe.games" style={{ color: '#d4af37', textDecoration: 'underline' }}>cleros.gbe.games</a></li>
               </ul>
             </section>
           </div>

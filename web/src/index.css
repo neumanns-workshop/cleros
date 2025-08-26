@@ -3,15 +3,15 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #000000 !important;
-  color: #e0e0e0;
+  background-color: #1a1d23 !important;
+  color: #f5f4f0;
 }
 
 html {
-  background-color: #000000 !important;
+  background-color: #1a1d23 !important;
 }
 
 #root {
-  background-color: #000000 !important;
+  background-color: #1a1d23 !important;
   min-height: 100vh;
 }

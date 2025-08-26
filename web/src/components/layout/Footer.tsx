@@ -7,28 +7,38 @@ interface FooterProps {
 }
 
 export const Footer: React.FC<FooterProps> = ({ setCurrentView }) => (
-  <footer className="app-footer mt-8 py-6 border-t border-purple-500/30">
-    <div className="container mx-auto px-4 text-center">
-      <p className="text-gray-100 mb-2">© 2025 Galaxy Brain Entertainment</p>
-      {setCurrentView && (
-        <div className="flex justify-center space-x-4 text-sm">
-          <a 
-            href="#"
-            onClick={(e) => { e.preventDefault(); setCurrentView('privacy'); }}
-            className="text-gray-200 hover:text-purple-300 underline underline-offset-2 hover:no-underline transition-colors"
-          >
-            Privacy Policy
-          </a>
-          <span className="text-gray-500">•</span>
-          <a 
-            href="#"
-            onClick={(e) => { e.preventDefault(); setCurrentView('terms'); }}
-            className="text-gray-200 hover:text-purple-300 underline underline-offset-2 hover:no-underline transition-colors"
-          >
-            Terms of Service
-          </a>
-        </div>
-      )}
-    </div>
+  <footer className="app-footer">
+    <p style={{ margin: '0 0 0.5rem 0', color: '#f5f4f0' }}>© 2025 Galaxy Brain Entertainment</p>
+    {setCurrentView && (
+      <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', fontSize: '0.9rem' }}>
+        <a 
+          href="#"
+          onClick={(e) => { e.preventDefault(); setCurrentView('privacy'); }}
+          style={{ 
+            color: '#a8a8a8', 
+            textDecoration: 'underline',
+            transition: 'color 0.3s ease'
+          }}
+          onMouseEnter={(e) => e.currentTarget.style.color = '#d4af37'}
+          onMouseLeave={(e) => e.currentTarget.style.color = '#a8a8a8'}
+        >
+          Privacy Policy
+        </a>
+        <span style={{ color: '#a8a8a8' }}>•</span>
+        <a 
+          href="#"
+          onClick={(e) => { e.preventDefault(); setCurrentView('terms'); }}
+          style={{ 
+            color: '#a8a8a8', 
+            textDecoration: 'underline',
+            transition: 'color 0.3s ease'
+          }}
+          onMouseEnter={(e) => e.currentTarget.style.color = '#d4af37'}
+          onMouseLeave={(e) => e.currentTarget.style.color = '#a8a8a8'}
+        >
+          Terms of Service
+        </a>
+      </div>
+    )}
   </footer>
 );

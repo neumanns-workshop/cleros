@@ -555,7 +555,7 @@ export const CorpusView: React.FC<CorpusViewProps> = ({
                       className="source-button"
                       onClick={async () => selectedLine.sourceLink && await navigateToSource(selectedLine.sourceLink)}
                     >
-                      Go to {selectedLine.sourceLink.corpus.charAt(0).toUpperCase() + selectedLine.sourceLink.corpus.slice(1)}: {selectedLine.sourceLink.sectionTitle || `Line ${selectedLine.sourceLink.lineNumber}`}
+                      Go to {selectedLine.sourceLink.corpus.charAt(0).toUpperCase() + selectedLine.sourceLink.corpus.slice(1)}: {selectedLine.sourceLink.sectionTitle || `Line ${selectedLine.line}`}
                     </button>
                   </div>
                 )}

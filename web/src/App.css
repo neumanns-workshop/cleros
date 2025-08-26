@@ -9,17 +9,17 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #000000 !important;
-  color: #e0e0e0;
+  background-color: #1a1d23 !important;
+  color: #f5f4f0;
   min-height: 100vh;
 }
 
 html {
-  background-color: #000000 !important;
+  background-color: #1a1d23 !important;
 }
 
 #root {
-  background-color: #000000 !important;
+  background-color: #1a1d23 !important;
   min-height: 100vh;
 }
 
@@ -54,7 +54,7 @@ h1 {
 /* App styles */
 .app {
   min-height: 100vh;
-  background-color: #000000;
+  background-color: #1a1d23;
   display: flex;
   flex-direction: column;
 }
@@ -65,7 +65,7 @@ h1 {
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 2rem;
-  background-color: #000000;
+  background-color: #1a1d23;
   flex-wrap: wrap;
   gap: 1rem;
 }
@@ -82,22 +82,18 @@ h1 {
   width: 120px;
   height: 120px;
   object-fit: contain;
-  filter: brightness(1.3) contrast(1.2);
-  background: radial-gradient(circle, rgba(160, 160, 160, 0.1) 0%, transparent 70%);
-  border-radius: 50%;
   padding: 10px;
-  transition: all 0.3s ease;
+  transition: opacity 0.3s ease;
   flex-shrink: 0;
 }
 
 .logo:hover {
-  filter: brightness(1.5) contrast(1.3);
-  transform: scale(1.05);
+  opacity: 0.8;
 }
 
 .title {
   font-size: 1.5rem;
-  color: #a0a0a0;
+  color: #a8a8a8;
   cursor: pointer;
   transition: color 0.3s ease;
   margin: 0;
@@ -105,7 +101,7 @@ h1 {
 }
 
 .title:hover {
-  color: #e0e0e0;
+  color: #d4af37;
 }
 
 .header-nav {
@@ -152,8 +148,8 @@ h1 {
 
 .nav-button {
   background: transparent;
-  border: 1px solid #a0a0a033;
-  color: #a0a0a0;
+  border: 1px solid #a8a8a833;
+  color: #a8a8a8;
   padding: 0.5rem 1rem;
   border-radius: 4px;
   cursor: pointer;
@@ -180,20 +176,20 @@ h1 {
 }
 
 .nav-button:hover {
-  border-color: #a0a0a066;
-  color: #e0e0e0;
+  border-color: #d4af37;
+  color: #d4af37;
 }
 
 .nav-button.active {
-  border-color: #a0a0a0;
-  color: #e0e0e0;
-  background-color: #a0a0a011;
+  border-color: #d4af37;
+  color: #d4af37;
+  background-color: #d4af3715;
 }
 
 /* Card component base styling */
 .card {
-  background-color: #1c1c1c;
-  border: 1px solid #a0a0a033;
+  background-color: #242830;
+  border: 1px solid #a8a8a833;
   border-radius: 8px;
   padding: 1.5rem;
   margin-bottom: 1rem;
@@ -208,8 +204,8 @@ h1 {
 }
 
 .card:hover {
-  border-color: #a0a0a066;
-  background-color: #252525;
+  border-color: #d4af37;
+  background-color: #2d3142;
 }
 
 /* Responsive card behavior */
@@ -299,10 +295,9 @@ h1 {
   font-size: 1.1rem;
   line-height: 1.8;
   letter-spacing: 0.03em;
-  color: #707070;
-  opacity: 0.6;
+  color: #a8a8a8;
+  opacity: 0.8;
   font-style: italic;
-  text-shadow: 0 0 8px rgba(112, 112, 112, 0.3);
 }
 
 /* Mode Switcher */
@@ -310,7 +305,7 @@ h1 {
   display: flex;
   gap: 0;
   margin-bottom: 2rem;
-  border: 1px solid #a0a0a033;
+  border: 1px solid #a8a8a833;
   border-radius: 8px;
   overflow: hidden;
   width: 100%;
@@ -320,7 +315,7 @@ h1 {
 .mode-button {
   background: transparent;
   border: none;
-  color: #a0a0a0;
+  color: #a8a8a8;
   padding: 0.75rem 2rem;
   cursor: pointer;
   font-family: inherit;
@@ -328,7 +323,7 @@ h1 {
   letter-spacing: 0.1em;
   font-size: 0.9rem;
   transition: all 0.3s ease;
-  border-right: 1px solid #a0a0a033;
+  border-right: 1px solid #a8a8a833;
   flex: 1;
   min-height: 48px;
   display: flex;
@@ -355,13 +350,13 @@ h1 {
 }
 
 .mode-button:hover {
-  color: #e0e0e0;
-  background-color: #a0a0a011;
+  color: #d4af37;
+  background-color: #d4af3715;
 }
 
 .mode-button.active {
-  color: #e0e0e0;
-  background-color: #a0a0a022;
+  color: #d4af37;
+  background-color: #d4af3722;
 }
 
 
@@ -369,7 +364,7 @@ h1 {
 /* Page Views */
 .corpus-view, .about-view {
   padding: 2rem;
-  color: #e0e0e0;
+  color: #f5f4f0;
   max-width: 1000px;
   margin: 0 auto;
   flex: 1;
@@ -384,7 +379,7 @@ h1 {
 
 .corpus-view h2, .about-view h2 {
   margin-bottom: 2rem;
-  color: #a0a0a0;
+  color: #d4af37;
   font-size: 2.5rem;
   text-align: center;
   letter-spacing: 0.1em;
@@ -400,7 +395,7 @@ h1 {
 .about-section {
   margin-bottom: 2rem;
   padding: 1rem 0;
-  border-bottom: 1px solid #a0a0a022;
+  border-bottom: 1px solid #a8a8a822;
 }
 
 .about-section:last-child {
@@ -408,7 +403,7 @@ h1 {
 }
 
 .about-section h3 {
-  color: #a0a0a0;
+  color: #d4af37;
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
   letter-spacing: 0.1em;
@@ -416,7 +411,7 @@ h1 {
 }
 
 .about-section h4 {
-  color: #c0c0c0;
+  color: #a8a8a8;
   font-size: 1.2rem;
   margin-bottom: 1rem;
   margin-top: 1.5rem;
@@ -428,12 +423,12 @@ h1 {
 }
 
 .about-section em {
-  color: #b0b0b0;
+  color: #a8a8a8;
   font-style: italic;
 }
 
 .about-section strong {
-  color: #f0f0f0;
+  color: #f5f4f0;
   font-weight: 600;
 }
 
@@ -441,13 +436,13 @@ h1 {
 .mode-description {
   margin: 1.5rem 0;
   padding: 1rem;
-  background-color: #0a0a0a;
-  border: 1px solid #a0a0a033;
+  background-color: #2d3142;
+  border: 1px solid #a8a8a833;
   border-radius: 8px;
 }
 
 .mode-description h4 {
-  color: #a0a0a0;
+  color: #d4af37;
   margin-top: 0;
   margin-bottom: 1rem;
   font-size: 1.3rem;
@@ -471,13 +466,13 @@ h1 {
 
 .corpus-text {
   padding: 1rem;
-  background-color: #0a0a0a;
-  border: 1px solid #a0a0a033;
+  background-color: #2d3142;
+  border: 1px solid #a8a8a833;
   border-radius: 8px;
 }
 
 .corpus-text h4 {
-  color: #a0a0a0;
+  color: #d4af37;
   margin-top: 0;
   margin-bottom: 1rem;
   font-size: 1.2rem;
@@ -499,14 +494,14 @@ h1 {
 .response-structure li {
   padding: 0.75rem 1rem;
   margin-bottom: 0.5rem;
-  background-color: #0a0a0a;
-  border: 1px solid #a0a0a033;
+  background-color: #2d3142;
+  border: 1px solid #d4af3733;
   border-radius: 6px;
-  border-left: 4px solid #a0a0a0;
+  border-left: 4px solid #d4af37;
 }
 
 .response-structure li strong {
-  color: #a0a0a0;
+  color: #d4af37;
   display: inline-block;
   width: 120px;
   font-weight: 600;
@@ -566,7 +561,7 @@ h1 {
   align-items: center;
   margin-bottom: 2rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid #a0a0a033;
+  border-bottom: 1px solid #a8a8a833;
 }
 
 .corpus-controls {
@@ -575,9 +570,9 @@ h1 {
 }
 
 .source-selector, .section-selector {
-  background-color: #1c1c1c;
-  border: 1px solid #a0a0a033;
-  color: #e0e0e0;
+  background-color: #242830;
+  border: 1px solid #a8a8a833;
+  color: #f5f4f0;
   padding: 0.5rem 1rem;
   border-radius: 4px;
   font-family: inherit;
@@ -592,13 +587,13 @@ h1 {
 
 .source-selector:focus, .section-selector:focus {
   outline: none;
-  border-color: #a0a0a066;
+  border-color: #d4af37;
 }
 
 /* Hymn Metadata Display */
 .hymn-metadata {
-  background-color: #0a0a0a;
-  border: 1px solid #a0a0a033;
+  background-color: #2d3142;
+  border: 1px solid #a8a8a833;
   border-radius: 8px;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
@@ -611,26 +606,26 @@ h1 {
 }
 
 .hymn-title {
-  color: #e0e0e0;
+  color: #f5f4f0;
   font-size: 1.4rem;
   margin: 0 0 0.5rem 0;
   letter-spacing: 0.05em;
 }
 
 .hymn-incense {
-  color: #a0a0a0;
+  color: #a8a8a8;
   margin: 0;
   font-size: 0.95rem;
   letter-spacing: 0.02em;
 }
 
 .hymn-incense strong {
-  color: #c0c0c0;
+  color: #f5f4f0;
 }
 
 .corpus-content {
-  background-color: #0a0a0a;
-  border: 1px solid #a0a0a033;
+  background-color: #2d3142;
+  border: 1px solid #a8a8a833;
   border-radius: 8px;
   padding: 0;
   max-height: 600px;
@@ -648,14 +643,13 @@ h1 {
   text-align: center;
   padding: 2rem;
   margin-top: 3rem;
-  border-top: 1px solid #a0a0a011;
-  color: #707070;
+  border-top: 1px solid #a8a8a811;
+  color: #a8a8a8;
   opacity: 0.6;
   font-style: italic;
   font-size: 0.75rem;
   letter-spacing: 0.03em;
   line-height: 1.4;
-  text-shadow: 0 0 8px rgba(112, 112, 112, 0.3);
 }
 
 .app-footer p {
@@ -670,7 +664,7 @@ h1 {
   display: flex;
   align-items: center;
   padding: 1rem;
-  border-bottom: 1px solid #a0a0a011;
+  border-bottom: 1px solid #a8a8a811;
   cursor: pointer;
   transition: background-color 0.2s ease;
   width: 100%;
@@ -679,7 +673,7 @@ h1 {
 }
 
 .text-line:hover {
-  background-color: #a0a0a011;
+  background-color: #a8a8a811;
 }
 
 .text-line:last-child {
@@ -687,7 +681,7 @@ h1 {
 }
 
 .line-number {
-  color: #a0a0a0;
+  color: #a8a8a8;
   font-size: 0.8rem;
   width: 4ch;
   min-width: 4ch;
@@ -700,7 +694,7 @@ h1 {
 }
 
 .line-text {
-  color: #e0e0e0;
+  color: #f5f4f0;
   line-height: 1.6;
   letter-spacing: 0.02em;
   font-size: 1rem;
@@ -714,7 +708,7 @@ h1 {
 .no-content {
   padding: 2rem;
   text-align: center;
-  color: #a0a0a0;
+  color: #a8a8a8;
 }
 
 /* Keyword Highlighting */
@@ -799,8 +793,8 @@ h1 {
 }
 
 .line-modal {
-  background-color: #1c1c1c;
-  border: 1px solid #a0a0a033;
+  background-color: #242830;
+  border: 1px solid #a8a8a833;
   border-radius: 8px;
   max-width: 700px;
   width: 90%;
@@ -813,18 +807,18 @@ h1 {
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem;
-  border-bottom: 1px solid #a0a0a033;
+  border-bottom: 1px solid #a8a8a833;
 }
 
 .line-modal-header h3 {
-  color: #e0e0e0;
+  color: #f5f4f0;
   margin: 0;
 }
 
 .close-button {
   background: transparent;
   border: none;
-  color: #a0a0a0;
+  color: #a8a8a8;
   font-size: 1.5rem;
   cursor: pointer;
   width: 32px;
@@ -837,8 +831,8 @@ h1 {
 }
 
 .close-button:hover {
-  background-color: #a0a0a022;
-  color: #e0e0e0;
+  background-color: #d4af3722;
+  color: #d4af37;
 }
 
 .line-modal-content {
@@ -854,13 +848,13 @@ h1 {
 }
 
 .line-section h4 {
-  color: #a0a0a0;
+  color: #d4af37;
   margin-bottom: 0.75rem;
   font-size: 0.9rem;
 }
 
 .english-text {
-  color: #e0e0e0;
+  color: #f5f4f0;
   line-height: 1.6;
   letter-spacing: 0.02em;
   font-size: 1.1rem;
@@ -871,7 +865,7 @@ h1 {
 }
 
 .greek-text {
-  color: #e0e0e0;
+  color: #f5f4f0;
   line-height: 1.6;
   letter-spacing: 0.02em;
   font-size: 1.2rem;
@@ -895,8 +889,8 @@ h1 {
 
 .source-button {
   background: transparent;
-  border: 1px solid #a0a0a066;
-  color: #a0a0a0;
+  border: 1px solid #a8a8a866;
+  color: #a8a8a8;
   padding: 0.5rem 1rem;
   border-radius: 4px;
   font-size: 0.85rem;
@@ -907,9 +901,9 @@ h1 {
 }
 
 .source-button:hover {
-  border-color: #ffffff;
-  color: #ffffff;
-  background-color: rgba(255, 255, 255, 0.05);
+  border-color: #d4af37;
+  color: #d4af37;
+  background-color: rgba(212, 175, 55, 0.1);
 }
 
 /* Ancient Query Carousel */
@@ -930,21 +924,20 @@ h1 {
 }
 
 .ancient-query-carousel:hover .query-text {
-  opacity: 0.85;
-  text-shadow: 0 0 12px rgba(112, 112, 112, 0.5);
+  opacity: 1;
+  color: #d4af37;
 }
 
 .query-text {
   font-size: 1.2rem;
   line-height: 1.6;
-  color: #e5e7eb; /* gray-200 for better contrast */
-  opacity: 0.9; /* Higher opacity for better readability */
+  color: #a8a8a8;
+  opacity: 0.8;
   font-style: italic;
   letter-spacing: 0.03em;
   word-wrap: break-word;
   overflow-wrap: break-word;
-  text-shadow: 0 0 8px rgba(112, 112, 112, 0.3);
-  transition: opacity 0.5s ease;
+  transition: opacity 0.3s ease;
 }
 
 @media (max-width: 768px) {
@@ -967,8 +960,8 @@ h1 {
 .consultation-form {
   display: flex;
   align-items: center;
-  background-color: #1c1c1c;
-  border: 1px solid #a0a0a033;
+  background-color: #242830;
+  border: 1px solid #a8a8a833;
   border-radius: 8px;
   padding: 1rem;
   max-width: 500px;
@@ -983,7 +976,7 @@ h1 {
   background: transparent;
   border: none;
   outline: none;
-  color: #e0e0e0;
+  color: #f5f4f0;
   font-size: 1rem;
   letter-spacing: 0.05em;
   font-family: inherit;
@@ -991,7 +984,7 @@ h1 {
 }
 
 .query-input::placeholder {
-  color: #a0a0a0;
+  color: #a8a8a8;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-size: 0.9rem;
@@ -1000,7 +993,7 @@ h1 {
 .submit-button {
   background: transparent;
   border: none;
-  color: #a0a0a0;
+  color: #a8a8a8;
   font-size: 1.5rem;
   cursor: pointer;
   padding: 0.5rem;
@@ -1015,7 +1008,7 @@ h1 {
 }
 
 .submit-button:hover {
-  color: #e0e0e0;
+  color: #d4af37;
 }
 
 @media (max-width: 768px) {
@@ -1088,9 +1081,9 @@ h1 {
 /* Corpus View Specific */
 .source-selector, .section-selector {
   padding: 0.5rem;
-  background-color: #1a1a1a;
-  color: #ffffff;
-  border: 1px solid #333;
+  background-color: #242830;
+  color: #f5f4f0;
+  border: 1px solid #a8a8a833;
   border-radius: 4px;
   font-size: 0.9rem;
   text-transform: uppercase; /* Capitalize all titles */
@@ -1099,6 +1092,6 @@ h1 {
 
 .source-selector option, .section-selector option {
   text-transform: uppercase;
-  background-color: #1a1a1a;
-  color: #ffffff;
+  background-color: #242830;
+  color: #f5f4f0;
 }

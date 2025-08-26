@@ -404,6 +404,32 @@ export const useAppState = () => {
         setCurrentCounselResponse(null);
       }, 100);
       
+      // If we have a line number, scroll to it and highlight it
+      if (sourceLink.lineNumber) {
+        setTimeout(() => {
+          const lineElement = document.querySelector(`[data-line="${sourceLink.lineNumber}"]`);
+          if (lineElement) {
+            lineElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            // Add highlight effect
+            const htmlElement = lineElement as HTMLElement;
+            htmlElement.style.backgroundColor = '#d4af3722';
+            htmlElement.style.borderLeft = '3px solid #d4af37';
+            htmlElement.style.transition = 'all 0.3s ease';
+            
+            // Remove highlight after 3 seconds
+            setTimeout(() => {
+              htmlElement.style.backgroundColor = '';
+              htmlElement.style.borderLeft = '';
+            }, 3000);
+            
+            console.log(`📍 Scrolled to and highlighted line ${sourceLink.lineNumber}`);
+          } else {
+            console.log(`⚠️ Could not find line element for line ${sourceLink.lineNumber}`);
+          }
+        }, 500);
+      }
+      
       setLoading(false);
     } catch (error) {
       console.error('Failed to navigate to source:', error);
