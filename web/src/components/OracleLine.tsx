@@ -22,8 +22,10 @@ const OracleLine = ({ lineData, oracleResponse, onNavigate, onLineClick }: Oracl
         isCounselMode ? oracleResponse : null  // Only apply semantic analysis for Counsel mode
     );
 
-    // If the line is a marker or the entire text is enclosed in brackets, don't render it
-    if (lineData.isMarker || (lineData.english?.trim().startsWith('[') && lineData.english?.trim().endsWith(']'))) {
+    // If the line is a marker, empty, or the entire text is enclosed in brackets, don't render it
+    if (lineData.isMarker || 
+        !lineData.english?.trim() ||
+        (lineData.english?.trim().startsWith('[') && lineData.english?.trim().endsWith(']'))) {
         return null;
     }
     

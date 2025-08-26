@@ -105,7 +105,8 @@ export const formatReportAsLines = (
             corpus: 'hymns',
             sentenceId: hymnsSelectionTyped.sentenceId.toString(),
             sectionTitle: hymnsSelectionTyped.sectionTitle,
-            lineNumber: lineDetail.line
+            lineNumber: lineDetail.line,
+            key: hymnsSelectionTyped.partNumber !== undefined ? String(hymnsSelectionTyped.partNumber) : undefined
           }
         });
       });

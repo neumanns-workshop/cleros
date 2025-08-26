@@ -29,6 +29,9 @@ interface ShareCardProps {
 const ShareCard: React.FC<ShareCardProps> = React.memo(({ response, currentOption }) => {
   const cardId = 'share-card-render-target'; // ID for html2canvas
   const [qrCodeUrl, setQrCodeUrl] = useState<string>('');
+  
+  // Detect mobile for scaling
+  const isMobile = window.innerWidth <= 768;
 
   // Capitalize first letter of sentence
   const capitalizeFirst = (text: string): string => {
@@ -100,7 +103,6 @@ const ShareCard: React.FC<ShareCardProps> = React.memo(({ response, currentOptio
       data-testid="share-card-render-target"
       style={{
         width: '500px',
-        maxWidth: '100%',
         backgroundColor: '#242830', // Card background
         color: '#f5f4f0', // Primary text color
         padding: '24px',
@@ -108,7 +110,13 @@ const ShareCard: React.FC<ShareCardProps> = React.memo(({ response, currentOptio
         fontFamily: "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
         textAlign: 'center' as const,
         boxShadow: '0 4px 20px rgba(0,0,0,0.15)',
-        border: '1px solid #a8a8a833'
+        border: '1px solid #a8a8a833',
+        // Scale down proportionally on mobile
+        transform: isMobile ? 'scale(0.7)' : 'scale(1)',
+        transformOrigin: 'center top',
+        margin: isMobile ? '0 auto' : '0 auto',
+        // Reduce the space it takes up when scaled
+        marginBottom: isMobile ? '-100px' : '0'
       }}
     >
       {/* Header */}

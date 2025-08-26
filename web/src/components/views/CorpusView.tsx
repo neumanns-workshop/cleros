@@ -127,7 +127,8 @@ export const CorpusView: React.FC<CorpusViewProps> = ({
               corpus: 'hymns',
               sentenceId: hymnsSelectionTyped.sentenceId.toString(),
               sectionTitle: hymnsSelectionTyped.sectionTitle,
-              lineNumber: lineDetail.line
+              lineNumber: lineDetail.line,
+              key: hymnsSelectionTyped.partNumber !== undefined ? String(hymnsSelectionTyped.partNumber) : undefined
             }
           });
         });
@@ -214,7 +215,8 @@ export const CorpusView: React.FC<CorpusViewProps> = ({
         sourceLink: {
           corpus: 'lithica',
           sentenceId: lithicaSelection.sentenceId.toString(),
-          sectionTitle: lithicaSelection.sectionTitle
+          sectionTitle: lithicaSelection.sectionTitle,
+          key: lithicaSelection.partNumber !== undefined ? String(lithicaSelection.partNumber) : undefined
         }
       });
 
@@ -343,8 +345,10 @@ export const CorpusView: React.FC<CorpusViewProps> = ({
     console.log(`📖 Source changed to: ${newSource}`);
     setSelectedSource(newSource);
     
-    // Reset to first part of selected source
-    if (newSource === 'personal') {
+    // Only reset section when actually switching to a different source
+    if (newSource !== selectedSource) {
+      // Reset to first part of selected source
+      if (newSource === 'personal') {
       // For personal reports, set to most recent report if available
       const allReports = [
         ...personalOracleReports.map(r => ({ ...r, type: 'oracle' })),
@@ -366,6 +370,7 @@ export const CorpusView: React.FC<CorpusViewProps> = ({
         setSelectedSection('');
       }
     }
+    }
   };
 
   const handleSectionChange = (newSection: string) => {
@@ -379,7 +384,8 @@ export const CorpusView: React.FC<CorpusViewProps> = ({
     if (sourceData?.parts && sourceData.parts.length > 0) {
       if (sourceData?.parts?.[0]) {
         const firstPartKey = sourceData.parts[0].key;
-        if (!selectedSection || selectedSource !== 'personal') {
+        // Only auto-select first part if no section is selected
+        if (!selectedSection) {
           setSelectedSection(String(firstPartKey));
         }
       }
