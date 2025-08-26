@@ -152,7 +152,7 @@ export const useAppState = () => {
 
   // Lazy load corpus data only when needed (for search or corpus view)
   const loadCorpusDataOnDemand = useCallback(async () => {
-    if (corpusData) return corpusData; // Already loaded
+    if (corpusData.hymns) return corpusData; // Already loaded
     
     try {
       console.log('📚 Loading corpus data on-demand...');
@@ -414,7 +414,7 @@ export const useAppState = () => {
 
   // Load corpus data when navigating to corpus view
   useEffect(() => {
-    if (currentView === 'corpus' && !corpusData) {
+    if (currentView === 'corpus' && !corpusData.hymns) {
       console.log('📖 Loading corpus data for corpus view...');
       setLoading(true);
       loadCorpusDataOnDemand().then(() => {
@@ -424,7 +424,7 @@ export const useAppState = () => {
         setLoading(false);
       });
     }
-  }, [currentView, corpusData, loadCorpusDataOnDemand]);
+  }, [currentView, corpusData.hymns, loadCorpusDataOnDemand]);
 
   return {
     // View state
