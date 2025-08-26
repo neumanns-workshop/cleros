@@ -276,6 +276,9 @@ h1 {
   align-items: center;
   justify-content: center;
   padding: 2rem;
+  width: 100%;
+  min-width: 600px; /* Prevent container from shrinking due to content changes */
+  box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
@@ -283,6 +286,7 @@ h1 {
     padding: 1rem;
     justify-content: flex-start;
     min-height: auto;
+    min-width: 320px; /* Smaller minimum for mobile */
   }
 }
 
