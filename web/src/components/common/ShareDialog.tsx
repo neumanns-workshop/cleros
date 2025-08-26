@@ -15,6 +15,7 @@ interface ShareDialogProps {
 const ShareDialog: React.FC<ShareDialogProps> = ({ isOpen, onClose, response, selectedCorpus = 'all' }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [feedbackMessage, setFeedbackMessage] = useState<string | null>(null);
+  const [captureScale, setCaptureScale] = useState<number | undefined>(undefined);
 
   // Capitalize first letter of sentence
   const capitalizeFirst = (text: string): string => {
@@ -171,15 +172,18 @@ const ShareDialog: React.FC<ShareDialogProps> = ({ isOpen, onClose, response, se
     }
     
     try {
-      // Wait a moment for rendering
-      await new Promise(resolve => setTimeout(resolve, 100));
+      // Set capture scale to ensure consistent 500px output
+      setCaptureScale(1.0);
+      
+      // Wait for re-render with capture scale
+      await new Promise(resolve => setTimeout(resolve, 200));
       
       // Use html-to-image library
       const htmlToImage = await import('html-to-image');
       
       const blob = await htmlToImage.toBlob(shareCardElement, { 
         quality: 0.95,
-        width: 500 * 2,
+        width: 500 * 2, // Now guaranteed to be 500px because of captureScale
         height: shareCardElement.scrollHeight * 2,
         style: {
           transform: 'scale(2)',
@@ -189,6 +193,9 @@ const ShareDialog: React.FC<ShareDialogProps> = ({ isOpen, onClose, response, se
         }
       });
       
+      // Reset to dynamic scaling
+      setCaptureScale(undefined);
+      
       if (blob) {
         await navigator.clipboard.write([
           new ClipboardItem({ 'image/png': blob })
@@ -197,6 +204,8 @@ const ShareDialog: React.FC<ShareDialogProps> = ({ isOpen, onClose, response, se
       }
     } catch (error) {
       console.error('Failed to copy image to clipboard:', error);
+      // Reset to dynamic scaling on error
+      setCaptureScale(undefined);
       showFeedback('❌ Failed to copy image');
     }
   };
@@ -209,15 +218,18 @@ const ShareDialog: React.FC<ShareDialogProps> = ({ isOpen, onClose, response, se
     }
     
     try {
-      // Wait a moment for rendering
-      await new Promise(resolve => setTimeout(resolve, 100));
+      // Set capture scale to ensure consistent 500px output
+      setCaptureScale(1.0);
+      
+      // Wait for re-render with capture scale
+      await new Promise(resolve => setTimeout(resolve, 200));
       
       // Use html-to-image library
       const htmlToImage = await import('html-to-image');
       
       const dataUrl = await htmlToImage.toPng(shareCardElement, { 
         quality: 0.95,
-        width: 500 * 2, // Fixed width since the card is 500px
+        width: 500 * 2, // Now guaranteed to be 500px because of captureScale
         height: shareCardElement.scrollHeight * 2,
         style: {
           transform: 'scale(2)',
@@ -226,6 +238,9 @@ const ShareDialog: React.FC<ShareDialogProps> = ({ isOpen, onClose, response, se
           height: `${shareCardElement.scrollHeight}px`
         }
       });
+      
+      // Reset to dynamic scaling
+      setCaptureScale(undefined);
       
       // Create a download link
       const link = document.createElement('a');
@@ -236,6 +251,8 @@ const ShareDialog: React.FC<ShareDialogProps> = ({ isOpen, onClose, response, se
       showFeedback('✅ Image saved to downloads');
     } catch (error) {
       console.error('Failed to save as image:', error);
+      // Reset to dynamic scaling on error
+      setCaptureScale(undefined);
       showFeedback('❌ Failed to save image');
     }
   };
@@ -481,6 +498,7 @@ const ShareDialog: React.FC<ShareDialogProps> = ({ isOpen, onClose, response, se
             <ShareCard 
               response={response}
               currentOption={currentOption}
+              captureScale={captureScale}
             />
           </div>
         </div>

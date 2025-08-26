@@ -24,12 +24,16 @@ interface ShareCardOption {
 interface ShareCardProps {
   response: ConsultationResponse;
   currentOption: ShareCardOption;
+  captureScale?: number; // Optional override for capture
 }
 
-const ShareCard: React.FC<ShareCardProps> = React.memo(({ response, currentOption }) => {
+const ShareCard: React.FC<ShareCardProps> = React.memo(({ response, currentOption, captureScale }) => {
   const cardId = 'share-card-render-target'; // ID for html2canvas
   const [qrCodeUrl, setQrCodeUrl] = useState<string>('');
-  const [scale, setScale] = useState<number>(1);
+  const [dynamicScale, setDynamicScale] = useState<number>(1);
+  
+  // Use captureScale if provided, otherwise use dynamic scale
+  const scale = captureScale ?? dynamicScale;
   
   // Dynamic scaling based on window size
   useEffect(() => {
@@ -48,7 +52,7 @@ const ShareCard: React.FC<ShareCardProps> = React.memo(({ response, currentOptio
       // Round to 2 decimal places for cleaner scaling
       newScale = Math.round(newScale * 100) / 100;
       
-      setScale(newScale);
+      setDynamicScale(newScale);
     };
     
     // Set initial scale
