@@ -24,26 +24,22 @@ interface ShareCardOption {
 interface ShareCardProps {
   response: ConsultationResponse;
   currentOption: ShareCardOption;
-  captureScale?: number; // Optional override for capture
 }
 
-const ShareCard: React.FC<ShareCardProps> = React.memo(({ response, currentOption, captureScale }) => {
-  const cardId = 'share-card-render-target'; // ID for html2canvas
+const ShareCard: React.FC<ShareCardProps> = React.memo(({ response, currentOption }) => {
+  const cardId = 'share-card-render-target'; // ID for html-to-image
   const [qrCodeUrl, setQrCodeUrl] = useState<string>('');
-  const [dynamicScale, setDynamicScale] = useState<number>(1);
+  const [scale, setScale] = useState<number>(1);
   
-  // Use captureScale if provided, otherwise use dynamic scale
-  const scale = captureScale ?? dynamicScale;
-  
-  // Dynamic scaling based on window size
+  // Dynamic scaling based on window size - but keep it consistent for capture
   useEffect(() => {
     const updateScale = () => {
       const width = window.innerWidth;
       
-      // Continuous scaling: 0.6 at 320px, 1.0 at 1200px+
+      // Continuous scaling: 0.7 at 320px, 1.0 at 900px+
       const minWidth = 320;
-      const maxWidth = 1200;
-      const minScale = 0.6;
+      const maxWidth = 900;
+      const minScale = 0.7;
       const maxScale = 1.0;
       
       let newScale = minScale + (maxScale - minScale) * 
@@ -52,7 +48,7 @@ const ShareCard: React.FC<ShareCardProps> = React.memo(({ response, currentOptio
       // Round to 2 decimal places for cleaner scaling
       newScale = Math.round(newScale * 100) / 100;
       
-      setDynamicScale(newScale);
+      setScale(newScale);
     };
     
     // Set initial scale
