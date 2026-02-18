@@ -19,8 +19,9 @@ logger = logging.getLogger(__name__)
 class OracleSemanticScorer:
     """Scores lines semantically against user queries for oracle highlighting."""
     
-    def __init__(self, base_path: str = "/Users/jneumann/Repos/cleros"):
-        self.base_path = Path(base_path)
+    def __init__(self, base_path: str = None):
+        REPO_ROOT = Path(__file__).resolve().parent.parent
+        self.base_path = Path(base_path) if base_path else REPO_ROOT
         self.model = SentenceTransformer('all-MiniLM-L6-v2')  # Same model as embeddings
         
         # Load line embeddings for all corpora

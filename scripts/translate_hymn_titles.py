@@ -8,16 +8,18 @@ import json
 import sys
 from pathlib import Path
 
-# Add the project root to the path so we can import the chunk translator
-sys.path.insert(0, str(Path(__file__).parent.parent))
+REPO_ROOT = Path(__file__).resolve().parent.parent
 
-sys.path.insert(0, "/Users/jneumann/Repos/cleros/attic/development_2025-08-21/orphica")
+# Add the project root to the path so we can import the chunk translator
+sys.path.insert(0, str(REPO_ROOT))
+
+sys.path.insert(0, str(REPO_ROOT / "attic" / "development_2025-08-21" / "orphica"))
 from chunk_translator import ChunkTranslator, TranslationChunk, TranslatedLine
 
 
 def extract_hymn_titles():
     """Extract all Greek hymn titles from the corpus."""
-    hymns_file = Path("/Users/jneumann/Repos/cleros/data/gold_standard/orphic_hymns.json")
+    hymns_file = REPO_ROOT / "data" / "gold_standard" / "orphic_hymns.json"
     
     with open(hymns_file, 'r', encoding='utf-8') as f:
         data = json.load(f)
@@ -108,10 +110,10 @@ def update_corpus_files(titles):
     
     # Files to update
     files_to_update = [
-        "/Users/jneumann/Repos/cleros/web/public/orphic_hymns_sentences.json",
-        "/Users/jneumann/Repos/cleros/web/public/orphic_hymns_parallel.json",
-        "/Users/jneumann/Repos/cleros/data/gold_standard/orphic_hymns_parallel.json",
-        "/Users/jneumann/Repos/cleros/data/gold_standard/chunked/orphic_hymns_sentences.json"
+        str(REPO_ROOT / "web" / "public" / "orphic_hymns_sentences.json"),
+        str(REPO_ROOT / "web" / "public" / "orphic_hymns_parallel.json"),
+        str(REPO_ROOT / "data" / "gold_standard" / "orphic_hymns_parallel.json"),
+        str(REPO_ROOT / "data" / "gold_standard" / "chunked" / "orphic_hymns_sentences.json"),
     ]
     
     for file_path in files_to_update:
@@ -138,7 +140,7 @@ def update_corpus_files(titles):
             json.dump(data, f, ensure_ascii=False, indent=2)
     
     # Also update the main gold standard file
-    hymns_file = Path("/Users/jneumann/Repos/cleros/data/gold_standard/orphic_hymns.json")
+    hymns_file = REPO_ROOT / "data" / "gold_standard" / "orphic_hymns.json"
     with open(hymns_file, 'r', encoding='utf-8') as f:
         data = json.load(f)
     
@@ -168,7 +170,7 @@ def main():
     print("\nTitle translation complete!")
     
     # Save translation results
-    results_file = Path("/Users/jneumann/Repos/cleros/data/sources/hymn_title_translations.json")
+    results_file = REPO_ROOT / "data" / "sources" / "hymn_title_translations.json"
     with open(results_file, 'w', encoding='utf-8') as f:
         json.dump(translated_titles, f, ensure_ascii=False, indent=2)
     

@@ -8,11 +8,13 @@ import json
 from datetime import datetime
 from pathlib import Path
 
+REPO_ROOT = Path(__file__).resolve().parent.parent
+
 def create_papyrus_oracle_parallel():
     """Convert papyrus oracle queries to parallel format following established paradigm."""
     
     # Load gold standard data
-    source_file = Path("/Users/jneumann/Repos/cleros/data/gold_standard/papyrus_oracle_queries.json")
+    source_file = REPO_ROOT / "data" / "gold_standard" / "papyrus_oracle_queries.json"
     with open(source_file, 'r', encoding='utf-8') as f:
         gold_standard = json.load(f)
     
@@ -51,12 +53,12 @@ def create_papyrus_oracle_parallel():
     
     # Save to both locations following the paradigm
     # 1. Gold standard location
-    gs_output = Path("/Users/jneumann/Repos/cleros/data/gold_standard/papyrus_oracle_queries_parallel.json")
+    gs_output = REPO_ROOT / "data" / "gold_standard" / "papyrus_oracle_queries_parallel.json"
     with open(gs_output, 'w', encoding='utf-8') as f:
         json.dump(parallel_data, f, indent=2, ensure_ascii=False)
     
     # 2. Web public location  
-    web_output = Path("/Users/jneumann/Repos/cleros/web/public/papyrus_oracle_queries_parallel.json")
+    web_output = REPO_ROOT / "web" / "public" / "papyrus_oracle_queries_parallel.json"
     with open(web_output, 'w', encoding='utf-8') as f:
         json.dump(parallel_data, f, indent=2, ensure_ascii=False)
     

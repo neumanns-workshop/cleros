@@ -11,6 +11,8 @@ from pathlib import Path
 from typing import List, Dict, Any, Optional
 import time
 
+REPO_ROOT = Path(__file__).resolve().parent.parent
+
 # Target databases and their search patterns
 SEARCH_TARGETS = {
     "papyri_info_base": "https://papyri.info/search",
@@ -284,7 +286,7 @@ def main():
     candidates = create_manual_candidate_list()
     
     # Save to file
-    output_file = "/Users/jneumann/Repos/cleros/data/sources/oracle_query_expansion_candidates.json"
+    output_file = str(REPO_ROOT / "data" / "sources" / "oracle_query_expansion_candidates.json")
     save_candidate_list(candidates, output_file)
     
     # Print summary

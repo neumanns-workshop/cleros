@@ -10,21 +10,23 @@ from datetime import datetime
 from pathlib import Path
 import sys
 
+REPO_ROOT = Path(__file__).resolve().parent.parent
+
 # Add the orphica directory to the path so we can import chunk_translator
-sys.path.append('/Users/jneumann/Repos/cleros/attic/development_2025-08-21/orphica')
+sys.path.append(str(REPO_ROOT / "attic" / "development_2025-08-21" / "orphica"))
 
 from chunk_translator import ChunkTranslator, TranslatedLine, TranslationChunk
 from dotenv import load_dotenv
 
 # Load environment variables
-load_dotenv(dotenv_path='/Users/jneumann/Repos/cleros/.env')
+load_dotenv(dotenv_path=str(REPO_ROOT / ".env"))
 
 def translate_curated_oracle_batch():
     """Translate the curated papyrus oracle queries using GPT-5 reasoning."""
     
     # Input and output files
-    input_file = "/Users/jneumann/Repos/cleros/data/sources/curated_oracle_queries_batch.json"
-    output_file = "/Users/jneumann/Repos/cleros/data/gold_standard/papyrus_oracle_queries_translated.json"
+    input_file = str(REPO_ROOT / "data" / "sources" / "curated_oracle_queries_batch.json")
+    output_file = str(REPO_ROOT / "data" / "gold_standard" / "papyrus_oracle_queries_translated.json")
     
     print("🏺 GPT-5 CURATED PAPYRUS ORACLE QUERIES TRANSLATION")
     print("=" * 65)

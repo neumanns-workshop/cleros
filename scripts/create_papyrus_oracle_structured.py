@@ -8,11 +8,13 @@ import json
 from datetime import datetime
 from pathlib import Path
 
+REPO_ROOT = Path(__file__).resolve().parent.parent
+
 def create_papyrus_oracle_structured():
     """Convert papyrus oracle queries to structured format for web interface."""
     
     # Load original data
-    source_file = Path("/Users/jneumann/Repos/cleros/web/public/papyrus_oracle_queries.json")
+    source_file = REPO_ROOT / "web" / "public" / "papyrus_oracle_queries.json"
     with open(source_file, 'r', encoding='utf-8') as f:
         original_data = json.load(f)
     
@@ -70,7 +72,7 @@ def create_papyrus_oracle_structured():
         structured_data["sections"].append(section)
     
     # Write structured file
-    output_file = Path("/Users/jneumann/Repos/cleros/web/public/papyrus_oracle_queries_structured.json")
+    output_file = REPO_ROOT / "web" / "public" / "papyrus_oracle_queries_structured.json"
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(structured_data, f, indent=2, ensure_ascii=False)
     

@@ -7,11 +7,13 @@ Converts them to match the expected sections/sentences/line_details format.
 import json
 from pathlib import Path
 
+REPO_ROOT = Path(__file__).resolve().parent.parent
+
 def structure_golden_tablets():
     """Convert Golden Tablets to structured format for web interface."""
-    
+
     # Load original data
-    source_file = Path("/Users/jneumann/Repos/cleros/web/public/orphic_golden_tablets.json")
+    source_file = REPO_ROOT / "web" / "public" / "orphic_golden_tablets.json"
     with open(source_file, 'r', encoding='utf-8') as f:
         original_data = json.load(f)
     
@@ -65,7 +67,7 @@ def structure_golden_tablets():
         structured_data["sections"].append(section)
     
     # Write structured file
-    output_file = Path("/Users/jneumann/Repos/cleros/web/public/orphic_golden_tablets_structured.json")
+    output_file = REPO_ROOT / "web" / "public" / "orphic_golden_tablets_structured.json"
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(structured_data, f, indent=2, ensure_ascii=False)
     
@@ -76,7 +78,7 @@ def structure_oracle_queries():
     """Convert Oracle Queries to structured format for web interface."""
     
     # Load original data
-    source_file = Path("/Users/jneumann/Repos/cleros/web/public/dodona_oracle_queries.json")
+    source_file = REPO_ROOT / "web" / "public" / "dodona_oracle_queries.json"
     with open(source_file, 'r', encoding='utf-8') as f:
         original_data = json.load(f)
     
@@ -130,7 +132,7 @@ def structure_oracle_queries():
         structured_data["sections"].append(section)
     
     # Write structured file
-    output_file = Path("/Users/jneumann/Repos/cleros/web/public/dodona_oracle_queries_structured.json")
+    output_file = REPO_ROOT / "web" / "public" / "dodona_oracle_queries_structured.json"
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(structured_data, f, indent=2, ensure_ascii=False)
     
