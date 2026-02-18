@@ -84,7 +84,7 @@ export const TermsView: React.FC<TermsViewProps> = ({
               <h3 style={{ color: '#d4af37', fontSize: '1.3rem', marginBottom: '1rem' }}>6. Contact Information</h3>
               <p style={{ marginBottom: '1rem' }}>For questions about these Terms or the Service:</p>
               <ul style={{ marginLeft: '1.5rem', marginBottom: '1rem' }}>
-                <li style={{ marginBottom: '0.5rem' }}>Support: <a href="mailto:social@gbe.games" style={{ color: '#d4af37', textDecoration: 'underline' }}>social@gbe.games</a></li>
+                <li style={{ marginBottom: '0.5rem' }}>Support: <a href="mailto:contact@gbe.games" style={{ color: '#d4af37', textDecoration: 'underline' }}>contact@gbe.games</a></li>
                 <li style={{ marginBottom: '0.5rem' }}>Website: <a href="https://cleros.gbe.games" style={{ color: '#d4af37', textDecoration: 'underline' }}>cleros.gbe.games</a></li>
               </ul>
             </section>

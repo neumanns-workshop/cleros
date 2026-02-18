@@ -71,7 +71,7 @@ export const PrivacyView: React.FC<PrivacyViewProps> = ({
               <h3 style={{ color: '#d4af37', fontSize: '1.3rem', marginBottom: '1rem' }}>Contact Us</h3>
               <p style={{ marginBottom: '1rem' }}>If you have questions about this Privacy Policy, please contact us at:</p>
               <ul style={{ marginLeft: '1.5rem', marginBottom: '1rem' }}>
-                <li style={{ marginBottom: '0.5rem' }}>Email: <a href="mailto:social@gbe.games" style={{ color: '#d4af37', textDecoration: 'underline' }}>social@gbe.games</a></li>
+                <li style={{ marginBottom: '0.5rem' }}>Email: <a href="mailto:contact@gbe.games" style={{ color: '#d4af37', textDecoration: 'underline' }}>contact@gbe.games</a></li>
                 <li style={{ marginBottom: '0.5rem' }}>Website: <a href="https://cleros.gbe.games" style={{ color: '#d4af37', textDecoration: 'underline' }}>cleros.gbe.games</a></li>
               </ul>
             </section>

@@ -34,5 +34,5 @@ You have full control over your data:
 
 If you have questions about this Privacy Policy, please contact us at:
 
-- Email: social@gbe.games
+- Email: contact@gbe.games
 - Website: cleros.gbe.games

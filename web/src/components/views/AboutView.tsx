@@ -176,8 +176,8 @@ export const AboutView = ({ currentView, setCurrentView }: AboutViewProps) => (
         <h3>Contact</h3>
         <p>
           For questions, feedback, or collaboration inquiries, contact us at{' '}
-          <a href="mailto:social@neumannsworkshop.com" style={{ color: '#d4af37', textDecoration: 'underline' }}>
-            social@neumannsworkshop.com
+          <a href="mailto:contact@gbe.games" style={{ color: '#d4af37', textDecoration: 'underline' }}>
+            contact@gbe.games
           </a>
         </p>
       </section>

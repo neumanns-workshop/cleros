@@ -59,7 +59,7 @@ Cleros is an interactive ancient oracle consultation platform that provides spir
 
 For questions about these Terms or the Service:
 
-- Support: social@gbe.games
+- Support: contact@gbe.games
 - Website: cleros.gbe.games
 
 ---
