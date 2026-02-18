@@ -1,7 +1,7 @@
 # Terms of Service
 
-**Effective Date: January 15, 2025**  
-**Last Updated: January 15, 2025**
+**Effective Date: January 15, 2025**
+**Last Updated: February 18, 2026**
 
 ## 1. Acceptance of Terms
 
@@ -12,7 +12,7 @@ By accessing or using Cleros ("the Service"), an ancient oracle consultation pla
 Cleros is an interactive ancient oracle consultation platform that provides spiritual guidance through ancient Greek texts. The Service includes:
 
 - Oracle consultations using authentic ancient Greek religious texts
-- Access to the Orphic corpus, Dodona oracle queries, and papyrus oracle records
+- Access to the Orphic corpus (Hymns, Argonautica, Lithica)
 - Historical and educational content about ancient Greek oracular practices
 - Semantic search and text exploration tools
 

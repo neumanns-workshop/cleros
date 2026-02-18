@@ -11,7 +11,7 @@ test.describe('Oracle Functionality', () => {
       await page.waitForLoadState('networkidle');
       
       // Check for corpus content
-      await expect(page.locator('body')).toContainText(/orphic|hymn|tablet/i);
+      await expect(page.locator('body')).toContainText(/orphic|hymn|argonautica|lithica/i);
     }
   });
 

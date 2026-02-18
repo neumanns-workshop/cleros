@@ -24,7 +24,7 @@ export const AboutView = ({ currentView, setCurrentView }: AboutViewProps) => (
         <p>
           Each text appears in parallel Greek-English translation with AI commentary. While no historical bibliomantic 
           tradition for Orphic texts is attested, their thematic focus on death, rebirth, and spiritual transformation 
-          makes them relevant for this application. The collection includes Orphic Golden Tablets and oracle queries from Dodona.
+          makes them relevant for this application.
         </p>
       </section>
 
@@ -43,8 +43,8 @@ export const AboutView = ({ currentView, setCurrentView }: AboutViewProps) => (
         <div className="mode-description">
           <h4>Oracle Mode</h4>
           <p>
-            Oracle mode provides responses through random selection. The system uses atmospheric noise as a source of 
-            entropy to select passages. The selection process is purely random with no semantic analysis or text matching.
+            Oracle mode provides responses through random selection. The system uses the Web Crypto API as a source of
+            cryptographic entropy to select passages. The selection process is purely random with no semantic analysis or text matching.
           </p>
           <p>
             This method follows the classical tradition of sortes (lot-casting) used in ancient divination practices.
@@ -94,21 +94,6 @@ export const AboutView = ({ currentView, setCurrentView }: AboutViewProps) => (
             </p>
           </div>
 
-          <div className="corpus-text">
-            <h4>Golden Tablets</h4>
-            <p>
-              Funeral texts inscribed on gold sheets and buried with initiates, containing instructions for the afterlife journey. 
-              These artifacts preserve ritual passwords and declarations, providing insight into mystery religion practices.
-            </p>
-          </div>
-
-          <div className="corpus-text">
-            <h4>Oracle Queries</h4>
-            <p>
-              Historical questions submitted to oracles at Dodona, preserved on papyrus. Covering daily concerns like health, 
-              marriage, business, and legal matters, these queries demonstrate how people consulted oracles for guidance.
-            </p>
-          </div>
         </div>
       </section>
 
@@ -124,14 +109,14 @@ export const AboutView = ({ currentView, setCurrentView }: AboutViewProps) => (
         <div className="tech-details">
           <h4>Frontend</h4>
           <p>
-            Built with React 18 and TypeScript, deployed on Netlify with edge functions for model serving.
+            Built with React 18 and TypeScript, hosted on Cloudflare Pages.
             Responsive design using Tailwind CSS with custom theming.
           </p>
-          
+
           <h4>Randomness</h4>
           <p>
-            Oracle mode uses Random.org's atmospheric noise API for true entropy generation, ensuring 
-            unpredictable lot-casting that cannot be reproduced or gamed.
+            Oracle mode uses the Web Crypto API (crypto.getRandomValues) for cryptographically secure
+            random number generation, ensuring unpredictable lot-casting that cannot be reproduced or gamed.
           </p>
           
           <h4>Semantic Search</h4>
@@ -170,17 +155,13 @@ export const AboutView = ({ currentView, setCurrentView }: AboutViewProps) => (
             <li><strong>Orphic Hymns</strong> (2nd-3rd century CE): Greek text from Thomas Taylor, <em>The Mystical Hymns of Orpheus</em> (London, 1787)</li>
             <li><strong>Orphic Argonautica</strong> (4th century CE): Greek text from Hermann Abel, <em>Orphica</em> (Leipzig: Teubner, 1885)</li>
             <li><strong>Orphic Lithica</strong> (4th-6th century CE): Greek text from Hermann Abel, <em>Orphica</em> (Leipzig: Teubner, 1885)</li>
-            <li><strong>Orphic Golden Tablets</strong> (5th-2nd century BCE): Graf & Johnston, <em>Ritual Texts for the Afterlife</em>; Edmonds (2010)</li>
-            <li><strong>Dodona Oracle Queries</strong> (5th-2nd century BCE): Dodona Online (DOL) curated scholarly database</li>
                         </ul>
               
               <h4>Further Reading</h4>
               <ul>
                 <li>Athanassakis, Apostolos N. & Benjamin M. Wolkow. <em>The Orphic Hymns</em>. Baltimore: Johns Hopkins University Press, 2013.</li>
                 <li>Bernabé, Alberto. <em>Poetae Epici Graeci: Testimonia et Fragmenta</em>. Berlin: De Gruyter, 2004-2007.</li>
-                <li>Edmonds, Radcliffe G. <em>Myths of the Underworld Journey: Plato, Aristophanes, and the &lsquo;Orphic&rsquo; Gold Tablets</em>. Cambridge: Cambridge University Press, 2004.</li>
                 <li>Edmonds, Radcliffe G. <em>Redefining Ancient Orphism: A Study in Greek Religion</em>. Cambridge: Cambridge University Press, 2013.</li>
-                <li>Graf, Fritz & Sarah Iles Johnston. <em>Ritual Texts for the Afterlife: Orpheus and the Bacchic Gold Tablets</em>. London: Routledge, 2007.</li>
                 <li>Johnston, Sarah Iles. <em>Ancient Greek Divination</em>. Chichester: Wiley-Blackwell, 2008.</li>
                 <li>Johnston, Sarah Iles. <em>Restless Dead: Encounters Between the Living and the Dead in Ancient Greece</em>. Berkeley: University of California Press, 1999.</li>
                 <li>Morand, Anne-France. <em>Études sur les Hymnes Orphiques</em>. Leiden: Brill, 2001.</li>

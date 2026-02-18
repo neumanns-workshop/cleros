@@ -417,9 +417,6 @@ export const CorpusView: React.FC<CorpusViewProps> = ({
               <option value="hymns">Hymns</option>
               <option value="argonautica">Argonautica</option>
               <option value="lithica">Lithica</option>
-              <option value="tablets">Golden Tablets</option>
-              <option value="queries">Oracle Queries (Dodona)</option>
-              <option value="papyrusQueries">Oracle Queries (Papyrus)</option>
               <option value="personal">Personal Reports</option>
             </select>
             {(selectedSource === 'personal' ? 

@@ -21,7 +21,7 @@ export const PrivacyView: React.FC<PrivacyViewProps> = ({
           <h2 style={{ color: '#d4af37', textAlign: 'center', marginBottom: '2rem' }}>Privacy Policy</h2>
           
           <div style={{ color: '#f5f4f0', lineHeight: '1.6' }}>
-            <p style={{ fontSize: '0.9rem', color: '#a8a8a8', marginBottom: '1.5rem' }}><strong>Last updated: January 15, 2025</strong></p>
+            <p style={{ fontSize: '0.9rem', color: '#a8a8a8', marginBottom: '1.5rem' }}><strong>Last updated: February 18, 2026</strong></p>
             
             <section style={{ marginBottom: '2rem' }}>
               <h3 style={{ color: '#d4af37', fontSize: '1.3rem', marginBottom: '1rem' }}>Introduction</h3>
