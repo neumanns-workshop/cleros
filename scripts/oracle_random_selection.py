@@ -27,8 +27,9 @@ logger = logging.getLogger(__name__)
 class OracleRandomSelector:
     """Handles random selection of sentences from the three main Orphic texts."""
     
-    def __init__(self, base_path: str = "/Users/jneumann/Repos/cleros"):
-        self.base_path = Path(base_path)
+    def __init__(self, base_path: str = None):
+        REPO_ROOT = Path(__file__).resolve().parent.parent
+        self.base_path = Path(base_path) if base_path else REPO_ROOT
         self.corpus_info = {
             "hymns": {
                 "name": "Orphic Hymns",
@@ -219,7 +220,8 @@ def main():
         print()
     
     # Save response for inspection
-    output_path = Path("/Users/jneumann/Repos/cleros/test_oracle_response.json")
+    REPO_ROOT = Path(__file__).resolve().parent.parent
+    output_path = REPO_ROOT / "test_oracle_response.json"
     with open(output_path, 'w', encoding='utf-8') as f:
         json.dump(response, f, indent=2, ensure_ascii=False)
     

@@ -7,17 +7,19 @@ Dropdown titles shouldn't have periods.
 import json
 from pathlib import Path
 
+REPO_ROOT = Path(__file__).resolve().parent.parent
+
 
 def clean_title_periods():
     """Remove trailing periods from all English titles."""
     
     # Files to update
     files_to_update = [
-        "/Users/jneumann/Repos/cleros/web/public/orphic_hymns_sentences.json",
-        "/Users/jneumann/Repos/cleros/web/public/orphic_hymns_parallel.json",
-        "/Users/jneumann/Repos/cleros/data/gold_standard/orphic_hymns_parallel.json",
-        "/Users/jneumann/Repos/cleros/data/gold_standard/chunked/orphic_hymns_sentences.json",
-        "/Users/jneumann/Repos/cleros/data/gold_standard/orphic_hymns.json"
+        str(REPO_ROOT / "web" / "public" / "orphic_hymns_sentences.json"),
+        str(REPO_ROOT / "web" / "public" / "orphic_hymns_parallel.json"),
+        str(REPO_ROOT / "data" / "gold_standard" / "orphic_hymns_parallel.json"),
+        str(REPO_ROOT / "data" / "gold_standard" / "chunked" / "orphic_hymns_sentences.json"),
+        str(REPO_ROOT / "data" / "gold_standard" / "orphic_hymns.json"),
     ]
     
     for file_path in files_to_update:

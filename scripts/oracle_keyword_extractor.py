@@ -19,16 +19,17 @@ logger = logging.getLogger(__name__)
 class OracleKeywordExtractor:
     """Extracts meaningful keywords from queries for oracle response highlighting."""
     
-    def __init__(self, base_path: str = "/Users/jneumann/Repos"):
-        self.base_path = Path(base_path)
+    def __init__(self, base_path: str = None):
+        REPO_ROOT = Path(__file__).resolve().parent.parent
+        self.base_path = Path(base_path) if base_path else REPO_ROOT
         self.stop_words = set()
         self._load_stop_words()
-    
+
     def _load_stop_words(self):
         """Load stop words from the combined stopwords list."""
         try:
             # Use our combined and deduplicated stop words list
-            stopwords_path = self.base_path / "cleros/data/nltk_stopwords.json"
+            stopwords_path = self.base_path / "data" / "nltk_stopwords.json"
             with open(stopwords_path, 'r', encoding='utf-8') as f:
                 stop_words_list = json.load(f)
                 self.stop_words = set(word.lower() for word in stop_words_list)

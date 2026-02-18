@@ -8,6 +8,8 @@ import json
 from pathlib import Path
 from typing import Set
 
+REPO_ROOT = Path(__file__).resolve().parent.parent
+
 def load_stopwords_from_json(file_path: Path) -> Set[str]:
     """Load stop words from a JSON file."""
     try:
@@ -20,7 +22,7 @@ def load_stopwords_from_json(file_path: Path) -> Set[str]:
 
 def main():
     """Combine and deduplicate stop words from all sources."""
-    base_path = Path("/Users/jneumann/Repos/english-word-atlas/data/sources/STOP")
+    base_path = REPO_ROOT.parent / "english-word-atlas" / "data" / "sources" / "STOP"
     
     # Load all stop word files
     stop_files = {
@@ -59,7 +61,7 @@ def main():
     print(f"Source breakdown: {source_counts}")
     
     # Save to cleros project
-    output_path = Path("/Users/jneumann/Repos/cleros/data/combined_stopwords.json")
+    output_path = REPO_ROOT / "data" / "combined_stopwords.json"
     output_path.parent.mkdir(exist_ok=True)
     
     # Create metadata
@@ -77,7 +79,7 @@ def main():
     print(f"\nSaved combined stop words to: {output_path}")
     
     # Also save just the list for easy loading
-    simple_output_path = Path("/Users/jneumann/Repos/cleros/data/stopwords_simple.json")
+    simple_output_path = REPO_ROOT / "data" / "stopwords_simple.json"
     with open(simple_output_path, 'w', encoding='utf-8') as f:
         json.dump(sorted_stopwords, f, indent=2, ensure_ascii=False)
     

@@ -7,11 +7,13 @@ This replaces the arbitrary line-number divisions with content-based structural 
 import json
 from pathlib import Path
 
+REPO_ROOT = Path(__file__).resolve().parent.parent
+
 def create_structured_argonautica():
     """Create Argonautica with 6 natural episodes based on narrative structure."""
     
     # Load the original sentence-chunked data
-    source_file = Path("/Users/jneumann/Repos/cleros/data/gold_standard/chunked/orphic_argonautica_sentences.json")
+    source_file = REPO_ROOT / "data" / "gold_standard" / "chunked" / "orphic_argonautica_sentences.json"
     with open(source_file, 'r', encoding='utf-8') as f:
         original_data = json.load(f)
     
@@ -99,7 +101,7 @@ def create_structured_argonautica():
         structured_data["sections"].append(episode_section)
     
     # Write structured file
-    output_file = Path("/Users/jneumann/Repos/cleros/web/public/orphic_argonautica_episodes.json")
+    output_file = REPO_ROOT / "web" / "public" / "orphic_argonautica_episodes.json"
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(structured_data, f, indent=2, ensure_ascii=False)
     
@@ -110,7 +112,7 @@ def create_structured_lithica():
     """Create Lithica with 4 natural sections based on thematic content."""
     
     # Load the original sentence-chunked data
-    source_file = Path("/Users/jneumann/Repos/cleros/data/gold_standard/chunked/orphic_lithica_sentences.json")
+    source_file = REPO_ROOT / "data" / "gold_standard" / "chunked" / "orphic_lithica_sentences.json"
     with open(source_file, 'r', encoding='utf-8') as f:
         original_data = json.load(f)
     
@@ -186,7 +188,7 @@ def create_structured_lithica():
         structured_data["sections"].append(section_data)
     
     # Write structured file
-    output_file = Path("/Users/jneumann/Repos/cleros/web/public/orphic_lithica_sections.json")
+    output_file = REPO_ROOT / "web" / "public" / "orphic_lithica_sections.json"
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(structured_data, f, indent=2, ensure_ascii=False)
     

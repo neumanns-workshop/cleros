@@ -8,6 +8,8 @@ import json
 import nltk
 from pathlib import Path
 
+REPO_ROOT = Path(__file__).resolve().parent.parent
+
 def download_nltk_stopwords():
     """Download NLTK stop words and save to our data directory."""
     try:
@@ -28,7 +30,7 @@ def download_nltk_stopwords():
         print(f"Contains 'of': {'of' in english_stopwords}")
         
         # Save to our data directory
-        output_path = Path("/Users/jneumann/Repos/cleros/data/nltk_stopwords.json")
+        output_path = REPO_ROOT / "data" / "nltk_stopwords.json"
         with open(output_path, 'w', encoding='utf-8') as f:
             json.dump(sorted(english_stopwords), f, indent=2, ensure_ascii=False)
         

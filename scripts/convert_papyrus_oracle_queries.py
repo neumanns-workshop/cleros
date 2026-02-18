@@ -10,6 +10,8 @@ from datetime import datetime
 from pathlib import Path
 from typing import List, Dict, Any, Optional
 
+REPO_ROOT = Path(__file__).resolve().parent.parent
+
 
 def categorize_query(question_summary: str, notes: str) -> str:
     """Categorize query based on content summary."""
@@ -185,8 +187,8 @@ def main():
     """Main function to convert CSV to JSON."""
     
     # Input and output files
-    csv_file = "/Users/jneumann/Repos/cleros/oracle_queries_pack_v0.4 (1).csv"
-    output_file = "/Users/jneumann/Repos/cleros/data/sources/papyrus_oracle_queries_raw.json"
+    csv_file = str(REPO_ROOT / "oracle_queries_pack_v0.4 (1).csv")
+    output_file = str(REPO_ROOT / "data" / "sources" / "papyrus_oracle_queries_raw.json")
     
     print("🏺 CONVERTING PAPYRUS ORACLE QUERIES")
     print("=" * 50)

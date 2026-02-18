@@ -18,8 +18,9 @@ logger = logging.getLogger(__name__)
 class LineEmbeddingGenerator:
     """Generates embeddings for individual lines of text."""
     
-    def __init__(self, base_path: str = "/Users/jneumann/Repos/cleros"):
-        self.base_path = Path(base_path)
+    def __init__(self, base_path: str = None):
+        REPO_ROOT = Path(__file__).resolve().parent.parent
+        self.base_path = Path(base_path) if base_path else REPO_ROOT
         self.model = SentenceTransformer('all-MiniLM-L6-v2')  # Same model as used for sentences
         
         self.corpus_info = {

@@ -5,16 +5,18 @@ Fix incense data mapping using section indexes instead of title matching
 import json
 from pathlib import Path
 
+REPO_ROOT = Path(__file__).resolve().parent.parent
+
 def fix_incense_mapping():
     """Update corpus with incense data using section indexes."""
-    
+
     # Load original sentences file (source of incense data)
-    sentences_file = Path("/Users/jneumann/Repos/cleros/web/public/orphic_hymns_sentences.json")
+    sentences_file = REPO_ROOT / "web" / "public" / "orphic_hymns_sentences.json"
     with open(sentences_file, 'r', encoding='utf-8') as f:
         sentences_data = json.load(f)
     
     # Load corpus file (target for incense data)
-    corpus_file = Path("/Users/jneumann/Repos/cleros/web/public/corpus_20250822_121628/hymns.json")
+    corpus_file = REPO_ROOT / "web" / "public" / "corpus_20250822_121628" / "hymns.json"
     with open(corpus_file, 'r', encoding='utf-8') as f:
         corpus_data = json.load(f)
     

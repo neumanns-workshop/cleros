@@ -5,16 +5,18 @@ Update corpus files to include incense information from original sentences files
 import json
 from pathlib import Path
 
+REPO_ROOT = Path(__file__).resolve().parent.parent
+
 def update_hymns_corpus_with_incense():
     """Update the hymns corpus file to include incense information."""
-    
+
     # Load original sentences file (contains incense data)
-    sentences_file = Path("/Users/jneumann/Repos/cleros/web/public/orphic_hymns_sentences.json")
+    sentences_file = REPO_ROOT / "web" / "public" / "orphic_hymns_sentences.json"
     with open(sentences_file, 'r', encoding='utf-8') as f:
         sentences_data = json.load(f)
     
     # Load corpus file (needs incense data)
-    corpus_file = Path("/Users/jneumann/Repos/cleros/web/public/corpus_20250822_121628/hymns.json")
+    corpus_file = REPO_ROOT / "web" / "public" / "corpus_20250822_121628" / "hymns.json"
     with open(corpus_file, 'r', encoding='utf-8') as f:
         corpus_data = json.load(f)
     

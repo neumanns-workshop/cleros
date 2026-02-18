@@ -207,7 +207,8 @@ def process_parallel_json(input_file: Path, output_file: Path) -> Dict[str, Any]
 
 def main():
     """Main processing function."""
-    gold_standard_dir = Path('/Users/jneumann/Repos/cleros/data/gold_standard')
+    REPO_ROOT = Path(__file__).resolve().parent.parent
+    gold_standard_dir = REPO_ROOT / "data" / "gold_standard"
     output_dir = gold_standard_dir / 'chunked'
     output_dir.mkdir(exist_ok=True)
     
