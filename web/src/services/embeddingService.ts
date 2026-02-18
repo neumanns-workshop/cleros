@@ -59,7 +59,7 @@ class EmbeddingPipeline {
                         await caches.delete('transformers-cache');
                         localStorage.setItem('transformers-cache-v2', '1');
                         console.log('🧹 Cleared stale transformers cache (one-time migration)');
-                    } catch (e) {
+                    } catch {
                         // Cache clearing is best-effort
                     }
                 }
