@@ -10,7 +10,6 @@ export interface AppState {
   searchMode: SearchMode;
   selectedSource: SourceType;
   selectedSection: string;
-  isRandomOrgAvailable: boolean | null;
   loading: boolean;
 }
 

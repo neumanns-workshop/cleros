@@ -16,7 +16,6 @@ interface HomeViewProps {
   setSearchMode: (mode: SearchMode) => void;
   searchQuery: string;
   setSearchQuery: (query: string) => void;
-  isRandomOrgAvailable: boolean | null;
   isEmbeddingsAvailable: boolean | null;
   isGenerating: boolean;
   onSubmit: (e: React.FormEvent) => void;
@@ -30,7 +29,6 @@ export const HomeView: React.FC<HomeViewProps> = ({
   setSearchMode,
   searchQuery,
   setSearchQuery,
-  isRandomOrgAvailable,
   isEmbeddingsAvailable,
   isGenerating,
   onSubmit,
@@ -89,7 +87,6 @@ export const HomeView: React.FC<HomeViewProps> = ({
         <ModeSwitcher 
           searchMode={searchMode}
           setSearchMode={setSearchMode}
-          isRandomOrgAvailable={isRandomOrgAvailable}
           isEmbeddingsAvailable={isEmbeddingsAvailable}
         />
 

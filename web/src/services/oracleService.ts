@@ -109,93 +109,30 @@ class ClientOracleService {
   }
 
   /**
-   * Get truly random numbers via secure Netlify function
-   * Oracle divination requires true randomness or nothing.
+   * Get cryptographically secure random integers using the Web Crypto API.
+   * Uses hardware entropy sources (CPU RDRAND, OS entropy pool).
    */
-  private async getTrueRandomNumbers(min: number[], max: number[]): Promise<number[]> {
-    try {
-      const numbers: number[] = [];
-      
-      // Make individual requests for each range
-      for (let i = 0; i < min.length; i++) {
-        const response = await fetch('/.netlify/functions/random-oracle', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            min: min[i],
-            max: max[i],
-            count: 1
-          })
-        });
-
-        if (!response.ok) {
-          throw new Error(`Random oracle function HTTP error: ${response.status}`);
-        }
-        
-        const data = await response.json();
-        
-        if (!data.success) {
-          throw new Error(`Random oracle function error: ${data.error}`);
-        }
-
-        if (!Array.isArray(data.data) || data.data.length === 0) {
-          throw new Error('Invalid response format from random oracle function');
-        }
-
-        numbers.push(data.data[0]);
-      }
-      
-      console.log('🎲 TRUE random.org randomness obtained via secure function:', numbers);
-      return numbers;
-      
-    } catch (error) {
-      console.error('❌ Random oracle failed - Oracle mode unavailable:', error);
-      throw new Error('True randomness unavailable - Oracle cannot function');
+  private getSecureRandomNumbers(min: number[], max: number[]): number[] {
+    const numbers: number[] = [];
+    for (let i = 0; i < min.length; i++) {
+      const range = max[i] - min[i] + 1;
+      const array = new Uint32Array(1);
+      crypto.getRandomValues(array);
+      numbers.push(min[i] + (array[0] % range));
     }
-  }
-
-  /**
-   * Check if random oracle function is available for oracle divination
-   */
-  async checkRandomOrgAvailability(): Promise<boolean> {
-    try {
-      const response = await fetch('/.netlify/functions/random-oracle', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          min: 1,
-          max: 100,
-          count: 1
-        })
-      });
-
-      if (response.ok) {
-        const data = await response.json();
-        return data.success === true;
-      }
-      
-      return false;
-      
-    } catch (error) {
-      console.error('Random oracle availability check failed:', error);
-      return false;
-    }
+    return numbers;
   }
 
     /**
-   * Select random sentences from all three corpora using random.org
+   * Select random sentences from all three corpora using crypto.getRandomValues
    * Filters data for bibliomancy: excludes proems/appendices, includes single-sentence parts,
    * and for multi-sentence parts only includes sentences <= 6 lines
    */
-  private async selectRandomSentences(hymnsCorpus: CorpusData, argonauticaCorpus: CorpusData, lithicaCorpus: CorpusData): Promise<{
+  private selectRandomSentences(hymnsCorpus: CorpusData, argonauticaCorpus: CorpusData, lithicaCorpus: CorpusData): {
     hymns: { sentence: Sentence; section: Section; index: number; total: number };
     argonautica: { sentence: Sentence; section: Section; index: number; total: number };
     lithica: { sentence: Sentence; section: Section; index: number; total: number };
-  }> {
+  } {
     // Collect sentences from each corpus with bibliomancy filtering
     const hymnsAllSentences: Array<{ sentence: Sentence; section: Section }> = [];
     const argonauticaAllSentences: Array<{ sentence: Sentence; section: Section }> = [];
@@ -298,8 +235,8 @@ class ClientOracleService {
       throw new Error('No sentences found in one or more corpora');
     }
 
-    // Get random indices using TRUE random.org - no fallbacks
-    const randomIndices = await this.getTrueRandomNumbers(
+    // Get random indices using Web Crypto API (hardware entropy)
+    const randomIndices = this.getSecureRandomNumbers(
       [0, 0, 0],
       [hymnsAllSentences.length - 1, argonauticaAllSentences.length - 1, lithicaAllSentences.length - 1]
     );
@@ -373,8 +310,8 @@ class ClientOracleService {
         this.loadCorpusData('lithica')
       ]);
 
-      // Select random sentences from all corpora using random.org
-      const selections = await this.selectRandomSentences(hymnsData, argonauticaData, lithicaData);
+      // Select random sentences from all corpora using crypto.getRandomValues
+      const selections = this.selectRandomSentences(hymnsData, argonauticaData, lithicaData);
 
       // Extract keywords for display purposes only (no semantic analysis)
       const keywords = this.extractKeywords(query);
@@ -427,7 +364,7 @@ class ClientOracleService {
       const response: OracleResponse = {
         timestamp: Date.now(),
         query,
-        randomSource: 'random.org',
+        randomSource: 'crypto',
         keywords,
         shareableOptions,
         selections: {

@@ -64,7 +64,7 @@ export interface ShareableOption {
 export interface OracleResponse {
   query: string;
   timestamp: number;
-  randomSource: 'random.org' | 'fallback';
+  randomSource: 'crypto';
   selections: {
     hymns?: OracleSelection;
     argonautica?: OracleSelection;
@@ -95,12 +95,3 @@ export interface CounselResponse {
 
 export type ConsultationResponse = OracleResponse | CounselResponse;
 
-export interface RandomOrgResponse {
-  jsonrpc: string;
-  result: {
-    random: {
-      data: number[];
-    };
-  };
-  id: number;
-}

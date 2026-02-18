@@ -22,7 +22,7 @@ function App() {
     currentCounselResponse,
     isGeneratingOracle,
     isGeneratingCounsel,
-    isRandomOrgAvailable,
+
     isEmbeddingsAvailable,
     personalOracleReports,
     personalCounselReports,
@@ -53,7 +53,7 @@ function App() {
         setSearchMode={setSearchMode}
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
-        isRandomOrgAvailable={isRandomOrgAvailable}
+
         isEmbeddingsAvailable={isEmbeddingsAvailable}
         isGenerating={isGeneratingOracle || isGeneratingCounsel}
         onSubmit={handleSubmit}
@@ -119,7 +119,6 @@ function App() {
       setSearchMode={setSearchMode}
       searchQuery={searchQuery}
       setSearchQuery={setSearchQuery}
-      isRandomOrgAvailable={isRandomOrgAvailable}
       isEmbeddingsAvailable={isEmbeddingsAvailable}
       isGenerating={isGeneratingOracle || isGeneratingCounsel}
       onSubmit={handleSubmit}

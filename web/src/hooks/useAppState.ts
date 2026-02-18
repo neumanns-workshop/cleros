@@ -27,7 +27,6 @@ export const useAppState = () => {
   // Loading state
   const [isGeneratingOracle, setIsGeneratingOracle] = useState(false);
   const [isGeneratingCounsel, setIsGeneratingCounsel] = useState(false);
-  const [isRandomOrgAvailable, setIsRandomOrgAvailable] = useState<boolean | null>(null);
   const [isEmbeddingsAvailable, setIsEmbeddingsAvailable] = useState<boolean | null>(null);
   
   // Personal reports
@@ -45,58 +44,32 @@ export const useAppState = () => {
   });
   const [loading, setLoading] = useState(true);
 
-  // Check API availability and embeddings status
+  // Check embeddings availability
   useEffect(() => {
-    const checkAvailability = async () => {
-      // Check random.org availability
-      try {
-        const available = await oracleService.checkRandomOrgAvailability();
-        setIsRandomOrgAvailable(available);
-        console.log(`🎲 Random.org ${available ? 'available' : 'unavailable'} - Oracle mode ${available ? 'enabled' : 'DISABLED'}`);
-        
-        // If random.org is unavailable and user is in oracle mode, switch to counsel
-        if (!available && searchMode === 'oracle') {
-          setSearchMode('counsel');
-        }
-      } catch (error) {
-        console.error('Failed to check random.org availability:', error);
-        setIsRandomOrgAvailable(false);
-        if (searchMode === 'oracle') {
-          setSearchMode('counsel');
-        }
+    const checkEmbeddings = () => {
+      const available = !!window.__EMBEDDINGS_AVAILABLE__;
+      const unavailable = !!window.__EMBEDDINGS_UNAVAILABLE__;
+
+      if (available) {
+        setIsEmbeddingsAvailable(true);
+        console.log('✨ Semantic features ENABLED - Embeddings available');
+      } else if (unavailable) {
+        setIsEmbeddingsAvailable(false);
+        console.log('⚠️ Semantic features DISABLED - Embeddings unavailable');
+      } else {
+        setIsEmbeddingsAvailable(null);
       }
-      
-      // Check embeddings availability via the global flag
-      const checkEmbeddings = () => {
-        // Using Window interface extension from embeddingService.ts
-        const available = !!window.__EMBEDDINGS_AVAILABLE__;
-        const unavailable = !!window.__EMBEDDINGS_UNAVAILABLE__;
-        
-        if (available) {
-          setIsEmbeddingsAvailable(true);
-          console.log('✨ Semantic features ENABLED - Embeddings available');
-        } else if (unavailable) {
-          setIsEmbeddingsAvailable(false);
-          console.log('⚠️ Semantic features DISABLED - Embeddings unavailable');
-        } else {
-          // Not determined yet
-          setIsEmbeddingsAvailable(null);
-        }
-      };
-      
-      // Check immediately and also listen for status changes
-      checkEmbeddings();
-      window.addEventListener('embeddingStatusChanged', checkEmbeddings);
-      
-      return () => {
-        window.removeEventListener('embeddingStatusChanged', checkEmbeddings);
-      };
     };
 
-    checkAvailability();
+    checkEmbeddings();
+    window.addEventListener('embeddingStatusChanged', checkEmbeddings);
     loadPersonalReports();
+
+    return () => {
+      window.removeEventListener('embeddingStatusChanged', checkEmbeddings);
+    };
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []); // searchMode intentionally excluded to prevent re-checking on mode changes
+  }, []);
 
   // Load personal oracle and counsel reports from localStorage
   const loadPersonalReports = () => {
@@ -300,12 +273,6 @@ export const useAppState = () => {
       }
       
       if (searchMode === 'oracle') {
-        // Oracle mode requires true randomness - no compromises
-        if (isRandomOrgAvailable === false) {
-          alert('Oracle mode is disabled: True randomness (random.org) is required for principled divination.');
-          return;
-        }
-        
         setIsGeneratingOracle(true);
         try {
           const response = await oracleService.generateOracleResponse(query.trim());
@@ -322,7 +289,7 @@ export const useAppState = () => {
           setCurrentOracleResponse(response);
         } catch (error) {
           console.error('Error generating oracle response:', error);
-          alert('The oracle requires true randomness and cannot function at this time. Random.org is unavailable.');
+          alert('Failed to generate oracle response. Please try again.');
         } finally {
           setIsGeneratingOracle(false);
           setLoading(false);
@@ -478,7 +445,6 @@ export const useAppState = () => {
     // Loading state
     isGeneratingOracle,
     isGeneratingCounsel,
-    isRandomOrgAvailable,
     isEmbeddingsAvailable,
     
     // Personal reports

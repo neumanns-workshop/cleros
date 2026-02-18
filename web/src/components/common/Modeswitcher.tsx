@@ -3,35 +3,21 @@ import { SearchMode } from '../../types/app';
 interface ModeSwitcherProps {
   searchMode: SearchMode;
   setSearchMode: (mode: SearchMode) => void;
-  isRandomOrgAvailable: boolean | null;
   isEmbeddingsAvailable: boolean | null;
 }
 
-export const ModeSwitcher = ({ searchMode, setSearchMode, isRandomOrgAvailable, isEmbeddingsAvailable }: ModeSwitcherProps) => (
+export const ModeSwitcher = ({ searchMode, setSearchMode, isEmbeddingsAvailable }: ModeSwitcherProps) => (
   <div className="mode-switcher">
-    <button 
+    <button
       className={`mode-button ${searchMode === 'oracle' ? 'active' : ''}`}
-      title={isRandomOrgAvailable === false 
-        ? 'Oracle mode disabled: Requires true randomness from random.org for principled divination'
-        : 'Random selection using atmospheric noise from random.org'
-      }
-      onClick={() => {
-        if (isRandomOrgAvailable === false) {
-          return;
-        }
-        setSearchMode('oracle');
-      }}
-      disabled={isRandomOrgAvailable === false}
-      style={{ 
-        opacity: isRandomOrgAvailable === false ? 0.5 : 1,
-        cursor: isRandomOrgAvailable === false ? 'not-allowed' : 'pointer'
-      }}
+      title="Random selection using cryptographically secure hardware entropy"
+      onClick={() => setSearchMode('oracle')}
     >
-      Oracle {isRandomOrgAvailable === false && '(Disabled)'}
+      Oracle
     </button>
-    <button 
+    <button
       className={`mode-button ${searchMode === 'counsel' ? 'active' : ''}`}
-      title={!isEmbeddingsAvailable 
+      title={!isEmbeddingsAvailable
         ? 'Counsel mode disabled: Embedding models are loading or unavailable. Please wait or try again later.'
         : 'Semantic search for relevant passages using AI embeddings'
       }
@@ -42,7 +28,7 @@ export const ModeSwitcher = ({ searchMode, setSearchMode, isRandomOrgAvailable, 
         setSearchMode('counsel');
       }}
       disabled={!isEmbeddingsAvailable}
-      style={{ 
+      style={{
         opacity: !isEmbeddingsAvailable ? 0.5 : 1,
         cursor: !isEmbeddingsAvailable ? 'not-allowed' : 'pointer'
       }}

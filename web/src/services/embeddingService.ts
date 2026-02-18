@@ -6,25 +6,12 @@ async function loadTransformers() {
   if (!transformersModule) {
     console.log('🔮 Loading transformers module...');
     transformersModule = await import('@xenova/transformers');
-    
+
     // Configure transformers.js after loading
     const { env } = transformersModule;
     env.useBrowserCache = true;
-    env.allowLocalModels = true;
+    env.allowLocalModels = false;
     env.allowRemoteModels = true;
-    // Use the path that matches our edge function
-    env.localModelPath = '/models/';
-    env.cacheDir = './.cache';
-    env.allowRemoteModels = true;
-    
-    // Additional configuration for proper asset loading
-    env.backends = {
-      onnx: {
-        wasm: {
-          wasmPaths: '/assets/'
-        }
-      }
-    };
   }
   return transformersModule;
 }
@@ -66,38 +53,29 @@ class EmbeddingPipeline {
         if (this.instance === null) {
             console.log('🔮 Initializing transformers.js embedding pipeline...');
             try {
+                // One-time migration: clear stale cache from old model proxy setup
+                if (typeof caches !== 'undefined' && !localStorage.getItem('transformers-cache-v2')) {
+                    try {
+                        await caches.delete('transformers-cache');
+                        localStorage.setItem('transformers-cache-v2', '1');
+                        console.log('🧹 Cleared stale transformers cache (one-time migration)');
+                    } catch (e) {
+                        // Cache clearing is best-effort
+                    }
+                }
+
                 // Load transformers module dynamically
                 const { pipeline } = await loadTransformers();
                 
-                // Try with more graceful error handling and retries
-                try {
-                    // Try with the edge function path format first
-                    this.pipeline = await pipeline('feature-extraction', 'all-MiniLM-L6-v2', {
-                        progress_callback: (progress: { status?: string; name?: string; progress?: number }) => {
-                            if (progress.status === 'downloading') {
-                                console.log(`📥 Downloading ${progress.name}: ${Math.round(progress.progress || 0)}%`);
-                            } else if (progress.status === 'loading') {
-                                console.log(`🔄 Loading ${progress.name}...`);
-                            }
-                        },
-                        cache_dir: './.cache',
-                        local_files_only: true
-                    });
-                } catch (localError) {
-                    console.warn('⚠️ Edge function models not found, falling back to HuggingFace:', localError);
-                    
-                    // Fall back to HuggingFace directly if edge function fails
-                    this.pipeline = await pipeline('feature-extraction', 'Xenova/all-MiniLM-L6-v2', {
-                        progress_callback: (progress: { status?: string; name?: string; progress?: number }) => {
-                            if (progress.status === 'downloading') {
-                                console.log(`📥 Downloading ${progress.name}: ${Math.round(progress.progress || 0)}%`);
-                            } else if (progress.status === 'loading') {
-                                console.log(`🔄 Loading ${progress.name}...`);
-                            }
-                        },
-                        cache_dir: './.cache'
-                    });
-                }
+                this.pipeline = await pipeline('feature-extraction', 'Xenova/all-MiniLM-L6-v2', {
+                    progress_callback: (progress: { status?: string; name?: string; progress?: number }) => {
+                        if (progress.status === 'downloading') {
+                            console.log(`📥 Downloading ${progress.name}: ${Math.round(progress.progress || 0)}%`);
+                        } else if (progress.status === 'loading') {
+                            console.log(`🔄 Loading ${progress.name}...`);
+                        }
+                    }
+                });
                 
                 this.instance = new EmbeddingPipeline();
                 console.log('✅ Embedding pipeline initialized successfully');
