@@ -37,10 +37,7 @@ export const useAppState = () => {
   const [corpusData, setCorpusData] = useState<AllCorpusData>({
     hymns: null,
     argonautica: null,
-    lithica: null,
-    tablets: null,
-    queries: null,
-    papyrusQueries: null
+    lithica: null
   });
   const [loading, setLoading] = useState(true);
 
@@ -68,7 +65,6 @@ export const useAppState = () => {
     return () => {
       window.removeEventListener('embeddingStatusChanged', checkEmbeddings);
     };
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Load personal oracle and counsel reports from localStorage
@@ -129,22 +125,16 @@ export const useAppState = () => {
     
     try {
       console.log('📚 Loading corpus data on-demand...');
-      const [hymnsResponse, argonauticaResponse, lithicaResponse, tabletsResponse, queriesResponse, papyrusQueriesResponse] = await Promise.all([
+      const [hymnsResponse, argonauticaResponse, lithicaResponse] = await Promise.all([
         fetch('/corpus_20250822_121628/hymns.json'),
-        fetch('/corpus_20250822_121628/argonautica.json'), 
-        fetch('/corpus_20250822_121628/lithica.json'),
-        fetch('/corpus_20250822_121628/tablets.json'),
-        fetch('/corpus_20250822_121628/dodona_queries.json'),
-        fetch('/corpus_20250822_121628/papyrus_queries.json')
+        fetch('/corpus_20250822_121628/argonautica.json'),
+        fetch('/corpus_20250822_121628/lithica.json')
       ]);
 
-        const [hymnsData, argonauticaData, lithicaData, tabletsData, queriesData, papyrusQueriesData] = await Promise.all([
+        const [hymnsData, argonauticaData, lithicaData] = await Promise.all([
           hymnsResponse.json(),
           argonauticaResponse.json(),
-          lithicaResponse.json(),
-          tabletsResponse.json(),
-          queriesResponse.json(),
-          papyrusQueriesResponse.json()
+          lithicaResponse.json()
         ]);
 
         // Use the raw parts structure directly
@@ -173,33 +163,6 @@ export const useAppState = () => {
             parts: (lithicaData.parts as any[]).map((part): CorpusPart => ({
               ...part,
               key: String(part.part_number),
-              title_english: part.part_title
-            }))
-          },
-          tablets: {
-            metadata: tabletsData.metadata,
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            parts: (tabletsData.parts as any[]).map((part): CorpusPart => ({
-              ...part,
-              key: part.tablet_id || `tablet${part.part_number}`,
-              title_english: part.part_title
-            }))
-          },
-          queries: {
-            metadata: queriesData.metadata,
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            parts: (queriesData.parts as any[]).map((part): CorpusPart => ({
-              ...part,
-              key: part.query_id || `query${part.part_number}`,
-              title_english: part.part_title
-            }))
-          },
-          papyrusQueries: {
-            metadata: papyrusQueriesData.metadata,
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            parts: (papyrusQueriesData.parts as any[]).map((part): CorpusPart => ({
-              ...part,
-              key: part.query_id || `query${part.part_number}`,
               title_english: part.part_title
             }))
           }

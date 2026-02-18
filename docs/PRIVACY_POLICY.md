@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last updated: January 15, 2025**
+**Last updated: February 18, 2026**
 
 ## Introduction
 
@@ -34,5 +34,5 @@ You have full control over your data:
 
 If you have questions about this Privacy Policy, please contact us at:
 
-- Email: social@gbe.games
+- Email: contact@gbe.games
 - Website: cleros.gbe.games

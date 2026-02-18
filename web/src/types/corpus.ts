@@ -23,8 +23,6 @@ export interface CorpusPart {
   incense?: string;
   lines?: LineDetail[];
   sentences?: Sentence[];
-  tablet_id?: string;
-  query_id?: string;
 }
 
 export interface CorpusMetadata {
@@ -44,9 +42,6 @@ export interface AllCorpusData {
   hymns: CorpusData | null;
   argonautica: CorpusData | null;
   lithica: CorpusData | null;
-  tablets: CorpusData | null;
-  queries: CorpusData | null;
-  papyrusQueries: CorpusData | null;
   [key: string]: CorpusData | null; // Index signature for dynamic access
 }
 

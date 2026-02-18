@@ -16,8 +16,6 @@ interface RawCorpusData {
     part_title: string;
     key?: string | number;
     incense?: string;
-    tablet_id?: string;
-    query_id?: string;
     lines?: Array<{
       line: number;
       english: string;
@@ -44,10 +42,7 @@ export const useCorpusData = () => {
   const [corpusData, setCorpusData] = useState<AllCorpusData>({
     hymns: null,
     argonautica: null,
-    lithica: null,
-    tablets: null,
-    queries: null,
-    papyrusQueries: null
+    lithica: null
   });
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -57,53 +52,35 @@ export const useCorpusData = () => {
       try {
         console.log('Loading corpus data...');
         const [
-          hymnsResponse, 
-          argonauticaResponse, 
-          lithicaResponse, 
-          tabletsResponse, 
-          queriesResponse, 
-          papyrusQueriesResponse
+          hymnsResponse,
+          argonauticaResponse,
+          lithicaResponse
         ] = await Promise.all([
           fetch('/corpus_20250822_121628/hymns.json'),
-          fetch('/corpus_20250822_121628/argonautica.json'), 
-          fetch('/corpus_20250822_121628/lithica.json'),
-          fetch('/corpus_20250822_121628/tablets.json'),
-          fetch('/corpus_20250822_121628/dodona_queries.json'),
-          fetch('/corpus_20250822_121628/papyrus_queries.json')
+          fetch('/corpus_20250822_121628/argonautica.json'),
+          fetch('/corpus_20250822_121628/lithica.json')
         ]);
 
-        console.log('Responses received:', 
-          hymnsResponse.status, 
-          argonauticaResponse.status, 
-          lithicaResponse.status, 
-          tabletsResponse.status, 
-          queriesResponse.status, 
-          papyrusQueriesResponse.status
+        console.log('Responses received:',
+          hymnsResponse.status,
+          argonauticaResponse.status,
+          lithicaResponse.status
         );
 
         const [
-          hymnsData, 
-          argonauticaData, 
-          lithicaData, 
-          tabletsData, 
-          queriesData, 
-          papyrusQueriesData
+          hymnsData,
+          argonauticaData,
+          lithicaData
         ] = await Promise.all([
           hymnsResponse.json(),
           argonauticaResponse.json(),
-          lithicaResponse.json(),
-          tabletsResponse.json(),
-          queriesResponse.json(),
-          papyrusQueriesResponse.json()
+          lithicaResponse.json()
         ]);
 
         console.log('Raw data loaded:', {
           hymns: hymnsData.parts?.length || 0,
           argonautica: argonauticaData.parts?.length || 0,
-          lithica: lithicaData.parts?.length || 0,
-          tablets: tabletsData.parts?.length || 0,
-          queries: queriesData.parts?.length || 0,
-          papyrusQueries: papyrusQueriesData.parts?.length || 0
+          lithica: lithicaData.parts?.length || 0
         });
 
         const processCorpusData = (data: RawCorpusData): CorpusData => ({
@@ -118,34 +95,7 @@ export const useCorpusData = () => {
         const processedData: AllCorpusData = {
           hymns: processCorpusData(hymnsData),
           argonautica: processCorpusData(argonauticaData),
-          lithica: processCorpusData(lithicaData),
-          tablets: {
-            metadata: tabletsData.metadata,
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            parts: (tabletsData.parts as any[]).map((part): CorpusPart => ({
-              ...part,
-              key: part.tablet_id || `tablet${part.part_number}`,
-              title_english: part.part_title
-            }))
-          },
-          queries: {
-            metadata: queriesData.metadata,
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            parts: (queriesData.parts as any[]).map((part): CorpusPart => ({
-              ...part,
-              key: part.query_id || `query${part.part_number}`,
-              title_english: part.part_title
-            }))
-          },
-          papyrusQueries: {
-            metadata: papyrusQueriesData.metadata,
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            parts: (papyrusQueriesData.parts as any[]).map((part): CorpusPart => ({
-              ...part,
-              key: part.query_id || `query${part.part_number}`,
-              title_english: part.part_title
-            }))
-          }
+          lithica: processCorpusData(lithicaData)
         };
 
         console.log('Processed data:', processedData);

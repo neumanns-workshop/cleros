@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import { HomeView, AboutView, CorpusView, PrivacyView, TermsView } from './components';
+import { KofiButton } from './components/common/KofiButton';
 import { useAppState } from './hooks/useAppState';
 import { EnrichedLineData } from './types/corpus';
 
@@ -44,86 +45,56 @@ function App() {
     // Line click handling is managed within the CorpusView component
   };
 
-  if (currentView === 'home') {
-    return (
-      <HomeView
-        currentView={currentView}
-        setCurrentView={setCurrentView}
-        searchMode={searchMode}
-        setSearchMode={setSearchMode}
-        searchQuery={searchQuery}
-        setSearchQuery={setSearchQuery}
+  const renderView = () => {
+    switch (currentView) {
+      case 'about':
+        return <AboutView currentView={currentView} setCurrentView={setCurrentView} />;
+      case 'corpus':
+        return (
+          <CorpusView
+            currentView={currentView}
+            setCurrentView={setCurrentView}
+            corpusData={corpusData}
+            loading={loading}
+            selectedSource={selectedSource}
+            setSelectedSource={setSelectedSource}
+            selectedSection={selectedSection}
+            setSelectedSection={setSelectedSection}
+            currentOracleResponse={currentOracleResponse}
+            currentCounselResponse={currentCounselResponse}
+            personalOracleReports={personalOracleReports}
+            personalCounselReports={personalCounselReports}
+            onNavigateToSource={navigateToSource}
+            onLineClick={handleLineClick}
+          />
+        );
+      case 'privacy':
+        return <PrivacyView currentView={currentView} setCurrentView={setCurrentView} />;
+      case 'terms':
+        return <TermsView currentView={currentView} setCurrentView={setCurrentView} />;
+      default:
+        return (
+          <HomeView
+            currentView={currentView}
+            setCurrentView={setCurrentView}
+            searchMode={searchMode}
+            setSearchMode={setSearchMode}
+            searchQuery={searchQuery}
+            setSearchQuery={setSearchQuery}
+            isEmbeddingsAvailable={isEmbeddingsAvailable}
+            isGenerating={isGeneratingOracle || isGeneratingCounsel}
+            onSubmit={handleSubmit}
+            onAncientQueryClick={handleAncientQueryClick}
+          />
+        );
+    }
+  };
 
-        isEmbeddingsAvailable={isEmbeddingsAvailable}
-        isGenerating={isGeneratingOracle || isGeneratingCounsel}
-        onSubmit={handleSubmit}
-        onAncientQueryClick={handleAncientQueryClick}
-      />
-    );
-  }
-
-  if (currentView === 'about') {
-    return (
-      <AboutView 
-        currentView={currentView} 
-        setCurrentView={setCurrentView} 
-      />
-    );
-  }
-
-  if (currentView === 'corpus') {
-    return (
-      <CorpusView
-        currentView={currentView}
-        setCurrentView={setCurrentView}
-        corpusData={corpusData}
-        loading={loading}
-        selectedSource={selectedSource}
-        setSelectedSource={setSelectedSource}
-        selectedSection={selectedSection}
-        setSelectedSection={setSelectedSection}
-        currentOracleResponse={currentOracleResponse}
-        currentCounselResponse={currentCounselResponse}
-        personalOracleReports={personalOracleReports}
-        personalCounselReports={personalCounselReports}
-        onNavigateToSource={navigateToSource}
-        onLineClick={handleLineClick}
-      />
-    );
-  }
-
-  if (currentView === 'privacy') {
-    return (
-      <PrivacyView 
-        currentView={currentView} 
-        setCurrentView={setCurrentView} 
-      />
-    );
-  }
-
-  if (currentView === 'terms') {
-    return (
-      <TermsView 
-        currentView={currentView} 
-        setCurrentView={setCurrentView} 
-      />
-    );
-  }
-
-  // Default fallback
   return (
-    <HomeView
-      currentView={currentView}
-      setCurrentView={setCurrentView}
-      searchMode={searchMode}
-      setSearchMode={setSearchMode}
-      searchQuery={searchQuery}
-      setSearchQuery={setSearchQuery}
-      isEmbeddingsAvailable={isEmbeddingsAvailable}
-      isGenerating={isGeneratingOracle || isGeneratingCounsel}
-      onSubmit={handleSubmit}
-      onAncientQueryClick={handleAncientQueryClick}
-    />
+    <>
+      {renderView()}
+      <KofiButton />
+    </>
   );
 }
 

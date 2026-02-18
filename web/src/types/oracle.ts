@@ -2,6 +2,7 @@ export interface AncientQuery {
   id: string;
   text: string;
   category: string;
+  origin: 'authentic' | 'generated';
 }
 
 export interface SelectionDetail {

@@ -8,7 +8,7 @@ interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = ({ setCurrentView }) => (
   <footer className="app-footer">
-    <p style={{ margin: '0 0 0.5rem 0', color: '#f5f4f0' }}>© 2025 Galaxy Brain Entertainment</p>
+    <p style={{ margin: '0 0 0.5rem 0', color: '#f5f4f0' }}>© 2026 Galaxy Brain Entertainment</p>
     {setCurrentView && (
       <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', fontSize: '0.9rem' }}>
         <a 

@@ -1,89 +1,151 @@
 import { AncientQuery } from '../types/oracle';
 
 export const ancientQueries: AncientQuery[] = [
+  // Authentic ancient oracle consultation patterns
   {
-    id: 'DVC 219B',
+    id: 'household',
     text: 'To which of the gods should I pray concerning my household and safety?',
-    category: 'Household & Safety'
+    category: 'Household & Safety',
+    origin: 'authentic'
   },
   {
-    id: 'DVC 1093A',
+    id: 'family',
     text: 'Concerning the safety of the child and the wife: what should be done?',
-    category: 'Safety of Family'
+    category: 'Safety of Family',
+    origin: 'authentic'
   },
   {
-    id: 'DVC 632',
+    id: 'prosperity',
     text: 'To which of the gods am I to sacrifice and pray, in order that I may prosper?',
-    category: 'Success / Which god'
+    category: 'Success / Which god',
+    origin: 'authentic'
   },
   {
-    id: 'DVC 1124B',
+    id: 'lawsuit',
     text: 'Concerning the lawsuit: what should be done?',
-    category: 'Legal Dispute'
+    category: 'Legal Dispute',
+    origin: 'authentic'
   },
   {
-    id: 'DVC 2525A',
+    id: 'health',
     text: 'Concerning my body: what should I do to be in good health?',
-    category: 'Health'
+    category: 'Health',
+    origin: 'authentic'
   },
   {
-    id: 'DVC 1313B',
+    id: 'business',
     text: 'Concerning a business undertaking: what is more advantageous and better?',
-    category: 'Business'
+    category: 'Business',
+    origin: 'authentic'
   },
   {
-    id: 'DVC 1395A',
+    id: 'freedom',
     text: 'Concerning the manumission of a slave: what is better and more advantageous?',
-    category: 'Manumission'
+    category: 'Manumission',
+    origin: 'authentic'
   },
   {
-    id: 'DVC 2521A',
+    id: 'victory',
     text: 'Shall I win the lawsuit?',
-    category: 'Legal Victory'
+    category: 'Legal Victory',
+    origin: 'authentic'
   },
   {
-    id: 'DVC 1268A',
+    id: 'children',
     text: 'Concerning progeny: To which of the gods should I pray or offer sacrifice, so that children may be born?',
-    category: 'Fertility'
+    category: 'Fertility',
+    origin: 'authentic'
   },
   {
-    id: 'DVC 1148A',
+    id: 'travel',
     text: 'Concerning a journey: is it safe? What is preferable?',
-    category: 'Travel Safety'
+    category: 'Travel Safety',
+    origin: 'authentic'
   },
   {
-    id: 'P.Oxy. 9 1213',
-    text: 'Menandros asks whether it has been granted to me to marry. Grant me this.',
-    category: 'Marriage'
+    id: 'marriage',
+    text: 'Whether it has been granted to me to marry. Grant me this.',
+    category: 'Marriage',
+    origin: 'authentic'
   },
   {
-    id: 'P.Oxy. 42 3078',
-    text: 'If you permit me to consult Hermeinos the physician for treatment of the eyes, and this is to my advantage, grant me this.',
-    category: 'Medical Consultation'
+    id: 'healing',
+    text: 'If you permit me to consult the physician for treatment of the eyes, and this is to my advantage, grant me this.',
+    category: 'Medical Consultation',
+    origin: 'authentic'
+  },
+
+  // Generated queries inspired by Orphic themes
+  {
+    id: 'purification',
+    text: 'How shall I purify myself of what weighs upon my spirit?',
+    category: 'Purification',
+    origin: 'generated'
   },
   {
-    id: 'SB 26 16731',
-    text: "Sotas petitions: if the nomarch is not going to be angry with me because I write Valerius' pittakia, grant me this.",
-    category: 'Administrative Anxiety'
+    id: 'afterlife',
+    text: 'What must I remember when I stand before the waters of forgetfulness?',
+    category: 'Death & Rebirth',
+    origin: 'generated'
   },
   {
-    id: 'P.Oxy. 8 1149',
-    text: 'Nike asks whether it is to her advantage to purchase Sarapion, a boy, from Tasarapion.',
-    category: 'Business Decision'
+    id: 'initiation',
+    text: 'Am I prepared to undergo the rites, or must I wait?',
+    category: 'Initiation',
+    origin: 'generated'
   },
   {
-    id: 'BGU 1 154',
-    text: 'Concerning marriage: whether it is expedient for Dionysios to marry Herais, daughter of Herakleides.',
-    category: 'Marriage Arrangement'
+    id: 'cosmic-order',
+    text: 'What is my portion in the order of things?',
+    category: 'Cosmic Order',
+    origin: 'generated'
   },
   {
-    id: 'P.Oslo 3 143',
-    text: 'Apollonios asks whether it is to his advantage to counter-sue Herakleides about inheritance claims.',
-    category: 'Legal Strategy'
+    id: 'divine-anger',
+    text: 'Have I offended the gods, and how shall I make amends?',
+    category: 'Divine Wrath',
+    origin: 'generated'
   },
   {
-    id: 'SB 12 10929',
-    text: 'Herakleides asks whether it is advantageous for him to go up to Alexandria for his business.',
-    category: 'Business Travel'
+    id: 'protection-stone',
+    text: 'Which stone should I carry for protection on the road ahead?',
+    category: 'Sacred Stones',
+    origin: 'generated'
+  },
+  {
+    id: 'transformation',
+    text: 'I feel myself changing. What am I becoming?',
+    category: 'Transformation',
+    origin: 'generated'
+  },
+  {
+    id: 'night-terrors',
+    text: 'What sends the visions that trouble my sleep, and how do I appease it?',
+    category: 'Dreams & Spirits',
+    origin: 'generated'
+  },
+  {
+    id: 'fate',
+    text: 'Is my fate already woven, or may I yet change its pattern?',
+    category: 'Fate & Destiny',
+    origin: 'generated'
+  },
+  {
+    id: 'lost-soul',
+    text: 'One I loved has departed. Can anything reach them where they have gone?',
+    category: 'The Dead',
+    origin: 'generated'
+  },
+  {
+    id: 'right-action',
+    text: 'Two paths lie before me and both seem just. Which does Dikē favor?',
+    category: 'Justice',
+    origin: 'generated'
+  },
+  {
+    id: 'divine-sign',
+    text: 'I have seen a sign but cannot read it. What does it portend?',
+    category: 'Omens',
+    origin: 'generated'
   }
 ];
